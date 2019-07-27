@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_microgattling",
+  "price" : 5000,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/microgattling.png",
+  "description" : "A small and fast rotary barrel.",
+  "shortdescription" : "Micro-Gattling Barrel",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "microgattling"
+  }
+}

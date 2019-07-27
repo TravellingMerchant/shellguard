@@ -1,0 +1,112 @@
+{
+  "itemName" : "sgtaser",
+  "level" : 6,
+  "price" : 2000,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "Made for frying robot's circuits.",
+  "shortdescription" : "SG Taser Rifle",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","staff","upgradeableWeapon"],
+  //"tooltipKind" : "staff",
+
+  "animation" : "/items/active/weapons/staff/shellstaff.animation",
+  "animationParts" : {
+    "staff" : "sgtaser.png",
+    "stone" : "",
+    "chargeEffect" : "shellstaffglow.png"
+  },
+  "animationCustom" : {
+    "particleEmitters" : {
+      "electriccharge" : {
+        "offsetRegion" : [0.0, 0.0, 0.0, 0.0]
+      }
+    }
+  },
+
+  "inventoryIcon" : "sgtaser.png",
+
+  "scripts" : ["/items/active/weapons/staff/shellstaff.lua"],
+
+  "stances" : {
+    "idle" : {
+      "armRotation" : -30,
+      "weaponRotation" : 30,
+      "twoHanded" : false,
+
+      "allowRotate" : true,
+      "allowFlip" : true
+    },
+    "charge" : {
+      "duration" : 0.3,
+      "armRotation" : 0,
+      "weaponRotation" : 0,
+      "twoHanded" : true,
+
+      "allowRotate" : true,
+      "allowFlip" : true
+    },
+    "charged" : {
+      "armRotation" : 0,
+      "weaponRotation" : 0,
+      "twoHanded" : true,
+
+      "allowRotate" : true,
+      "allowFlip" : true
+    },
+    "discharge" : {
+      "duration" : 0.5,
+      "armRotation" : 0,
+      "weaponRotation" : -0,
+      "twoHanded" : true,
+
+      "allowRotate" : true,
+      "allowFlip" : true
+    },
+    "cooldown" : {
+      "duration" : 0.5,
+      "armRotation" : 0,
+      "weaponRotation" : 0,
+      "twoHanded" : true,
+
+      "allowRotate" : true,
+      "allowFlip" : true
+    }
+  },
+
+  "elementalType" : "electric",
+
+  "primaryAbilityType" : "shellbolt",
+  "primaryAbility" : {
+
+  },
+
+  "altAbility" : {
+    "type" : "",
+    "name" : "",
+    "scripts" : ["/items/active/weapons/staff/abilities/controlprojectile/controlprojectile.lua"],
+    "class" : "ControlProjectile",
+
+    "energyCost" : 80,
+
+    "maxCastRange" : 25,
+
+    "projectileCount" : 3,
+    "projectileDistance" : 2.5,
+    "projectileType" : "balllightning",
+    "projectileParameters" : {
+      "baseDamage" : 5
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "elitetaser.png",
+    "animationParts" : {
+      "staff" : "elitetaser.png"
+    },
+    "shortdescription" : "Elite Taser Rifle ^yellow;^reset;",
+    "description" : "Made for frying robot's circuits."
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "itemName" : "sgbangcorn",
+  "price" : 2000,
+  "inventoryIcon" : "sgbangcorn.png",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "This popcorn should really be called bang-corn! Careful, it's hot.",
+  "shortdescription" : "Pot-Shot Popcorn",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle"],
+  "twoHanded" : true,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgbangcorn.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/sgbangcorn.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.0, 0.1],
+  "muzzleOffset" : [1.7, 0.2],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.16,
+    "baseDps" : 7.5,
+    "energyUsage" : 30.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.0,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -20,
+        "weaponRotation" : 30,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "sgpopcorn",
+    "projectileParameters" : { 
+      "knockback" : 6
+    }
+  },
+
+  "altAbilityType" : "sgbutterbayonet",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

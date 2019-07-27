@@ -1,0 +1,23 @@
+{
+  "projectileName" : "sgminishot",
+  "image" : "sgminishot.png",
+  "physics" : "laser",
+  "animationCycle" : 0.1,
+  "animationLoops" : false,
+  "windupFrames" : 2,
+  "timeToLive" : 10,
+  "frameNumber" : 3,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [0, 255, 255],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/shellbluesmoke/shellbluesmoke.config"
+    }
+  ],
+  "power" : 1.0,
+  "speed" : 250,
+  "damageKind" : "default"
+}

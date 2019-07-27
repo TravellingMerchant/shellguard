@@ -1,0 +1,96 @@
+{
+  "itemName" : "shellguardshardgun",
+  "price" : 2000,
+  "inventoryIcon" : "shellguardshardgun.png",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Fires explosive energy shards. Fires faster when you're at low energy.",
+  "shortdescription" : "Shellguard Shard Gun",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "shellguardshardgun.png",
+    "barrel" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/vulcan1.ogg", "/sfx/gun/vulcan2.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.1, -0.1],
+  "muzzleOffset" : [-0.2, 0.7],
+  "aimOffset" : -2.0,
+
+  "scripts" : [
+	"/items/active/weapons/ranged/gun.lua",
+	"/items/active/scripts/sgmodifablegun.lua",
+	"/items/active/scripts/sgwindup.lua"
+  ],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.4,
+    "baseDps" : 1.5,
+    "energyUsage" : 45.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.03,
+      "stances" : {
+      "idle" : {
+        "armRotation" : -50,
+        "weaponRotation" : 50,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : -51,
+        "weaponRotation" : 50,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -55,
+        "weaponRotation" : 50,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "energyshardplayer",
+    "projectileParameters" : { 
+      "knockback" : 6
+    }
+  },
+
+  "altAbilityType" : "",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "eliteguardshardgun.png",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/shellguardshardgun/eliteguardshardgun.png"
+    },
+    "shortdescription" : "Elite Shard Gun ^yellow;^reset;"
+  }
+}

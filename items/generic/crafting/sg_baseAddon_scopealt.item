@@ -1,0 +1,16 @@
+{
+  "itemName" : "sg_baseAddon_scopealt",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "common",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/baseAddon/scopealt.png",
+  "description" : "A standard reflex sight which improves accuracy.",
+  "shortdescription" : "Reflex Sight",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "baseAddon",
+    "id" : "scopealt",
+    "slot" : "alpha"
+  }
+}

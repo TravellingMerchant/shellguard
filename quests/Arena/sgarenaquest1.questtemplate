@@ -1,0 +1,45 @@
+{
+  "id" : "sgarenaquest1",
+  "prerequisites" : ["sgmercmission1"],
+  "title" : "^green;Nanotrasen Arena 1",
+  "text" : "Have you heard of the systems hottest new live bloodsport? Nanotrasen is hosting new Arena fights! I've been thinking, sponsering a team is a great way to advertise our equipment! Want to fight in the Arena?",
+  "completionText" : "Go you! The crowd loves you! Come back to me for more fights! You can replay fights with this teleporter.",
+  "moneyRange" : [1000, 1000],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], ["money", 1000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/arenaman/sgarenamanicon.png"} ],
+        "title" : "Arena Fan"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/arenaman/sgarenamanicon.png"} ],
+        "title" : "Arena Fan"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Enter the ^orange;Nanotrasen Arena^reset;",
+      "findGoal" : "Win in the Arena!",
+      "turnIn" : "Return to ^orange;the Arena Fan^reset;"
+    },
+
+    "warpEntityUid" : "Arenaman",
+    "warpAction" : "instanceworld:sgarena1",
+    "warpDialog" : "/interface/confirmation/sgarenateleportconfirmation.config:sgarenaquest",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgarenatele1",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Arenaman"
+  }
+}

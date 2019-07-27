@@ -1,0 +1,132 @@
+{
+  "animationParts" : {
+  },
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "swoosh" : {
+          "default" : "idle",
+          "states" : {
+            "idle" : {
+            },
+            "fire" : {
+              "frames" : 3,
+              "cycle" : 0.08,
+              "mode" : "transition",
+              "transition" : "idle"
+            }
+          }
+        }
+      },
+      "parts" : {
+        "swoosh" : {
+          "properties" : {
+            "zLevel" : -1,
+            "centered" : true,
+            "offset" : [2.1, 0.2],
+            "transformationGroups" : ["swoosh"]
+          },
+  
+          "partStates" : {
+            "swoosh" : {
+              "idle" : {
+                "properties" : {
+                  "image" : ""
+                }
+              },
+              "fire" : {
+                "properties" : {
+                  "image" : "/items/active/weapons/melee/spear/swoosh/physicalswoosh.png:<frame>",
+                  "damageArea" : [[-3.5, 0], [-1, 1], [1, 1], [4, 0], [1, -1], [-1, -1]]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    
+    "transformationGroups" : {
+      "swoosh" : {}
+    },
+      
+    "particleEmitters" : {
+      "physicalswoosh" : {
+        "active" : false,
+        "transformationGroups" : ["swoosh"],
+        "emissionRate" : 60,
+        "offsetRegion" : [3.5, -1.0, 7.5, 1.0],
+        "particles" : [ ]
+      }
+    },
+
+    "sounds" : {
+      "slash" : [ "/sfx/melee/swing_spear.ogg" ]
+    }
+  },
+
+  "ability" : {
+    "name" : "Bayonet Stab",
+    "type" : "bayonetstab",
+    "scripts" : ["/items/active/weapons/melee/abilities/spear/spearstab.lua"],
+    "class" : "SpearStab",
+    
+    "fireSound" : "slash",
+    "allowHold" : false, //can't hold with altability.
+
+    "fireTime" : 1.0,
+    "baseDps" : 9.5,
+    "damageConfig" : {
+      "damageSourceKind" : "spear",
+      "statusEffects" : [ ],
+      "knockbackMode" : "aim",
+      "knockback" : 30,
+      "timeoutGroup" : "primary"
+    },
+    "holdDamageMultiplier" : 0.1,
+    "holdDamageConfig" : {
+      "timeoutGroup" : "hold",
+      "timeout" : 0.5
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "windup" : {
+        "duration" : 0.2,
+        "armRotation" : -25.0,
+        "weaponRotation" : 15.0,
+        "twoHanded" : true,
+        "weaponOffset" : [-0.7, 0],
+        
+        "frontArmFrame" : "run.2",
+        "backArmFrame" : "run.4",
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "fire" : {
+        "duration" : 0.3,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "hold" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    }
+  }
+}

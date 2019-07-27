@@ -1,0 +1,33 @@
+{
+  "itemName" : "shellbbox",
+  "price" : 50,
+  "rarity" : "uncommon",
+  "category" : "throwableItem",
+  "inventoryIcon" : "shellbbox.png",
+  "image" : "shellbbox.png",
+  "shortdescription" : "SHELL-B Cleaning Bot",
+  "description" : "Unbox a single cute SHELL-B cleaning bot.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.0,
+  "cooldown" : 1.5,
+
+  "projectileType" : "shellbspawner",
+  "projectileConfig" : {
+    "speed" : 0,
+    "power" : 0,
+    "knockback" : 0,
+
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/objects/colonydeed_partyhorn.ogg" ]
+      }
+    ]
+  }
+
+}

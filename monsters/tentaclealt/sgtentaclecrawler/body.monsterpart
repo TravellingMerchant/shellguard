@@ -1,0 +1,9 @@
+{
+  "name" : "sgtentaclecrawler",
+  "category" : "sgtentaclecrawler",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgtentaclecrawler.png"
+  }
+}

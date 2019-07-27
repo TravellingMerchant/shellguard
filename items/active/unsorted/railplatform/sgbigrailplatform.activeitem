@@ -1,0 +1,22 @@
+{
+  "itemName" : "sgbigrailplatform",
+  "level" : 1,
+  "price" : 15000,
+  "rarity" : "rare",
+  "category" : "railPlatform",
+  "description" : "A platform that follows a set path when placed on a rail.",
+  "shortdescription" : "Shellguard Rail Elevator",
+  "twoHanded" : true,
+  "maxStack" : 2,
+
+  "inventoryIcon" : "/vehicles/railplatform/sgbigrailplatform.png",
+
+  "scripts" : ["railplatform.lua"],
+  "animationScripts" : ["placementpreview.lua"],
+
+  "placementRange" : 32,
+  "placementBounds" : [-24, -2.0, 24, 2.0],
+  "placementPreviewImage" : "/vehicles/railplatform/sgbigrailplatform.png",
+
+  "platformType" : "sgbigrailplatform"
+}

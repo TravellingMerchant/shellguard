@@ -1,0 +1,72 @@
+[
+  {
+    "op": "add",
+    "path": "/shellguardbodyheavy",
+    "value": {
+      "stats": {
+        "energy": 6,
+        "protection": 6
+      },
+      "partParameters": {
+        "hazardImmunities": [
+          "biomeradiation",
+          "biomecold",
+          "biomeheat"
+        ]
+      },
+      "partImages": {
+        "bodyBack": "body/shellguardbodyheavy_back.png",
+        "bodyFront": "body/shellguardbodyheavy_front.png",
+        "bodyFullbright": "body/shellguardbodyheavy_fullbright.png"
+      },
+      "defaultPrimaryColors": [
+      "A3381C",
+      "7B1500",
+      "5B0600",
+      "3C0000"
+      ],
+      "defaultSecondaryColors": [
+      "555555",
+      "3d3d3d",
+      "2f2f2f",
+      "202020"
+      ],
+      "animationCustom": {}
+    }
+  },
+  {
+    "op": "add",
+    "path": "/Shellguardbodyconstruction",
+    "value": {
+      "stats": {
+        "energy": 7,
+        "protection": 5
+      },
+      "partParameters": {
+        "hazardImmunities": [
+          "biomeradiation",
+          "biomecold",
+          "biomeheat"
+        ]
+      },
+      "partImages": {
+        "bodyBack": "body/Shellguardbodyconstruction_back.png",
+        "bodyFront": "body/Shellguardbodyconstruction_front.png",
+        "bodyFullbright": "body/Shellguardbodyconstruction_fullbright.png"
+      },
+      "defaultPrimaryColors": [
+      "A3381C",
+      "7B1500",
+      "5B0600",
+      "3C0000"
+      ],
+      "defaultSecondaryColors": [
+      "555555",
+      "3d3d3d",
+      "2f2f2f",
+      "202020"
+      ],
+      "animationCustom": {}
+    }
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "projectileName" : "sgbasesentryspawnshot",
+  "physics" : "grenade",
+  "image" : "sgbasesentryspawnshot.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 3,
+  "damageKindImage" : "icon.png",
+  "actionOnReap" : [
+    {
+      "action" : "spawnmonster",
+      "type" : "sgbasesentry",
+      "offset" : [0, 2],
+      "level" : 6,
+      "arguments" : {
+        "aggressive" : true
+      }
+    }
+  ],
+  "power" : 0,
+  "speed" : 5,
+  "damageKind" : "default"
+}

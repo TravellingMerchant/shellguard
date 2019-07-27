@@ -1,0 +1,9 @@
+{
+  "name" : "shelldroidheavy-head",
+  "category" : "shelldroidheavyE1evil",
+  "type" : "head",
+
+  "frames" : {
+    "head" : "shelldroidheavy-head.png"
+  }
+}

@@ -1,0 +1,19 @@
+[
+  { "op" : "add", "path" : "/shellbolt", "value" : "/items/active/weapons/staff/abilities/guidedbolt/shellbolt.weaponability" },
+  { "op": "add", "path": "/sgrocketburst", "value": "/items/active/weapons/ranged/abilities/sgrocketburst/sgrocketburst.weaponability" },
+  { "op": "add", "path": "/sgspiderburst", "value": "/items/active/weapons/ranged/abilities/sgspiderburst/sgspiderburst.weaponability" },
+  { "op": "add", "path": "/bayonetstab", "value": "/items/active/weapons/ranged/abilities/sgbayonet/bayonetstab.weaponability" },
+  { "op": "add", "path": "/sgbutterbayonet", "value": "/items/active/weapons/ranged/abilities/sgbutterbayonet/sgbutterbayonet.weaponability" },
+  { "op": "add", "path": "/bayonetcleave", "value": "/items/active/weapons/ranged/abilities/sgcleave/bayonetcleave.weaponability" },
+  { "op": "add", "path": "/sgminugunbash", "value": "/items/active/weapons/ranged/abilities/sgminugunbash/sgminugunbash.weaponability" },
+  { "op": "add", "path": "/bayonetcleavecustom", "value": "/items/active/weapons/ranged/abilities/sgcleavecustom/bayonetcleavecustom.weaponability" },
+  { "op": "add", "path": "/bayonetblade", "value": "/items/active/weapons/ranged/abilities/sgblade/bayonetblade.weaponability" },
+  { "op": "add", "path": "/sglasersight", "value": "/items/active/weapons/ranged/abilities/sglasersight/sglasersight.weaponability" },
+  { "op": "add", "path": "/whipsnag", "value": "/items/active/weapons/whip/abilities/whipsnag.weaponability" },
+  { "op": "add", "path": "/sgpushshot", "value": "/items/active/weapons/ranged/abilities/sgpushshot/sgpushshot.weaponability" },
+  { "op": "add", "path": "/sgflashlight", "value": "/items/active/weapons/ranged/sg_built/abilities/sgflashlight.weaponability" },
+  { "op": "add", "path": "/sgheavyswordcombo", "value": "/items/active/weapons/melee/broadsword/sgheavyswordcombo.weaponability" },
+  { "op": "add", "path": "/sgshockwave", "value": "/items/active/weapons/melee/spear/sgshockwave/sgshockwave.weaponability" },
+  {"op" : "add", "path": "/neb-enhancedchargefire", "value" : "/items/active/weapons/ranged/abilities/neb-enhancedchargefire/neb-enhancedchargefire.weaponability"},
+  { "op": "add", "path": "/sggrenadelauncher", "value": "/items/active/weapons/ranged/sg_built/abilities/sggrenadelauncher.weaponability" }
+]

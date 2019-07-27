@@ -1,0 +1,30 @@
+{
+  "projectileName" : "sgtaserbomb",
+  "image" : "fireproximity.png",
+  "animationCycle" : 0.35,
+  "windupFrames" : 0,
+  "frameNumber" : 4,
+  "lightColor" : [100, 100, 250],
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
+    }
+  ],
+  "statusEffects" : [ ],
+  "flippable" : true,
+  "power" : 0.1,
+  "speed" : 40.0,
+  "acceleration" : 0,
+  "timeToLive" : 10,
+  "physics" : "arrow",
+  "renderLayer" : "Projectile+1",
+  "damageType" : "NoDamage",
+  "damageKind" : "electric",
+
+  "scripts" : [ "sgbulletdisc.lua" ],
+  "scriptDelta" : 30,
+  "hitProjectile" : "sgelectro",
+  "homingDistance" : 15
+}

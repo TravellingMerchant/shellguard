@@ -1,0 +1,67 @@
+{
+  "projectileName" : "sgmicrorocket",
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/gun/shellbulletimpact.ogg"
+      ]
+    }
+  ],
+  "image" : "sgmicrorocket.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 0.1
+  },
+  "animationCycle" : 0.25,
+  "pointLight" : true,
+  "lightColor" : [255, 100, 0],
+  "actionOnReap" : [
+	{
+      "action" : "spark"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "shellsmoke"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/fire_out.ogg" ]
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 3,
+      "backgroundRadius" : 2,
+      "explosiveDamageAmount" : 0.0,
+      "delaySteps" : 2
+    }
+
+  ],
+  "emitters" : [ "rocketsmoke" ],
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 10,
+  "power" : 20,
+  "speed" : 25,
+  "damageKind" : "bow",
+  
+  "scripts" : [ "/projectiles/scripts/sgswarm.lua.lua" ],
+  "scriptDelta" : 1,
+  "speedEqualsPower" : false,
+  "minHomingControlForce" : 0,
+  "maxHomingControlForce" : 0,
+  "minWavePeriod" : 0.35,
+  "maxWavePeriod" : 0.35,
+  "minWaveAmplitude" : -0.75,
+  "maxWaveAmplitude" : 0.75,
+  
+  "persistentAudio" : "/sfx/tech/tech_rocketboots.ogg"
+}

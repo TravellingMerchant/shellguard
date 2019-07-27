@@ -1,0 +1,71 @@
+-- vehicle energy use status script 
+--  xsm custom version
+-- LoPhatKao Aug 2016
+
+function init()
+  self.owner = effect.sourceEntity()
+  self.ownerUid = world.entityUniqueId(self.owner)
+  self.blocked = not status.resourceLocked("energy")
+  self.ownerPos = {0,0}
+  message.setHandler("vehicle_useSeatEnergy", v_useSeatEnergy)
+  
+  local maxEnergy = status.stat("maxEnergy")
+  local minEnergy = effect.getParameter("minEnergy",100)
+  local planetBonus = effect.getParameter("planetLevelBonus",10)*world.threatLevel()
+  local energyScale = math.max(minEnergy+planetBonus,maxEnergy)/maxEnergy
+--  sb.logInfo("%s",energyScale*status.stat("maxEnergy"))
+  effect.addStatModifierGroup({
+      {stat = "maxEnergy", effectiveMultiplier = energyScale},
+      {stat = "energyRegenPercentageRate", amount = effect.getParameter("regenRateMultiplier",5)},
+      {stat = "energyRegenBlockTime", effectiveMultiplier = effect.getParameter("regenLockMultiplier",2)}
+    })
+end
+
+function update(dt)
+
+  if status.resourceLocked("energy") then
+    if not self.blocked then
+      self.blocked = true
+      v_setEnergyLocked(true)
+    end
+  else
+    if self.blocked then
+      self.blocked = false
+      v_setEnergyLocked(false)
+    end
+  end
+  self.ownerPos = self.owner and world.entityPosition(self.owner) or self.ownerPos
+  world.debugText("%s / %s\n\n%s",status.resource("energy"),status.stat("maxEnergy"),self.ownerPos,self.ownerPos,"green")
+end
+
+function uninit()
+  v_setEnergyLocked(false)  
+end
+
+function v_useSeatEnergy(_,_,args)
+  if args.ownerUid and args.ownerUid == self.ownerUid then -- its ours
+  if not status.resourceLocked("energy") then -- not regenning from empty
+    status.overConsumeResource("energy", args.amount)
+  end
+  end
+end
+
+function v_setEnergyLocked(block)
+  local vehicleIds = world.entityQuery(self.ownerPos, 5, {includedTypes = {"vehicle"}, order = "nearest"})
+  for _,vId in pairs(vehicleIds) do
+    world.sendEntityMessage(vId, "vehicle_setEnergyLocked", {ownerUid = self.ownerUid, block = block})
+  end
+end
+
+--[[  undocumented funcs of effect
+[22:16:46.176] [Info] function : modifyDuration()
+[22:16:46.176] [Info] function : setParentDirectives()
+[22:16:46.176] [Info] function : getParameter()
+[22:16:46.176] [Info] function : addStatModifierGroup()
+[22:16:46.176] [Info] function : expire()
+[22:16:46.177] [Info] function : removeStatModifierGroup()
+[22:16:46.177] [Info] function : duration()
+[22:16:46.177] [Info] function : setStatModifierGroup()
+[22:16:46.177] [Info] function : sourceEntity()
+
+]]

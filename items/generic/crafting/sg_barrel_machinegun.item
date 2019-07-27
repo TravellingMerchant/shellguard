@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_machinegun",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/machinegun.png",
+  "description" : "A standard machine gun barrel for strong, sustained fire.",
+  "shortdescription" : "Machinegun Barrel",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "machinegun"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "itemName" : "sgquadshot",
+  "price" : 4000,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "category" : "mechPart",
+  "tooltipKind" : "mecharm",
+  "builder" : "/items/buildscripts/buildmechpart.lua",
+  "inventoryIcon" : "sgquadshot.png",
+  "description" : "Fires four Shellguard rifle rounds in a line.",
+  "shortdescription" : "SG Quadshot",
+  "itemTags" : [ ],
+
+  "mechPart" : ["arm", "sgquadshot"]
+}

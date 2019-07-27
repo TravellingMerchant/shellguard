@@ -1,0 +1,9 @@
+{
+  "name" : "sgdroidevil-cannonarm",
+  "category" : "sgdroidevil",
+  "type" : "cannonarm",
+
+  "frames" : {
+    "cannonarm" : "sgdroidevil-cannonarm.png"
+  }
+}

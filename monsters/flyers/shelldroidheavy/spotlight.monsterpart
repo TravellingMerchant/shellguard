@@ -1,0 +1,9 @@
+{
+  "name" : "shelldroidheavy-spotlight",
+  "category" : "shelldroidheavy",
+  "type" : "spotlight",
+
+  "frames" : {
+    "spotlight" : "shelldroidheavy-spotlight.png"
+  }
+}

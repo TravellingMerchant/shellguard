@@ -1,0 +1,33 @@
+{
+  "itemName" : "sgsentrybasethrow",
+  "price" : 500,
+  "rarity" : "uncommon",
+  "category" : "throwableItem",
+  "inventoryIcon" : "sgsentrybasethrow.png",
+  "image" : "sgsentrybasethrow.png",
+  "shortdescription" : "Disposable Sentry Kit",
+  "description" : "A single use sentry gun, low health and range but provides good fire power.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.0,
+  "cooldown" : 1.5,
+
+  "projectileType" : "sgbasesentryspawnshot",
+  "projectileConfig" : {
+    "speed" : 5,
+    "power" : 0.0,
+    "knockback" : 20,
+
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  }
+
+}

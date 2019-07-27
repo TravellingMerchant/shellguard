@@ -1,0 +1,72 @@
+{
+  "projectileName" : "shelltitanboom",
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/gun/shellbulletimpact.ogg"
+      ]
+    }
+  ],
+  "image" : "shelltitanboom.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 0,
+    "collisionEnabled" : false
+  },
+  "animationCycle" : 0.4,
+  "pointLight" : true,
+  "lightColor" : [255, 0, 0],
+  "actionOnReap" : [
+	{
+      "action" : "spark"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/titanboom2.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 1.0,
+      "type" : "titansmall"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/fire_out.ogg" ]
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+    {
+      "action" : "projectile",
+      "type" : "molotovflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 35
+    },
+    {
+      "action" : "projectile",
+      "type" : "molotovflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : -35
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 10,
+      "backgroundRadius" : 5,
+      "explosiveDamageAmount" : 1000.0,
+      "delaySteps" : 2
+    }
+  ],
+  "emitters" : [ "rocketsmoke" ],
+  "orientationLocked" : true,
+  "onlyHitTerrain" : true,
+  "physics" : "disc",
+  "frameNumber" : 3,
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 1,
+  "speed" : 20,
+  "power" : 40,
+  "damageKind" : "bow"
+}

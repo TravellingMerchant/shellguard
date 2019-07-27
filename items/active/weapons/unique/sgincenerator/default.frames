@@ -1,0 +1,14 @@
+{
+  "frameGrid" : {
+    "size" : [41, 16],
+    "dimensions" : [4, 3],
+    "names" : [
+      [ "empty.1", "empty.2", "empty.3", "empty.4" ],
+      [ "charge.1", "charge.2", "charge.3", "charge.4" ],
+      [ "fullcharge.1", "fullcharge.2", "fire.1", "fire.2"]
+    ]
+  },
+  "aliases" : {
+    "fullcharge.3" : "fire.1"
+  }
+}

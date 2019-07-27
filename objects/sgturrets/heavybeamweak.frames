@@ -1,0 +1,14 @@
+{
+  "frameGrid" : {
+    "size" : [1, 3],
+    "dimensions" : [3, 3],
+    "names" : [
+      [ "t.f", "t.b", "t.l" ],
+      [ "m.f", "m.b", "m.l" ],
+      [ "b.f", "b.b", "b.l" ]
+    ]
+  },
+  "aliases" : {
+    "default" : "m.b"
+  }
+}

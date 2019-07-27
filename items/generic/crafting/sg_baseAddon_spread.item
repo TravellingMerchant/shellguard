@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_baseAddon_spread",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/baseAddon/spread.png",
+  "description" : "An addon that splits bullets into three.",
+  "shortdescription" : "Spread Addon",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "baseAddon",
+    "id" : "spread"
+  }
+}

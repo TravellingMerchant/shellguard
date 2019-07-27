@@ -1,0 +1,86 @@
+{
+  "type" : "crewmembershellguardmerc",
+  "baseType" : "crewmemberpenguin",
+
+  "scriptConfig" : {
+    "crew" : {
+      "recruitInteractAction" : {
+        "messageType" : "recruits.offerMercenary",
+        "messageArgs" : [
+          [ { "name" : "dubloon", "count" : 1 } ]
+        ]
+      }
+    }
+  },
+
+  "items" : {
+    "default" : [
+      [0, [
+          {
+            "head" : [ { "name" : "shellarmourheadnpc" }, { "name" : "sgflatcap" }, { "name" : "sgquartermaster" }, { "name" : "sgmedichelmet" }, { "name" : "sgbasicspacehelmet" }, { "name" : "sgspacehelmet" } ],
+            "chest" : [ { "name" : "shellarmourchestnpc" } ],
+            "legs" : [ { "name" : "shellarmourlegsnpc" } ],
+			"back" : [ { "name" : "sgbackpack" } ],
+            "primary" : [
+              "npcbroadsword",
+              "npcassaultrifle"
+            ]
+          }
+        ] ]
+    ],
+    "human" : [
+      [0, [
+          {
+            "head" : [ { "name" : "shellarmourheadnpc" }, { "name" : "sgflatcap" }, { "name" : "sgquartermaster" }, { "name" : "sgmedichelmet" }, { "name" : "sgbasicspacehelmet" }, { "name" : "sgspacehelmet" } ],
+            "chest" : [ { "name" : "shellarmourchestnpc" } ],
+            "legs" : [ { "name" : "shellarmourlegsnpc" } ],
+			"back" : [ { "name" : "sgbackpack" } ],
+            "primary" : [
+              "shellguardrifle",
+              "sgshotgun",
+              "shellspear",
+              "heavyhatchet",
+              "ShellGuardGrenadeLauncher",
+              "shellguardbombard",
+			  "shellguardsmg",
+              "shellguardpistol",
+			  "shellguardreflek"
+            ],
+            "sheathedprimary" : [
+              "shellguardpistol",
+              "shellguardsmg"
+            ],
+            "alt" : [
+              { "name" : "shellguardsmg" }
+            ]
+          }
+        ] ],
+      [1, [
+          {
+            "head" : [ { "name" : "shellarmourheadnpc" }, { "name" : "sgflatcap" }, { "name" : "sgquartermaster" }, { "name" : "sgmedichelmet" }, { "name" : "sgbasicspacehelmet" }, { "name" : "sgspacehelmet" } ],
+            "chest" : [ { "name" : "shellarmourchestnpc" } ],
+            "legs" : [ { "name" : "shellarmourlegsnpc" } ],
+			"back" : [ { "name" : "sgbackpack" } ],
+            "primary" : [
+              "shellguardrifle",
+              "sgshotgun",
+              "shellspear",
+              "heavyhatchet",
+              "ShellGuardGrenadeLauncher",
+              "shellguardbombard",
+			  "shellguardsmg",
+              "shellguardpistol",
+			  "shellguardreflek"
+            ],
+            "sheathedprimary" : [
+              "shellguardpistol",
+              "shellguardsmg"
+            ],
+            "alt" : [
+              { "name" : "shellshield" }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

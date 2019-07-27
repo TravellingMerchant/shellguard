@@ -1,0 +1,47 @@
+{
+  "objectName" : "sgchomperspawner",
+  "colonyTags" : ["misc"],
+  "rarity" : "Common",
+  "description" : "Produces a Shellguard Chomper that respawns when killed, if wired and activated.",
+  "shortdescription" : "Chomper Constructor",
+  "race" : "human",
+  "printable" : false,
+  "category" : "spawner",
+  "price" : 2500,
+
+  "inventoryIcon" : "sgchomperspawnericon.png",
+  
+  "animation" : "/objects/sgspawner/sgchomperspawner/sgchomperspawner.animation",
+  "animationParts" : {
+    "spawner" : "sgchomperspawner.png"
+  },
+  "animationPosition" : [-8, 0],
+  "orientations" : [
+    {
+      "dualImage" : "sgchomperspawner.png:idle",
+      "imagePosition" : [-8, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/sgspawner/sgchomperspawner/sgchomperspawner.lua" ],
+  "scriptDelta" : 10,
+
+  "inputNodes" : [ [-1, 0] ],
+
+  "spawner" : {
+    "monsterTypes" : ["sgchomper"], //type of monster to spawn (random from list)
+    //"monsterLevel" : [1, 10], //level of monster to spawn (random within range, or leave blank for world threat level)
+    "monsterParams" : { //additional parameters of spawned monster
+      "aggressive" : true
+    },
+	"delay": 0.5,
+    "position" : [0, 1], //relative position to spawn at
+    "positionVariance" : [0, 0], //[x,y] size of randomized spawn area, centered on position
+    "outOfSight" : false //only spawn where the player can't see
+  },
+
+  "smashOnBreak" : false
+}

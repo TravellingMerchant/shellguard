@@ -1,0 +1,91 @@
+{
+  "itemName" : "shellguardriflecompact",
+  "price" : 2000,
+  "inventoryIcon" : "ShellGuardRiflecompact.png",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Standard rifle compact enough to be used one handed at the cost of accuracy and fire rate.",
+  "shortdescription" : "Compact Shellguard Rifle",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : false,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "shellguardriflecompact.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/ShellRifleFire.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.0, 0.1],
+  "muzzleOffset" : [1.7, 0.2],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 1.5,
+    "baseDps" : 6.5,
+    "energyUsage" : 30.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.06,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -20,
+        "weaponRotation" : 30,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "tempbullet",
+    "projectileParameters" : { 
+      "knockback" : 6
+    }
+  },
+
+  "altAbilityType" : "",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "eliteguardriflecompact.png",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/shellguardriflecompact/eliteguardriflecompact.png"
+    },
+    "shortdescription" : "Compact Elite Rifle ^yellow;^reset;"
+  }
+}

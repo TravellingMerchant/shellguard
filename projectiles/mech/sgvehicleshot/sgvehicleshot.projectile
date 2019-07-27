@@ -1,0 +1,31 @@
+{
+  "projectileName" : "sgvehicleshot",
+  "image" : "sgvehicleshot.png",
+  "physics" : "laser",
+  "animationCycle" : 0.4,
+  "animationLoops" : false,
+  "windupFrames" : 2,
+  "timeToLive" : 10,
+  "frameNumber" : 3,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [225, 100, 60],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    }
+  ],
+  "power" : 5.0,
+  "speed" : 150,
+  "damageKind" : "default"
+}

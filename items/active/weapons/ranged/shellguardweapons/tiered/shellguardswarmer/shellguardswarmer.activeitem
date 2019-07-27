@@ -1,0 +1,92 @@
+{
+  "itemName" : "shellguardswarmer",
+  "price" : 7000,
+  "inventoryIcon" : "shellguardswarmer.png",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Fires a swarm of mini-rockets.",
+  "shortdescription" : "Shellguard Swarm Launcher",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Rocket Launcher",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "shellguardswarmer.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/fireworkgun_large1.ogg", "/sfx/gun/fireworkgun_large2.ogg" ]
+    }
+  },
+
+  "baseOffset" : [-0.3, 0.5],
+  "muzzleOffset" : [2.2, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.3,
+    "baseDps" : 4.0,
+    "energyUsage" : 42.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.15,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -20,
+        "weaponRotation" : 30,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    },
+
+    "burstCount" : 12,
+    "burstTime" : 0.1,
+    "fireType" : "burst",
+    "projectileType" : "sgswarmrocket",
+    "projectileParameters" : { 
+      "knockback" : 6
+    }
+  },
+
+  "altAbilityType" : "",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "eliteguardswarmer.png",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/shellguardswarmer/eliteguardswarmer.png"
+    },
+    "shortdescription" : "Elite Swarm Launcher ^yellow;^reset;"
+  }
+}

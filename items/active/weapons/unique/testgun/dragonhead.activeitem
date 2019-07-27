@@ -1,0 +1,118 @@
+{
+  "itemName" : "testgun123hi",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A pistol with a fiery temper. Here be Dragons.",
+  "shortdescription" : "Dragonhead Pistol",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 6,
+
+  "inventoryIcon" : "dragonheadicon.png",
+
+  "animation" : "dragonhead.animation",
+  "animationParts" : {
+    "gun" : "dragonhead.png",
+    "gunfullbright" : "dragonheadfullbright.png"
+  },
+  "animationCustom" : {},
+  "muzzleOffset" : [2.5, 0.5],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "ice",
+
+  "primaryAbilityType" : "neb-enhancedchargefire",
+  "primaryAbility" : {
+    "name" : "Charged Shot",
+    "scripts" : ["/items/active/weapons/ranged/abilities/neb-enhancedchargefire/neb-enhancedchargefire.lua"],
+    "class" : "NebsEnhancedChargeFire",
+	
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 5,
+        "cooldown" : 0.1,
+        "projectileType" : "chargeshotsmall",
+        "projectileParameters" : {},
+        "projectileCount" : 1,
+        "inaccuracy" : 0.008,
+        "baseDamage" : 1.5,
+        "fireType" : "burst",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
+        "burstTime" : 0.05,		//delay between shots in the burst
+        "burstCount" : 5,		//amount of bullets to fire in the burst, must be a integer
+		"fireTime" : 0.1,		//longer is much longer with burst cus its basically that amount per bullet fired at the end of the burst
+        "fireSound" : "fire",
+	  
+	    //Recoil Stuffs
+	    "recoilKnockbackVelocity" : 10,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    "crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
+	    "crouchRecoilKnockbackVelocity" : 3	//When crouching it uses this instead of recoilKnockbackVelocity
+      },
+      {
+        "time" : 1.0,
+        "energyCost" : 40,
+        "cooldown" : 0.5,
+        "projectileType" : "chargeshotlarge",
+        "projectileParameters" : {},
+        "projectileCount" : 5,
+        "inaccuracy" : 0.1,
+        "baseDamage" : 9,
+        "spreadAngle" : 10,
+		"fireType" : "single",
+		"fireTime" : 0.5,
+        "fireSound" : "fire2",
+	  
+	    //Recoil Stuffs
+	    "recoilKnockbackVelocity" : 50,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    "crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
+	    "crouchRecoilKnockbackVelocity" : 25	//When crouching it uses this instead of recoilKnockbackVelocity
+      }
+    ],
+	//Movement Whilst Charging
+	"walkWhileCharging" : true,		//if false, the player can run normally else if true it just makes the player walk while charging
+	"allowJumping" : true,			//if true allows for jumping while charging if false the player is unable to jump
+	
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

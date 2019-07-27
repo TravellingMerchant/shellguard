@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_underbarrelAddon_cleavebayonetalt",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/underbarrelAddon/cleavebayonetalt.png",
+  "description" : "A heavy serrated hatchet bayonet.",
+  "shortdescription" : "Heavy Bayonet",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "underbarrelAddon",
+    "id" : "cleavebayonetalt"
+  }
+}

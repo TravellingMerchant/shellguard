@@ -1,0 +1,9 @@
+{
+  "name" : "sgchomperarena",
+  "category" : "sgchomperarena",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgchomperarena.png"
+  }
+}

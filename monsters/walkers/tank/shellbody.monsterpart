@@ -1,0 +1,9 @@
+{
+  "name" : "shelltank",
+  "category" : "tank",
+  "type" : "shellbody",
+
+  "frames" : {
+    "body" : "shelltank.png"
+  }
+}

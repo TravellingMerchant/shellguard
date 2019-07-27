@@ -1,0 +1,76 @@
+{
+  "itemName" : "snaggywhip",
+  "price" : 1000,
+  "level" : 2,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A rope fashioned into a whip. Get cracking!",
+  "shortdescription" : "Snaggy Whip",
+  "tooltipKind" : "sword",
+  "category" : "whip",
+  "twoHanded" : false,
+  "itemTags" : ["weapon"],
+
+  "inventoryIcon" : "ropewhip.png:idle",
+  "animation" : "whip.animation",
+  "animationParts" : {
+    "weapon" : "ropewhip.png",
+    "weaponFullbright" : ""
+  },
+  "animationCustom" : {
+    "particleEmitters" : { "crack" : { "particles" : [ ]}},
+    "sounds" : {
+      "swing" : [ "/sfx/melee/whip_swing1.ogg", "/sfx/melee/whip_swing2.ogg", "/sfx/melee/whip_swing3.ogg" ],
+      "crack" : [ "/sfx/melee/whip_impact1.ogg", "/sfx/melee/whip_impact2.ogg", "/sfx/melee/whip_impact3.ogg" ]
+    }
+  },
+
+  "chain" : {
+    "startOffset" : [0.625, 0.0625],
+    "length" : [3, 18],
+    "segmentImage" : "/items/active/weapons/whip/ropewhiplink.png",
+    "endSegmentImage" : "/items/active/weapons/whip/ropewhipend.png",
+    "segmentSize" : 0.375
+  },
+
+  "scripts" : [ "whip.lua" ],
+
+  "primaryAbilityType" : "whipsnag",
+  "primaryAbility" : {
+    "cutoffRange": 18, //set to zero or false to disable
+
+    "fireTime" : 0.111,
+    "chainDps" : 3.0,
+    "crackDps" : 6.0,
+
+    "projectileType" : "whipcrackphysical",
+    "projectileConfig" : {},
+
+    "DoTTickSpeed" : 1,
+    "dotProjectileType" : "whipcrackphysical",
+    "dotProjectileConfig" : {
+      "statusEffects" : [ "staffslow", "electrified" ],
+      "power" : 2
+    },
+
+    "ropeRandomProjectileSpeed": 0.111,
+    "ropeRandomProjectileType" : "whipcrackphysical",
+    "ropeRandomProjectileConfig" : {
+      "statusEffects" : [ "electrified" ],
+      "power" : 0.5
+    },
+
+    //possible values: "player", "npc", "monster", "object", "vehicle", "itemDrop", "projectile", "creature"
+    "targetTypes": [ "creature", "projectile" ],
+    "canSnagTerrain" : true,
+    "onlyPullWhileAirborne" : true,
+
+    //those don't do anything yet sorry I'm lazy
+    "cutoffIfCollision": false, 
+
+    "maxSnagTimeTerrain": false, //time in seconds or false to disable
+    "maxSnagTimeEntities": false
+  },
+
+  "builder" : "/items/buildscripts/buildwhip.lua"
+}

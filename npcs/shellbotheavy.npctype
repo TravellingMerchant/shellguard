@@ -1,0 +1,175 @@
+{
+  "type" : "shellbotheavy",
+  "baseType" : "hostile",
+
+  "levelVariance" : [1, 1],
+  
+  "identity" : {
+    "bodyDirectives": "?multiply=00000000"
+  },
+  
+  "persistent" : true,
+
+  "damageTeam" : 2,
+
+  "dropPools" : [ "money" ],
+
+  "scriptConfig" : {
+    "behavior" : "hostileguard",
+
+    "behaviorConfig" : {
+      "leapWindup" : 0.75,
+      "rangedAimTime" : 0.5,
+      "rangedWindupTime" : 0.01
+    },
+
+    "aggressive" : true,
+
+    "personalities" : [
+        [1.0, { "personality" : "normal", "reactions" : {} }]
+    ],
+
+    "reactions" : {
+      "spontaneous" : [
+        [5.0, "sleep", { "timeRange" : [0.7, 0.9] }],
+        [1.0, "patrol"]
+      ]
+    },
+
+    "dialog" : {  
+
+      "attack" : {
+        "default" : {
+          "default" : [
+           "Hostile detected!",
+           "Combat subroutines engaged.",
+           "Engaging Hostile.",
+           "Exterminate!"
+          ]
+        }
+      },
+      "reattack" : {
+        "default" : {
+          "default" : [
+            "Alert, hostile in area."
+          ]
+        }
+      },
+      "killedTarget" : {
+        "default" : {
+          "default" : [
+            "Target eliminated.",
+            "Target destroyed.",
+            "Target exterminated"
+          ]
+        }
+      },
+      "lostTarget" : {
+        "default" : {
+          "default" : [
+            "Target Lost."
+          ]
+        }
+      },
+      "outOfSight" : {
+        "default" : {
+          "default" : [
+            "Are you still there?"
+          ]
+        }
+      },
+      "cheerOn" : {
+        "default" : {
+          "default" : [
+            "Weapons online."
+          ]
+        }
+      },
+      "cantReach" : {
+        "default" : {
+          "default" : [
+            "Pathing Error"
+          ]
+        }
+      }
+    },
+	
+    "chatSounds" : {
+      "default" : {
+        "male" : [
+          "/sfx/humanoid/human_chatter_male1.ogg",
+          "/sfx/humanoid/human_chatter_male2.ogg",
+          "/sfx/humanoid/human_chatter_male3.ogg"
+        ]
+      }
+    },
+
+    "combat" : {
+      "meleeWeaponWindups" : {
+        "default" : 0.45,
+        "broadsword" : 0.45,
+        "dagger" : 0.3,
+        "axe" : 0.45,
+        "hammer" : 0.6,
+        "shortsword" : 0.35,
+        "spear" : 0.55
+      },
+      "meleeWeaponCooldowns" : {
+        "default" : 1.0,
+        "broadsword" : 1.7,
+        "dagger" : 0.7,
+        "axe" : 1.4,
+        "hammer" : 2.0,
+        "shortsword" : 1.0,
+        "spear" : 1.4
+      }
+    }
+  },
+
+  "items" : {
+    "default" : [
+      [0, [
+          {
+            "head" : [ { "name" : "ironwatchdroneheavyhead" } ],
+            "chest" : [ { "name" : "ironwatchdroneheavychest" } ],
+            "legs" : [ { "name" : "ironwatchdronelegs" } ],
+            "primary" : [
+              "sgvehiclecannon"
+			  ],
+            "sheathedprimary" : [ "shellguardpistol" ],
+            "alt" : [
+              { "name" : "shellguardpistol" }
+            ]
+          }
+        ] ]
+    ]
+  },
+
+  "touchDamage" : {
+    "damage" : 0,
+    "teamType" : "enemy",
+    "damageType" : "knockback",
+    "damageSourceKind" : "nodamage",
+    "damageRepeatGroup" : "npcTouchKnockback",
+    "damageRepeatTimeout" : 0.5,
+    "knockback" : 20,
+    "statusEffects" : [ ]
+  },
+
+  "statusControllerSettings" : {
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 140.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 1
+      },
+      "protection" : {
+        "baseValue" : 1.0
+      },
+      "healthRegen" : {
+        "baseValue" : 0.0
+      }
+    }
+  }
+}

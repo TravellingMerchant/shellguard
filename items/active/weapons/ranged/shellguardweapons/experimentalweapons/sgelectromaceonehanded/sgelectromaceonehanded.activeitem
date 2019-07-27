@@ -1,0 +1,72 @@
+{
+  "itemName" : "sgelectromaceonehanded",
+  "level" : 6,
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A gun that fires an electrical ball on a chain, can be guided and swung around.",
+  "shortdescription" : "Electro Flail",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","ranged","livingweapon","upgradeableWeapon"],
+
+  "inventoryIcon" : "sgelectromaceonehanded.png",
+
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgelectromaceonehanded.png",
+    "barrel" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/PlasmiteRPGLaunch.ogg" ],
+      "altFire" : [ "/sfx/gun/PlasmiteRPGLaunch.ogg" ]
+    }
+  },
+  "baseOffset" : [-0.06, 0.2],
+  "muzzleOffset" : [1.4, 0.5],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "tentaclegun",
+  "primaryAbility" : {
+    "chain" : {
+      "taper" : 0,
+      "segmentImage" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgelectromaceonehanded/macesegment.png",
+      "endSegmentImage" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgelectromaceonehanded/maceend.png",
+      "segmentSize" : 1.0
+    },
+
+    "guideProjectiles" : true,
+    "maxLength" : 20,
+
+    "baseDps" : 7.0,
+    "fireTime" : 0.2,
+    "maxProjectiles" : 1,
+    "projectileCount" : 1,
+    "energyUsage" : 200,
+    "inaccuracy" : 0.8,
+
+    "projectileType" : "sgelectromace",
+    "projectileParameters" : {
+      "knockback" : 5,
+      "speed" : 50,
+      "bounces" : 8,
+      "timeToLive" : 10
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "eliteelectromaceonehanded.png",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgelectromaceonehanded/eliteelectromaceonehanded.png"
+    },
+    "shortdescription" : "Lightning Flail ^yellow;^reset;"
+  }
+}

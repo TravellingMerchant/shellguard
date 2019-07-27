@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_underbarrelAddon_laser",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/underbarrelAddon/laser.png",
+  "description" : "A basic laser sight. Incompatible with beam recievers.",
+  "shortdescription" : "Laser Sight",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "underbarrelAddon",
+    "id" : "laser"
+  }
+}

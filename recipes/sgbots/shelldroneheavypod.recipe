@@ -1,0 +1,33 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 5000 }
+  ],
+  "output" : {
+    "item" : "filledcapturepod",
+    "count" : 1,
+    "parameters" : {
+      "shortdescription" : "SG Heavy Drone",
+      "description" : "A heavy Shellguard drone. Carries an explosive cannon with a built in spotlight.",
+      "tooltipFields" : {
+        "subtitle" : "Shellguard Robot",
+        "objectImage" : "/monsters/flyers/shelldroidheavy/icon.png"
+      },
+      "pets" : [
+        {
+          "name" : "Drone",
+          "portrait" : [
+            {"image" : "/monsters/flyers/shelldroidheavy/icon.png"}
+          ],
+          "config" : {
+            "type" : "shelldroidheavy",
+            "parameters" : {
+              "level" : 6,
+              "aggressive" : true
+            }
+          }
+        }
+      ]
+    }
+  },
+  "groups" : [ "sgrobotcrafting" ]
+}

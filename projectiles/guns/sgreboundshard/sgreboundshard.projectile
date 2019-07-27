@@ -1,0 +1,17 @@
+{
+  "projectileName" : "sgreboundshard",
+  "image" : "sgreboundshard.png",
+  "physics" : "laser",
+  "animationCycle" : 0.3,
+  "animationLoops" : false,
+  "timeToLive" : 0.3,
+  "frameNumber" : 3,
+  "piercing" : true,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [220, 50, 50],
+  "power" : 1.0,
+  "speed" : 20,
+  "damageKind" : "default"
+}

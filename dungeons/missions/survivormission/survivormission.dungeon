@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "survivormission",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "survivormission" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "survivormission",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "survivormission.json" ]
+    }
+  ]
+}

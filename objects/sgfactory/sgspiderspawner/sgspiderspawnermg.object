@@ -1,0 +1,45 @@
+{
+  "objectName" : "sgspiderspawnermg",
+  "colonyTags" : ["misc"],
+  "rarity" : "Common",
+  "description" : "A spider.",
+  "shortdescription" : "Shellguard Inactive Spider",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 60,
+  "printable" : false,
+  "scannable" : false,
+
+  "inventoryIcon" : "sgspiderspawnermg.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgspiderspawnermg.png",
+      
+      "imagePosition" : [-40, -24],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  
+  "scripts" : [ "monsterspawner.lua" ],
+
+  "inputNodes" : [ [-1, 0] ],
+
+  "spawner" : {
+    "monsterTypes" : ["sgwalkertankevilmg"],
+    "monsterParams" : {
+      "aggressive" : true
+    },
+    "position" : [0, 0],
+    "positionVariance" : [0, 0],
+    "stock" : 1,
+    "trigger" : "wire",
+    "outOfSight" : false,
+    "breakdown" : true
+  },
+
+  "smashOnBreak" : true
+}

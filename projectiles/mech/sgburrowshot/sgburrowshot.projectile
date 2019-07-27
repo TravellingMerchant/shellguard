@@ -1,0 +1,59 @@
+{
+  "projectileName" : "sgburrowshot",
+  "image" : "sgburrowshot.png",
+  "physics" : "sgantibounce",
+  "animationCycle" : 0.4,
+  "animationLoops" : false,
+  "windupFrames" : 2,
+  "timeToLive" : 10,
+  "frameNumber" : 3,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [225, 100, 60],
+  "flippable" : true,
+  "orientationLocked" : false,
+  "bounces" : -1,
+  "piercing" : true,
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/melee/fist_hit_metal1.ogg",
+        "/sfx/melee/fist_hit_metal2.ogg",
+        "/sfx/melee/fist_hit_metal3.ogg",
+        "/sfx/melee/fist_hit_metal4.ogg",
+        "/sfx/melee/fist_hit_metal5.ogg",
+        "/sfx/melee/fist_hit_metal6.ogg"
+      ]
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    }
+  ],
+  "periodicActions" : [
+	{
+     "time" : 0.5,
+     "repeat" : true,
+     "action" : "explosion",
+     "foregroundRadius" : 2,
+     "backgroundRadius" : 0,
+     "explosiveDamageAmount" : 500.0,
+     "delaySteps" : 2
+    }
+  ],
+  "power" : 5.0,
+  "speed" : 10,
+  "damageKind" : "default"
+}

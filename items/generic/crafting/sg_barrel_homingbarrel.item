@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_homingbarrel",
+  "price" : 5000,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/homingbarrel.png",
+  "description" : "Advanced barrel that fires homing needle lasers.",
+  "shortdescription" : "Homing Needle Barrel",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "homingbarrel"
+  }
+}

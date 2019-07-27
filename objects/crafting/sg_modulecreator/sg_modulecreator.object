@@ -1,0 +1,60 @@
+{
+  "objectName" : "sg_modulecreator",
+  "colonyTags" : [],
+  "rarity" : "Legendary",
+  "printable" : false,
+  "description" : "Use this station to create shellguard gun modules.",
+  "shortdescription" : "^orange;Gun Module Spawner^white;",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 75000,
+  "health" : 1.5,
+
+  "iAction" : "OpenMerchantInterface",
+  "iData" : {
+    "config" : "/interface/windowconfig/vendingmachine.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : " Gun Module Spawner",
+        "subtitle" : " Tasty Stocks"
+      }
+    },
+    "buyFactor" : 1,
+    "sellFactor" : 1,
+    "items" : []
+  },
+  "scripts" : [ "sg_modulecreator.lua"],
+  "scriptDelta" : 60,
+
+  "partConfig" : [
+    "/items/active/weapons/ranged/sg_built/partConfig.config",
+    "/items/active/weapons/ranged/sg_built/partConfigMerchant.config",
+    "/items/active/weapons/ranged/sg_built/partConfigSkaianDLC.config"
+  ],
+
+  "inventoryIcon" : "sg_modulecreatoricon.png",
+
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "sg_modulecreator.png:default.<frame>", "fullbright" : true }, { "image" : "sg_modulecreatorlit.png:default.<frame>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "sg_modulecreator.png:default.<frame>", "fullbright" : true }, { "image" : "sg_modulecreatorlit.png:default.<frame>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

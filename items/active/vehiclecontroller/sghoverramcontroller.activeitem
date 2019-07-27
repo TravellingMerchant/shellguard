@@ -1,0 +1,34 @@
+{
+  "itemName" : "sghoverramcontroller",
+  "level" : 1,
+  "price" : 12500,
+  "rarity" : "Rare",
+  "category" : "vehicleController",
+  "description" : "A hoverbike outfitted with a heavy ramming guard.",
+  "shortdescription" : "Hover Ram",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["vehiclecontroller.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "vehicle",
+  "largeImage" : "sghoverram.png",
+
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "sghoverram",
+  "vehicleBoundingBox" : [-5, -3, 5, 3],
+  "vehicleImage" : "/vehicles/hoverbike/sghoverram/sghoverramwarp.png:warp.7",
+
+  "animationParts" : {
+    "casing" : "sghoverramcontroller.png"
+  },
+
+  "inventoryIcon" : "sghoverramcontroller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/sghoverramcontroller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/sghoverramcontroller.png:full"
+
+}

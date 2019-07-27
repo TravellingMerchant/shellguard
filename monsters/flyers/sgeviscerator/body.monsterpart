@@ -1,0 +1,9 @@
+{
+  "name" : "sgeviscerator",
+  "category" : "sgeviscerator",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgeviscerator.png"
+  }
+}

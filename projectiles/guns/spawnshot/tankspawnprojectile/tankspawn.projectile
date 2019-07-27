@@ -1,0 +1,23 @@
+{
+  "projectileName" : "tankspawn",
+  "physics" : "grenade",
+  "image" : "tankspawn.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 3,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [150, 0, 150],
+  "actionOnReap" : [
+    {
+      "action" : "spawnmonster",
+      "type" : "sgmonstertank",
+      "offset" : [0, 2],
+      "level" : 6,
+      "arguments" : {
+        "aggressive" : true
+      }
+    }
+  ],
+  "power" : 0,
+  "speed" : 50,
+  "damageKind" : "default"
+}

@@ -1,0 +1,49 @@
+{
+  "projectileName" : "sgflakshrapnellightbouce",
+  "image" : "sgflakshrapnellightbouce.png",
+  "frameNumber" : 1,
+  "physics" : "sgflakbounce",
+  "bounces" : 4,
+  "piercing" : false,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [235, 126, 2],
+  "movementSettings" : {
+    "gravityMultiplier" : 1
+  },
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/smoke/smoke.config"
+    },
+    {
+      "action" : "projectile",
+      "inheritDamageFactor" : 1,
+      "type" : "sgfireflak"
+    }
+  ],
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/melee/fist_hit_metal1.ogg",
+        "/sfx/melee/fist_hit_metal2.ogg",
+        "/sfx/melee/fist_hit_metal3.ogg",
+        "/sfx/melee/fist_hit_metal4.ogg",
+        "/sfx/melee/fist_hit_metal5.ogg",
+        "/sfx/melee/fist_hit_metal6.ogg"
+      ]
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/sgfireflak/sgfireflak.config"
+    }
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [ "rocketsmoke" ],
+  "power" : 5.0,
+  "speed" : 20,
+  "knockback" : 10,
+  "damageKind" : "fire",
+  "persistentAudio" : "/sfx/objects/torch.ogg"
+}

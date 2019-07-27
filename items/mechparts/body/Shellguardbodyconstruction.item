@@ -1,0 +1,15 @@
+{
+  "itemName" : "Shellguardbodyconstruction",
+  "price" : 11200,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "category" : "mechPart",
+  "tooltipKind" : "mechbody",
+  "builder" : "/items/buildscripts/buildmechpart.lua",
+  "inventoryIcon" : "Shellguardbodyconstruction.png",
+  "description" : "Built for long construction shifts in space, a hardy body with high energy.",
+  "shortdescription" : "SG Construction Body",
+  "itemTags" : [ ],
+
+  "mechPart" : ["body", "Shellguardbodyconstruction"]
+}

@@ -1,0 +1,86 @@
+{
+  "itemName" : "shellguardclawboss",
+  "price" : 10000,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A prototype weapon that fires up to three explosive plasma bombs, which release homing energy blasts.",
+  "shortdescription" : "Shellguard Plasma Claw",
+  //"tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 6,
+
+  "inventoryIcon" : "shellguardclawbossicon.png",
+
+  "animation" : "shellguardclawboss.animation",
+  "animationParts" : {
+    "gun" : "shellguardclawboss.png",
+    "gunfullbright" : "shellguardclawbossfullbright.png"
+  },
+  "animationCustom" : {},
+  "muzzleOffset" : [1.875, 0.125],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "handGrip" : "wrap",
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "name" : "Rocket Stack",
+    "scripts" : ["/items/active/weapons/ranged/shellguardweapons/tiered/shellguardclawboss/shellguardRocketStack.lua"],
+    "class" : "shellguardRocketStack",
+
+    "baseDamage" : 1,
+    "energyPerShot" : 25,
+
+    "reloadTime" : 0.8,
+    "maxStack" : 3,
+    "spread" : 0.2,
+
+    "inaccuracy" : 0,
+
+    "projectileType" : "sgelectrobomb",
+    "projectileParameters" : {},
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 9,
+        "weaponRotation" : 6,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 9,
+        "weaponRotation" : 6,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

@@ -1,0 +1,13 @@
+{
+  "itemName" : "sgmechhornclown",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "category" : "mechPart",
+  "inventoryIcon" : "sgmechhornclown.png",
+  "description" : "A clown horn owned by a space-faring clown that gets into rough situations.",
+  "shortdescription" : "Clown Mech Horn",
+  "itemTags" : [ ],
+
+  "mechPart" : ["horn", "sgclownhorn"]
+}

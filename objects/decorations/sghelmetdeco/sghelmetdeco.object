@@ -1,0 +1,33 @@
+{
+  "objectName" : "sghelmetdeco",
+  "colonyTags" : ["valuable","pretty"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 100,
+
+  "apexDescription" : "Stylish, but unused.",
+  "avianDescription" : "Stylish, but unused.",
+  "floranDescription" : "Stylish, but unused.",
+  "glitchDescription" : "Impressed. Stylish, but unused.",
+  "humanDescription" : "Stylish, but unused.",
+  "hylotlDescription" : "Stylish, but unused.",
+  "novakidDescription" : "Stylish, but unused.",
+
+  "description" : "An unused Shellguard helmet",
+  "shortdescription" : "Shellguard Helmet Decoration",
+  "race" : "human",
+
+  "inventoryIcon" : "sghelmetdeco.png",
+  "orientations" : [
+    {
+      "dualImage" : "sghelmetdeco.png:<color>",
+      "imagePosition" : [-5, -0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name" : "sgflamesentry-head",
+  "category" : "sgflamesentry",
+  "type" : "head",
+
+  "frames" : {
+    "head" : "sgflamesentry-head.png"
+  }
+}

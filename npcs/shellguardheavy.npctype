@@ -1,0 +1,141 @@
+{
+  "type" : "shellguardheavy",
+  "baseType" : "base",
+
+  "levelVariance" : [1, 1],
+  "persistent" : true,
+
+  "damageTeamType" : "friendly",
+
+  "dropPools" : [ "guardtreasure" ],
+
+  "scriptConfig" : {
+    "behavior" : "villageguard",
+
+    "behaviorConfig" : {
+      "greetingChance" : 0.67,
+
+      "hostileDamageTeam" : { "type" : "enemy", "team" : 1 }
+    },
+
+    "questGenerator" : {
+      "pools" : ["common", "guard"],
+      "enableParticipation" : true,
+      "timeLimit" : 30,
+      "nearbyQuestLimit" : 2,
+      "nearbyQuestRange" : 50,
+      "questCountRange" : [1, 4],
+      
+      "graduation" : {
+        "nextNpcType" : [
+          [1, "crewmember"],
+          [0.5, "crewmemberengineer"],
+          [0.5, "crewmembermechanic"]
+        ]
+      }
+    },
+
+    "personalities" : [
+        [1.0, { "personality" : "normal", "reactions" : {} }]
+    ],
+
+    "dialog" : {
+      "greeting" : "/dialog/converse.config:greeting",
+      "converse" : "/dialog/converse.config:converse",
+
+      "attack" : "/dialog/combat.config:attack",
+      "reattack" : "/dialog/combat.config:reattack",
+      "killedTarget" : "/dialog/combat.config:killedTarget",
+      "lostTarget" : "/dialog/combat.config:lostTarget",
+      "outOfSight" : "/dialog/combat.config:outOfSight",
+      "cheerOn" : "/dialog/combat.config:cheerOn",
+      "cantReach" : "/dialog/combat.config:cantReach",
+
+      "hail" : "/dialog/guard.config:hail",
+
+      "accuse" : "/dialog/thief.config:accuse"
+    }
+  },
+
+  "items" : {
+    "human" : [
+      [0, [
+          {
+            "head" : [ { "name" : "shellarmourheavyhead" } ],
+            "chest" : [ { "name" : "shellarmourchest" } ],
+            "legs" : [ { "name" : "shellarmourlegs" } ],
+            "back" : [ { "name" : "shellarmourback" } ],
+            "primary" : [
+              "sgminigunnpc",
+              "ShellGuardRocketLauncher"
+            ],
+            "sheathedprimary" : [
+              "shellguardpistol",
+              "shellguardsmg"
+            ],
+            "alt" : [
+              { "name" : "commonsmallshield" },
+              { "name" : "shellshield" }
+            ]
+          }
+        ] ],
+      [2, [
+          {
+            "head" : [ { "name" : "shellarmourheavyhead" } ],
+            "chest" : [ { "name" : "shellarmourchest" } ],
+            "legs" : [ { "name" : "shellarmourlegs" } ],
+			"back" : [ { "name" : "shellarmourback" } ],
+            "primary" : [
+              "sgminigunnpc",
+              "ShellGuardRocketLauncher"
+            ],
+            "sheathedprimary" : [
+              "shellguardpistol",
+              "shellguardsmg"
+            ],
+            "alt" : [
+              { "name" : "commonsmallshield" },
+              { "name" : "shellshield" }
+            ]
+          }
+        ] ],
+      [3, [
+          {
+            "head" : [ { "name" : "shellarmourheavyhead" } ],
+            "chest" : [ { "name" : "shellarmourchest" } ],
+            "legs" : [ { "name" : "shellarmourlegs" } ],
+			"back" : [ { "name" : "shellarmourback" } ],
+            "primary" : [
+              "sgminigunnpc",
+              "ShellGuardRocketLauncher"
+            ],
+            "sheathedprimary" : [
+              "shellguardpistol",
+              "shellguardsmg"
+            ],
+            "alt" : [
+              { "name" : "commonsmallshield" },
+              { "name" : "shellshield" }
+            ]
+          }
+        ] ]
+    ]
+  },
+
+  "statusControllerSettings" : {
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 200.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 10.0
+      },
+      "protection" : {
+        "baseValue" : 1.0
+      },
+      "healthRegen" : {
+        "baseValue" : 1.0
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id" : "sgvehicletutorial",
+  "prerequisites" : [],
+  "title" : "^green;Vehicle Rescue",
+  "text" : "Oh hey! I've got some brand new vehicles in stock. If you can show me you can use them, I'll sell you them! I've got the perfect test for you too!",
+  "completionText" : "You're quite the pilot! I'd be happy to sell you some of these vehicles.",
+  "moneyRange" : [1200, 1200],
+  "rewards" : [
+    [ [ "sgvehiclecannon", 1 ], [ "money", 500 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/atmos/iconportrait.png"} ],
+        "title" : "Peter Atmos"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/atmos/iconportrait.png"} ],
+        "title" : "Peter Atmos"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Engineer Peter Atmos^reset;",
+      "findGoal" : "Rescue the Novakids",
+      "turnIn" : "Return to ^orange;Engineer Peter Atmos^reset;"
+    },
+
+    "warpEntityUid" : "sgatmos",
+    "warpAction" : "instanceworld:sgvehicletutorial",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:trainingcourse",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "sgvehicletutorialtele",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgatmos"
+  }
+}

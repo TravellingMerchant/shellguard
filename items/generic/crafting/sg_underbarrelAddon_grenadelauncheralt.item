@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_underbarrelAddon_grenadelauncheralt",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/underbarrelAddon/grenadelauncheralt.png",
+  "description" : "A standard issue grenade launcher, with wood furniture.",
+  "shortdescription" : "Grenade Launcher",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "underbarrelAddon",
+    "id" : "grenadelauncheralt"
+  }
+}

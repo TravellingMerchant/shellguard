@@ -1,0 +1,45 @@
+{
+  "id" : "sgcolonyattack1",
+  "prerequisites" : ["sgsurvivormission"],
+  "title" : "^green;Apex Under Attack!",
+  "text" : "An Apex colony we were hired to defend has come under attack. There's some sort of high-tech Apex facility there, we were allowed nowhere near. I think the attackers are after whatever is inside. Get there and find out who's attacking it!",
+  "completionText" : "It seems that crazy fool is the one that took over the Fortress AI! I did some detective work and found out he's an old Ironwatch member that we presumed dead after Earth fell. I'll keep searching to see if I can find a lead on where he went.",
+  "moneyRange" : [50, 50],
+  "rewards" : [
+    [ [ "sgflathelmet", 1 ], ["money", 5000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Commander Andros Galvanek^reset;",
+      "findGoal" : "Protect the ^orange;Apex colony^reset;",
+      "turnIn" : "Return to ^orange;Commander Andros Galvanek^reset;"
+    },
+
+    "warpEntityUid" : "Andros",
+    "warpAction" : "instanceworld:sgcolonyattack1",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgmercmission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "sgcolony1",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Andros"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "objectName" : "sgroombaspawner",
+  "colonyTags" : ["misc"],
+  "rarity" : "Common",
+  "description" : "A SHELL-B Cleaning bot charging bay.",
+  "shortdescription" : "SHELL-B Bay",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 60,
+  "printable" : false,
+  "scannable" : false,
+
+  "inventoryIcon" : "sgroombaspawner.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgroombaspawner.png",
+      
+      "imagePosition" : [-8, -8],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  
+  "scripts" : [ "monsterspawner.lua" ],
+
+  "inputNodes" : [ [-1, 0] ],
+
+  "spawner" : {
+    "monsterTypes" : ["sgroombacritter"],
+    "monsterParams" : {
+      "aggressive" : false
+    },
+    "position" : [0, 0],
+    "positionVariance" : [0, 0],
+    "stock" : 1,
+    "trigger" : "wire",
+    "outOfSight" : false,
+    "breakdown" : false
+  },
+
+  "smashOnBreak" : false
+}

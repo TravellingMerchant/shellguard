@@ -1,0 +1,33 @@
+{
+  "itemName" : "sgknife",
+  "price" : 1000,
+  "level" : 4,
+  "maxStack" : 1,
+  "rarity" : "rare",
+  "description" : "A robust knife made for general purpose use.",
+  "shortdescription" : "Shellguard Utility Knife",
+  //"tooltipKind" : "sword",
+  "category" : "shortsword",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","melee","shortsword"],
+
+  "inventoryIcon" : "sgknife.png",
+
+  "animation" : "/items/active/weapons/melee/shortsword/comboshortsword.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "sgknife.png" },
+  "animationCustom" : { },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "shortswordcombo",
+  "primaryAbility" : {
+    "fireTime" : 0.5,
+    "baseDps" : 6
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

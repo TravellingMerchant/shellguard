@@ -1,0 +1,15 @@
+{
+  "itemName" : "sgmechgattling",
+  "price" : 7000,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "category" : "mechPart",
+  "tooltipKind" : "mecharm",
+  "builder" : "/items/buildscripts/buildmechpart.lua",
+  "inventoryIcon" : "sgmechgattling.png",
+  "description" : "Fires at an incredibly fast rate.",
+  "shortdescription" : "SG Heavy Minigun",
+  "itemTags" : [ ],
+
+  "mechPart" : ["arm", "sgmechgattling"]
+}

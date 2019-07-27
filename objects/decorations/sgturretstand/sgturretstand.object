@@ -1,0 +1,34 @@
+{
+  "objectName" : "sgturretstand",
+  "colonyTags" : ["valuable","pretty"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 100,
+
+  "apexDescription" : "A basic turret stand.",
+  "avianDescription" : "A basic turret stand.",
+  "floranDescription" : "A basic turret stand.",
+  "glitchDescription" : "Impartial. A basic turret stand.",
+  "humanDescription" : "A basic turret stand.",
+  "hylotlDescription" : "A basic turret stand.",
+  "novakidDescription" : "A basic turret stand.",
+
+  "description" : "A stand for Shellguard Turrets.",
+  "shortdescription" : "Shellguard Turret Stand",
+  "race" : "human",
+
+  "inventoryIcon" : "sgturretstand.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgturretstand.png:<color>",
+      "imagePosition" : [-8, -0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+
+    }
+  ]
+}

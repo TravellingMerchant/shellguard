@@ -1,0 +1,71 @@
+{
+  "projectileName" : "sgbounceheavy",
+  "image" : "sgbounceheavy.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "physics" : "laser",
+  "bounces" : 4,
+  "lightColor" : [225, 100, 0],
+  "actionOnReap" : [
+	{
+      "action" : "spark"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/fire_out.ogg" ]
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 3,
+      "backgroundRadius" : 2,
+      "explosiveDamageAmount" : 3.0,
+      "delaySteps" : 2
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "size" : 0.1,
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/sgtrailyellow/sgtrailyellow.animation",
+        "initialVelocity" : [0.0, 0.0],
+        "timeToLive" : 0.05,
+        "fullbright" : true,
+        "destructionTime" : 0.01,
+        "destructionAction" : "shrink",
+        "fade" : 0.01,
+        "layer" : "middle",
+        "position" : [0.0, 0.0]
+      }
+    }
+  ],
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/projectiles/fistlauncher_shot.ogg"
+      ]
+    }
+  ],
+  "power" : 5.0,
+  "speed" : 50,
+  "damageKind" : "default"
+}

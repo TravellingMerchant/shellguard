@@ -1,0 +1,239 @@
+{
+  "itemName" : "sgpoptopclaw",
+  "price" : 750,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A poptop themed shotgun with an underbarrel lockjaw.",
+  "shortdescription" : "Poptop Shotjaw",
+  "tooltipKind" : "sgweapon",
+  "category" : "Lockjaw",
+  "twoHanded" : true,
+  "itemTags" : ["weapon"],
+  "handGrip" : "wrap",
+
+  "inventoryIcon" : "sgpoptopclaw.png:idle",
+  "animation" : "sgwhip.animation",
+  "animationParts" : {
+    "weapon" : "sgpoptopclaw.png",
+    "weaponFullbright" : "",
+    "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+  },
+  
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "firing" : {
+          "default" : "off",
+          "states" : {
+            "off" : {},
+            "fire" : {
+              "frames" : 2,
+              "cycle" : 0.07,
+              "mode" : "transition",
+              "transition" : "off"
+            }
+          }
+        }
+      },
+      "parts" : {
+        "muzzleFlash" : {
+          "properties" : {
+            "zLevel" : -1,
+            "centered" : true,
+            "offset" : [0.25, -1.4375],
+            "fullbright" : true,
+            "transformationGroups" : ["muzzle"]
+          },
+  
+          "partStates" : {
+            "firing" : {
+              "fire" : {
+                "properties" : {
+                  "image" : "<partImage>:<variant>.<frame>"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "particleEmitters" : {
+      "muzzleFlash" : {
+        "transformationGroups" : ["muzzle"],
+        "offsetRegion" : [0, 0, 0, 0],
+        "particles" : [ ]
+      }
+    },
+    "lights" : {
+      "muzzleFlash" : {
+        "active" : false,
+        "position" : [0, 0],
+        "color" : [90, 90, 0]
+      }
+    },
+    "sounds" : {
+      "fire" : [ "/sfx/gun/plasma_shotgun3.ogg" ],
+      "swing" : [ "/sfx/gun/lockjawshot.ogg", "/sfx/gun/lockjawshot2.ogg" ],
+      "crack" : [ "/sfx/gun/lockjawbite.ogg", "/sfx/gun/lockjawbite2.ogg", "/sfx/gun/lockjawbite3.ogg" ],
+      "disconnect" : [ "/sfx/objects/metalbarrel_break3.ogg", "/sfx/objects/metalbarrel_break1.ogg", "/sfx/objects/metalbarrel_break2.ogg" ]
+    }
+  },
+
+  "chain" : {
+    "startOffset" : [0.625, 0.0],
+    "length" : [2, 16],
+    "segmentImage" : "/items/active/weapons/whip/sgpoptopclawchain.png",
+    "endSegmentImage" : "/items/active/weapons/whip/sgpoptopclawend.png",
+    "segmentSize" : 0.375
+  },
+
+  "scripts" : [ "sgwhip.lua" ],
+  
+  "elementalType" : "physicalgv",
+  
+  "muzzleOffset" : [0.25, 0.5],
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/whip/abilities/mixedfire.lua"],
+    "class" : "MixedFire",
+
+    "fireTime" : 1.2,
+    "baseDps" : 10.5,
+    "energyUsage" : 31.5,
+    "inaccuracy" : 0.13,
+
+    "projectileCount" : 8,
+    "fireType" : "auto",
+
+    "projectileType" : "bonethorn",
+    "projectileParameters" : {
+      "damageKind" : "shotgunbullet",
+      "knockback" : 30
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.875],
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 8,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.875],
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.15,
+        "armRotation" : 8,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.875],
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+  
+  "altAbilityType" : "whipsnag",
+  "altAbility" : {
+    "name" : "Lockjaw Chomp",
+    "cutoffRange" : 16, //set to zero or false to disable
+    "minSwingDistance" : 2.5,
+    "onlyPullWhenAboveAnchor" : true,
+
+    "fireTime" : 0.5,
+    "chainDps" : 3.0, //only for the "normal" whipping
+    "crackDps" : 5.0,
+
+    "projectileType" : "chomp",
+    "projectileConfig" : {},
+
+    "DoTTickSpeed" : 0,
+    "dotProjectileType" : "",
+    "dotProjectileConfig" : {},
+	
+    "doSpawnRandomRopeProjectiles" : false,	
+    "ropeRandomProjectileSpeed" : 0.111,
+    "ropeRandomProjectileType" : "",
+    "ropeRandomProjectileConfig" : {},
+    
+    "minChainSegmentLengthToSpawnOn" : 40, //in pixels, check your projectile's .frames
+    "spawnRopeProjectileWhileMoving" : false,
+    "killRopeProjectileWhenMoving" : false,
+
+    //possible values: "player", "npc", "monster", "object", "vehicle", "itemDrop", "projectile", "creature"
+    "targetTypes" : [ "player", "npc", "monster", "vehicle" ],
+    "canSnagTerrain" : true,
+    "onlyPullWhileAirborne" : true,
+    "maxControlForce" : 1000, //max pull strength
+      
+    "controllable" : true,
+    "reelSpeed" : 20,
+    "airForce" : 100,
+    
+    "triggerType" : "switch",
+    
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.875],
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "swing" : {
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.875],
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "windup" : {
+        "duration" : 0.03,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.875],
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "extend" : {
+        "duration" : 0.03,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.875],
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "fire" : {
+        "duration" : 0.2,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.875],
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

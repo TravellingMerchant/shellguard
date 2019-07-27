@@ -1,0 +1,84 @@
+{
+  "itemName" : "shellguarddroner",
+  "price" : 10000,
+  "inventoryIcon" : "ShellGuarddroner.png",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Shoot out a Shellguard Drone. Great for scouting and fire support.",
+  "shortdescription" : "Shellguard Drone Launcher",
+  "level" : 1,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Grenade Launcher",
+  "itemTags" : ["weapon","ranged","assaultrifle"],
+  "twoHanded" : false,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "ShellGuarddroner.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/Dronespawn.ogg" ]
+    }
+  },
+
+  "baseOffset" : [0.3, 0.3],
+  "muzzleOffset" : [1.5, 0.2],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 2.0,
+    "baseDps" : 0.0,
+    "energyUsage" : 100.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.05,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : 70,
+        "weaponRotation" : 30,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "dronespawn",
+    "projectileParameters" : { 
+      "knockback" : 6
+    }
+  },
+
+  "altAbilityType" : "",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

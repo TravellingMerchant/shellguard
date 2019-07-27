@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_receiver_beamburst",
+  "price" : 5000,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/receiver/beamburst.png",
+  "description" : "A burst-fire beam receiver.",
+  "shortdescription" : "Beam Burst Receiver",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "receiver",
+    "id" : "beamburst"
+  }
+}

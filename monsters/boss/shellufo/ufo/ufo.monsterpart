@@ -1,0 +1,9 @@
+{
+  "name" : "ufo",
+  "category" : "shellufo",
+  "type" : "ufo",
+
+  "frames" : {
+    "ufo" : "shellufoufo.png"
+  }
+}

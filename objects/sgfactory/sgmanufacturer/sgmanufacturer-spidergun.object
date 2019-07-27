@@ -1,0 +1,27 @@
+{
+  "objectName" : "sgmanufacturer-spidergun",
+  "colonyTags" : ["misc"],
+  "rarity" : "Common",
+  "description" : "A manufacturer.",
+  "shortdescription" : "Shellguard Manufacturer",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 60,
+  "printable" : false,
+  "scannable" : false,
+
+  "inventoryIcon" : "sgmanufacturer-spidergun.png:default.default",
+  "orientations" : [
+    {
+      "dualImage" : "sgmanufacturer-spidergun.png",
+      "imageLayers" : [ { "image" : "sgmanufacturer-spidergun.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgmanufacturer-spidergunlit.png:<color>.<frame>" } ],
+      
+      "imagePosition" : [-32, -24],
+      "frames" : 24,
+      "animationCycle" : 1.6,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

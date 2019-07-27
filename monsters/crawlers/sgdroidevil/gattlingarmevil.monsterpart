@@ -1,0 +1,9 @@
+{
+  "name" : "sgdroidevil-gattlingarm",
+  "category" : "sgdroidevil",
+  "type" : "gattlingarm",
+
+  "frames" : {
+    "gattlingarm" : "sgdroidevil-gattlingarm.png"
+  }
+}

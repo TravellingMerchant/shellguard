@@ -1,0 +1,30 @@
+{
+  "projectileName" : "magnetorblaser",
+  "physics" : "laser",
+  "bounces" : 0,
+  "damageKindImage" : "icon.png",
+  "image" : "laser.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 1,
+  "timeToLive" : 0.1,
+  "power" : 50,
+  "speed" : 0,
+  "piercing" : true,
+  "damagePoly" : [[ 0, -0.25 ],[ 256, -0.25 ],[ 256, 0.25 ],[ 0, 0.25 ]],
+  "supportsProcessing" : true,
+  "statusEffects" : [ ],
+  "movementSettings" : {
+    "gravityMultiplier" : 0,
+    "bounceFactor" : 1,
+    "stopOnFirstBounce" : true,
+    "maxMovementPerStep" : 0.4,
+    "collisionPoly" : [[ 0, -0.25 ],[ 32, -0.25 ],[ 32, 0.25 ],[ 0, 0.25 ]],
+    "ignorePlatformCollision" : true,
+    "groundFriction" : 0,
+    "airFriction" : 0,
+    "liquidFriction" : 0,
+    "speedLimit" : null,
+    "maximumCorrection" : 0.75
+  },
+  "damageKind" : "electric"
+}

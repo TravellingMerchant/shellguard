@@ -1,0 +1,9 @@
+{
+  "name" : "sgdroid-body",
+  "category" : "sgdroid",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgdroid-body.png"
+  }
+}

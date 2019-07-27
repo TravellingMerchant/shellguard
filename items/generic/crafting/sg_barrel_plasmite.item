@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_plasmitebarrel",
+  "price" : 5000,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/plasmitebarrel.png",
+  "description" : "Incredibly powerful grenade barrel.",
+  "shortdescription" : "Plasmite Grenade Barrel",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "plasmitebarrel"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id" : "sgtrainattack",
+  "prerequisites" : [],
+  "title" : "^green;Train attack!",
+  "text" : "Oh hey! I'm Claire Gough. I'm normally in charge of making custom equipment, but our latest shipment was stolen! If you recover a train of stolen parts, I'll give you a custom workbench. Talk to me when you're ready to go.",
+  "completionText" : "Lock and load, baby! Come see me if you need gun parts or a new workbench. You can also find rare gun parts elsewhere!",
+  "moneyRange" : [1000, 1000],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], [ "sg_modulargunstation", 1 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/claireshop/iconportrait.png"} ],
+        "title" : "Claire Gough"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/claireshop/iconportrait.png"} ],
+        "title" : "Claire Gough"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Claire Gough.^reset;",
+      "findGoal" : "Reach the end of the train.",
+      "turnIn" : "Return to ^orange;Claire Gough.^reset;"
+    },
+
+    "warpEntityUid" : "sgclaireshop",
+    "warpAction" : "instanceworld:sgtrainattack",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgtrainattack",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "sgtrainattacktele",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgclaireshop"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_antimaterielrapid",
+  "price" : 5000,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/antimaterielrapid.png",
+  "description" : "Fast Anti-Material barrel, compatible with burst/heavy recievers.",
+  "shortdescription" : "A-M Rapid Barrel",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "antimaterielrapid"
+  }
+}

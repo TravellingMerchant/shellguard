@@ -1,0 +1,9 @@
+{
+  "name" : "shelldroid",
+  "category" : "shelldroid",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "shelldroid.png"
+  }
+}

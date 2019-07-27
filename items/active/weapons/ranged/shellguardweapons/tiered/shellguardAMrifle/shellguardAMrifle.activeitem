@@ -1,0 +1,92 @@
+{
+  "itemName" : "shellguardAMrifle",
+  "price" : 2500,
+  "inventoryIcon" : "shellguardAMrifle.png",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Extremely powerful, long range anti-materiel rifle with slow fire rate.",
+  "shortdescription" : "Shellguard Anti-Materiel Rifle",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "shellguardAMrifle.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/sgsnniperfire.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.0, 0.1],
+  "muzzleOffset" : [2.2, 0.2],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 2.0,
+    "baseDps" : 9.5,
+    "energyUsage" : 50.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.0,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -30,
+        "weaponRotation" : 50,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "sgamshot",
+    "projectileParameters" : { 
+      "knockback" : 6,
+      "speed" : 250
+    }
+  },
+
+  "altAbilityType" : "sglasersight",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "eliteguardAMrifle.png",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/shellguardAMrifle/eliteguardAMrifle.png"
+    },
+    "shortdescription" : "Elite Anti-Materiel Rifle ^yellow;^reset;"
+  }
+}

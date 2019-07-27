@@ -1,0 +1,15 @@
+{
+  "itemName" : "sgorangedye",
+  "price" : 100,
+  "rarity" : "Common",
+  "category" : "clothingDye",
+  "inventoryIcon" : "sgorangedye.png",
+  "description" : "This coloured dye can be applied to a piece of armour or clothing with a right-click.",
+  "shortdescription" : "Shellguard Orange Dye",
+
+  "dyeDirectives" : { "ffca8a" : "f2772d", "e0975c" : "cf682b", "a85636" : "ab5624", "6f2919" : "84421b" },
+
+  "radioMessagesOnPickup" : [ "pickupdye" ],
+
+  "scripts" : [ "/scripts/augments/dye.lua" ]
+}

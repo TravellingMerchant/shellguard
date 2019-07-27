@@ -1,0 +1,133 @@
+{
+
+/////barrels/////
+  "sgcommongunbarrel" : [
+    [0, {
+      "pool" : [
+        {"weight" : 0.40, "item" : [ "sg_barrel_base", 1]},
+        {"weight" : 0.40, "item" : [ "sg_barrel_basealt", 1]},
+        {"weight" : 0.40, "item" : [ "sg_barrel_short", 1]},
+        {"weight" : 0.40, "item" : [ "sg_barrel_shotgunbarrel", 1]}
+      ]
+    }]
+  ],
+  "sguncommongunbarrelgunbarrel" : [
+    [0, {
+      "pool" : [
+        {"weight" : 0.40, "item" : [ "sg_barrel_machinegun", 1]},
+        {"weight" : 0.40, "item" : [ "sg_barrel_rapid", 1]},
+        {"weight" : 0.40, "item" : [ "sg_barrel_rapidalt", 1]},
+        {"weight" : 0.40, "item" : [ "sg_barrel_shotgunbarrelshort", 1]}
+      ]
+    }]
+  ],
+  "sgraregunbarrelgunbarrel" : [
+    [0, {
+      "pool" : [
+        {"weight" : 0.20, "item" : [ "sg_barrel_homingbarrel", 1]},
+        {"weight" : 0.10, "item" : [ "sg_barrel_plasmitebarrel", 1]},
+        {"weight" : 0.40, "item" : [ "sg_barrel_machinegunmk2", 1]},
+        {"weight" : 0.20, "item" : [ "sg_barrel_microgattling", 1]},
+        {"weight" : 0.40, "item" : [ "sg_barrel_machinegunmk2wood", 1]},
+        {"weight" : 0.40, "item" : [ "sg_barrel_antimateriel", 1]},
+        {"weight" : 0.20, "item" : [ "sg_barrel_antimaterielrapid", 1]},
+        {"weight" : 0.10, "item" : [ "sg_barrel_flakbarrel", 1]},
+        {"weight" : 0.10, "item" : [ "sg_barrel_supercooledbarrel", 1]},
+        {"weight" : 0.40, "item" : [ "sg_barrel_microrocket", 1]}
+      ]
+    }]
+  ],
+	
+//////Stocks//////
+
+  "sgcommonstock" : [
+    [0, {
+      "pool" : [
+        {"weight" : 0.40, "item" : [ "sg_stock_base", 1]},
+        {"weight" : 0.40, "item" : [ "sg_stock_basealt", 1]},
+        {"weight" : 0.40, "item" : [ "sg_stock_pistol", 1]}
+      ]
+    }]
+  ],
+  "sguncommonstock" : [
+    [0, {
+      "pool" : [
+        {"weight" : 0.40, "item" : [ "sg_stock_rapid", 1]},
+        {"weight" : 0.40, "item" : [ "sg_stock_rapidpistol", 1]},
+        {"weight" : 0.40, "item" : [ "sg_stock_marksman", 1]},
+        {"weight" : 0.40, "item" : [ "sg_stock_marksmanalt", 1]},
+        {"weight" : 0.40, "item" : [ "sg_stock_sharpshooterpistol", 1]}
+      ]
+    }]
+  ],
+  "sgrarestock" : [
+    [0, {
+      "pool" : [
+        {"weight" : 0.40, "item" : [ "sg_stock_spring", 1]},
+        {"weight" : 0.40, "item" : [ "sg_stock_mareslegpistol", 1]},
+        {"weight" : 0.40, "item" : [ "sg_stock_heavystock", 1]}
+      ]
+    }]
+  ],
+
+////recievers////
+
+  "sgreciever" : [
+    [0, {
+      "pool" : [
+        {"weight" : 0.40, "item" : [ "sg_receiver_base", 1]},
+        {"weight" : 0.40, "item" : [ "sg_receiver_burst", 1]},
+        {"weight" : 0.40, "item" : [ "sg_receiver_heavy", 1]}
+      ]
+    }]
+  ], 
+  "sgrarereciever" : [
+    [0, {
+      "pool" : [
+        {"weight" : 0.40, "item" : [ "sg_receiver_beamburst", 1]},
+        {"weight" : 0.40, "item" : [ "sg_receiver_beam", 1]},
+        {"weight" : 0.40, "item" : [ "sg_receiver_heavybeam", 1]}
+      ]
+    }]
+  ],
+  
+////Addon+underbarrel///
+
+  "sgcommonaddon" : [
+    [0, {
+      "pool" : [
+        {"weight" : 0.40, "item" : [ "sg_underbarrelAddon_bayonet", 1]},
+        {"weight" : 0.40, "item" : [ "sg_underbarrelAddon_coolingjacket", 1]},
+        {"weight" : 0.40, "item" : [ "sg_underbarrelAddon_grenadelauncher", 1]},
+        {"weight" : 0.40, "item" : [ "sg_underbarrelAddon_grenadelauncheralt", 1]},
+        {"weight" : 0.40, "item" : [ "sg_baseAddon_scopealt", 1]},
+        {"weight" : 0.40, "item" : [ "sg_baseAddon_scope", 1]},
+        {"weight" : 0.40, "item" : [ "sg_underbarrelAddon_flashlight", 1]}
+      ]
+    }]
+  ],
+  "sguncommonaddon" : [
+    [0, {
+      "pool" : [
+        {"weight" : 0.40, "item" : [ "sg_underbarrelAddon_laser", 1]},
+        {"weight" : 0.40, "item" : [ "sg_underbarrelAddon_cleavebayonet", 1]},
+        {"weight" : 0.40, "item" : [ "sg_underbarrelAddon_cleavebayonetalt", 1]},
+        {"weight" : 0.40, "item" : [ "sg_underbarrelAddon_foregriplongend", 1]},
+        {"weight" : 0.20, "item" : [ "sg_baseAddon_reflek", 1]},
+        {"weight" : 0.20, "item" : [ "sg_baseAddon_spread", 1]}
+      ]
+    }]
+  ],
+  "sgrareaddon" : [
+    [0, {
+      "pool" : [
+        {"weight" : 0.40, "item" : [ "sg_underbarrelAddon_spidermine", 1]},
+        {"weight" : 0.40, "item" : [ "sg_baseAddon_advancedscopealt", 1]},
+        {"weight" : 0.40, "item" : [ "sg_baseAddon_advancedscope", 1]},
+        {"weight" : 0.40, "item" : [ "sg_baseAddon_spread", 1]},
+        {"weight" : 0.40, "item" : [ "sg_baseAddon_reflek", 1]}
+      ]
+    }]
+  ]
+
+}

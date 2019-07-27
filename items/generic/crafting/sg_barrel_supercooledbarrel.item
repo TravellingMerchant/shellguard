@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_supercooledbarrel",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/supercooledbarrel.png",
+  "description" : "Fires supercooled rounds that create frozen cubes on impact.",
+  "shortdescription" : "Supercooled Barrel",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "supercooledbarrel"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name" : "sgwalkertankevilbroken-body",
+  "category" : "sgwalkertankevilbroken",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgwalkertankevilbroken-body.png"
+  }
+}

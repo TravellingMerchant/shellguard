@@ -1,0 +1,9 @@
+{
+  "name" : "sgdroid-gattlingarm",
+  "category" : "sgdroid",
+  "type" : "gattlingarm",
+
+  "frames" : {
+    "gattlingarm" : "sgdroid-gattlingarm.png"
+  }
+}

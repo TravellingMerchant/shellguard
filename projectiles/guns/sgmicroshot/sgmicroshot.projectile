@@ -1,0 +1,22 @@
+{
+  "projectileName" : "sgmicroshot",
+  "image" : "sgmicroshot.png",
+  "physics" : "laser",
+  "animationCycle" : 0.1,
+  "animationLoops" : false,
+  "timeToLive" : 10,
+  "frameNumber" : 3,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [220, 50, 50],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/shellsmokemini/shellsmokemini.config"
+    }
+  ],
+  "power" : 1.0,
+  "speed" : 150,
+  "damageKind" : "default"
+}

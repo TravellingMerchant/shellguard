@@ -1,0 +1,9 @@
+{
+  "name" : "sgdroidevil-armclaw",
+  "category" : "sgdroidevil",
+  "type" : "armclaw",
+
+  "frames" : {
+    "armclaw" : "sgdroidevil-armclaw.png"
+  }
+}

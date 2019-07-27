@@ -1,0 +1,9 @@
+{
+  "name" : "shelldroidevil",
+  "category" : "shelldroidevil",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "shelldroidevil.png"
+  }
+}

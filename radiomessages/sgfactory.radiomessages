@@ -1,0 +1,256 @@
+{
+  // ------- Factory takeoff. -------
+  
+  "sgspiderfactory1" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Woah! It's dark here. Looks like the teleporter missed the mark. You're going to have to enter this place the old fashioned way."
+  },
+  
+  "sgspiderfactory1a" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Ah! My bad! There appears to be some sort of teleporation jammer active over the area. Somehow we didn't catch it."
+  },
+
+  "sgspiderfactory1b" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "We will try upgrade our sensors to detect it in the future! For now, just be happy you landed in a cave and not fused with a wall!"
+  },
+
+  "sgspiderfactory2" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Perfect, a way inside!"
+  },
+  
+  "sgspiderfactory3" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "This looks like the old factory all right. Is this where those robots are being built?"
+  },
+  
+  "sgspiderfactory4a" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Alert: Security unit has detected hostile forces. Security forces: Online."
+  },
+
+  "sgspiderfactory4b" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Damn it, that answers  that question. You're going to have to shut this place down."
+  },
+  
+  "sgspiderfactory5" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Just how many robots are being made here? Those assult spiders are barely in their prototype phase back in our own factories."
+  },
+
+  "sgspiderfactory6" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Great.. an elevator. Classic ambush location. Be on guard."
+  },
+  
+  "sgspiderfactory7" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Are you ok? They're even throwing half built robots at you! They really don't want you here."
+  },
+  
+   "sgspiderfactory8a" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "You again? How many times are you going to show up?"
+  },
+  
+   "sgspiderfactory8b" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "How did you even find this place? No one should know about this factory."
+  },
+
+  "sgspiderfactory8c" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "You may have been part of Ironwatch, but you were still one of us! Your armour is old, we traced it right back to where it was made."
+  },
+
+  "sgspiderfactory8d" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "A secret factory producing advanced tech, just for Ironwatch."
+  },
+
+   "sgspiderfactory8e" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Gah! Fortress, eliminate them at once!"
+  },
+
+  "sgspiderfactory8f" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Diverting power to security subroutines."
+  },
+ 
+  "sgspiderfactory9" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Visual Lost. Hostile in powerlines."
+  },
+
+  "sgspiderfactory10" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Hostile Detected, lower production floor."
+  },
+
+  "sgspiderfactory11" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "We managed to get a reading on the factory from orbit. This place is MASSIVE! You have to put a stop to this. There is enough firepower here to take over small planets!"
+  },
+ 
+  
+  "sgspiderfactory12" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Not another elevator.. They don't even play elevator music."
+  },
+
+   "sgspiderfactory13a" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "What do you think you're going to acomplish here? What happens if you stop me?"
+  },
+  
+   "sgspiderfactory13b" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "If I die.. We all die."
+  },
+
+   "sgspiderelevator1a" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "You were on earth too, weren't you? You saw it. The Ruin."
+  },
+
+   "sgspiderelevator1b" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Shellguard don't care about the Ruin. They don't care about the Earth. If it spreads, it's oblivion for us all."
+  },
+ 
+   "sgspiderelevator2a" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "What good is all their technology if it's just sold to the highest bidder? I have a much better use for it."
+  },
+  
+   "sgspiderelevator2b" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "I'm going to make things right. For the good of the universe."
+  },
+
+  "sgspiderelevator3a" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Killing innocent people isn't for the good of the universe! Think about how many people have you killed to get here!"
+  },
+  
+   "sgspiderelevator3b" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "A neccecary sacrafice. The technology I've aquired will save so many more."
+  },
+
+   "sgspiderfactory14a" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Destroying this part of the factory will not stop me. Fortress, activate all reserve forces and begin proccess WAYLAND-C"
+  },
+
+  "sgspiderfactory14b" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "You're locked in the room! Stay alive until we can remotely open the door."
+  },
+  
+  "sgspiderfactory15a" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Something HUGE just broke off from the planets surface.. By the cultivator, it's the biggest ship I've ever seen."
+  },  
+
+  "sgspiderfactory15b" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "It's breaking out of the atmosphere and into space. How could somethig this utterly massive be flying?"
+  },  
+  
+  "sgspiderfactory15c" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "There's no time for that now. The factory is collapsing. You have to get out of there, NOW."
+  },
+
+   "sgspidereasteregg1" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Why are they in the pipeworks? There's nothing even there."
+  },
+  
+   "sgspidereasteregg2" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Have my machines scared you so much that you're going to hide in pipes forever?"
+  },
+
+   "sgspidereasteregg3" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "You.. must really like those pipes."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name" : "shellufoMoveFireAttack",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/shellufo/skills/ufoMoveFireAttack.lua" ],
+
+    "ufoMoveFireAttack" : {
+      "skillTime": 4,
+      "bobTime" : 2,
+      "bobHeight" : 1,
+
+      "projectileOffset" : [0, -7],
+      "fireInterval" : 0.4,
+      "projectile" : {
+        "type" : "sgmicroshot",
+        "config" : {
+          "speed" : 40,
+		  "inaccuracy" : 0.05,
+          "power" : 10,
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/gun/tankshot.ogg" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

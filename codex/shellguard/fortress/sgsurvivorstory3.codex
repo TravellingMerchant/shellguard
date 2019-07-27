@@ -1,0 +1,36 @@
+{
+  "id" : "sgsurvivorstory3",
+  "species" : "human",
+  "title" : "Log Book 3",
+  "description" : "Transcribed personal logs.",
+  "icon" : "sgsurvivorstory2.png",
+  "contentPages" : [
+    "^cyan;Personal log number 600:^white; 
+I woke up in the hospitol today. Last thing I remember was being on that shuttle. We were taking off, I could see my family waving goodbye, smiling.. so happy. Then.. something hit the shuttle. After that, it's all blank. I've tried asking for my family, but they won't tell me anything. They must be worried about me!",
+
+    "^cyan;Personal log number 603:^white;
+It can't be true.. It just can't..",
+	
+    "^cyan;Personal log number 604:^white;
+They told me the settlement was attacked. My family.. they.. they're gone. All gone.. The only reason I'm alive is because the automatic shuttle managed to keep flying.",
+	
+    "^cyan;Personal log number 607:^white;
+The scum in this hospitol kept this from me for weeks. How could they? HOW COULD THEY? I could have gone back! They might have survived! I could have saved them.. But I was stuck here.",
+
+	"^cyan;Personal log number 610:^white;
+I don't know what to do anymore. My family.. Everyone that knew me.. I've got nothing left. ",
+	
+	"^cyan;Personal log number 660:^white;
+I've been here recovering for months now.. And apparently I have a visitor tomorrow? Who in the world could it be?",
+	
+	"^cyan;Personal log number 661:^white;
+Someone from Shellguard visited me today. I forgot I still technically work for them. They made me an offer. They want to hire me for some secret project. I have no family, no ties and a lot of combat experience. They said I'd be perfect for it. I said I'd think about it.",
+
+	"^cyan;Personal log number 663:^white;
+I said yes. I'm going to become part of their elite Ironwatch force. I've got nothing left to lose. At the very least, it'll get me out of this hosptiol." 
+  ],
+    "itemConfig" : {
+    "rarity" : "common",
+    "price" : 25
+  }
+}

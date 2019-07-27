@@ -1,0 +1,60 @@
+{
+  // ------- Weapon facility. -------
+  
+  "sgvehicletutorial1" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Welcome to the great empty desert of planet X301-D! We've dropped off one of our new transports to get you through the desert."
+  },
+  
+  "sgvehicletutorial2" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "We had to teleport you in quite far out, a group of novakid outlaws have been jamming the teleporter in the town. You need to reach the town and fight off the outlaws!"
+  },
+  
+  "sgvehicletutorial3" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "This heavy transport has a ton of armour and a pretty good cannon. Don't worry about damaging it! Though.. saying that, it's not invincible. So don't be TOO careless!"
+  },
+  
+  "sgvehicletutorial4" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "You can activeate the headlights using the F button. Handy huh?"
+  },
+  
+  "sgvehicletutorial5" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Click the right button to turn on the transports front ram and crash through the caved in part of this tunnel! You can ram through almost anything!"
+  },
+
+  "sgvehicletutorial6" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "That looked fun! Keep going!"
+  },
+  
+  "sgvehicletutorial7" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "The town is ahead, you'll have to leave the car behind."
+  },
+
+  "sgvehicletutorial8" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Nice! The teleporter is working again. Come on back to the base!"
+  }
+
+}

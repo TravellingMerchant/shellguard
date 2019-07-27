@@ -1,0 +1,45 @@
+{
+  "id" : "sgsurvivormission",
+  "prerequisites" : ["sgmercmission3"],
+  "title" : "^green;Medical Mystery",
+  "text" : "While you were on your last mission, we came across some sudden life signs in an old emergancy medical facility. It was set up when the ruin first attacked, but abandoned after the ruin got closer. I need you to go find out who's there. They may need help.",
+  "completionText" : "You're lucky to be alive! You just ran into an Ironwatch member! They are way above me in the chain of command. Why would one be there and why would they attack you? We need to figure this out.",
+  "moneyRange" : [1200, 1200],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], ["money", 4000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Commander Andros Galvanek^reset;",
+      "findGoal" : "Figure out who survived",
+      "turnIn" : "Return to ^orange;Commander Andros Galvanek^reset;"
+    },
+
+    "warpEntityUid" : "Andros",
+    "warpAction" : "instanceworld:survivormission",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgmercmission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "sgsurvivortele",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Andros"
+  }
+}

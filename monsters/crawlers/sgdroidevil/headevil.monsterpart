@@ -1,0 +1,9 @@
+{
+  "name" : "sgdroidevil-head",
+  "category" : "sgdroidevil",
+  "type" : "head",
+
+  "frames" : {
+    "head" : "sgdroidevil-head.png"
+  }
+}

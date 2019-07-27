@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_short",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/short.png",
+  "description" : "A short rifled barrel.",
+  "shortdescription" : "Short Barrel",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "short"
+  }
+}

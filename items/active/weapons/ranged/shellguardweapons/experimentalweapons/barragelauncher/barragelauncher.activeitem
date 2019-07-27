@@ -1,0 +1,66 @@
+{
+  "itemName" : "sgbarragelauncher",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "Hold until light is green, then fire a destructive cluster rocket. Stand way back.",
+  "shortdescription" : "Barrage Launcher MK1",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 6,
+
+  "inventoryIcon" : "barragelaunchericon.png",
+
+  "animation" : "barragelauncher.animation",
+  "animationParts" : {
+    "gun" : "barragelauncher.png",
+    "gunfullbright" : "barragelauncherfullbright.png"
+  },
+  "animationCustom" : {},
+  "baseOffset" : [-0.3, 0.5],
+  "muzzleOffset" : [1.2, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "fire",
+
+  "primaryAbilityType" : "chargefire",
+  "primaryAbility" : {
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 0,
+        "cooldown" : 0.1,
+        "projectileType" : "",
+        "projectileParameters" : {},
+        "inaccuracy" : 0.008,
+        "baseDamage" : 0,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 10.0,
+        "energyCost" : 1000,
+        "cooldown" : 0.5,
+        "projectileType" : "shellbarragerocket",
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 9,
+        "fireSound" : "fire2"
+      }
+    ],
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

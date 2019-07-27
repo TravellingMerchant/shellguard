@@ -1,0 +1,33 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 3000 }
+  ],
+  "output" : {
+    "item" : "filledcapturepod",
+    "count" : 1,
+    "parameters" : {
+      "shortdescription" : "Shellguard Chomper",
+      "description" : "A very deadly bipedal robot that likes to bite its foe.",
+      "tooltipFields" : {
+        "subtitle" : "Shellguard Robot",
+        "objectImage" : "/monsters/walkers/sgchomper/icon.png"
+      },
+      "pets" : [
+        {
+          "name" : "Drone",
+          "portrait" : [
+            {"image" : "/monsters/walkers/sgchomper/icon.png"}
+          ],
+          "config" : {
+            "type" : "sgchomper",
+            "parameters" : {
+              "level" : 6,
+              "aggressive" : true
+            }
+          }
+        }
+      ]
+    }
+  },
+  "groups" : [ "sgrobotcrafting" ]
+}

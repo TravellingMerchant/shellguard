@@ -1,0 +1,63 @@
+{
+  "projectileName" : "sgufoshockbomb",
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/gun/shellbulletimpact.ogg"
+      ]
+    }
+  ],
+  "image" : "sgufoshockbomb.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 1
+  },
+  "animationCycle" : 0.5,
+  "pointLight" : true,
+  "lightColor" : [255, 0, 0],
+  "actionOnReap" : [
+	{
+      "action" : "spark"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "shellsmoke"
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 1.0,
+      "type" : "dragonblockbuster",
+      "projectileCount" : 1,
+      "angleAdjust" : 90
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/fire_out.ogg" ]
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 3,
+      "backgroundRadius" : 2,
+      "explosiveDamageAmount" : 50.0,
+      "delaySteps" : 2
+    }
+
+  ],
+  "emitters" : [ "rocketsmoke" ],
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 7,
+  "power" : 20,
+  "damageKind" : "bow",
+  "scripts" : [ "sgufoshockbomb.lua" ],
+  "baseHomingControlForce" : 0
+}

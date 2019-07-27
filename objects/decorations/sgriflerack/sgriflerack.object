@@ -1,0 +1,33 @@
+{
+  "objectName" : "sgriflerack",
+  "colonyTags" : ["valuable","pretty"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 100,
+
+  "apexDescription" : "Looks good on display, but I wouldn't want to fall on the pointy ends.",
+  "avianDescription" : "Looks good on display, but I wouldn't want to fall on the pointy ends.",
+  "floranDescription" : "Looks good on display, but I wouldn't want to fall on the pointy ends.",
+  "glitchDescription" : "Intrigued. Looks good on display, but I wouldn't want to fall on the pointy ends.",
+  "humanDescription" : "Looks good on display, but I wouldn't want to fall on the pointy ends.",
+  "hylotlDescription" : "Looks good on display, but I wouldn't want to fall on the pointy ends.",
+  "novakidDescription" : "Looks good on display, but I wouldn't want to fall on the pointy ends.",
+
+  "description" : "A rack with two Shellguard Rifles attached.",
+  "shortdescription" : "Shellguard Rifle Rack",
+  "race" : "human",
+
+  "inventoryIcon" : "sgriflerack.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgriflerack.png:<color>",
+      "imagePosition" : [-8, -0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

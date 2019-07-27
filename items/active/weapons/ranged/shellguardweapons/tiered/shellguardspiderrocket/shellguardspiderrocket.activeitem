@@ -1,0 +1,84 @@
+{
+  "itemName" : "shellguardspiderrocket",
+  "price" : 8000,
+  "inventoryIcon" : "shellguardspiderrocket.png",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Fires sentient robots with the mental state similar to puppies. Puppies that chase things and then explode.",
+  "shortdescription" : "Shellguard Spidermine Launcher",
+  "level" : 1,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Rocket Launcher",
+  "itemTags" : ["weapon","ranged","assaultrifle"],
+  "twoHanded" : true,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "shellguardspiderrocket.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/Shellrocketfire.ogg" ]
+    }
+  },
+
+  "baseOffset" : [-0.3, 0.5],
+  "muzzleOffset" : [1.2, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 2.0,
+    "baseDps" : 0.0,
+    "energyUsage" : 100.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.09,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -20,
+        "weaponRotation" : 30,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "Clusterspiderrocket",
+    "projectileParameters" : { 
+      "knockback" : 6
+    }
+  },
+
+  "altAbilityType" : "sgspiderburst",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

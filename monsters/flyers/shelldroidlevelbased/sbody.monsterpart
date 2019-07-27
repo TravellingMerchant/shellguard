@@ -1,0 +1,9 @@
+{
+  "name" : "shelldroidlevelbased",
+  "category" : "shelldroidlevelbased",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "shelldroidlevelbased.png"
+  }
+}

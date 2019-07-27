@@ -1,0 +1,75 @@
+{
+  "projectileName" : "sgmotoround",
+  "image" : "sgmotoround.png",
+  "timeToLive" : 6,
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  "piercing" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "physics" : "laser",
+  "bounces" : 0,
+  "lightColor" : [225, 100, 0],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.1,
+      "type" : "sgshrapnelblastsmall"
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "size" : 0.1,
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/sgtrailorange/sgtrailorange.animation",
+        "initialVelocity" : [0.0, 0.0],
+        "timeToLive" : 0.05,
+        "fullbright" : true,
+        "destructionTime" : 0.01,
+        "destructionAction" : "shrink",
+        "fade" : 0.01,
+        "layer" : "middle",
+        "position" : [0.0, 0.0]
+      }
+    },
+    {
+      "time" : 0.015,
+      "repeat" : true,
+
+      "action" : "loop",
+      "count" : 1,
+      "body" : [
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.0,
+      "type" : "fireguardianexplosion"
+    }
+      ]
+    }
+  ],
+  "emitters" : [ "largefireswoosh" ],
+  "power" : 5.0,
+  "speed" : 200,
+  "damageKind" : "default"
+}

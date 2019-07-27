@@ -1,0 +1,45 @@
+{
+  "id" : "sgarenaquest3",
+  "prerequisites" : ["sgarenaquest2"],
+  "title" : "^green;Nanotrasen Arena 3",
+  "text" : "Heads up, you're going against someone else from Shellguard. Try give us a good show, yeah?",
+  "completionText" : "I hope they didn't take too big a bite out of you! That was a scary fight.",
+  "moneyRange" : [1000, 1000],
+  "rewards" : [
+    [ [ "sgchomperhelmet", 1 ], ["money", 1000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/arenaman/sgarenamanicon.png"} ],
+        "title" : "Arena Fan"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/arenaman/sgarenamanicon.png"} ],
+        "title" : "Arena Fan"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Enter the ^orange;Nanotrasen Arena^reset;",
+      "findGoal" : "Win in the Arena!",
+      "turnIn" : "Return to ^orange;the Arena Fan^reset;"
+    },
+
+    "warpEntityUid" : "Arenaman",
+    "warpAction" : "instanceworld:sgarena3",
+    "warpDialog" : "/interface/confirmation/sgarenateleportconfirmation.config:sgarenaquest",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgarenatele3",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Arenaman"
+  }
+}

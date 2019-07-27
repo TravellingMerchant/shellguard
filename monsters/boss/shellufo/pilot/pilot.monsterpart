@@ -1,0 +1,9 @@
+{
+  "name" : "pilot",
+  "category" : "shellufo",
+  "type" : "pilot",
+
+  "frames" : {
+    "pilot" : "shellufopilot.png"
+  }
+}

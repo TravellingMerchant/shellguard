@@ -1,0 +1,17 @@
+{
+  "id" : "sgsurvivor2",
+  "species" : "human",
+  "title" : "Incident: FM-232",
+  "description" : "Records of an incident in medical facility.",
+  "icon" : "sgsurvivor2.png",
+  "contentPages" : [
+    "Medical facility [REDACTED] on planet [REDACTED] requested emergency aid at 17:30 solar time. Squad JL-421 dispatched for rescue operations. Squad JL-421 arrived at 18:23 solar time.",
+
+"Squad JL-421 reported that every single living member of the medical facility was found dead or severly wounded. All patients and staff accounted for except for [REDACTED]. The few living staff members described [REDACTED], killing anything that moved. [REDACTED] then left through the emergencay escape shuttle."
+
+  ],
+    "itemConfig" : {
+    "rarity" : "common",
+    "price" : 25
+  }
+}

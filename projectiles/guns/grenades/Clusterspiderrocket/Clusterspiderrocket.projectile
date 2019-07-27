@@ -1,0 +1,55 @@
+{
+  "projectileName" : "Clusterspiderrocket",
+  "physics" : "grenade",
+  "bounces" : -1,
+  "timeToLive" : 0.2,
+  "image" : "Clusterspiderrocket.png",
+  "damageKindImage" : "icon.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 4,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion/regularexplosionuniversal.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "spidermineprojectile",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 35
+    },
+    {
+      "action" : "projectile",
+      "type" : "spidermineprojectile",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : -35
+    },
+    {
+      "action" : "projectile",
+      "type" : "spidermineprojectile",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 1
+    },
+    {
+      "action" : "projectile",
+      "type" : "spidermineprojectile",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : -18
+    },
+    {
+      "action" : "projectile",
+      "type" : "spidermineprojectile",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 0,
+      "angleAdjust" : 18
+    }
+
+  ],
+  "power" : 0,
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

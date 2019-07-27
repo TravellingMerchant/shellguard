@@ -1,0 +1,41 @@
+{
+  "objectName" : "sgarenaman",
+  "colonyTags" : ["valuable","pretty"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 100,
+
+  "apexDescription" : "He looks like he's excited for something.",
+  "avianDescription" : "He looks like he's excited for something.",
+  "floranDescription" : "He lookssss like he'sss excited for sssssomething.",
+  "glitchDescription" : "Amused. He looks like he's excited for something.",
+  "humanDescription" : "He looks like he's excited for something.",
+  "hylotlDescription" : "He looks like he's excited for something.",
+  "novakidDescription" : "He looks like he's excited for something.",
+
+  "description" : "How are you fitting an entire person in your inventory?",
+  "shortdescription" : "Arena Fan",
+  "race" : "human",
+  
+  "offeredQuests" : [
+    "sgarenaquest1", "sgarenaquest2", "sgarenaquest3", "sgarenaquest4", "sgarenaquest5"
+  ],
+  "turnInQuests" : [
+    "sgarenaquest1", "sgarenaquest2", "sgarenaquest3", "sgarenaquest4", "sgarenaquest5"
+  ],
+  "uniqueId" : "Arenaman",
+
+  "inventoryIcon" : "sgarenamanicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgarenaman.png:<color>.<frame>",
+      "imagePosition" : [-16, 0],
+      "frames" : 8,
+      "animationCycle" : 1,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

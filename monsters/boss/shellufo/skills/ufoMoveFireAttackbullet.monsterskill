@@ -1,0 +1,33 @@
+{
+  "name" : "ufoMoveFireAttackbullet",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/shellufo/skills/ufoMoveFireAttackbullet.lua" ],
+
+    "ufoMoveFireAttackbullet" : {
+      "skillTime": 2,
+      "bobTime" : 2,
+      "bobHeight" : 1,
+
+      "projectileOffset" : [0, -8],
+      "fireInterval" : 1,
+      "projectile" : {
+        "type" : "spidermineprojectileevil",
+        "config" : {
+          "speed" : 30,
+          "power" : 15,
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/gun/Dronespawn.ogg" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

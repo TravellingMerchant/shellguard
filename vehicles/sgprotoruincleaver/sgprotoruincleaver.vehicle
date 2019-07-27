@@ -1,0 +1,75 @@
+{
+  "name" : "sgprotoruincleaver",
+  "script" : "sgprotoruincleaver.lua",
+  "boundBox" : [-8, -5, 8, 5],
+  "slaveControlTimeout" : 2.0,
+  "slaveControlHeartbeat" : 1.0,
+  "canBeHit" : false,
+  "animation" : "sgprotoruincleaver.animation",
+
+  "loungePositions" : {
+    "aimingSeat" : {
+      "part" : "foreground",
+      "partAnchor" : "drivingSeatPosition",
+      "orientation" : "sit",
+      "statusEffects" : ["highprotection"],
+      "cameraFocus" : true
+    }
+  },
+  
+  // Everything in degrees, because SOMEONE doesn't know radians. What a fool.
+  "maxGunRotationAngle": 80,
+  "minGunRotationAngle": -1,
+  "angleApproachFactor": 1,
+
+  "protection" : 75,
+  "maxHealth" : 2000,
+
+  "projectileType": "sgruincleavershot",
+  "projectileParameters": {},
+
+  "backSpringPositions" : [
+      [-3.0, 0.0],
+      [-4.0, 0.0],
+      [-5.0, 0.0],
+      [-6.0, 0.0]
+  ],
+
+  "frontSpringPositions" : [
+      [3.0, 0.0],
+      [4.0, 0.0],
+      [5.0, 0.0],
+      [6.0, 0.0]
+  ],
+
+  "bodySpringPositions" : [
+      [-4.0, -1.0],
+      [-2.0, -1.0],
+      [0.0, -1.0],
+      [2.0, -1.0],
+      [4.0, -1.0]
+  ],
+
+  "movementSettings" : {
+    "collisionPoly" : [[-8.5, 0.4], [-8.5, -3.6], [7.8, -3.6], [7.8, 0.4]],
+    "mass" : 10,
+    "airFriction" : 2,
+    "ignorePlatformCollision" : true,
+    "gravityEnabled" : true,
+    "collisionEnabled" : true
+  },
+
+  "occupiedMovementSettings" : {
+    "collisionPoly" : [[-8.5, 0.4], [-8.5, -3.6], [7.8, -3.6], [7.8, 0.4]],
+    "mass" : 10,
+    "gravityEnabled" : true,
+    "collisionEnabled" : true
+  },
+
+  "zeroGMovementSettings" : {
+    "collisionPoly" : [[-8.5, 0.4], [-8.5, -3.6], [7.8, -3.6], [7.8, 0.4]],
+    "mass" : 10,
+    "airFriction" : 0.1,
+    "collisionEnabled" : true
+  }
+}

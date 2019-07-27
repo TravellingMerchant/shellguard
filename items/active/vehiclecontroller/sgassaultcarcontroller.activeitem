@@ -1,0 +1,34 @@
+{
+  "itemName" : "sgassaultcarcontroller",
+  "level" : 1,
+  "price" : 18000,
+  "rarity" : "Rare",
+  "category" : "vehicleController",
+  "description" : "A variation of the armoured hover ram that has been outfitted with a stronger but slower gun.",
+  "shortdescription" : "Assault Hover Ram",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["vehiclecontroller.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "vehicle",
+  "largeImage" : "sgassaultcar.png",
+
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "sgassaultcar",
+  "vehicleBoundingBox" : [-5, -3, 5, 3],
+  "vehicleImage" : "/vehicles/hoverbike/sgassaultcar/sgassaultcarwarp.png:warp.7",
+
+  "animationParts" : {
+    "casing" : "sgassaultcarcontroller.png"
+  },
+
+  "inventoryIcon" : "sgassaultcarcontroller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/sgassaultcarcontroller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/sgassaultcarcontroller.png:full"
+
+}

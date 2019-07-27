@@ -1,0 +1,12 @@
+{
+  "frameGrid" : {
+    "size" : [124, 56],
+    "dimensions" : [1, 1],
+
+    "names" : [
+      [ "warp" ]
+    ]
+  },
+
+  "aliases" : { }
+}

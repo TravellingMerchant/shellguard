@@ -1,0 +1,25 @@
+{
+  "projectileName" : "homingbombshard",
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
+    }
+  ],
+  "image" : "homingbombshard.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 1
+  },
+  "animationCycle" : 0.25,
+  "emitters" : [ "rocketsmoke" ],
+  "pointLight" : true,
+  "lightColor" : [255, 0, 0],
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 10,
+  "power" : 20,
+  "speed" : 50,
+  "damageKind" : "bow",
+  "scripts" : [ "homingbombshard.lua" ],
+  "baseHomingControlForce" : 2
+}

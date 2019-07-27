@@ -1,0 +1,9 @@
+{
+  "name" : "shottop-body",
+  "category" : "shottop",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "shottop-body.png"
+  }
+}

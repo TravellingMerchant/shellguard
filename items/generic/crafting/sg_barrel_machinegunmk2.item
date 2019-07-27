@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_machinegunmk2",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/machinegunmk2.png",
+  "description" : "An improved machine gun barrel for fast, sustained fire.",
+  "shortdescription" : "Machinegun Barrel MK2",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "machinegunmk2"
+  }
+}

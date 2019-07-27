@@ -1,0 +1,34 @@
+{
+  "name" : "ufohomingrocket",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/shellufo/skills/ufohomingrocket.lua" ],
+
+    "ufohomingrocket" : {
+      "skillTime": 2,
+      "bobTime" : 2,
+      "bobHeight" : 1,
+
+      "projectileOffset" : [0, -5],
+      "fireInterval" : 0.4,
+      "projectile" : {
+        "type" : "shelluforocket",
+        "config" : {
+          "speed" : 10,
+		  "inaccuracy" : 0.15,
+          "power" : 15,
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/gun/PlasmiteRPGLaunch.ogg" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

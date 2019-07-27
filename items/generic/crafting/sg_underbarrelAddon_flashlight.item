@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_underbarrelAddon_flashlight",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/underbarrelAddon/flashlight.png",
+  "description" : "A basic flashlight.",
+  "shortdescription" : "Flashlight",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "underbarrelAddon",
+    "id" : "flashlight"
+  }
+}

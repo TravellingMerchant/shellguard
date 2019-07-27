@@ -1,0 +1,19 @@
+{
+  "name" : "shellufoSlamAttack",
+  "label" : "SLAM",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/shellufo/skills/ufoSlamAttack.lua" ],
+
+    "ufoSlamAttack" : {
+      "skillTime" : 10,
+
+      "slamHeight" : 8,
+      "riseSpeed" : 10,
+      "slamSpeed" : 70,
+
+      "stunDuration" : 3
+    }
+  }
+}

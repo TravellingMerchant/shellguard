@@ -1,0 +1,237 @@
+{
+  // ------- UFO mission. -------
+  "sgufomissionlockdown" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Intruder Detected. Automatic lockdown engaged."
+  },
+  
+  "sgufomissionlockdowna" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Damn! It knows you're here and has locked most of the doors. You're going to need to climb outside on the surface to reach the back door of the foundry."
+  },
+  
+  "sgufomissionoutside" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "It's cold and dark out here. Be careful. There's some small buildings scattered along the mountain trail, they should be able to give you a little light."
+  },
+ 
+  "sgufomissionfoundry" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "This is the foundry, it's where we make a lot of our robots before replicating them for sale. The testing site of our latest robot lays beyond it."
+  },
+  
+  "sgufomissionfoundrya" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Intruders have breached the foundry. Activating all reserve forces and begining AI upload."
+  },
+  
+  "sgufomissionfoundryb" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "This isn't good! It's uploading itself to an unknown location. You have to stop it now! If it finishes, who knows what it will do!"
+  },
+  
+  "sgufomissionpercentage1" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Upload at 50%."
+  },
+
+  "sgufomissionpercentage2" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Upload at 75%."
+  },
+
+  "sgufomissionpercentage3" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Upload at 99%. Primary directives updated. Entering combat mode."
+  },
+  
+  "sgufomissionpercentage3a" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Get out there and shoot it down! You have to stop it at all costs!"
+  },
+
+  "sgufomissioncomplete" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "I think we stopped it in time, but I can't be sure. This data shows that it had its failsafes removed, but doesn't tell me how. Teleport back to the base of the mountain and we'll talk."
+  },
+  
+//survivor
+  "survivorencounter1" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "The area is filled with creatures from the ruin, be careful. You need to fight on ahead and find out who it is we detected here."
+  },
+  
+  "survivorencounter2" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "So many dead, but they don't look like the ruins doing.. Be careful."
+  },
+
+   "survivorencounter3" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/androsglitch1.png",
+    "text" : "Oh no.. These logs.. If these are what I think they are.."
+  },
+
+   "survivorencounter4" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/androsglitch2.png",
+    "text" : "You... out.. have to... leave. Don't... ahead-BZZZT"
+  },
+//Colony Attack
+
+   "sgcolonyattack1" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Quick, the colony is under attack, the squad stationed here needs your help!"
+  },
+
+   "sgcolonyattack2" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/androsglitch2.png",
+    "text" : "Wait, those looked like Shellguard robots, but we certainly didn't make those.."
+  },
+
+   "sgcolonyattack3" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Oh, it's you again. Persistant little thing, aren't you?"
+  },
+  
+   "sgcolonyattack4" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "You think you can just come in and save the day? Hah, please. You're too late to save anyone."
+  },
+
+   "sgcolonyattack5" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "It's not like they'll be missed, anyway. Horrible people doing horrible things, that's what they were, experimenting on the town above."
+  },
+  
+   "sgcolonyattack6" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Yet here you are, trying to save them.. For what, money? A fantasy of being a hero? Can't be. No hero would help people like these."
+  },
+  
+   "sgcolonyattack7" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "No matter, I'll make sure their horrible act's weren't in vain. At least something useful will come from their work. My new machines will make sure of that."
+  },
+
+   "sgcolonyattack8a" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Fortress, begin extraction."
+  },  
+
+  "sgcolonyattack8b" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Begining extraction. Package transferred, teleporters active."
+  },
+
+   "sgcolonyattack8c" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "As you can see, I've had a little help. You thought you stopped it's upload, didn't you? You failed. You failed then and you failed now."
+  },
+  
+   "sgcolonyattack8d" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "But I won't. I'll make this right. You'll see.. Yes... You'll see."
+  },
+
+   "sgcolonyattack9a" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/androsglitch1.png",
+    "text" : "Hello...? Hello? Ah, you're alive! Our connection cut out, but I could still hear everything. The situation is worse than we thought."
+  },  
+
+   "sgcolonyattack9b" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "He's got the Fortress AI under his control and took something from this lab. Get back to base, we'll talk there."
+  },  
+
+//Engineer Atmos
+
+  "lockjawcourse1" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Welcome to the training course. There's some training lockjaws in the chest in front of you. You can keep these, but I'll also sell you some more advanced ones after this test is done."
+  },
+  
+  "lockjawcourse2" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Lockjaws are a pretty fun tool! Because they are basically a powerful bear trap on a chain, they will grip on to anything. You can even swing with them! Try to reach the other side."
+  },
+  
+  "lockjawcourse3" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "You can latch on to people, vehicles and creatures too. Try catching a ride from one of these drones, they can take you across. Remember though, the chains have limited range and will break if you get too far away!"
+  },
+
+  "lockjawcourse4" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "This next area is a bit harder. Try keep your momentum when you swing! Remember to control your reel distance so that you don't zap yourself!"
+  },
+  
+  "lockjawcourse5" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Good job with the test! Come back and talk to me again, I'd be happy to sell you some more advanced and even weaponised lockjaws."
+  }
+}

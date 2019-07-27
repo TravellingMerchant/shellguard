@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_stock_sharpshooterpistol",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/sharpshooterpistol.png",
+  "description" : "A firm pistol grip for accurate shots.",
+  "shortdescription" : "Sharpshooter Pistol Grip",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "stock",
+    "id" : "sharpshooterpistol"
+  }
+}

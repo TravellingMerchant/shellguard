@@ -1,0 +1,9 @@
+{
+  "name" : "sgdroid-armclaw2",
+  "category" : "sgdroid",
+  "type" : "armclaw2",
+
+  "frames" : {
+    "armclaw2" : "sgdroid-armclaw.png"
+  }
+}

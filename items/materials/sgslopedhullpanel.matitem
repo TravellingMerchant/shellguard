@@ -1,0 +1,15 @@
+{
+  "itemName" : "sgslopedhullpanel",
+  "price" : 10,
+  "category" : "block",
+  "rarity" : "Common",
+  "inventoryIcon" : "sgslopedhullpanel.png",
+  "shortdescription" : "Shellguard Hull Panel",
+  "description" : "Cheap, resilient panelling widely used for ship and station construction.",
+  "glitchdescription" : "Observant. This is panelling widely used for ship and station construction.",
+  "florandescription" : "Shiny sssmooth space metal.",
+  "novakiddescription" : "Some thick metal plating, looks mighty solid.",
+
+  "materialId" : 26200,
+  "learnBlueprintsOnPickup" : [ "sgslopedhullpanel" ]
+}

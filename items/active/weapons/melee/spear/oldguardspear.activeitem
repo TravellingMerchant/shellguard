@@ -1,0 +1,104 @@
+{
+  "itemName" : "oldguardspear",
+  "price" : 2000,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "For gold and glory.",
+  "shortdescription" : "Old Guard Spear",
+  //"tooltipKind" : "sword",
+  "weaponType" : "uniqueweapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","spear","upgradeableWeapon"],
+
+  "inventoryIcon" : "oldguardspear.png",
+
+  "animation" : "/items/active/weapons/melee/spear/spear.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade": "/items/active/weapons/melee/spear/oldguardspear.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/swing_spear.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "aimOffset" : -1.0,
+  "primaryAbilityType" : "spearstab",
+  "primaryAbility" : {
+    "fireTime" : 0.9,
+    "baseDps" : 12.5,
+    "damageConfig" : {
+      "damageSourceKind" : "spear",
+      "statusEffects" : [ ],
+      "knockbackMode" : "aim",
+      "knockback" : 30,
+"timeoutGroup" : "primary",
+       "stances" : {
+    "idle" : {
+      "armRotation" : -90,
+      "weaponRotation" : 0,
+      "twoHanded" : false,
+      "weaponOffset" : [0, 0.5],
+
+      "allowRotate" : true,
+      "allowFlip" : true
+    },
+    "windup" : {
+      "duration" : 0.1,
+      "armRotation" : -110,
+      "weaponRotation" : 20,
+      "twoHanded" : true,
+      "weaponOffset" : [0, 0.5],
+
+      "allowRotate" : false,
+      "allowFlip" : false
+    },
+    "fire" : {
+      "duration" : 0.3,
+      "armRotation" : -20,
+      "weaponRotation" : -70,
+      "twoHanded" : true,
+      "weaponOffset" : [0, 2.5],
+
+      "allowRotate" : false,
+      "allowFlip" : false
+    },
+    "hold" : {
+      "armRotation" : -30,
+      "weaponRotation" : -60,
+      "twoHanded" : true,
+      "weaponOffset" : [0, 2.0],
+
+      "allowRotate" : true,
+      "allowFlip" : true
+    }
+  }
+
+    },
+    "holdDamageMultiplier" : 0.2,
+    "holdDamageConfig" : {
+      "timeoutGroup" : "hold",
+      "timeout" : 0.5
+    }
+  },
+
+  "palette" : "/items/active/weapons/colors/tier8melee.weaponcolors",
+
+  "altAbilityType" : "spearcharge",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "eliteoldguardspear.png",
+    "animationParts" : {
+      "blade" : "eliteoldguardspear.png"
+    },
+    "shortdescription" : "Guardians Spear ^yellow;^reset;",
+    "description" : "For gold and glory."
+  }
+}

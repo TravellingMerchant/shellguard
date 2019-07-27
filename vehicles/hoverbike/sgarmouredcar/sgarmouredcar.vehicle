@@ -1,0 +1,205 @@
+{
+  "name" : "sgarmouredcar",
+  "script" : "sgarmouredcar.lua",
+  "boundBox" : [-5, -5, 5, 5],
+  "slaveControlTimeout" : 2.0,
+  "slaveControlHeartbeat" : 1.0,
+  "canBeHit" : true,
+  "animation" : "sgarmouredcar.animation",
+  "physicsCollisions" : {
+     "platform" : {
+      "collision" : [[-6.0, -1], [-4.0, -1.5], [4.0, -1.5], [6.0, -1]],
+      "collisionKind" : "platform",
+      "attachToPart" : "foreground"
+     }
+   },
+
+  "animationCustom" : {
+
+    "globalTagDefaults" : {
+        "colour" : "green"
+      },
+
+
+    "particleEmitters" : {
+      "damageShards" : {
+        "transformationGroups" : ["flip", "rotation"],
+        "emissionRate" : 0.0,
+        "burstCount"  : 30,
+        "offsetRegion" : [-3, -1.5, 3, 1],
+        "particles" : [{ "particle" : "hoverbikegreenshard"},
+                       { "particle" : "fireshard"}]
+      },
+
+      "wreckage" : {
+        "transformationGroups" : ["flip", "rotation"],
+        "active" : false,
+        "emissionRate" : 0.0,
+        "particles" : [
+                       { "particle" : "shockwavedust"},
+                       { "particle" : "shockwavedust"},
+                       { "particle" : "hoverbikewreck3"},
+                       { "particle" : "shockwavedust"},
+                       { "particle" : "hoverbikewreck5"},
+                       { "particle" : "shockwavedust"}]
+      }
+    }
+  },
+
+
+  "loungePositions" : {
+    "drivingSeat" : {
+      "part" : "foreground",
+      "partAnchor" : "drivingSeatPosition",
+      "orientation" : "sit",
+      "statusEffects" : ["highprotection", "invisible"],
+      "emote" : "happy",
+      "dance" : "warmhands",
+      "cameraFocus" : true
+    },
+    "passengerSeat" : {
+      "part" : "foreground",
+      "partAnchor" : "passengerSeatPosition",
+      "orientation" : "sit",
+      "statusEffects" : ["maxprotection", "invisible"],
+      "emote" : "neutral",
+      "dance" : "typing",
+      "cameraFocus" : true
+    }
+  },
+
+  "warpInDelay" : 1.0,
+
+  "levelApproachFactor" : 0.01,
+  "angleApproachFactor" : 0.025,
+  "maxGroundSearchDistance" : 20,
+  "maxAngle" : 60,
+  "hoverTargetDistance" : 3,
+  "hoverVelocityFactor" : 38,
+  "hoverControlForce" : 650,
+  "targetHorizontalVelocity" : 80,
+  "horizontalControlForce" : 120,
+  "zeroGTargetVelocity" : 40,
+  "zeroGSpinRate" : 4,
+  "spinFriction" : 0.1,
+
+  "nearGroundDistance" : 8,
+  "jumpVelocity" : 60,
+  "jumpTimeout" : 0.25,
+
+  //Health and damage
+  "protection" : 75,
+  "maxHealth" : 2000,
+
+  "damageStateNames" : ["undamaged","scratched","dented","wrecked"],
+
+  "lightsInDamageState" : [
+                          ["headlightBeam","dashboardGlow"],
+                          ["headlightBeam","dashboardGlow"],
+                          ["headlightBeam","dashboardGlow"],
+                          ["headlightBeam"]
+                          ],
+
+  "damageStatePassengerDances" : ["","","","panic"],
+
+  "damageStateDriverEmotes" : ["happy","happy","sad","annoyed"],
+  "damageStatePassengerEmotes" : ["happy","annoyed","sad","oh"],
+
+
+
+  "damageTakenEmote" : "oooh",
+  "damageEmoteTime" : 2.0,
+
+  "minNotificationCollisionAccel" : 15,
+  "minDamageCollisionAccel" : 45,
+  "terrainCollisionDamage" : 0,
+
+
+  //Damage visual effects
+  "smokeParticleHealthThreshold" : 0.5,
+  "smokeRateAtZeroHealth" : 500,
+
+  "fireParticleHealthThreshold" : 0.25,
+  "fireRateAtZeroHealth" : 120,
+
+  "onFireHealthThreshold" : 0.125,
+  "damagePerSecondWhenOnFire" : 1.0,
+  "explosionConfig" : "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config",
+  "explosionDamage" : 10,
+
+
+
+  //Sound effects
+  "engineDamageSoundThreshold" : 0.40,
+
+  "intermittentDamageSoundThreshold" : 0.33,
+  "maxDamageSoundInterval" : 10,
+  "minDamageSoundInterval" : 1,
+
+  "engineIdlePitch" : 0.5,
+  "engineRevPitch" : 1.0,
+  "engineIdleVolume" : 1.5,
+  "engineRevVolume" : 2.0,
+
+  "materialKind" : "robotic",
+  "terrainCollisionDamageSourceKind" : "falling",
+  "accelerationTrackingCount" : 2,
+  
+  "turretProjectileType" : "tempbullet",
+  "turretProjectileParameters" : {},
+  "turretPower" : 25,
+  "turretFireTime" : 0.2,
+  "turretInaccuracy" : 0.02,
+  "turretAngleRange" : 45,
+
+  "backSpringPositions" : [
+      [-3.0, 0.0],
+      [-4.0, 0.0],
+      [-5.0, 0.0],
+      [-6.0, 0.0]
+  ],
+
+  "frontSpringPositions" : [
+      [3.0, 0.0],
+      [4.0, 0.0],
+      [5.0, 0.0],
+      [6.0, 0.0]
+  ],
+
+  "bodySpringPositions" : [
+      [-4.0, -1.0],
+      [-2.0, -1.0],
+      [0.0, -1.0],
+      [2.0, -1.0],
+      [4.0, -1.0]
+  ],
+
+  "movementSettings" : {
+    "collisionPoly" : [[-6.0, 0.5], [-4.0, -1.5], [4.0, -1.5], [6.0, 0.5]],
+    "mass" : 4,
+    "airFriction" : 2,
+    "ignorePlatformCollision" : true,
+    "gravityEnabled" : true,
+    "collisionEnabled" : true
+  },
+
+  "occupiedMovementSettings" : {
+    "collisionPoly" : [[-6.0, 0.5], [-4.0, -1.5], [4.0, -1.5], [6.0, 0.5]],
+    "mass" : 4,
+    "gravityEnabled" : true,
+    "collisionEnabled" : true
+  },
+
+  "zeroGMovementSettings" : {
+    "collisionPoly" : [[-6.0, 0.5], [-4.0, -1.5], [4.0, -1.5], [6.0, 0.5]],
+    "mass" : 4,
+    "airFriction" : 0.1,
+    "collisionEnabled" : true
+  },
+  
+  //Damage area radius, the center is in the .animation file
+  "damageRadius": 3,
+  //Tile damage factor, is multiplied by the current velocity
+  "damageFactor": 2
+
+}

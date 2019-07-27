@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_stock_rapid",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/rapid.png",
+  "description" : "A recoil-compensating stock. Allows for higher firerate, at the cost of accuracy.",
+  "shortdescription" : "Recoil Compensating Stock",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "stock",
+    "id" : "rapid"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "projectileName" : "sgmagnumround",
+  "image" : "sgmagnumround.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  "piercing" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "physics" : "laser",
+  "timeToLive" : 5,
+  "bounces" : 0,
+  "lightColor" : [225, 100, 0],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "size" : 0.1,
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/sgtrailorange/sgtrailorange.animation",
+        "initialVelocity" : [0.0, 0.0],
+        "timeToLive" : 0.05,
+        "fullbright" : true,
+        "destructionTime" : 0.01,
+        "destructionAction" : "shrink",
+        "fade" : 0.01,
+        "layer" : "middle",
+        "position" : [0.0, 0.0]
+      }
+    },
+    {
+      "time" : 0.015,
+      "repeat" : true,
+
+      "action" : "loop",
+      "count" : 1,
+      "body" : [
+        {
+          "action" : "projectile",
+          "type" : "sgbulletring",
+          "fuzzAngle" : 360,
+          "inheritDamageFactor" : 0.1,
+          "angleAdjust" : 0
+        }
+      ]
+    }
+  ],
+
+  "power" : 5.0,
+  "speed" : 150,
+  "damageKind" : "default"
+}

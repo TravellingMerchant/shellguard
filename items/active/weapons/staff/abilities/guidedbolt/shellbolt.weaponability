@@ -1,0 +1,56 @@
+{
+  "animationScripts" : ["/items/active/effects/lightning.lua"],
+
+  "animationCustom" : {
+    "sounds" : {
+      "addGuide1" : [ "/sfx/interface/sniper_mark_pitch1.ogg" ],
+      "addGuide2" : [ "/sfx/interface/sniper_mark_pitch2.ogg" ],
+      "addGuide3" : [ "/sfx/interface/sniper_mark_pitch3.ogg" ],
+      "addGuide4" : [ "/sfx/interface/sniper_mark_pitch4.ogg" ],
+      "addGuide5" : [ "/sfx/interface/sniper_mark_pitch5.ogg" ],
+      "addGuide6" : [ "/sfx/interface/sniper_mark_pitch6.ogg" ],
+      "addGuide7" : [ "/sfx/interface/sniper_mark_pitch7.ogg" ],
+      "addGuide8" : [ "/sfx/interface/sniper_mark_pitch8.ogg" ],
+      "addGuide9" : [ "/sfx/interface/sniper_mark_pitch9.ogg" ],
+      "addGuide10" : [ "/sfx/interface/sniper_mark_pitch10.ogg" ],
+      "discharge" : [ ]
+    }
+  },
+
+  "ability" : {
+    "type" : "shellbolt",
+    "name" : "Taser Discharge",
+    "scripts" : ["/items/active/weapons/staff/abilities/guidedbolt/shellbolt.lua"],
+    "class" : "GuidedBolt",
+
+    "chargeTime" : 0.02,
+    "energyCost" : 15,
+
+    "projectileType" : "boltguide",
+    "maxGuides" : 10,
+    "guideDistance" : 7,
+    "guideTime" : 0.02,
+
+    "guideRefreshRate" : 0.1,
+
+    "lightningStartColor" : [255, 255, 255, 200],
+    "lightningEndColor" : [155, 155, 255, 0],
+
+    "lightningConfig" : {
+      "displacement" : 20.0,
+      "minDisplacement" : 0.125,
+      "forks" : 6,
+      "forkAngleRange" : 0.8,
+      "width" : 1.3
+    },
+
+    "damageConfig" : {
+      "trackSourceEntity" : false,
+      "damageSourceKind" : "electricplasma",
+      "baseDamage" : 13,
+      "knockback" : 1,
+      "timeoutGroup" : "primary",
+      "statusEffects" : [ "electrified" ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "frameGrid" : {
+    "size" : [45, 10],
+    "dimensions" : [3, 1],
+
+    "names" : [
+      [ "idle", "attack.1", "attack.2" ]
+    ]
+  },
+  "aliases" : {
+    "dead" : "idle"
+  }
+}

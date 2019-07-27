@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_antimateriel",
+  "price" : 5000,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/antimateriel.png",
+  "description" : "Heavy barrel. Incompatible with Heavy/Burst recievers and Reflek.",
+  "shortdescription" : "Anti-Materiel Barrel",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "antimateriel"
+  }
+}

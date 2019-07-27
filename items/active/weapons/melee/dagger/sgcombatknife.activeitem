@@ -1,0 +1,33 @@
+{
+  "itemName" : "sgcombatknife",
+  "price" : 2000,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Light, fast and sharpened to perfection.",
+  "shortdescription" : "Shellguard Combat Knife",
+  //"tooltipKind" : "sword",
+  "category" : "shortsword",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","melee","shortsword"],
+
+  "inventoryIcon" : "sgcombatknife.png",
+
+  "animation" : "/items/active/weapons/melee/shortsword/comboshortsword.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "sgcombatknife.png" },
+  "animationCustom" : { },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "shortswordcombo",
+  "primaryAbility" : {
+    "fireTime" : 0.3,
+    "baseDps" : 8
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

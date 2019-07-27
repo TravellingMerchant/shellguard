@@ -1,0 +1,1 @@
+C:\Users\Nick\Desktop\imagick\convert.exe "%~f1" -background "#0000" -gravity Center -extent 40x16 "%~f1"

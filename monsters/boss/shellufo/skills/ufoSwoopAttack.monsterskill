@@ -1,0 +1,13 @@
+{
+  "name" : "shellufoSwoopAttack",
+  "label" : "MEGA SWOOP",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/shellufo/skills/ufoSwoopAttack.lua" ],
+
+    "ufoSwoopAttack" : {
+      "swoopTime" : 2
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "itemName" : "sgheavycarcontroller",
+  "level" : 1,
+  "price" : 20000,
+  "rarity" : "Rare",
+  "category" : "vehicleController",
+  "description" : "A heavy trasport vehicle with many seats and an explosive cannon.",
+  "shortdescription" : "Heavy Transport",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["vehiclecontroller.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "vehicle",
+  "largeImage" : "sgheavycar.png",
+
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "sgheavycar",
+  "vehicleBoundingBox" : [-5, -3, 5, 3],
+  "vehicleImage" : "/vehicles/hoverbike/sgheavycar/sgheavycarwarp.png:warp.7",
+
+  "animationParts" : {
+    "casing" : "sgheavycarcontroller.png"
+  },
+
+  "inventoryIcon" : "sgheavycarcontroller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/sgheavycarcontroller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/sgheavycarcontroller.png:full"
+
+}

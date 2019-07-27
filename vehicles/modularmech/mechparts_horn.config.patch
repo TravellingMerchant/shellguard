@@ -1,0 +1,15 @@
+[
+  {
+    "op": "add",
+    "path": "/sgclownhorn",
+    "value": {
+      "animationCustom": {
+        "sounds": {
+          "horn": [
+            "/sfx/sgbikehorn.ogg"
+          ]
+        }
+      }
+    }
+  }
+]

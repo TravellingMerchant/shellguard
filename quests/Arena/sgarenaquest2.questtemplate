@@ -1,0 +1,45 @@
+{
+  "id" : "sgarenaquest2",
+  "prerequisites" : ["sgarenaquest1"],
+  "title" : "^green;Nanotrasen Arena 2",
+  "text" : "Oh, you're back for another fight? Great! I have a feeling this one is going to rock.",
+  "completionText" : "Another great fight, good job! The crowd hungers for more!",
+  "moneyRange" : [1000, 1000],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], ["money", 1000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/arenaman/sgarenamanicon.png"} ],
+        "title" : "Arena Fan"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/arenaman/sgarenamanicon.png"} ],
+        "title" : "Arena Fan"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Enter the ^orange;Nanotrasen Arena^reset;",
+      "findGoal" : "Win in the Arena!",
+      "turnIn" : "Return to ^orange;the Arena Fan^reset;"
+    },
+
+    "warpEntityUid" : "Arenaman",
+    "warpAction" : "instanceworld:sgarena2",
+    "warpDialog" : "/interface/confirmation/sgarenateleportconfirmation.config:sgarenaquest",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgarenatele2",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Arenaman"
+  }
+}

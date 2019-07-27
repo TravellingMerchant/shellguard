@@ -1,0 +1,9 @@
+{
+  "name" : "sgtentacleghost",
+  "category" : "sgtentacleghost",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgtentacleghost.png"
+  }
+}

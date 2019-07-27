@@ -1,0 +1,91 @@
+{
+  "itemName" : "sggunspear",
+  "price" : 2000,
+  "inventoryIcon" : "sggunspear.png",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A cross between a gun and a staff often used by Ironwatch guards.",
+  "shortdescription" : "Shellguard Gun Staff",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sggunspear.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/ShellRifleFire.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.0, 0.1],
+  "muzzleOffset" : [1.7, 0.2],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 1.0,
+    "baseDps" : 10.5,
+    "energyUsage" : 30.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.04,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 90,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0.3,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.3,
+        "armRotation" : -20,
+        "weaponRotation" : 45,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "tempbullet",
+    "projectileParameters" : { 
+      "knockback" : 6
+    }
+  },
+
+  "altAbilityType" : "bayonetblade",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "elitegunspear.png",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/gunstaff/sggunspear/elitegunspear.png"
+    },
+    "shortdescription" : "Elite Gun Staff ^yellow;^reset;"
+  }
+}

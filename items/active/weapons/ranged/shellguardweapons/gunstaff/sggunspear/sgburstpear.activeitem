@@ -1,0 +1,93 @@
+{
+  "itemName" : "sgburstpear",
+  "price" : 2000,
+  "inventoryIcon" : "sgburstpear.png",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A gun staff with a rotary barrel, fires 6 light shots.",
+  "shortdescription" : "Shellguard Burst Staff",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgburstpear.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/ShellRifleFire.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.0, 0.1],
+  "muzzleOffset" : [3, 0.0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.35,
+    "baseDps" : 10.5,
+    "energyUsage" : 30.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.04,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 90,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0.3,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "cooldown" : {
+        "duration" : 0.3,
+        "armRotation" : -20,
+        "weaponRotation" : 45,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    },
+
+    "burstCount" : 6,
+    "burstTime" : 0.2,
+    "fireType" : "burst",
+
+    "projectileType" : "shelllightbullet",
+    "projectileParameters" : { 
+      "knockback" : 6
+    }
+  },
+
+  "altAbilityType" : "bayonetblade",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "eliteburstpear.png",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/gunstaff/sggunspear/eliteburstpear.png"
+    },
+    "shortdescription" : "Elite Burst Staff ^yellow;^reset;"
+  }
+}

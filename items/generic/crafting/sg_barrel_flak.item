@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_flakbarrel",
+  "price" : 5000,
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/flakbarrel.png",
+  "description" : "Fires superheated metal shards that bounce around.",
+  "shortdescription" : "Flak Shard Barrel",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "flakbarrel"
+  }
+}

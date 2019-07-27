@@ -1,0 +1,95 @@
+{
+  "objectName" : "sgdockingfield",
+  "objectType" : "physics",
+  "colonyTags" : ["station"],
+  "printable" : false,
+  "rarity" : "Common",
+
+  "category" : "wire",
+  "price" : 0,
+  "description" : "This energy field can contain both atmosphere and artificial gravity.",
+  "shortdescription" : "Docking Field",
+  "race" : "generic",
+
+  "apexDescription" : "A space docking field, this energy contains the atmosphere inside.",
+  "avianDescription" : "The energy in this docking field contains air and gravity inside.",
+  "floranDescription" : "This crackling energy containsss air inside.",
+  "glitchDescription" : "Informed. This field is a special energy type meant to contain atmosphere and artificial gravity.",
+  "humanDescription" : "This type of energy field can contain atmosphere and gravity inside space structures.",
+  "hylotlDescription" : "Docking fields like this are common in space, they make quite effective airlocks.",
+  "novakidDescription" : "This here energy field keeps air and gravity inside and space outside.",
+
+  "lightColor" : [186, 31, 0],
+  "lightPosition" : [0, 6],
+
+  "inventoryIcon" : "/objects/space/dockingfield/dockingfieldicon.png",
+  "orientations" : [
+    {
+      "image" : "dockingfield.png:<color>.off",
+      "imagePosition" : [0, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "animationParts" : {
+        "bg" : "dockingfield.png",
+        "fg" : "dockingfieldlit.png"
+      },
+      "animationPosition" : [0, 0],
+
+      "detectArea" : [ [-0.5, 0], [0.5, 10] ],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top", "bottom" ],
+
+      "enableCollision" : "barrierVertical"
+    },
+    {
+      "image" : "dockingfield.png:<color>.off",
+      "imagePosition" : [0, 0],
+
+      "direction" : "right",
+
+      "animationParts" : {
+        "bg" : "dockingfield.png",
+        "fg" : "dockingfieldlit.png"
+      },
+      "animationPosition" : [0, 0],
+
+      "detectArea" : [ [-0.5, 0], [0.5, 10] ],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "top", "bottom" ],
+
+      "enableCollision" : "barrierVertical"
+    }
+  ],
+
+  "physicsCollisions" : {
+    "barrierVertical" : {
+      "collision" : [
+        [-0.25, 0],
+        [0.25, 0],
+        [0.25, 10],
+        [-0.25, 10]
+      ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["player"],
+      "enabled" : false
+    }
+  },
+
+  "scripts" : [
+    "/objects/space/dockingfield/dockingfield.lua"
+  ],
+  "scriptDelta" : 5,
+
+  "animation" : "/objects/space/dockingfield/dockingfield.animation",
+
+  "outputNodes" : [ [0, 0] ],
+
+  "interactive" : false,
+
+  "detectDuration" : 0.1,
+  "detectEntityTypes" : [ "creature", "vehicle" ]
+}

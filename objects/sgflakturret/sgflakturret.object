@@ -1,0 +1,123 @@
+{
+  "objectName" : "sgflakturret",
+  "colonyTags" : ["wired","combat"],
+  "printable" : false,
+  "rarity" : "Common",
+  "objectType" : "container",
+  "price" : 3500,
+
+  "slotCount" : 0,
+  "uiConfig" : "/interface/turret/sgflakturret.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600,
+
+  "description" : "Fires anti-air rounds that explode near hostiles. Can only be placed once and does not fire at close targets.",
+  "shortdescription" : "Shellguard Flak Turret",
+  "subtitle" : "Automatic Base Defense",
+  "race" : "generic",
+  "category" : "wire",
+
+  "breakDropOptions" : [
+    [ [ "siliconboard", 1, { } ], [ "wire", 1, { } ] ]
+  ],
+
+  "apexDescription" : "Always watchful.",
+  "avianDescription" : "The monsters don't stand a chance, unless they can fly.",
+  "floranDescription" : "Effective againssst living thingsss.",
+  "glitchDescription" : "Cautious. Must not disrupt my brother in his vigilance.",
+  "humanDescription" : "An automated security system.",
+  "hylotlDescription" : "Looks like a turret of some sort.",
+  "novakidDescription" : "Looks like this thing sure could do some damage!",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgflakturretstand.png:bottom",
+
+      "imagePosition" : [-12, 0],
+      "imageLayers" : [ { "image" : "sgflakturretstand.png:bottom" }, { "image" : "sgflakturretgun.png:dead", "position": [4, 12] } ],
+      "spaces" : [
+        [-2, 0], [-1, 0], [0, 0], [1, 0],
+        [-2, 1], [-1, 1], [0, 1], [1, 1]
+      ],
+      "anchors" : [ "bottom" ],
+
+      "animationParts" : {
+        "gun" : "sgflakturretgun.png",
+        "stand" : "sgflakturretstand.png:bottom",
+        "energy" : "energy.png"
+      },
+      "animationPosition" : [4, 16],
+      "animationCenterLine" : 0,
+
+      "baseOffset" : [0, 2],
+      "energyBarOffset" : [0.375, -1.5],
+      "verticalScaling" : false
+    }
+  ],
+
+  "objectWidth" : 4,
+
+  "animation" : "sgflakturret.animation",
+
+  "scripts" : [
+    "/objects/sgflakturret/gvturret.lua",
+    "/scripts/npcToyObject.lua",
+    "/scripts/stateMachine.lua",
+    "/scripts/util.lua",
+    "/scripts/vec2.lua"
+  ],
+
+  "damageTeam" : {
+    "type" : "assistant"
+  },
+
+  "scriptDelta" : 5,
+
+  "outputNodes" : [ [0, 0] ],
+  "inputNodes" : [ [0, 1] ],
+
+  "rotationSpeed" : 25,
+
+  "tipOffset" : [2.5, 0],
+  "offAngle" : -30,
+
+  "scanInterval" : 6,
+  "scanAngle" : 25,
+  "scanRange" : 35,
+
+  "targetQueryRange" : 180,
+  "targetMinRange" : 50.0,
+  "targetMaxRange" : 180,
+  "targetAngleRange" : 85,
+
+  "maxFireAngle" : 5,
+
+  "energyUsage" : 4,
+  "power" : 20,
+  "fireTime" : 0.1,
+  "inaccuracy" : 0.03,
+  "multiBarrel" : true,
+  "arraySize" : [1, 2],
+  "arrayOffset" : [0, 0.75],
+
+  "maxEnergy" : 100,
+  "energyRegen" : 25,
+  "energyRegenBlock" : 1.0,
+
+  "npcToy" : {
+    "influence" : [
+      "turret"
+    ],
+    "defaultReactions" : {
+      "turret" : [
+        [1.0, "pressbutton"],
+        [1.0, "oh"],
+        [1.0, "laugh"]
+      ]
+    },
+    "preciseStandPositionLeft" : [-1.0, 0.0],
+    "preciseStandPositionRight" : [1.0, 0.0],
+    "maxNpcs" : 1
+  }
+}

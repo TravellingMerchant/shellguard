@@ -1,0 +1,9 @@
+{
+  "name" : "sgchomper",
+  "category" : "sgchomper",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgchomper.png"
+  }
+}

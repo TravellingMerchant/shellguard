@@ -1,0 +1,33 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 4000 }
+  ],
+  "output" : {
+    "item" : "filledcapturepod",
+    "count" : 1,
+    "parameters" : {
+      "shortdescription" : "Shellguard Tank",
+      "description" : "A Shellguard Tank with four rifles.",
+      "tooltipFields" : {
+        "subtitle" : "Shellguard Robot",
+        "objectImage" : "/monsters/crawlers/sgmonstertank/icon.png"
+      },
+      "pets" : [
+        {
+          "name" : "Drone",
+          "portrait" : [
+            {"image" : "/monsters/crawlers/sgmonstertank/icon.png"}
+          ],
+          "config" : {
+            "type" : "sgmonstertank",
+            "parameters" : {
+              "level" : 6,
+              "aggressive" : true
+            }
+          }
+        }
+      ]
+    }
+  },
+  "groups" : [ "sgrobotcrafting" ]
+}

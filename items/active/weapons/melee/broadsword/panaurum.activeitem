@@ -1,0 +1,52 @@
+{
+  "itemName" : "panaurum",
+  "price" : 3000,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A thin sword of very plain steel, but well cared for.",
+  "shortdescription" : "Panaurum",
+  //"tooltipKind" : "sword",
+  "category" : "uniqueweapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","broadsword","upgradeableWeapon"],
+
+  "inventoryIcon" : "panaurum.png",
+
+  "animation" : "/items/active/weapons/melee/broadsword/combobroadsword.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "panaurum.png"
+  },
+  "animationCustom" : { },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "broadswordcombo",
+  "primaryAbility" : {
+    "fireTime" : 0.83,
+    "baseDps" : 11.5,
+    "damageConfig" : {
+      "damageSourceKind" : "hammer"
+    }
+  },
+
+  "altAbilityType" : "bladecharge",
+  "altAbility" : {
+    "damageConfig" : {
+      "damageSourceKind" : "hammer"
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "elitepanaurum.png",
+    "animationParts" : {
+      "blade" : "elitepanaurum.png"
+    },
+    "shortdescription" : "Panaurum ^yellow;^reset;",
+    "description" : "A legend starts simple, but becomes something more."
+  }
+}

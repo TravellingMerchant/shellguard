@@ -1,0 +1,29 @@
+{
+  "projectileName" : "sgmotoroundheavyspawner",
+  "image" : "sgmotoroundheavyspawner.png",
+  "timeToLive" : 0,
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  "piercing" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "physics" : "laser",
+  "bounces" : 0,
+  "lightColor" : [225, 100, 0],
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 1,
+      "type" : "sgmotoroundheavy"
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.1,
+      "type" : "sgmotoroundwave"
+    }
+  ],
+ 
+  "power" : 5.0,
+  "speed" : 0,
+  "damageKind" : "default"
+}

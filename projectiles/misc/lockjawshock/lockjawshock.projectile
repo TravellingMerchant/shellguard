@@ -1,0 +1,22 @@
+{
+  "projectileName" : "lockjawshock",
+  "image" : "lockjawshock.png",
+  "physics" : "gravitybomb",
+  "animationCycle" : 0.3,
+  "frameNumber" : 3,
+  "power" : 1,
+  "speed" : 0,
+  "timeToLive" : 0.3,
+  "emitters" : [ "electricplasma" ],
+  "bounces" : 1,
+  // "actionOnReap" : [
+  //  {
+  //    "action" : "sound",
+  //    "options" : [ "/sfx/melee/tesla_shock_kill.ogg" ]
+  //  }
+  //],
+  "damagePoly" : [ [-18, 0], [-12, -12], [0, -18], [12, -12], [18, 0], [12, 12], [0, 18], [-12, 12] ],
+  "piercing" : true,
+  "lightColor" : [95, 186, 236],
+  "damageKind" : "electric"
+}

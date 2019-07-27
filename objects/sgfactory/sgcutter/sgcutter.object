@@ -1,0 +1,27 @@
+{
+  "objectName" : "sgcutter",
+  "colonyTags" : ["misc"],
+  "rarity" : "Common",
+  "description" : "A cutter.",
+  "shortdescription" : "Shellguard Cutter",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 60,
+  "printable" : false,
+  "scannable" : false,
+
+  "inventoryIcon" : "sgcutter.png:default.default",
+  "orientations" : [
+    {
+      "dualImage" : "sgcutter.png",
+      "imageLayers" : [ { "image" : "sgcutter.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgcutterlit.png:<color>.<frame>" } ],
+      
+      "imagePosition" : [-24, -48],
+      "frames" : 39,
+      "animationCycle" : 2.6,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

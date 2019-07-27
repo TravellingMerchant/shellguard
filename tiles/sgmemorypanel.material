@@ -1,0 +1,26 @@
+{
+  "materialId" : 26202,
+  "materialName" : "sgmemorypanel",
+  "particleColor" : [182, 182, 182, 255],
+  "itemDrop" : "sgmemorypanel",
+
+  "description" : "Something feels.. off about this.",
+  "glitchDescription" : "Observant. Something feels.. off about this.",
+  "floranDescription" : "Sssssomething feels.. off about thissss.",
+  "novakidDescription" : "Something feels.. off about this.",
+
+  "shortdescription" : "Memory Hull Panel",
+  "footstepSound" : "/sfx/blocks/footstep_lightmetal.ogg",
+  "health" : 20,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/slopedmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "sgmemorypanel.png",
+    "variants" : 5,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 4999
+  }
+}

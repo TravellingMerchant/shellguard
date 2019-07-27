@@ -1,0 +1,45 @@
+{
+  "id" : "sgarenaquest5",
+  "prerequisites" : ["sgarenaquest4"],
+  "title" : "^green;Nanotrasen Arena 5",
+  "text" : "You're going up against more members of Shellguard this round. Try not to get knocked about too badly!",
+  "completionText" : "Now that was a good fight! Here's some new advanced gun tech. Put it to good use!",
+  "moneyRange" : [1000, 1000],
+  "rewards" : [
+    [ [ "sgdmr", 1 ], ["money", 1000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/arenaman/sgarenamanicon.png"} ],
+        "title" : "Arena Fan"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/arenaman/sgarenamanicon.png"} ],
+        "title" : "Arena Fan"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Enter the ^orange;Nanotrasen Arena^reset;",
+      "findGoal" : "Win in the Arena!",
+      "turnIn" : "Return to ^orange;the Arena Fan^reset;"
+    },
+
+    "warpEntityUid" : "Arenaman",
+    "warpAction" : "instanceworld:sgarena5",
+    "warpDialog" : "/interface/confirmation/sgarenateleportconfirmation.config:sgarenaquest",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgarenatele5",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Arenaman"
+  }
+}

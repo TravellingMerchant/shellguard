@@ -1,0 +1,33 @@
+{
+  "id" : "sgsurvivorstory1",
+  "species" : "human",
+  "title" : "Log Book 1",
+  "description" : "Transcribed personal logs.",
+  "icon" : "sgsurvivorstory1.png",
+  "contentPages" : [
+    "^cyan;Personal log number 253:^white;  
+I got a job as a peacekeepr today! I'm so excited! I've longed to be one ever since I was a kid and now that I finally am, I can't quite believe it!",
+
+    "^cyan;Personal log number 257:^white; 
+My first few day's were hard! I had no idea poptop's could grow so large! These outer systems are pretty dangerous, but I'm going to make them safer!",
+	
+    "^cyan;Personal log number 263:^white; 
+I'm saving my pixels, bit by bit. One day, I'm going to go home. Well.. not literal home. The human races home, earth. I've heard its beautiful.",
+	
+    "^cyan;Personal log number 268:^white; 
+Arressted a gang member today. They had a plan to attack the protectorate. Why would anyone want to do that? I don't understand them at all. They protect the Earth! I.. Well, actually, I guess I do too now! One day, I'll get there.. It just seems so far away.",
+
+	"^cyan;Personal log number 276:^white; 
+I've been tasked with protecting a small research team from earth! I can't wait to meet them, I've got so many questions!",
+	
+	"^cyan;Personal log number 279:^white; 
+Wow, just wow. This day has been something special! Not only did I learn so much from the team, one of them is one of the most beautiful women I've ever seen! She smiled at me so sweetly and she laughed at everything I said, not to mention she loved my interest in the Earth! Should I ask her out?",
+	
+	"^cyan;Personal log number 281:^white; 
+She said yes!" 
+  ],
+    "itemConfig" : {
+    "rarity" : "common",
+    "price" : 25
+  }
+}

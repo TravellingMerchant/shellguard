@@ -1,0 +1,108 @@
+{
+  "itemName" : "sgelectromace",
+  "level" : 6,
+  "price" : 1750,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A gun that fires three electrical balls on chains, can be guided and swung around.",
+  "shortdescription" : "Cerberus Electro Flail",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","livingweapon","upgradeableWeapon"],
+
+  "inventoryIcon" : "sgelectromace.png",
+
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgelectromace.png",
+    "barrel" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/PlasmiteRPGLaunch.ogg" ],
+      "altFire" : [ "/sfx/gun/PlasmiteRPGLaunch.ogg" ]
+    }
+  },
+  "baseOffset" : [-0.06, 0.2],
+  "muzzleOffset" : [1.4, 0.5],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "tentaclegun",
+  "primaryAbility" : {
+    "chain" : {
+      "taper" : 0,
+      "segmentImage" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgelectromace/macesegment.png",
+      "endSegmentImage" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgelectromace/maceend.png",
+      "segmentSize" : 1.0
+    },
+
+    "guideProjectiles" : true,
+    "maxLength" : 30,
+
+    "baseDps" : 7.0,
+    "fireTime" : 0.2,
+    "maxProjectiles" : 3,
+    "projectileCount" : 3,
+    "energyUsage" : 450,
+    "inaccuracy" : 0.8,
+
+    "projectileType" : "sgelectromace",
+    "projectileParameters" : {
+      "knockback" : 5,
+      "speed" : 50,
+      "bounces" : 8,
+      "timeToLive" : 10
+    }
+  },
+
+  "altAbilityType" : "tentaclegun",
+  "altAbility" : {
+    "name" : "Wild Flail",
+
+    "chain" : {
+      "taper" : 0,
+      "segmentImage" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgelectromace/macesegment.png",
+      "endSegmentImage" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgelectromace/maceend.png",
+      "segmentSize" : 1.0
+    },
+
+    "guideProjectiles" : false,
+
+    "baseDps" : 8.0,
+
+    "fireTime" : 2.0,
+    "maxProjectiles" : 3,
+    "energyUsage" : 100,
+    "inaccuracy" : 3.14,
+
+    "fireSound" : "altFire",
+
+    "projectileCount" : 20,
+    "projectileType" : "sgelectromace",
+    "projectileTracksUser" : true,
+    "projectileParameters" : {
+      "knockback" : 40,
+      "knockbackDirectional" : true,
+      "speed" : 40,
+      "ignoreTerrain" : false,
+      "bounces" : 10,
+      "timeToLive" : 10,
+      "minVelocity" : 10
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "eliteelectromace.png",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgelectromace/eliteelectromace.png"
+    },
+    "shortdescription" : "Cerberus Lightning Flail ^yellow;^reset;"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_microrocket",
+  "price" : 5000,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/microrocket.png",
+  "description" : "Fires tiny rockets.",
+  "shortdescription" : "Micro rocket Barrel",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "microrocket"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_rapidalt",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/rapidalt.png",
+  "description" : "A rapid-fire barrel.",
+  "shortdescription" : "SMG Barrel",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "rapidalt"
+  }
+}

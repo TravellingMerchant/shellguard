@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_stock_base",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/base.png",
+  "description" : "A basic wooden skeleton stock.",
+  "shortdescription" : "Skeleton Stock",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "stock",
+    "id" : "base"
+  }
+}

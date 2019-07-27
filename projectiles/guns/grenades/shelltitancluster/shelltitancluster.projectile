@@ -1,0 +1,63 @@
+{
+  "projectileName" : "shelltitancluster",
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/gun/shellbulletimpact.ogg"
+      ]
+    }
+  ],
+  "image" : "shelltitancluster.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 0.1
+  },
+  "animationCycle" : 0.4,
+  "pointLight" : true,
+  "lightColor" : [255, 0, 0],
+  "actionOnReap" : [
+	{
+      "action" : "spark"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/titanboom2.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 1.0,
+      "type" : "titansmall"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/fire_out.ogg" ]
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+    {
+      "action" : "projectile",
+      "type" : "molotovflame",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.05,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 10,
+      "backgroundRadius" : 5,
+      "explosiveDamageAmount" : 1000.0,
+      "delaySteps" : 2
+    }
+  ],
+  "emitters" : [ "rocketsmoke" ],
+  "orientationLocked" : false,
+  "physics" : "disc",
+  "frameNumber" : 3,
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 100,
+  "speed" : 40,
+  "power" : 40,
+  "damageKind" : "bow"
+}

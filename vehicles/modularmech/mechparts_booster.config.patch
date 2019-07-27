@@ -1,0 +1,44 @@
+[
+  {
+    "op": "add",
+    "path": "/sgmechradiatorbooster",
+    "value": {
+      "stats": {
+        "speed": 6,
+        "control": 6
+      },
+      "partParameters": {},
+      "partImages": {
+        "backBoosterBack": "booster/sgmechradiatorbooster_back_back.png",
+        "backBoosterFullbright": "boosterflame/simple_back.png",
+        "backBoosterFront": "booster/sgmechradiatorbooster_back_front.png",
+        "frontBoosterBack": "booster/sgmechradiatorbooster_front_back.png",
+        "frontBoosterFullbright": "boosterflame/simple_front.png",
+        "frontBoosterFront": "booster/sgmechradiatorbooster_front_front.png"
+      },
+      "defaultPrimaryColors": [
+      "A3381C",
+      "7B1500",
+      "5B0600",
+      "3C0000"
+      ],
+      "defaultSecondaryColors": [
+      "555555",
+      "3d3d3d",
+      "2f2f2f",
+      "202020"
+      ],
+      "animationCustom": {
+        "animatedParts": {
+          "parts": {
+            "frontBoosterFullbright": {
+              "properties": {
+                "zLevel": 10.5
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

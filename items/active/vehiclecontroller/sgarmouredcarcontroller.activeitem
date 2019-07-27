@@ -1,0 +1,34 @@
+{
+  "itemName" : "sgarmouredcarcontroller",
+  "level" : 1,
+  "price" : 16000,
+  "rarity" : "Rare",
+  "category" : "vehicleController",
+  "description" : "An armoured Hover Ram with a small gun.",
+  "shortdescription" : "Armoured Hover Ram",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["vehiclecontroller.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "vehicle",
+  "largeImage" : "sgarmouredcar.png",
+
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "sgarmouredcar",
+  "vehicleBoundingBox" : [-5, -3, 5, 3],
+  "vehicleImage" : "/vehicles/hoverbike/sgarmouredcar/sgarmouredcarwarp.png:warp.7",
+
+  "animationParts" : {
+    "casing" : "sgarmouredcarcontroller.png"
+  },
+
+  "inventoryIcon" : "sgarmouredcarcontroller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/sgarmouredcarcontroller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/sgarmouredcarcontroller.png:full"
+
+}

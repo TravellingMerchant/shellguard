@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_baseAddon_reflek",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/baseAddon/reflek.png",
+  "description" : "An addon that makes bullets bounce. Only works with normal barrels.",
+  "shortdescription" : "Reflek Addon",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "baseAddon",
+    "id" : "reflek"
+  }
+}

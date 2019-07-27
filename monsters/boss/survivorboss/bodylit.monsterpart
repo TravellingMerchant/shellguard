@@ -1,0 +1,9 @@
+{
+  "name" : "survivorbosslit",
+  "category" : "survivorboss",
+  "type" : "bodylit",
+
+  "frames" : {
+    "bodylit" : "survivorbosslit.png"
+  }
+}

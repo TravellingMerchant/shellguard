@@ -1,0 +1,15 @@
+{
+  "frameGrid" : {
+    "size" : [242, 60],
+    "dimensions" : [4, 2],
+
+
+    "names" : [
+	  [ null, "undamaged", null, "damaged"],
+	  [ null, "scratched", null, "destroyed" ]
+    ]
+  },
+  "aliases" : {
+    "default" : "undamaged"
+  }
+}

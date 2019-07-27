@@ -1,0 +1,441 @@
+[
+  {
+    "op" : "add",
+    "path" : "/shellguardpalace",
+    "value" : {
+      "primaryDungeon" : "shellguardpalace",
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 1000,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/ocean-battle1.ogg",
+      "biome": "alien"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/shellguardbase",
+    "value" : {
+      "primaryDungeon" : "shellguardbase",
+      "weatherPool" : [
+        [1.0, "snow"]
+      ],
+      "threatLevel" : 2,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 10,
+      "dungeonSurfaceHeight" : 5,
+      "ambientLightLevel" : [200, 200, 200],
+      "ambientNoises" : "/sfx/environmental/garden_day.ogg",
+      "musicTrack" : "/music/arctic-constellation2.ogg",
+      "biome": "sgalpine"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/lockjawcourse",
+    "value" : {
+      "primaryDungeon" : "lockjawcourse",
+      "weatherPool" : [
+        [1.0, "snow"]
+      ],
+      "threatLevel" : 2,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 425,
+      "dungeonSurfaceHeight" : 5,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/tranquility-base.ogg",
+      "biome": "sgalpine"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/sgtrainattack",
+    "value" : {
+      "primaryDungeon" : "sgtrainattack",
+      "weatherPool" : [
+        [1.0, "windstorm"]
+      ],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 450,
+      "dungeonSurfaceHeight" : 5,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/lava-exploration1.ogg",
+      "biome": "forest"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/sgcolonyattack1",
+    "value" : {
+      "primaryDungeon" : "sgcolonyattack1",
+      "weatherPool" : [
+        [1.0, "storm"]
+      ],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 500,
+      "dungeonSurfaceHeight" : 115,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/lava-exploration1.ogg",
+      "biome": "forest"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/survivormission",
+    "value" : {
+      "primaryDungeon" : "survivormission",
+      "weatherPool" : [
+        [1.0, "storm"]
+      ],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 400,
+      "dungeonSurfaceHeight" : 5,
+      "ambientLightLevel" : [200, 200, 200],
+      "ambientNoises" : "/sfx/environmental/ominous_loop1.ogg",
+      "musicTrack" : "",
+      "biome": "tentacle"
+    }
+  },
+
+  {
+    "op" : "add",
+    "path" : "/sgfactoryspaceapproach",
+    "value" : {
+    "primaryDungeon" : "sgfactoryspaceapproach",
+    "threatLevel" : 6,
+    "gravity" : 80,
+    "worldSize" : [2500, 2000],
+    "dungeonBaseHeight" : 1000,
+    "dungeonSurfaceHeight" : 810,
+    "ambientLightLevel" : [32, 32, 32],
+    "musicTrack" : "/music/housecleaning.ogg",
+    "environmentStatusEffects" : ["dontstarve"],
+    "worldEdgeForceRegions" : "TopAndBottom",
+    "biome" : "space"
+    }
+  },
+  
+  {
+    "op" : "add",
+    "path" : "/sgfortress",
+    "value" : {
+    "primaryDungeon" : "sgfortress",
+    "threatLevel" : 6,
+    "gravity" : 80,
+    "worldSize" : [2500, 2000],
+    "dungeonBaseHeight" : 1000,
+    "dungeonSurfaceHeight" : 810,
+    "ambientLightLevel" : [32, 32, 32],
+    "musicTrack" : "/music/housecleaning.ogg",
+    "environmentStatusEffects" : ["dontstarve"],
+    "worldEdgeForceRegions" : "TopAndBottom",
+    "biome" : "space"
+    }
+  },
+  
+  {
+    "op" : "add",
+    "path" : "/sgfortressbossroom",
+    "value" : {
+    "primaryDungeon" : "sgfortressbossroom",
+    "threatLevel" : 6,
+    "gravity" : 80,
+    "worldSize" : [2500, 2000],
+    "dungeonBaseHeight" : 1000,
+    "dungeonSurfaceHeight" : 810,
+    "ambientLightLevel" : [32, 32, 32],
+    "musicTrack" : "/music/housecleaning.ogg",
+    "environmentStatusEffects" : ["dontstarve"],
+    "worldEdgeForceRegions" : "TopAndBottom",
+    "biome" : "space"
+    }
+  },
+
+  {
+    "op" : "add",
+    "path" : "/sgvehicletutorial",
+    "value" : {
+      "primaryDungeon" : "sgvehicletutorial",
+      "threatLevel" : 3,
+      "gravity" : 80,
+      "worldSize" : [3500, 500],
+      "dungeonBaseHeight" : 240,
+      "dungeonSurfaceHeight" : 40,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/lava-exploration2.ogg",
+      "biome": "desert"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/sgplatformtest",
+    "value" : {
+      "primaryDungeon" : "sgplatformtest",
+      "threatLevel" : 3,
+      "gravity" : 80,
+      "worldSize" : [3000, 500],
+      "dungeonBaseHeight" : 400,
+      "dungeonSurfaceHeight" : 100,
+      "ambientLightLevel" : [0, 0, 0],
+      "musicTrack" : "/music/lava-exploration2.ogg",
+      "biome": "barren"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/sgmercmission1",
+    "value" : {
+      "primaryDungeon" : "sgmercmission1",
+      "threatLevel" : 5,
+      "gravity" : 80,
+      "worldSize" : [1500, 500],
+      "dungeonBaseHeight" : 330,
+      "dungeonSurfaceHeight" : 5,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/lava-exploration2.ogg",
+      "biome": "scorched"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/sgmercmission2",
+    "value" : {
+      "primaryDungeon" : "sgmercmission2",
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2000, 600],
+      "dungeonBaseHeight" : 480,
+      "dungeonSurfaceHeight" : 1,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/lava-exploration1.ogg",
+      "biome": "forest"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/sgmercmission3",
+    "value" : {
+      "primaryDungeon" : "sgmercmission3",
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2000, 600],
+      "dungeonBaseHeight" : 400,
+      "dungeonSurfaceHeight" : 1,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/lava-exploration1.ogg",
+      "biome": "forest"
+    }
+  },
+
+  {
+    "op" : "add",
+    "path" : "/sggassky",
+    "value" : {
+      "primaryDungeon" : "sggassky",
+      "weatherPool" : [
+        [1.0, "windstorm"]
+      ],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2500, 1000],
+      "dungeonBaseHeight" : 1000,
+      "dungeonSurfaceHeight" : 0,
+      "ambientLightLevel" : [200, 50, 200],
+      "musicTrack" : "/music/lava-exploration1.ogg",
+      "biome": "ocean"
+    }
+  },  
+
+  {
+    "op" : "add",
+    "path" : "/sgweaponsfacility",
+    "value" : {
+      "primaryDungeon" : "sgweaponsfacility",
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [3500, 500],
+      "dungeonBaseHeight" : 350,
+      "dungeonSurfaceHeight" : 100,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/lava-exploration1.ogg",
+      "biome": "forest"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/Shellguardufomission",
+    "value" : {
+      "primaryDungeon" : "Shellguardufomission",
+      "weatherPool" : [
+        [1.0, "snowstorm"]
+      ],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [3299, 900],
+      "dungeonBaseHeight" : 700,
+      "dungeonSurfaceHeight" : 5,
+      "ambientLightLevel" : [32, 32, 32],
+      "musicTrack" : "/music/arctic-battle3-loop.ogg",
+      "biome": "sgalpine"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/sggarden",
+    "value" : {
+      "primaryDungeon" : "sggarden",
+      "weatherPool" : [
+        [1.0, "rain"]
+      ],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [3299, 900],
+      "dungeonBaseHeight" : 450,
+      "dungeonSurfaceHeight" : 100,
+      "ambientLightLevel" : [32, 32, 32],
+      "musicTrack" : "/music/crystal-exploration2.ogg",
+      "biome": "sggarden"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/sgscrapyard",
+    "value" : {
+      "primaryDungeon" : "sgscrapyard",
+      "weatherPool" : [],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [3299, 900],
+      "dungeonBaseHeight" : 450,
+      "dungeonSurfaceHeight" : 100,
+      "ambientLightLevel" : [32, 150, 32],
+      "musicTrack" : "/music/crystal-exploration2.ogg",
+      "biome": "scorchedcity"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/sgarenatemplate",
+    "value" : {
+      "primaryDungeon" : "sgarenatemplate",
+      "weatherPool" : [],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 1200,
+      "dungeonSurfaceHeight" : 1115,
+      "ambientLightLevel" : [125, 125, 125],
+      "musicTrack" : "/music/psyche.ogg",
+      "biome": "scorchedcity"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/sgarena1",
+    "value" : {
+      "primaryDungeon" : "sgarena1",
+      "weatherPool" : [],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 1200,
+      "dungeonSurfaceHeight" : 1115,
+      "ambientLightLevel" : [125, 125, 125],
+      "musicTrack" : "/music/psyche.ogg",
+      "biome": "scorchedcity"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/sgarena2",
+    "value" : {
+      "primaryDungeon" : "sgarena2",
+      "weatherPool" : [],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 1200,
+      "dungeonSurfaceHeight" : 1115,
+      "ambientLightLevel" : [125, 125, 125],
+      "musicTrack" : "/music/psyche.ogg",
+      "biome": "scorchedcity"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/sgarena3",
+    "value" : {
+      "primaryDungeon" : "sgarena3",
+      "weatherPool" : [],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 1200,
+      "dungeonSurfaceHeight" : 1115,
+      "ambientLightLevel" : [125, 125, 125],
+      "musicTrack" : "/music/psyche.ogg",
+      "biome": "scorchedcity"
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/sgarena4",
+    "value" : {
+      "primaryDungeon" : "sgarena4",
+      "weatherPool" : [],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 1200,
+      "dungeonSurfaceHeight" : 1115,
+      "ambientLightLevel" : [125, 125, 125],
+      "musicTrack" : "/music/psyche.ogg",
+      "biome": "scorchedcity"
+    }
+  },
+  
+  {
+    "op" : "add",
+    "path" : "/sgarena5",
+    "value" : {
+      "primaryDungeon" : "sgarena5",
+      "weatherPool" : [],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 1200,
+      "dungeonSurfaceHeight" : 1115,
+      "ambientLightLevel" : [125, 125, 125],
+      "musicTrack" : "/music/psyche.ogg",
+      "biome": "scorchedcity"
+    }
+  },
+
+  {
+    "op" : "add",
+    "path" : "/shellguardspiderfactory",
+    "value" : {
+      "primaryDungeon" : "shellguardspiderfactory",
+      "weatherPool" : [
+        [1.0, "snow"]
+      ],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 1000,
+      "dungeonSurfaceHeight" : 1000,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/arctic-constellation2.ogg",
+      "biome": "barren"
+    }
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "projectileName" : "sgsmallsquadflare",
+  "physics" : "grenadenobounce",
+  "bounces" : -1,
+  "timeToLive" : 3,
+  "image" : "sgsmallsquadflare.png",
+  "animationCycle" : 0.25,
+  "lightColor" : [255, 0, 0],
+  "frameNumber" : 2,
+  "movementSettings" : {
+    "gravityMultiplier" : 0
+  },
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/smoke/smoke.config"
+    },
+    {
+      "action" : "projectile",
+      "offset" : [0, 2],
+      "type" : "sgsoldierpod",
+      "inheritDamageFactor" : 0.0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "offset" : [0, 2],
+      "type" : "sgsoldierpod",
+      "inheritDamageFactor" : 0.0,
+      "angleAdjust" : 85
+    },
+    {
+      "action" : "projectile",
+      "offset" : [0, 2],
+      "type" : "sgsoldierpod",
+      "inheritDamageFactor" : 0.0,
+      "angleAdjust" : -85
+    }
+  ],
+  "power" : 0,
+  "onlyHitTerrain" : true,
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

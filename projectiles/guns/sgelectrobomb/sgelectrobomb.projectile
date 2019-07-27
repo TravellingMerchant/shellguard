@@ -1,0 +1,63 @@
+{
+  "projectileName" : "sgelectrobomb",
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/gun/shellbulletimpact.ogg"
+      ]
+    }
+  ],
+  "image" : "sgelectrobomb.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 1
+  },
+  "animationCycle" : 0.5,
+  "pointLight" : true,
+  "lightColor" : [255, 0, 0],
+  "actionOnReap" : [
+	{
+      "action" : "spark"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "shellsmoke"
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 1.0,
+      "type" : "shellshockwave",
+      "projectileCount" : 1,
+      "angleAdjust" : 90
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/fire_out.ogg" ]
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 5,
+      "backgroundRadius" : 4,
+      "explosiveDamageAmount" : 0.0,
+      "delaySteps" : 2
+    }
+
+  ],
+  "emitters" : [ "rocketsmoke" ],
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 7,
+  "power" : 20,
+  "damageKind" : "bow",
+  "scripts" : [ "sgelectrobomb.lua" ],
+  "baseHomingControlForce" : 3
+}

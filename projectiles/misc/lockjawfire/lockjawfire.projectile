@@ -1,0 +1,18 @@
+{
+  "projectileName" : "lockjawfire",
+  "bounces" : -1,
+  "timeToLive" : 0.2,
+  "speed" : 0,
+  "image" : "lockjawfire.png",
+  "animationCycle" : 0.2,
+  "emitters" : [ "fireflames", "rocketsmoke" ],
+  "lightColor" : [235, 126, 2],
+  "frameNumber" : 4,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "hydrophobic" : true,
+  "damageKind" : "fire",
+  "damageKindImage" : "/interface/statuses/fire.png",
+  "statusEffects" : [
+    "burning"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "projectileName" : "sgflamesentryspawnshot",
+  "physics" : "grenade",
+  "image" : "sgflamesentryspawnshot.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 3,
+  "damageKindImage" : "icon.png",
+  "actionOnReap" : [
+    {
+      "action" : "spawnmonster",
+      "type" : "sgflamesentry",
+      "offset" : [0, 2],
+      "level" : 6,
+      "arguments" : {
+        "aggressive" : true
+      }
+    }
+  ],
+  "power" : 0,
+  "speed" : 5,
+  "damageKind" : "default"
+}

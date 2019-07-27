@@ -1,0 +1,78 @@
+{
+  "name": "survivorboss-beamattack",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/time.lua",
+    "/scripts/actions/animator.lua"
+  ],
+  "parameters": {
+    "teleportPosition": "cultistbeamposition"
+  },
+  "root": {
+    "title": "Reset",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "survivorboss-teleport",
+        "type": "module",
+        "name": "survivorboss-teleport",
+        "parameters": {
+          "positionType": {"value": "<teleportPosition>"},
+          "shufflePositions": {"value": true},
+          "reverseOrder": {"value": false},
+          "positionIndex": {"value": 1}
+        }
+      },
+      {
+        "title": "survivorboss-facecenter",
+        "type": "module",
+        "name": "survivorboss-facecenter",
+        "parameters": {}
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 1}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "beamwindup"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 4}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "beamwinddown"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      }
+    ]
+  }
+}

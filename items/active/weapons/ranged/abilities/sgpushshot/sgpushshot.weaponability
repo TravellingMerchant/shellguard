@@ -1,0 +1,86 @@
+{
+  "animationParts" : { },
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "sgpushshotFire" : {
+          "default" : "idle",
+          "states" : {
+            "idle" : {},
+            "fire" : {
+              "frames" : 6,
+              "cycle" : 0.2,
+              "mode" : "transition",
+              "transition" : "idle"
+            }
+          }
+        }
+      },
+      "parts" : {
+        "sgpushshotExplosion" : {
+          "properties" : {
+            "offset" : [6.0, 0.0],
+            "transformationGroups" : ["muzzle"],
+            "damageArea" : [ [-6.0, 1.0], [6.0, 1.0], [6.0, -1.0], [-6.0, -1.0] ]
+          },
+          "partStates" : {
+            "sgpushshotFire" : {
+              "fire" : {
+                "properties" : {
+                  "fullbright" : true,
+                  "image" : "/items/active/weapons/ranged/abilities/sgpushshot/sgpushshot.png:<frame>"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "particleEmitters" : {
+      "sgpushshotSmoke" : {
+        "active" : false,
+        "emissionRate" : 20,
+        "transformationGroups" : ["muzzle"],
+        "offsetRegion" : [0.0, -1.0, 2.5, 1.0],
+        "particles" : [
+         { "particle" : "smoke"},
+         { "particle" : "rocketsmoke"},
+         { "particle" : "rocketbarrelpuff"}
+        ]
+      }
+    },
+    "sounds" : {
+      "sgpushshot" : [ "/sfx/gun/burstshot1.ogg" ]
+    }
+  },
+
+  "ability" : {
+    "name" : "Kinetic Blast",
+    "type" : "sgpushshot",
+    "scripts" : ["/items/active/weapons/ranged/abilities/sgpushshot/sgpushshot.lua"],
+    "class" : "sgpushshot",
+
+    "energyUsage" : 50.0,
+    "cooldownTime" : 2.0,
+    "damageConfig" : {
+      "baseDamage" : 10,
+      "damageSourceKind" : "standardbullet",
+      "knockback" : 100,
+      "knockbackMode" : "aim",
+      "timeout" : 0.5,
+      "timeoutGroup" : "alt"
+    },
+
+    "stances" : {
+      "fire" : {
+        "duration" : 0.20,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  }
+}

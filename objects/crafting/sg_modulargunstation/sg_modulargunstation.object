@@ -1,0 +1,50 @@
+{
+  "objectName" : "sg_modulargunstation",
+  "colonyTags" : [],
+  "rarity" : "Legendary",
+  "printable" : false,
+  "description" : "Use this station to modify custom shellguard guns.",
+  "shortdescription" : "^orange;Gun Modifcation Station^white;",
+  "race" : "generic",
+  "category" : "storage",
+  "price" : 10000,
+  "health" : 1.5,
+
+  "objectType" : "container",
+  "slotCount" : 7,
+  "uiConfig" : "/interface/objectcrafting/sg_modulargunstation.config",
+  "subtitle" : "Modify custom guns.",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600,
+  "scripts" : [ "sg_modulargunstation.lua"],
+
+  "containerCallback" : "containerCallback",
+
+  "inventoryIcon" : "sg_modulargunstationicon.png",
+
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "sg_modulargunstation.png:default.<frame>", "fullbright" : true }, { "image" : "sg_modulargunstationlit.png:default.<frame>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 16,
+      "animationCycle" : 1.5,
+      
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "sg_modulargunstation.png:default.<frame>", "fullbright" : true }, { "image" : "sg_modulargunstationlit.png:default.<frame>" } ],
+      "imagePosition" : [-8, 0],
+      "frames" : 16,
+      "animationCycle" : 1.5,
+      
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

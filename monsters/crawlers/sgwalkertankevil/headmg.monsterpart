@@ -1,0 +1,9 @@
+{
+  "name" : "sgwalkertankevilmg-head",
+  "category" : "sgwalkertankevilmg",
+  "type" : "head",
+
+  "frames" : {
+    "head" : "sgwalkertankevilmg-head.png"
+  }
+}

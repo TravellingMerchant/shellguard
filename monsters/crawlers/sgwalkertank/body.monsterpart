@@ -1,0 +1,9 @@
+{
+  "name" : "sgwalkertank-body",
+  "category" : "sgwalkertank",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgwalkertank-body.png"
+  }
+}

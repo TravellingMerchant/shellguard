@@ -1,0 +1,17 @@
+{
+  "projectileName" : "sgbulletring",
+  "image" : "sgbulletring.png",
+  "physics" : "laser",
+  "animationCycle" : 0.2,
+  "animationLoops" : false,
+  "timeToLive" : 0.2,
+  "frameNumber" : 6,
+  "piercing" : true,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [220, 50, 50],
+  "power" : 1.0,
+  "speed" : 0,
+  "damageKind" : "default"
+}

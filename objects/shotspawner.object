@@ -1,0 +1,77 @@
+{
+  "objectName" : "shotspawner",
+  "colonyTags" : ["avian","aviantemple","evil"],
+  "printable" : false,
+  "rarity" : "Common",
+  "description" : "A flame trap designed to deter invaders.",
+  "shortdescription" : "Avian Flame Trap",
+  "race" : "avian",
+
+  "apexDescription" : "A flame trap, definitely one to avoid.",
+  "avianDescription" : "Ouch! Flames and feathers don't mix!",
+  "floranDescription" : "Fire trap is Floran's worssst enemy!",
+  "glitchDescription" : "Observant. It's just a little flame trap, nothing that can't be overcome.",
+  "humanDescription" : "A trusty, reliable flame trap.",
+  "hylotlDescription" : "The swift warrior fears not the flame.",
+  "novakidDescription" : "Simple, yet deadly. My favourite kind.",
+
+  "category" : "trap",
+  "price" : 200,
+
+  "inventoryIcon" : "/assetmissing.png",
+  "orientations" : [
+    {
+      "image" : "/assetmissing.png",
+      "imagePosition" : [-8, 0],
+      "direction" : "right",
+      
+      "projectileDirection" : [0, 1],
+      "projectilePosition" : [0, 0],
+
+      "spaces" : [ ],
+      "anchors" : [ ]
+    }
+  ],
+
+  "scripts" : [ "/objects/wired/projectiletrap/projectiletrap.lua" ],
+  "scriptDelta" : 2,
+
+  "animation" : "/objects/wired/projectiletrap/projectiletrap.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "shoot" : [ ],
+      "on" : [ ],
+      "off" : [ ]
+    }
+  },
+
+  "soundEffect" : "",
+
+  "inputNodes" : [ [0, 0] ],
+
+  "inactiveLightColor" : [0, 0, 0], // light color to emit when the object is 'off'
+  "activeLightColor" : [0, 0, 0], // light color to emit when the object is 'on'
+
+  "fireTime" : 2, // rate of fire
+  "fireTimeVariance" : 0, // variation in rate of fire
+  "projectile" : "invisibleprojectile", // name of projectile (required)
+  "projectileConfig" : {
+    "power" : 20,
+    "speed" : 80,
+    "bounces" : 0,
+    "timeToLive" : 2,
+    "piercing" : true,
+    "damageType" : "NoDamage",
+    "actionOnReap" : [
+      {
+      "action" : "projectile",
+      "offset" : [0, 0],
+      "type" : "sgdroiddroppod",
+      "inheritDamageFactor" : 1,
+      "angleAdjust" : 0
+      }
+    ]
+  },
+  
+  "health" : 5
+}

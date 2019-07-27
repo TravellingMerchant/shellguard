@@ -1,0 +1,9 @@
+{
+  "name" : "shelldroidheavy-bodyback",
+  "category" : "shelldroidheavyE1",
+  "type" : "bodyback",
+
+  "frames" : {
+    "bodyback" : "shelldroidheavy-bodyback.png"
+  }
+}

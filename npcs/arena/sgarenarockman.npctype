@@ -1,0 +1,103 @@
+{
+  "type" : "sgarenarockman",
+  "baseType" : "hostile",
+
+  "identity" : {
+    "gender" : "male",
+    "race" : "avian"
+  },
+
+  "dropPools" : [ "money" ],
+
+  "scriptConfig" : {
+    "dialog" : {  
+
+      "attack" : {
+        "default" : {
+          "default" : [
+            "I'll rock you!"
+          ]
+        }
+      },
+      "reattack" : {
+        "default" : {
+          "default" : [
+            "RUMBLE TIME"
+          ]
+        }
+      },
+      "killedTarget" : {
+        "default" : {
+          "default" : [
+            "Between a rock and a hard place!"
+          ]
+        }
+      },
+      "lostTarget" : {
+        "default" : {
+          "default" : [
+            "No smash!"
+          ]
+        }
+      },
+      "outOfSight" : {
+        "default" : {
+          "default" : [
+            "Too fast for rock!"
+          ]
+        }
+      },
+      "cheerOn" : {
+        "default" : {
+          "default" : [
+            "SMASH, CRASH, BASH!"
+          ]
+        }
+      },
+      "cantReach" : {
+        "default" : {
+          "default" : [
+            "Come here, I'll CRUSH you!"
+          ]
+        }
+      }
+    },
+    "chatSounds" : {
+      "default" : {
+        "male" : [
+          "/sfx/objects/rock_big_break1.ogg",
+          "/sfx/objects/rock_big_break2.ogg",
+          "/sfx/objects/rock_big_break3.ogg"
+        ]
+      }
+    }
+  },
+
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "rockhead", "parameters" : { "colorIndex" : 14 } } ],
+            "chest" : [ { "name" : "rockchest", "parameters" : { "colorIndex" : 14 } } ],
+            "legs" : [ { "name" : "rocklegs", "parameters" : { "colorIndex" : 14 } } ],
+            "primary" : [ { "name" : "stoneblade" } ]
+          }
+        ] ]
+    ]
+  },
+  
+  "statusControllerSettings" : {    
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 500.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 2.5
+      },
+      "protection" : {
+        "baseValue" : 1.0
+      }
+    }
+  }
+}

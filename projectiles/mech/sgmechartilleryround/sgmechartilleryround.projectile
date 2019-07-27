@@ -1,0 +1,47 @@
+{
+  "projectileName" : "sgmechartilleryround",
+  "image" : "sgmechartilleryround.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 4,
+  "timeToLive" : 15,
+  "physics" : "grenade",
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "movementSettings" : {
+    "gravityMultiplier" : 0.2
+  },
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/sgartilleryboom/sgartilleryboom.config"
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "sgfirecloud"
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "sgshrapnelblast"
+    },
+    {
+      "action" : "sound",
+      "SoundRangeMultiplier" : 40.0,
+      "options" : [ "/sfx/gun/titanboom2.ogg" ]
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 7,
+      "backgroundRadius" : 5,
+      "explosiveDamageAmount" : 10.0,
+      "delaySteps" : 2
+    }
+  ],
+  
+  "emitters" : [ "rocketsmoke" ],
+  "power" : 20,
+  "speed": 100,
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

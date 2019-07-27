@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_stock_spring",
+  "price" : 5000,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/spring.png",
+  "description" : "A recoil-compensating stock. Allows for higher firerate, at the cost of energy.",
+  "shortdescription" : "Spring Stock",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "stock",
+    "id" : "spring"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "itemName" : "shellguardbfg",
+  "price" : 5000,
+  "inventoryIcon" : "shellguardbfg.png",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Fires extremely powerful bolts of electric plasma.",
+  "shortdescription" : "Shellguard Binary Fusion",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","rocketlauncher"],
+  "twoHanded" : true,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "shellguardbfg.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/ranged/unrand/doomcannon/doommuzzleflash.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/Shellelectrobombshoot.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.0, 0.125],
+  "muzzleOffset" : [1.25, 0.375],
+
+  "scripts" : ["/items/active/weapons/ranged/sg_built/gun.lua"],
+
+  "elementalType" : "electric",
+  
+  "build" : [],
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 2.0,
+    "baseDps" : 10,
+    "baseDamageMultiplier" : 0.5,
+    "energyUsage" : 50.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.0,
+    
+    "fireType" : "auto",
+
+    "projectileType" : "sgbulletdisc",
+    "projectileParameters" : {
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -30,
+        "weaponRotation" : 50,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+  
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

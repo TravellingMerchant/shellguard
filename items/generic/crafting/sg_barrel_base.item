@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_base",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/base.png",
+  "description" : "A basic rifle barrel.",
+  "shortdescription" : "Rifle Barrel",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "base"
+  }
+}

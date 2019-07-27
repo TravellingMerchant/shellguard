@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_stock_marksman",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/marksman.png",
+  "description" : "A marksman stock. Allows for higher accuracy, at the cost of firerate.",
+  "shortdescription" : "Marksman Stock",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "stock",
+    "id" : "marksman"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_rapid",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/rapid.png",
+  "description" : "A finned rapid-fire barrel.",
+  "shortdescription" : "Rapid Rifle Barrel",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "rapid"
+  }
+}

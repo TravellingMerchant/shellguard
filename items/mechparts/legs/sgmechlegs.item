@@ -1,0 +1,15 @@
+{
+  "itemName" : "sgmechlegs",
+  "price" : 4480,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "category" : "mechPart",
+  "tooltipKind" : "mechlegs",
+  "builder" : "/items/buildscripts/buildmechpart.lua",
+  "inventoryIcon" : "sgmechlegs.png",
+  "description" : "Heavy duty mech legs that balance speed and thruster power.",
+  "shortdescription" : "SG Mech Legs",
+  "itemTags" : [ ],
+
+  "mechPart" : ["legs", "sgmechlegs"]
+}

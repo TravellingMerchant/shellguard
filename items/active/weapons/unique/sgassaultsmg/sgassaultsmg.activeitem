@@ -1,0 +1,127 @@
+{
+  "itemName" : "sgassaultsmg",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "Blisteringly fast fire rate. Charge to overload the firing systems.",
+  "shortdescription" : "Shellguard Assault SMG",
+  "tooltipKind" : "gun",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","upgradeableWeapon"],
+  "level" : 6,
+
+  "inventoryIcon" : "sgassaultsmgicon.png",
+
+  "animation" : "sgassaultsmg.animation",
+  "animationParts" : {
+    "gun" : "sgassaultsmg.png",
+    "gunfullbright" : "sgassaultsmgfullbright.png",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {},
+  "muzzleOffset" : [2.875, 0.625],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "ice",
+
+  "primaryAbilityType" : "neb-enhancedchargefire",
+  "primaryAbility" : {
+    "name" : "Charged Shot",
+    "scripts" : ["/items/active/weapons/ranged/abilities/neb-enhancedchargefire/neb-enhancedchargefire.lua"],
+    "class" : "NebsEnhancedChargeFire",
+	
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 3,
+        "cooldown" : 0.1,
+        "projectileType" : "sgmicroshot",
+        "projectileParameters" : {},
+        "projectileCount" : 1,
+        "inaccuracy" : 0.02,
+        "baseDamage" : 0.8,
+        "fireType" : "burst",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
+        "burstTime" : 0.05,		//delay between shots in the burst
+        "burstCount" : 10,		//amount of bullets to fire in the burst, must be a integer
+        "fireSound" : "fire"
+	  
+	    //Recoil Stuffs
+	    //"recoilKnockbackVelocity" : 1,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    //"crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
+	    //"crouchRecoilKnockbackVelocity" : 0	//When crouching it uses this instead of recoilKnockbackVelocity
+      },
+      {
+        "time" : 1,
+        "energyCost" : 3,
+        "cooldown" : 0.1,
+        "projectileType" : "sgmicroshot",
+        "projectileParameters" : {},
+        "projectileCount" : 1,
+        "inaccuracy" : 0.04,
+        "baseDamage" : 0.8,
+        "fireType" : "burst",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
+        "burstTime" : 0.025,		//delay between shots in the burst
+        "burstCount" : 40,		//amount of bullets to fire in the burst, must be a integer
+        "fireSound" : "fire"
+	  
+	    //Recoil Stuffs
+	    //"recoilKnockbackVelocity" : 1,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    //"crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
+	    //"crouchRecoilKnockbackVelocity" : 0	//When crouching it uses this instead of recoilKnockbackVelocity
+      }
+    ],
+	//Movement Whilst Charging
+	"walkWhileCharging" : false,		//if false, the player can run normally else if true it just makes the player walk while charging
+	"allowJumping" : true,			//if true allows for jumping while charging if false the player is unable to jump
+	
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 5,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    }
+  },
+  
+  "altAbilityType" : "sglasersight",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgassaultsmgeliteicon.png",
+    "animationParts" : {
+    "gun" : "sgassaultsmgelite.png"
+    },
+    "shortdescription" : "Elite Assault SMG ^yellow;^reset;"
+  }
+}

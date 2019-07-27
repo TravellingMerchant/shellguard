@@ -1,0 +1,86 @@
+{
+  "itemName" : "shellguardclawbase",
+  "price" : 1000,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A specialized tool made to augment the users grip, retrofitted to fire miniature drone shots.",
+  "shortdescription" : "Shellguard Claw Gun",
+  //"tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 6,
+
+  "inventoryIcon" : "shellguardclawbaseicon.png",
+
+  "animation" : "shellguardclawbase.animation",
+  "animationParts" : {
+    "gun" : "shellguardclawbase.png",
+    "gunfullbright" : "shellguardclawbasefullbright.png"
+  },
+  "animationCustom" : {},
+  "muzzleOffset" : [1.875, 0.125],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "handGrip" : "wrap",
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "name" : "Rocket Stack",
+    "scripts" : ["/items/active/weapons/ranged/shellguardweapons/tiered/shellguardclawbase/shellguardRocketStack.lua"],
+    "class" : "shellguardRocketStack",
+
+    "baseDamage" : 2,
+    "energyPerShot" : 12,
+
+    "reloadTime" : 0.3,
+    "maxStack" : 3,
+    "spread" : 0.02,
+
+    "inaccuracy" : 0,
+
+    "projectileType" : "shelllightbullet",
+    "projectileParameters" : {},
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 6,
+        "weaponRotation" : 4,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 6,
+        "weaponRotation" : 4,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

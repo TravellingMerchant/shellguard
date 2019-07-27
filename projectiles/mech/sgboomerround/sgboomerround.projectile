@@ -1,0 +1,42 @@
+{
+  "projectileName" : "sgboomerround",
+  "image" : "sgboomerround.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 4,
+  "timeToLive" : 15,
+  "physics" : "grenade",
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "movementSettings" : {
+    "gravityMultiplier" : 0.2
+  },
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/sgboomerboom/sgboomerboom.config"
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "sgfirecloud"
+    },
+    {
+      "action" : "sound",
+      "SoundRangeMultiplier" : 40.0,
+      "options" : [ "/sfx/gun/titanboom2.ogg" ]
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 2,
+      "backgroundRadius" : 2,
+      "explosiveDamageAmount" : 10.0,
+      "delaySteps" : 2
+    }
+  ],
+  
+  "emitters" : [ "rocketsmoke" ],
+  "power" : 20,
+  "speed": 100,
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

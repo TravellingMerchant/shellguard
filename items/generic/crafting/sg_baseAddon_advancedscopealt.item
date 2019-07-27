@@ -1,0 +1,16 @@
+{
+  "itemName" : "sg_baseAddon_advancedscopealt",
+  "price" : 5000,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/baseAddon/advancedscopealt.png",
+  "description" : "An antique scope which greatly improves accuracy, at the cost of energy.",
+  "shortdescription" : "Antique Scope",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "baseAddon",
+    "id" : "advancedscopealt",
+    "slot" : "alpha"
+  }
+}

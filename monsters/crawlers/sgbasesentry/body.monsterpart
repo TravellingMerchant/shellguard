@@ -1,0 +1,9 @@
+{
+  "name" : "sgbasesentry-body",
+  "category" : "sgbasesentry",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgbasesentry-body.png"
+  }
+}

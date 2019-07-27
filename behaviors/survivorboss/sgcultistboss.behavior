@@ -1,0 +1,528 @@
+{
+  "name": "survivorboss",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/entity.lua",
+    "/scripts/actions/world.lua",
+    "/scripts/actions/status.lua",
+    "/scripts/behavior.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/time.lua"
+  ],
+  "parameters": {
+    "endWaitTime": 4
+  },
+  "root": {
+    "title": "Reset",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "faceDirection",
+        "type": "action",
+        "name": "faceDirection",
+        "parameters": {
+          "direction": {"value": -1}
+        }
+      },
+      {
+        "title": "setDying",
+        "type": "action",
+        "name": "setDying",
+        "parameters": {
+          "shouldDie": {"value": false}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "monster-targeting",
+            "type": "module",
+            "name": "monster-targeting",
+            "parameters": {
+              "targetQueryRange": {"value": 100},
+              "keepTargetInRange": {"value": 100},
+              "targetEntityTypes": {"value": ["player"]},
+              "keepTargetInSight": {"value": false},
+              "queryTargets": {"value": true},
+              "targetOnDamage": {"value": true},
+              "targetOutOfSightTime": {"value": 1}
+            }
+          },
+          {
+            "title": "Spiderboss",
+            "type": "composite",
+            "name": "dynamic",
+            "parameters": {},
+            "children": [
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": 1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "entityExists",
+                    "type": "action",
+                    "name": "entityExists",
+                    "parameters": {
+                      "entity": {"key": "target"}
+                    }
+                  },
+                  {
+                    "title": "resourcePercentage",
+                    "type": "action",
+                    "name": "resourcePercentage",
+                    "parameters": {
+                      "percentage": {"value": 0},
+                      "resource": {"value": "health"}
+                    }
+                  },
+                  {
+                    "title": "selector",
+                    "type": "composite",
+                    "name": "selector",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "hasFlag",
+                        "type": "action",
+                        "name": "hasFlag",
+                        "parameters": {
+                          "name": {"key": "exhausted"}
+                        }
+                      },
+                      {
+                        "title": "addEphemeralEffect",
+                        "type": "action",
+                        "name": "addEphemeralEffect",
+                        "parameters": {
+                          "duration": {"value": 10},
+                          "name": {"value": "cultistshield"}
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Reset",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "setFlag",
+                        "type": "action",
+                        "name": "setFlag",
+                        "parameters": {
+                          "name": {"value": "intro"}
+                        }
+                      },
+                      {
+                        "title": "sequentialdialognoskip",
+                        "type": "module",
+                        "name": "sequentialdialognoskip",
+                        "parameters": {
+                          "dialogWaitTime": {"value": 4},
+                          "dialogEndWait": {"value": 4},
+                          "dialogKey": {"value": "dialog.intro"},
+                          "dialogTarget": {"key": "target"}
+                        }
+                      },
+                      {
+                        "title": "setDamageBar",
+                        "type": "action",
+                        "name": "setDamageBar",
+                        "parameters": {
+                          "type": {"value": "Special"}
+                        }
+                      },
+                      {
+                        "title": "battleMusic",
+                        "type": "action",
+                        "name": "battleMusic",
+                        "parameters": {
+                          "enable": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "sequentialdialognoskip",
+                        "type": "module",
+                        "name": "sequentialdialognoskip",
+                        "parameters": {
+                          "dialogWaitTime": {"value": 0},
+                          "dialogEndWait": {"value": 0},
+                          "dialogKey": {"value": "dialog.start"},
+                          "dialogTarget": {"key": "target"}
+                        }
+                      },
+                      {
+                        "title": "setAggressive",
+                        "type": "action",
+                        "name": "setAggressive",
+                        "parameters": {
+                          "aggressive": {"value": true}
+                        }
+                      },
+                      {
+                        "title": "repeater",
+                        "type": "decorator",
+                        "name": "repeater",
+                        "parameters": {
+                          "maxLoops": {"value": -1},
+                          "untilSuccess": {"value": false}
+                        },
+                        "child": {
+                          "title": "Reset",
+                          "type": "composite",
+                          "name": "sequence",
+                          "parameters": {},
+                          "children": [
+                            {
+                              "title": "halt",
+                              "type": "action",
+                              "name": "halt",
+                              "parameters": {}
+                            },
+                            {
+                              "title": "survivorboss-flyingslash",
+                              "type": "module",
+                              "name": "survivorboss-flyingslash",
+                              "parameters": {
+                                "projectileAngleStep": {"value": 0.14},
+                                "projectileCount": {"value": 4}
+                              }
+                            },
+                            {
+                              "title": "unsetFlag",
+                              "type": "action",
+                              "name": "unsetFlag",
+                              "parameters": {
+                                "name": {"value": "intro"}
+                              }
+                            },
+                            {
+                              "title": "Reset",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "survivorboss-dashattack",
+                                  "type": "module",
+                                  "name": "survivorboss-dashattack",
+                                  "parameters": {
+                                    "dashSpeed": {"value": 75},
+                                    "dashTime": {"value": 0.43},
+                                    "teleportPosition": {"value": "cultistupperdashposition"}
+                                  }
+                                },
+                                {
+                                  "title": "survivorboss-dashattack",
+                                  "type": "module",
+                                  "name": "survivorboss-dashattack",
+                                  "parameters": {
+                                    "dashSpeed": {"value": 75},
+                                    "dashTime": {"value": 0.8},
+                                    "teleportPosition": {"value": "cultistlowerdashposition"}
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "title": "survivorboss-slash",
+                              "type": "module",
+                              "name": "survivorboss-slash",
+                              "parameters": {
+                                "idleTime": {"value": 0.5}
+                              }
+                            },
+                            {
+                              "title": "Reset",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "survivorboss-dashattack",
+                                  "type": "module",
+                                  "name": "survivorboss-dashattack",
+                                  "parameters": {
+                                    "dashSpeed": {"value": 75},
+                                    "dashTime": {"value": 0.43},
+                                    "teleportPosition": {"value": "cultistupperdashposition"}
+                                  }
+                                },
+                                {
+                                  "title": "survivorboss-dashattack",
+                                  "type": "module",
+                                  "name": "survivorboss-dashattack",
+                                  "parameters": {
+                                    "dashSpeed": {"value": 75},
+                                    "dashTime": {"value": 0.8},
+                                    "teleportPosition": {"value": "cultistlowerdashposition"}
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "title": "survivorboss-flyingslash",
+                              "type": "module",
+                              "name": "survivorboss-flyingslash",
+                              "parameters": {
+                                "projectileAngleStep": {"value": 0.14},
+                                "projectileCount": {"value": 6}
+                              }
+                            },
+                            {
+                              "title": "survivorboss-sphereattack",
+                              "type": "module",
+                              "name": "survivorboss-sphereattack",
+                              "parameters": {}
+                            },
+                            {
+                              "title": "survivorboss-exhaust",
+                              "type": "module",
+                              "name": "survivorboss-exhaust",
+                              "parameters": {}
+                            },
+                            {
+                              "title": "survivorboss-beamattack",
+                              "type": "module",
+                              "name": "survivorboss-beamattack",
+                              "parameters": {
+                                "teleportPosition": {"value": "cultistbeamposition"}
+                              }
+                            },
+                            {
+                              "title": "survivorboss-slash",
+                              "type": "module",
+                              "name": "survivorboss-slash",
+                              "parameters": {
+                                "idleTime": {"value": 0.5}
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Reset",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "inverter",
+                    "type": "decorator",
+                    "name": "inverter",
+                    "parameters": {},
+                    "child": {
+                      "title": "resourcePercentage",
+                      "type": "action",
+                      "name": "resourcePercentage",
+                      "parameters": {
+                        "percentage": {"value": 0},
+                        "resource": {"value": "health"}
+                      }
+                    }
+                  },
+                  {
+                    "title": "setAnimationState",
+                    "type": "action",
+                    "name": "setAnimationState",
+                    "parameters": {
+                      "state": {"value": "idle"},
+                      "type": {"value": "body"}
+                    }
+                  },
+                  {
+                    "title": "battleMusic",
+                    "type": "action",
+                    "name": "battleMusic",
+                    "parameters": {
+                      "enable": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "sequentialdialognoskip",
+                    "type": "module",
+                    "name": "sequentialdialognoskip",
+                    "parameters": {
+                      "dialogWaitTime": {"value": 4},
+                      "dialogEndWait": {"key": "<endWaitTime>"},
+                      "dialogKey": {"value": "dialog.death"},
+                      "dialogTarget": {"key": "target"}
+                    }
+                  },
+                  {
+                    "title": "addEphemeralEffect",
+                    "type": "action",
+                    "name": "addEphemeralEffect",
+                    "parameters": {
+                      "name": {"value": "beamout"}
+                    }
+                  },
+                  {
+                    "title": "timer",
+                    "type": "action",
+                    "name": "timer",
+                    "parameters": {
+                      "time": {"value": 0.75}
+                    }
+                  },
+                  {
+                    "title": "setDying",
+                    "type": "action",
+                    "name": "setDying",
+                    "parameters": {
+                      "shouldDie": {"value": true}
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Reset",
+                "type": "composite",
+                "name": "sequence",
+                "parameters": {},
+                "children": [
+                  {
+                    "title": "setResourcePercentage",
+                    "type": "action",
+                    "name": "setResourcePercentage",
+                    "parameters": {
+                      "percentage": {"value": 1},
+                      "resource": {"value": "health"}
+                    }
+                  },
+                  {
+                    "title": "setDamageBar",
+                    "type": "action",
+                    "name": "setDamageBar",
+                    "parameters": {
+                      "type": {"value": "None"}
+                    }
+                  },
+                  {
+                    "title": "setAggressive",
+                    "type": "action",
+                    "name": "setAggressive",
+                    "parameters": {
+                      "aggressive": {"value": false}
+                    }
+                  },
+                  {
+                    "title": "sequence",
+                    "type": "composite",
+                    "name": "sequence",
+                    "parameters": {},
+                    "children": [
+                      {
+                        "title": "setAnimationState",
+                        "type": "action",
+                        "name": "setAnimationState",
+                        "parameters": {
+                          "state": {"value": "beamout"},
+                          "type": {"value": "body"}
+                        }
+                      },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 0.9}
+                        }
+                      },
+                      {
+                        "title": "setPosition",
+                        "type": "action",
+                        "name": "setPosition",
+                        "parameters": {
+                          "footPosition": {"value": false},
+                          "position": {"key": "spawn"}
+                        }
+                      },
+                      {
+                        "title": "faceDirection",
+                        "type": "action",
+                        "name": "faceDirection",
+                        "parameters": {
+                          "direction": {"value": -1}
+                        }
+                      },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 0.1}
+                        }
+                      },
+                      {
+                        "title": "setAnimationState",
+                        "type": "action",
+                        "name": "setAnimationState",
+                        "parameters": {
+                          "state": {"value": "beamin"},
+                          "type": {"value": "body"}
+                        }
+                      },
+                      {
+                        "title": "battleMusic",
+                        "type": "action",
+                        "name": "battleMusic",
+                        "parameters": {
+                          "enable": {"value": false}
+                        }
+                      },
+                      {
+                        "title": "timer",
+                        "type": "action",
+                        "name": "timer",
+                        "parameters": {
+                          "time": {"value": 0.6}
+                        }
+                      },
+                      {
+                        "title": "setAnimationState",
+                        "type": "action",
+                        "name": "setAnimationState",
+                        "parameters": {
+                          "state": {"value": "intro"},
+                          "type": {"value": "body"}
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "runner",
+                    "type": "action",
+                    "name": "runner",
+                    "parameters": {}
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

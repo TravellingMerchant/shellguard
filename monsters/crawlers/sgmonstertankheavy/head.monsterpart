@@ -1,0 +1,9 @@
+{
+  "name" : "sgmonstertankheavy-head",
+  "category" : "sgmonstertankheavy",
+  "type" : "head",
+
+  "frames" : {
+    "head" : "sgmonstertankheavy-head.png"
+  }
+}

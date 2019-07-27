@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_underbarrelAddon_coolingjacket",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/underbarrelAddon/coolingjacket.png",
+  "description" : "A cooling jacket that provides a damage and fire rate boost.",
+  "shortdescription" : "Cooling Jacket",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "underbarrelAddon",
+    "id" : "coolingjacket"
+  }
+}

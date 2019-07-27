@@ -1,0 +1,27 @@
+{
+  "projectileName" : "sgamshotincen",
+  "image" : "sgamshotincen.png",
+  "animationCycle" : 0.1,
+  "animationLoops" : false,
+  "windupFrames" : 2,
+  "timeToLive" : 10,
+  "frameNumber" : 3,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [125, 100, 60],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgfirebomb",
+      "inheritDamageFactor" : 0.1
+    }
+  ],
+  "power" : 5.0,
+  "speed" : 150,
+  "damageKind" : "default"
+}

@@ -1,0 +1,63 @@
+{
+  "projectileName" : "sghardlightshield",
+  "physics" : "default",
+  "timeToLive" : 0.1,
+  "flippable" : true,
+  "image" : "sghardlightshield.png",
+  "animationCycle" : 0.1,
+  "frameNumber" : 1,
+  "periodicActions" : [
+    {
+      "time" : 4.8,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/tech/vehicle_disappear2.ogg" ]
+    }
+  ],
+  "actionOnReap" : [],
+  "speed" : 0,
+  "power" : 0,
+
+  "onlyHitTerrain" : true,
+
+  "physicsCollisions" : {
+    "piece1" : {
+      "collision" : [ [-5.0, -2.5], [-5.0, 2.5] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop", "projectile"]
+    },
+    "piece2" : {
+      "collision" : [ [-5.0, 2.5], [-2.5, 5.0] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop", "projectile"]
+    },
+    "piece3" : {
+      "collision" : [ [-2.5, 5.0], [2.5, 5.0] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop", "projectile"]
+    },
+    "piece4" : {
+      "collision" : [ [2.5, 5.0], [5, 2.5] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop", "projectile"]
+    },
+    "piece5" : {
+      "collision" : [ [5.0, 2.5], [5.0, -2.5] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop", "projectile"]
+    }
+  },
+
+  "renderLayer" : "ItemDrop+1",
+  "orientationLocked" : false,
+  "fullbright" : true,
+  "emitters" : [ ],
+  "lightColor" : [110, 60, 130],
+
+  "piercing" : true,
+  "bounces" : -1,
+
+  "scripts" : [ "/projectiles/activeitems/staff/staffprojectile.lua" ],
+
+  "persistentAudio" : "/sfx/projectiles/sghardlightshield_loop.ogg"
+}

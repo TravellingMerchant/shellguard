@@ -1,0 +1,9 @@
+{
+  "name" : "shottop-hand",
+  "category" : "shottop",
+  "type" : "hand",
+
+  "frames" : {
+    "hand" : "shottop-hand.png"
+  }
+}

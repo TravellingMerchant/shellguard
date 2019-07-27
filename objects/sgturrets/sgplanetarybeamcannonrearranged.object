@@ -1,0 +1,222 @@
+{
+  "objectName" : "sgplanetarybeamcannonrearranged",
+  "colonyTags" : ["wired","combat"],
+  "printable" : false,
+  "rarity" : "Common",
+  "objectType" : "container",
+  "price" : 35000,
+  
+  "description" : "A superheavy turret designed to eliminate ships. Limited firing angle. Will only shoot powerful enemies. Reusable.",
+  "shortdescription" : "Heavy Beam Cannon",
+  "subtitle" : "Automatic Defense",
+  "race" : "generic",
+  "category" : "wire",
+
+  "apexDescription" : "I feel static in the air!",
+  "avianDescription" : "I feel static in the air!",
+  "floranDescription" : "I feel sssssstatic in the air!",
+  "glitchDescription" : "Cautious. I feel static in the air!",
+  "humanDescription" : "I feel static in the air!",
+  "hylotlDescription" : "I feel static in the air!",
+  "novakidDescription" : "I feel static in the air!",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imagePosition" : [-8, 0],
+      "imageLayers" : [ { "image" : "ministand.png" }, { "image" : "planetarybeamcannonrearranged.png:dead", "position": [14.5, 7.5] } ],
+      "spaces" : [
+        [-1,  0], [0,  0], [1,  0],
+        [-1,  1], [0,  1], [1,  1],
+        [-1,  2], [0,  2], [1,  2]
+      ],
+      "anchors" : [ "bottom" ],
+      
+      "direction" : "left",
+      "flipImages" : true,
+      
+      "animationParts" : {
+        "gun" : "planetarybeamcannonrearranged.png",
+        "base" : "ministand.png",
+        "energy" : "energy.png"
+      },
+      "animationPosition" : [4, 20],
+      "animationCenterLine" : 0,
+
+      "baseOffset" : [0.5, 2.5],
+      "energyBarOffset" : [0.375, -2.0],
+      "verticalScaling" : false
+    },
+    {
+      "imagePosition" : [-8, 0],
+      "imageLayers" : [ { "image" : "ministand.png" }, { "image" : "planetarybeamcannonrearranged.png:dead", "position": [-14.5, 7.5] } ],
+      "spaces" : [
+        [-1,  0], [0,  0], [1,  0],
+        [-1,  1], [0,  1], [1,  1],
+        [-1,  2], [0,  2], [1,  2]
+      ],
+      "anchors" : [ "bottom" ],
+      
+      "direction" : "right",
+      
+      "animationParts" : {
+        "gun" : "planetarybeamcannonrearranged.png",
+        "base" : "ministand.png",
+        "energy" : "energy.png"
+      },
+      "animationPosition" : [4, 20],
+      "animationCenterLine" : 0,
+
+      "baseOffset" : [0.5, 2.5],
+      "energyBarOffset" : [0.375, -2.0],
+      "verticalScaling" : false
+    }
+  ],
+
+  "objectWidth" : 2,
+
+  "animation" : "gvturret.animation",
+  "animationCustom" : {
+    "animatedParts" : {
+      "parts" : {
+        "gun" : {
+          "properties" : {
+            "projectileSource" : [2, 0]
+          }
+        }
+      }
+    },
+    "sounds" : {
+      "powerUp" : ["/sfx/objects/camera_alert_off.ogg"],
+      "powerDown" : ["/sfx/tech/mech_powerdown.ogg"],
+      "foundTarget" : ["/sfx/interface/stationtransponder_name.ogg"],
+      "scan" : [ ],
+      "charge" : [ "/sfx/tech/tech_rocketjump_charge2.ogg" ],
+      "fire" : ["/sfx/turret/sglaserartillery1.ogg", "/sfx/turret/sglaserartillery2.ogg"]
+    },
+    "rotationGroups" : {
+      "gun" : {
+        "angularVelocity" : 1
+      }
+    }
+  },
+
+  "scripts" : [
+    "/objects/sgturrets/gvturret.lua",
+    "/objects/sgturrets/gvsuperheavybeamfire.lua",
+    
+    "/scripts/npcToyObject.lua",
+    "/scripts/stateMachine.lua",
+    "/scripts/util.lua",
+    "/scripts/vec2.lua"
+  ],
+  "animationScripts" : [ "/objects/sgturrets/gvturretbeamrenderer.lua" ],
+
+  "damageTeam" : {
+    "type" : "assistant"
+  },
+
+  "scriptDelta" : 1,
+
+  "outputNodes" : [ [0, 0] ],
+  "inputNodes" : [ [0, 1] ],
+  
+  "animateShutdown" : false,
+  "offAngle" : -15,
+
+  "scanInterval" : 32,
+  "scanCooldown" : 0.5,
+  "scanAngle" : 0,
+  "scanBaseAngle" : 0,
+  "scanTime" : 0.5,
+
+  "targetQueryRange" : 128,
+  "targetMinRange" : 8,
+  "targetMaxRange" : 128,
+  "targetAngleRange" : 40,
+  "minHP" : 50,
+
+  "maxFireAngle" : 0.25,
+  "energyUsage" : 100,
+  "power" : 30,
+  "fireTime" : 4,
+  "inaccuracy" : 0.0,
+  "chargeTime" : 0.5,
+  "maxBeamLength" : 128,
+  "smartTracking" : false,
+  
+  "damageSource" : {
+    "teamType" : "assistant",
+    "damageSourceKind" : "electric",
+    "damageType" : "ignoresDef",
+    "knockback" : 0
+  },
+  
+  "beamWidth" : 3,
+  "beamWidthOffset" : 0.375,
+  "beamImages" : {
+    "first" : "/objects/sgturrets/heavybeam.png:m.f",
+    "body" : "/objects/sgturrets/heavybeam.png:m.b",
+    "last" : "/objects/sgturrets/heavybeam.png:m.l"
+  },
+  "beamStreamImages" : {
+    "top" : {
+      "first" : "/objects/sgturrets/heavybeam.png:t.f",
+      "body" : "/objects/sgturrets/heavybeam.png:t.b",
+      "last" : "/objects/sgturrets/heavybeam.png:t.l"
+    },
+    "middle" : {
+      "first" : "/objects/sgturrets/heavybeam.png:m.f",
+      "body" : "/objects/sgturrets/heavybeam.png:m.b",
+      "last" : "/objects/sgturrets/heavybeam.png:m.l"
+    },
+    "bottom" : {
+      "first" : "/objects/sgturrets/heavybeam.png:b.f",
+      "body" : "/objects/sgturrets/heavybeam.png:b.b",
+      "last" : "/objects/sgturrets/heavybeam.png:b.l"
+    },
+    "topWeak" : {
+      "first" : "/objects/sgturrets/heavybeamweak.png:t.f",
+      "body" : "/objects/sgturrets/heavybeamweak.png:t.b",
+      "last" : "/objects/sgturrets/heavybeamweak.png:t.l"
+    },
+    "middleWeak" : {
+      "first" : "/objects/sgturrets/heavybeamweak.png:m.f",
+      "body" : "/objects/sgturrets/heavybeamweak.png:m.b",
+      "last" : "/objects/sgturrets/heavybeamweak.png:m.l"
+    },
+    "bottomWeak" : {
+      "first" : "/objects/sgturrets/heavybeamweak.png:b.f",
+      "body" : "/objects/sgturrets/heavybeamweak.png:b.b",
+      "last" : "/objects/sgturrets/heavybeamweak.png:b.l"
+    }
+  },
+  "beamDirection" : [1, 0],
+  "beamZlevel" : "Object-1",
+  
+  "maxEnergy" : 100,
+  "energyRegen" : 25,
+  "energyRegenBlock" : 0.0,
+  "energyBarSize" : 5,
+
+  "slotCount" : 0,
+  "uiConfig" : "/interface/turret/standingturret.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600,
+
+  "npcToy" : {
+    "influence" : [
+      "turret"
+    ],
+    "defaultReactions" : {
+      "turret" : [
+        [1.0, "pressbutton"],
+        [1.0, "oh"],
+        [1.0, "laugh"]
+      ]
+    },
+    "preciseStandPositionLeft" : [-1.0, 0.0],
+    "preciseStandPositionRight" : [1.0, 0.0],
+    "maxNpcs" : 1
+  }
+}

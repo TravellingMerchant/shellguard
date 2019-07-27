@@ -1,0 +1,26 @@
+{
+  "objectName" : "sgmanufacturer",
+  "colonyTags" : ["misc"],
+  "rarity" : "Common",
+  "description" : "A manufacturer.",
+  "shortdescription" : "dis bitch empty, yeet",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 60,
+  "printable" : false,
+  "scannable" : false,
+
+  "inventoryIcon" : "sgmanufacturer.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgmanufacturer.png",
+      "imageLayers" : [ { "image" : "sgmanufacturer.png", "fullbright" : true }, { "image" : "sgmanufacturerlit.png" } ],
+      
+      "imagePosition" : [-32, -24],
+      "frames" : 1,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

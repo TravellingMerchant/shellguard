@@ -1,0 +1,59 @@
+{
+  "projectileName" : "sgicecube",
+  "physics" : "default",
+  "timeToLive" : 5,
+  "image" : "sgicecube.png",
+  "animationCycle" : 0.1,
+  "frameNumber" : 3,
+  "windupFrames" : 3,
+  "winddownFrames" : 3,
+  "periodicActions" : [
+    {
+      "time" : 4.8,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/tech/vehicle_disappear2.ogg" ]
+    }
+  ],
+  "actionOnReap" : [],
+  "speed" : 0,
+  "power" : 0,
+
+  "onlyHitTerrain" : true,
+
+  "physicsCollisions" : {
+    "piece1" : {
+      "collision" : [ [-1.0, 0], [0, 1.0] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop", "projectile"]
+    },
+    "piece2" : {
+      "collision" : [ [0, 1.0], [1.0, 0] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop", "projectile"]
+    },
+    "piece3" : {
+      "collision" : [ [1.0, 0], [0, -1.0] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop", "projectile"]
+    },
+    "piece4" : {
+      "collision" : [ [0, -1.0], [-1.0, 0] ],
+      "collisionKind" : "slippery",
+      "categoryWhitelist" : ["monster", "player", "npc", "vehicle", "itemdrop", "projectile"]
+    }
+  },
+
+  "renderLayer" : "ItemDrop+1",
+  "orientationLocked" : true,
+  "fullbright" : true,
+  "emitters" : [ ],
+  "lightColor" : [110, 60, 130],
+
+  "piercing" : true,
+  "bounces" : -1,
+
+  "scripts" : [ "/projectiles/activeitems/staff/staffprojectile.lua" ],
+
+  "persistentAudio" : "/sfx/melee/elemental_aura_ice.ogg"
+}

@@ -1,0 +1,672 @@
+{
+  "globalTagDefaults" : {
+    "facing" : ""
+  },
+  "animatedParts" : {
+    "stateTypes" : {
+      "movement" : {
+        "default" : "idle",
+        "states" : {
+          "warpIn" : {
+            "frames" : 6,  
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+
+          "warpOut" : {
+            "frames" : 6,  
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "warpOutEnd"
+           },
+
+          "warpOutEnd" : { },
+
+          "idle" : { },
+
+          "jump" : {
+            "frames" : 1,
+            "cycle" : 0.5,
+            "mode" : "end"
+          },
+
+          "fall" : {
+            "frames" : 1,
+            "cycle" : 0.5,
+            "mode" : "end"
+          },
+
+          "walk" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "frameProperties" : {
+              "immediateSound" : [ "/sfx/tech/mech_step.ogg", "", "", "" ]
+            }
+          },
+
+          "backWalk" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "frameProperties" : {
+              "immediateSound" : [ "", "", "","/sfx/tech/mech_step.ogg" ]
+            }
+          }
+        }
+      },
+
+      "frontFiring" : {
+        "default" : "off",
+
+        "states" : {
+          "fire" : {
+            "frames" : 3,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "idle",
+            "frameProperties" : {
+              "immediateSound" : [ "/sfx/gun/mech_gun2.ogg","/sfx/gun/mech_gun2.ogg","/sfx/gun/mech_gun2.ogg" ]
+            }
+          },
+          "idle" : { },
+          "off" : { }
+        }
+      },
+
+      "rearFiring" : {
+        "default" : "off",
+
+        "states" : {
+          "fire" : {
+            "frames" : 10,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "off",
+            "frameProperties" : {
+              "immediateSound" : ["/sfx/gun/tankshot.ogg"]
+            }
+          },
+          "off" : { }
+        }
+      },
+
+      "hatch" : {
+        "default" : "off",
+        "states" : {
+          "off" : { },
+          "open" : {
+            "frames" : 1,
+            "cycle" : 0.25,
+            "mode" : "end"
+          },
+
+          "closed" : {
+            "frames" : 1,
+            "cycle" : 0.25,
+            "mode" : "end"
+          }
+        }
+      }
+    },
+// /////////////////////////////////////////////////////////////////////////////////////////////
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 3,
+          "transformationGroups" : ["flip","rotation"],
+          "sitPosition1" : [0.5, -0.625]
+        },
+
+        "partStates" : {
+          "movement" : {
+            "warpIn" : {
+              "properties" : {
+              }
+            },
+            "warpOut" : {
+              "properties" : {
+              }
+            },
+            "warpOutEnd" : {
+              "properties" : {}
+            },
+
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "jump" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              },
+              "frameProperties" : {
+                "offset" : [ [0, 0], [0, 0], [0, 0], [0, 0] ]
+              }
+            },
+            "fall" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              },
+              "frameProperties" : {
+                "offset" : [ [0, 0], [0, 0], [0, 0], [0, 0] ]
+              }
+            },
+            "walk" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              },
+              "frameProperties" : {
+                "offset" : [ [0, 0], [0, 0.0625], [0, 0], [0, -0.0625] ]
+              }
+            },
+            "backWalk" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              },
+              "frameProperties" : {
+                "offset" : [ [0, 0], [0, -0.0625], [0, 0], [0, 0.0625] ]
+              }
+            }
+          }
+        }
+      },
+
+      "backLeg" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : -2,
+          "transformationGroups" : ["flip","rotation"]
+        },
+
+        "partStates" : {
+          "movement" : {
+            "warpIn" : {
+              "properties" : {}
+            },
+            "warpOut" : {
+              "properties" : {}
+            },
+            "warpOutEnd" : {
+              "properties" : {}
+            },
+
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "jump" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              },
+              "frameProperties" : {
+                "offset" : [ [0, 0] ]
+              }
+            },
+            "fall" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              },
+              "frameProperties" : {
+                "offset" : [ [0, 0] ]
+              }
+            },
+            "walk" : {
+              "properties" : {
+                "image" : "<partImage>:move.<frame>"
+              }
+            },
+            "backWalk" : {
+              "properties" : {
+                "image" : "<partImage>:bmove.<frame>"
+              }
+            }
+          }
+        }
+      },
+
+      "background" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : -1,
+          "transformationGroups" : ["turret","rotation"],
+          "anchorPart" : "body"
+        },
+
+        "partStates" : {
+          "movement" : {
+            "warpIn" : {
+              "properties" : {}
+            },
+            "warpOut" : {
+              "properties" : {}
+            },
+            "warpOutEnd" : {
+              "properties" : {}
+            },
+
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "jump" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "fall" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "walk" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "backWalk" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            }
+          }
+        }
+      },
+
+      "foreground" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 3,
+          "transformationGroups" : ["turret","rotation"],
+          "anchorPart" : "body",
+          "sitPosition" : [-2.5, 2.625]
+        },
+
+        "partStates" : {
+          "movement" : {
+            "warpIn" : {
+              "properties" : {}
+            },
+            "warpOut" : {
+              "properties" : {}
+            },
+            "warpOutEnd" : {
+              "properties" : {}
+            },
+
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage><facing>.png:idle"
+              }
+            },
+            "jump" : {
+              "properties" : {
+                "image" : "<partImage><facing>.png:idle"
+              }
+            },
+            "fall" : {
+              "properties" : {
+                "image" : "<partImage><facing>.png:idle"
+              }
+            },
+            "walk" : {
+              "properties" : {
+                "image" : "<partImage><facing>.png:idle"
+              }
+            },
+            "backWalk" : {
+              "properties" : {
+                "image" : "<partImage><facing>.png:idle"
+              }
+            }
+          }
+        }
+      },
+
+      "backGun" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 1,
+          "rotationGroup" : "guns",
+          "offset" : [0, 0.5],
+          "rotationCenter" : [0, 1.0],
+          "firePoint" : [5.0, 1.0],
+          "transformationGroups" : ["turret","rotation"],
+          "anchorPart" : "body"
+        },
+
+        "partStates" : {
+          "movement" : {
+            "warpIn" : {
+              "properties" : {}
+            },
+            "warpOut" : {
+              "properties" : {}
+            },
+            "warpOutEnd" : {
+              "properties" : {}
+            },
+
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:rotation"
+              }
+            },
+            "jump" : {
+              "properties" : {
+                "image" : "<partImage>:rotation"
+              }
+            },
+            "fall" : {
+              "properties" : {
+                "image" : "<partImage>:rotation"
+              }
+            },
+            "walk" : {
+              "properties" : {
+                "image" : "<partImage>:rotation"
+              }
+            },
+            "backWalk" : {
+              "properties" : {
+                "image" : "<partImage>:rotation"
+              }
+            }
+          }
+        }
+      },
+
+      "backGunFire" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 2.5,
+          "offset" : [8.25, 1.875],
+          "rotationGroup" : "guns",
+          "rotationCenter" : [0, 0],
+          "transformationGroups" : ["turret","rotation"],
+          "anchorPart" : "body"
+        },
+
+        "partStates" : {
+          "rearFiring" : {
+            "off" : {},
+            "idle" : {},
+            "fire" : {
+              "properties" : {
+                "image" : "/vehicles/tanks/tankmuzzleflash.png:<frameIndex>"
+              }
+            }
+          }
+        }
+      },
+
+      "frontGunFire" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 5.5,
+          "offset" : [3.25, 3.5],
+          "rotationGroup" : "guns",
+          "rotationCenter" : [0, 3.25],
+          "transformationGroups" : ["turret","rotation"],
+          "anchorPart" : "body"
+        },
+
+        "partStates" : {
+          "frontFiring" : {
+            "off" : {},
+            "idle" : {},
+            "fire" : {
+              "properties" : {
+                "image" : "/vehicles/tanks/bulletmuzzle1.png:<frameIndex>"
+              }
+            }
+          }
+        }
+      },
+      
+      "frontGunBoxBack" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 4.9,
+          "offset" : [0, 2.9375],
+          "transformationGroups" : ["turret","rotation"],
+          "anchorPart" : "body"
+        },
+
+        "partStates" : {
+          "frontFiring" : {
+            "off" : {},
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            }
+          }
+        }
+      },
+
+      "frontGunBoxFore" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 5.1,
+          "offset" : [0, 2.9375],
+          "transformationGroups" : ["turret","rotation"],
+          "anchorPart" : "body"
+        },
+
+        "partStates" : {
+          "frontFiring" : {
+            "off" : {},
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            }
+          }
+        }
+      },
+
+      "frontGunBoxAmmo" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 5.1,
+          "offset" : [0, 2.9375],
+          "transformationGroups" : ["turret","rotation"],
+          "anchorPart" : "body"
+        },
+
+        "partStates" : {
+          "frontFiring" : {
+            "off" : {},
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            }
+          }
+        }
+      },
+
+      "frontGun" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 5,
+          "rotationGroup" : "guns",
+          "rotationCenter" : [0, 3.25],
+          "offset" : [1.25, 3.25],
+          "firePoint" : [3.25, 0.25],
+          "transformationGroups" : ["turret","rotation"],
+          "anchorPart" : "body"
+        },
+
+        "partStates" : {
+          "frontFiring" : {
+            "off" : {},
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:fire.<frame>"
+              }
+            },
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:rotation"
+              }
+            }
+            
+          }
+        }
+      },
+
+      "frontLeg" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 4,
+          "transformationGroups" : ["flip","rotation"]
+        },
+
+        "partStates" : {
+          "movement" : {
+            "warpIn" : {
+              "properties" : {}
+            },
+            "warpOut" : {
+              "properties" : {}
+            },
+            "warpOutEnd" : {
+              "properties" : {}
+            },
+
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "jump" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              },
+              "frameProperties" : {
+                "offset" : [ [0, 0] ]
+              }
+            },
+            "fall" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              },
+              "frameProperties" : {
+                "offset" : [ [0, 0] ]
+              }
+            },
+            "walk" : {
+              "properties" : {
+                "image" : "<partImage>:move.<frame>"
+              }
+            },
+            "backWalk" : {
+              "properties" : {
+                "image" : "<partImage>:bmove.<frame>"
+              }
+            }
+          }
+        }
+      },
+
+      "warp" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 9,
+          "transformationGroups" : ["flip","rotation"]
+        },
+
+        "partStates" : {
+          "movement" : {
+            "warpIn" : {
+              "properties" : {
+                "image" : "<partImage>:warpIn.<frame>"
+              }
+            },
+            "warpOut" : {
+              "properties" : {
+                "image" : "<partImage>:warpOut.<frame>"
+              }
+            },
+            "warpOutEnd" : {
+              "properties" : {}
+            },
+
+            "idle" : {},
+            "jump" : {},
+            "fall" : {},
+            "walk" : {},
+            "backWalk" : {}
+          }
+        }
+      },
+      
+      "hatch" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : -1,
+          "transformationGroups" : ["turret","rotation"],
+          "anchorPart" : "body"
+        },
+        "partStates" : {
+          "hatch" : {
+            "off" : {},
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:open"
+              },
+              "frameProperties" : {
+                "offset" : [ [-3.25, 3.375] ]
+              }
+            },
+            "closed" : {
+              "properties" : {
+                "image" : "<partImage>:closed"
+              },
+              "frameProperties" : {
+                "offset" : [ [-2.75, 3.375] ]
+              }
+            }
+          }
+        }
+      }
+      
+    }
+  },
+
+  "transformationGroups" : {
+    "rotation" : {
+      "interpolated" : true
+    },
+    "flip" : {},
+    "turret" : {}
+  },
+  
+  "rotationGroups" : {
+    "guns" : {
+      "angularVelocity" : 10.0
+    }
+  }
+}

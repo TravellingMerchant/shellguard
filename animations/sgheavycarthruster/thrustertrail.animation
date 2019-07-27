@@ -1,0 +1,8 @@
+{
+  "frames" : "thrustertrail.png",
+  "variants" : 1,
+  "frameNumber" : 1,
+  "fullbright" : true,
+  
+  "offset" : [0, 0]
+}

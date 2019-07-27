@@ -1,0 +1,235 @@
+{
+  "name": "survivorboss-dashattack",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/position.lua",
+    "/scripts/behavior/bdata.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/time.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/math.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/sensor.lua"
+  ],
+  "parameters": {
+    "dashSpeed": 100,
+    "dashTime": 0.65,
+    "beaminTime": 0.5,
+    "teleportPosition": "cultistdashposition",
+    "dashControlForce": 5000
+  },
+  "root": {
+    "title": "Reset",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "survivorboss-teleport",
+        "type": "module",
+        "name": "survivorboss-teleport",
+        "parameters": {
+          "positionType": {"value": "<teleportPosition>"},
+          "shufflePositions": {"value": true},
+          "reverseOrder": {"value": false},
+          "positionIndex": {"value": 1}
+        }
+      },
+      {
+        "title": "distance",
+        "type": "action",
+        "name": "distance",
+        "parameters": {
+          "from": {"key": "self"},
+          "to": {"key": "spawn"}
+        },
+        "output": {
+          "vector": "toSpawn"
+        }
+      },
+      {
+        "title": "breakVector",
+        "type": "action",
+        "name": "breakVector",
+        "parameters": {
+          "vector": {"key": "toSpawn"}
+        },
+        "output": {
+          "x": "spawnX"
+        }
+      },
+      {
+        "title": "setDirection",
+        "type": "action",
+        "name": "setDirection",
+        "parameters": {
+          "direction": {"key": "spawnX"}
+        },
+        "output": {
+          "direction": "dashDirection"
+        }
+      },
+      {
+        "title": "faceDirection",
+        "type": "action",
+        "name": "faceDirection",
+        "parameters": {
+          "direction": {"key": "dashDirection"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": "<beaminTime>"}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "dashwindup"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.4}
+        }
+      },
+      {
+        "title": "multiply",
+        "type": "action",
+        "name": "multiply",
+        "parameters": {
+          "factor": {"key": "<dashSpeed>"},
+          "number": {"key": "dashDirection"}
+        },
+        "output": {
+          "result": "dashVelocity"
+        }
+      },
+      {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "active": {"value": true},
+          "emitter": {"value": "dash"}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "controlApproachVelocity",
+            "type": "action",
+            "name": "controlApproachVelocity",
+            "parameters": {
+              "force": {"key": "<dashControlForce>"},
+              "velocity": {"value": ["dashVelocity", 0]}
+            }
+          },
+          {
+            "title": "setDamageSourceActive",
+            "type": "action",
+            "name": "setDamageSourceActive",
+            "parameters": {
+              "name": {"value": "dash"}
+            }
+          },
+          {
+            "title": "dynamic",
+            "type": "composite",
+            "name": "dynamic",
+            "parameters": {},
+            "children": [
+              {
+                "title": "wallCollision",
+                "type": "action",
+                "name": "wallCollision",
+                "parameters": {
+                  "direction": {"key": "facingDirection"}
+                }
+              },
+              {
+                "title": "timer",
+                "type": "action",
+                "name": "timer",
+                "parameters": {
+                  "time": {"value": "<dashTime>"}
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "multiply",
+        "type": "action",
+        "name": "multiply",
+        "parameters": {
+          "factor": {"value": -1},
+          "number": {"key": "facingDirection"}
+        },
+        "output": {
+          "result": "newFacing"
+        }
+      },
+      {
+        "title": "faceDirection",
+        "type": "action",
+        "name": "faceDirection",
+        "parameters": {
+          "direction": {"key": "newFacing"}
+        }
+      },
+      {
+        "title": "setParticleEmitterActive",
+        "type": "action",
+        "name": "setParticleEmitterActive",
+        "parameters": {
+          "active": {"value": false},
+          "emitter": {"value": "dash"}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "idle"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "controlApproachVelocity",
+        "type": "action",
+        "name": "controlApproachVelocity",
+        "parameters": {
+          "force": {"key": "<dashControlForce>"},
+          "velocity": {"value": [0, 0]}
+        }
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 0]}
+        }
+      }
+    ]
+  }
+}

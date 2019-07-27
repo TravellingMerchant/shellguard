@@ -1,0 +1,52 @@
+{
+  "itemName" : "oldguardcleaver",
+  "price" : 3000,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "For passion and protection.",
+  "shortdescription" : "Old Guard Sword",
+  //"tooltipKind" : "sword",
+  "category" : "uniqueweapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","broadsword","upgradeableWeapon"],
+
+  "inventoryIcon" : "theguard.png",
+
+  "animation" : "/items/active/weapons/melee/broadsword/sgheavyswordcomboanimation.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "theguard.png"
+  },
+  "animationCustom" : { },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "sgheavyswordcombo",
+  "primaryAbility" : {
+    "fireTime" : 1.25,
+    "baseDps" : 12.5,
+    "damageConfig" : {
+      "damageSourceKind" : "hammer"
+    }
+  },
+
+  "altAbilityType" : "flipslash",
+  "altAbility" : {
+    "damageConfig" : {
+      "damageSourceKind" : "hammer"
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "elitetheguard.png",
+    "animationParts" : {
+      "blade" : "elitetheguard.png"
+    },
+    "shortdescription" : "Guardians Sword ^yellow;^reset;",
+    "description" : "For passion and protection."
+  }
+}

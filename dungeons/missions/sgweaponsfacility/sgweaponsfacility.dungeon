@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "sgweaponsfacility",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "sgweaponsfacility" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "sgweaponsfacility",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "sgweaponsfacility.json" ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name" : "gopstoppoptop-hand",
+  "category" : "gopstoppoptop",
+  "type" : "hand",
+
+  "frames" : {
+    "hand" : "gopstoppoptop-hand.png"
+  }
+}

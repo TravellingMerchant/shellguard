@@ -1,0 +1,88 @@
+{
+  "projectileName" : "sgbouncesuperheavy",
+  "image" : "sgbouncesuperheavy.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "physics" : "laser",
+  "fullbright" : true,
+  "bounces" : 4,
+  "lightColor" : [225, 100, 0],
+  "actionOnReap" : [
+	{
+      "action" : "spark"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 3,
+      "backgroundRadius" : 2,
+      "explosiveDamageAmount" : 3.0,
+      "delaySteps" : 2
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "size" : 0.1,
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/sgtrailorange/sgtrailorange.animation",
+        "initialVelocity" : [0.0, 0.0],
+        "timeToLive" : 0.05,
+        "fullbright" : true,
+        "destructionTime" : 0.01,
+        "destructionAction" : "shrink",
+        "fade" : 0.01,
+        "layer" : "middle",
+        "position" : [0.0, 0.0]
+      }
+    },
+    {
+      "time" : 0.05,
+      "repeat" : true,
+
+      "action" : "loop",
+      "count" : 1,
+      "body" : [
+        {
+          "action" : "projectile",
+          "type" : "sgbulletring",
+          "fuzzAngle" : 360,
+          "inheritDamageFactor" : 0.1,
+          "angleAdjust" : 0
+        }
+      ]
+    }
+  ],
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/projectiles/fistlauncher_shot.ogg"
+      ]
+    }
+  ],
+  "power" : 5.0,
+  "speed" : 50,
+  "damageKind" : "default"
+}

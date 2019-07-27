@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_shotgunbarrelshort",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/shotgunbarrelshort.png",
+  "description" : "A short shotgun barrel, greatly splits shots.",
+  "shortdescription" : "Short Shotgun Barrel",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "shotgunbarrelshort"
+  }
+}

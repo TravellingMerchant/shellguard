@@ -1,0 +1,9 @@
+{
+  "name" : "survivorboss",
+  "category" : "survivorboss",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "survivorboss.png"
+  }
+}

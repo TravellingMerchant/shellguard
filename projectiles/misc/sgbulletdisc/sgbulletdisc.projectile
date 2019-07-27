@@ -1,0 +1,30 @@
+{
+  "projectileName" : "sgbulletdisc",
+  "image" : "sgbulletdiscsprite.png",
+  "animationCycle" : 0.35,
+  "windupFrames" : 0,
+  "frameNumber" : 8,
+  "lightColor" : [100, 90, 50],
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
+    }
+  ],
+  "statusEffects" : [ ],
+  "flippable" : true,
+  "power" : 0.5,
+  "speed" : 10.0,
+  "acceleration" : 30,
+  "timeToLive" : 6,
+  "physics" : "hover",
+  "renderLayer" : "Projectile+1",
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+
+  "scripts" : [ "sgbulletdisc.lua" ],
+  "scriptDelta" : 7,
+  "hitProjectile" : "shelllightbullet",
+  "homingDistance" : 60
+}

@@ -1,0 +1,9 @@
+{
+  "name" : "sgmonstertankevil-body",
+  "category" : "sgmonstertankevil",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgmonstertankevil-body.png"
+  }
+}

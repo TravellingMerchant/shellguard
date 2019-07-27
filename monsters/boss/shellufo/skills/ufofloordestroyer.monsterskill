@@ -1,0 +1,33 @@
+{
+  "name" : "ufofloordestroyer",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/shellufo/skills/ufofloordestroyer.lua" ],
+
+    "ufofloordestroyer" : {
+      "skillTime": 2,
+      "bobTime" : 2,
+      "bobHeight" : 1,
+
+      "projectileOffset" : [0, -8],
+      "fireInterval" : 0.5,
+      "projectile" : {
+        "type" : "sgufoshockbomb",
+        "config" : {
+          "speed" : 30,
+          "power" : 15,
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/gun/Dronespawn.ogg" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

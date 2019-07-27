@@ -1,0 +1,53 @@
+{
+  "projectileName" : "sgelectromace",
+  "image" : "sgelectromace.png",
+  "animationCycle" : 0.1,
+  "animationLoops" : false,
+  "frameNumber" : 1,
+  "flippable" : true,
+  "renderLayer" : "Player+1",
+  "damageKindImage" : "icon.png",
+  "emitters" : [ ],
+  "damageKind" : "lash",
+  "damagePoly" : [ [-1.0, -1.0], [-1.0, 1.0], [1.0, 1.0], [1.0, -1.0] ],
+
+  "physics" : "sgelectromacebounce",
+  "bounces" : -1,
+  "piercing" : true,
+  "timeToLive" : 5,
+
+  "speed" : 100,
+  "power" : 0,
+  "knockback" : 20,
+  "ignoreTerrain" : false,
+  "controlForce" : 20,
+  "targetTrackingForce" : 300,
+  "pickupDistance" : 1.0,
+  "snapDistance" : 4.0,
+  "minVelocity" : 1,
+
+  "scripts" : [
+    "/scripts/projectiles/boomerangprojectile.lua",
+    "sgelectromace.lua"
+  ],
+
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/melee/fist_hit_metal1.ogg",
+        "/sfx/melee/fist_hit_metal2.ogg",
+        "/sfx/melee/fist_hit_metal3.ogg",
+        "/sfx/melee/fist_hit_metal4.ogg",
+        "/sfx/melee/fist_hit_metal5.ogg",
+        "/sfx/melee/fist_hit_metal6.ogg"
+      ]
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockbackstatus.config"
+    }
+  ],
+
+  "persistentAudio" : "/sfx/melee/elemental_aura_electric.ogg"
+}

@@ -1,0 +1,95 @@
+{
+  "itemName" : "sghammer",
+  "price" : 7000,
+  "maxStack" : 1,
+  "level" : 6,
+  "rarity" : "rare",
+  "description" : "A steadfast Combat Hammer. Fast yet can deal a strong hit.",
+  "shortdescription" : "Shellguard Combat Hammer",
+  //"tooltipKind" : "sword",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","hammer","upgradeableWeapon"],
+
+  "inventoryIcon" : "sghammer.png",
+
+  "animation" : "hammer.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "sghammer.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : { "parts" : { "swoosh" : { "properties" : {
+      "offset" : [0.0, 1.5]
+    }}}},
+    "sounds" : {
+      "fire" : [ "/sfx/melee/swing_hammer.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "hammersmash",
+  "primaryAbility" : {
+    "fireTime" : 0.9,
+    "baseDps" : 14,
+    "damageConfig" : {
+      "damageSourceKind" : "foldingchair"
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : -60,
+        "weaponRotation" : 0,
+        "weaponOffset" : [0.0, 0.8],
+		
+		"allowRotate" : true,
+        "allowFlip" : true
+      },
+      "windup" : {
+        "duration" : 0.8,
+        "armRotation" : 90,
+        "weaponRotation" : -10,
+        "weaponOffset" : [0.0, 0.8],
+
+        // Windup animation
+        "idleHammerAngle" : -10,
+        "windupHammerAngle" : 0,
+        "dropHammerAngle" : 60,
+        "bounceHammerAngle" : 55,
+
+        "minWindup" : 0.7,
+        "windupBaseAngle" : -10,
+        "windupAngleRange" : 70
+      },
+      "preslash" : {
+        "duration" : 0.025,
+        "armRotation" : 55,
+        "weaponRotation" : -45,
+        "weaponOffset" : [0.0, 0.7]
+      },
+      "fire" : {
+        "duration" : 0.2,
+        "armRotation" : -35,
+        "weaponRotation" : -55,
+        "smashTimer" : 1.5,
+        "weaponOffset" : [0.0, 0.7]
+      }
+    }
+  },
+
+  "altAbilityType" : "physicalshockwave",
+  "altAbility" : { },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "elitesghammer.png",
+    "rarity" : "legendary",
+    "animationParts" : {
+      "blade" : "elitesghammer.png"
+    },
+    "shortdescription" : "Elite Combat Hammer ^yellow;^reset;",
+    "description" : "A steadfast Combat Hammer. Fast yet can deal a strong hit."
+  }
+}

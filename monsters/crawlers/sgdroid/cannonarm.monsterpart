@@ -1,0 +1,9 @@
+{
+  "name" : "sgdroid-cannonarm",
+  "category" : "sgdroid",
+  "type" : "cannonarm",
+
+  "frames" : {
+    "cannonarm" : "sgdroid-cannonarm.png"
+  }
+}

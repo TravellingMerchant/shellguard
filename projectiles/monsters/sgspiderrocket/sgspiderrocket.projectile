@@ -1,0 +1,58 @@
+{
+  "projectileName" : "sgspiderrocket",
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/gun/shellbulletimpact.ogg"
+      ]
+    }
+  ],
+  "image" : "sgspiderrocket.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 0.0
+  },
+  "animationCycle" : 0.25,
+  "pointLight" : true,
+  "lightColor" : [255, 100, 0],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "shellsmoke"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/fire_out.ogg" ]
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 3,
+      "backgroundRadius" : 2,
+      "explosiveDamageAmount" : 0.0,
+      "delaySteps" : 2
+    }
+
+  ],
+  "emitters" : [ "rocketsmoke" ],
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 10,
+  "power" : 20,
+  "speed" : 35,
+  "damageKind" : "bow",
+  
+  "persistentAudio" : "/sfx/tech/tech_rocketboots.ogg"
+}

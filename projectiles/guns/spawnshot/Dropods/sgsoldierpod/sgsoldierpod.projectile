@@ -1,0 +1,63 @@
+{
+  "projectileName" : "sgsoldierpod",
+  "physics" : "grenade",
+  "image" : "sgsoldierpod.png",
+  "orientationLocked" : false,
+  "animationCycle" : 0.25,
+  "animationLoops" : true,
+  "frameNumber" : 4,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [225, 100, 60],
+  "movementSettings" : {
+    "gravityMultiplier" : 0.5,
+    "collisionPoly" : [ [-2, 2], [-2, -2], [2, -2], [2, 2] ]
+  },
+  "actionOnReap" : [
+    {
+      "action" : "spawnmonster",
+      "type" : "sgwalkertank",
+      "offset" : [0, 2],
+      "level" : 6,
+      "arguments" : {
+        "aggressive" : true
+      }
+    },
+    {
+      "action" : "projectile",
+      "offset" : [0, 2],
+      "type" : "sgemptydroppod",
+      "inheritDamageFactor" : 0.0,
+      "angleAdjust" : -90
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockback.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/fire_out.ogg" ]
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 5,
+      "backgroundRadius" : 3,
+      "explosiveDamageAmount" : 200.0,
+      "delaySteps" : 2
+    }
+  ],
+  "scripts" : [ "/projectiles/scripts/sgsoldierpod.lua" ],
+  "power" : 0,
+  "speed" : 20,
+  "flippable" : false,
+  "emitters" : [ "javelinred" ],
+  "persistentAudio" : "/sfx/projectiles/dragonprojectile_loop.ogg",
+  "damageKind" : "default"
+}

@@ -1,0 +1,9 @@
+{
+  "name" : "sgflamesentryevil-body",
+  "category" : "sgflamesentryevil",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgflamesentryevil-body.png"
+  }
+}

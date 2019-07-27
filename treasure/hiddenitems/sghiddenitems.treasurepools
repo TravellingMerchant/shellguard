@@ -1,0 +1,245 @@
+{
+  "sghubbackpack" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgbackpack", 1]}
+      ]
+    }]
+  ],
+  "sghubmedichelmet" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgmedichelmet", 1]}
+      ]
+    }]
+  ],
+  "sghubcodex1" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgsurvivor1-codex", 1]}
+      ]
+    }]
+  ],
+  "sghubcodex2" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgsurvivor2-codex", 1]}
+      ]
+    }]
+  ],
+  "sgufoclaw" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "shellguardclawboss"}
+      ]
+    }]
+  ],
+  "sgsurvivorstaff" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "sgbossspear"}
+      ]
+    }]
+  ],
+  "sgmechclownhorntreasure" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "sgmechhornclown"}
+      ]
+    }]
+  ],
+
+//Spider Factory
+
+  "sgironwatchparthead" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "ironwatchhead"}
+      ]
+    }]
+  ],
+  "sgironwatchpartchest" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "ironwatchchest"}
+      ]
+    }]
+  ],
+  "sgironwatchpartlegs" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "ironwatchlegs"}
+      ]
+    }]
+  ],
+  
+//weapons facility
+
+  "ironwatchdronechest" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "ironwatchdronechest"}
+      ]
+    }]
+  ],
+  
+  "ironwatchdronehead" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "ironwatchdronehead"}
+      ]
+    }]
+  ],
+  
+  "ironwatchdroneheavychest" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "ironwatchdroneheavychest"}
+      ]
+    }]
+  ],
+  
+  "ironwatchdroneheavyhead" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "ironwatchdroneheavyhead"}
+      ]
+    }]
+  ],
+  
+  "ironwatchdronespiderchest" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "ironwatchdronespiderchest"}
+      ]
+    }]
+  ],
+  
+  "ironwatchdronespiderhead" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "ironwatchdronespiderhead"}
+      ]
+    }]
+  ],
+  
+  "ironwatchdronespiderlegs" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "ironwatchdronespiderlegs"}
+      ]
+    }]
+  ],
+  
+  "sgdagger1" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "sgrobotknife"}
+      ]
+    }]
+  ],
+  
+  "sgdagger2" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "sgrobotknife2"}
+      ]
+    }]
+  ],
+  
+//--------------survivor codex and fortress loot--------------
+
+  "sgsurvivorstory1" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgsurvivorstory1-codex", 1]}
+      ]
+    }]
+  ],
+  
+  "sgsurvivorstory2" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgsurvivorstory2-codex", 1]}
+      ]
+    }]
+  ],
+  
+  "sgsurvivorstory3" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgsurvivorstory3-codex", 1]}
+      ]
+    }]
+  ],
+  
+  "sgsurvivorstory4" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgsurvivorstory4-codex", 1]}
+      ]
+    }]
+  ],
+  
+  "sgradiohat" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgradiohat", 1]}
+      ]
+    }]
+  ],
+  
+  "sglance" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "shelllance", 1]}
+      ]
+    }]
+  ],
+  
+  "sgflameclaw" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgflameclaw", 1]}
+      ]
+    }]
+  ],
+  
+//-----------misc---------------------
+  
+  "shellbehat" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.98, "item" : "money"},
+        {"weight" : 0.02, "item" : "sgshellbhat"}
+      ],
+      "poolRounds" : [
+        [1, 1]
+      ]
+    } ]
+  ],
+  "sghublockjaw" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "traininglockjaw", 1]},
+        {"item" : [ "traininglockjaw", 1]}
+      ]
+    }]
+  ],
+  "sgcleavertreasure" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "oldguardcleaver", 1]},
+        {"item" : [ "sgflowerstatue", 1]}
+      ]
+    }]
+  ],
+  "sgspeartreasure" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "oldguardspear", 1]},
+        {"item" : [ "sgflowerstatue", 1]}
+      ]
+    }]
+  ]
+}

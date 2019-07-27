@@ -1,0 +1,22 @@
+{
+  "projectileName" : "shelllightbullet",
+  "image" : "shelllightbullet.png",
+  "physics" : "laser",
+  "animationCycle" : 0.1,
+  "animationLoops" : false,
+  "timeToLive" : 10,
+  "frameNumber" : 3,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [225, 100, 60],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
+    }
+  ],
+  "power" : 1.0,
+  "speed" : 150,
+  "damageKind" : "default"
+}

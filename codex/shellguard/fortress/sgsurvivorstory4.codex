@@ -1,0 +1,39 @@
+{
+  "id" : "sgsurvivorstory4",
+  "species" : "human",
+  "title" : "Log Book 4",
+  "description" : "Transcribed personal logs.",
+  "icon" : "sgsurvivorstory4.png",
+  "contentPages" : [
+    "^cyan;Personal log number 1820:^white; 
+It's about time I continue these logs. I've been working under Ironwatch for many, many years now. I'm not getting any younger and this is a dangerous job. A record of my life would be a nice thing to leave behind.",
+
+    "^cyan;Personal log number 1823:^white;
+I've been through more fights then I can remember. Seen so many worlds, people and places. I rarely get scared of anything, but now my stomach feels like a washing machine. I'm finally doing it.. I've been assigned bodyguard duty for a protectorate offical... On Earth.",
+	
+    "^cyan;Personal log number 1825:^white;
+The date of the assignment is getting closer. The jobs easy enough, there's no danger on Earth.. Yet I'm still so nervous. Is it really as amazing as they say? I've wanted to go my entire life. It was my dream...",
+	
+    "^cyan;Personal log number 1825:^white;
+I'm recording this on the shuttle to Earth. I can see it now. A tiny, pale blue dot, getting closer and closer. There's so many lights on it...",
+
+	"^cyan;Personal log number 1825:^white;
+I could never have imagined that the Earth was this beautiful. I wish they could have been here with me. I miss them dearly. My daughter would have loved it here.",
+	
+	"^cyan;Personal log number 1833:^white;
+Instead of feeling satisfied, I'm left feeling bitter. Every time I look across this vast, green city I feel anger. They should have been here to see this. ",
+	
+	"^cyan;Personal log number 1847:^white;
+There was a small earthquake today, but everything else seems fine. My client is on their way to a Protectorate graduation ceremony. I'll be standing guard.",
+
+	"^cyan;Personal log number 1884:^white;
+The earth is gone too now. I barely survived, but part of me wishes I hadn't. If I hadn't left the Peacekeepers, would this still have happened? If I hadn't joined Shellguard, my family might not have died. If.. If I hadn't.. ",
+
+	"^cyan;Personal log number 1921:^white;
+No more questioning the past. I'm going to fix this. I'm going to make them pay. Both Shellguard and that abomination on what remains of Earth. ^red;I am going to set things right.^white;"
+  ],
+    "itemConfig" : {
+    "rarity" : "common",
+    "price" : 25
+  }
+}

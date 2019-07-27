@@ -1,0 +1,96 @@
+{
+  "itemName" : "sgneedle",
+  "price" : 2000,
+  "inventoryIcon" : "SGneedle.png",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Experimental hybrid gun that fires homing laser rounds. Fires faster when you're at low energy.",
+  "shortdescription" : "Shellguard Needle Laser",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "SGneedle.png",
+    "barrel" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/Needle Lazer.ogg", "/sfx/gun/Needle Lazer2.ogg", "/sfx/gun/Needle Lazer3.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.1, -0.1],
+  "muzzleOffset" : [-0.2, 0.7],
+  "aimOffset" : -2.0,
+
+  "scripts" : [
+	"/items/active/weapons/ranged/gun.lua",
+	"/items/active/scripts/sgmodifablegun.lua",
+	"/items/active/scripts/sgwindup.lua"
+  ],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.4,
+    "baseDps" : 2.0,
+    "energyUsage" : 50.0,
+    "projectileCount" : 3,
+    "inaccuracy" : 0.2,
+      "stances" : {
+      "idle" : {
+        "armRotation" : -50,
+        "weaponRotation" : 50,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : -51,
+        "weaponRotation" : 50,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -55,
+        "weaponRotation" : 50,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "sghominglaser",
+    "projectileParameters" : { 
+      "knockback" : 6
+    }
+  },
+
+  "altAbilityType" : "",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "eliteneedle.png",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/shellguardneedle/eliteneedle.png"
+    },
+    "shortdescription" : "Elite Needle Laser ^yellow;^reset;"
+  }
+}

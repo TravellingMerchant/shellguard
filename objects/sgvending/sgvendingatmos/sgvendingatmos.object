@@ -1,0 +1,49 @@
+{
+  "objectName" : "sgvendingatmos",
+  "colonyTags" : ["outpost","commerce"],
+  "rarity" : "Common",
+  "category" : "Shop",
+  "description" : "A homemade vending machine selling lockjaws.",
+  "shortdescription" : "Atmos Vending",
+  "race" : "generic",
+  "price" : 500,
+  "printable" : false,
+  
+  "iAction" : "OpenMerchantInterface",
+  "iData" : {
+    "config" : "/interface/windowconfig/vendingmachine.config",
+    "paneLayoutOverride" : {},
+    "buyFactor" : 1.0,
+    "sellFactor" : 0.2,
+    "items" : []
+  },
+
+  "apexDescription" : "This is Atmos. I can buy Lockjaws from it.",
+  "avianDescription" : "This is Atmos. I can buy Lockjaws from it.",
+  "floranDescription" : "Thissss is Atmos. Floran can buy Lockjawsss from it.",
+  "glitchDescription" : "Pleased. This is Atmos. I can buy Lockjaws from it.",
+  "humanDescription" : "This is Atmos. I can buy Lockjaws from it.",
+  "hylotlDescription" : "This is Atmos. I can buy Lockjaws from it.",
+  "novakidDescription" : "This is Atmos. I can buy Lockjaws from it.",
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "sgvendingatmos.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgvendingatmoslit.png:<color>.<frame>" } ],
+      
+      "imagePosition" : [-16, 0],
+      "frames" : 12,
+      "animationCycle" : 2.2,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "scripts" : [
+    "/objects/sgvending/sgvending.lua"
+  ],
+  "scriptDelta" : 60,
+  
+  "parentVendor" : "sgatmos"
+}

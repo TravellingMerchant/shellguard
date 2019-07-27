@@ -1,0 +1,9 @@
+{
+  "name" : "sgdroidevil-body",
+  "category" : "sgdroidevil",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgdroidevil-body.png"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_underbarrelAddon_spidermine",
+  "price" : 5000,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/underbarrelAddon/spidermine.png",
+  "description" : "Creates a Spider Mine.",
+  "shortdescription" : "Spider Mine",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "underbarrelAddon",
+    "id" : "spidermine"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "itemName" : "sgmechradiatorbooster",
+  "price" : 3840,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "category" : "mechPart",
+  "tooltipKind" : "mechbooster",
+  "builder" : "/items/buildscripts/buildmechpart.lua",
+  "inventoryIcon" : "sgmechradiatorboostericon.png",
+  "description" : "Armoured boosters with a cooling radiator.",
+  "shortdescription" : "SG Radiator Boosters",
+  "itemTags" : [ ],
+
+  "mechPart" : ["booster", "sgmechradiatorbooster"]
+}

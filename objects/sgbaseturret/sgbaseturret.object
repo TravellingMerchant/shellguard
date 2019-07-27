@@ -1,0 +1,123 @@
+{
+  "objectName" : "sgbaseturret",
+  "colonyTags" : ["wired","combat"],
+  "printable" : false,
+  "rarity" : "Common",
+  "objectType" : "container",
+  "price" : 1500,
+
+  "slotCount" : 0,
+  "uiConfig" : "/interface/turret/sgbaseturret.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600,
+
+  "description" : "Turret for your protection! Can only be placed once.",
+  "shortdescription" : "Shellguard Turret",
+  "subtitle" : "Automatic Base Defense",
+  "race" : "generic",
+  "category" : "wire",
+
+  "breakDropOptions" : [
+    [ [ "siliconboard", 1, { } ], [ "wire", 1, { } ] ]
+  ],
+
+  "apexDescription" : "Always watchful.",
+  "avianDescription" : "The monsters don't stand a chance, unless they can fly.",
+  "floranDescription" : "Effective againssst living thingsss.",
+  "glitchDescription" : "Cautious. Must not disrupt my brother in his vigilance.",
+  "humanDescription" : "An automated security system.",
+  "hylotlDescription" : "Looks like a turret of some sort.",
+  "novakidDescription" : "Looks like this thing sure could do some damage!",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgbaseturretstand.png:bottom",
+
+      "imagePosition" : [-12, 0],
+      "imageLayers" : [ { "image" : "sgbaseturretstand.png:bottom" }, { "image" : "sgbaseturretgun.png:dead", "position": [4, 12] } ],
+      "spaces" : [
+        [-2, 0], [-1, 0], [0, 0], [1, 0],
+        [-2, 1], [-1, 1], [0, 1], [1, 1]
+      ],
+      "anchors" : [ "bottom" ],
+
+      "animationParts" : {
+        "gun" : "sgbaseturretgun.png",
+        "stand" : "sgbaseturretstand.png:bottom",
+        "energy" : "energy.png"
+      },
+      "animationPosition" : [4, 16],
+      "animationCenterLine" : 0,
+
+      "baseOffset" : [0, 2],
+      "energyBarOffset" : [0.375, -1.5],
+      "verticalScaling" : false
+    }
+  ],
+
+  "objectWidth" : 4,
+
+  "animation" : "sgbaseturret.animation",
+
+  "scripts" : [
+    "/objects/sgbaseturret/gvturret.lua",
+    "/scripts/npcToyObject.lua",
+    "/scripts/stateMachine.lua",
+    "/scripts/util.lua",
+    "/scripts/vec2.lua"
+  ],
+
+  "damageTeam" : {
+    "type" : "assistant"
+  },
+
+  "scriptDelta" : 5,
+
+  "outputNodes" : [ [0, 0] ],
+  "inputNodes" : [ [0, 1] ],
+
+  "rotationSpeed" : 25,
+
+  "tipOffset" : [2.5, 0],
+  "offAngle" : -30,
+
+  "scanInterval" : 6,
+  "scanAngle" : 25,
+  "scanRange" : 35,
+
+  "targetQueryRange" : 80,
+  "targetMinRange" : 2.5,
+  "targetMaxRange" : 80,
+  "targetAngleRange" : 85,
+
+  "maxFireAngle" : 5,
+
+  "energyUsage" : 4,
+  "power" : 25,
+  "fireTime" : 0.2,
+  "multiBarrel" : true,
+  "arraySize" : [2, 2],
+  "arrayOffset" : [1.5, 0.5],
+  "inaccuracy" : 0.0,
+
+  "maxEnergy" : 100,
+  "energyRegen" : 25,
+  "energyRegenBlock" : 1.0,
+
+  "npcToy" : {
+    "influence" : [
+      "turret"
+    ],
+    "defaultReactions" : {
+      "turret" : [
+        [1.0, "pressbutton"],
+        [1.0, "oh"],
+        [1.0, "laugh"]
+      ]
+    },
+    "preciseStandPositionLeft" : [-1.0, 0.0],
+    "preciseStandPositionRight" : [1.0, 0.0],
+    "maxNpcs" : 1
+  }
+}

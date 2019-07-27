@@ -1,0 +1,207 @@
+{
+  // ------- Weapon facility. -------
+  
+  "sgweaponfacility1" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Welcome to one of our state of the art weapons research facilities!"
+  },
+  
+  "sgweaponfacility2" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Ever since the ruin showed up, we've started expanding our operations here, trying to make bigger and bigger weapons to take out threats like that."
+  },
+  
+  "sgweaponfacility3" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Recently, we came up with something powerful. Like, REAL powerful. As in, firing miniature SUNS kind of powerful."
+  },
+ 
+  "sgweaponfacility4" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "We call it the Ruin Cleaver! It should be plenty strong enough to cut a big hole into that ship."
+  },
+  
+  "sgweaponfacility5" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Give it a try! The firing range is set up with some SERIOUSLY heavy duty targets. Once you're done, use the tunnel under the range to access the rest of the facility."
+  },
+  
+  "sgweaponfiringrange" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "You.. probably don't want to stand in front of this thing."
+  },
+  
+  "sgweaponfacility6" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "See? Pretty darn awesome huh? We have plenty more tech to show you in the main facility! I can't wait to.. uh.. huh, there's an alarm going off in building B."
+  },
+
+  "sgweaponfacility7a" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Quick, lockdown the facility! Get Andros on the line, we are under attack!"
+  },
+
+  "sgweaponfacility7b" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "I'm here, stay calm. It appears a large force of robotics have infilrated the base. Has the lockdown engaged successfully?"
+  },
+  
+  "sgweaponfacility7c" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "It seems so, we'll work on getting the Ruin Cleaver to safety. We can't let them get their hands on it!"
+  },
+  
+  "sgweaponfacility8" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Right, while they are securing the cannon, you'll have to start fighting off the attackers. There's another teleporter at the other side of the facility. That'll be the extraction point."
+  },
+ 
+  "sgweaponfacility9" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "We've managed to retreive the Ruin Cleaver, but we lost a lot of people doing so. These robots are CRAZY advanced!"
+  },
+  
+  "sgweaponfacility10a" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "They are even using our own weapons against us... Damn it, I'm just an engineer, I'm not made for fighting!"
+  },  
+
+  "sgweaponfacility10b" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Peter, breath. We need you here, you know this facility better than I do. The defenses are offline. We need them back on."
+  },
+ 
+  "sgweaponfacility10c" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Right, right.. Yeah. Ok. Let me think."
+  },  
+  
+  "sgweaponfacility10d" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "To get through the door ahead, you're going to have to do two things. The roof will have a security panel to activate and the basement will have a backup generator you'll have to turn on."
+  },
+  
+  "sgweaponfacilityAA1" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "This way will take you to the roof. From there, you can get our Anti-Air Guns online."
+  },
+
+  "sgweaponfacilityAA2" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "This is it, the security override."
+  },
+
+  "sgweaponfacilitygenerator" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "This generator will provide enough extra power to open that door."
+  },
+
+  "sgweaponfacilitysewer" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "We really need to clean down here more often.."
+  },
+  
+  "sgweaponfacility11" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "You're through! Great!"
+  },
+  
+  "sgweaponfacility12" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Watch out, it appears there's some heavy units ahead."
+  },
+  
+  "sgweaponfacility13" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "You're almost there, the teleporter building is just past the fuel tanks. You can make it! Come on!"
+  },
+
+  "sgweaponfacility14" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Help those soldiers fight off the robots!"
+  },
+  
+  "sgweaponfacility15" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "You made it! I knew you could!"
+  },
+
+  "sgweaponfacility16" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Thanks to both you and Atmos, we didn't lose the facility. Get back to base and we'll begin a counter attack plan."
+  },
+
+  "sgweaponfacilityeasteregg1" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Hey! Careful up there, it's pretty high!"
+  },
+  
+  "sgweaponfacilityeasteregg2" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Hiding does seem like a good idea right now.. But we need you!"
+  },
+  
+  "sgweaponfacilityeasteregg3" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "They managed to barricade the door in time, that's good."
+  }
+
+}

@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_stock_pistol",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/pistol.png",
+  "description" : "A basic wooden pistol grip.",
+  "shortdescription" : "Pistol Grip",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "stock",
+    "id" : "pistol"
+  }
+}

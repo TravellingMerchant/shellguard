@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_stock_basealt",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/basealt.png",
+  "description" : "A basic wooden collapsible stock.",
+  "shortdescription" : "Collapsible Stock",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "stock",
+    "id" : "basealt"
+  }
+}

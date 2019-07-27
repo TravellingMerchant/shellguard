@@ -1,0 +1,87 @@
+{
+  "objectName" : "sgclaireshop",
+  "colonyTags" : ["outpost","commerce"],
+  "rarity" : "Common",
+  "category" : "Shop",
+  "description" : "Build your new best friend.",
+  "shortdescription" : "Claire's weapon parts.",
+  "race" : "generic",
+  "printable" : false,
+  "lightColor" : [46, 66, 77],
+  "interactAction" : "OpenMerchantInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/merchant.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "Claire's weapon parts.",
+        "subtitle" : "^#b9b5b2;Build your new best friend."
+      }
+    },
+    "buyFactor" : 1.0,
+    "sellFactor" : 0.2,
+    "items" : [
+	  { "item" : "sg_modulargunstation" },
+	  { "item" : "sgweaponupgradeanvil" },
+	  { "item" : "sg_receiver_base" },
+	  { "item" : "sg_barrel_base" },
+	  { "item" : "sg_barrel_short" },
+	  { "item" : "sg_barrel_shotgunbarrel" },
+	  { "item" : "sg_stock_base" },
+	  { "item" : "sg_stock_pistol" },
+	  { "item" : "sg_baseAddon_scopealt" },
+	  { "item" : "sg_underbarrelAddon_flashlight" },
+	  { "item" : "sg_underbarrelAddon_bayonet" },
+	  { "item" : "sg_underbarrelAddon_grenadelauncher" },
+	  { "item" : "sg_underbarrelAddon_coolingjacket" }
+    ]
+  },
+  
+  "offeredQuests" : [
+    "sgtrainattack"
+  ],
+  "turnInQuests" : [
+    "sgtrainattack"
+  ],
+  
+  "uniqueId" : "sgclaireshop",
+  
+  "apexDescription" : "Claire Gough, weapon designer.",
+  "avianDescription" : "Claire Gough, weapon designer.",
+  "floranDescription" : "Claire Gough, weapon desssssigner.",
+  "glitchDescription" : "Pleased. Claire Gough, weapon designer.",
+  "humanDescription" : "Claire Gough, weapon designer.",
+  "hylotlDescription" : "Claire Gough, weapon designer.",
+  "novakidDescription" : "Claire Gough, weapon designer.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "claireshop.png:<color>.<frame>", "fullbright" : true }, { "image" : "claireshoplit.png:<color>.<frame>" } ],
+      "direction" : "left",
+      
+      "lightPosition" : [-1, 2],
+
+      "imagePosition" : [-64, 0],
+      "frames" : 7,
+      "animationCycle" : 1.2,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "claireshopflip.png:<color>.<frame>", "fullbright" : true }, { "image" : "claireshopfliplit.png:<color>.<frame>" } ],
+      "direction" : "right",
+      
+      "lightPosition" : [0, 2],
+
+      "imagePosition" : [-64, 0],
+      "frames" : 7,
+      "animationCycle" : 1.2,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  "questIndicatorPosition" : [-9.25, -23],
+  "soundEffect" : "/sfx/objects/mechcrafting_loop.ogg"
+}

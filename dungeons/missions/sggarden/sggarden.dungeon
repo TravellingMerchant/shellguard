@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "sggarden",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "sggarden" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "sggarden",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "sggarden.json" ]
+    }
+  ]
+}

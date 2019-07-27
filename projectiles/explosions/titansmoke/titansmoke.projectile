@@ -1,0 +1,16 @@
+{
+  "projectileName" : "titansmoke",
+  "image" : "titansmoke.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 6,
+  "speed" : 0,
+  "damagePoly" : [ [-144, 0], [-96, -96], [0, -144], [96, -96], [144, 0], [96, 96], [0, 144], [-96, 96] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : -1,
+  "pointLight" : true,
+  "lightColor" : [255, 0, 0],
+  "flippable" : true,
+  "damageTeam" : { "type" : "indiscriminate" },
+  "damageKind" : "default"
+}

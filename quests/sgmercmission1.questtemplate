@@ -1,0 +1,45 @@
+{
+  "id" : "sgmercmission1",
+  "prerequisites" : [],
+  "title" : "^green;Desert Bandits",
+  "text" : "You want to work as one of us Shellguard Mercenaries? Then we have a job for you. There's a group of human bandits causing trouble on a desert planet and someone wants them taken out.",
+  "completionText" : "Hmm, not bad. Here's your cut of the payment.",
+  "moneyRange" : [1200, 1200],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], ["money", 3000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Commander Andros Galvanek^reset;",
+      "findGoal" : "Fight your way through the mission",
+      "turnIn" : "Return to ^orange;Commander Andros Galvanek^reset;"
+    },
+
+    "warpEntityUid" : "Andros",
+    "warpAction" : "instanceworld:sgmercmission1",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgmercmission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "sgmerc1",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Andros"
+  }
+}

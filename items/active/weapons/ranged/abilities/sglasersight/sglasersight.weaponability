@@ -1,0 +1,21 @@
+{
+  "animationScripts" : [
+    "/items/active/effects/laserbeam.lua"
+  ],
+  "ability" : {
+    "name" : "Laser Sight",
+    "type" : "sglasersight",
+    "scripts" : ["/items/active/weapons/ranged/abilities/sglasersight/sglasersight.lua"],
+    "class" : "LaserSight",
+    
+    "beams" : [
+      {
+        "offset" : [-1.6, -0.3],
+        "color" : [255, 0, 0, 128],
+        "length" : 60,
+        "segments" : 6,
+        "angle" : 0
+      }
+    ]
+  }
+}

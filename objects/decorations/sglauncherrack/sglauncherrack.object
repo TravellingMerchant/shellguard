@@ -1,0 +1,33 @@
+{
+  "objectName" : "sglauncherrack",
+  "colonyTags" : ["valuable","pretty"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 100,
+
+  "apexDescription" : "Very sturdy.",
+  "avianDescription" : "Very sturdy.",
+  "floranDescription" : "Very sturdy.",
+  "glitchDescription" : "Very sturdy.",
+  "humanDescription" : "Very sturdy.",
+  "hylotlDescription" : "Very sturdy.",
+  "novakidDescription" : "Very sturdy.",
+
+  "description" : "An grenade launcher on a wall rack.",
+  "shortdescription" : "Shellguard Launcher Rack",
+  "race" : "human",
+
+  "inventoryIcon" : "sglauncherrack.png",
+  "orientations" : [
+    {
+      "dualImage" : "sglauncherrack.png:<color>",
+      "imagePosition" : [-8, -0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

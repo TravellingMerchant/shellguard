@@ -1,0 +1,45 @@
+{
+  "id" : "sgmercmission2",
+  "prerequisites" : ["sgmercmission1"],
+  "title" : "^green;Floran Slavers",
+  "text" : "Good job on your first mission, here's another. A group of floran slavers have been kidnapping people and the client wants them killed.",
+  "completionText" : "Great job. Here's your cut of the payment.",
+  "moneyRange" : [1200, 1200],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], ["money", 4000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Commander Andros Galvanek^reset;",
+      "findGoal" : "Fight your way through the mission",
+      "turnIn" : "Return to ^orange;Commander Andros Galvanek^reset;"
+    },
+
+    "warpEntityUid" : "Andros",
+    "warpAction" : "instanceworld:sgmercmission2",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgmercmission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "sgmerc2",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Andros"
+  }
+}

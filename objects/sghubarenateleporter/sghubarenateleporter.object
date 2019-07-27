@@ -1,0 +1,53 @@
+{
+  "objectName" : "sghubarenateleporter",
+  "colonyTags" : ["outpost"],
+  "objectType" : "teleporter",
+  "rarity" : "Legendary",
+
+  "description" : "Lets you replay Arena fights!",
+  "shortdescription" : "Arena Teleporter",
+  "printable" : false,
+
+  "apexDescription" : "I can use this to visit past fights.",
+  "avianDescription" : "I can use this to visit past fights.",
+  "floranDescription" : "I can use this to visit past fights.",
+  "glitchDescription" : "I can use this to visit past fights.",
+  "humanDescription" : "I can use this to visit past fights.",
+  "hylotlDescription" : "I can use this to visit past fights.",
+  "novakidDescription" : "I can use this to visit past fights.",
+
+  "category" : "teleporter",
+  "lightColor" : [99, 132, 153],
+  "lightPosition" : [0, 5],
+
+  "interactAction" : "OpenTeleportDialog",
+  "interactData" : "/interface/warping/sgarenateleport.config",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "sghubarenateleporter.png:<color>", "fullbright" : true }, { "image" : "sghubarenateleporterlit.png:<color>" } ],
+      "direction" : "right",
+
+      "imagePosition" : [-24, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaces" : [
+        [-3, 7], [-2, 7], [-1, 7], [0, 7], [1, 7],
+        [-3, 6], [-2, 6], [-1, 6], [0, 6], [1, 6],
+        [-2, 5], [-1, 5], [0, 5], [1, 5],
+        [-2, 4], [-1, 4], [0, 4], [1, 4],
+        [-2, 3], [-1, 3], [0, 3], [1, 3],
+        [-2, 2], [-1, 2], [0, 2], [1, 2],
+        [-2, 1], [-1, 1], [0, 1], [1, 1],
+        [-3, 0], [-2, 0], [-1, 0], [0, 0], [1, 0]
+      ],
+      "anchors" : [ "bottom" ],
+      "collision" : "solid",
+      "collisionSpaces" : [ [-3, 0], [-2, 0], [-1, 0], [0, 0] ]
+    }
+  ],
+  
+  "teleporterFootPosition" : [-1, 1]
+}

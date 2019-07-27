@@ -1,0 +1,45 @@
+{
+  "id" : "sgmercmission3",
+  "prerequisites" : ["sgmercmission1"],
+  "title" : "^green;Territory Takedown.",
+  "text" : "There's another mission available for you while we work on the data you recovered from the factory. Two Glitch Lords are fighting over some land and one of them hired us to kill the other.",
+  "completionText" : "While you were away, we made some progress on the data. Your next mission will be focused on that.",
+  "moneyRange" : [1200, 1200],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], ["money", 4000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Commander Andros Galvanek^reset;",
+      "findGoal" : "Fight your way through the mission",
+      "turnIn" : "Return to ^orange;Commander Andros Galvanek^reset;"
+    },
+
+    "warpEntityUid" : "Andros",
+    "warpAction" : "instanceworld:sgmercmission3",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgmercmission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "sgmerc3",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Andros"
+  }
+}

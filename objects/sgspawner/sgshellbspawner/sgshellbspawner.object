@@ -1,0 +1,46 @@
+{
+  "objectName" : "sgshellbspawner",
+  "colonyTags" : ["misc"],
+  "rarity" : "Common",
+  "description" : "Produces SHELL-B cleaning drones when wired and activated.",
+  "shortdescription" : "SHELL-B Constructor",
+  "race" : "human",
+  "printable" : false,
+  "category" : "spawner",
+  "price" : 500,
+
+  "inventoryIcon" : "sgshellbspawnericon.png",
+  
+  "animation" : "/objects/sgspawner/sgshellbspawner/sgshellbspawner.animation",
+  "animationParts" : {
+    "spawner" : "sgshellbspawner.png"
+  },
+  "animationPosition" : [-8, 0],
+  "orientations" : [
+    {
+      "dualImage" : "sgshellbspawner.png:idle",
+      "imagePosition" : [-8, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "scripts" : [ "/objects/sgspawner/sgshellbspawner/sgshellbspawner.lua" ],
+  "scriptDelta" : 10,
+
+  "inputNodes" : [ [-1, 0] ],
+
+  "spawner" : {
+    "monsterTypes" : ["sgroombacritter"], //type of monster to spawn (random from list)
+    //"monsterLevel" : [1, 10], //level of monster to spawn (random within range, or leave blank for world threat level)
+    "monsterParams" : { //additional parameters of spawned monster
+      "aggressive" : false
+    },
+    "position" : [0, 1], //relative position to spawn at
+    "positionVariance" : [0, 0], //[x,y] size of randomized spawn area, centered on position
+    "outOfSight" : false //only spawn where the player can't see
+  },
+
+  "smashOnBreak" : false
+}

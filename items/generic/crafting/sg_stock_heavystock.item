@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_stock_heavystock",
+  "price" : 5000,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/heavystock.png",
+  "description" : "A heavy wooden stock. Allows for higher accuracy, at the cost of energy.",
+  "shortdescription" : "Heavy Stock",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "stock",
+    "id" : "heavystock"
+  }
+}

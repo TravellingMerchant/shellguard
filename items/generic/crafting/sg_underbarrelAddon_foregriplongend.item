@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_underbarrelAddon_foregriplongend",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/underbarrelAddon/foregriplongend.png",
+  "description" : "A foregrip with a long end, to prevent hand damage. Improves accuracy.",
+  "shortdescription" : "Long End Grip",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "underbarrelAddon",
+    "id" : "foregriplongend"
+  }
+}

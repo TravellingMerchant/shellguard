@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_barrel_shotgunbarrel",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/shotgunbarrel.png",
+  "description" : "A shotgun barrel, splits shots.",
+  "shortdescription" : "Shotgun Barrel",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "barrel",
+    "id" : "shotgunbarrel"
+  }
+}

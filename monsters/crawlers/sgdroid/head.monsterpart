@@ -1,0 +1,9 @@
+{
+  "name" : "sgdroid-head",
+  "category" : "sgdroid",
+  "type" : "head",
+
+  "frames" : {
+    "head" : "sgdroid-head.png"
+  }
+}

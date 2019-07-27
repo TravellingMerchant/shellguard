@@ -1,0 +1,62 @@
+{
+  "objectName" : "sgdonatorshop",
+  "colonyTags" : ["outpost","commerce"],
+  "rarity" : "Common",
+  "category" : "Shop",
+  "description" : "Items funded by the commuinity.",
+  "shortdescription" : "Custom-Catch-All",
+  "race" : "generic",
+  "price" : 500,
+  "printable" : false,
+  "lightColor" : [46, 66, 77],
+  "interactAction" : "OpenMerchantInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/merchant.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "Custom-Catch-All",
+        "subtitle" : "^#b9b5b2;Items funded by the commuinity."
+      }
+    },
+    "buyFactor" : 1.0,
+    "sellFactor" : 0.2,
+    "items" : [
+	  { "item" : "sgreddye" },
+	  { "item" : "sgorangedye" },
+	  { "item" : "sgflatcap" },
+	  { "item" : "sgquartermaster" },
+	  { "item" : "sgspacehelmet" },
+	  { "item" : "sgbasicspacehelmet" },
+	  { "item" : "shelldronehead" },
+	  { "item" : "shelldronechest" },
+	  { "item" : "shelldronelegs" },
+	  { "item" : "sgbangcorn" }
+    ]
+  },
+
+  "apexDescription" : "Thank's to all those who funded these!",
+  "avianDescription" : "Thank's to all those who funded these!",
+  "floranDescription" : "Thank'sssss to all thosssse who funded these!",
+  "glitchDescription" : "Pleased. Thank's to all those who funded these!",
+  "humanDescription" : "Thank's to all those who funded these!",
+  "hylotlDescription" : "Thank's to all those who funded these!",
+  "novakidDescription" : "Thank's to all those who funded these!",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "sgdonatorshop.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgdonatorshoplit.png:<color>.<frame>" } ],
+      "direction" : "left",
+      
+      "lightPosition" : [-1, 2],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 12,
+      "animationCycle" : 2.2,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  "soundEffect" : "/sfx/objects/mechcrafting_loop.ogg"
+}

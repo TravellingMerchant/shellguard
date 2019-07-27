@@ -1,0 +1,202 @@
+{
+  // ------- fortress approach -------
+  
+  "sgspaafsafasce1" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Alright, we've got you into the asteroid field next to its flight path. A forward team has set up the Ruincleaver in an ambush position further ahead."
+  },  
+
+  "sgweapomnznfacility1" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Commander! The sensors show that the ship has released defenisve forces, it know's we are here!"
+  },
+  
+  "sgspahghfce1" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Darn it, that's not good. You need to get to that Ruincleaver and fast."
+  },  
+  
+  "sgspanbnbce1" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "If this ship reaches the remains of earth and attacks the ruin, it might just end up sending fragments of the ruin across the stars."
+  },  
+  
+  "sgsjcjcjcpace1" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "You're almost here, keep going."
+  },  
+  
+  "sgweaponfacihfchcflity1" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "The Ruincleaver is all set up and ready to fire! It'll cut through the ships armour like a hot knife through Fluffalo milk butter!"
+  },
+  
+  "sgspacfhjchfce1" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "This is it, kid. Once you're inside, we won't be able to back you up. I hope you're ready. Make us proud."
+  },  
+  
+  // ------- fortress approach -------
+  
+  "sggggggchcfhggggggg" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Warning: Hull breach in power sector. Intruder Detected"
+  },
+  
+   "sgggggchfggg" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "What? Oh for heavens sake, it's you again. That must have been something powerful to break in here."
+  },
+  
+   "sgggghcbcggg" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Fortress, initiate lockdown and kill this pest already."
+  },
+  
+  "sggggggggxgxggggg" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Command confirmed. Target will be eradicated."
+  },
+  
+   "sggggsfsdggg" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Nothing is going to stop me now! Not you, not Shellguard, not the Ruin itself!"
+  },
+  
+  "sggggggggfghfhggggg" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Alert: Primary blast doors disenaged."
+  },
+  
+   "sgggfthgggg" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Send everything you've got at this pest. EVERYTHING."
+  },
+  
+  "sggggggggfiggggg" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Command confirmed: Loading reserve furniture into pressurized air cannons."
+  },
+  
+   "sgggggfgjfkgg" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Not litertally, you stupid machine! Get those defensive turrets online!"
+  },
+  
+   "survivorenfgjfjcounter4" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/androsglitch2.png",
+    "text" : "He- o- he- llo? Do you read- Hello?"
+  },
+  
+   "survivorencofgjfgunter3" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/androsglitch1.png",
+    "text" : "Ah! We're through. Atmos managed to boost the comms signal."
+  },
+
+   "survivojfgjfgrencounter3" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/androsglitch1.png",
+    "text" : "There's some heavy sniper turrets ahead. You're going to have to move slow and use cover to avoid being shot."
+  },
+
+   "sgggggghfdhgg" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Another one on the comms line? Gah, how many of you vermin are there?"
+  },
+  
+  "sggggggsagasgggggggg" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Listing Shellguard personnel database:"
+  },
+  
+  "sggggggggggasgasgggg" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Ranon Deg: Age 37. Cynder Oira: Age 26. Ho Lee Kao: Age 43. John Noble: Age 22. Greg st-"
+  },
+
+   "sgggggasgfasgg" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Enough, enough! Again, not literally!"
+  },  
+
+  "sggggggggggggggggggggsag" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Warning: Smashing the interface keyboard will not improve producitivy."
+  },
+  
+   "sgggggggg" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Don't you dare go in there!"
+  }, 
+  
+   "sggggggggggg" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "Fine, you've found my logs. It won't change a thing though. Nothing will."
+  }, 
+
+  "sgggggggggggggggggggg" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Red alert: Intruder approaching core room teleporter."
+  },
+  
+   "survivorenagsagcounter3" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/androsglitch1.png",
+    "text" : "That sounds important! Go destroy it!"
+  }
+
+}

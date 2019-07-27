@@ -1,0 +1,49 @@
+{
+  "objectName" : "sgvendingguard",
+  "colonyTags" : ["outpost","commerce"],
+  "rarity" : "Common",
+  "category" : "Shop",
+  "description" : "When you need more firepower on the go!",
+  "shortdescription" : "Guard-Mart Vending",
+  "race" : "generic",
+  "price" : 500,
+  "printable" : false,
+  
+  "iAction" : "OpenMerchantInterface",
+  "iData" : {
+    "config" : "/interface/windowconfig/vendingmachine.config",
+    "paneLayoutOverride" : {},
+    "buyFactor" : 1.0,
+    "sellFactor" : 0.2,
+    "items" : []
+  },
+
+  "apexDescription" : "Good place to get some weapons. Delightful.",
+  "avianDescription" : "The best place to buy firearms, bar none.",
+  "floranDescription" : "Floran can enemy presentss here! Also other things...",
+  "glitchDescription" : "Pleased. A great place to buy war supplies.",
+  "humanDescription" : "Rooty-tooty-Point-and-shooty-shop?.",
+  "hylotlDescription" : "Why is everything by them painted red?",
+  "novakidDescription" : "Boomsticks a-plenty.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "sgvendingguard.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgvendingguardlit.png:<color>.<frame>" } ],
+      
+      "imagePosition" : [-16, 0],
+      "frames" : 12,
+      "animationCycle" : 2.2,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "scripts" : [
+    "/objects/sgvending/sgvending.lua"
+  ],
+  "scriptDelta" : 60,
+  
+  "parentVendor" : "sgguardmart"
+}

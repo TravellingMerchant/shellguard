@@ -1,0 +1,56 @@
+{
+  "projectileName" : "sghomingturret",
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/gun/shellbulletimpact.ogg"
+      ]
+    }
+  ],
+  "image" : "sghomingturret.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 0.1
+  },
+  "animationCycle" : 0.25,
+  "pointLight" : true,
+  "lightColor" : [255, 0, 0],
+  "actionOnReap" : [
+	{
+      "action" : "spark"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "shellsmoke"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/fire_out.ogg" ]
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 7,
+      "backgroundRadius" : 7,
+      "explosiveDamageAmount" : 0.0,
+      "delaySteps" : 2
+    }
+
+  ],
+  "emitters" : [ "rocketsmoke" ],
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 7,
+  "power" : 60,
+  "damageKind" : "bow",
+  "scripts" : [ "sghomingturret.lua" ],
+  "baseHomingControlForce" : 2
+}

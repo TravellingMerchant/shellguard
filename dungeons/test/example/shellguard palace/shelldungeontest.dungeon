@@ -1,0 +1,135 @@
+{
+  "metadata" : {
+    "name" : "shellguardpalace",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "shellguardpalace2" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : false
+  },
+
+  "parts" : [
+    {
+      "name" : "shellguardpalace2",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "shellguardpalace2.json" ]
+    },
+    {
+      "name" : "havenbuilding1",
+      "rules" : [
+        [ "maxSpawnCount", [4] ],
+        [ "doNotConnectToPart", [ "havenbuilding1" ] ]
+      ],
+      "def" : [ "tmx", "havenbuilding1.json" ]
+    },
+    {
+      "name" : "havenbuilding2",
+      "rules" : [
+        [ "maxSpawnCount", [4] ],
+        [ "doNotConnectToPart", [ "havenbuilding2" ] ]
+      ],
+      "def" : [ "tmx", "havenbuilding2.json" ]
+    },
+	{
+      "name" : "havenbuilding3",
+      "rules" : [
+        [ "maxSpawnCount", [4] ],
+        [ "doNotConnectToPart", [ "havenbuilding3" ] ]
+      ],
+      "def" : [ "tmx", "havenbuilding3.json" ]
+    },
+    {
+      "name" : "havenbuilding4",
+      "rules" : [
+        [ "maxSpawnCount", [4] ],
+        [ "doNotConnectToPart", [ "havenbuilding4" ] ]
+      ],
+      "def" : [ "tmx", "havenbuilding4.json" ]
+    },
+	{
+      "name" : "havenbuilding5",
+      "rules" : [
+        [ "maxSpawnCount", [4] ],
+        [ "doNotConnectToPart", [ "havenbuilding5" ] ]
+      ],
+      "def" : [ "tmx", "havenbuilding5.json" ]
+    },
+    {
+      "name" : "havenbuilding6",
+      "rules" : [
+        [ "maxSpawnCount", [4] ],
+        [ "doNotConnectToPart", [ "havenbuilding6" ] ]
+      ],
+      "def" : [ "tmx", "havenbuilding6.json" ]
+    },
+    {
+      "name" : "havenbuilding7",
+      "rules" : [
+        [ "maxSpawnCount", [4] ],
+        [ "doNotConnectToPart", [ "havenbuilding7" ] ]
+      ],
+      "def" : [ "tmx", "havenbuilding7.json" ]
+    },
+    {
+      "name" : "havenbuilding8",
+      "rules" : [
+        [ "maxSpawnCount", [4] ],
+        [ "doNotConnectToPart", [ "havenbuilding8" ] ]
+      ],
+      "def" : [ "tmx", "havenbuilding8.json" ]
+    },
+    {
+      "name" : "havenbuilding9",
+      "rules" : [
+        [ "maxSpawnCount", [4] ],
+        [ "doNotConnectToPart", [ "havenbuilding9" ] ]
+      ],
+      "def" : [ "tmx", "havenbuilding9.json" ]
+    },
+    {
+      "name" : "havenbuilding10",
+      "rules" : [
+        [ "maxSpawnCount", [4] ],
+        [ "doNotConnectToPart", [ "havenbuilding10" ] ]
+      ],
+      "def" : [ "tmx", "havenbuilding10.json" ]
+    },
+    {
+      "name" : "havenbuilding11",
+      "rules" : [
+        [ "maxSpawnCount", [4] ],
+        [ "doNotConnectToPart", [ "havenbuilding11" ] ]
+      ],
+      "def" : [ "tmx", "havenbuilding11.json" ]
+    },
+    {
+      "name" : "havenbuilding12",
+      "rules" : [
+        [ "maxSpawnCount", [4] ],
+        [ "doNotConnectToPart", [ "havenbuilding12" ] ]
+      ],
+      "def" : [ "tmx", "havenbuilding11.json" ]
+    },
+    {
+      "name" : "havenbuilding13",
+      "rules" : [
+        [ "maxSpawnCount", [4] ],
+        [ "doNotConnectToPart", [ "havenbuilding13" ] ]
+      ],
+      "def" : [ "tmx", "havenbuilding13.json" ]
+    },
+    {
+      "name" : "havenbuilding14",
+      "rules" : [
+        [ "maxSpawnCount", [4] ],
+        [ "doNotConnectToPart", [ "havenbuilding14" ] ]
+      ],
+      "def" : [ "tmx", "havenbuilding14.json" ]
+    }
+  ]
+}

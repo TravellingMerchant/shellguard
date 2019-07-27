@@ -1,0 +1,34 @@
+{
+  "objectName" : "sgfuelpipe",
+  "colonyTags" : ["valuable","pretty"],
+  "rarity" : "legendary",
+  "category" : "decorative",
+  "price" : 1000,
+
+  "apexDescription" : "A heavy pipe structure",
+  "avianDescription" : "A heavy pipe structure",
+  "floranDescription" : "A heavy pipe ssssstructure",
+  "glitchDescription" : "Observant. A heavy pipe structure",
+  "humanDescription" : "A heavy pipe structure",
+  "hylotlDescription" : "A heavy pipe structure",
+  "novakidDescription" : "A heavy pipe structure",
+
+  "description" : "A heavy pipe structure.",
+  "shortdescription" : "Pipe Support",
+  "race" : "human",
+
+  "inventoryIcon" : "sgfuelpipe.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgfuelpipe.png:<color>",
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ ],
+      "collision" : "platform"
+
+    }
+  ]
+}

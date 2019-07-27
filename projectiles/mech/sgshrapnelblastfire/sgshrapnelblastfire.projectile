@@ -1,0 +1,35 @@
+{
+  "projectileName" : "sgshrapnelblastfire",
+  "physics" : "grenade",
+  "bounces" : 0,
+  "timeToLive" : 0.01,
+  "speed" : 50,
+  "damageKindImage" : "icon.png",
+  "image" : "sgshrapnelblastfire.png",
+  "animationCycle" : 0.1,
+  "frameNumber" : 2,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/vsmallregularexplosion/vsmallregularexplosionnodamage.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/projectiles/bullet_ricochet6.ogg",
+        "/sfx/projectiles/bullet_ricochet7.ogg",
+        "/sfx/projectiles/bullet_ricochet12.ogg",
+        "/sfx/projectiles/bullet_ricochet13.ogg"
+      ]
+    },
+    {
+      "action" : "projectile",
+      "type" : "shrapnel",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 0
+    }
+  ],
+  "power" : 0,
+  "damageKind" : "shotgunbullet"
+}

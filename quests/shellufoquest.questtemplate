@@ -1,0 +1,45 @@
+{
+  "id" : "shellufoquest",
+  "prerequisites" : ["sgmercmission1", "sgmercmission2"],
+  "title" : "^green;Prototype Problems",
+  "text" : "You've helped us out a few times, would you be able to help us again? There's been some alarms up the mountain and our own robots are attacking us! We were supposed to bring a new prototype robot online, but something went wrong! Can you help us fight off the rogue robots?",
+  "completionText" : "Great job taking out that blasted machine. The recovered Data shows that the failsafes were removed, but doesn't show how.. Still, here's your reward. If you need help, you can hire some of us using penguin doubloons.",
+  "moneyRange" : [50, 50],
+  "rewards" : [
+    [ [ "shellguardclawboss", 1 ], ["money", 5000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Commander Andros Galvanek^reset;",
+      "findGoal" : "Defeat the ^orange;rogue prototype robot^reset;",
+      "turnIn" : "Return to ^orange;Commander Andros Galvanek^reset;"
+    },
+
+    "warpEntityUid" : "Andros",
+    "warpAction" : "instanceworld:Shellguardufomission",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:shellufoquest",
+
+    "goalTrigger" : "message",
+    "triggerMessage" : "shellufoDeath",
+
+    "goalEntityUid" : "shellufo",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Andros"
+  }
+}

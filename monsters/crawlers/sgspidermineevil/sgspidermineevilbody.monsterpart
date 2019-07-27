@@ -1,0 +1,9 @@
+{
+  "name" : "sgspidermineevil",
+  "category" : "sgspidermineevil",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgspidermineevil.png"
+  }
+}

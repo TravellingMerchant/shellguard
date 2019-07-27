@@ -1,0 +1,78 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "gun" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {},
+          "reload" : {
+            "frames" : 4,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "gun" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "offset" : [0.75, 0],
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "gun" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "reload" : {
+              "properties" : {
+                "image" : "<partImage>:spin.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "gunfullbright" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "fullbright" : true,
+          "offset" : [0.75, 0],
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "gun" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "reload" : {
+              "properties" : {
+                "image" : "<partImage>:spin.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "weapon" : {},
+    "muzzle" : {}
+  },
+
+  "sounds" : {
+    "reload" : ["/sfx/objects/vault_close.ogg"],
+    "fire" : ["/sfx/gun/flyingshot.ogg"]
+  }
+}

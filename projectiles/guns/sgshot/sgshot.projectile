@@ -1,0 +1,42 @@
+{
+  "projectileName" : "sgshot",
+  "image" : "sgshot.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "physics" : "laser",
+  "bounces" : 0,
+  "lightColor" : [125, 100, 60],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "size" : 0.1,
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/sgtrailshot/sgtrailshot.animation",
+        "initialVelocity" : [0.0, 0.0],
+        "timeToLive" : 0.1,
+        "fullbright" : true,
+        "destructionTime" : 0.01,
+        "destructionAction" : "shrink",
+        "fade" : 0.01,
+        "layer" : "middle",
+        "position" : [0.0, 0.0]
+      }
+    }
+  ],
+  
+  "power" : 5.0,
+  "speed" : 150,
+  "damageKind" : "default"
+}

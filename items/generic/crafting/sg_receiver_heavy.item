@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_receiver_heavy",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/receiver/heavy.png",
+  "description" : "Heavy receiver. Fire rate increases at low energy. Two addon slots.",
+  "shortdescription" : "Heavy Receiver",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "receiver",
+    "id" : "heavy"
+  }
+}

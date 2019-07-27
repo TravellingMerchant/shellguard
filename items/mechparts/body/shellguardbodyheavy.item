@@ -1,0 +1,15 @@
+{
+  "itemName" : "shellguardbodyheavy",
+  "price" : 11200,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "category" : "mechPart",
+  "tooltipKind" : "mechbody",
+  "builder" : "/items/buildscripts/buildmechpart.lua",
+  "inventoryIcon" : "shellguardbodyheavy.png",
+  "description" : "Highly protective body.",
+  "shortdescription" : "SG Heavy Body",
+  "itemTags" : [ ],
+
+  "mechPart" : ["body", "shellguardbodyheavy"]
+}

@@ -1,0 +1,15 @@
+{
+  "itemName" : "sg_stock_rapidpistol",
+  "price" : 2500,
+  "maxStack" : 1,
+  "rarity" : "Uncommon",
+  "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/rapidpistol.png",
+  "description" : "A pistol grip made for rapid fire.",
+  "shortdescription" : "Rapid Pistol Grip",
+  "learnBlueprintsOnPickup" : [],
+  "itemTags" : [ "reagent" ],
+  "build" : {
+    "type" : "stock",
+    "id" : "rapidpistol"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "objectName" : "sgcorruptspike",
+  "colonyTags" : ["apex","apexresearchlab","evil"],
+  "rarity" : "Common",
+  "category" : "trap",
+  "price" : 45,
+
+  "description" : "BZZZZZZZZT, ouch.",
+  "shortdescription" : "Tesla Spike",
+  "race" : "apex",
+
+  "apexDescription" : "I probably don't want to touch that..",
+  "avianDescription" : "I probably don't want to touch that..",
+  "floranDescription" : "Floran probably doessssn't want to touch that..",
+  "glitchDescription" : "Fearful. I probably don't want to touch that..",
+  "humanDescription" : "I probably don't want to touch that..",
+  "hylotlDescription" : "I probably don't want to touch that..",
+  "novakidDescription" : "I probably don't want to touch that..",
+
+  "inventoryIcon" : "sgcorruptspikeicon.png",
+  "orientations" : [
+    
+    // PREVIEW ORIENTATION
+    {
+      "image" : "sgcorruptspike.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "frames" : 3,
+      "animationCycle" : 0.6,
+
+      "spaceScan" : 0.1,
+      "fgAnchors" : [ [0, 0] ]
+    },
+
+    // NORMAL ORIENTATIONS
+    {
+      "image" : "sgcorruptspike.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "frames" : 3,
+      "animationCycle" : 0.2,
+
+      "spaceScan" : 0.1,
+  
+      "touchDamage" : {
+        "poly" : [ [0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.0, 1.0] ],
+        "damage" : 99999,
+
+        "damageType" : "Environment",
+        "damageSourceKind" : "electric"
+      }
+    }
+  ],
+
+  "soundEffect" : "/sfx/objects/teslaspike.ogg",
+  "soundEffectRangeMultiplier" : 0.5,
+
+  "smashOnBreak" : true,
+  "smashSounds" : [ ],
+  "smashParticles" : [ { "count" : 6, "particle" : "steelshard" } ]
+}

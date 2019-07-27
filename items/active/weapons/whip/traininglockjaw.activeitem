@@ -1,0 +1,87 @@
+{
+  "itemName" : "traininglockjaw",
+  "price" : 0,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "Snags on to terrain and enemies, then can be swung from. This varient is slow and does no damage.",
+  "shortdescription" : "Shellguard Training Lockjaw",
+  //"tooltipKind" : "sword",
+  "category" : "Lockjaw",
+  "twoHanded" : false,
+  "itemTags" : ["weapon"],
+  "handGrip" : "wrap",
+
+  "inventoryIcon" : "trainingsglockjaw.png:idle",
+  "animation" : "sgwhip.animation",
+  "animationParts" : {
+    "weapon" : "trainingsglockjaw.png",
+    "weaponFullbright" : ""
+  },
+  "animationCustom" : {
+    "particleEmitters" : { "crack" : { "particles" : [ ]}},
+    "sounds" : {
+      "swing" : [ "/sfx/gun/lockjawshot.ogg", "/sfx/gun/lockjawshot2.ogg" ],
+      "crack" : [ "/sfx/gun/lockjawbite.ogg", "/sfx/gun/lockjawbite2.ogg", "/sfx/gun/lockjawbite3.ogg" ],
+      "disconnect" : [ "/sfx/objects/metalbarrel_break3.ogg", "/sfx/objects/metalbarrel_break1.ogg", "/sfx/objects/metalbarrel_break2.ogg" ]
+    }
+  },
+
+  "chain" : {
+    "startOffset" : [0.625, 0.0625],
+    "length" : [3, 18],
+    "segmentImage" : "/items/active/weapons/whip/sglockjawchain.png",
+    "endSegmentImage" : "/items/active/weapons/whip/sglockjawendtraining.png",
+    "segmentSize" : 0.375
+  },
+
+  "scripts" : [ "sgwhip.lua" ],
+
+  "primaryAbilityType" : "whipsnag",
+  "primaryAbility" : {
+    "cutoffRange": 18, //set to zero or false to disable
+    "minSwingDistance": 2.5,
+    "onlyPullWhenAboveAnchor": true,
+
+    "fireTime" : 1.0,
+    "chainDps" : 0.0, //only for the "normal" whipping
+    "crackDps" : 0.0,
+
+    "projectileType" : "lockjawchomp",
+    "projectileConfig" : {},
+
+    "DoTTickSpeed" : 1,
+    "dotProjectileType" : "",
+    "dotProjectileConfig" : {
+      "power" : 0,
+      "statusEffects" : []
+    },
+	
+    "doSpawnRandomRopeProjectiles": false,	
+    "ropeRandomProjectileSpeed": 1,
+    "ropeRandomProjectileType" : "",
+    "ropeRandomProjectileConfig" : {
+      "power" : 0.0,
+	  "speed" : 1
+    },
+    "minChainSegmentLengthToSpawnOn": 40, //in pixels, check your projectile's .frames
+    "spawnRopeProjectileWhileMoving": false,
+    "killRopeProjectileWhenMoving": false,
+
+    //possible values: "player", "npc", "monster", "object", "vehicle", "itemDrop", "projectile", "creature"
+    "targetTypes": [ "player", "npc", "monster", "vehicle" ],
+    "canSnagTerrain" : true,
+    "onlyPullWhileAirborne" : true,
+    "maxControlForce": 1000, //max pull strength
+
+    "controllable" : true,
+    "reelSpeed" : 15,
+    "airForce" : 150
+
+    //those don't do anything yet sorry I'm lazy
+    //"maxSnagTimeTerrain": false, //time in seconds or false to disable
+    //"maxSnagTimeEntities": false
+  },
+
+  "builder" : "/items/buildscripts/buildwhip.lua"
+}

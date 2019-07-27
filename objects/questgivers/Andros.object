@@ -1,0 +1,70 @@
+{
+  "objectName" : "Andros",
+  "colonyTags" : ["commerce"],
+  "rarity" : "Common",
+  "description" : "Commander Andros Galvanek",
+  "shortdescription" : " Commander Andros Galvanek",
+  "race" : "generic",
+  "printable" : false,
+
+  "apexDescription" : "This is Commander Andros Galvanek.",
+  "avianDescription" : "This is Commander Andros Galvanek.",
+  "floranDescription" : "This is Commander Andros Galvanek.",
+  "glitchDescription" : "This is Commander Andros Galvanek.",
+  "humanDescription" : "This is Commander Andros Galvanek.",
+  "hylotlDescription" : "This is Commander Andros Galvanek.",
+  "novakidDescription" : "This is Commander Andros Galvanek.",
+
+  "interactAction" : "OpenCraftingInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/craftingmerchant.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "Commander Andros Galvanek",
+        "subtitle" : "Hire Shellguard Mercenaries!",
+        "icon" : {
+          "file" : "/interface/bounty/Androsicon.png"
+        }
+      },
+      "imgPlayerMoneyIcon" : {
+        "visible" : false
+      },
+      "lblPlayerMoney" : {
+        "visible" : false
+      }
+    },
+    "filter" : [ "beakeasy" ]
+  },
+
+  "inventoryIcon" : "Androsicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "Andros.png:<color>.<frame>",
+      "imagePosition" : [-48, 0],
+      "frames" : 1,
+      "animationCycle" : 2,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "offeredQuests" : [
+    "sgmercmission1", "sgmercmission2", "shellufoquest", "sgmercmission3", "sgsurvivormission", "sgcolonyattack1", "sgspiderfactorymission", "sgweaponfacilitymission"
+  ],
+  "turnInQuests" : [
+    "sgmercmission1", "sgmercmission2", "shellufoquest", "sgmercmission3", "sgsurvivormission", "sgcolonyattack1", "sgspiderfactorymission", "sgweaponfacilitymission"
+  ],
+  
+  "uniqueId" : "Andros",
+  
+  "scripts" : [
+    "/objects/questgivers/Andros.lua"
+  ],
+  "scriptDelta" : 600,
+
+  "spawner" : {
+    "species" : "human",
+    "typeName" : "crewmembershellguardmerc"
+  }
+}

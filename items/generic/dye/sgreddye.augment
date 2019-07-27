@@ -1,0 +1,15 @@
+{
+  "itemName" : "sgreddye",
+  "price" : 100,
+  "rarity" : "Common",
+  "category" : "clothingDye",
+  "inventoryIcon" : "sgreddye.png",
+  "description" : "This coloured dye can be applied to a piece of armour or clothing with a right-click.",
+  "shortdescription" : "Shellguard Red Dye",
+
+  "dyeDirectives" : {"ffca8a":"A3381C","e0975c":"7B1500","a85636":"5B0600","6f2919":"3C0000"},
+
+  "radioMessagesOnPickup" : [ "pickupdye" ],
+
+  "scripts" : [ "/scripts/augments/dye.lua" ]
+}

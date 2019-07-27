@@ -1,0 +1,9 @@
+{
+  "name" : "gopstoppoptop-body",
+  "category" : "gopstoppoptop",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "gopstoppoptop-body.png"
+  }
+}

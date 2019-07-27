@@ -1,0 +1,14 @@
+{
+  "name" : "shellufoTeleportAttack",
+  "label" : "TELEPORT",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/shellufo/skills/shellufoTeleportAttack.lua" ],
+
+    "ufoTeleportAttack" : {
+      "cooldownTime" : 10,
+      "skillTime" : 2
+    }
+  }
+}

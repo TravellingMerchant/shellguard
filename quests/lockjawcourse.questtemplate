@@ -1,0 +1,45 @@
+{
+  "id" : "lockjawcourse",
+  "prerequisites" : [],
+  "title" : "^green;Lockjaw Training",
+  "text" : "Hello there! Do you want to attempt my Lockjaw training course? You'll get some free training Lockjaws out of it.",
+  "completionText" : "Great job! Come back to me again if you want more Lockjaws!",
+  "moneyRange" : [1200, 1200],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], [ "money", 500 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/atmos/iconportrait.png"} ],
+        "title" : "Peter Atmos"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/atmos/iconportrait.png"} ],
+        "title" : "Peter Atmos"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Engineer Peter Atmos^reset;",
+      "findGoal" : "Complete the Lockjaw course",
+      "turnIn" : "Return to ^orange;Engineer Peter Atmos^reset;"
+    },
+
+    "warpEntityUid" : "sgatmos",
+    "warpAction" : "instanceworld:lockjawcourse",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:trainingcourse",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "sglockjawcourse",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgatmos"
+  }
+}

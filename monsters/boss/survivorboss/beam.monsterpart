@@ -1,0 +1,9 @@
+{
+  "name" : "survivorboss",
+  "category" : "survivorboss",
+  "type" : "beam",
+
+  "frames" : {
+    "beam" : "beam.png"
+  }
+}

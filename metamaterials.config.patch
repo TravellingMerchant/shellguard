@@ -1,0 +1,12 @@
+[
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "name": "waterTransparentDoor",
+      "materialId": 65023,
+      "collisionKind": "dynamic",
+      "blocksLiquidFlow": false
+    }
+  }
+]

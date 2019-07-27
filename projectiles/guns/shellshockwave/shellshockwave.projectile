@@ -1,0 +1,54 @@
+{
+  "projectileName" : "shellshockwave",
+  "image" : "shellshockwave.png",
+  "animationCycle" : 0.4,
+  "power" : 12,
+  "frameNumber" : 4,
+  "speed" : 0.001,
+  "timeToLive" : 0.4,
+  "orientationLocked" : true,
+  "damagePoly" : [ [-60,-5], [60, -5], [60, 15], [-60, 15] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : false,
+  "damageKind" : "slash",
+    "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/regularexplosion2.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "homingbombshard",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 1,
+      "angleAdjust" : 85
+    },
+    {
+      "action" : "projectile",
+      "type" : "homingbombshard",
+      "inheritDamageFactor" : 1,
+      "angleAdjust" : 95
+    },
+    {
+      "action" : "projectile",
+      "type" : "homingbombshard",
+      "inheritDamageFactor" : 1,
+      "angleAdjust" : 80
+    },
+    {
+      "action" : "projectile",
+      "type" : "homingbombshard",
+      "inheritDamageFactor" : 1,
+      "angleAdjust" : 100
+    },
+    {
+      "action" : "projectile",
+      "type" : "homingbombshard",
+      "inheritDamageFactor" : 1,
+      "angleAdjust" : 90
+    }
+
+  ]
+}

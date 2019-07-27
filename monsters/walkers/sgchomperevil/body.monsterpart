@@ -1,0 +1,9 @@
+{
+  "name" : "sgchomperevil",
+  "category" : "sgchomperevil",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgchomperevil.png"
+  }
+}

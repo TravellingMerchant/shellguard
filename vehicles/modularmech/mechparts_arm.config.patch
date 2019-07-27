@@ -1,0 +1,653 @@
+[
+  {
+    "op": "add",
+    "path": "/sgmechartillery",
+    "value": {
+      "stats": {
+        "power": 6,
+        "energy": 6
+      },
+      "partParameters": {
+        "script": "/vehicles/modularmech/armscripts/gunarm.lua",
+        "armClass": "GunArm",
+        "rotationLimits": [
+          -1.75,
+          1.75
+        ],
+        "fireOffset": [
+          7.3,
+          -0.1
+        ],
+        "extendTime": 2,
+        "fireTime": 2,
+        "projectileType": "sgmechartilleryround",
+        "projectileParameters": {
+          "power": 100,
+          "speed": 100
+        }
+      },
+      "partImages": {
+        "<armName>": "arm/sgmechartillery.png",
+        "<armName>Fullbright": "arm/sgmechartillery_fullbright.png"
+      },
+      "defaultPrimaryColors": [
+      "A3381C",
+      "7B1500",
+      "5B0600",
+      "3C0000"
+      ],
+      "defaultSecondaryColors": [
+      "555555",
+      "3d3d3d",
+      "2f2f2f",
+      "202020"
+      ],
+      "animationCustom": {
+        "particleEmitters": {
+          "<armName>Fire": {
+            "active": false,
+            "burstCount": 8,
+            "anchorPart": "<armName>",
+            "offsetRegion": [
+              7.3,
+              2.875,
+              7.3,
+              2.375
+            ],
+            "particles": [
+              {
+                "particle": {
+                  "type": "ember",
+                  "size": 1.2,
+                  "color": [
+                    255,
+                    200,
+                    0,
+                    255
+                  ],
+                  "light": [
+                    100,
+                    100,
+                    50
+                  ],
+                  "fullbright": true,
+                  "fade": 0.9,
+                  "initialVelocity": [
+                    10,
+                    0
+                  ],
+                  "finalVelocity": [
+                    0,
+                    -50
+                  ],
+                  "approach": [
+                    0,
+                    20
+                  ],
+                  "timeToLive": 0.6,
+                  "layer": "middle",
+                  "variance": {
+                    "initialVelocity": [
+                      5,
+                      5
+                    ],
+                    "timeToLive": 0.2
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "sounds": {
+          "<armName>Fire": [
+            "/sfx/gun/mech/sgmechartilleryfire.ogg"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/sgmechrailgun",
+    "value": {
+      "stats": {
+        "power": 6,
+        "energy": 6
+      },
+      "partParameters": {
+        "script": "/vehicles/modularmech/armscripts/gunarm.lua",
+        "armClass": "GunArm",
+        "rotationLimits": [
+          -1.75,
+          1.75
+        ],
+        "fireOffset": [
+          7.3,
+          -0.1
+        ],
+        "extendTime": 2,
+        "fireTime": 2,
+        "projectileType": "sgrailgunshot",
+        "projectileParameters": {
+          "power": 100,
+          "speed": 100
+        }
+      },
+      "partImages": {
+        "<armName>": "arm/sgmechrailgun.png",
+        "<armName>Fullbright": "arm/sgmechrailgun_fullbright.png"
+      },
+      "defaultPrimaryColors": [
+      "A3381C",
+      "7B1500",
+      "5B0600",
+      "3C0000"
+      ],
+      "defaultSecondaryColors": [
+      "555555",
+      "3d3d3d",
+      "2f2f2f",
+      "202020"
+      ],
+      "animationCustom": {
+        "particleEmitters": {
+          "<armName>Fire": {
+            "active": false,
+            "burstCount": 8,
+            "anchorPart": "<armName>",
+            "offsetRegion": [
+              7.3,
+              2.875,
+              7.3,
+              2.375
+            ],
+            "particles": [
+              {
+                "particle": {
+                  "type": "ember",
+                  "size": 1.2,
+                  "color": [
+                    255,
+                    200,
+                    0,
+                    255
+                  ],
+                  "light": [
+                    100,
+                    100,
+                    50
+                  ],
+                  "fullbright": true,
+                  "fade": 0.9,
+                  "initialVelocity": [
+                    10,
+                    0
+                  ],
+                  "finalVelocity": [
+                    0,
+                    -50
+                  ],
+                  "approach": [
+                    0,
+                    20
+                  ],
+                  "timeToLive": 0.6,
+                  "layer": "middle",
+                  "variance": {
+                    "initialVelocity": [
+                      5,
+                      5
+                    ],
+                    "timeToLive": 0.2
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "sounds": {
+          "<armName>Fire": [
+            "/sfx/turret/sglaserartillery1.ogg"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/sgquadshot",
+    "value": {
+      "stats": {
+        "power": 3,
+        "energy": 3
+      },
+      "partParameters": {
+        "script": "/vehicles/modularmech/armscripts/gatlingarm.lua",
+        "armClass": "GatlingArm",
+        "rotationLimits": [
+          -1.75,
+          1.75
+        ],
+        "fireOffset": [
+          7.5,
+          -0.125
+        ],
+        "windupTime": 0.5,
+        "fireTime": 1,
+        "projectileType": "tempbullet",
+        "projectileParameters": {
+          "power": 50
+        },
+        "projectileCount": 4,
+        "projectileSpacing": [
+          0,
+          0.25
+        ],
+        "projectileInaccuracy": 0
+      },
+      "partImages": {
+        "<armName>": "arm/sgquadshot.png",
+        "<armName>Fullbright": "arm/sgquadshot_fullbright.png"
+      },
+      "defaultPrimaryColors": [
+      "A3381C",
+      "7B1500",
+      "5B0600",
+      "3C0000"
+      ],
+      "defaultSecondaryColors": [
+      "555555",
+      "3d3d3d",
+      "2f2f2f",
+      "202020"
+      ],
+      "animationCustom": {
+        "animatedParts": {
+          "stateTypes": {
+            "<armName>": {
+              "states": {
+                "windup": {
+                  "properties": {
+                    "persistentSound": "/sfx/gun/mech_gatling_windup.ogg",
+                    "persistentSoundRangeMultiplier": 1,
+                    "persistentSoundStopTime": 0.2
+                  }
+                },
+                "active": {
+                  "cycle": 1
+                },
+                "winddown": {
+                  "properties": {
+                    "persistentSound": "/sfx/gun/mech_gatling_winddown.ogg",
+                    "persistentSoundRangeMultiplier": 1,
+                    "persistentSoundStopTime": 0.2
+                  }
+                }
+              }
+            }
+          }
+        },
+        "sounds": {
+          "<armName>Fire": [
+            "/sfx/gun/tankshot.ogg"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/sgmechgattling",
+    "value": {
+      "stats": {
+        "power": 5,
+        "energy": 5
+      },
+      "partParameters": {
+        "script": "/vehicles/modularmech/armscripts/gatlingarm.lua",
+        "armClass": "GatlingArm",
+        "rotationLimits": [
+          -1.75,
+          1.75
+        ],
+        "fireOffset": [
+          7.625,
+          -1
+        ],
+        "windupTime": 0.5,
+        "fireTime": 0.15,
+        "projectileType": "tempbullet",
+        "projectileParameters": {
+          "power": 50
+        },
+        "projectileCount": 1,
+        "projectileInaccuracy": 0.02
+      },
+      "partImages": {
+        "<armName>": "arm/sgmechgattling.png",
+        "<armName>Fullbright": "arm/sgmechgattling_fullbright.png"
+      },
+      "defaultPrimaryColors": [
+      "A3381C",
+      "7B1500",
+      "5B0600",
+      "3C0000"
+      ],
+      "defaultSecondaryColors": [
+      "555555",
+      "3d3d3d",
+      "2f2f2f",
+      "202020"
+      ],
+      "animationCustom": {
+        "animatedParts": {
+          "stateTypes": {
+            "<armName>": {
+              "states": {
+                "windup": {
+                  "properties": {
+                    "persistentSound": "/sfx/gun/mech_gatling_windup.ogg",
+                    "persistentSoundRangeMultiplier": 1,
+                    "persistentSoundStopTime": 0.2
+                  }
+                },
+                "active": {
+                  "cycle": 0.15
+                },
+                "winddown": {
+                  "properties": {
+                    "persistentSound": "/sfx/gun/mech_gatling_winddown.ogg",
+                    "persistentSoundRangeMultiplier": 1,
+                    "persistentSoundStopTime": 0.2
+                  }
+                }
+              }
+            }
+          }
+        },
+        "sounds": {
+          "<armName>Fire": [
+            "/sfx/gun/tankshot.ogg"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/sgmechrocket",
+    "value": {
+      "stats": {
+        "power": 5,
+        "energy": 5
+      },
+      "partParameters": {
+        "script": "/vehicles/modularmech/armscripts/gatlingarm.lua",
+        "armClass": "GatlingArm",
+        "rotationLimits": [
+          -1.75,
+          1.75
+        ],
+        "fireOffset": [
+          7.625,
+          -0.925
+        ],
+        "windupTime": 0.5,
+        "fireTime": 0.8,
+        "projectileType": "swarmadvancedrockethoming",
+        "projectileParameters": {
+          "power": 25
+        },
+        "projectileCount": 1,
+        "projectileInaccuracy": 0.02
+      },
+      "partImages": {
+        "<armName>": "arm/sgmechrocket.png",
+        "<armName>Fullbright": "arm/sgmechrocket_fullbright.png"
+      },
+      "defaultPrimaryColors": [
+      "A3381C",
+      "7B1500",
+      "5B0600",
+      "3C0000"
+      ],
+      "defaultSecondaryColors": [
+      "555555",
+      "3d3d3d",
+      "2f2f2f",
+      "202020"
+      ],
+      "animationCustom": {
+        "animatedParts": {
+          "stateTypes": {
+            "<armName>": {
+              "states": {
+                "windup": {
+                  "properties": {
+                    "persistentSound": "/sfx/gun/mech_gatling_windup.ogg",
+                    "persistentSoundRangeMultiplier": 1,
+                    "persistentSoundStopTime": 0.2
+                  }
+                },
+                "active": {
+                  "cycle": 0.8
+                },
+                "winddown": {
+                  "properties": {
+                    "persistentSound": "/sfx/gun/mech_gatling_winddown.ogg",
+                    "persistentSoundRangeMultiplier": 1,
+                    "persistentSoundStopTime": 0.2
+                  }
+                }
+              }
+            }
+          }
+        },
+        "sounds": {
+          "<armName>Fire": [
+            "/sfx/gun/cannonfire1.ogg"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/sgmechgiantlaser",
+    "value": {
+      "stats": {
+        "power": 6,
+        "energy": 6
+      },
+      "partParameters": {
+        "script": "/vehicles/modularmech/armscripts/beamarm.lua",
+        "armClass": "BeamArm",
+        "rotationLimits": [
+          -1.75,
+          1.75
+        ],
+        "fireOffset": [
+          10.5,
+          0.375
+        ],
+        "windupTime": 1,
+        "fireTime": 0.75,
+        "winddownTime": 1,
+        "repeatFire": false,
+        "lockAim": false,
+        "beamSourceOffset": [
+          10.0,
+          1.125
+        ],
+        "beamHeight": 24,
+        "beamLength": 60,
+        "beamParticleDensity": 5,
+        "beamTileDamage": 0,
+        "beamTileDamageDepth": 0
+      },
+      "damageSources": {
+        "<armName>Beam": {
+          "enabled": false,
+          "attachToPart": "<armName>",
+          "poly": [
+            [
+              10.5,
+              1.625
+            ],
+            [
+              10.5,
+              3.625
+            ],
+            [
+              64.5,
+              3.625
+            ],
+            [
+              160.5,
+              3.625
+            ],
+            [
+              160.5,
+              1.625
+            ]
+          ],
+          "damage": 200,
+          "damageSourceKind": "plasma",
+          "damageRepeatTimeout": 0.3,
+          "damageRepeatGroup": "<armName>Beam",
+          "knockback": 0,
+          "rayCheck": true
+        }
+      },
+      "partImages": {
+        "<armName>": "arm/sgmechgiantlaser.png",
+        "<armName>Fullbright": "arm/sgmechgiantlaser_fullbright.png"
+      },
+      "defaultPrimaryColors": [
+      "A3381C",
+      "7B1500",
+      "5B0600",
+      "3C0000"
+      ],
+      "defaultSecondaryColors": [
+      "555555",
+      "3d3d3d",
+      "2f2f2f",
+      "202020"
+      ],
+      "animationCustom": {
+        "animatedParts": {
+          "stateTypes": {
+            "<armName>": {
+              "states": {
+                "windup": {
+                  "cycle": 1
+                },
+                "active": {
+                  "cycle": 0.75
+                },
+                "winddown": {
+                  "cycle": 1
+                }
+              }
+            },
+            "<armName>Beam": {
+              "default": "off",
+              "states": {
+                "off": {},
+                "fire": {
+                  "frames": 5,
+                  "cycle": 0.5,
+                  "mode": "transition",
+                  "transition": "off"
+                }
+              }
+            }
+          },
+          "parts": {
+            "<armName>Beam": {
+              "properties": {
+                "zLevel": 10,
+                "offset": [
+                  10.0,
+                  1.125
+                ],
+                "anchorPart": "<armName>",
+                "fullbright": true,
+                "centered": false,
+                "transformationGroups": [
+                  "<armName>Beam"
+                ]
+              },
+              "partStates": {
+                "<armName>Beam": {
+                  "fire": {
+                    "properties": {
+                      "image": "/vehicles/modularmech/beam/sggiantlaser.png:<frame>"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "particleEmitters": {
+          "<armName>Beam": {
+            "active": false,
+            "anchorPart": "<armName>",
+            "particles": [
+              {
+                "particle": {
+                  "type": "ember",
+                  "fullbright": true,
+                  "color": [
+                    253,
+                    143,
+                    77,
+                    150
+                  ],
+                  "light": [
+                    218,
+                    83,
+                    2
+                  ],
+                  "fade": 0.5,
+                  "destructionAction": "shrink",
+                  "destructionTime": 0.25,
+                  "initialVelocity": [
+                    0,
+                    0
+                  ],
+                  "timeToLive": 0.4,
+                  "layer": "middle",
+                  "variance": {
+                    "initialVelocity": [
+                      1,
+                      1
+                    ],
+                    "timeToLive": 2
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "transformationGroups": {
+          "<armName>Beam": {}
+        },
+        "sounds": {
+          "<armName>Windup": [
+            "/sfx/gun/mech_beamsniper_windup2.ogg"
+          ],
+          "<armName>Winddown": [],
+          "<armName>WinddownNoFire": [
+            "/sfx/gun/mech_beamsniper_winddown2.ogg"
+          ],
+          "<armName>Fire": [
+            "/sfx/gun/mech_beamsniper_fire1.ogg"
+          ]
+        }
+      }
+    }
+  }
+]

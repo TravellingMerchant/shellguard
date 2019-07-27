@@ -1,0 +1,49 @@
+{
+  "name": "survivorboss-facecenter",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/position.lua",
+    "/scripts/behavior/bdata.lua",
+    "/scripts/actions/movement.lua"
+  ],
+  "parameters": {},
+  "root": {
+    "title": "Reset",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "distance",
+        "type": "action",
+        "name": "distance",
+        "parameters": {
+          "from": {"key": "self"},
+          "to": {"key": "spawn"}
+        },
+        "output": {
+          "vector": "toSpawn"
+        }
+      },
+      {
+        "title": "breakVector",
+        "type": "action",
+        "name": "breakVector",
+        "parameters": {
+          "vector": {"key": "toSpawn"}
+        },
+        "output": {
+          "x": "spawnX"
+        }
+      },
+      {
+        "title": "faceDirection",
+        "type": "action",
+        "name": "faceDirection",
+        "parameters": {
+          "direction": {"key": "spawnX"}
+        }
+      }
+    ]
+  }
+}

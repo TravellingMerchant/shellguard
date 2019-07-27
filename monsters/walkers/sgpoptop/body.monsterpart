@@ -1,0 +1,9 @@
+{
+  "name" : "sgpoptop",
+  "category" : "sgpoptop",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgpoptop.png"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "projectileName" : "sgclusterrocket",
+  "physics" : "grenade",
+  "bounces" : -1,
+  "timeToLive" : 0.7,
+  "image" : "SGclusterrocket.png",
+  "damageKindImage" : "icon.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 4,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/regularexplosion2.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "sghomingcluster",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "sghomingcluster",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : -35
+    },
+    {
+      "action" : "projectile",
+      "type" : "sghomingcluster",
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 35
+    }
+
+  ],
+  "power" : 50,
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

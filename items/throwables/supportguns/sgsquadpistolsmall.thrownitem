@@ -1,0 +1,33 @@
+{
+  "itemName" : "sgsquadpistolsmall",
+  "price" : 1500,
+  "rarity" : "uncommon",
+  "category" : "throwableItem",
+  "inventoryIcon" : "sgsquadpistolsmall.png",
+  "image" : "sgsquadpistolsmall.png",
+  "shortdescription" : "Small Squad Flare",
+  "description" : "Single use flare to call in a small Shellguard squad. Must be used outside.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.0,
+  "cooldown" : 1.5,
+
+  "projectileType" : "sgsmallsquadflare",
+  "projectileConfig" : {
+    "speed" : 50,
+    "power" : 0.0,
+    "knockback" : 20,
+
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  }
+
+}

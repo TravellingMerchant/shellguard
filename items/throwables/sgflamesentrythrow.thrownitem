@@ -1,0 +1,33 @@
+{
+  "itemName" : "sgflamesentrythrow",
+  "price" : 500,
+  "rarity" : "uncommon",
+  "category" : "throwableItem",
+  "inventoryIcon" : "sgflamesentrythrow.png",
+  "image" : "sgflamesentrythrow.png",
+  "shortdescription" : "Disposable Flame Sentry",
+  "description" : "A single use flamethrower Sentry. Low health and tiny range but great firepower.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.0,
+  "cooldown" : 1.5,
+
+  "projectileType" : "sgflamesentryspawnshot",
+  "projectileConfig" : {
+    "speed" : 5,
+    "power" : 0.0,
+    "knockback" : 20,
+
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  }
+
+}

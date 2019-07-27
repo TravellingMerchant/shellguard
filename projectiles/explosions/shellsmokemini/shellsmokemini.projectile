@@ -1,0 +1,14 @@
+{
+  "projectileName" : "shellsmokemini",
+  "image" : "shellsmokemini.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 8,
+  "speed" : 0,
+  "fullbright" : true,
+  "damagePoly" : [ [-18, 0], [-12, -12], [0, -18], [12, -12], [18, 0], [12, 12], [0, 18], [-12, 12] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "damageKind" : "default"
+}

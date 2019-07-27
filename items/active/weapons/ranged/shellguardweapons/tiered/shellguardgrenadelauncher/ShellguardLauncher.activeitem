@@ -1,0 +1,91 @@
+{
+  "itemName" : "ShellGuardGrenadeLauncher",
+  "price" : 7000,
+  "inventoryIcon" : "ShellGuardGrenadeLauncher.png",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Fires long-life proximity mines from a compact launcher!",
+  "shortdescription" : "Shellguard Mine Launcher",
+  "level" : 1,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Grenade Launcher",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : false,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "ShellGuardGrenadeLauncher.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/PlasmiteRPGLaunch.ogg" ]
+    }
+  },
+
+  "baseOffset" : [0.3, 0.3],
+  "muzzleOffset" : [1.6, 0.1],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 1.0,
+    "baseDps" : 20.0,
+    "energyUsage" : 65.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.05,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -20,
+        "weaponRotation" : 30,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "shellgrenadeproximity",
+    "projectileParameters" : { 
+      "knockback" : 6
+    }
+  },
+
+  "altAbilityType" : "",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "eliteGuardGrenadeLauncher.png",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/shellguardgrenadelauncher/eliteGuardGrenadeLauncher.png"
+    },
+    "shortdescription" : "Elite Mine Launcher ^yellow;^reset;"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id" : "sgspiderfactorymission",
+  "prerequisites" : ["sgcolonyattack1"],
+  "title" : "^green;Factory Investigation",
+  "text" : "The only lead we could get is his old armour. Ironwatch, being the elite units of Shellguard, had some expensive gear. We managed to track down where it was produced to a now abandoned factory on a fairly hidden planet. I need you to go there and see if there's any clues.",
+  "completionText" : "That factory was bigger then we could ever have imagined yet somehow half of it has just managed to fly into space! By the looks of it, it's headed straight towards earth! We need to stop it and fast!",
+  "moneyRange" : [1200, 1200],
+  "rewards" : [
+    [ [ "sgelectromace", 1 ], ["money", 4000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Commander Andros Galvanek^reset;",
+      "findGoal" : "Investigate the old factory.",
+      "turnIn" : "Return to ^orange;Commander Andros Galvanek^reset;"
+    },
+
+    "warpEntityUid" : "Andros",
+    "warpAction" : "instanceworld:shellguardspiderfactory",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgmercmission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgspidertele",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Andros"
+  }
+}

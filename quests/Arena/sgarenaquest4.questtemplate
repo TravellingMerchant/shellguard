@@ -1,0 +1,45 @@
+{
+  "id" : "sgarenaquest4",
+  "prerequisites" : ["sgarenaquest3"],
+  "title" : "^green;Nanotrasen Arena 4",
+  "text" : "The next fight doesn't seem too hard. It's just a few poptops. Good luck though!",
+  "completionText" : "Yikes! Wasn't expecting them to have guns. Nice fight!",
+  "moneyRange" : [1000, 1000],
+  "rewards" : [
+    [ [ "sgpoptopclaw", 1 ], ["money", 1000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/arenaman/sgarenamanicon.png"} ],
+        "title" : "Arena Fan"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/arenaman/sgarenamanicon.png"} ],
+        "title" : "Arena Fan"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Enter the ^orange;Nanotrasen Arena^reset;",
+      "findGoal" : "Win in the Arena!",
+      "turnIn" : "Return to ^orange;the Arena Fan^reset;"
+    },
+
+    "warpEntityUid" : "Arenaman",
+    "warpAction" : "instanceworld:sgarena4",
+    "warpDialog" : "/interface/confirmation/sgarenateleportconfirmation.config:sgarenaquest",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgarenatele4",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Arenaman"
+  }
+}

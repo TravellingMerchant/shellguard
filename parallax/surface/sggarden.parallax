@@ -1,0 +1,326 @@
+{
+  "verticalOrigin" : -15,
+  
+  "layers" : [
+    {
+      "kind" : "divider/ice",
+      "offset" : [0, 400],
+      "nohueshift" : true,
+      "lightMapped" : true,
+      "parallax" : 1.199
+    },
+    {
+      "kind" : "tile/ice",
+      "nohueshift" : true,
+      "lightMapped" : true,
+      "repeatY" : true,
+      "tileLimitTop" : 325,
+      "parallax" : 1.2
+    },
+
+    {
+      "kind" : "northern",
+      "offset" : [0, 375],
+      "parallax" : 30,
+      "unlit" : true
+    },
+    {
+      "kind" : "arcticoceanfloorback",
+      "baseCount" : 1,
+      "offset" : [0, 400],
+      "parallax" : 13,
+      "fadePercent" : 0.3
+    },
+    {
+      "kind" : "snowback",
+      "baseCount" : 1,
+      "offset" : [0, 460],
+      "parallax" : 12,
+      "fadePercent" : 0.3
+    },
+    {
+      "kind" : "foliage/treefront",
+      "offset" : [0, 375],
+      "parallax" : 2.5,
+      "directives" : "?saturation=-5"
+    },
+    {
+      "kind" : "foliage/treefront",
+      "offset" : [0, 420],
+      "parallax" : 4.5,
+      "directives" : "?saturation=-5"
+    },
+    {
+      "kind" : "foliage/treeback",
+      "offset" : [0, 440],
+      "parallax" : 6.5,
+      "directives" : "?brightness=-10?saturation=-10"
+    },
+    {
+      "kind" : "foliage/treeback",
+      "offset" : [0, 485],
+      "parallax" : 8.5,
+      "directives" : "?brightness=-20?saturation=-15"
+    },
+    {
+      "kind" : "snowfront",
+      "baseCount" : 2,
+      "offset" : [0, 535],
+      "parallax" : 2.5,
+      "fadePercent" : 0.2
+    },
+    {
+      "kind" : "snowfront",
+      "offset" : [0, 620],
+      "parallax" : 1.5,
+      "fadePercent" : 0.2
+    },
+
+    {
+      "kind" : "grassbelow1",
+      "directives" : "?brightness=-10?saturation=-40",
+      "offset" : [0, 190],
+      "parallax" : [1.8, 2]
+    },
+    {
+      "kind" : "grassbelow2",
+      "directives" : "?brightness=-10?saturation=-40",
+      "offset" : [0, 190],
+      "parallax" : [1.8001, 2]
+    },
+    {
+      "kind" : "grassbelow3",
+      "directives" : "?brightness=-10?saturation=-40",
+      "offset" : [0, 190],
+      "parallax" : [1.8002, 2]
+    },
+    {
+      "kind" : "grassbelow3",
+      "directives" : "?brightness=-10?saturation=-40",
+      "offset" : [0, 330],
+      "parallax" : [1.8, 2]
+    },
+    {
+      "kind" : "grass2",
+      "directives" : "?brightness=-10?saturation=-40",
+      "offset" : [0, 50],
+      "parallax" : [1.8, 2]
+    },
+    {
+      "kind" : "grass2",
+      "directives" : "?brightness=-10?saturation=-40",
+      "offset" : [0, 50],
+      "parallax" : [2, 2.2]
+    },
+    {
+      "kind" : "grass3",
+      "directives" : "?brightness=-10?saturation=-40",
+      "offset" : [0, 50],
+      "parallax" : [3, 2.4]
+    },
+
+ // Day Clouds
+
+    {
+      "kind" : "clouds3",
+      "baseCount" : 2,
+      "offset" : [0, 240],
+      "parallax" : 9,
+      "minSpeed" : 1000,
+      "maxSpeed" : 5000,
+      "fadePercent" : 0.0,
+      "unlit" : true,
+      "timeOfDayCorrelation" : "dayCloudVisible"
+    },
+    {
+      "kind" : "clouds2",
+      "baseCount" : 2,
+      "offset" : [0, 280],
+      "parallax" : 14,
+      "minSpeed" : 500,
+      "maxSpeed" : 2500,
+      "fadePercent" : 0.0,
+      "unlit" : true,
+      "timeOfDayCorrelation" : "dayCloudVisible"
+    },
+    {
+      "kind" : "clouds1",
+      "baseCount" : 2,
+      "offset" : [0, 300],
+      "parallax" : 6,
+      "minSpeed" : 1000,
+      "maxSpeed" : 5000,
+      "fadePercent" : 0.0,
+      "unlit" : true,
+      "timeOfDayCorrelation" : "dayCloudVisible"
+    },
+    {
+      "kind" : "clouds3",
+      "baseCount" : 2,
+      "offset" : [0, 120],
+      "parallax" : 9,
+      "minSpeed" : 1000,
+      "maxSpeed" : 5000,
+      "fadePercent" : 0.0,
+      "unlit" : true,
+      "timeOfDayCorrelation" : "dayCloudVisible"
+    },
+    {
+      "kind" : "clouds2",
+      "baseCount" : 2,
+      "offset" : [0, 160],
+      "parallax" : 14,
+      "minSpeed" : 500,
+      "maxSpeed" : 2500,
+      "fadePercent" : 0.0,
+      "unlit" : true,
+      "timeOfDayCorrelation" : "dayCloudVisible"
+    },
+    {
+      "kind" : "clouds1",
+      "baseCount" : 2,
+      "offset" : [0, 200],
+      "parallax" : 6,
+      "minSpeed" : 1000,
+      "maxSpeed" : 5000,
+      "fadePercent" : 0.0,
+      "unlit" : true,
+      "timeOfDayCorrelation" : "dayCloudVisible"
+    },
+    {
+      "kind" : "clouds3",
+      "baseCount" : 2,
+      "offset" : [0, 2],
+      "parallax" : 9,
+      "minSpeed" : 1000,
+      "maxSpeed" : 5000,
+      "fadePercent" : 0.0,
+      "unlit" : true,
+      "timeOfDayCorrelation" : "dayCloudVisible"
+    },
+    {
+      "kind" : "clouds2",
+      "baseCount" : 2,
+      "offset" : [0, 40],
+      "parallax" : 14,
+      "minSpeed" : 500,
+      "maxSpeed" : 2500,
+      "fadePercent" : 0.0,
+      "unlit" : true,
+      "timeOfDayCorrelation" : "dayCloudVisible"
+    },
+    {
+      "kind" : "clouds1",
+      "baseCount" : 2,
+      "offset" : [0, 80],
+      "parallax" : 6,
+      "minSpeed" : 1000,
+      "maxSpeed" : 5000,
+      "fadePercent" : 0.0,
+      "unlit" : true,
+      "timeOfDayCorrelation" : "dayCloudVisible"
+    },
+
+// Night Clouds
+
+    {
+      "kind" : "clouds3",
+      "baseCount" : 2,
+      "offset" : [0, 240],
+      "parallax" : 9,
+      "minSpeed" : 1000,
+      "maxSpeed" : 5000,
+      "fadePercent" : 0.0,
+      "unlit" : false,
+      "timeOfDayCorrelation" : "nightCloudVisible"
+    },
+    {
+      "kind" : "clouds2",
+      "baseCount" : 2,
+      "offset" : [0, 280],
+      "parallax" : 14,
+      "minSpeed" : 500,
+      "maxSpeed" : 2500,
+      "fadePercent" : 0.0,
+      "unlit" : false,
+      "timeOfDayCorrelation" : "nightCloudVisible"
+    },
+    {
+      "kind" : "clouds1",
+      "baseCount" : 2,
+      "offset" : [0, 300],
+      "parallax" : 6,
+      "minSpeed" : 1000,
+      "maxSpeed" : 5000,
+      "fadePercent" : 0.0,
+      "unlit" : false,
+      "timeOfDayCorrelation" : "nightCloudVisible"
+    },
+    {
+      "kind" : "clouds3",
+      "baseCount" : 2,
+      "offset" : [0, 120],
+      "parallax" : 9,
+      "minSpeed" : 1000,
+      "maxSpeed" : 5000,
+      "fadePercent" : 0.0,
+      "unlit" : false,
+      "timeOfDayCorrelation" : "nightCloudVisible"
+    },
+    {
+      "kind" : "clouds2",
+      "baseCount" : 2,
+      "offset" : [0, 160],
+      "parallax" : 14,
+      "minSpeed" : 500,
+      "maxSpeed" : 2500,
+      "fadePercent" : 0.0,
+      "unlit" : false,
+      "timeOfDayCorrelation" : "nightCloudVisible"
+    },
+    {
+      "kind" : "clouds1",
+      "baseCount" : 2,
+      "offset" : [0, 200],
+      "parallax" : 6,
+      "minSpeed" : 1000,
+      "maxSpeed" : 5000,
+      "fadePercent" : 0.0,
+      "unlit" : false,
+      "timeOfDayCorrelation" : "nightCloudVisible"
+    },
+    {
+      "kind" : "clouds3",
+      "baseCount" : 2,
+      "offset" : [0, 2],
+      "parallax" : 9,
+      "minSpeed" : 1000,
+      "maxSpeed" : 5000,
+      "fadePercent" : 0.0,
+      "unlit" : false,
+      "timeOfDayCorrelation" : "nightCloudVisible"
+    },
+    {
+      "kind" : "clouds2",
+      "baseCount" : 2,
+      "offset" : [0, 40],
+      "parallax" : 14,
+      "minSpeed" : 500,
+      "maxSpeed" : 2500,
+      "fadePercent" : 0.0,
+      "unlit" : false,
+      "timeOfDayCorrelation" : "nightCloudVisible"
+    },
+    {
+      "kind" : "clouds1",
+      "baseCount" : 2,
+      "offset" : [0, 80],
+      "parallax" : 6,
+      "minSpeed" : 1000,
+      "maxSpeed" : 5000,
+      "fadePercent" : 0.0,
+      "unlit" : false,
+      "timeOfDayCorrelation" : "nightCloudVisible"
+    }
+  ]
+}

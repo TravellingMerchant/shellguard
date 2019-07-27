@@ -1,0 +1,14 @@
+{
+  "frameGrid" : {
+    "size" : [32, 40],
+    "dimensions" : [12, 6],
+
+    "names" : [
+      [ null, "walk.1", "walk.2", "walk.3", "walk.4", "walk.5", "walk.6", "walk.7", "walk.8", "walk.9", "walk.10", "walk.11"],
+      [ null, "hurtwalk.1", "hurtwalk.2", "hurtwalk.3", "hurtwalk.4", "hurtwalk.5", "hurtwalk.6", "hurtwalk.7", "hurtwalk.8", "hurtwalk.9", "hurtwalk.10", "hurtwalk.11"],
+      [ null, "windup.1", "windup.2"],
+      [ null, "explodewalk.1", "explodewalk.2", "explodewalk.3", "explodewalk.4", "explodewalk.5", "explodewalk.6", "explodewalk.7", "explodewalk.8", "explodewalk.9", "explodewalk.10", "explodewalk.11"],
+      [ null, "explodehurtwalk.1", "explodehurtwalk.2", "explodehurtwalk.3", "explodehurtwalk.4", "explodehurtwalk.5", "explodehurtwalk.6", "explodehurtwalk.7", "explodehurtwalk.8", "explodehurtwalk.9", "explodehurtwalk.10", "explodehurtwalk.11"]
+    ]
+  }
+}

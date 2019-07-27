@@ -1,0 +1,73 @@
+{
+  "itemName" : "sgsupernovalauncher",
+  "price" : 1500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "Hold until light is green, then fire a powerful rocket.",
+  "shortdescription" : "Nova Launcher",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","upgradeableWeapon"],
+  "level" : 6,
+
+  "inventoryIcon" : "sgsupernovalaunchericon.png",
+
+  "animation" : "sgsupernovalauncher.animation",
+  "animationParts" : {
+    "gun" : "sgsupernovalauncher.png",
+    "gunfullbright" : "sgsupernovalauncherfullbright.png"
+  },
+  "animationCustom" : {},
+  "baseOffset" : [-0.3, 0.5],
+  "muzzleOffset" : [1.2, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "fire",
+
+  "primaryAbilityType" : "chargefire",
+  "primaryAbility" : {
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 0,
+        "cooldown" : 0.1,
+        "projectileType" : "",
+        "projectileParameters" : {},
+        "inaccuracy" : 0.008,
+        "baseDamage" : 0,
+        "fireSound" : "fire"
+      },
+      {
+        "time" : 3.8,
+        "energyCost" : 1000,
+        "cooldown" : 0.5,
+        "projectileType" : "shellnovarocket",
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 8,
+        "fireSound" : "fire2"
+      }
+    ],
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgelitenovalaunchericon.png",
+    "animationParts" : {
+      "gun" : "sgelitenovalauncher.png"
+    },
+    "shortdescription" : "Supernova Cannon ^yellow;^reset;"
+  }
+}

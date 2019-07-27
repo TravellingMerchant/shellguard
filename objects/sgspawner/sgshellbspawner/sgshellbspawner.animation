@@ -1,0 +1,76 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "spawnerState" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "open" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+			"transition": "opened",
+            "properties" : {
+              "immediateSound" : "/sfx/objects/checkpoint_activate1.ogg"
+            }
+          },
+          "opened" : {
+            "frames" : 1,
+			"cycle" : 0.6,
+			"mode": "transition",
+			"transition": "close",
+            "properties" : {
+              "immediateSound" : "/sfx/objects/console_generic_switchoff.ogg"
+            }
+          },
+          "close" : {
+            "frames" : 2,
+			"cycle" : 0.2,
+			"mode": "transition",
+			"transition": "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/objects/metaldoor_close.ogg"
+            }
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "spawner" : {
+        "properties" : {
+          "centered" : false,
+          "zLevel" : 1
+        },
+
+        "partStates" : {
+          "spawnerState" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:open.<frame>"
+              }
+            },
+            "opened" : {
+              "properties" : {
+                "image" : "<partImage>:opened.<frame>"
+              }
+            },
+            "close" : {
+              "properties" : {
+                "image" : "<partImage>:close.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

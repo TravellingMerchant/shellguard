@@ -1,0 +1,9 @@
+{
+  "name" : "sgbasesentry-head",
+  "category" : "sgbasesentry",
+  "type" : "head",
+
+  "frames" : {
+    "head" : "sgbasesentry-head.png"
+  }
+}

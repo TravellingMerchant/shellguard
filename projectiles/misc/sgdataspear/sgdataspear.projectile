@@ -1,0 +1,27 @@
+{
+  "projectileName" : "sgdataspear",
+  "physics" : "arrow",
+  "image" : "sgdataspear.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "movementSettings" : {
+    "gravityMultiplier" : 0,
+    "collisionPoly" : [ [1, -0.625], [-3.5, 0], [1, 0.625], [3, 0] ]
+  },
+  "damageKindImage" : "icon.png",
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/melee/sword_hit_metal5.ogg", "/sfx/melee/sword_hit_metal4.ogg", "/sfx/melee/sword_hit_metal3.ogg", "/sfx/melee/sword_hit_metal2.ogg", "/sfx/melee/sword_hit_metal1.ogg"
+      ]
+    }
+  ],
+  "lightColor" : [225, 100, 60],
+  "power" : 0,
+  "speed" : 80,
+  "orientationLocked" : false,
+  "onlyHitTerrain" : false,
+  "flippable" : false,
+  "damageKind" : "bow",
+  "timeToLive" : 10
+}

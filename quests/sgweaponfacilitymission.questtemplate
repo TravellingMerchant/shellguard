@@ -1,0 +1,45 @@
+{
+  "id" : "sgweaponfacilitymission",
+  "prerequisites" : ["sgspiderfactorymission"],
+  "title" : "^green;Weapons Facility",
+  "text" : "That massive ship is flying towards what remains of earth. We can't get close to it with our own ships, but we have a plan. A brand new weapon, powerful enough to break through is defenses. I want you to head to one of our facilities and test it!",
+  "completionText" : "I'm glad we managed to get the Ruin Cleaver out safely, with it we can begin a counter attack.",
+  "moneyRange" : [1200, 1200],
+  "rewards" : [
+    [ [ "sgsupernovalauncher", 1 ], ["money", 4000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Commander Andros Galvanek^reset;",
+      "findGoal" : "Explore the Weapons Facility",
+      "turnIn" : "Return to ^orange;Commander Andros Galvanek^reset;"
+    },
+
+    "warpEntityUid" : "Andros",
+    "warpAction" : "instanceworld:sgweaponsfacility",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgmercmission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgweaponstele",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Andros"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "rail" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+            "properties" : {
+              "immediateSound" : "/sfx/objects/steel_elevator_hit.ogg",
+              "immediateSoundRangeMultiplier" : 1.0
+            }
+          },
+          "on" : {
+            "properties" : {
+              "persistentSound" : "/sfx/objects/solid_platform_loop.ogg",
+              "persistentSoundRangeMultiplier" : 1.0
+            }
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "platform" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0, 0.5],
+          "zLevel" : 1,
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "rail" : {
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>"
+              }
+            },
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>"
+              }
+            }
+          }
+        }
+      },
+      "platformlit" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0, 0.5],
+          "zLevel" : 0
+        },
+
+        "partStates" : {
+          "rail" : {
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>"
+              }
+            },
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

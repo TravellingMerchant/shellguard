@@ -1,0 +1,28 @@
+{
+  "projectileName" : "sgemptydroppod",
+  "physics" : "arrow",
+  "image" : "sgemptydroppod.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "movementSettings" : {
+    "gravityMultiplier" : 1,
+    "collisionPoly" : [ [-3, 2], [-3, -2], [3, -2], [3, 2] ]
+  },
+  "damageKindImage" : "icon.png",
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/gun/impact_robotic5.ogg"
+      ]
+    }
+  ],
+  "lightColor" : [225, 100, 60],
+  "power" : 0,
+  "speed" : 0,
+  "orientationLocked" : true,
+  "onlyHitTerrain" : true,
+  "flippable" : false,
+  "damageKind" : "bow",
+  "timeToLive" : 20
+}

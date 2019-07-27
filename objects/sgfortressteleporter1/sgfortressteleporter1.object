@@ -1,0 +1,44 @@
+{
+  "objectName" : "sgfortressteleporter1",
+  "objectType" : "teleporter",
+  "colonyTags" : ["misc"],
+  "printable" : false,
+  "price" : 500,
+  "rarity" : "Common",
+  "description" : "A fuel pipe with a hole in.",
+  "shortdescription" : "Fortress Fuel Pipe",
+  "race" : "ancient",
+
+  "apexDescription" : "Looks like I can use this to get inside!",
+  "avianDescription" : "Looks like I can use this to get inside!",
+  "floranDescription" : "Lookssss like I can ussse this to get insssside!",
+  "glitchDescription" : "Hopeful. Looks like I can use this to get inside!",
+  "humanDescription" : "Looks like I can use this to get inside!",
+  "hylotlDescription" : "Looks like I can use this to get inside!",
+  "novakidDescription" : "Looks like I can use this to get inside!",
+
+  "category" : "teleporter",
+  "lightColor" : [56, 102, 124],
+
+  "interactAction" : "OpenTeleportDialog",
+  "interactData" : "/interface/warping/sgfortresswarp.config",
+
+  "inventoryIcon" : "sgfortressteleporter1icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "sgfortressteleporter1.png:<color>", "fullbright" : true }, { "image" : "sgfortressteleporter1lit.png:<color>" } ],
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "solid",
+      "collisionSpaces" : [ [-2, 0], [-1, 0], [-0, 0], [1, 0] ]
+    }
+  ],
+  
+  "teleporterFootPosition" : [0, 1]
+
+}

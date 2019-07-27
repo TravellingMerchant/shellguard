@@ -1,0 +1,9 @@
+{
+  "name" : "sgspacemine",
+  "category" : "sgspacemine",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgspacemine.png"
+  }
+}
