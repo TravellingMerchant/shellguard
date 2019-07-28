@@ -1,0 +1,132 @@
+{
+  // ------- Scrapyard. -------
+  
+  "sgscrapyard1" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "Alright, this is the place! It doesn't look very nice.. I wonder what he was doing here?"
+  },
+  
+  "sgscrapyard2" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsonsad.png:<frame>",
+    "text" : "I know I said it's my co-worker, but.. He's also my dad. I'm not allowed to call him that at work though."
+  },
+  
+  "sgscrapyard3" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "I'm sure he's fine. I doubt a scrap planet like this would be too dangerous for him. Still, best to check out this beacon."
+  },
+  
+  "sgscrapyard4a" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsonsly.png:<frame>",
+    "text" : "How much do you want to bet that he set of that distress beacon because of the smell here?"
+  },
+
+  "sgscrapyard4b" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsonslyeyebrow.png:<frame>",
+    "text" : "I mean, I'm back at the outpost in nice fresh air, but I'd imagine it smells terrible for you right now!"
+  },
+  
+  "sgscrapyard5a" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wddadtalkglitch.png:<frame>",
+    "text" : "*BZZZZZT* This is *BZZZZT* ID Alpha Gamma beta Alph*BZZZZZZZZT* Requesting help!"
+  },
+
+  "sgscrapyard5b" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wddadtalkglitch.png:<frame>",
+    "text" : "My ship has been boarded. *BZZZZT* I'm going to be taken by *BZZZZZT* headed to colony x921a-0! Requesting rescue!"
+  },
+
+  "sgscrapyard5c" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "DAD? That was my dad! The scrap of his ship must have ended up here!"
+  },
+
+  "sgscrapyard5d" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "We have to get to that settlement fast! I'll set up a teleporter back at the Shellguard Outpost."
+  },
+
+  // ------- Scrapyard. -------
+
+  "sgsky1" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "I hope you're not afraid of hights! Please be careful up here, because you're going to have to traverse the underside of the colony."
+  },
+  
+  "sgsky2" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "Miniknog are here? Are they the one's who kidnapped my dad?"
+  },
+  
+  "sgsky3" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsonsad.png:<frame>",
+    "text" : "It doesn't make any sense.. We've sold weapons to the Miniknog before, why would they pull a move like this?"
+  },
+  
+  "sgsky4" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsonslyeyebrow.png:<frame>",
+    "text" : "Hm, that must mean they are here for a different reason. Strange."
+  },
+ 
+  "sgsky5" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "It doesn't make any sense.. We've sold weapons to the Miniknog before, why would they pull a move like this?"
+  },
+  
+  "sgsky6" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "It doesn't look like my dad's here anymore. Try download the ship docking logs from the machine ahead. We can't give up yet!"
+  },
+  
+  "sgsky6a" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsonsly.png:<frame>",
+    "text" : "So.. Bad news, it was the Apex. Worse news, it wasn't the Miniknog.. The Rebels have him!"
+  },
+  
+  "sgsky6b" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsonslyeyebrow.png:<frame>",
+    "text" : "So much for being the good guys, huh?"
+  },
+  
+  "sgsky7" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "Come back to me at the outpost and we'll keep following this data trail!"
+  }
+
+}

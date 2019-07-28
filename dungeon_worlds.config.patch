@@ -318,7 +318,7 @@
       "dungeonBaseHeight" : 450,
       "dungeonSurfaceHeight" : 100,
       "ambientLightLevel" : [32, 150, 32],
-      "musicTrack" : "/music/crystal-exploration2.ogg",
+      "musicTrack" : "/music/inviolate-loop.ogg",
       "biome": "scorchedcity"
     }
   },

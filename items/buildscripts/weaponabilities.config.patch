@@ -9,6 +9,7 @@
   { "op": "add", "path": "/bayonetcleavecustom", "value": "/items/active/weapons/ranged/abilities/sgcleavecustom/bayonetcleavecustom.weaponability" },
   { "op": "add", "path": "/bayonetblade", "value": "/items/active/weapons/ranged/abilities/sgblade/bayonetblade.weaponability" },
   { "op": "add", "path": "/sglasersight", "value": "/items/active/weapons/ranged/abilities/sglasersight/sglasersight.weaponability" },
+  { "op": "add", "path": "/sglasersightgreen", "value": "/items/active/weapons/ranged/abilities/sglasersightgreen/sglasersightgreen.weaponability" },
   { "op": "add", "path": "/whipsnag", "value": "/items/active/weapons/whip/abilities/whipsnag.weaponability" },
   { "op": "add", "path": "/sgpushshot", "value": "/items/active/weapons/ranged/abilities/sgpushshot/sgpushshot.weaponability" },
   { "op": "add", "path": "/sgflashlight", "value": "/items/active/weapons/ranged/sg_built/abilities/sgflashlight.weaponability" },

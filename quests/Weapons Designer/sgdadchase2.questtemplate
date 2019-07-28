@@ -1,0 +1,45 @@
+{
+  "id" : "sgdadchase2",
+  "prerequisites" : ["sgdadchase1"],
+  "title" : "^green;Missing Person: 2",
+  "text" : "I've set a teleporter to the colony. It's floating above a hostile planet, so you best bring some lockjaws.",
+  "completionText" : "So Apex rebels took him to make them guns.. At least that means they need him alive. Let's track them down!",
+  "moneyRange" : [1200, 1200],
+  "rewards" : [
+    [ [ "sgmoto", 1 ], ["money", 2000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/sgweaponsdesigner/sgweaponsdesignerportrait.png"} ],
+        "title" : "Weapons Designer"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/sgweaponsdesigner/sgweaponsdesignerportrait.png"} ],
+        "title" : "Weapons Designer"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to the ^orange;weapons designer^reset;",
+      "findGoal" : "Fight your way through the mission",
+      "turnIn" : "Return to the ^orange;weapons designer^reset;"
+    },
+
+    "warpEntityUid" : "sgweaponsdesigner",
+    "warpAction" : "instanceworld:sggassky",
+    "warpDialog" : "/interface/confirmation/sgdesignerconfirmation.config:weapondesignermission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "sgskytele",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgweaponsdesigner"
+  }
+}

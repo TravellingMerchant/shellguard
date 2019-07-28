@@ -1,0 +1,45 @@
+{
+  "id" : "sgdadchase1",
+  "prerequisites" : [],
+  "title" : "^green;Missing Person: 1",
+  "text" : "Hey! I need your help! My D- I mean, my co-worker hasn't showed up for work and his distress beacon is going off. I'll give you some advanced gun tech if you check it out?",
+  "completionText" : "Kidnapped?! I can't believe it! We need to get him back!",
+  "moneyRange" : [1200, 1200],
+  "rewards" : [
+    [ [ "sgassaultsmg", 1 ], ["money", 1000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/sgweaponsdesigner/sgweaponsdesignerportrait.png"} ],
+        "title" : "Weapons Designer"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/sgweaponsdesigner/sgweaponsdesignerportrait.png"} ],
+        "title" : "Weapons Designer"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to the ^orange;weapons designer^reset;",
+      "findGoal" : "Fight your way through the mission",
+      "turnIn" : "Return to the ^orange;weapons designer^reset;"
+    },
+
+    "warpEntityUid" : "sgweaponsdesigner",
+    "warpAction" : "instanceworld:sgscrapyard",
+    "warpDialog" : "/interface/confirmation/sgdesignerconfirmation.config:weapondesignermission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "sgscraptele",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgweaponsdesigner"
+  }
+}

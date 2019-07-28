@@ -18440,6 +18440,18 @@
                  "width":126,
                  "x":3344,
                  "y":3848
+                }, 
+                {
+                 "gid":2147491206,
+                 "height":36,
+                 "id":4738,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":36,
+                 "x":4032,
+                 "y":3080
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -19616,7 +19628,7 @@
          "y":0
         }],
  "nextlayerid":11,
- "nextobjectid":4737,
+ "nextobjectid":4739,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
@@ -19761,6 +19773,10 @@
         {
          "firstgid":7547,
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgmaterials.json"
+        }, 
+        {
+         "firstgid":7550,
+         "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset2.json"
         }],
  "tilewidth":8,
  "type":"map",

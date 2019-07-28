@@ -8,9 +8,9 @@
  "margin":0,
  "name":"sgtileset2",
  "spacing":0,
- "tilecount":8,
+ "tilecount":9,
  "tiledversion":"1.2.4",
- "tileheight":16,
+ "tileheight":36,
  "tileproperties":
     {
      "0":
@@ -91,6 +91,16 @@
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"sgcrystaltrap",
+         "tilesetDirection":"right"
+        },
+     "8":
+        {
+         "\/\/description":"weapons designer",
+         "\/\/name":"designer",
+         "\/\/shortdescription":"quest giver",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgweaponsdesigner",
          "tilesetDirection":"right"
         }
     },
@@ -175,6 +185,16 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
+        },
+     "8":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         }
     },
  "tiles":
@@ -226,9 +246,15 @@
          "image":"..\/..\/objects\/trap\/sgcrystaltrap\/sgcrystaltrap_orientation7.png",
          "imageheight":16,
          "imagewidth":16
+        },
+     "8":
+        {
+         "image":"..\/..\/objects\/questgivers\/sgweaponsdesigner\/sgweaponsdesignerportrait.png",
+         "imageheight":36,
+         "imagewidth":36
         }
     },
- "tilewidth":16,
+ "tilewidth":36,
  "type":"tileset",
  "version":1.1
 }

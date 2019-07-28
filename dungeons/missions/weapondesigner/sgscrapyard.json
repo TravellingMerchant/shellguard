@@ -35,7 +35,112 @@
          "draworder":"topdown",
          "id":3,
          "name":"mods",
-         "objects":[],
+         "objects":[
+                {
+                 "height":1296,
+                 "id":2243,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"radioMessage\" : \"sgscrapyard1\" }",
+                     "stagehand":"radiomessage"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":2600,
+                 "y":1608
+                }, 
+                {
+                 "height":1296,
+                 "id":2244,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"radioMessage\" : \"sgscrapyard2\" }",
+                     "stagehand":"radiomessage"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":4192,
+                 "y":1488
+                }, 
+                {
+                 "height":1296,
+                 "id":2245,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"radioMessage\" : \"sgscrapyard3\" }",
+                     "stagehand":"radiomessage"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":5464,
+                 "y":1600
+                }, 
+                {
+                 "height":1256,
+                 "id":2247,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"radioMessages\" : [\"sgscrapyard4a\", \"sgscrapyard4b\"] }",
+                     "stagehand":"radiomessage"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":7656,
+                 "y":1528
+                }, 
+                {
+                 "height":1256,
+                 "id":2248,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"radioMessages\" : [\"sgscrapyard5a\", \"sgscrapyard5b\", \"sgscrapyard5c\", \"sgscrapyard5d\"] }",
+                     "stagehand":"radiomessage"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":13496,
+                 "y":1584
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -3445,7 +3550,7 @@
          "y":0
         }],
  "nextlayerid":15,
- "nextobjectid":2242,
+ "nextobjectid":2249,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",

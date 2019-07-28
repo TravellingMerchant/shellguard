@@ -122,6 +122,7 @@
     "animationParts" : {
     "gun" : "sgassaultsmgelite.png"
     },
-    "shortdescription" : "Elite Assault SMG ^yellow;^reset;"
+    "shortdescription" : "Elite Assault SMG ^yellow;^reset;",
+    "altAbilityType" : "sglasersightgreen"
   }
 }
