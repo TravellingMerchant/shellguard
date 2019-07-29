@@ -93,15 +93,8 @@
     "portraitImage" : "/interface/chatbubbles/wdsonslyeyebrow.png:<frame>",
     "text" : "Hm, that must mean they are here for a different reason. Strange."
   },
- 
-  "sgsky5" : {
-    "type" : "mission",
-    "senderName" : "Weapons Designer",
-    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
-    "text" : "It doesn't make any sense.. We've sold weapons to the Miniknog before, why would they pull a move like this?"
-  },
   
-  "sgsky6" : {
+  "sgsky5" : {
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
@@ -119,7 +112,7 @@
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsonslyeyebrow.png:<frame>",
-    "text" : "So much for being the good guys, huh?"
+    "text" : "So much for being the good guys, huh? I guess the Miniknog were here chasing them."
   },
   
   "sgsky7" : {
