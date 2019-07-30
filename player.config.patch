@@ -1,3 +1,4 @@
 [
-{"op" : "add", "path" : "/defaultBlueprints/tier1/-", "value" : { "item" : "sgvendingguard" }}
+{"op" : "add", "path" : "/defaultBlueprints/tier1/-", "value" : { "item" : "sgvendingguard" }},
+{"op" : "add", "path" : "/genericScriptContexts/-", "value" : "/scripts/blockStatusEffect.lua"}
 ]
