@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "sgmine",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "sgmine" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "sgmine",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "sgmine.json" ]
+    }
+  ]
+}

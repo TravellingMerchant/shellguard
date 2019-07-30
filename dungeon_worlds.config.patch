@@ -254,6 +254,23 @@
       "biome": "ocean"
     }
   },  
+  
+  {
+    "op" : "add",
+    "path" : "/sgmine",
+    "value" : {
+      "primaryDungeon" : "sgmine",
+      "weatherPool" : [],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2500, 1000],
+      "dungeonBaseHeight" : 1000,
+      "dungeonSurfaceHeight" : 600,
+      "ambientLightLevel" : [200, 50, 200],
+      "musicTrack" : "/music/the-apex.ogg",
+      "biome": "scorched"
+    }
+  },  
 
   {
     "op" : "add",
