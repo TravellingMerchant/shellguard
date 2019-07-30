@@ -18442,7 +18442,7 @@
                  "y":3848
                 }, 
                 {
-                 "gid":2147491206,
+                 "gid":2147491208,
                  "height":36,
                  "id":4738,
                  "name":"",
@@ -18452,6 +18452,30 @@
                  "width":36,
                  "x":4032,
                  "y":3080
+                }, 
+                {
+                 "gid":7577,
+                 "height":8,
+                 "id":4739,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":4248,
+                 "y":3840
+                }, 
+                {
+                 "gid":7567,
+                 "height":8,
+                 "id":4740,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":4256,
+                 "y":3840
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -19628,7 +19652,7 @@
          "y":0
         }],
  "nextlayerid":11,
- "nextobjectid":4739,
+ "nextobjectid":4741,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
@@ -19775,8 +19799,12 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgmaterials.json"
         }, 
         {
-         "firstgid":7550,
+         "firstgid":7552,
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset2.json"
+        }, 
+        {
+         "firstgid":7561,
+         "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/cooking.json"
         }],
  "tilewidth":8,
  "type":"map",

@@ -53,7 +53,7 @@ function update(dt)
     })
 
   for _, target in ipairs(targets) do
-    if entity.entityInSight(target) then
+    if entity.entityInSight(target) and entity.isValidTarget(target) then
       local targetPos = world.entityPosition(target)
       local myPos = mcontroller.position()
       local dist = world.distance(targetPos, myPos)
