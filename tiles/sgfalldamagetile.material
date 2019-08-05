@@ -1,0 +1,26 @@
+{
+  "materialId" : 26203,
+  "materialName" : "sgfalldamagetile",
+  "particleColor" : [182, 182, 182, 255],
+  "itemDrop" : "sgfalldamagetile",
+  "statusEffects": [ "beamoutanddie" ],
+  "description" : "Something feels.. off about this.",
+  "glitchDescription" : "Observant. Something feels.. off about this.",
+  "floranDescription" : "Sssssomething feels.. off about thissss.",
+  "novakidDescription" : "Something feels.. off about this.",
+
+  "shortdescription" : "Fall Damage Tile",
+  "footstepSound" : "/sfx/blocks/footstep_lightmetal.ogg",
+  "health" : 20,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/slopedmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "sgfalldamagetile.png",
+    "variants" : 5,
+    "lightTransparent" : true,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 4999
+  }
+}

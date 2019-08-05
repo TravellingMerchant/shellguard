@@ -120,6 +120,92 @@
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
     "text" : "Come back to me at the outpost and we'll keep following this data trail!"
+  },
+
+  // ------- mine -------
+
+  "sgmine1" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "Alright, it seems that the rebels have made camp in this abandoned mine. Let's try searching it for my dad!"
+  },
+
+  "sgmine2" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsonslyeyebrow.png:<frame>",
+    "text" : "Be careful here, it's a pretty tight place to fight in. And the rebels seem pretty.. Dug in."
+  },
+
+  "sgmine3" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "Nice, some sunlight!"
+  },
+  
+  "sgmine4" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "This place is certainly well hidden, but I would not want to live here!"
+  },
+  
+  "sgmine5" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "Be careful not to fall around here, it could be dangerous."
+  },
+  
+  "sgmine6" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsonslyeyebrow.png:<frame>",
+    "text" : "Huh, weird. There's a hidden data channel floating around here. Give me a moment, I'll decrypt it."
+  },
+
+  "sgmine7a" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wddadtalkeyebrow.png:<frame>",
+    "text" : "This is an encoded emergancy broadcast, please send a rescue team to the old city of Zarakina Val 1. "
+  },
+  
+  "sgmine7b" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wddadtalkeyebrow.png:<frame>",
+    "text" : "The second part of this message is addresed to my son. Please make sure he hears it."
+  },
+
+  "sgminec" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsonsad.png:<frame>",
+    "text" : "That's my dad!"
+  },
+  
+  "sgmine7d" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wddadtalkeyebrow.png:<frame>",
+    "text" : "Hello, my son. I know that you must be worried about me, but thankfully they are treating me rather well- as well as a hostage can be."
+  },
+  
+  "sgmine7e" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wddadtalkeyebrow.png:<frame>",
+    "text" : "Nevertheless, I'd still like to be rescued. Inserted into this message is plans for something that will help you do so. Make me proud."
+  },
+
+  "sgmine7f" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "This.. This is incredible. We'll rescue him in no time with this. Get back to the outpost and fast!"
   }
 
 }

@@ -53,6 +53,7 @@
       { "item" : "shellguardswarmer" },	
       { "item" : "shellguardspiderrocket" },
       { "item" : "shellguardbombard" },
+      { "item" : "sgincenerator" },
 	  { "item" : "sgneedle" },
 	  { "item" : "sgminigun" },
 	  { "item" : "shellguardshardgun" },

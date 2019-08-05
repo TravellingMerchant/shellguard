@@ -8,7 +8,8 @@
  "margin":0,
  "name":"sgmaterials",
  "spacing":0,
- "tilecount":3,
+ "tilecount":5,
+ "tiledversion":"1.2.4",
  "tileheight":8,
  "tileproperties":
     {
@@ -32,6 +33,20 @@
          "\/\/name":"sgmemorypanel",
          "\/\/shortdescription":"sgmemorypanel",
          "material":"sgmemorypanel"
+        },
+     "3":
+        {
+         "\/\/description":"sgfalldamagetile",
+         "\/\/name":"sgfalldamagetile",
+         "\/\/shortdescription":"sgfalldamagetile",
+         "material":"sgfalldamagetile"
+        },
+     "4":
+        {
+         "\/\/description":"sgcorrupttile",
+         "\/\/name":"sgcorrupttile",
+         "\/\/shortdescription":"sgcorrupttile",
+         "material":"sgcorrupttile"
         }
     },
  "tilepropertytypes":
@@ -51,6 +66,20 @@
          "material":"string"
         },
      "2":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "material":"string"
+        },
+     "3":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "material":"string"
+        },
+     "4":
         {
          "\/\/description":"string",
          "\/\/name":"string",
@@ -77,8 +106,21 @@
          "image":"materials\/sgmemorypanel.png",
          "imageheight":8,
          "imagewidth":8
+        },
+     "3":
+        {
+         "image":"materials\/sgfalldamagetile.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "4":
+        {
+         "image":"materials\/sgcorrupttile.png",
+         "imageheight":8,
+         "imagewidth":8
         }
     },
  "tilewidth":8,
- "type":"tileset"
+ "type":"tileset",
+ "version":1.1
 }
