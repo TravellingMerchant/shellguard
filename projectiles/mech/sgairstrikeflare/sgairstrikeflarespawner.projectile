@@ -1,0 +1,27 @@
+{
+  "projectileName" : "sgairstrikeflarespawner",
+  "image" : "sgairstrikeflarespawner.png",
+  "timeToLive" : 0,
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  "piercing" : true,
+  "orientationLocked" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "physics" : "sgruincleaverphysics",
+  "bounces" : 0,
+  "lightColor" : [225, 100, 0],
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 1,
+      "type" : "sgairstrikeflare",
+      "angle" : 90
+    }
+  ],
+ 
+  "power" : 5.0,
+  "speed" : 0,
+  "onlyHitTerrain" : true,
+  "damageKind" : "default"
+}

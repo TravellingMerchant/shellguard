@@ -1,11 +1,11 @@
 {
-  "itemName" : "sgprojectiletestgun",
+  "itemName" : "sgplasmitestaff",
   "price" : 2000,
-  "inventoryIcon" : "sgprojectiletestgun.png",
+  "inventoryIcon" : "sgplasmitestaff.png",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "You shouldn't own this.",
-  "shortdescription" : "Projectile test gun",
+  "description" : "Fires explosive plasmite grenades.",
+  "shortdescription" : "Shellguard Plasmite Staff",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
@@ -16,18 +16,18 @@
   "animation" : "/items/active/weapons/ranged/gun.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "sgprojectiletestgun.png",
+    "middle" : "sgplasmitestaff.png",
     "barrel" : "",
     "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/ShellRifleFire.ogg" ]
+      "fire" : [ "/sfx/gun/plasmitecustom.ogg" ]
     }
   },
 
   "baseOffset" : [1.0, 0.1],
-  "muzzleOffset" : [1.7, 0.2],
+  "muzzleOffset" : [3, 0.0],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -36,49 +36,49 @@
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 0.2,
-    "baseDps" : 10.5,
-    "energyUsage" : 30.0,
+    "fireTime" : 1.5,
+    "baseDps" : 3.5,
+    "energyUsage" : 40.0,
     "projectileCount" : 1,
-    "inaccuracy" : 0,
+    "inaccuracy" : 0.08,
       "stances" : {
       "idle" : {
         "armRotation" : 0,
-        "weaponRotation" : 0,
-        "twoHanded" : true,
+        "weaponRotation" : 90,
+        "twoHanded" : false,
 
         "allowRotate" : true,
         "allowFlip" : true
       },
       "fire" : {
-        "duration" : 0,
+        "duration" : 0.3,
         "armRotation" : 1,
         "weaponRotation" : 1,
-        "twoHanded" : true,
+        "twoHanded" : false,
 
-        "allowRotate" : false,
-        "allowFlip" : false
+        "allowRotate" : true,
+        "allowFlip" : true
       },
       "cooldown" : {
-        "duration" : 0.1,
+        "duration" : 0.3,
         "armRotation" : -20,
-        "weaponRotation" : 30,
-        "twoHanded" : true,
+        "weaponRotation" : 45,
+        "twoHanded" : false,
 
-        "allowRotate" : false,
-        "allowFlip" : false
+        "allowRotate" : true,
+        "allowFlip" : true
       }
     },
 
     "fireType" : "auto",
 
-    "projectileType" : "sgairstrikeflare",
+    "projectileType" : "sgplasmitegrenade",
     "projectileParameters" : { 
       "knockback" : 6
     }
   },
 
-  "altAbilityType" : "bayonetstab",
+  "altAbilityType" : "bayonetblade",
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }

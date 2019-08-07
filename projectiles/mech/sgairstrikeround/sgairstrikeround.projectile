@@ -1,6 +1,6 @@
 {
-  "projectileName" : "sgboomerround",
-  "image" : "sgboomerround.png",
+  "projectileName" : "sgairstrikeround",
+  "image" : "sgairstrikeround.png",
   "animationCycle" : 0.25,
   "frameNumber" : 4,
   "timeToLive" : 15,
@@ -8,7 +8,7 @@
   "damageKindImage" : "icon.png",
   "pointLight" : false,
   "movementSettings" : {
-    "gravityMultiplier" : 0.2
+    "gravityMultiplier" : 0.8
   },
   "actionOnReap" : [
     {
@@ -36,7 +36,7 @@
   
   "periodicActions" : [
     {
-      "time" : 0.05,
+      "time" : 0.1,
       "repeat" : true,
 
       "action" : "loop",
@@ -53,7 +53,7 @@
   
   "emitters" : [ "rocketsmoke" ],
   "power" : 20,
-  "speed": 120,
+  "speed": 50,
   "damageType" : "NoDamage",
   "damageKind" : "default"
 }

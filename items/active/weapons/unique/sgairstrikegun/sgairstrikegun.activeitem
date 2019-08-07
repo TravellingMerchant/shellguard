@@ -1,0 +1,125 @@
+{
+  "itemName" : "sgairstrikegun",
+  "price" : 3500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "Charge for 15 seconds to call in a long bombardment on your general location.",
+  "shortdescription" : "Airstrike Flare Gun",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","ranged","upgradeableWeapon"],
+  "level" : 6,
+
+  "inventoryIcon" : "sgairstrikegunicon.png",
+
+  "animation" : "sgairstrikegun.animation",
+  "animationParts" : {
+    "gun" : "sgairstrikegun.png",
+    "gunfullbright" : "sgairstrikegunfullbright.png",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {},
+  "muzzleOffset" : [1.0, 0.75],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "ice",
+
+  "primaryAbilityType" : "neb-enhancedchargefire",
+  "primaryAbility" : {
+    "name" : "Charged Shot",
+    "scripts" : ["/items/active/weapons/ranged/abilities/neb-enhancedchargefire/neb-enhancedchargefire.lua"],
+    "class" : "NebsEnhancedChargeFire",
+	
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 0,
+        "cooldown" : 0.3,
+        "projectileType" : "",
+        "projectileParameters" : {},
+        "projectileCount" : 0,
+        "inaccuracy" : 0.03,
+        "baseDamage" : 3.5,
+        "fireType" : "single",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
+        //"burstTime" : 0.15,		//delay between shots in the burst
+        //"burstCount" : 3,		//amount of bullets to fire in the burst, must be a integer
+        "fireSound" : "fire"
+	  
+	    //Recoil Stuffs
+	    //"recoilKnockbackVelocity" : 1,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    //"crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
+	    //"crouchRecoilKnockbackVelocity" : 0	//When crouching it uses this instead of recoilKnockbackVelocity
+      },
+      {
+        "time" : 15,
+        "energyCost" : 50,
+        "cooldown" : 0.1,
+        "projectileType" : "sgairstrikeflarespawner",
+        "projectileParameters" : {},
+        "projectileCount" : 1,
+        "inaccuracy" : 0.06,
+        "baseDamage" : 6,
+        "fireType" : "single",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
+        //"burstTime" : 0.15,		//delay between shots in the burst
+        //"burstCount" : 1,		//amount of bullets to fire in the burst, must be a integer
+        "fireSound" : "fire2"
+	  
+	    //Recoil Stuffs
+	    //"recoilKnockbackVelocity" : 1,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    //"crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
+	    //"crouchRecoilKnockbackVelocity" : 0	//When crouching it uses this instead of recoilKnockbackVelocity
+      }
+    ],
+	//Movement Whilst Charging
+	"walkWhileCharging" : false,		//if false, the player can run normally else if true it just makes the player walk while charging
+	"allowJumping" : true,			//if true allows for jumping while charging if false the player is unable to jump
+	
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 90,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0.2,
+        "armRotation" : 90,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 90,
+        "weaponRotation" : 5,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgairstrikeguneliteicon.png",
+    "animationParts" : {
+    "gun" : "sgairstrikegunelite.png"
+    },
+    "shortdescription" : "Elite Monarch HBLAP ^yellow;^reset;"
+  }
+}

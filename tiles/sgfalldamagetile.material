@@ -19,7 +19,7 @@
     "texture" : "sgfalldamagetile.png",
     "variants" : 5,
     "lightTransparent" : true,
-    "occludesBelow" : true,
+    "occludesBelow" : false,
     "multiColored" : true,
     "zLevel" : 4999
   }

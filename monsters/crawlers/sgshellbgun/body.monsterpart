@@ -1,0 +1,9 @@
+{
+  "name" : "sgshellbgun-body",
+  "category" : "sgshellbgun",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgshellbgun-body.png"
+  }
+}

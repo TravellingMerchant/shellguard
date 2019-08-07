@@ -1,0 +1,9 @@
+{
+  "name" : "sgshellbgun-head",
+  "category" : "sgshellbgun",
+  "type" : "head",
+
+  "frames" : {
+    "head" : "sgshellbgun-head.png"
+  }
+}

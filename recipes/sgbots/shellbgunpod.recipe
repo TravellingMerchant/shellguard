@@ -1,0 +1,33 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 1000 }
+  ],
+  "output" : {
+    "item" : "filledcapturepod",
+    "count" : 1,
+    "parameters" : {
+      "shortdescription" : "Attack Shell-B",
+      "description" : "A cute little Shell-B with a cute little gun. Wait, where'd it get that gun?!",
+      "tooltipFields" : {
+        "subtitle" : "Shellguard Robot",
+        "objectImage" : "/monsters/crawlers/sgshellbgun/sgshellbgun-full.png"
+      },
+      "pets" : [
+        {
+          "name" : "Drone",
+          "portrait" : [
+            {"image" : "/monsters/crawlers/sgshellbgun/sgshellbgun-full.png"}
+          ],
+          "config" : {
+            "type" : "sgshellbgun",
+            "parameters" : {
+              "level" : 6,
+              "aggressive" : true
+            }
+          }
+        }
+      ]
+    }
+  },
+  "groups" : [ "sgrobotcrafting" ]
+}

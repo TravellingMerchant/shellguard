@@ -1,0 +1,33 @@
+{
+  "itemName" : "sgairstrike",
+  "price" : 1500,
+  "rarity" : "uncommon",
+  "category" : "throwableItem",
+  "inventoryIcon" : "tankthrow.png",
+  "image" : "tankthrow.png",
+  "shortdescription" : "Disposable Tank Kit",
+  "description" : "A single use capture-pod launcher that creates an autonomous tank.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.0,
+  "cooldown" : 1.5,
+
+  "projectileType" : "tankspawn",
+  "projectileConfig" : {
+    "speed" : 50,
+    "power" : 22.5,
+    "knockback" : 20,
+
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  }
+
+}

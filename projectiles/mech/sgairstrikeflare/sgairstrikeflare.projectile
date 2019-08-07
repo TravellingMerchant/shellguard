@@ -1,0 +1,35 @@
+{
+  "projectileName" : "sgairstrikeflare",
+  "image" : "sgairstrikeflare.png",
+  "physics" : "sgruincleaverphysics",
+  "animationCycle" : 0.25,
+  "animationLoops" : false,
+  "windupFrames" : 1,
+  "timeToLive" : 1,
+  "frameNumber" : 2,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [255, 0, 0],
+  "flippable" : true,
+  "orientationLocked" : false,
+  "bounces" : -1,
+  "piercing" : true,
+  "actionOnReap" : [
+    {
+          "action" : "projectile",
+          "type" : "sgairstrikespawner",
+          "fuzzAngle" : 0,
+          "inheritDamageFactor" : 1,
+          "angleAdjust" : 0
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    }
+  ],
+  
+  "power" : 5.0,
+  "speed" : 50,
+  "damageKind" : "default"
+}

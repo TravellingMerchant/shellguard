@@ -35,7 +35,7 @@
     "chargeLevels" : [
       {
         "time" : 0,
-        "energyCost" : 15,
+        "energyCost" : 0,
         "cooldown" : 0.3,
         "projectileType" : "",
         "projectileParameters" : {},
@@ -54,7 +54,7 @@
       },
       {
         "time" : 0.5,
-        "energyCost" : 60,
+        "energyCost" : 20,
         "cooldown" : 0.5,
         "projectileType" : "kluexzone",
         "projectileParameters" : {},

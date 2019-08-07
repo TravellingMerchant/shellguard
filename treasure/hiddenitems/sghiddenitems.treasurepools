@@ -205,6 +205,23 @@
     }]
   ],
   
+  "sgmonarchpistol" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgmonarchpistol", 1]}
+      ]
+    }]
+  ],
+  
+  "sgtoolbox" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgtoolbox", 1]}
+      ]
+    }]
+  ],
+  
+  
 //-----------misc---------------------
   
   "shellbehat" : [
