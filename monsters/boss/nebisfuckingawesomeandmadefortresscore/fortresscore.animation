@@ -1,0 +1,339 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "coreIdle" : {
+        "priority" : 1,
+        "default" : "on",
+        "states" : {
+          "off" : {
+          },
+          "on" : {
+            "properties" : {
+              "persistentSound" : "/sfx/npc/boss/crystalboss_hum.ogg",
+              "persistentSoundRangeMultiplier" : 1.5
+            }
+          }
+        }
+      },
+
+      "coreAi" : {
+        "priority" : 1,
+        "default" : "stage1",
+        "states" : {
+          "stage1" : {
+            "frames" : 1
+          },
+          "stage2" : {
+            "frames" : 1
+          },
+          "stage3" : {
+            "frames" : 1
+          },
+          "stage4" : {
+            "frames" : 1
+          },
+          "stage5" : {
+            "frames" : 1
+          }
+        }
+      },
+	  
+      "base" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          }
+        }
+      },
+
+      "topLeftVents" : {
+        "priority" : 1,
+        "default" : "vents",
+        "states" : {
+          "vents" : {
+            "frames" : 1
+          }
+        }
+      },
+
+      "bottomLeftVents" : {
+        "priority" : 1,
+        "default" : "vents",
+        "states" : {
+          "vents" : {
+            "frames" : 1
+          }
+        }
+      },
+
+      "topRightVents" : {
+        "priority" : 1,
+        "default" : "vents",
+        "states" : {
+          "vents" : {
+            "frames" : 1
+          }
+        }
+      },
+
+      "bottomRightVents" : {
+        "priority" : 1,
+        "default" : "vents",
+        "states" : {
+          "vents" : {
+            "frames" : 1
+          }
+        }
+      },
+
+      "blastShield" : {
+        "priority" : 1,
+        "default" : "open",
+        "states" : {
+          "closed" : {
+            "frames" : 1
+          },
+          "open" : {
+            "frames" : 1
+          },
+          "slam" : {
+            "frames" : 9,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "closed"
+          },
+          "winddown" : {
+            "frames" : 9,
+            "cycle" : 0.95,
+            "mode" : "transition",
+            "transition" : "open"
+          }
+        }
+      },
+      "energyShield" : {
+        "priority" : 1,
+        "default" : "inactive",
+        "states" : {
+          "inactive" : {
+            "frames" : 1
+          },
+          "activate" : {
+            "frames" : 1
+          },
+          "idle" : {
+            "frames" : 1
+          },
+          "deactivate" : {
+            "frames" : 1
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "coreAi" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 2,
+          "transformationGroups" : ["core"],
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "coreAi" : {
+            "stage1" : {
+              "properties" : {
+                "image" : "<partImage>:stage1"
+              }
+            },
+            "stage2" : {
+              "properties" : {
+                "image" : "<partImage>:stage2"
+              }
+            },
+            "stage3" : {
+              "properties" : {
+                "image" : "<partImage>:stage3"
+              }
+            },
+            "stage4" : {
+              "properties" : {
+                "image" : "<partImage>:stage4"
+              }
+            },
+            "stage5" : {
+              "properties" : {
+                "image" : "<partImage>:stage5"
+              }
+            }
+          }
+        }
+      },
+	  
+      "base" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 1,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "base" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            }
+          }
+        }
+      },
+
+      "blastShield" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 3,
+          "offset" : [-0.0, 0.0],
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "blastShield" : {
+            "closed" : {
+              "properties" : {
+                "image" : "<partImage>:closed"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:open"
+              }
+            },
+            "slam" : {
+              "properties" : {
+                "image" : "<partImage>:slam.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            }
+          }
+        }
+      },
+
+      "energyShield" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 3,
+          "offset" : [-0.0, 0.0],
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "energyShield" : {
+            "inactive" : {
+              "properties" : {
+                "image" : "<partImage>:inactive"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "image" : "<partImage>:activate.<frame>"
+              }
+            },
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "deactivate" : {
+              "properties" : {
+                "image" : "<partImage>:deactivate.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "rotationGroups" : {
+    "all" : {
+      "angularVelocity" : 10
+    }
+  },
+  
+  "transformationGroups" : {
+    "core" : {}
+  },
+
+
+  "particleEmitters" : {
+    "damage" : {
+      "emissionRate" : 0.7,
+      "particles" : [
+      ]
+    },
+
+    "deathPoof" : {
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/puff2c/puff2c.animation",
+            "size" : 1,
+            "angularVelocity" : 35,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0, 0],
+            "approach" : [1, 1],
+            "timeToLive" : 0.4,
+            "layer" : "middle"
+          }
+        }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "turnHostile" : [ "/sfx/npc/robotboss_turnhostile.ogg" ],
+    "deathPuff" : {
+      "pool" : [ "/sfx/npc/robotboss_death.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "destruction" : {
+      "pool" : [ "/sfx/npc/robotboss_death.ogg" ],
+      "rangeMultiplier" : 1.5
+	},
+    "hurt" : {
+      "pool" : [ "/sfx/npc/boss/robotboss_pain1.ogg", "/sfx/npc/boss/robotboss_pain2.ogg", "/sfx/npc/boss/robotboss_pain3.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "death" : {
+      "pool" : [ "/sfx/npc/boss/robotboss_death.ogg" ],
+      "rangeMultiplier" : 1.5
+    }
+  },
+
+  "lights" : {
+    "glow" : {
+      "active" : true,
+      "position" : [0, 0],
+      "color" : [200, 0, 0],
+      "pointLight" : false
+    }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=000000;0.5"
+    }
+  }
+}

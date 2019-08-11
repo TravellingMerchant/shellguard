@@ -11,10 +11,10 @@
       "bobTime" : 2,
       "bobHeight" : 1,
 
-      "projectileOffset" : [0, -7],
+      "projectileOffset" : [0, -10],
       "fireInterval" : 0.4,
       "projectile" : {
-        "type" : "sgmicroshot",
+        "type" : "tempbullet",
         "config" : {
           "speed" : 40,
 		  "inaccuracy" : 0.05,

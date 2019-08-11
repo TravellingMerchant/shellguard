@@ -1,0 +1,34 @@
+{
+  "name" : "blastShieldSlamPhase",
+  "label" : "CRUSH",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/blastShieldSlam.lua" ],
+
+    "blastShieldSlam" : {
+      "windupDuration" : 0.1,
+      "winddownDuration" : 0.5,
+      "winddown" : true
+    }
+  },
+
+  "animationParameters" : {
+    "particleEmitters" : {
+      "slam" : {
+        "emissionRate" : 1.0,
+        "offsetRegion" : [-5, 0.25, 5, -0.25],
+        "particles" : [
+          { "particle" : "dust4" },
+          { "particle" : "dust4" },
+          { "particle" : "dust4" },
+          { "particle" : "dust4" }
+        ]
+      }
+    },
+    "sounds" : {
+      "blastShieldSlam" : [ "/sfx/melee/blunt_hit_metal6.ogg", "/sfx/melee/blunt_hit_metal5.ogg", "/sfx/melee/blunt_hit_metal4.ogg", "/sfx/melee/blunt_hit_metal3.ogg", "/sfx/melee/blunt_hit_metal2.ogg", "/sfx/melee/blunt_hit_metal1.ogg" ],
+      "blastShieldSlamWindup" : [  "/sfx/npc/boss/robotboss_attack1.ogg", "/sfx/npc/boss/robotboss_attack2.ogg" ]
+    }
+  }
+}

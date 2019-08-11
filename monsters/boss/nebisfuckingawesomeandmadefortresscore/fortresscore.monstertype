@@ -1,0 +1,199 @@
+{
+  "type" : "sgnebisamadladandmadefortress",
+  "shortdescription" : "Fortress Core",
+
+  "categories" : [ "sgnebisamadladandmadefortress" ],
+  "parts" : [ "base", "coreAi", "blastShield" ],
+
+  "animation" : "fortresscore.animation",
+  "reversed" : true,
+
+  "dropPools" : [ "sgufoclaw" ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/boss/nebisfuckingawesomeandmadefortresscore/coreMonster.lua",
+      "/monsters/simpleRangedAttack.lua",
+      "/scripts/stateMachine.lua",
+      "/scripts/util.lua",
+      "/scripts/vec2.lua",
+
+	  //Custom Stuff
+      "/monsters/boss/nebisfuckingawesomeandmadefortresscore/dieState.lua",
+      "/monsters/boss/nebisfuckingawesomeandmadefortresscore/idleState.lua",
+      "/monsters/boss/nebisfuckingawesomeandmadefortresscore/fortressreset.lua"
+    ],
+
+    "skillCount" : 13,
+    "skills" : [ "exhaustVents", "backup", "radiationLeak", "miniTurrets", "rocketTurret", "laserTurret", "blastShieldSlamPhase", "blastShieldSlam", "coreLaser", "gravitySlam", "aerialMines" ],
+
+    "phases" : [
+	  //Skills/Abilities the core will possess in each phase, it is randomly picked by whats in the tables
+	  //Default Skills
+      {
+        "skills" : []
+      },
+      {
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.999,
+        "enterPhase" : "blastShieldSlam",
+        "skills" : []
+      }
+	  //Each phase has an initial health threshold to allow for more attacks to unlock as you go, please note these overwrite previous phases
+	  //Phase 1 = Core notices threat
+    ],
+
+    "chatPortrait" : "/interface/chatbubbles/SGUFO.png",
+    "dialog" : {
+      "intro" : "I don't like you, <player>.",
+      "intro2" : "Nothin personaw, kid.",
+      "intro3" : "But I must go all out ...Just this once.",
+      "intro4" : "UwU",
+      "death" : "You got a popuwation of one point thwee-two biwwion.",
+      "death2" : "But most your videowos can't seem to hit even a miwwion",
+      "death3" : "SUB BOT!"
+    },
+	
+    "projectileSourcePosition" : [-2.5, -1.25],
+    "projectileSourceOffset" : [7, 0],
+
+    "trackTargetDistance" : 50.0,
+    "switchTargetDistance" : 0,
+    "keepTargetInSight" : false,
+
+    "knockoutTime" : 0.1,
+    "knockoutEffect" : "blink",
+    "deathParticles" : "deathPoof",
+
+    "alwaysAggressive" : true,
+
+    "scale" : 1,
+
+    "portraitIcon" : "/monsters/boss/nebisfuckingawesomeandmadefortresscore/fortresscore/fortresscoreicon.png",
+
+    "movementSettings" : {
+      "gravityEnabled" : false,
+
+      "collisionPoly" : [ [3, -11.5], [-3, -11.5], [-3, 11.5], [3, 11.5] ],
+      "mass" : 4.0,
+      "walkSpeed" : 5,
+      "runSpeed" : 13,
+      "airForce" : 200,
+      "airJumpProfile" : {
+        "jumpControlForce" : 0,
+        "jumpInitialPercentage" : 0
+      },
+      "physicsEffectCategories" : ["boss"]
+    },
+    "jumpTargetDistance" : 4,
+    "jumpTime" : [0.4, 0.7],
+
+    "metaBoundBox" : [-15, -15, 15, 15],
+
+    "blockedSensors" : [ [1.5, -4.5], [1.5, -3.5], [1.5, -2.5], [1.5, -1.5], [1.5, -0.5], [1.5, 0.5] ],
+    "fallSensors" : [ [2, -3.5], [2, -5.5], [2, -6.5], [4, -4.5], [4, -5.5], [4, -6.5] ],
+
+    "touchDamage" : {
+      "poly" : [ [-4, -3], [0, -3], [0, 0], [-4, 0] ],
+      "damage" : 20,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "default",
+      "statusEffects" : [ ]
+    },
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : false,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0
+        },
+        "grit" : {
+          "baseValue" : 1.0
+        },
+        "maxHealth" : {
+          "baseValue" : 40000
+        },
+        "protection" : {
+          "baseValue" : 50
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "specialStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "healingStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "stunImmunity" : {
+          "baseValue" : 1.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0,
+          "maxValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "projectiles" : {
+      "deathexplosion" : {
+        "type" : "regularexplosionknockback",
+        "config" : {
+          "speed" : 0.1,
+          "power" : 2,
+
+          "actionOnReap" : [
+            {
+              "action" : "config",
+              "file" : "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config"
+            }
+          ]
+        },
+
+        "fireTime" : 8.0,
+        "fireInterval" : 0.2,
+        "cooldown" : 0.1
+      }
+    },
+
+    "mouthOffset" : [1.0, -1.5],
+    "feetOffset" : [0, -21]
+  }
+}

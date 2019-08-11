@@ -1,0 +1,23 @@
+{
+  "frameGrid" : {
+    "size" : [290, 212],
+    "dimensions" : [10, 1],
+
+    "names" : [
+      [ "open", "slam.1", "slam.2", "slam.3", "slam.4", "slam.5", "slam.6", "slam.7", "slam.8", "closed"]
+    ]
+  },
+	
+  "aliases" : {
+    "winddown.1" : "slam.8",
+	"winddown.2" : "slam.7",
+	"winddown.3" : "slam.6",
+	"winddown.4" : "slam.5",
+    "winddown.5" : "slam.4",
+	"winddown.6" : "slam.3",
+	"winddown.7" : "slam.2",
+	"winddown.8" : "slam.1",
+    "slam.9" : "closed",
+    "winddown.9" : "open"
+  }
+}

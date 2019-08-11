@@ -1,0 +1,13 @@
+{
+  "frameGrid" : {
+    "size" : [290, 400],
+    "dimensions" : [5, 4],
+
+    "names" : [
+      [ null, "ltopopen", "ltop.1", "ltop.2", "ltopclosed"],
+      [ null, "rtopopen", "rtop.1", "rtop.2", "rtopclosed"],
+      [ null, "lbotopen", "lbot.1", "lbot.2", "lbotclosed"],
+      [ null, "rbotopen", "rbot.1", "rbot.2", "rbotclosed"]
+    ]
+  }
+}
