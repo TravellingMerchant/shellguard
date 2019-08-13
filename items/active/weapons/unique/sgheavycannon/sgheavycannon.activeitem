@@ -212,6 +212,6 @@
     "animationParts" : {
     "gun" : "sgheavycannonelite.png"
     },
-    "shortdescription" : "Elite Incinerator ^yellow;^reset;"
+    "shortdescription" : "Elite Autocannon ^yellow;^reset;"
   }
 }
