@@ -40,10 +40,10 @@
   ],
 
   "offeredQuests" : [
-    "sgdadchase1", "sgdadchase2"
+    "sgdadchase1", "sgdadchase2", "sgdadchase3"
   ],
   "turnInQuests" : [
-    "sgdadchase1", "sgdadchase2"
+    "sgdadchase1", "sgdadchase2", "sgdadchase3"
   ],
 
   "scripts" : ["/scripts/chattyObject.lua"],

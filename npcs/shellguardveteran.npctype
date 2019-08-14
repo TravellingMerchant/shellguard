@@ -82,6 +82,8 @@
             "primary" : [
               "shellguardrifle",
               "sgbotspear",
+			  "sgstandardrifle",
+			  "sgstandardriflelong",
 			  "sggunspear"
             ],
             "sheathedprimary" : [
@@ -101,6 +103,8 @@
             "primary" : [
               "shellguardrifle",
               "sgbotspear",
+			  "sgstandardrifle",
+			  "sgstandardriflelong",
 			  "sggunspear"
             ],
             "sheathedprimary" : [
@@ -120,6 +124,8 @@
             "primary" : [
               "shellguardrifle",
               "sgbotspear",
+			  "sgstandardrifle",
+			  "sgstandardriflelong",
 			  "sggunspear"
             ],
             "sheathedprimary" : [
