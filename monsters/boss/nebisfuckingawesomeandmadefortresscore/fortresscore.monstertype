@@ -3,7 +3,7 @@
   "shortdescription" : "Fortress Core",
 
   "categories" : [ "sgnebisamadladandmadefortress" ],
-  "parts" : [ "base", "coreAi", "blastShield" ],
+  "parts" : [ "base", "coreAi", "blastShield", "vents", "fortresssilos" ],
 
   "animation" : "fortresscore.animation",
   "reversed" : true,
@@ -24,34 +24,42 @@
       "/monsters/boss/nebisfuckingawesomeandmadefortresscore/fortressreset.lua"
     ],
 
+	"renderLayer" : "Projectile-1",
+	
     "skillCount" : 13,
-    "skills" : [ "exhaustVents", "backup", "radiationLeak", "miniTurrets", "rocketTurret", "laserTurret", "blastShieldSlamPhase", "blastShieldSlam", "coreLaser", "gravitySlam", "aerialMines" ],
+    "skills" : [ "groundedBackup", "airborneBackup", "radiationLeak", "miniTurrets", "rocketTurret", "laserTurret", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMines" ],
 
     "phases" : [
 	  //Skills/Abilities the core will possess in each phase, it is randomly picked by whats in the tables
-	  //Default Skills
+	  //Introduction, with the default skills
       {
-        "skills" : []
-      },
-      {
-        "trigger" : "healthPercentage",
-        "healthPercentage" : 0.999,
         "enterPhase" : "blastShieldSlam",
-        "skills" : []
+        "skills" : ["ventExhaustFlame", "gravitySlam"]
       }
-	  //Each phase has an initial health threshold to allow for more attacks to unlock as you go, please note these overwrite previous phases
-	  //Phase 1 = Core notices threat
+	  //After breaking open blastshield, core will talk and then activate energyshield
+	  
+	  //Reactivates blast shield
+	  
+	  //Reactivates energy shield
+	  
+	  //Ruin cleaver finisher
+	  
     ],
+
+	//temp
+	"musicStagehands" : [ "bossmusic" ],
 
     "chatPortrait" : "/interface/chatbubbles/SGUFO.png",
     "dialog" : {
-      "intro" : "I don't like you, <player>.",
-      "intro2" : "Nothin personaw, kid.",
-      "intro3" : "But I must go all out ...Just this once.",
-      "intro4" : "UwU",
-      "death" : "You got a popuwation of one point thwee-two biwwion.",
-      "death2" : "But most your videowos can't seem to hit even a miwwion",
-      "death3" : "SUB BOT!"
+	  //Intro dialogue
+	  "introLines" : 4,
+      "intro1" : "it's a beautiful day outside.",
+      "intro2" : "birds are singing, flowers are blooming...",
+      "intro3" : "on days like these, kids like you...",
+      "intro4" : "Should be burning in hell.",
+	  //Death dialogue
+	  "deadLines" : 1
+      "death1" : "i'm going to grillby's. papyrus, do you want anything?"
     },
 	
     "projectileSourcePosition" : [-2.5, -1.25],
@@ -71,6 +79,13 @@
 
     "portraitIcon" : "/monsters/boss/nebisfuckingawesomeandmadefortresscore/fortresscore/fortresscoreicon.png",
 
+	//WIP doesnt change hitbox, only in debug
+	"collisionPolys" : {
+	  "closedCollisionPoly" : [ [10.5, -11.5], [-10.5, -11.5], [-10.5, 11.5], [10.5, 11.5] ],
+	  "shieldCollisionPoly" : [ [6, -11.5], [-6, -11.5], [-6, 11.5], [6, 11.5] ],
+	  "openCollisionPoly" : [ [3, -11.5], [-3, -11.5], [-3, 11.5], [3, 11.5] ]
+	},
+
     "movementSettings" : {
       "gravityEnabled" : false,
 
@@ -85,6 +100,7 @@
       },
       "physicsEffectCategories" : ["boss"]
     },
+	
     "jumpTargetDistance" : 4,
     "jumpTime" : [0.4, 0.7],
 
@@ -94,11 +110,11 @@
     "fallSensors" : [ [2, -3.5], [2, -5.5], [2, -6.5], [4, -4.5], [4, -5.5], [4, -6.5] ],
 
     "touchDamage" : {
-      "poly" : [ [-4, -3], [0, -3], [0, 0], [-4, 0] ],
-      "damage" : 20,
+      "poly" : [ [10, -11.5], [-10, -11.5], [-10, 11.5], [10, 11.5] ],
+      "damage" : 100,
 
       "teamType" : "enemy",
-      "damageSourceKind" : "default",
+      "damageSourceKind" : "hammer",
       "statusEffects" : [ ]
     },
 

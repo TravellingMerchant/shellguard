@@ -9,5 +9,16 @@
       [ null, "lbotopen", "lbot.1", "lbot.2", "lbotclosed"],
       [ null, "rbotopen", "rbot.1", "rbot.2", "rbotclosed"]
     ]
+  },
+  
+  "aliases" : {
+    "ltopactivate.1" : "ltop.2",
+    "ltopactivate.2" : "ltop.1",
+    "rtopactivate.1" : "rtop.2",
+    "rtopactivate.2" : "rtop.1",
+    "lbotactivate.1" : "lbot.2",
+    "lbotactivate.2" : "lbot.1",
+    "rbotactivate.1" : "rbot.2",
+    "rbotactivate.2" : "rbot.1"
   }
 }

@@ -8,6 +8,7 @@ function dieState.enterWith(params)
 
   return {
     timer = 3,
+	sayTime = 1,
     rotateInterval = 0.1,
     rotateAngle = 0.05,
     deathSound = true
@@ -19,11 +20,20 @@ function dieState.enteringState(stateData)
 
   animator.setAnimationState("coreIdle", "off")
   
-  monster.sayPortrait(config.getParameter("dialog.intro"), config.getParameter("chatPortrait"), { player = world.entityName(world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]) })
-  monster.sayPortrait(config.getParameter("dialog.intro2"), config.getParameter("chatPortrait"), { player = world.entityName(world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]) })
-  monster.sayPortrait(config.getParameter("dialog.intro3"), config.getParameter("chatPortrait"), { player = world.entityName(world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]) })
-  monster.sayPortrait(config.getParameter("dialog.intro4"), config.getParameter("chatPortrait"), { player = world.entityName(world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]) })
+  local playerId = world.entityName(world.playerQuery(mcontroller.position(), 50, {order = "random"})[1])
+  local currentLine = 1
   
+  if stateData.sayTime > 0 then
+	
+	monster.sayPortrait(config.getParameter("dialog.death"..currentLine), config.getParameter("chatPortrait"), { player = playerId })
+	if stateData.sayTime <= 0 then
+	  stateData.sayTime = 1
+	  if currentLine < 3 then
+	    currentLine = currentLine + 1
+	  end
+	end
+  end
+	  
   animator.setAnimationState("coreAi", "stage"..currentPhase())
   
   animator.playSound("destruction")
@@ -36,23 +46,23 @@ function dieState.enteringState(stateData)
     local aimVector = {math.cos(randAngle), math.sin(randAngle)}
     local projectile = "mechexplosion"
     world.spawnProjectile(projectile, spawnPosition, entity.id(), aimVector, false, {
-      speed = 10 + math.random() * 30,
-      power = 0, 
-      timeToLive = 3 + math.random() * 3
+      power = 0
     })
   end
 end
 
 function dieState.update(dt, stateData)
-  stateData.timer = stateData.timer - dt
+  stateData.sayTime = stateData.sayTime - dt  
+  if stateData.sayTime > 0 then
+    stateData.sayTime = stateData.sayTime - dt
+  end
 
   local angle = dieState.angleFactorFromTime(stateData.timer, stateData.rotateInterval) * stateData.rotateAngle - stateData.rotateAngle / 2
-  animator.rotateGroup("all", angle, true)
+  animator.rotateGroup("core", angle, true)
 
   stateData.timer = stateData.timer - dt
 
   if stateData.timer < 0.2 and stateData.deathSound then
-    animator.playSound("shatter")
     stateData.deathSound = false
   end
 
@@ -67,9 +77,7 @@ function dieState.update(dt, stateData)
       local projectile = "mechexplosion"
       local speed = math.random() * 60
       world.spawnProjectile(projectile, spawnPosition, entity.id(), aimVector, false, {
-        speed = speed,
-        power = 0, 
-        timeToLive = 3 + math.random() * 3
+        power = 0
       })
     end
 

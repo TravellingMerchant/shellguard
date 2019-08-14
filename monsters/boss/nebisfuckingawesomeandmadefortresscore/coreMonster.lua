@@ -4,7 +4,14 @@ require "/scripts/rect.lua"
 function init()
   self.tookDamage = false
   self.dead = false
-
+  self.currentIntro = 1
+  self.weHaventSaidThisYes = false
+  self.sayTime = 4
+  self.startPhase = false
+  self.openCollisionPoly = config.getParameter("collisionPolys.openCollisionPoly", {})
+  self.closedCollisionPoly = config.getParameter("collisionPolys.closedCollisionPoly", {})
+  self.shieldCollisionPoly = config.getParameter("collisionPolys.shieldCollisionPoly", {})
+	  
   if rangedAttack then
     rangedAttack.loadConfig()
   end
@@ -57,6 +64,14 @@ end
 
 function update(dt)
   self.tookDamage = false
+  
+  if animator.animationState("blastShield") == "closed" then
+	mcontroller.controlParameters({collisionPoly = self.closedCollisionPoly})
+  elseif animator.animationState("energyShield") == "idle" then
+	mcontroller.controlParameters({collisionPoly = self.shieldCollisionPoly})
+  else
+	mcontroller.controlParameters({collisionPoly = self.openCollisionPoly})
+  end
 
   if not status.resourcePositive("health") then
     local inState = self.state.stateDesc()
@@ -79,13 +94,34 @@ function update(dt)
 
     if hasTarget() then
       script.setUpdateDelta(1)
-      updatePhase(dt)
+	  if self.startPhase then
+		updatePhase(dt)
+        animator.setGlobalTag("phase", "phase"..currentPhase())
+	  end
 
-      monster.setDamageBar("Special")
-      monster.setAggressive(true)
-      setBattleMusicEnabled(true)
-
-      animator.setGlobalTag("phase", "phase"..currentPhase())
+	  local playerId = world.entityName(world.playerQuery(mcontroller.position(), 50, {order = "random"})[1])
+	  
+	  if self.sayTime > 0 then
+	    self.sayTime = self.sayTime - dt
+		
+		if not self.weHaventSaidThisYes then
+		  monster.sayPortrait(config.getParameter("dialog.intro"..self.currentIntro), config.getParameter("chatPortrait"), { player = playerId })
+		  self.weHaventSaidThisYes = true
+		end
+		if self.sayTime <= 0 then
+		  if self.currentIntro < 4 then
+		    self.currentIntro = self.currentIntro + 1
+			self.weHaventSaidThisYes = false
+		  end
+		  self.sayTime = 4
+		  if self.currentIntro == 4 then
+		    monster.setDamageBar("Special")
+		    monster.setAggressive(true)
+		    setBattleMusicEnabled(true)  
+			self.startPhase = true
+		  end	
+		end
+	  end
     else
       if self.hadTarget then
         --Lost target, reset boss
@@ -381,6 +417,7 @@ end
 function setBattleMusicEnabled(enabled)
   if self.musicEnabled ~= enabled then
     local musicStagehands = config.getParameter("musicStagehands", {})
+    sb.logInfo("%s", musicStagehands)
     for _,stagehand in pairs(musicStagehands) do
       local entityId = world.loadUniqueEntity(stagehand)
 

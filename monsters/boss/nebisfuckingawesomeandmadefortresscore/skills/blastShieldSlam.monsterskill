@@ -9,15 +9,18 @@
     "blastShieldSlam" : {
       "windupDuration" : 1,
       "winddownDuration" : 0.5,
-      "winddown" : false
+      "skillTime" : 1.15,
+      "rotateInterval" : 0.2,
+      "rotateMaxAngle" : 0.05
     }
   },
 
   "animationParameters" : {
     "particleEmitters" : {
       "slam" : {
-        "emissionRate" : 1.0,
-        "offsetRegion" : [-3, 0.25, 3, -0.25],
+        "emissionRate" : 50,
+        "burstCount" : 4,
+        "offsetRegion" : [-11, 0.25, 11, -0.25],
         "particles" : [
           { "particle" : "dust4" },
           { "particle" : "dust4" },
@@ -27,7 +30,7 @@
       }
     },
     "sounds" : {
-      "blastShieldSlam" : [ "/sfx/melee/blunt_hit_metal6.ogg", "/sfx/melee/blunt_hit_metal5.ogg", "/sfx/melee/blunt_hit_metal4.ogg", "/sfx/melee/blunt_hit_metal3.ogg", "/sfx/melee/blunt_hit_metal2.ogg", "/sfx/melee/blunt_hit_metal1.ogg" ],
+      "blastShieldSlam" : [ "/sfx/monsters/boss/fortresscore/blastshieldslam.ogg" ],
       "blastShieldSlamWindup" : [  "/sfx/npc/boss/robotboss_attack1.ogg", "/sfx/npc/boss/robotboss_attack2.ogg" ]
     }
   }

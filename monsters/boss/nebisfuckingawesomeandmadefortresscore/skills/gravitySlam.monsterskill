@@ -1,0 +1,20 @@
+{
+  "name" : "gravitySlam",
+  "label" : "DEAD SPACE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/gravitySlam.lua" ],
+
+    "ufoPulseCannonAttack" : {
+      "zeroGravityDuration" : 0.01,
+      "heavyGravityDuration" : 2
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "alert" : [ "/sfx/objects/redalert.ogg" ]
+    }
+  }
+}

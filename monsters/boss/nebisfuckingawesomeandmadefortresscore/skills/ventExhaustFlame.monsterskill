@@ -1,0 +1,21 @@
+{
+  "name" : "ventExhaustFlame",
+  "label" : "EXHAUST VENTS",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/ventExhaustFlame.lua" ],
+
+    "ufoPulseCannonAttack" : {
+      "fireDuration" : 2,
+
+      "projectile" : {
+        "type" : "sglongflame",
+        "config" : {
+          "power" : 25,
+          "actionOnReap" : []
+        }
+      }
+    }
+  }
+}

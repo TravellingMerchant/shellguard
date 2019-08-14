@@ -15,7 +15,8 @@
           }
         }
       },
-
+	  
+	  //CORE
       "coreAi" : {
         "priority" : 1,
         "default" : "stage1",
@@ -38,6 +39,7 @@
         }
       },
 	  
+	  //BASE
       "base" : {
         "priority" : 1,
         "default" : "idle",
@@ -48,46 +50,264 @@
         }
       },
 
+	  //VENTS
       "topLeftVents" : {
         "priority" : 1,
-        "default" : "vents",
+        "default" : "closed",
         "states" : {
-          "vents" : {
+          "closed" : {
             "frames" : 1
+          },
+          "activate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "open"
+          },
+          "open" : {
+            "frames" : 1
+          },
+          "deactivate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "closed"
           }
         }
       },
-
-      "bottomLeftVents" : {
-        "priority" : 1,
-        "default" : "vents",
-        "states" : {
-          "vents" : {
-            "frames" : 1
-          }
-        }
-      },
-
       "topRightVents" : {
         "priority" : 1,
-        "default" : "vents",
+        "default" : "closed",
         "states" : {
-          "vents" : {
+          "closed" : {
             "frames" : 1
+          },
+          "activate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "open"
+          },
+          "open" : {
+            "frames" : 1
+          },
+          "deactivate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "closed"
           }
         }
       },
-
+      "bottomLeftVents" : {
+        "priority" : 1,
+        "default" : "closed",
+        "states" : {
+          "closed" : {
+            "frames" : 1
+          },
+          "activate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "open"
+          },
+          "open" : {
+            "frames" : 1
+          },
+          "deactivate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "closed"
+          }
+        }
+      },
       "bottomRightVents" : {
         "priority" : 1,
-        "default" : "vents",
+        "default" : "closed",
         "states" : {
-          "vents" : {
+          "closed" : {
             "frames" : 1
+          },
+          "activate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "open"
+          },
+          "open" : {
+            "frames" : 1
+          },
+          "deactivate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "closed"
+          }
+        }
+      },
+	  
+	  //SILOS
+      "topLeftSilo" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "rise" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "risen" : {
+            "frames" : 1
+          },
+          "dooropen" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "openidle"
+          },
+          "openidle" : {
+            "frames" : 1
+          },
+          "doorclose" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "sink" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      },
+      "topRightSilo" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "rise" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "risen" : {
+            "frames" : 1
+          },
+          "dooropen" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "openidle"
+          },
+          "openidle" : {
+            "frames" : 1
+          },
+          "doorclose" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "sink" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      },
+      "bottomRightSilo" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "rise" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "risen" : {
+            "frames" : 1
+          },
+          "dooropen" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "openidle"
+          },
+          "openidle" : {
+            "frames" : 1
+          },
+          "doorclose" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "sink" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      },
+      "bottomLeftSilo" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "rise" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "risen" : {
+            "frames" : 1
+          },
+          "dooropen" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "openidle"
+          },
+          "openidle" : {
+            "frames" : 1
+          },
+          "doorclose" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "sink" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "idle"
           }
         }
       },
 
+
+	  //SHIELDING
       "blastShield" : {
         "priority" : 1,
         "default" : "open",
@@ -138,7 +358,7 @@
           "centered" : true,
           "zLevel" : 2,
           "transformationGroups" : ["core"],
-          "rotationGroup" : "all"
+          "rotationGroup" : "core"
         },
 
         "partStates" : {
@@ -166,6 +386,326 @@
             "stage5" : {
               "properties" : {
                 "image" : "<partImage>:stage5"
+              }
+            }
+          }
+        }
+      },
+	  
+	  //VENTS
+      "topLeftVents" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 2,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "topLeftVents" : {
+            "closed" : {
+              "properties" : {
+                "image" : "<partImage>:ltopclosed"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "image" : "<partImage>:ltopactivate.<frame>"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:ltopopen"
+              }
+            },
+            "deactivate" : {
+              "properties" : {
+                "image" : "<partImage>:ltop.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "topRightVents" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 2,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "topRightVents" : {
+            "closed" : {
+              "properties" : {
+                "image" : "<partImage>:rtopclosed"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "image" : "<partImage>:rtopactivate.<frame>"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:rtopopen"
+              }
+            },
+            "deactivate" : {
+              "properties" : {
+                "image" : "<partImage>:rtop.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "bottomLeftVents" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 2,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "bottomLeftVents" : {
+            "closed" : {
+              "properties" : {
+                "image" : "<partImage>:lbotclosed"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "image" : "<partImage>:lbotactivate.<frame>"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:lbotopen"
+              }
+            },
+            "deactivate" : {
+              "properties" : {
+                "image" : "<partImage>:lbot.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "bottomRightVents" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 2,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "bottomRightVents" : {
+            "closed" : {
+              "properties" : {
+                "image" : "<partImage>:rbotclosed"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "image" : "<partImage>:rbotactivate.<frame>"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:rbotopen"
+              }
+            },
+            "deactivate" : {
+              "properties" : {
+                "image" : "<partImage>:rbot.<frame>"
+              }
+            }
+          }
+        }
+      },
+	  
+	  //SILOS
+      "topLeftSilo" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 3,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "topLeftSilo" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:topleftidle"
+              }
+            },
+            "rise" : {
+              "properties" : {
+                "image" : "<partImage>:topleftrise.<frame>"
+              }
+            },
+            "risen" : {
+              "properties" : {
+                "image" : "<partImage>:topleftrisenidle"
+              }
+            },
+            "dooropen" : {
+              "properties" : {
+                "image" : "<partImage>:topleftopenidle.<frame>"
+              }
+            },
+            "openidle" : {
+              "properties" : {
+                "image" : "<partImage>:topleftopenidle"
+              }
+            },
+            "doorclose" : {
+              "properties" : {
+                "image" : "<partImage>:topleftclose.<frame>"
+              }
+            },
+            "sink" : {
+              "properties" : {
+                "image" : "<partImage>:topleftsink.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "topRightSilo" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 3,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "topRightSilo" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:toprightidle"
+              }
+            },
+            "rise" : {
+              "properties" : {
+                "image" : "<partImage>:toprightrise.<frame>"
+              }
+            },
+            "risen" : {
+              "properties" : {
+                "image" : "<partImage>:toprightrisenidle"
+              }
+            },
+            "dooropen" : {
+              "properties" : {
+                "image" : "<partImage>:toprightopenidle.<frame>"
+              }
+            },
+            "openidle" : {
+              "properties" : {
+                "image" : "<partImage>:toprightopenidle"
+              }
+            },
+            "doorclose" : {
+              "properties" : {
+                "image" : "<partImage>:toprightclose.<frame>"
+              }
+            },
+            "sink" : {
+              "properties" : {
+                "image" : "<partImage>:toprightsink.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "bottomLeftSilo" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 3,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "bottomLeftSilo" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:bottomleftidle"
+              }
+            },
+            "rise" : {
+              "properties" : {
+                "image" : "<partImage>:bottomleftrise.<frame>"
+              }
+            },
+            "risen" : {
+              "properties" : {
+                "image" : "<partImage>:bottomleftrisenidle"
+              }
+            },
+            "dooropen" : {
+              "properties" : {
+                "image" : "<partImage>:bottomleftopenidle.<frame>"
+              }
+            },
+            "openidle" : {
+              "properties" : {
+                "image" : "<partImage>:bottomleftopenidle"
+              }
+            },
+            "doorclose" : {
+              "properties" : {
+                "image" : "<partImage>:bottomleftclose.<frame>"
+              }
+            },
+            "sink" : {
+              "properties" : {
+                "image" : "<partImage>:bottomleftsink.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "bottomRightSilo" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 3,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "bottomRightSilo" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:bottomrightidle"
+              }
+            },
+            "rise" : {
+              "properties" : {
+                "image" : "<partImage>:bottomrightrise.<frame>"
+              }
+            },
+            "risen" : {
+              "properties" : {
+                "image" : "<partImage>:bottomrightrisenidle"
+              }
+            },
+            "dooropen" : {
+              "properties" : {
+                "image" : "<partImage>:bottomrightopenidle.<frame>"
+              }
+            },
+            "openidle" : {
+              "properties" : {
+                "image" : "<partImage>:bottomrightopenidle"
+              }
+            },
+            "doorclose" : {
+              "properties" : {
+                "image" : "<partImage>:bottomrightclose.<frame>"
+              }
+            },
+            "sink" : {
+              "properties" : {
+                "image" : "<partImage>:bottomrightsink.<frame>"
               }
             }
           }
@@ -263,6 +803,9 @@
   "rotationGroups" : {
     "all" : {
       "angularVelocity" : 10
+    },
+    "core" : {
+      "angularVelocity" : 5
     }
   },
   
@@ -324,7 +867,7 @@
     "glow" : {
       "active" : true,
       "position" : [0, 0],
-      "color" : [200, 0, 0],
+      "color" : [150, 50, 50],
       "pointLight" : false
     }
   },
@@ -333,7 +876,7 @@
     "blink" : {
       "type" : "flash",
       "time" : 0.25,
-      "directives" : "fade=000000;0.5"
+      "directives" : "fade=ffffff;0.15"
     }
   }
 }
