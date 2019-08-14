@@ -58,7 +58,7 @@
       "intro3" : "on days like these, kids like you...",
       "intro4" : "Should be burning in hell.",
 	  //Death dialogue
-	  "deadLines" : 1
+	  "deadLines" : 1,
       "death1" : "i'm going to grillby's. papyrus, do you want anything?"
     },
 	
