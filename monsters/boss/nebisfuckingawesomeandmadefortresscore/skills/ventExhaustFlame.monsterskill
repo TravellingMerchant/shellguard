@@ -6,12 +6,16 @@
   "parameters" : {
     "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/ventExhaustFlame.lua" ],
 
-    "ufoPulseCannonAttack" : {
-      "fireDuration" : 2,
+    "ventExhaustFlame" : {
+      "fireDuration" : 5,
 
+      "leftProjectileOffset" : [-7.5, -25],
+      "rightProjectileOffset" : [7.5, -25],
+      "fireInterval" : 0.05,
       "projectile" : {
         "type" : "sglongflame",
         "config" : {
+          "speed" : 40,
           "power" : 25,
           "actionOnReap" : []
         }

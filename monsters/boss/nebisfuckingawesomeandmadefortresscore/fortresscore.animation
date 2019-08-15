@@ -35,6 +35,9 @@
           },
           "stage5" : {
             "frames" : 1
+          },
+          "destroyed" : {
+            "frames" : 1
           }
         }
       },
@@ -45,6 +48,9 @@
         "default" : "idle",
         "states" : {
           "idle" : {
+            "frames" : 1
+          },
+          "destroyed" : {
             "frames" : 1
           }
         }
@@ -387,6 +393,11 @@
               "properties" : {
                 "image" : "<partImage>:stage5"
               }
+            },
+            "destroyed" : {
+              "properties" : {
+                "image" : "<partImage>:stage5"
+              }
             }
           }
         }
@@ -722,6 +733,11 @@
         "partStates" : {
           "base" : {
             "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "destroyed" : {
               "properties" : {
                 "image" : "<partImage>:idle"
               }

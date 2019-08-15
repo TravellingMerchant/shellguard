@@ -17,9 +17,14 @@ function blastShieldSlam.enterWith(args)
 end
 
 function blastShieldSlam.enteringState(stateData)
-  animator.setAnimationState("coreAi", "stage"..currentPhase())
-  animator.setAnimationState("blastShield", "open")
+  if animator.animationState("blastShield") == "open" then
+  end
+  if animator.animationState("blastShield") == "closed" then
+    animator.setAnimationState("blastShield", "winddown")
+	stateData.windupDuration = stateData.windupDuration * 1.25
+  end
   
+  animator.setAnimationState("coreAi", "stage"..currentPhase())
   animator.playSound("blastShieldSlamWindup")
 end
 

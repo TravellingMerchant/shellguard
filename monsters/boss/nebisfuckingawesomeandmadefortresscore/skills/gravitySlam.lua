@@ -28,6 +28,7 @@ function gravitySlam.update(dt, stateData)
 	world.setDungeonBreathable(0, false)
 
     if stateData.zeroGravityDuration <= 0 then
+      animator.playSound("alert")
 	  self.increaseGravity = true
     end
   end
@@ -38,10 +39,7 @@ function gravitySlam.update(dt, stateData)
 	world.setDungeonGravity(0, ((self.worldGravity*3.5)*1.25))
 	
 	if stateData.heavyGravityDuration <= 0 then
-      animator.playSound("alert")
-	  world.setDungeonGravity(0, self.originalWorldGravity)
-      self.increaseGravity = false
-	  world.setDungeonBreathable(0, true)
+      return true
 	end
   end
 

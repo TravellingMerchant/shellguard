@@ -51,13 +51,14 @@
 
     "chatPortrait" : "/interface/chatbubbles/SGUFO.png",
     "dialog" : {
+	  "lineDuration" : 3, //Duration a text bubble stays for, before being overwritten by the next
 	  //Intro dialogue
 	  "introLines" : 4,
       "intro1" : "it's a beautiful day outside.",
       "intro2" : "birds are singing, flowers are blooming...",
       "intro3" : "on days like these, kids like you...",
       "intro4" : "Should be burning in hell.",
-	  //Death dialogue
+	  //Death dialogue - Currently unused
 	  "deadLines" : 1,
       "death1" : "i'm going to grillby's. papyrus, do you want anything?"
     },

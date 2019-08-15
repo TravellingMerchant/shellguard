@@ -4,7 +4,7 @@ require "/scripts/rect.lua"
 function init()
   self.tookDamage = false
   self.dead = false
-  self.currentIntro = 1
+  self.currentIntro = config.getParameter("dialog.introLines", 1)
   self.weHaventSaidThisYes = false
   self.sayTime = 4
   self.startPhase = false
