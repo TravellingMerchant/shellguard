@@ -5,6 +5,8 @@ function ventExhaustFlame.enter()
   if not hasTarget() then return nil end
   
   self.active = false
+  self.leftProjectileOffset = config.getParameter("ventExhaustFlame.leftProjectileOffset")
+  self.rightProjectileOffset = config.getParameter("ventExhaustFlame.rightProjectileOffset")
 
   rangedAttack.setConfig(config.getParameter("ventExhaustFlame.projectile.type"), config.getParameter("ventExhaustFlame.projectile.config"), config.getParameter("ventExhaustFlame.fireInterval"))
 
@@ -22,18 +24,21 @@ end
 function ventExhaustFlame.update(dt, stateData)
   if not hasTarget() then return true end
   
-  local leftProjectileOffset = config.getParameter("ventExhaustFlame.leftProjectileOffset")
-  local rightProjectileOffset = config.getParameter("ventExhaustFlame.rightProjectileOffset")
-  
   if self.active and stateData.fireDuration > 0 then
     stateData.fireDuration = stateData.fireDuration - dt
   
 	if animator.animationState("bottomLeftVents") == "open" then
-	  rangedAttack.aim(rightProjectileOffset, {1,0})
+	  rangedAttack.aim(self.rightProjectileOffset, {-1,0})
+	  rangedAttack.fireContinuous()
+	  
+	  rangedAttack.aim(vec2.add(self.rightProjectileOffset, {1,0}), {-1,0})
 	  rangedAttack.fireContinuous()
 	end
 	if animator.animationState("bottomRightVents") == "open" then
-	  rangedAttack.aim(leftProjectileOffset, {-1,0})
+	  rangedAttack.aim(self.leftProjectileOffset, {1,0})
+	  rangedAttack.fireContinuous()
+	  
+	  rangedAttack.aim(vec2.add(self.leftProjectileOffset, {-1,0}), {1,0})
 	  rangedAttack.fireContinuous()
 	end
 	

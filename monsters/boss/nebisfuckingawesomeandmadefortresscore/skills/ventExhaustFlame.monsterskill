@@ -9,14 +9,14 @@
     "ventExhaustFlame" : {
       "fireDuration" : 5,
 
-      "leftProjectileOffset" : [-7.5, -25],
-      "rightProjectileOffset" : [7.5, -25],
-      "fireInterval" : 0.05,
+      "leftProjectileOffset" : [-5, -23.75],
+      "rightProjectileOffset" : [5, -23.75],
+      "fireInterval" : 0.1,
       "projectile" : {
         "type" : "sglongflame",
         "config" : {
           "speed" : 40,
-          "power" : 25,
+          "power" : 5,
           "actionOnReap" : []
         }
       }

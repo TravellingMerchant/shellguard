@@ -4,9 +4,9 @@ require "/scripts/rect.lua"
 function init()
   self.tookDamage = false
   self.dead = false
-  self.currentIntro = config.getParameter("dialog.introLines", 1)
+  self.currentIntro = 1
   self.weHaventSaidThisYes = false
-  self.sayTime = 4
+  self.sayTime = config.getParameter("dialog.lineDuration", 4)
   self.startPhase = false
   self.openCollisionPoly = config.getParameter("collisionPolys.openCollisionPoly", {})
   self.closedCollisionPoly = config.getParameter("collisionPolys.closedCollisionPoly", {})
@@ -109,12 +109,12 @@ function update(dt)
 		  self.weHaventSaidThisYes = true
 		end
 		if self.sayTime <= 0 then
-		  if self.currentIntro < 4 then
+		  if self.currentIntro < config.getParameter("dialog.introLines", 1) then
 		    self.currentIntro = self.currentIntro + 1
 			self.weHaventSaidThisYes = false
 		  end
-		  self.sayTime = 4
-		  if self.currentIntro == 4 then
+		  self.sayTime = config.getParameter("dialog.lineDuration", 4)
+		  if self.currentIntro == config.getParameter("dialog.introLines", 1) then
 		    monster.setDamageBar("Special")
 		    monster.setAggressive(true)
 		    setBattleMusicEnabled(true)  
