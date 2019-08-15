@@ -1135,15 +1135,17 @@
          "objects":[
                 {
                  "height":8,
-                 "id":3086,
+                 "id":3089,
                  "name":"",
                  "properties":
                     {
-                     "monster":"sgnebisamadladandmadefortress"
+                     "monster":"sgnebisamadladandmadefortress",
+                     "parameters":"{\"musicStagehands\" : [ \"bossmusic\" ], \"uniqueId\" : \"sgnebisamadladandmadefortress\"}"
                     },
                  "propertytypes":
                     {
-                     "monster":"string"
+                     "monster":"string",
+                     "parameters":"string"
                     },
                  "rotation":0,
                  "type":"",
@@ -1204,7 +1206,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":3088,
+ "nextobjectid":3090,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",

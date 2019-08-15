@@ -31,6 +31,8 @@
 	  { "item" : "shellengineerchest" },
 	  { "item" : "shellengineerlegs" },
       { "item" : "shellguardtrainingrifle" },
+      { "item" : "sgstandardrifle" },
+      { "item" : "sgstandardriflelong" },
       { "item" : "shellguardrifle" },
       { "item" : "shellguardriflecompact" },
       { "item" : "shellguardriflescoped" },

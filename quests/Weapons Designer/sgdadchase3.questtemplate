@@ -1,0 +1,45 @@
+{
+  "id" : "sgdadchase3",
+  "prerequisites" : ["sgdadchase2"],
+  "title" : "^green;Missing Person: 3",
+  "text" : "A small camp of rebels appears to have set up on a mining planet. Hopefully he's still there!",
+  "completionText" : "So, the bad news is that he wasn't there, but the good news is that he's alive.. And that he's also given us something incredible. I can't wait for you to use it!",
+  "moneyRange" : [1200, 1200],
+  "rewards" : [
+    [ [ "sgheavyshotgun", 1 ], ["money", 2000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/sgweaponsdesigner/sgweaponsdesignerportrait.png"} ],
+        "title" : "Weapons Designer"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/sgweaponsdesigner/sgweaponsdesignerportrait.png"} ],
+        "title" : "Weapons Designer"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to the ^orange;weapons designer^reset;",
+      "findGoal" : "Fight your way through the mission",
+      "turnIn" : "Return to the ^orange;weapons designer^reset;"
+    },
+
+    "warpEntityUid" : "sgweaponsdesigner",
+    "warpAction" : "instanceworld:sgmine",
+    "warpDialog" : "/interface/confirmation/sgdesignerconfirmation.config:weapondesignermission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "sgminetele",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgweaponsdesigner"
+  }
+}

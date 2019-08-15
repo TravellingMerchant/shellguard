@@ -2483,8 +2483,8 @@
                  "type":"",
                  "visible":true,
                  "width":480,
-                 "x":4560,
-                 "y":2424
+                 "x":4520,
+                 "y":2088
                 }, 
                 {
                  "height":40,
@@ -2592,7 +2592,7 @@
          "y":0
         }],
  "nextlayerid":12,
- "nextobjectid":1930,
+ "nextobjectid":1931,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",

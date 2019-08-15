@@ -1,0 +1,91 @@
+{
+  "itemName" : "sgstandardriflelong",
+  "price" : 2000,
+  "inventoryIcon" : "sgstandardriflelong.png",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A rifle that uses regular bullets instead of Shellguard HBL rounds.",
+  "shortdescription" : "Standard Rifle",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgstandardriflelong.png",
+    "barrel" : "",
+    "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/sgcarbineshot.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.5, 0.375],
+  "muzzleOffset" : [3, 0.0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.125,
+    "baseDps" : 10.5,
+    "energyUsage" : 25.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.02,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.07,
+        "armRotation" : -20,
+        "weaponRotation" : 30,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "standardbullet",
+    "projectileParameters" : { 
+      "knockback" : 6
+    }
+  },
+
+  "altAbilityType" : "bayonetstab",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgstandardriflelongelite.png",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/sgstandardriflelong/sgstandardriflelongelite.png"
+    },
+    "shortdescription" : "Elite Standard Rifle ^yellow;^reset;"
+  }
+}

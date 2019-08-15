@@ -1,25 +1,26 @@
 {
-  "itemName" : "sgheavyboomer",
-  "price" : 1500,
+  "itemName" : "sgheavyshotgun",
+  "price" : 2000,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A huge gun from a Shellguard ship. Takes great strength to lift.",
-  "shortdescription" : "Heavy Cannon",
+  "description" : "A powerful shotgun that sets enemies ablaze.",
+  "shortdescription" : "HBL-F Shotgun",
   "tooltipKind" : "base",
   "category" : "uniqueWeapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","upgradeableWeapon"],
   "level" : 6,
 
-  "inventoryIcon" : "sgheavyboomericon.png",
+  "inventoryIcon" : "sgheavyshotgunicon.png",
 
-  "animation" : "sgheavyboomer.animation",
+  "animation" : "sgheavyshotgun.animation",
   "animationParts" : {
-    "gun" : "sgheavyboomer.png",
-    "gunfullbright" : "sgheavyboomerfullbright.png"
+    "gun" : "sgheavyshotgun.png",
+    "gunfullbright" : "sgheavyshotgunfullbright.png",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
   },
   "animationCustom" : {},
-  "muzzleOffset" : [4.5, -0.625],
+  "muzzleOffset" : [3.5, 0.375],
   "aimOffset" : -0.5,
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
@@ -35,37 +36,38 @@
     "chargeLevels" : [
       {
         "time" : 0,
-        "energyCost" : 60,
-        "cooldown" : 2,
-        "projectileType" : "sgboomerround",
+        "energyCost" : 20,
+        "cooldown" : 0.5,
+        "projectileType" : "sgsuperheated",
         "projectileParameters" : {},
-        "projectileCount" : 1,
+        "projectileCount" : 5,
         "inaccuracy" : 0.02,
-        "baseDamage" : 7,
+        "baseDamage" : 4,
+        "spreadAngle" : 2,
         "fireType" : "single",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
         //"burstTime" : 0.15,		//delay between shots in the burst
-        //"burstCount" : 10,		//amount of bullets to fire in the burst, must be a integer
-        "fireSound" : "fire",
+        //"burstCount" : 1,		//amount of bullets to fire in the burst, must be a integer
+        "fireSound" : "fire"
 	  
 	    //Recoil Stuffs
-	    "recoilKnockbackVelocity" : 20,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
-	    "crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
-	    "crouchRecoilKnockbackVelocity" : 0	//When crouching it uses this instead of recoilKnockbackVelocity
+	    //"recoilKnockbackVelocity" : 45,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    //"crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
+	    //"crouchRecoilKnockbackVelocity" : 0	//When crouching it uses this instead of recoilKnockbackVelocity
       },
       {
         "time" : 1,
-        "energyCost" : 60,
-        "cooldown" : 2,
-        "projectileType" : "sgboomerround",
+        "energyCost" : 20,
+        "cooldown" : 0.3,
+        "projectileType" : "sgsuperheated",
         "projectileParameters" : {},
-        "projectileCount" : 1,
-        "inaccuracy" : 0.03,
-        "baseDamage" : 6,
-        "spreadAngle" : 5,
+        "projectileCount" : 5,
+        "inaccuracy" : 0.02,
+        "baseDamage" : 3,
+        "spreadAngle" : 2,
         "fireType" : "burst",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
-        "burstTime" : 0.2,		//delay between shots in the burst
-        "burstCount" : 3,		//amount of bullets to fire in the burst, must be a integer
-        "fireSound" : "fire2",
+        "burstTime" : 0.15,		//delay between shots in the burst
+        "burstCount" : 2,		//amount of bullets to fire in the burst, must be a integer
+        "fireSound" : "fire",
 	  
 	    //Recoil Stuffs
 	    "recoilKnockbackVelocity" : 20,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
@@ -105,8 +107,8 @@
       },
       "cooldown" : {
         "duration" : 0.25,
-        "armRotation" : 0,
-        "weaponRotation" : 5,
+        "armRotation" : -30,
+        "weaponRotation" : 40,
         "twoHanded" : true,
 
         "allowRotate" : true,
@@ -114,13 +116,16 @@
       }
     }
   },
+  
+
+  "altAbilityType" : "",
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
-    "inventoryIcon" : "sgheavyboomereliteicon.png",
+    "inventoryIcon" : "sgheavyshotguneliteicon.png",
     "animationParts" : {
-    "gun" : "sgheavyboomerelite.png"
+    "gun" : "sgheavyshotgunelite.png"
     },
-    "shortdescription" : "Elite Heavy Cannon ^yellow;^reset;"
+    "shortdescription" : "Elite Incinerator ^yellow;^reset;"
   }
 }
