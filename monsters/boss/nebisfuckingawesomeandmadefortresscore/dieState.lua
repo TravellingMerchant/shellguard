@@ -34,8 +34,7 @@ function dieState.enteringState(stateData)
 	end
   end
 	  
-  animator.setAnimationState("coreAi", "destroyed")
-  animator.setAnimationState("base", "destroyed")
+  animator.setAnimationState("stages", "destroyed")
   monster.setDamageBar("none")
   
   animator.playSound("destruction")

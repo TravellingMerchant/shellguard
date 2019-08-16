@@ -5,6 +5,7 @@ function gravitySlam.enter()
   if not hasTarget() then return nil end
   
   self.increaseGravity = false
+  self.sounded = false
   self.worldGravity = world.gravity(mcontroller.position())
   self.originalWorldGravity = self.worldGravity
 
@@ -27,8 +28,11 @@ function gravitySlam.update(dt, stateData)
 	world.setDungeonGravity(0, -(self.worldGravity/10))
 	world.setDungeonBreathable(0, false)
 
-    if stateData.zeroGravityDuration <= 0 then
+	if stateData.zeroGravityDuration <= 0.15 and not self.sounded then
       animator.playSound("alert")
+	  self.sounded = true
+	end
+    if stateData.zeroGravityDuration <= 0 then
 	  self.increaseGravity = true
     end
   end
@@ -48,6 +52,7 @@ end
 
 function gravitySlam.leavingState(stateData)
   self.increaseGravity = false
+  self.sounded = false
   world.setDungeonGravity(0, self.originalWorldGravity)
   world.setDungeonBreathable(0, true)
 end

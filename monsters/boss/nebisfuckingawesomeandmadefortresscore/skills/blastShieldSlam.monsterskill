@@ -18,8 +18,8 @@
   "animationParameters" : {
     "particleEmitters" : {
       "slam" : {
-        "emissionRate" : 50,
-        "burstCount" : 4,
+        "emissionRate" : 40,
+        "burstCount" : 6,
         "offsetRegion" : [-11, 0.25, 11, -0.25],
         "particles" : [
           { "particle" : "dust4" },
@@ -31,7 +31,7 @@
     },
     "sounds" : {
       "blastShieldSlam" : [ "/sfx/monsters/boss/fortresscore/blastshieldslam.ogg" ],
-      "blastShieldSlamWindup" : [  "/sfx/npc/boss/robotboss_attack1.ogg", "/sfx/npc/boss/robotboss_attack2.ogg" ]
+      "blastShieldSlamWindup" : [ "/sfx/monsters/boss/fortresscore/windupalert.ogg" ]
     }
   }
 }

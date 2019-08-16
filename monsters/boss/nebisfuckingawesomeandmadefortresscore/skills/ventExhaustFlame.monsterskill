@@ -7,19 +7,26 @@
     "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/ventExhaustFlame.lua" ],
 
     "ventExhaustFlame" : {
-      "fireDuration" : 5,
+      "fireDuration" : 2.5,
+      "windupDuration" : 1,
 
-      "leftProjectileOffset" : [-5, -23.75],
-      "rightProjectileOffset" : [5, -23.75],
-      "fireInterval" : 0.1,
+      "leftProjectileOffset" : [-5.25, -23.75],
+      "rightProjectileOffset" : [5.25, -23.75],
+      "fireInterval" : 0.3,
       "projectile" : {
         "type" : "sglongflame",
         "config" : {
-          "speed" : 40,
-          "power" : 5,
+          "speed" : 45,
+          "power" : 2,
           "actionOnReap" : []
         }
       }
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "ventAlert" : [ "/sfx/monsters/boss/fortresscore/windupalert.ogg" ]
     }
   }
 }

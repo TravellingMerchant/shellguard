@@ -14,7 +14,7 @@
 
   "animationParameters" : {
     "sounds" : {
-      "alert" : [ "/sfx/objects/redalert.ogg" ]
+      "alert" : [ "/sfx/monsters/boss/fortresscore/windupalert.ogg" ]
     }
   }
 }

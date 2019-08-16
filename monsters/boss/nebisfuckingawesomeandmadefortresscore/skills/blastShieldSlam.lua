@@ -24,7 +24,7 @@ function blastShieldSlam.enteringState(stateData)
 	stateData.windupDuration = stateData.windupDuration * 1.25
   end
   
-  animator.setAnimationState("coreAi", "stage"..currentPhase())
+  animator.setAnimationState("stages", "stage"..currentPhase())
   animator.playSound("blastShieldSlamWindup")
 end
 

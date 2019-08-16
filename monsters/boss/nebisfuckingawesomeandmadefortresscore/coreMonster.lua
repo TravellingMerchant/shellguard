@@ -8,6 +8,7 @@ function init()
   self.weHaventSaidThisYes = false
   self.sayTime = config.getParameter("dialog.lineDuration", 4)
   self.startPhase = false
+  self.worldGravity = world.gravity(mcontroller.position())
   self.openCollisionPoly = config.getParameter("collisionPolys.openCollisionPoly", {})
   self.closedCollisionPoly = config.getParameter("collisionPolys.closedCollisionPoly", {})
   self.shieldCollisionPoly = config.getParameter("collisionPolys.shieldCollisionPoly", {})
@@ -79,6 +80,7 @@ function update(dt)
       self.state.endState()
       self.dead = true
     end
+    world.setDungeonGravity(0, self.worldGravity)
 
     self.state.update(dt)
 

@@ -17,7 +17,7 @@
       },
 	  
 	  //CORE
-      "coreAi" : {
+      "stages" : {
         "priority" : 1,
         "default" : "stage1",
         "states" : {
@@ -34,20 +34,6 @@
             "frames" : 1
           },
           "stage5" : {
-            "frames" : 1
-          },
-          "destroyed" : {
-            "frames" : 1
-          }
-        }
-      },
-	  
-	  //BASE
-      "base" : {
-        "priority" : 1,
-        "default" : "idle",
-        "states" : {
-          "idle" : {
             "frames" : 1
           },
           "destroyed" : {
@@ -362,13 +348,13 @@
       "coreAi" : {
         "properties" : {
           "centered" : true,
-          "zLevel" : 2,
+          "zLevel" : 1,
           "transformationGroups" : ["core"],
           "rotationGroup" : "core"
         },
 
         "partStates" : {
-          "coreAi" : {
+          "stages" : {
             "stage1" : {
               "properties" : {
                 "image" : "<partImage>:stage1"
@@ -396,7 +382,50 @@
             },
             "destroyed" : {
               "properties" : {
+                "image" : "<partImage>:destroyed"
+              }
+            }
+          }
+        }
+      },
+	  
+      "base" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 0,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "stages" : {
+            "stage1" : {
+              "properties" : {
+                "image" : "<partImage>:stage1"
+              }
+            },
+            "stage2" : {
+              "properties" : {
+                "image" : "<partImage>:stage2"
+              }
+            },
+            "stage3" : {
+              "properties" : {
+                "image" : "<partImage>:stage3"
+              }
+            },
+            "stage4" : {
+              "properties" : {
+                "image" : "<partImage>:stage4"
+              }
+            },
+            "stage5" : {
+              "properties" : {
                 "image" : "<partImage>:stage5"
+              }
+            },
+            "destroyed" : {
+              "properties" : {
+                "image" : "<partImage>:destroyed"
               }
             }
           }
@@ -717,29 +746,6 @@
             "sink" : {
               "properties" : {
                 "image" : "<partImage>:bottomrightsink.<frame>"
-              }
-            }
-          }
-        }
-      },
-	  
-      "base" : {
-        "properties" : {
-          "centered" : true,
-          "zLevel" : 1,
-          "rotationGroup" : "all"
-        },
-
-        "partStates" : {
-          "base" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
-              }
-            },
-            "destroyed" : {
-              "properties" : {
-                "image" : "<partImage>:idle"
               }
             }
           }
