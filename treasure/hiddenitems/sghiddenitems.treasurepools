@@ -208,7 +208,8 @@
   "sgmonarchpistol" : [
     [1, {
       "fill" : [
-        {"item" : [ "sgmonarchpistol", 1]}
+        {"item" : [ "sgmonarchpistol", 1]},
+        {"item" : [ "sgveteranchest", 1]}
       ]
     }]
   ],

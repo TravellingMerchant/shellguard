@@ -111,6 +111,132 @@
                  "width":312,
                  "x":12488,
                  "y":656
+                }, 
+                {
+                 "height":312,
+                 "id":2052,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"radioMessage\" : \"sgspaceapproach1\" }",
+                     "stagehand":"radiomessage"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":504,
+                 "y":1080
+                }, 
+                {
+                 "height":2560,
+                 "id":2053,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"radioMessage\" : \"sgspaceapproach2\" }",
+                     "stagehand":"radiomessage"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":160,
+                 "x":1096,
+                 "y":-72
+                }, 
+                {
+                 "height":2544,
+                 "id":2055,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"radioMessages\" : [ \"sgspaceapproach3a\", \"sgspaceapproach3b\" ] }",
+                     "stagehand":"radiomessage"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":136,
+                 "x":2568,
+                 "y":-64
+                }, 
+                {
+                 "height":2560,
+                 "id":2057,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"radioMessage\" : \"sgspaceapproach4\" }",
+                     "stagehand":"radiomessage"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":160,
+                 "x":6000,
+                 "y":-96
+                }, 
+                {
+                 "height":2560,
+                 "id":2058,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"radioMessage\" : \"sgspaceapproach5\" }",
+                     "stagehand":"radiomessage"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":160,
+                 "x":10000,
+                 "y":-80
+                }, 
+                {
+                 "height":2560,
+                 "id":2059,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"radioMessage\" : \"sgspaceapproach6\" }",
+                     "stagehand":"radiomessage"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":160,
+                 "x":12232,
+                 "y":-120
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1669,7 +1795,7 @@
                  "y":1192
                 }, 
                 {
-                 "gid":2147492944,
+                 "gid":2147492946,
                  "height":16,
                  "id":1914,
                  "name":"",
@@ -1689,7 +1815,7 @@
                  "y":1288
                 }, 
                 {
-                 "gid":9296,
+                 "gid":9298,
                  "height":16,
                  "id":1915,
                  "name":"",
@@ -1709,7 +1835,7 @@
                  "y":1288
                 }, 
                 {
-                 "gid":2147492944,
+                 "gid":2147492946,
                  "height":16,
                  "id":1916,
                  "name":"",
@@ -1729,7 +1855,7 @@
                  "y":1272
                 }, 
                 {
-                 "gid":2147492944,
+                 "gid":2147492946,
                  "height":16,
                  "id":1917,
                  "name":"",
@@ -1749,7 +1875,7 @@
                  "y":1096
                 }, 
                 {
-                 "gid":9296,
+                 "gid":9298,
                  "height":16,
                  "id":1918,
                  "name":"",
@@ -1769,7 +1895,7 @@
                  "y":1096
                 }, 
                 {
-                 "gid":2147492944,
+                 "gid":2147492946,
                  "height":16,
                  "id":1919,
                  "name":"",
@@ -1789,7 +1915,7 @@
                  "y":1080
                 }, 
                 {
-                 "gid":9310,
+                 "gid":9312,
                  "height":80,
                  "id":1936,
                  "name":"",
@@ -1801,7 +1927,7 @@
                  "y":1280
                 }, 
                 {
-                 "gid":9310,
+                 "gid":9312,
                  "height":80,
                  "id":1937,
                  "name":"",
@@ -2211,7 +2337,7 @@
                  "y":1248
                 }, 
                 {
-                 "gid":9349,
+                 "gid":9351,
                  "height":96,
                  "id":2048,
                  "name":"",
@@ -2223,7 +2349,7 @@
                  "y":1248
                 }, 
                 {
-                 "gid":9351,
+                 "gid":9353,
                  "height":96,
                  "id":2050,
                  "name":"",
@@ -3273,7 +3399,7 @@
          "y":0
         }],
  "nextlayerid":11,
- "nextobjectid":2052,
+ "nextobjectid":2060,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
@@ -3436,19 +3562,19 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgmaterials.json"
         }, 
         {
-         "firstgid":9229,
+         "firstgid":9231,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/space.json"
         }, 
         {
-         "firstgid":9234,
+         "firstgid":9236,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/humanbunker.json"
         }, 
         {
-         "firstgid":9306,
+         "firstgid":9308,
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgfactory.json"
         }, 
         {
-         "firstgid":9316,
+         "firstgid":9318,
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset.json"
         }],
  "tilewidth":8,

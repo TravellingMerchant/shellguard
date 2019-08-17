@@ -1,0 +1,9 @@
+{
+  "name" : "sgsurvivorhologram",
+  "category" : "sgsurvivorhologram",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgsurvivorhologram.png"
+  }
+}

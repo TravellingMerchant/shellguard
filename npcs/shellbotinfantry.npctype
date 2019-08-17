@@ -135,7 +135,8 @@
             "legs" : [ { "name" : "ironwatchdronelegs" } ],
             "primary" : [
               "shellguardrifle",
-              "shellguardriflescoped",
+			  "sgstandardrifle",
+			  "sgstandardriflelong",
               "shellguardmg",
               "shellguardsmg",
 			  "shellguardreflek"
