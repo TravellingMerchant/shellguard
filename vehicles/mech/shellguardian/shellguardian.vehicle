@@ -1,0 +1,79 @@
+{
+  "name" : "shellguardian",
+  "boundBox" : [-5, -5, 5, 5],
+  "slaveControlTimeout" : 2.0,
+  "slaveControlHeartbeat" : 1.0,
+  "canBeHit" : false,
+
+  "script" : "/vehicles/mech/shellguardian/shellguardian.lua",
+  "animation" : "/vehicles/mech/shellguardian/shellguardian.animation",
+
+  "animationPartTags" : {
+	"head" : {
+      "partImage" : "/vehicles/mech/shellguardian/head.png"
+    },
+	"neck" : {
+      "partImage" : "/vehicles/mech/shellguardian/neck.png"
+    },
+	"chest" : {
+      "partImage" : "/vehicles/mech/shellguardian/chest.png"
+    },
+	"spine" : {
+      "partImage" : "/vehicles/mech/shellguardian/spine.png"
+    },
+	"pelvis" : {
+      "partImage" : "/vehicles/mech/shellguardian/pelvis.png"
+    },
+	"backLegLow" : {
+      "partImage" : "/vehicles/mech/shellguardian/lowerLeg.png"
+    },
+	"backLegUp" : {
+      "partImage" : "/vehicles/mech/shellguardian/upperLeg.png"
+    },
+	"frontLegLow" : {
+      "partImage" : "/vehicles/mech/shellguardian/lowerLeg.png"
+    },
+	"frontLegUp" : {
+      "partImage" : "/vehicles/mech/shellguardian/upperLeg.png"
+    },
+	"frontShoulder" : {
+      "partImage" : "/vehicles/mech/shellguardian/shoulder.png"
+    },
+	"backShoulder" : {
+      "partImage" : "/vehicles/mech/shellguardian/shoulder.png"
+    },
+	"backFoot" : {
+      "partImage" : "/vehicles/mech/shellguardian/foot.png"
+    },
+	"frontFoot" : {
+      "partImage" : "/vehicles/mech/shellguardian/foot.png"
+    }
+  },
+
+  "movementSettings" : {
+    "collisionPoly" : [ [0, 0], [0, 1], [1, 1], [1, 0] ],
+    "mass" : 5,
+    "airFriction" : 0.5,
+    "groundFriction" : 40.0,
+    "ignorePlatformCollision" : true
+  },
+
+  "loungePositions" : {
+    "seat" : {
+      "part" : "head",
+      "partAnchor" : "sitPosition",
+      "orientation" : "sit"
+    }
+  },
+  
+  
+  
+  
+  "frontFootOffset" : [-0.75, -3.625],
+  "backFootOffset" : [0.875, -3.625],
+  "footCheckXOffsets" : [-0.35, 0, 0.35],
+
+  "legRadius" : 0.825,
+  "legVerticalRatio" : 0.75,
+  "reachGroundDistance" : [1.0, -2.0]
+}
