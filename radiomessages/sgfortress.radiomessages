@@ -197,6 +197,20 @@
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/androsglitch1.png",
     "text" : "Use that teleporter and finish this thing!"
+  },
+  
+   "sgsurvivorfortressintro1" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivor.png",
+    "text" : "So, you've finally arrived... It's about time. Fortress, take action, NOW!"
+  },
+  
+  "sgsurvivorfortressintro2" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/androsglitch1.png",
+    "text" : "Finish this."
   }
 
 }
