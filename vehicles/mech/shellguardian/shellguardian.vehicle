@@ -51,7 +51,7 @@
   },
 
   "movementSettings" : {
-    "collisionPoly" : [ [0, 0], [0, 1], [1, 1], [1, 0] ],
+    "collisionPoly" : [ [0, 0], [0, 10], [17, 10], [17, 0] ],
     "mass" : 5,
     "airFriction" : 0.5,
     "groundFriction" : 40.0,
@@ -66,14 +66,18 @@
     }
   },
   
+  // Movement parameters
+  "hipJointAngleOffset": 0,
+  "hipJointForwardAmplitude": 1,
+  "hipJointBackwardAmplitude": 0.23,
   
+  "kneeJointAngleOffset": 0,
+  "kneeJointForwardAmplitude": -1,
+  "kneeLagTime": 0,
   
+  "feetJointForwardAmplitude": 0,
   
-  "frontFootOffset" : [-0.75, -3.625],
-  "backFootOffset" : [0.875, -3.625],
-  "footCheckXOffsets" : [-0.35, 0, 0.35],
-
-  "legRadius" : 0.825,
-  "legVerticalRatio" : 0.75,
-  "reachGroundDistance" : [1.0, -2.0]
+  "cycleTime": 5,
+  
+  "mechHorizontalMovement" : 5
 }

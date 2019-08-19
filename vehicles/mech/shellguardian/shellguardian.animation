@@ -59,8 +59,9 @@
           "centered" : false,
           "zLevel" : 3,
 		  "image": "<partImage>",
-		  "offset": [9.875, 8.875],
-		  "rotationCenter": [1.25, 5.25],
+		  "anchorPart": "pelvis",
+		  "offset": [5.75, -2.125],
+		  "rotationCenter": [7, 2.75],
 		  "transformationGroups": ["backLegUp"]
         }
       },
@@ -80,8 +81,9 @@
           "centered" : false,
           "zLevel" : 8,
 		  "image": "<partImage>",
-		  "offset": [2.25, 8.875],
-		  "rotationCenter": [1.25, 5.25],
+		  "anchorPart": "pelvis",
+		  "offset": [-1.75, -2.125],
+		  "rotationCenter": [-0.375, 2.75],
 		  "transformationGroups": ["frontLegUp"]
         }
       },
