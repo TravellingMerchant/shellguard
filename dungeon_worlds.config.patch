@@ -153,7 +153,7 @@
     "dungeonBaseHeight" : 1000,
     "dungeonSurfaceHeight" : 810,
     "ambientLightLevel" : [32, 32, 32],
-    "musicTrack" : "/music/housecleaning.ogg",
+    "musicTrack" : "",
     "environmentStatusEffects" : ["dontstarve"],
     "worldEdgeForceRegions" : "TopAndBottom",
     "biome" : "space"
