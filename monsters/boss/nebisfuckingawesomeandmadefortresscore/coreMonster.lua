@@ -2,13 +2,14 @@ require "/scripts/util.lua"
 require "/scripts/rect.lua"
 
 function init()
+  self.weHaventSaidThisYes = false
   self.tookDamage = false
+  self.startPhase = false
+  self.rematch = false
   self.dead = false
   self.currentIntro = 1
-  self.weHaventSaidThisYes = false
-  self.sayTime = config.getParameter("dialog.lineDuration", 4)
-  self.startPhase = false
   self.worldGravity = world.gravity(mcontroller.position())
+  self.sayTime = config.getParameter("dialog.lineDuration", 4)
   self.openCollisionPoly = config.getParameter("collisionPolys.openCollisionPoly", {})
   self.closedCollisionPoly = config.getParameter("collisionPolys.closedCollisionPoly", {})
   self.shieldCollisionPoly = config.getParameter("collisionPolys.shieldCollisionPoly", {})
@@ -101,28 +102,46 @@ function update(dt)
         animator.setGlobalTag("phase", "phase"..currentPhase())
 	  end
 
-	  local playerId = world.entityName(world.playerQuery(mcontroller.position(), 50, {order = "random"})[1])
+	  local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
+	  local playerName = world.entityName(playerId)
 	  
 	  if self.sayTime > 0 then
 	    self.sayTime = self.sayTime - dt
 		
-		if not self.weHaventSaidThisYes then
-		  monster.sayPortrait(config.getParameter("dialog.intro"..self.currentIntro), config.getParameter("chatPortrait"), { player = playerId })
-		  self.weHaventSaidThisYes = true
-		end
-		if self.sayTime <= 0 then
-		  if self.currentIntro < config.getParameter("dialog.introLines", 1) then
-		    self.currentIntro = self.currentIntro + 1
-			self.weHaventSaidThisYes = false
+		--if not self.rematch then
+		  if not self.weHaventSaidThisYes then
+		    if self.currentIntro == 1 then
+		      world.sendEntityMessage(playerId, "queueRadioMessage", "sgsurvivorfortressintro1")
+		      self.weHaventSaidThisYes = true
+		    elseif self.currentIntro == 2 then
+		      world.sendEntityMessage(playerId, "queueRadioMessage", "sgsurvivorfortressintro2")
+		      self.weHaventSaidThisYes = true
+		    else
+		      monster.sayPortrait(config.getParameter("dialog.intro"..self.currentIntro), config.getParameter("chatPortrait"), { player = playerName })
+		      self.weHaventSaidThisYes = true
+		    end
 		  end
-		  self.sayTime = config.getParameter("dialog.lineDuration", 4)
-		  if self.currentIntro == config.getParameter("dialog.introLines", 1) then
-		    monster.setDamageBar("Special")
-		    monster.setAggressive(true)
-		    setBattleMusicEnabled(true)  
-			self.startPhase = true
-		  end	
-		end
+		  if self.sayTime <= 0 then
+		    if self.currentIntro < config.getParameter("dialog.introLines", 1) then
+		      self.currentIntro = self.currentIntro + 1
+		  	  self.weHaventSaidThisYes = false
+		    end
+		    self.sayTime = config.getParameter("dialog.lineDuration", 4)
+		    if self.currentIntro == config.getParameter("dialog.introLines", 1) then
+		      monster.setDamageBar("Special")
+		      monster.setAggressive(true)
+		      setBattleMusicEnabled(true)  
+			  self.startPhase = true
+		    end	
+		  end
+		--else
+		--  monster.sayPortrait(config.getParameter("dialog.rematch1"), config.getParameter("chatPortrait"), { player = playerName })
+		--  monster.setDamageBar("Special")
+		--  monster.setAggressive(true)
+		--  setBattleMusicEnabled(true)  
+		--  self.startPhase = true
+	    --  self.rematch = false
+		--end
 	  end
     else
       if self.hadTarget then
@@ -140,6 +159,9 @@ function update(dt)
         monster.setAggressive(false)
       end
 
+	  --Prepare Rematch Dialogue
+	  self.rematch = true
+	  
       script.setUpdateDelta(10)
 
       if not self.state.update(dt) then

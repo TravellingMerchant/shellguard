@@ -1,0 +1,21 @@
+{
+  "frameGrid" : {
+    "size" : [62, 18],
+    "dimensions" : [10, 1],
+
+    "names" : [
+      [ "idle.1", "thrust.1", "thrust.2", "thrust.3", "thrust.4", "thrust.5", "thrust.6", "thrust.7", "thrust.8", "extended.1" ]
+    ]
+  },
+  
+  "aliases" : {
+    "retract.1" : "thrust.8",
+    "retract.2" : "thrust.7",
+    "retract.3" : "thrust.6",
+    "retract.4" : "thrust.5",
+    "retract.5" : "thrust.4",
+    "retract.6" : "thrust.3",
+    "retract.7" : "thrust.2",
+    "retract.8" : "thrust.1"
+  }
+}

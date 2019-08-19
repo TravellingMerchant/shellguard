@@ -1,0 +1,25 @@
+{
+  "name" : "siloMonsterSpawnGrounded",
+  "label" : "EXHAUST VENTS",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/siloMonsterSpawnGrounded.lua" ],
+
+    "siloMonsterSpawnGrounded" : {
+      "windupDuration" : 1,
+
+      "leftSpawnOffset" : [-15.25, -23.75],
+      "rightSpawnOffset" : [15.25, -23.75],
+	  
+	  //A bunch of monsters to randomly pick from when they spawn
+	  "monsters" : ["gleap", "nutmidge", "poptop"]
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "siloAlert" : [ "/sfx/monsters/boss/fortresscore/windupalert.ogg" ]
+    }
+  }
+}

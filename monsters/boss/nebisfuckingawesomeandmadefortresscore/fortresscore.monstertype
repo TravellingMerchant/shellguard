@@ -53,14 +53,20 @@
     "dialog" : {
 	  "lineDuration" : 3, //Duration a text bubble stays for, before being overwritten by the next
 	  //Intro dialogue
-	  "introLines" : 4,
-      "intro1" : "it's a beautiful day outside.",
-      "intro2" : "birds are singing, flowers are blooming...",
-      "intro3" : "on days like these, kids like you...",
-      "intro4" : "Should be burning in hell.",
+	  "introLines" : 5,
+	  //Survivor's line is set in the sgfortress.radiomessages
+	  //Andros's line is set in the sgfortress.radiomessages
+	  //Fortress
+      "intro3" : "Welcome <player>.",
+      "intro4" : "It appears to be time for your extermination.",
+      "intro5" : "Analyses prove that small talk is an inefficient way to kill someone.",
+	  
+	  //Rematch Lines - if the player dies, and re-enters the arena
+      "rematch1" : "Enough small talk.",
+	  
 	  //Death dialogue - Currently unused
 	  "deadLines" : 1,
-      "death1" : "i'm going to grillby's. papyrus, do you want anything?"
+      "death1" : "We will meet again."
     },
 	
     "projectileSourcePosition" : [-2.5, -1.25],
