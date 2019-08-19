@@ -1,0 +1,16 @@
+{
+  "name" : "sgheatspikestatus",
+  "blockingStat" : "lavaImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 0.5,
+
+  "scripts" : [
+    "sgheatspikestatus.lua"
+  ],
+
+  "animationConfig" : "sgheatspikestatus.animation",
+
+  "label" : "sgheatspikestatus",
+  "icon" : "/interface/statuses/fire.png"
+}

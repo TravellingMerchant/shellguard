@@ -8,7 +8,7 @@
  "margin":0,
  "name":"sgmaterials",
  "spacing":0,
- "tilecount":5,
+ "tilecount":6,
  "tiledversion":"1.2.4",
  "tileheight":8,
  "tileproperties":
@@ -47,6 +47,13 @@
          "\/\/name":"sgcorrupttile",
          "\/\/shortdescription":"sgcorrupttile",
          "material":"sgcorrupttile"
+        },
+     "5":
+        {
+         "\/\/description":"sgheatspiketile",
+         "\/\/name":"sgheatspiketile",
+         "\/\/shortdescription":"sgheatspiketile",
+         "material":"sgheatspiketile"
         }
     },
  "tilepropertytypes":
@@ -85,6 +92,13 @@
          "\/\/name":"string",
          "\/\/shortdescription":"string",
          "material":"string"
+        },
+     "5":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "material":"string"
         }
     },
  "tiles":
@@ -116,6 +130,12 @@
      "4":
         {
          "image":"materials\/sgcorrupttile.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "5":
+        {
+         "image":"materials\/sgheatspiketile.png",
          "imageheight":8,
          "imagewidth":8
         }
