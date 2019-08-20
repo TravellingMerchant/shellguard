@@ -1,26 +1,26 @@
 {
   "materialId" : 26204,
   "materialName" : "sgcorrupttile",
-  "particleColor" : [182, 182, 182, 255],
+  "particleColor" : [111, 75, 58, 255],
   "itemDrop" : "sgcorrupttile",
-
-  "description" : "Something feels.. off about this.",
-  "glitchDescription" : "Observant. Something feels.. off about this.",
-  "floranDescription" : "Sssssomething feels.. off about thissss.",
-  "novakidDescription" : "Something feels.. off about this.",
-
-  "shortdescription" : "Corrupt Data Tile",
-  "footstepSound" : "/sfx/blocks/footstep_lightmetal.ogg",
+  "shortdescription" : "Large Tentacle",
+  "description" : "A large tentacle",
+  "glitchDescription" : "Concerned. This tentacle is certainly from something quite large.",
+  "floranDescription" : "Big sstrong tentacless.",
+  "novakidDescription" : "Looks t'me like some kinda tentacle.",
+  "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
   "health" : 20,
   "category" : "materials",
+  "statusEffects": [ "beamoutanddie" ],
 
-  "renderTemplate" : "/tiles/slopedmaterialtemplate.config",
+  "renderTemplate" : "/tiles/pipetemplate.config",
   "renderParameters" : {
     "texture" : "sgcorrupttile.png",
-    "variants" : 5,
+    "variants" : 1,
     "lightTransparent" : false,
-    "occludesBelow" : true,
+    "occludesBelow" : false,
     "multiColored" : true,
-    "zLevel" : 4999
+    "radiantLight" : [255, 0, 170],
+    "zLevel" : 203
   }
 }

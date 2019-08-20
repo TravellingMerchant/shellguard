@@ -15,11 +15,11 @@
     "portraits" : {
       "questStarted" : {
         "portrait" : [ {"image" : "/objects/questgivers/sgweaponsdesigner/sgweaponsdesignerportrait.png"} ],
-        "title" : "Weapons Designer"
+        "title" : "Ryan"
       },
       "questComplete" : {
         "portrait" : [ {"image" : "/objects/questgivers/sgweaponsdesigner/sgweaponsdesignerportrait.png"} ],
-        "title" : "Weapons Designer"
+        "title" : "Ryan"
       }
     },
 

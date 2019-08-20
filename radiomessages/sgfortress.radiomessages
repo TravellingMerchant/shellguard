@@ -33,7 +33,7 @@
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "You're almost here, keep going."
+    "text" : "You're almost there, keep going."
   },  
   
   "sgspaceapproach5" : {
