@@ -1,30 +1,28 @@
 --------------------------------------------------------------------------------
-ventExhaustFlame = {}
+siloMonsterSpawnGrounded = {}
 
-function ventExhaustFlame.enter()
+function siloMonsterSpawnGrounded.enter()
   if not hasTarget() then return nil end
   
   self.active = false
   self.canFire = false
-  self.leftProjectileOffset = config.getParameter("ventExhaustFlame.leftProjectileOffset")
-  self.rightProjectileOffset = config.getParameter("ventExhaustFlame.rightProjectileOffset")
-
-  rangedAttack.setConfig(config.getParameter("ventExhaustFlame.projectile.type"), config.getParameter("ventExhaustFlame.projectile.config"), config.getParameter("ventExhaustFlame.fireInterval"))
+  self.leftSiloOffset = config.getParameter("siloMonsterSpawnGrounded.leftSiloOffset")
+  self.rightSiloOffset = config.getParameter("siloMonsterSpawnGrounded.rightSiloOffset")
 
   return {
-    fireDuration = config.getParameter("ventExhaustFlame.fireDuration", 1),
-    windupDuration = config.getParameter("ventExhaustFlame.windupDuration", 1)
+    fireDuration = config.getParameter("siloMonsterSpawnGrounded.fireDuration", 1),
+    windupDuration = config.getParameter("siloMonsterSpawnGrounded.windupDuration", 1)
   }
 end
 
-function ventExhaustFlame.enteringState(stateData)
-  monster.setActiveSkillName("ventExhaustFlame")
+function siloMonsterSpawnGrounded.enteringState(stateData)
+  monster.setActiveSkillName("siloMonsterSpawnGrounded")
   self.firstChoice = math.random(1, 2)
   self.secondChoice = math.random(1, 2)
   animator.playSound("ventAlert")
 end
 
-function ventExhaustFlame.update(dt, stateData)
+function siloMonsterSpawnGrounded.update(dt, stateData)
   if not hasTarget() then return true end
   
   
@@ -39,43 +37,42 @@ function ventExhaustFlame.update(dt, stateData)
   if self.active and self.canFire and stateData.fireDuration > 0 then
     stateData.fireDuration = stateData.fireDuration - dt
   
-	if animator.animationState("bottomLeftVents") == "open" then
-	  rangedAttack.aim(vec2.add(self.rightProjectileOffset, {3,0}), {-1,0})
-	  rangedAttack.fireContinuous()
-	  rangedAttack.aim(vec2.add(self.rightProjectileOffset, {1,0}), {-1,0})
-	  rangedAttack.fireContinuous()
-	  rangedAttack.aim(vec2.add(self.rightProjectileOffset, {2,0}), {-1,0})
-	  rangedAttack.fireContinuous()
-	  rangedAttack.aim(self.rightProjectileOffset, {-1,0})
-	  rangedAttack.fireContinuous()
+	if animator.animationState("bottomLeftSilo") == "risen" then
+	  animator.setAnimationState("bottomLeftSilo", "dooropen")
+	  chosenMonsters = {}
+	  for _ = 1, 5 do
+		table.insert(chosenMonsters, monsters[math.random(#monsters)])
+	  end
+	  
+	  for _, monster in ipairs(chosenMonsters) do
+		world.spawnMonster(monster, self.leftSiloOffset)
+	  end
 	end
-	if animator.animationState("bottomRightVents") == "open" then
-	  rangedAttack.aim(vec2.add(self.leftProjectileOffset, {-3,0}), {1,0})
-	  rangedAttack.fireContinuous()
-	  rangedAttack.aim(vec2.add(self.leftProjectileOffset, {-2,0}), {1,0})
-	  rangedAttack.fireContinuous()
-	  rangedAttack.aim(vec2.add(self.leftProjectileOffset, {-1,0}), {1,0})
-	  rangedAttack.fireContinuous()
-	  rangedAttack.aim(self.leftProjectileOffset, {1,0})
-	  rangedAttack.fireContinuous()
+	if animator.animationState("bottomRightSilo") == "risen" then
 	end
 	
 	if stateData.fireDuration <= 0 then
+	  if animator.animationState("bottomRightSilo") == "openidle" then
+	    animator.setAnimationState("bottomRightSilo", "doorclose")
+	  end
+	  if animator.animationState("bottomLeftSilo") == "openidle" then
+	    animator.setAnimationState("bottomLeftSilo", "doorclose")
+	  end
 	  return true
 	end
   end
 
 
   if self.secondChoice ~= self.firstChoice and not self.active then
-	  animator.setAnimationState("bottomLeftVents", "activate")
-	  animator.setAnimationState("bottomRightVents", "activate")
+	  animator.setAnimationState("bottomLeftSilo", "rise")
+	  animator.setAnimationState("bottomRightSilo", "rise")
 	  self.active = true
   elseif not self.active then
     if self.firstChoice == 1 then
-	  animator.setAnimationState("bottomLeftVents", "activate")
+	  animator.setAnimationState("bottomLeftSilo", "rise")
 	  self.active = true
 	elseif self.firstChoice == 2 then
-	  animator.setAnimationState("bottomRightVents", "activate")
+	  animator.setAnimationState("bottomRightSilo", "rise")
 	  self.active = true
 	end
   end
@@ -83,14 +80,13 @@ function ventExhaustFlame.update(dt, stateData)
   return false
 end
 
-function ventExhaustFlame.leavingState(stateData)
-  if animator.animationState("bottomLeftVents") == "open" then
-	animator.setAnimationState("bottomLeftVents", "deactivate")
+function siloMonsterSpawnGrounded.leavingState(stateData)
+  if animator.animationState("bottomLeftSilo") == "risen" then
+	animator.setAnimationState("bottomLeftSilo", "sink")
   end
-  if animator.animationState("bottomRightVents") == "open" then
-	animator.setAnimationState("bottomRightVents", "deactivate")
+  if animator.animationState("bottomRightSilo") == "risen" then
+	animator.setAnimationState("bottomRightSilo", "sink")
   end
   self.active = false
   self.canFire = false
-  rangedAttack.stopFiring()
 end

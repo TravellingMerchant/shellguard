@@ -9,9 +9,10 @@
     "siloMonsterSpawnGrounded" : {
       "windupDuration" : 1,
 
-      "leftSpawnOffset" : [-15.25, -23.75],
-      "rightSpawnOffset" : [15.25, -23.75],
+      "leftSiloOffset" : [-15.25, -23.75],
+      "rightSiloOffset" : [15.25, -23.75],
 	  
+      "monsterCount" : 5,
 	  //A bunch of monsters to randomly pick from when they spawn
 	  "monsters" : ["gleap", "nutmidge", "poptop"]
     }
