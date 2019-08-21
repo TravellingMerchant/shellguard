@@ -1,0 +1,44 @@
+{
+  "objectName" : "sgescapepodteleporter",
+  "objectType" : "teleporter",
+  "colonyTags" : ["misc"],
+  "printable" : false,
+  "price" : 3000,
+  "rarity" : "Common",
+  "description" : "This escape pod should get you to a Shellguard outpost!",
+  "shortdescription" : "Escape Pod",
+  "race" : "ancient",
+
+  "apexDescription" : "This will take me back to a Shellguard outpost!",
+  "avianDescription" : "This will take me back to a Shellguard outpost!",
+  "floranDescription" : "This will take me back to a Shellguard outpost!",
+  "glitchDescription" : "This will take me back to a Shellguard outpost!",
+  "humanDescription" : "This will take me back to a Shellguard outpost!",
+  "hylotlDescription" : "This will take me back to a Shellguard outpost!",
+  "novakidDescription" : "This will take me back to a Shellguard outpost!",
+
+  "category" : "teleporter",
+  "lightColor" : [56, 102, 124],
+
+  "interactAction" : "OpenTeleportDialog",
+  "interactData" : "/interface/warping/returnsgbase.config",
+
+  "inventoryIcon" : "sgescapepodteleportericon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "sgescapepodteleporter.png:<color>", "fullbright" : true }, { "image" : "sgescapepodteleporterlit.png:<color>" } ],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "solid",
+      "collisionSpaces" : [ [-2, 0], [-1, 0], [-0, 0], [1, 0] ]
+    }
+  ],
+  
+  "teleporterFootPosition" : [0, 1]
+
+}

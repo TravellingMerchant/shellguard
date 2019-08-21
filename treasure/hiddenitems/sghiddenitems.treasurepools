@@ -214,6 +214,24 @@
     }]
   ],
   
+  "sgautocannon" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgheavycannon", 1]},
+        {"item" : [ "sgcompositehead", 1]}
+      ]
+    }]
+  ],  
+
+  "sgheavyboomer" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgheavyboomer", 1]},
+        {"item" : [ "sgcompositechest", 1]}
+      ]
+    }]
+  ],  
+
   "sgtoolbox" : [
     [1, {
       "fill" : [

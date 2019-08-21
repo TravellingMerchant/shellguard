@@ -8,9 +8,9 @@
  "margin":0,
  "name":"sgtileset2",
  "spacing":0,
- "tilecount":9,
+ "tilecount":10,
  "tiledversion":"1.2.4",
- "tileheight":36,
+ "tileheight":39,
  "tileproperties":
     {
      "0":
@@ -101,6 +101,16 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"sgweaponsdesigner",
+         "tilesetDirection":"right"
+        },
+     "9":
+        {
+         "\/\/description":"Shellguard Hub Teleporter",
+         "\/\/name":"sgescapepodteleporter",
+         "\/\/shortdescription":"mssion goal",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sgescapepodteleporter",
          "tilesetDirection":"right"
         }
     },
@@ -195,6 +205,16 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
+        },
+     "9":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         }
     },
  "tiles":
@@ -252,9 +272,15 @@
          "image":"..\/..\/objects\/questgivers\/sgweaponsdesigner\/sgweaponsdesignerportrait.png",
          "imageheight":36,
          "imagewidth":36
+        },
+     "9":
+        {
+         "image":"..\/..\/objects\/sgescapepodteleporter\/sgescapepodteleportericon.png",
+         "imageheight":39,
+         "imagewidth":82
         }
     },
- "tilewidth":36,
+ "tilewidth":82,
  "type":"tileset",
  "version":1.1
 }
