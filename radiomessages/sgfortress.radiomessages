@@ -132,7 +132,7 @@
    "sgfortress5c" : {
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
-    "portraitImage" : "/interface/chatbubbles/androsglitch1.png",
+    "portraitImage" : "/interface/chatbubbles/androsglitch2.png",
     "text" : "There's some heavy sniper turrets ahead. You're going to have to move slow and use cover to avoid being shot."
   },
 
@@ -203,14 +203,21 @@
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivor.png",
-    "text" : "So, you've finally arrived... It's about time. Fortress, take action, NOW!"
+    "text" : "So, you've finally arrived... It's about time. Fortress, engage defences measures!"
   },
   
   "sgsurvivorfortressintro2" : {
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/androsglitch1.png",
-    "text" : "Finish this."
+    "text" : "You're nearing the Sol system! You have to stop the ship, NOW!"
+  },
+
+  "sgelevatormusic" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Oh.. NOW there's elevator music. Of course there is.."
   }
 
 }
