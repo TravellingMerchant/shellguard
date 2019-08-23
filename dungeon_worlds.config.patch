@@ -86,6 +86,26 @@
       "biome": "forest"
     }
   },
+
+  {
+    "op" : "add",
+    "path" : "/sgwreckage",
+    "value" : {
+      "primaryDungeon" : "sgwreckage",
+      "weatherPool" : [
+        [1.0, "snowstorm"]
+      ],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [3299, 900],
+      "dungeonBaseHeight" : 450,
+      "dungeonSurfaceHeight" : 100,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/sgtheguardsmarch2.ogg",
+      "biome": "snow"
+    }
+  },
+ 
   {
     "op" : "add",
     "path" : "/survivormission",
