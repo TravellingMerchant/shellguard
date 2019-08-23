@@ -1,0 +1,26 @@
+{
+  "materialId" : 26205,
+  "materialName" : "sgheatspiketile",
+  "particleColor" : [111, 75, 58, 255],
+  "itemDrop" : "sgheatspiketile",
+  "shortdescription" : "Heat Spike Rail",
+  "description" : "A rail covered in heated metal spikes. Don't touch!",
+  "glitchDescription" : "Concerned. That looks deadly!",
+  "floranDescription" : "Hot sssspikes, don't touch!",
+  "novakidDescription" : "Looks t'me like some kinda death trap!",
+  "footstepSound" : "/sfx/blocks/footstep_composite.ogg",
+  "health" : 20,
+  "category" : "materials",
+  "statusEffects": [ "sgheatspikestatus" ],
+
+  "renderTemplate" : "/tiles/pipetemplate.config",
+  "renderParameters" : {
+    "texture" : "sgheatspiketile.png",
+    "variants" : 1,
+    "lightTransparent" : false,
+    "occludesBelow" : false,
+    "multiColored" : true,
+    "radiantLight" : [255, 100, 50],
+    "zLevel" : 203
+  }
+}

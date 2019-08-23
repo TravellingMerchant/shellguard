@@ -1,0 +1,15 @@
+{
+  "itemName" : "sgheatspiketile",
+  "price" : 20,
+  "category" : "block",
+  "rarity" : "Common",
+  "inventoryIcon" : "sgheatspiketile.png",
+  "shortdescription" : "Heat Spike Rail",
+  "description" : "A rail covered in heated metal spikes. Don't touch!",
+  "glitchdescription" : "Concerned. That looks deadly!",
+  "florandescription" : "Hot sssspikes, don't touch!",
+  "novakiddescription" : "Looks t'me like some kinda death trap!",
+
+  "materialId" : 26205,
+  "learnBlueprintsOnPickup" : [ "sgheatspiketile" ]
+}
