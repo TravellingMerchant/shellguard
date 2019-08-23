@@ -589,7 +589,7 @@
             },
             "dooropen" : {
               "properties" : {
-                "image" : "<partImage>:topleftopenidle.<frame>"
+                "image" : "<partImage>:topleftopenidle"
               }
             },
             "openidle" : {
@@ -636,7 +636,7 @@
             },
             "dooropen" : {
               "properties" : {
-                "image" : "<partImage>:toprightopenidle.<frame>"
+                "image" : "<partImage>:toprightopenidle"
               }
             },
             "openidle" : {
@@ -683,7 +683,7 @@
             },
             "dooropen" : {
               "properties" : {
-                "image" : "<partImage>:bottomleftopenidle.<frame>"
+                "image" : "<partImage>:bottomleftopenidle"
               }
             },
             "openidle" : {
@@ -730,7 +730,7 @@
             },
             "dooropen" : {
               "properties" : {
-                "image" : "<partImage>:bottomrightopenidle.<frame>"
+                "image" : "<partImage>:bottomrightopenidle"
               }
             },
             "openidle" : {

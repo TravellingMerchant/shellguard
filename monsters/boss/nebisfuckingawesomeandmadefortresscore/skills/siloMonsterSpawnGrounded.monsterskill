@@ -8,13 +8,30 @@
 
     "siloMonsterSpawnGrounded" : {
       "windupDuration" : 1,
+      "fireDuration" : 1,
 
-      "leftSiloOffset" : [-15.25, -23.75],
-      "rightSiloOffset" : [15.25, -23.75],
+      "leftSiloOffset" : [-25, -22],
+      "rightSiloOffset" : [25, -22],
 	  
-      "monsterCount" : 5,
-	  //A bunch of monsters to randomly pick from when they spawn
-	  "monsters" : ["gleap", "nutmidge", "poptop"]
+      "monsterCount" : [ 3, 6 ],
+	  "monsterTypes" : [
+		"poptop",
+		"poptop",
+		"poptop",
+		"poptop",
+		"poptop",
+		"poptop",
+		"poptop",
+		"poptop",
+		"poptop",
+		"albinopoptop"
+	  ],
+	  "monsterTestPoly" : [ [0.8125, 1.25], [1.3125, 0.75],  [1.3125, -1.05], [0.8125, -1.55],  [-0.8125, -1.55], [-1.3125, -1.05],  [-1.3125, 0.75], [-0.8125, 1.25] ],
+	  "spawnOnGround" : true,
+	  "spawnAnimation" : false,
+	  "spawnRangeX" : 5,
+	  "spawnRangeY" : 5,
+	  "spawnTolerance" : 20
     }
   },
 
