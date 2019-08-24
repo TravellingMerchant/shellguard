@@ -34,7 +34,7 @@
 	  //Introduction, with the default skills
       {
         "enterPhase" : "blastShieldSlam",
-        "skills" : ["siloMonsterSpawnGrounded", "ventExhaustFlame", "gravitySlam"]
+        "skills" : ["siloMonsterSpawnGrounded", "ventExhaustFlame", "gravitySlam", "ventExhaustFlame", "ventExhaustFlame", "gravitySlam", "ventExhaustFlame"]
       }
 	  //After breaking open blastshield, core will talk and then activate energyshield
 	  

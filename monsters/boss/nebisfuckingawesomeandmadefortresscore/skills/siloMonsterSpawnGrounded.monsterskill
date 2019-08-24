@@ -8,23 +8,28 @@
 
     "siloMonsterSpawnGrounded" : {
       "windupDuration" : 1,
-      "fireDuration" : 1,
+      "fireDuration" : 0.5,
 
       "leftSiloOffset" : [-25, -22],
       "rightSiloOffset" : [25, -22],
 	  
-      "monsterCount" : [ 3, 6 ],
+      "monsterCount" : [ 3, 5 ],
 	  "monsterTypes" : [
-		"poptop",
-		"poptop",
-		"poptop",
-		"poptop",
-		"poptop",
-		"poptop",
-		"poptop",
-		"poptop",
-		"poptop",
-		"albinopoptop"
+		"sgspidermineevil",
+		"sgspidermineevil",
+		"shottop",
+		"shelltankE",
+		"sgshellbgun",
+		"sgchomperevil",
+		"sgchomperevil",
+		"sgchomperevil",
+		"sgchomperevil",
+		"sgchomperevil",
+		"sgchomperevil",
+		"sgchomperevil",
+		"sgdroidevil",
+		"sgmonstertankevil",
+		"sgwalkertankevil"
 	  ],
 	  "monsterTestPoly" : [ [0.8125, 1.25], [1.3125, 0.75],  [1.3125, -1.05], [0.8125, -1.55],  [-0.8125, -1.55], [-1.3125, -1.05],  [-1.3125, 0.75], [-0.8125, 1.25] ],
 	  "spawnOnGround" : true,

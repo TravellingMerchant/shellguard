@@ -38,6 +38,14 @@ end
 function siloMonsterSpawnGrounded.update(dt, stateData)
   if not hasTarget() then return true end
   
+  if animator.animationState("bottomRightSilo") == "risen" and not self.active then
+	animator.setAnimationState("bottomRightSilo", "dooropen")
+	self.active = true
+  end
+  if animator.animationState("bottomLeftSilo") == "risen" and not self.active then
+	animator.setAnimationState("bottomLeftSilo", "dooropen")
+	self.active = true
+  end
   
   if self.active and stateData.windupDuration > 0 and not self.canFire then
     stateData.windupDuration = stateData.windupDuration - dt
@@ -47,16 +55,12 @@ function siloMonsterSpawnGrounded.update(dt, stateData)
 	end
   end
   
-  if self.active and stateData.fireDuration > 0 and not self.finished then
-    stateData.fireDuration = stateData.fireDuration - dt
-  
-	if animator.animationState("bottomLeftSilo") == "risen" and not self.canFire then
-	  animator.setAnimationState("bottomLeftSilo", "dooropen")
-
+  if self.active then
+	if animator.animationState("bottomLeftSilo") == "openidle" and self.canFire and not self.finished then
 	  for i = 1, math.random(stateData.monsterCount[1], stateData.monsterCount[2]) do
 	    --Calculate initial x and y offset for the spawn position
 	    local xOffset = math.random((self.leftSiloOffset[1] - stateData.spawnRangeX), self.leftSiloOffset[1])
-	    xOffset = xOffset * util.randomChoice({-1, 1})
+	    --xOffset = xOffset * util.randomChoice({-1, 1})
 	    local yOffset = math.random(self.leftSiloOffset[2], stateData.spawnRangeY)
 	    local position = vec2.add(entity.position(), {xOffset, yOffset})
 	  
@@ -77,16 +81,14 @@ function siloMonsterSpawnGrounded.update(dt, stateData)
 		  end
 	    end
 	  end
-	  self.canFire = false
 	  self.finished = true
 	end
-	if animator.animationState("bottomRightSilo") == "risen" and not self.canFire then
-	  animator.setAnimationState("bottomRightSilo", "dooropen")
+	if animator.animationState("bottomRightSilo") == "openidle" and self.canFire and not self.finished then
 
 	  for i = 1, math.random(stateData.monsterCount[1], stateData.monsterCount[2]) do
 	    --Calculate initial x and y offset for the spawn position
 	    local xOffset = math.random(self.rightSiloOffset[1], (self.rightSiloOffset[1] + stateData.spawnRangeX))
-	    xOffset = xOffset * util.randomChoice({-1, 1})
+	    --xOffset = xOffset * util.randomChoice({-1, 1})
 	    local yOffset = math.random(self.rightSiloOffset[2], stateData.spawnRangeY)
 	    local position = vec2.add(entity.position(), {xOffset, yOffset})
 	  
@@ -107,25 +109,20 @@ function siloMonsterSpawnGrounded.update(dt, stateData)
 		  end
 	    end
 	  end
-	  self.canFire = false
 	  self.finished = true
 	end
 	
 	if self.finished then
-	  if animator.animationState("bottomRightSilo") == "openidle" then
-	    animator.setAnimationState("bottomRightSilo", "doorclose")
-	  end
+      stateData.fireDuration = stateData.fireDuration - dt
+	  
 	  if animator.animationState("bottomLeftSilo") == "openidle" then
 	    animator.setAnimationState("bottomLeftSilo", "doorclose")
 	  end
-	  if animator.animationState("bottomRightSilo") == "risen" then
-	    animator.setAnimationState("bottomRightSilo", "sink")
-	  end
-	  if animator.animationState("bottomLeftSilo") == "risen" then
-	    animator.setAnimationState("bottomLeftSilo", "sink")
+	  if animator.animationState("bottomRightSilo") == "openidle" then
+	    animator.setAnimationState("bottomRightSilo", "doorclose")
 	  end
 	  
-	  if animator.animationState("bottomLeftSilo") == "idle" and animator.animationState("bottomLeftSilo") == "idle" then
+	  if stateData.fireDuration <= 0 then
 	    return true
 	  end
 	end
@@ -133,16 +130,19 @@ function siloMonsterSpawnGrounded.update(dt, stateData)
 
 
   if self.secondChoice ~= self.firstChoice and not self.active then
+	if animator.animationState("bottomRightSilo") == "idle" and animator.animationState("bottomLeftSilo") == "idle" then
 	  animator.setAnimationState("bottomLeftSilo", "rise")
 	  animator.setAnimationState("bottomRightSilo", "rise")
-	  self.active = true
+	end
   elseif not self.active then
-    if self.firstChoice == 1 then
-	  animator.setAnimationState("bottomLeftSilo", "rise")
-	  self.active = true
+    if self.firstChoice == 1 then	
+	  if animator.animationState("bottomLeftSilo") == "idle" then
+	    animator.setAnimationState("bottomLeftSilo", "rise")
+	  end
 	elseif self.firstChoice == 2 then
-	  animator.setAnimationState("bottomRightSilo", "rise")
-	  self.active = true
+	  if animator.animationState("bottomRightSilo") == "idle" then
+	    animator.setAnimationState("bottomRightSilo", "rise")
+	  end
 	end
   end
 
@@ -150,11 +150,11 @@ function siloMonsterSpawnGrounded.update(dt, stateData)
 end
 
 function siloMonsterSpawnGrounded.leavingState(stateData)
-  if animator.animationState("bottomLeftSilo") == "risen" then
-	animator.setAnimationState("bottomLeftSilo", "sink")
-  end
   if animator.animationState("bottomRightSilo") == "risen" then
 	animator.setAnimationState("bottomRightSilo", "sink")
+  end
+  if animator.animationState("bottomLeftSilo") == "risen" then
+	animator.setAnimationState("bottomLeftSilo", "sink")
   end
   self.active = false
   self.canFire = false
