@@ -47,6 +47,24 @@
     },
 	"frontFoot" : {
       "partImage" : "/vehicles/mech/shellguardian/foot.png"
+    },
+	"backArmUp" : {
+      "partImage" : "/vehicles/mech/shellguardian/backUpperArm.png"
+    },
+	"backArmLow" : {
+      "partImage" : "/vehicles/mech/shellguardian/lowerArm.png"
+    },
+	"backHand" : {
+      "partImage" : "/vehicles/mech/shellguardian/frontHand.png"
+    },
+	"frontArmUp" : {
+      "partImage" : "/vehicles/mech/shellguardian/frontUpperArm.png"
+    },
+	"frontArmLow" : {
+      "partImage" : "/vehicles/mech/shellguardian/lowerArm.png"
+    },
+	"frontHand" : {
+      "partImage" : "/vehicles/mech/shellguardian/frontHand.png"
     }
   },
 
@@ -76,6 +94,9 @@
   "kneeLagTime": 0,
   
   "feetJointForwardAmplitude": 0,
+  
+  "shoulderJointForwardAmplitude": 0.15,
+  "shoulderJointBackwardAmplitude": 0.3,
   
   "cycleTime": 5,
   

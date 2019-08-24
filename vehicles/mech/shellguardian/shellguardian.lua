@@ -10,6 +10,8 @@ function init()
 	self.T = config.getParameter("cycleTime")
 	self.t2 = config.getParameter("kneeLagTime")
 	self.E = config.getParameter("feetJointForwardAmplitude")
+	self.D1 = config.getParameter("shoulderJointForwardAmplitude")
+	self.D2 = config.getParameter("shoulderJointBackwardAmplitude")
 	
 	self.mechHorizontalMovement = config.getParameter("mechHorizontalMovement")
 	self.time = 0
@@ -63,20 +65,30 @@ function animate()
 			animator.resetTransformationGroup(layer .. "LegLow")
 			animator.resetTransformationGroup(layer .. "Foot")
 			
-			local hipAngle, kneeAngle, footAngle
+			animator.resetTransformationGroup(layer .. "ArmUp")
+			animator.resetTransformationGroup(layer .. "ArmLow")
+			animator.resetTransformationGroup(layer .. "Hand")		
+			
+			local hipAngle, kneeAngle, footAngle, shoulderAngle, elbowAngle, handAngle
 			if (currentInterval(self.time) == 1 and offset == 0) or (currentInterval(self.time) ~= 1 and offset ~= 0) then
 				hipAngle = self.Oh + self.A * math.sin(2 * math.pi * self.time / self.T + offset)
 				kneeAngle = self.Ok + math.min(self.C * math.sin(2 * math.pi * (self.time - self.t2) / self.T + offset), 0)
 				footAngle = self.E * math.sin(2 * math.pi * self.time / (self.T) + offset)
+				
+				shoulderAngle = - self.D1 * math.sin(2 * math.pi * self.time / self.T  + offset)
 			else
 				hipAngle = self.Oh + self.B * math.sin(2 * math.pi * self.time / self.T + offset)
 				kneeAngle = self.Ok
 				footAngle = - hipAngle
+				
+				shoulderAngle = - self.D2 * math.sin(2 * math.pi * self.time / self.T  + offset)
 			end
 			
 			animator.rotateTransformationGroup(layer .. "LegUp", hipAngle, animator.partProperty(layer .. "LegUp", "rotationCenter"))
 			animator.rotateTransformationGroup(layer .. "LegLow", kneeAngle, {1.375, 0.125})
 			animator.rotateTransformationGroup(layer .. "Foot", footAngle, {1.875, 0.625})
+			
+			animator.rotateTransformationGroup(layer .. "ArmUp", shoulderAngle, animator.partProperty(layer .. "ArmUp", "rotationCenter"))
 			offset = offset + math.pi
 		end
 	end

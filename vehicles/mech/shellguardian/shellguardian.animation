@@ -4,7 +4,7 @@
 	  "head" : {
         "properties" : {
           "centered" : false,
-          "zLevel" : 11,
+          "zLevel" : 15,
 		  "sitPosition" : [2.0, 1.2],
 		  "image": "<partImage>",
 		  "offset": [4.5, 28.125]
@@ -13,7 +13,7 @@
 	  "chest" : {
         "properties" : {
           "centered" : false,
-          "zLevel" : 10,
+          "zLevel" : 14,
 		  "image": "<partImage>",
 		  "offset": [2.5, 19.875]
         }
@@ -21,7 +21,7 @@
 	  "neck" : {
         "properties" : {
           "centered" : false,
-          "zLevel" : 9,
+          "zLevel" : 12,
 		  "image": "<partImage>",
 		  "offset": [4.75, 26]
         }
@@ -29,7 +29,7 @@
 	  "spine" : {
         "properties" : {
           "centered" : false,
-          "zLevel" : 5,
+          "zLevel" : 7,
 		  "image": "<partImage>",
 		  "offset": [3.5, 15.375]
         }
@@ -37,7 +37,7 @@
 	  "pelvis" : {
         "properties" : {
           "centered" : false,
-          "zLevel" : 6,
+          "zLevel" : 8,
 		  "image": "<partImage>",
 		  "offset": [4, 11],
 		  "transformationGroups": ["pelvis"]
@@ -46,7 +46,7 @@
 	  "backLegLow" : {
         "properties" : {
           "centered" : false,
-          "zLevel" : 2,
+          "zLevel" : 5,
 		  "image": "<partImage>",
 		  "anchorPart": "backLegUp",
 		  "offset": [-1, -6.5],
@@ -57,7 +57,7 @@
 	  "backLegUp" : {
         "properties" : {
           "centered" : false,
-          "zLevel" : 3,
+          "zLevel" : 6,
 		  "image": "<partImage>",
 		  "anchorPart": "pelvis",
 		  "offset": [5.75, -2.125],
@@ -68,7 +68,7 @@
 	  "frontLegLow" : {
         "properties" : {
           "centered" : false,
-          "zLevel" : 7,
+          "zLevel" : 10,
 		  "image": "<partImage>",
 		  "anchorPart": "frontLegUp",
 		  "offset": [-1, -6.5],
@@ -79,7 +79,7 @@
 	  "frontLegUp" : {
         "properties" : {
           "centered" : false,
-          "zLevel" : 8,
+          "zLevel" : 11,
 		  "image": "<partImage>",
 		  "anchorPart": "pelvis",
 		  "offset": [-1.75, -2.125],
@@ -90,7 +90,7 @@
 	  "frontShoulder" : {
         "properties" : {
           "centered" : false,
-          "zLevel" : 12,
+          "zLevel" : 16,
 		  "image": "<partImage>",
 		  "offset": [0, 21.5]
         }
@@ -98,7 +98,7 @@
 	  "backShoulder" : {
         "properties" : {
           "centered" : false,
-          "zLevel" : 9,
+          "zLevel" : 13,
 		  "image": "<partImage>",
 		  "offset": [8.25, 21.5]
         }
@@ -106,7 +106,7 @@
 	  "backFoot" : {
         "properties" : {
           "centered" : false,
-          "zLevel" : 1,
+          "zLevel" : 4,
 		  "image": "<partImage>",
 		  "anchorPart": "backLegLow",
 		  "offset": [-0.875, -2.375],
@@ -117,24 +117,100 @@
 	  "frontFoot" : {
         "properties" : {
           "centered" : false,
-          "zLevel" : 4,
+          "zLevel" : 9,
 		  "image": "<partImage>",
 		  "anchorPart": "frontLegLow",
 		  "offset": [-0.875, -2.375],
 		  "rotationCenter": [2.5, 3],
 		  "transformationGroups": ["frontFoot"]
         }
+      },
+	  "backArmLow": {
+        "properties" : {
+          "centered" : false,
+          "zLevel" : 3,
+		  "image": "<partImage>",
+		  "anchorPart": "backArmUp",
+		  "offset": [-0.125, -5.75],
+		  "rotationCenter": [2.5, 3],
+		  "transformationGroups": ["backArmLow"]
+        }
+      },
+	  "backArmUp": {
+        "properties" : {
+          "centered" : false,
+          "zLevel" : 2,
+		  "image": "<partImage>",
+		  "anchorPart": "backShoulder",
+		  "offset": [3.125, -3.5],
+		  "rotationCenter": [5.625, 3.875],
+		  "transformationGroups": ["backArmUp"]
+        }
+      },
+	  "backHand": {
+        "properties" : {
+          "centered" : false,
+          "zLevel" : 1,
+		  "image": "<partImage>",
+		  "anchorPart": "backArmLow",
+		  "offset": [0.125, -3.625],
+		  "rotationCenter": [2.5, 3],
+		  "transformationGroups": ["backHand"]
+        }
+      },
+	  "frontArmLow": {
+        "properties" : {
+          "centered" : false,
+          "zLevel" : 19,
+		  "image": "<partImage>",
+		  "anchorPart": "frontArmUp",
+		  "offset": [-0.125, -5.75],
+		  "rotationCenter": [2.5, 3],
+		  "transformationGroups": ["frontArmLow"]
+        }
+      },
+	  "frontArmUp": {
+        "properties" : {
+          "centered" : false,
+          "zLevel" : 18,
+		  "image": "<partImage>",
+		  "anchorPart": "frontShoulder",
+		  "offset": [-1.75, -3.375],
+		  "rotationCenter": [2.125, 3.875],
+		  "transformationGroups": ["frontArmUp"]
+        }
+      },
+	  "frontHand": {
+        "properties" : {
+          "centered" : false,
+          "zLevel" : 17,
+		  "image": "<partImage>",
+		  "anchorPart": "frontArmLow",
+		  "offset": [0.125, -3.625],
+		  "rotationCenter": [2.5, 3],
+		  "transformationGroups": ["frontHand"]
+        }
       }
     }
   },
 
   "transformationGroups" : {
+	"backArmLow": {},
+	"backArmUp": {},
+	"backHand": {},
+	
+	"frontArmLow": {},
+	"frontArmUp": {},
+	"frontHand": {},	
+	
     "frontFoot": {},
 	"backFoot": {},
+	
 	"frontLegLow": {},
 	"frontLegUp": {},
 	"backLegLow": {},
 	"backLegUp": {},
+	
 	"pelvis": {}
   }
 }
