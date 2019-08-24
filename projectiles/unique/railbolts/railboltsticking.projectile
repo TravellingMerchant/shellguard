@@ -24,6 +24,5 @@
   
   "renderLayer" : "Monster+1",
   
-  "scripts" : [ "/projectiles/scripts/thea-stickingprojectile.lua" ],
-  "searchRadius" : 0.1
+  "scripts" : [ "/projectiles/unique/railbolts/railboltsticking.lua" ]
 }
