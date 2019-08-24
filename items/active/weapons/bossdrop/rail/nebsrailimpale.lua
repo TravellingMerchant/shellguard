@@ -87,7 +87,7 @@ function RailAndImpale:fire()
     local damageNotifications, nextStep = status.inflictedDamageSince(self.queryDamageSince)
     	self.queryDamageSince = nextStep
     	for _, notification in ipairs(damageNotifications) do
-  	  if notification.healthLost > 0 and notification.sourceEntityId ~= notification.targetEntityId and world.entityType(notification.targetEntityId) ~= "object" and not self.hasHit then
+  	  if notification.healthLost > 0 and notification.sourceEntityId ~= notification.targetEntityId and world.entityType(notification.targetEntityId) ~= "object" and notification.damageSourceKind == self.damageConfig.damageSourceKind and not self.hasHit then
         --if notification.sourceEntityId ~= -65536 and notification.healthLost > 0 and status.overConsumeResource("energy", self:energyPerShot()) then
             activeItem.emote("annoyed")
           	self.hasHit = true

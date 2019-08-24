@@ -36,9 +36,69 @@
 	"particleEmitters" : {
 	  "muzzleFlash" : {
         "particles" : [
-		  { "particle" : "akkimariashsmoke-air" },
-		  { "particle" : "akkimariashsmoke-air" },
-		  { "particle" : "akkimariashsmoke-air" }
+	    {
+		  "particle" : {
+			"type" : "animated",
+			"animation" : "/animations/smallflame/smallflame.animation",
+			"fade" : 0.9,
+			"destructionAction" : "fade",
+			"destructionTime" : 1,
+			"initialVelocity" : [1, 2.5],
+			"finalVelocity" : [2, 3.5],
+			"approach" : [0, 20],
+			"timeToLive" : 1.8,
+			"size" : 1.0,
+			"layer" : "middle",
+			"variance" : {
+			  "position" : [0.5, 0.5],
+			  "initialVelocity" : [0.5, 0.5],
+			  "finalVelocity" : [0.5, 0.5],
+			  "rotation" : 180
+			}
+		  }
+		},
+	    {
+		  "particle" : {
+			"type" : "animated",
+			"animation" : "/animations/smallflame/smallflame.animation",
+			"fade" : 0.9,
+			"destructionAction" : "fade",
+			"destructionTime" : 1,
+			"initialVelocity" : [1, 2.5],
+			"finalVelocity" : [2, 3.5],
+			"approach" : [0, 20],
+			"timeToLive" : 1.8,
+			"size" : 1.0,
+			"layer" : "middle",
+			"variance" : {
+			  "position" : [0.5, 0.5],
+			  "initialVelocity" : [0.5, 0.5],
+			  "finalVelocity" : [0.5, 0.5],
+			  "rotation" : 180
+			}
+		  }
+		},
+	    {
+		  "particle" : {
+			"type" : "animated",
+			"animation" : "/animations/smallflame/smallflame.animation",
+			"fade" : 0.9,
+			"destructionAction" : "fade",
+			"destructionTime" : 1,
+			"initialVelocity" : [1, 2.5],
+			"finalVelocity" : [2, 3.5],
+			"approach" : [0, 20],
+			"timeToLive" : 1.8,
+			"size" : 1.0,
+			"layer" : "middle",
+			"variance" : {
+			  "position" : [0.5, 0.5],
+			  "initialVelocity" : [0.5, 0.5],
+			  "finalVelocity" : [0.5, 0.5],
+			  "rotation" : 180
+			}
+		  }
+		}
         ]
       }
     },
@@ -122,7 +182,7 @@
     "baseDps" : 9,
     "energyUsage" : 35.0, //double is used when you hit an enemy
     "damageConfig" : {
-      "damageSourceKind" : "firespear",
+      "damageSourceKind" : "sgrailimpalefire", //needs to be something no other weapons have
       "statusEffects" : [ ],
       "knockbackMode" : "aim",
       "knockback" : 30,
