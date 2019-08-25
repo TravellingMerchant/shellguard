@@ -1,0 +1,9 @@
+{
+  "name" : "sgfortressturretgun-back",
+  "category" : "sgfortressturretgun",
+  "type" : "bodyback",
+
+  "frames" : {
+    "body" : "sgfortressturretgun-back.png"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name" : "sgfortressturretgun-head",
+  "category" : "sgfortressturretgun",
+  "type" : "head",
+
+  "frames" : {
+    "head" : "sgfortressturretgun-head.png"
+  }
+}
