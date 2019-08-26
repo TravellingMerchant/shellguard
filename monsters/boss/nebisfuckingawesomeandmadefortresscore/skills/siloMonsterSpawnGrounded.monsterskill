@@ -8,18 +8,23 @@
 
     "siloMonsterSpawnGrounded" : {
       "windupDuration" : 1,
-      "fireDuration" : 0.5,
+      "fireDuration" : 2.5,
 
       "leftSiloOffset" : [-25, -22],
       "rightSiloOffset" : [25, -22],
 	  
-      "monsterCount" : [ 3, 5 ],
+      "monsterCount" : [ 1, 3 ],
 	  "monsterTypes" : [
-		"sgspidermineevil",
-		"sgspidermineevil",
-		"shottop",
-		"shelltankE",
+		"sgshottop",
 		"sgshellbgun",
+		"sgchomperevil",
+		"sgchomperevil",
+		"sgchomperevil",
+		"sgchomperevil",
+		"sgchomperevil",
+		"sgchomperevil",
+		"sgchomperevil",
+		"sgchomperevil",
 		"sgchomperevil",
 		"sgchomperevil",
 		"sgchomperevil",

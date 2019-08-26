@@ -8,7 +8,7 @@
   "animation" : "fortresscore.animation",
   "reversed" : true,
 
-  "dropPools" : [ "sgufoclaw" ],
+  "dropPools" : [ ],
 
   "baseParameters" : {
     "scripts" : [
@@ -27,14 +27,14 @@
 	"renderLayer" : "Projectile-1",
 	
     "skillCount" : 13,
-    "skills" : [ "siloMonsterSpawnGrounded", "airborneBackup", "radiationLeak", "miniTurrets", "rocketTurret", "laserTurret", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMines" ],
+    "skills" : [ "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "radiationLeak", "miniTurrets", "rocketTurret", "laserTurret", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch" ],
 
     "phases" : [
 	  //Skills/Abilities the core will possess in each phase, it is randomly picked by whats in the tables
 	  //Introduction, with the default skills
       {
         "enterPhase" : "blastShieldSlam",
-        "skills" : ["siloMonsterSpawnGrounded", "ventExhaustFlame", "gravitySlam", "ventExhaustFlame", "ventExhaustFlame", "gravitySlam", "ventExhaustFlame"]
+        "skills" : ["siloMonsterSpawnGrounded", "gravitySlam", "aerialMineLaunch", "ventExhaustFlame", "gravitySlam", "siloMonsterSpawnAirborne", "gravitySlam", "ventExhaustFlame", "ventExhaustFlame", "gravitySlam", "ventExhaustFlame"]
       }
 	  //After breaking open blastshield, core will talk and then activate energyshield
 	  
