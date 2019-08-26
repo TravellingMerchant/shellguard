@@ -35,15 +35,17 @@
       {
         "enterPhase" : "blastShieldSlam",
         "skills" : ["siloMonsterSpawnGrounded", "gravitySlam", "aerialMineLaunch", "ventExhaustFlame", "gravitySlam", "siloMonsterSpawnAirborne", "gravitySlam", "ventExhaustFlame", "ventExhaustFlame", "gravitySlam", "ventExhaustFlame"]
-      }
+      },
 	  //After breaking open blastshield, core will talk and then activate energyshield
-	  
+	  {
+	    "enterphase" : "blastShieldSlam",
+        "skills" : []
+	  }
 	  //Reactivates blast shield
 	  
 	  //Reactivates energy shield
 	  
 	  //Ruin cleaver finisher
-	  
     ],
 
 	//temp

@@ -4,6 +4,6 @@
   "type" : "bodyback",
 
   "frames" : {
-    "body" : "sgfortressturretgun-back.png"
+    "bodyback" : "sgfortressturretgun-back.png"
   }
 }

@@ -102,12 +102,12 @@
           "body" : {
             "idle" : {
               "properties" : {
-                "image" : "<partImage>:idle.1"
+                "image" : "<partImage>:idle.<frame>"
               }
             },
             "walk" : {
               "properties" : {
-                "image" : "<partImage>:idle.1"
+                "image" : "<partImage>:idle.<frame>"
               }
             }
           },

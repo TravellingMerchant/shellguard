@@ -76,16 +76,23 @@ function update(dt)
   end
 
   if not status.resourcePositive("health") then
+    
+    --Check if next phase is ready
+    local nextPhase = self.phases[self.phase + 1]
+    if nextPhase then
+      self.phase = self.phase + 1
+    end
+  
     local inState = self.state.stateDesc()
     if inState ~= "dieState" and not self.state.pickState({ die = true }) then
       self.state.endState()
-      self.dead = true
+	  
+	  world.setDungeonGravity(0, self.worldGravity)
+
+	  self.state.update(dt)
+
+	  setBattleMusicEnabled(false)
     end
-    world.setDungeonGravity(0, self.worldGravity)
-
-    self.state.update(dt)
-
-    setBattleMusicEnabled(false)
   else
     trackTargets(self.keepTargetInSight, self.queryTargetDistance, self.trackTargetDistance, self.switchTargetDistance)
 
