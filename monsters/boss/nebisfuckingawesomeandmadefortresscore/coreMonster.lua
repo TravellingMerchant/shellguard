@@ -134,6 +134,7 @@ function update(dt)
 			  self.startPhase = true
 		    end	
 		  end
+		--WIP rematch dialogue if the player dies and reenters arena
 		--else
 		--  monster.sayPortrait(config.getParameter("dialog.rematch1"), config.getParameter("chatPortrait"), { player = playerName })
 		--  monster.setDamageBar("Special")

@@ -2,11 +2,17 @@ require "/scripts/vec2.lua"
 require "/scripts/util.lua"
 
 function init()
-  self.searchDistance = 0.09
+  self.stickToPlayers = config.getParameter("stickToPlayers", false)
+  self.searchDistance = config.getParameter("searchDistance", 0.1)
   self.stickingTarget = nil
   self.stickingOffset = {0,0}
   self.stuckToTarget = false
   self.stuckToGround = false
+  if self.stickToPlayers then
+    self.includedTypes = {"player", "crew"}
+  else
+    self.includedTypes = {"npc", "monster"}
+  end
 end
 
 function update(dt)
@@ -18,7 +24,7 @@ function update(dt)
 	self.stuckToGround = world.lineTileCollision(mcontroller.position(), vec2.add(mcontroller.position(), projectileLengthVector))
 	targets = world.entityQuery(mcontroller.position(), self.searchDistance, {
 	  withoutEntityId = projectile.sourceEntity(),
-	  includedTypes = {"npc","monster"},
+	  includedTypes = self.includedTypes,
 	  order = "nearest"
 	})
   end
@@ -53,7 +59,7 @@ function update(dt)
   
   if self.stuckToGround then
 	if config.getParameter("proximitySearchRadius") then
-	  local targets = world.entityQuery(mcontroller.position(), self.searchDistance, {
+	  local targets = world.entityQuery(mcontroller.position(), self.proximitySearchRadius, {
 		withoutEntityId = projectile.sourceEntity(),
 		includedTypes = {"creature"},
 		order = "nearest"

@@ -130,7 +130,9 @@
     "fireType" : "auto",
 
     "projectileType" : "neb-railspike",
-    "projectileParameters" : {},
+    "projectileParameters" : {
+	  "statusEffects" : [ "nebsgbossmultiplier" ]
+	},
 
     "stances" : {
       "idle" : {
@@ -183,7 +185,7 @@
     "energyUsage" : 35.0, //double is used when you hit an enemy
     "damageConfig" : {
       "damageSourceKind" : "sgrailimpalefire", //needs to be something no other weapons have
-      "statusEffects" : [ ],
+      "statusEffects" : [ "nebsgbossmultiplier" ],
       "knockbackMode" : "aim",
       "knockback" : 30,
       "timeoutGroup" : "primary"
@@ -195,7 +197,9 @@
     "fireType" : "auto",
 
     "projectileType" : "neb-railspike",
-    "projectileParameters" : {},
+    "projectileParameters" : {
+	  "statusEffects" : [ "nebsgbossmultiplier" ]
+	},
 
     "stances" : {
       "idle" : {

@@ -1,0 +1,34 @@
+{
+  "name" : "nebsgbossmultiplier",
+
+  "effectConfig" : {
+    //How much additional damage the target should take when taking damage. If set to 1.0, incoming damage is effectively doubled
+  	"damageAdditionPercentage" : 0.25, 
+	//If this parameter exists, it only applies the damage bonus to the monsters listed
+	"monsterWhitelist" : {
+	  "apeboss" : true,
+	  "apebossprojector" : true,
+	  "crystalboss" : true,
+	  "cultistboss" : true,
+	  "dragonboss" : true,
+	  "eyeboss" : true,
+	  "guardianboss" : true,
+	  "guardianminion" : true,
+	  "kluexboss" : true,
+	  "kluexbossstatue" : true,
+	  "ophanim" : true,
+	  "penguinMiniUfo" : true,
+	  "penguinUfo" : true,
+	  "robotboss" : true,
+	  "spiderboss" : true,
+	  "swansong" : true,
+	  "sgnebisamadladandmadefortress" : true,
+	  "shellufo" : true,
+	  "survivorboss" : true
+	}
+  },
+
+  "scripts" : [
+    "nebsgspecificdamagebonus.lua"
+  ]
+}
