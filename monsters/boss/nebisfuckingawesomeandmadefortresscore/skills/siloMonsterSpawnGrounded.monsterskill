@@ -13,10 +13,9 @@
       "leftSiloOffset" : [-25, -22],
       "rightSiloOffset" : [25, -22],
 	  
-      "monsterCount" : [ 1, 3 ],
+      "monsterCount" : [ 2, 4 ],
 	  "monsterTypes" : [
 		"sgshottop",
-		"sgshellbgun",
 		"sgchomperevil",
 		"sgchomperevil",
 		"sgchomperevil",
@@ -30,8 +29,9 @@
 		"sgchomperevil",
 		"sgchomperevil",
 		"sgchomperevil",
-		"sgchomperevil",
-		"sgchomperevil",
+		"sgmonstertankheavyevil",
+		"sgmonstertankheavyevil",
+		"sgdroidevil",
 		"sgdroidevil",
 		"sgmonstertankevil",
 		"sgwalkertankevil"

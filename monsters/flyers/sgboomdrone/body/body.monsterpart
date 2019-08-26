@@ -1,0 +1,9 @@
+{
+  "name" : "sgboomdrone",
+  "category" : "sgboomdrone",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgboomdrone.png"
+  }
+}

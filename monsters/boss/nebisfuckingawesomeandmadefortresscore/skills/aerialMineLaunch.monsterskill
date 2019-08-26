@@ -12,9 +12,10 @@
 
       "leftProjectileOffset" : [-5.25, 23.75],
       "rightProjectileOffset" : [5.25, 23.75],
-      "fireInterval" : 1.5,
+      "fireInterval" : 2,
       "projectile" : {
         "type" : "sgplasmitegrenade",
+        "power" : 20,
         "config" : {}
       }
     }
