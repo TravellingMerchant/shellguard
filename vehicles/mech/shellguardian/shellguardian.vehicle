@@ -1,6 +1,6 @@
 {
   "name" : "shellguardian",
-  "boundBox" : [-5, -5, 5, 5],
+  "boundBox" : [-5, -5, 10, 10],
   "slaveControlTimeout" : 2.0,
   "slaveControlHeartbeat" : 1.0,
   "canBeHit" : false,
@@ -87,7 +87,7 @@
   // Movement parameters
   "hipJointAngleOffset": 0,
   "hipJointForwardAmplitude": 1,
-  "hipJointBackwardAmplitude": 0.23,
+  "hipJointBackwardAmplitude": 0.1,
   
   "kneeJointAngleOffset": 0,
   "kneeJointForwardAmplitude": -1,
@@ -100,5 +100,5 @@
   
   "cycleTime": 5,
   
-  "mechHorizontalMovement" : 5
+  "mechHorizontalMovement" : 10
 }

@@ -16,27 +16,32 @@ function init()
 	self.mechHorizontalMovement = config.getParameter("mechHorizontalMovement")
 	self.time = 0
 	self.walking = false
+	self.controlHeld = false
 	message.setHandler("changeParameter", function(_, _, args)
 		self[args.key] = args.value
 	end)
 end
 
 function update()
-	if vehicle.controlHeld("seat", "left") then
-		mcontroller.setXVelocity(- self.mechHorizontalMovement)
-		self.facingDirection = -1
-	elseif vehicle.controlHeld("seat", "right") then
-		mcontroller.setXVelocity(self.mechHorizontalMovement)
-		self.facingDirection = 1
-	end
-	
+	collectControls()
 	animate()
-	sb.setLogMap("Time", sb.print(self.time % (self.T / 2)))
+	move()
+end
+
+function collectControls()
+	if vehicle.controlHeld("seat", "left") then
+		self.facingDirection = -1
+		self.controlHeld = true
+	elseif vehicle.controlHeld("seat", "right") then
+		self.facingDirection = 1
+		self.controlHeld = true
+	else
+		self.controlHeld = false
+	end
 end
 
 function animate()
-
-	if math.abs(mcontroller.xVelocity()) >= 0.1 then
+	if self.controlHeld then
 		self.walking = true
 		self.time = self.time + script.updateDt()
 	else
@@ -90,6 +95,14 @@ function animate()
 			
 			animator.rotateTransformationGroup(layer .. "ArmUp", shoulderAngle, animator.partProperty(layer .. "ArmUp", "rotationCenter"))
 			offset = offset + math.pi
+		end
+	end
+end
+
+function move()
+	if self.controlHeld then
+		if (self.time % self.T) < self.T / 2.0 or ( (self.time % self.T) > self.T / 2.0 and (self.time % self.T) < 3.0 * self.T / 4.0 ) then
+			mcontroller.setXVelocity(self.mechHorizontalMovement * self.facingDirection)
 		end
 	end
 end
