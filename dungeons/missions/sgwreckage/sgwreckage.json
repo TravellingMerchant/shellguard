@@ -1911,7 +1911,7 @@
                  "name":"spidermine",
                  "properties":
                     {
-                     "monster":"sgspidermineevil"
+                     "monster":"sgrocketspider"
                     },
                  "propertytypes":
                     {
@@ -1921,8 +1921,8 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":3256,
-                 "y":2248
+                 "x":3272,
+                 "y":2160
                 }, 
                 {
                  "height":8,
@@ -2461,6 +2461,63 @@
                  "width":24,
                  "x":6624,
                  "y":1840
+                }, 
+                {
+                 "height":8,
+                 "id":2177,
+                 "name":"spidermine",
+                 "properties":
+                    {
+                     "monster":"sgrocketspider"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":4912,
+                 "y":1936
+                }, 
+                {
+                 "height":8,
+                 "id":2178,
+                 "name":"spidermine",
+                 "properties":
+                    {
+                     "monster":"sgrocketspider"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":7504,
+                 "y":1888
+                }, 
+                {
+                 "height":8,
+                 "id":2179,
+                 "name":"spidermine",
+                 "properties":
+                    {
+                     "monster":"sgrocketspider"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":8336,
+                 "y":2136
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2514,7 +2571,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":2177,
+ "nextobjectid":2180,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",

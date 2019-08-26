@@ -1,0 +1,9 @@
+{
+  "name" : "body",
+  "category" : "sgrocketspider",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgrocketspider.png"
+  }
+}
