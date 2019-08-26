@@ -121,6 +121,12 @@ function siloMonsterSpawnGrounded.update(dt, stateData)
 	  if animator.animationState("bottomRightSilo") == "openidle" then
 	    animator.setAnimationState("bottomRightSilo", "doorclose")
 	  end
+	  if animator.animationState("bottomRightSilo") == "risen" then
+		animator.setAnimationState("bottomRightSilo", "sink")
+	  end
+	  if animator.animationState("bottomLeftSilo") == "risen" then
+		animator.setAnimationState("bottomLeftSilo", "sink")
+	  end
 	  
 	  if stateData.fireDuration <= 0 then
 	    return true
@@ -150,12 +156,7 @@ function siloMonsterSpawnGrounded.update(dt, stateData)
 end
 
 function siloMonsterSpawnGrounded.leavingState(stateData)
-  if animator.animationState("bottomRightSilo") == "risen" then
-	animator.setAnimationState("bottomRightSilo", "sink")
-  end
-  if animator.animationState("bottomLeftSilo") == "risen" then
-	animator.setAnimationState("bottomLeftSilo", "sink")
-  end
+  sb.logInfo(animator.animationState("bottomRightSilo"))
   self.active = false
   self.canFire = false
 end
