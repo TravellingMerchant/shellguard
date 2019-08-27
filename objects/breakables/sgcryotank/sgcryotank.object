@@ -1,0 +1,43 @@
+{
+  "objectName" : "sgcryotank",
+  "colonyTags" : ["scorched"],
+  "rarity" : "Common",
+  "category" : "breakable",
+  "price" : 55,
+  "description" : "An explosive cryo tank connected to a machine.",
+  "shortdescription" : "Unstable Cryo Vent",
+  "race" : "generic",
+  "breakDropOptions" : [],
+
+  "apexDescription" : "An explosive cryo tank.",
+  "avianDescription" : "An explosive cryo tank.",
+  "floranDescription" : "An explossssive cryo tank.",
+  "glitchDescription" : "Alerted. An explosive cryo tank.",
+  "humanDescription" : "An explosive cryo tank.",
+  "hylotlDescription" : "An explosive cryo tank.",
+  "novakidDescription" : "An explosive cryo tank.",
+
+  "inventoryIcon" : "sgcryotankicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgcryotank.png:<color>",
+      "imagePosition" : [-8, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+
+  "smashable" : true,
+  "health" : 40,
+  "smashOnBreak" : false,
+  "smashSounds" : [ "/sfx/gun/grenadeblast1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg" ],
+  "smashDropPool" : "empty",
+  
+  "scripts" : [
+    "/objects/scripts/explodingsmashable.lua"
+  ],
+  "explosionProjectile" : "iceexplosionknockback",
+  "explosionOffset" : [1, 1]
+}
