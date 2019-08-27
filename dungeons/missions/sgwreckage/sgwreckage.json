@@ -1819,6 +1819,90 @@
                  "width":16,
                  "x":8208,
                  "y":2504
+                }, 
+                {
+                 "gid":9619,
+                 "height":26,
+                 "id":2180,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":17,
+                 "x":7288,
+                 "y":2320
+                }, 
+                {
+                 "gid":9619,
+                 "height":26,
+                 "id":2181,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":17,
+                 "x":5400,
+                 "y":2648
+                }, 
+                {
+                 "gid":9619,
+                 "height":26,
+                 "id":2182,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":17,
+                 "x":4448,
+                 "y":2072
+                }, 
+                {
+                 "gid":9618,
+                 "height":38,
+                 "id":2183,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":31,
+                 "x":3160,
+                 "y":2296
+                }, 
+                {
+                 "gid":9619,
+                 "height":26,
+                 "id":2184,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":17,
+                 "x":5424,
+                 "y":2664
+                }, 
+                {
+                 "gid":9619,
+                 "height":26,
+                 "id":2185,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":17,
+                 "x":7352,
+                 "y":2056
+                }, 
+                {
+                 "gid":9619,
+                 "height":26,
+                 "id":2186,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":17,
+                 "x":8584,
+                 "y":2312
                 }],
          "opacity":0.97,
          "type":"objectgroup",
@@ -2503,7 +2587,7 @@
                 {
                  "height":8,
                  "id":2179,
-                 "name":"spidermine",
+                 "name":"rocket spider",
                  "properties":
                     {
                      "monster":"sgrocketspider"
@@ -2518,6 +2602,82 @@
                  "width":8,
                  "x":8336,
                  "y":2136
+                }, 
+                {
+                 "height":8,
+                 "id":2187,
+                 "name":"boom drone",
+                 "properties":
+                    {
+                     "monster":"sgboomdrone"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":8456,
+                 "y":2176
+                }, 
+                {
+                 "height":8,
+                 "id":2188,
+                 "name":"boom drone",
+                 "properties":
+                    {
+                     "monster":"sgboomdrone"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":7336,
+                 "y":2192
+                }, 
+                {
+                 "height":8,
+                 "id":2189,
+                 "name":"boom drone",
+                 "properties":
+                    {
+                     "monster":"sgboomdrone"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":6552,
+                 "y":2320
+                }, 
+                {
+                 "height":8,
+                 "id":2190,
+                 "name":"boom drone",
+                 "properties":
+                    {
+                     "monster":"sgboomdrone"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":5288,
+                 "y":2472
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2571,7 +2731,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":2180,
+ "nextobjectid":2191,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
@@ -2764,6 +2924,10 @@
         {
          "firstgid":9591,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/wreck.json"
+        }, 
+        {
+         "firstgid":9618,
+         "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }],
  "tilewidth":8,
  "type":"map",

@@ -3835,6 +3835,78 @@
                  "width":40,
                  "x":4904,
                  "y":2176
+                }, 
+                {
+                 "gid":10026,
+                 "height":38,
+                 "id":3920,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":31,
+                 "x":4944,
+                 "y":2176
+                }, 
+                {
+                 "gid":10027,
+                 "height":26,
+                 "id":3922,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":17,
+                 "x":4920,
+                 "y":2160
+                }, 
+                {
+                 "gid":10027,
+                 "height":26,
+                 "id":3923,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":17,
+                 "x":7632,
+                 "y":2896
+                }, 
+                {
+                 "gid":10027,
+                 "height":26,
+                 "id":3924,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":17,
+                 "x":8848,
+                 "y":2896
+                }, 
+                {
+                 "gid":10026,
+                 "height":38,
+                 "id":3925,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":31,
+                 "x":8184,
+                 "y":2960
+                }, 
+                {
+                 "gid":10026,
+                 "height":38,
+                 "id":3926,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":31,
+                 "x":8240,
+                 "y":2960
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4015,6 +4087,46 @@
                  "width":0,
                  "x":9024,
                  "y":2448
+                }, 
+                {
+                 "height":0,
+                 "id":3927,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-208,
+                         "y":-872
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":7424,
+                 "y":2888
+                }, 
+                {
+                 "height":0,
+                 "id":3928,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":200,
+                         "y":952
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":7016,
+                 "y":1976
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4130,48 +4242,6 @@
                  "width":8,
                  "x":10144,
                  "y":2296
-                }, 
-                {
-                 "height":8,
-                 "id":3833,
-                 "name":"rustick quarter health",
-                 "properties":
-                    {
-                     "monster":"rustick",
-                     "parameters":"{\"statusSettings\":{\"stats\":{\"maxHealth\":{\"baseValue\" : 25 }}}}"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string",
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":8232,
-                 "y":2752
-                }, 
-                {
-                 "height":8,
-                 "id":3834,
-                 "name":"rustick quarter health",
-                 "properties":
-                    {
-                     "monster":"rustick",
-                     "parameters":"{\"statusSettings\":{\"stats\":{\"maxHealth\":{\"baseValue\" : 25 }}}}"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string",
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":8232,
-                 "y":2952
                 }, 
                 {
                  "height":8,
@@ -4342,7 +4412,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":3918,
+ "nextobjectid":3929,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
@@ -4563,6 +4633,10 @@
         {
          "firstgid":10016,
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset2.json"
+        }, 
+        {
+         "firstgid":10026,
+         "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }],
  "tilewidth":8,
  "type":"map",
