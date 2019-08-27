@@ -38,6 +38,6 @@
   "scripts" : [
     "/objects/scripts/explodingsmashable.lua"
   ],
-  "explosionProjectile" : "iceexplosionknockback",
+  "explosionProjectile" : "sgiceexplosionknockback",
   "explosionOffset" : [1, 1]
 }

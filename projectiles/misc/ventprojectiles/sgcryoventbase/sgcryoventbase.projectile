@@ -44,7 +44,7 @@
 	{
       "action" : "projectile",
       "inheritDamageFactor" : 0.5,
-      "type" : "icethrower",
+      "type" : "sgcryoventgas",
       "angleAdjust" : 90,
       "fuzzAngle" : 10
     }
@@ -61,14 +61,14 @@
 	{
       "action" : "projectile",
       "inheritDamageFactor" : 1,
-      "type" : "icecrabcanosnowball",
+      "type" : "sgicecrabcanosnowball",
       "angleAdjust" : 90,
       "fuzzAngle" : 10
     }
       ]
     }
   ],
-  "power" : 5.0,
+  "power" : 20.0,
   "speed" : 0,
   "damageKind" : "default"
 }
