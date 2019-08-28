@@ -1,0 +1,51 @@
+{
+  "projectileName" : "sgspikemortarsticking",
+  "physics" : "stickybomb",
+  "bounces" : 0,
+  "persistentAudio" : "/sfx/objects/mechbeacon_pulse2.ogg",
+  "image" : "sgspikemortarsticking.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 1,
+  "emitters" : [],
+  "piercing" : true,
+  "power" : 0,
+  "timeToLive" : 7.5,
+  "supportsProcessing" : true,
+  "damageType" : "NoDamage",
+  "damageKind" : "hidden",
+  "damagePoly" : [ [-5, 2.5], [12, 0], [-5, -2.5], [-8, 0] ],
+  "hydrophobic" : false,
+  "statusEffects" : [],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/burstexplosion/fireburstexplosion.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/plasmiteexplode.ogg" ]
+    }
+  ],
+  
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/melee/fist_hit_metal1.ogg",
+        "/sfx/melee/fist_hit_metal2.ogg",
+        "/sfx/melee/fist_hit_metal3.ogg",
+        "/sfx/melee/fist_hit_metal4.ogg",
+        "/sfx/melee/fist_hit_metal5.ogg",
+        "/sfx/melee/fist_hit_metal6.ogg"
+      ]
+    }
+  ],
+  
+  "renderLayer" : "Monster+1",
+  
+  "scripts" : [ "/projectiles/scripts/nebsgprojectilesticking.lua" ],
+  "searchDistance" : 0.09,			//The search distance, should always be 0.125 or lower
+  "stickToPlayers" : false,			//Changes entities to stick to from enemies to allies, good for enemy attacks
+  "stickToTargetTime" : 3,			//when stuck to an enemy sets time to live to this, so ones stuck in the ground can last longer
+  "proximitySearchRadius" : false	//When stuck in the ground, search around the projectile for enemies to stick into, if its the same as search distance, it will stick into enemies feet, if false it does nothing, if a number it sticks
+}

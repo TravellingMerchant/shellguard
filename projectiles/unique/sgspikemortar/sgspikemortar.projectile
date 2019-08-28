@@ -1,0 +1,46 @@
+{
+  "projectileName" : "sgspikemortar",
+  "physics" : "arrownosticky",
+  "bounces" : 0,
+  "piercing" : false,
+  "image" : "sgspikemortar.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 1,
+  "emitters" : [ "rocketsmoke" ],
+  "power" : 20,
+  "speed" : 125,
+  "knockback" : 25,
+  "knockbackDirectional" : true,
+  "timeToLive" : 30,
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
+    },
+	{
+      "action" : "projectile",
+      "type" : "sgspikemortarsticking",
+      "inheritDamageFactor" : 0.4,
+      "inheritSpeedFactor" : 0.6,
+      "angleAdjust" : 0
+    }
+  ],
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/melee/fist_hit_metal1.ogg",
+        "/sfx/melee/fist_hit_metal2.ogg",
+        "/sfx/melee/fist_hit_metal3.ogg",
+        "/sfx/melee/fist_hit_metal4.ogg",
+        "/sfx/melee/fist_hit_metal5.ogg",
+        "/sfx/melee/fist_hit_metal6.ogg"
+      ]
+    }
+  ],
+  "damageKind" : "firespear",
+  "damagePoly" : [ [-5, 2.5], [12, 0], [-5, -2.5], [-8, 0] ],
+  "statusEffects" : [],
+  "hydrophobic" : false
+}
