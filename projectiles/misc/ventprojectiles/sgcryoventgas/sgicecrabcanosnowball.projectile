@@ -1,0 +1,27 @@
+{
+  "projectileName" : "sgicecrabcanosnowball",
+  "physics" : "grenade",
+  "image" : "sgicecrabcanosnowball.png",
+  
+  "damageTeam" : { "type" : "indiscriminate" },
+
+  "animationCycle" : 0.5,
+  "frameNumber" : 4,
+  "damageKind" : "snowball",
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/burstexplosion/smalliceburstexplosion.config"
+    },
+    {
+      "action" : "applySurfaceMod",
+      "previousMod" : "metamod:none",
+      "newMod" : "snow",
+      "radius" : 1
+    }
+  ],
+  "emitters" : [ "defaultwhite" ],
+
+  "speed" : 35,
+  "power" : 70
+}

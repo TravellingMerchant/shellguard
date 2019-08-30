@@ -1,0 +1,43 @@
+{
+  "objectName" : "sgheatvent",
+  "colonyTags" : ["scorched"],
+  "rarity" : "Common",
+  "category" : "breakable",
+  "price" : 55,
+  "description" : "An explosive heat tank connected to a machine.",
+  "shortdescription" : "Unstable Heat Vent",
+  "race" : "generic",
+  "breakDropOptions" : [],
+
+  "apexDescription" : "An explosive heat tank connected to a machine.",
+  "avianDescription" : "An explosive heat tank connected to a machine.",
+  "floranDescription" : "An explossssive heat tank connected to a machine.",
+  "glitchDescription" : "Alerted. An explosive heat tank connected to a machine.",
+  "humanDescription" : "An explosive heat tank connected to a machine.",
+  "hylotlDescription" : "An explosive heat tank connected to a machine.",
+  "novakidDescription" : "An explosive heat tank connected to a machine.",
+
+  "inventoryIcon" : "sgheatventicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgheatvent.png:<color>",
+      "imagePosition" : [-8, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ],
+
+  "smashable" : true,
+  "health" : 70,
+  "smashOnBreak" : false,
+  "smashSounds" : [ "/sfx/gun/grenadeblast1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg" ],
+  "smashDropPool" : "empty",
+  
+  "scripts" : [
+    "/objects/scripts/explodingsmashable.lua"
+  ],
+  "explosionProjectile" : "sgheatventbase",
+  "explosionOffset" : [1, 1]
+}

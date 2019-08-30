@@ -17,21 +17,21 @@
 
     "behavior" : "monster",
     "level" : 6,
-	"damageTeamType" : "friendly",
-    "damageTeam" : 0,
+	"damageTeamType" : "enemy",
+    "damageTeam" : 2,
 
     "facingMode" : "transformation",
 
     "behaviorConfig" : {
       "damageOnTouch" : true,
-      "rotationCenter"  : [-0.25, 0.25],
+      "rotationCenter"  : [-4.25, -3.25],
 
       "hurtWaitForGround" : false,
 
-      "targetQueryRange" : 35,
+      "targetQueryRange" : 100,
       "targetOnDamage" : true,
       "keepTargetInSight" : true,
-      "keepTargetInRange" : 50,
+      "keepTargetInRange" : 100,
       "targetOutOfSightTime" : 5.0,
 
       "foundTargetActions" : [],
@@ -43,20 +43,22 @@
           "name" : "action-fire",
           "parameters" : {
             "requireLineOfSight" : true,
-            "maximumRange" : 35,
+            "maximumRange" : 100,
             "minimumRange" : 2,
-            "windupTime" : 1.0,
+            "windupTime" : 4.0,
             "windupStopForce" : 50,
             "windupState" : "idle",
 
-            "projectileType" : "shelllightbullet",
-			"projectileCount" : 2,
-			"projectileInterval" : 0.2,
-            "fireOffset" : [0.0, 0.25],
+            "projectileType" : "shelluforocket",
+			"projectileCount" : 6,
+			"projectileInterval" : 0.1,
+            "fireOffset" : [8.0, 0.25],
             "fireSound" : "fire",
             "fireState" : "",
             "fireDelay" : 0.0,
             "rotateAim" : true,
+            "holdAim" : false,
+            "inaccuracy" : 0.05,
 
             "winddownState" : "",
             "winddownTime" : 0.0
@@ -119,6 +121,7 @@
       "mass" : 1.0,
       "walkSpeed" : 0,
       "runSpeed" : 0,
+      "gravityEnabled" : false,
 
       "airFriction" : 0,
 

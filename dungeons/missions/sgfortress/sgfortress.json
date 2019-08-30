@@ -10558,6 +10558,101 @@
                  "width":8,
                  "x":9481,
                  "y":2307.5
+                }, 
+                {
+                 "height":8,
+                 "id":3169,
+                 "name":"rocket spider",
+                 "properties":
+                    {
+                     "monster":"sgrocketspider"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":8392,
+                 "y":1656
+                }, 
+                {
+                 "height":8,
+                 "id":3170,
+                 "name":"rocket spider",
+                 "properties":
+                    {
+                     "monster":"sgrocketspider"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":12272,
+                 "y":2208
+                }, 
+                {
+                 "height":8,
+                 "id":3171,
+                 "name":"boom drone",
+                 "properties":
+                    {
+                     "monster":"sgboomdrone"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":11352,
+                 "y":2840
+                }, 
+                {
+                 "height":8,
+                 "id":3172,
+                 "name":"boom drone",
+                 "properties":
+                    {
+                     "monster":"sgboomdrone"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":11680,
+                 "y":2816
+                }, 
+                {
+                 "height":8,
+                 "id":3173,
+                 "name":"boom drone",
+                 "properties":
+                    {
+                     "monster":"sgboomdrone"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":9448,
+                 "y":2728
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -11535,7 +11630,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":3169,
+ "nextobjectid":3174,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",

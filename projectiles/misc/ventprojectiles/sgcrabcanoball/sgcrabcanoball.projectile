@@ -1,0 +1,25 @@
+{
+  "projectileName" : "sgcrabcanoball",
+  "physics" : "grenade",
+  "bounces" : 0,
+  "timeToLive" : 3,
+  "image" : "sgcrabcanoball.png",
+  "damageKindImage" : "icon.png",
+  "speed" : 28,
+  
+  "damageTeam" : { "type" : "indiscriminate" },
+
+  "animationCycle" : 0.5,
+  "lightColor" : [84, 47, 26],
+  "frameNumber" : 4,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/weakexplosion/weakexplosion.config"
+    }
+  ],
+  "power" : 50,
+  "emitters" : [ "fireplasma", "smoke", "flames", "fireplasma", "flames" ],
+  "damageType" : "NoDamage",
+  "damageKind" : "slash"
+}

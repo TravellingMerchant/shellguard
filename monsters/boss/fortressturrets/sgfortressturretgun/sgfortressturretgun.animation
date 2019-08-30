@@ -54,7 +54,7 @@
         "properties" : {
           "transformationGroups" : [ "facing", "body" ],
           "offset" : [0.0, -0.3125],
-          "zLevel" : 1
+          "zLevel" : 3
         },
         "partStates" : {
           "body" : {
@@ -95,7 +95,7 @@
       "head" : {
         "properties" : {
           "transformationGroups" : [ "aim", "facing", "body" ],
-          "offset" : [0.0, 0.5],
+          "offset" : [-0.5, -3.0],
           "zLevel" : 2
         },
         "partStates" : {
@@ -184,6 +184,6 @@
   "sounds" : {
     "aggroHop" : [ "/sfx/alertalarm.ogg" ],
     "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
-    "fire" : [ "/sfx/gun/flyingshot.ogg" ]
+    "fire" : [ "/sfx/gun/fireworkgun_large1.ogg", "/sfx/gun/fireworkgun_large2.ogg" ]
   }
 }
