@@ -13,6 +13,7 @@ function init()
   self.openCollisionPoly = config.getParameter("collisionPolys.openCollisionPoly", {})
   self.closedCollisionPoly = config.getParameter("collisionPolys.closedCollisionPoly", {})
   self.shieldCollisionPoly = config.getParameter("collisionPolys.shieldCollisionPoly", {})
+  self.maxHealth = status.resource("health")
 	  
   if rangedAttack then
     rangedAttack.loadConfig()
@@ -69,15 +70,17 @@ function update(dt)
   
   if animator.animationState("blastShield") == "closed" then
 	mcontroller.controlParameters({collisionPoly = self.closedCollisionPoly})
-  elseif animator.animationState("energyShield") == "idle" then
-	mcontroller.controlParameters({collisionPoly = self.shieldCollisionPoly})
   else
 	mcontroller.controlParameters({collisionPoly = self.openCollisionPoly})
   end
 
-  if not status.resourcePositive("health") then
+  if self.phase then
+    local isThereAnotherPhase = self.phases[self.phase + 1]
+  end
+  
+  if not status.resourcePositive("health") and not isThereAnotherPhase and isThereAnotherPhase ~= nil then
     
-    --Check if next phase is ready
+    --Check if death phase is ready
     local nextPhase = self.phases[self.phase + 1]
     if nextPhase then
       self.phase = self.phase + 1
@@ -270,10 +273,9 @@ function updatePhase(dt)
   --Check if next phase is ready
   local nextPhase = self.phases[self.phase + 1]
   if nextPhase then
-    if nextPhase.trigger and nextPhase.trigger == "healthPercentage" then
-      if status.resourcePercentage("health") < nextPhase.healthPercentage then
-        self.phase = self.phase + 1
-      end
+    if not status.resourcePositive("health") then
+	  status.modifyResource("health", self.maxHealth)
+      self.phase = self.phase + 1
     end
   end
 

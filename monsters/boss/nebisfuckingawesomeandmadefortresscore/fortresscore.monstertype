@@ -27,7 +27,7 @@
 	"renderLayer" : "Projectile-1",
 	
     "skillCount" : 13,
-    "skills" : [ "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "radiationLeak", "miniTurrets", "rocketTurret", "laserTurret", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch" ],
+    "skills" : [ "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "radiationLeak", "engageHeavyTurret", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch" ],
 
     "phases" : [
 	  //Skills/Abilities the core will possess in each phase, it is randomly picked by whats in the tables
@@ -38,14 +38,24 @@
       },
 	  //After breaking open blastshield, core will talk and then activate energyshield
 	  {
-	    "enterphase" : "blastShieldSlam",
+	    "enterphase" : "energyShieldActivate",
         "skills" : []
-	  }
+	  },
 	  //Reactivates blast shield
-	  
+      {
+        "enterPhase" : "blastShieldSlam",
+        "skills" : []
+      },
 	  //Reactivates energy shield
-	  
+	  {
+	    "enterphase" : "energyShieldActivate",
+        "skills" : []
+	  }//,
 	  //Ruin cleaver finisher
+	  //{
+	  //  "enterphase" : "RUINED",
+      //  "skills" : []
+	  //}
     ],
 
 	//temp
@@ -149,12 +159,15 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 40000
+          "baseValue" : 5111
         },
         "protection" : {
-          "baseValue" : 50
+          "baseValue" : 25
         },
         "healthRegen" : {
+          "baseValue" : 0.01
+        },
+        "shieldRegen" : {
           "baseValue" : 0.0
         },
         "fireStatusImmunity" : {
@@ -193,6 +206,9 @@
           "maxStat" : "maxHealth",
           "deltaStat" : "healthRegen",
           "defaultPercentage" : 100
+        },
+        "shieldHealth" : {
+          "initialValue" : 0
         }
       }
     },

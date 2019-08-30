@@ -323,24 +323,6 @@
             "transition" : "open"
           }
         }
-      },
-      "energyShield" : {
-        "priority" : 1,
-        "default" : "inactive",
-        "states" : {
-          "inactive" : {
-            "frames" : 1
-          },
-          "activate" : {
-            "frames" : 1
-          },
-          "idle" : {
-            "frames" : 1
-          },
-          "deactivate" : {
-            "frames" : 1
-          }
-        }
       }
     },
 
@@ -752,6 +734,7 @@
         }
       },
 
+	  //SHIELDING
       "blastShield" : {
         "properties" : {
           "centered" : true,
@@ -780,40 +763,6 @@
             "winddown" : {
               "properties" : {
                 "image" : "<partImage>:winddown.<frame>"
-              }
-            }
-          }
-        }
-      },
-
-      "energyShield" : {
-        "properties" : {
-          "centered" : true,
-          "zLevel" : 3,
-          "offset" : [-0.0, 0.0],
-          "rotationGroup" : "all"
-        },
-
-        "partStates" : {
-          "energyShield" : {
-            "inactive" : {
-              "properties" : {
-                "image" : "<partImage>:inactive"
-              }
-            },
-            "activate" : {
-              "properties" : {
-                "image" : "<partImage>:activate.<frame>"
-              }
-            },
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle.<frame>"
-              }
-            },
-            "deactivate" : {
-              "properties" : {
-                "image" : "<partImage>:deactivate.<frame>"
               }
             }
           }

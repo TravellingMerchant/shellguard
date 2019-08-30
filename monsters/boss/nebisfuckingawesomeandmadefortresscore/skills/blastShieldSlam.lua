@@ -10,7 +10,6 @@ function blastShieldSlam.enterWith(args)
     timer = config.getParameter("blastShieldSlam.skillTime", 1),
     rotateInterval = config.getParameter("blastShieldSlam.rotateInterval", 0.2),
     rotateAngle = config.getParameter("blastShieldSlam.rotateAngle", 0.05),
-    bleedAmount = config.getParameter("blastShieldSlam.bleedAmount", 100),
     prepareSlam = false,
     slam = false
   }
