@@ -19,8 +19,8 @@
     "gunfullbright" : "sgtoobiggunfullbright.png"
   },
   "animationCustom" : {},
-  "muzzleOffset" : [4.5, -0.625],
-  "aimOffset" : -0.5,
+  "muzzleOffset" : [4.5, 2.25],
+  "aimOffset" : 0,
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -37,18 +37,18 @@
         "time" : 0,
         "energyCost" : 60,
         "cooldown" : 2,
-        "projectileType" : "sgboomerround",
+        "projectileType" : "sgplasmabouncer",
         "projectileParameters" : {},
         "projectileCount" : 1,
         "inaccuracy" : 0.02,
-        "baseDamage" : 7,
+        "baseDamage" : 11,
         "fireType" : "single",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
         //"burstTime" : 0.15,		//delay between shots in the burst
         //"burstCount" : 10,		//amount of bullets to fire in the burst, must be a integer
         "fireSound" : "fire",
 	  
 	    //Recoil Stuffs
-	    "recoilKnockbackVelocity" : 20,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    "recoilKnockbackVelocity" : 40,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
 	    "crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
 	    "crouchRecoilKnockbackVelocity" : 0	//When crouching it uses this instead of recoilKnockbackVelocity
       },
@@ -56,19 +56,19 @@
         "time" : 1,
         "energyCost" : 60,
         "cooldown" : 2,
-        "projectileType" : "sgboomerround",
+        "projectileType" : "sgplasmabouncer",
         "projectileParameters" : {},
-        "projectileCount" : 1,
+        "projectileCount" : 5,
         "inaccuracy" : 0.03,
-        "baseDamage" : 6,
+        "baseDamage" : 15,
         "spreadAngle" : 5,
-        "fireType" : "burst",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
-        "burstTime" : 0.2,		//delay between shots in the burst
-        "burstCount" : 3,		//amount of bullets to fire in the burst, must be a integer
+        "fireType" : "single",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
+        //"burstTime" : 0.2,		//delay between shots in the burst
+        //"burstCount" : 0,		//amount of bullets to fire in the burst, must be a integer
         "fireSound" : "fire2",
 	  
 	    //Recoil Stuffs
-	    "recoilKnockbackVelocity" : 20,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    "recoilKnockbackVelocity" : 40,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
 	    "crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
 	    "crouchRecoilKnockbackVelocity" : 3	//When crouching it uses this instead of recoilKnockbackVelocity
       }

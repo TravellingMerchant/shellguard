@@ -1,0 +1,15 @@
+{
+  "projectileName" : "sggreenplasmaboomfade",
+  "image" : "sggreenplasmaboomfade.png",
+  "animationCycle" : 0.3,
+  "frameNumber" : 7,
+  "speed" : 0,
+  "pointLight" : true,
+  "lightColor" : [150, 100, 0],
+  "damagePoly" : [ [-108, 0], [-63, -63], [0, -108], [63, -63], [108, 0], [63, 63], [0, 108], [-63, 63] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "damageKind" : "default"
+}
