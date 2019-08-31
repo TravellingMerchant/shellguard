@@ -2,7 +2,7 @@
 blastShieldSlam = {}
 
 function blastShieldSlam.enterWith(args)
-  if not args or not args.enteringPhase then return nil end
+  --if not args or not args.enteringPhase then return nil end
 
   return {
     windupDuration = config.getParameter("blastShieldSlam.windupDuration", 1),

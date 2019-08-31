@@ -68,17 +68,23 @@ end
 function update(dt)
   self.tookDamage = false
   
+  --sb.logInfo("The current phase is: %s", self.phase)
+  
+  if self.phase == 2 then
+    status.addPersistentEffect("nebuloxWasHereAYO", "fortresscore-energyShield")
+  elseif self.phase == 4 then
+    status.addPersistentEffect("nebuloxWasHereAYO", "fortresscore-energyShield")
+  else
+    status.clearPersistentEffects("nebuloxWasHereAYO")
+  end
+  
   if animator.animationState("blastShield") == "closed" then
 	mcontroller.controlParameters({collisionPoly = self.closedCollisionPoly})
   else
 	mcontroller.controlParameters({collisionPoly = self.openCollisionPoly})
   end
-
-  if self.phase then
-    local isThereAnotherPhase = self.phases[self.phase + 1]
-  end
   
-  if not status.resourcePositive("health") and not isThereAnotherPhase and isThereAnotherPhase ~= nil then
+  if not status.resourcePositive("health") and self.phase == 5 then
     
     --Check if death phase is ready
     local nextPhase = self.phases[self.phase + 1]

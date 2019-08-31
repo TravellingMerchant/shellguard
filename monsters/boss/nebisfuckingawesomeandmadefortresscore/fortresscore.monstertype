@@ -39,17 +39,17 @@
 	  //After breaking open blastshield, core will talk and then activate energyshield
 	  {
 	    "enterphase" : "energyShieldActivate",
-        "skills" : []
+        "skills" : [ "ventExhaustFlame" ]
 	  },
 	  //Reactivates blast shield
       {
         "enterPhase" : "blastShieldSlam",
-        "skills" : []
+        "skills" : [ "ventExhaustFlame" ]
       },
 	  //Reactivates energy shield
 	  {
 	    "enterphase" : "energyShieldActivate",
-        "skills" : []
+        "skills" : [ "ventExhaustFlame" ]
 	  }//,
 	  //Ruin cleaver finisher
 	  //{
@@ -58,7 +58,6 @@
 	  //}
     ],
 
-	//temp
 	"musicStagehands" : [ "bossmusic" ],
 
     "chatPortrait" : "/interface/chatbubbles/SGUFO.png",
@@ -69,16 +68,16 @@
 	  //Survivor's line is set in the sgfortress.radiomessages
 	  //Andros's line is set in the sgfortress.radiomessages
 	  //Fortress
-      "intro3" : "Welcome <player>.",
-      "intro4" : "It appears to be time for your extermination.",
-      "intro5" : "Analyses prove that small talk is an inefficient way to kill someone.",
+      "intro3" : "Entity detected in central core room.",
+      "intro4" : "Entity identified as <player>. Age: Unknown. Occupation: Shellguard Mercenary.",
+      "intro5" : "Commencing termination protocols.",
 	  
 	  //Rematch Lines - if the player dies, and re-enters the arena
-      "rematch1" : "Enough small talk.",
+      "rematch1" : "Analyses prove that small talk is an inefficient way to kill someone.",
 	  
 	  //Death dialogue - Currently unused
 	  "deadLines" : 1,
-      "death1" : "We will meet again."
+      "death1" : "I- <player> I wil-... I wo- This isn- o-ver..."
     },
 	
     "projectileSourcePosition" : [-2.5, -1.25],
@@ -159,7 +158,7 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 5111
+          "baseValue" : 111
         },
         "protection" : {
           "baseValue" : 25

@@ -2,7 +2,7 @@
 energyShieldActivate = {}
 
 function energyShieldActivate.enterWith(args)
-  if not args or not args.enteringPhase then return nil end
+  --if not args or not args.enteringPhase then return nil end
 
   return {
     timer = config.getParameter("energyShieldActivate.skillTime", 1),
@@ -19,7 +19,6 @@ function energyShieldActivate.enteringState(stateData)
   end
 
   sb.logInfo("did i activate?")
-  status.addPersistentEffect("nebuloxWasHereAYO", "fortresscore-energyShield")
   
   animator.setAnimationState("stages", "stage"..currentPhase())
   animator.playSound("energyShieldActivate")
