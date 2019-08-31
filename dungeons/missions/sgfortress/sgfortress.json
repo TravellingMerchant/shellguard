@@ -10653,6 +10653,66 @@
                  "width":8,
                  "x":9448,
                  "y":2728
+                }, 
+                {
+                 "gid":9797,
+                 "height":26,
+                 "id":3174,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":17,
+                 "x":6832,
+                 "y":1464
+                }, 
+                {
+                 "gid":9797,
+                 "height":26,
+                 "id":3175,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":17,
+                 "x":2528,
+                 "y":3384
+                }, 
+                {
+                 "gid":9798,
+                 "height":26,
+                 "id":3176,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":17,
+                 "x":2512,
+                 "y":3368
+                }, 
+                {
+                 "gid":9799,
+                 "height":38,
+                 "id":3177,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":31,
+                 "x":7560,
+                 "y":2136
+                }, 
+                {
+                 "gid":9797,
+                 "height":26,
+                 "id":3178,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":17,
+                 "x":11432,
+                 "y":2712
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -11630,7 +11690,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":3174,
+ "nextobjectid":3179,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
@@ -11835,6 +11895,10 @@
         {
          "firstgid":9786,
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset2.json"
+        }, 
+        {
+         "firstgid":9796,
+         "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }],
  "tilewidth":8,
  "type":"map",
