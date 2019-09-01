@@ -34,11 +34,11 @@
 	  //Introduction, with the default skills
       {
         "enterPhase" : "blastShieldSlam",
-        "skills" : ["siloMonsterSpawnGrounded", "gravitySlam", "aerialMineLaunch", "ventExhaustFlame", "gravitySlam", "siloMonsterSpawnAirborne", "gravitySlam", "ventExhaustFlame", "ventExhaustFlame", "gravitySlam", "ventExhaustFlame"]
+        "skills" : ["siloMonsterSpawnGrounded", "gravitySlam", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "siloMonsterSpawnAirborne", "gravitySlam", "aerialMineLaunch", "ventExhaustFlame", "ventExhaustFlame", "gravitySlam", "ventExhaustFlame"]
       },
 	  //After breaking open blastshield, core will talk and then activate energyshield
 	  {
-	    "enterphase" : "energyShieldActivate",
+	    "enterPhase" : "energyShieldActivate",
         "skills" : [ "ventExhaustFlame" ]
 	  },
 	  //Reactivates blast shield
@@ -48,12 +48,12 @@
       },
 	  //Reactivates energy shield
 	  {
-	    "enterphase" : "energyShieldActivate",
+	    "enterPhase" : "energyShieldActivate",
         "skills" : [ "ventExhaustFlame" ]
 	  }//,
 	  //Ruin cleaver finisher
 	  //{
-	  //  "enterphase" : "RUINED",
+	  //  "enterPhase" : "RUINED",
       //  "skills" : []
 	  //}
     ],
@@ -158,7 +158,7 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 111
+          "baseValue" : 5111
         },
         "protection" : {
           "baseValue" : 25

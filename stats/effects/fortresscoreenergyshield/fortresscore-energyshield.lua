@@ -15,7 +15,7 @@ function init()
   
   --Initial stats
   self.currentHealth = 0
-  self.rechargeTimer = 0.1
+  self.rechargeTimer = 0.95
   self.cooldownTimer = 0
   self.active = false
   status.setResource("shieldHealth", self.maxHealth)
