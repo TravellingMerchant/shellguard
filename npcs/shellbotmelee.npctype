@@ -141,6 +141,7 @@
             "primary" : [
 			  "shelllance",
 			  "sgrobotcleaver",
+			  "sgrobotsword",
 			  "sgrobotknife"
 			  ],
             "sheathedprimary" : [ "shellguardpistol" ],
