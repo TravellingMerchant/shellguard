@@ -159,7 +159,7 @@
           "damage" : {
             "stunned" : {
               "properties" : {
-                "image" : "<partImage>:hurt.<frame>"
+                "image" : "<partImage>:windup.<frame>"
               }
             }
           }
@@ -193,7 +193,7 @@
           "damage" : {
             "stunned" : {
               "properties" : {
-                "image" : "<partImage>:hurt.<frame>"
+                "image" : "<partImage>:windup.<frame>"
               }
             }
           }
