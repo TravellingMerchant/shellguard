@@ -27,14 +27,14 @@
 	"renderLayer" : "Projectile-1",
 	
     "skillCount" : 13,
-    "skills" : [ "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "radiationLeak", "engageHeavyTurret", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch" ],
+    "skills" : [ "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "siloTurretSpawn", "engageHeavyTurret", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch" ],
 
     "phases" : [
 	  //Skills/Abilities the core will possess in each phase, it is randomly picked by whats in the tables
 	  //Introduction, with the default skills
       {
         "enterPhase" : "blastShieldSlam",
-        "skills" : ["siloMonsterSpawnGrounded", "gravitySlam", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "siloMonsterSpawnAirborne", "gravitySlam", "aerialMineLaunch", "ventExhaustFlame", "ventExhaustFlame", "gravitySlam", "ventExhaustFlame"]
+        "skills" : ["siloMonsterSpawnGrounded", "ventExhaustFlame", "ventExhaustFlame", "ventExhaustFlame", "ventExhaustFlame", "ventExhaustFlame"]
       },
 	  //After breaking open blastshield, core will talk and then activate energyshield
 	  {

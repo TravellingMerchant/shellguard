@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
-siloMonsterSpawnAirborne = {}
+siloTurretSpawn = {}
 
-function siloMonsterSpawnAirborne.enter()
+function siloTurretSpawn.enter()
   if not hasTarget() then return nil end
   
   self.active = false
@@ -9,43 +9,44 @@ function siloMonsterSpawnAirborne.enter()
   self.leftFinished = false
   self.rightFinished = false
   self.canFire = false
-  self.leftSiloOffset = config.getParameter("siloMonsterSpawnAirborne.leftSiloOffset")
-  self.rightSiloOffset = config.getParameter("siloMonsterSpawnAirborne.rightSiloOffset")
+  self.leftSiloOffset = config.getParameter("siloTurretSpawn.leftSiloOffset")
+  self.rightSiloOffset = config.getParameter("siloTurretSpawn.rightSiloOffset")
   self.monsterLevel = monster.level() - 1
   
   return {
-    fireDuration = config.getParameter("siloMonsterSpawnAirborne.fireDuration", 1),
-    windupDuration = config.getParameter("siloMonsterSpawnAirborne.windupDuration", 1),
-	monsterCount = config.getParameter("siloMonsterSpawnAirborne.monsterCount", 5),
-	monsters = config.getParameter("siloMonsterSpawnAirborne.monsters"),
-    monsterTypes = config.getParameter("siloMonsterSpawnAirborne.monsterTypes"),
-    monsterCount = config.getParameter("siloMonsterSpawnAirborne.monsterCount"),
-    monsterTestPoly = config.getParameter("siloMonsterSpawnAirborne.monsterTestPoly"),
-    spawnOnGround = config.getParameter("siloMonsterSpawnAirborne.spawnOnGround"),
-    spawnAnimation = config.getParameter("siloMonsterSpawnAirborne.spawnAnimation"),
-    spawnRangeX = config.getParameter("siloMonsterSpawnAirborne.spawnRangeX"),
-    spawnRangeY = config.getParameter("siloMonsterSpawnAirborne.spawnRangeY"),
-    spawnTolerance = config.getParameter("siloMonsterSpawnAirborne.spawnTolerance"),
-    spawnAnimationStatus = config.getParameter("siloMonsterSpawnAirborne.spawnAnimationStatus")
+    fireDuration = config.getParameter("siloTurretSpawn.fireDuration", 1),
+    windupDuration = config.getParameter("siloTurretSpawn.windupDuration", 1),
+	monsterCount = config.getParameter("siloTurretSpawn.monsterCount", 5),
+	monsters = config.getParameter("siloTurretSpawn.monsters"),
+    monsterTypes = config.getParameter("siloTurretSpawn.monsterTypes"),
+    monsterCount = config.getParameter("siloTurretSpawn.monsterCount"),
+    monsterTestPoly = config.getParameter("siloTurretSpawn.monsterTestPoly"),
+    spawnOnGround = config.getParameter("siloTurretSpawn.spawnOnGround"),
+    spawnAnimation = config.getParameter("siloTurretSpawn.spawnAnimation"),
+    spawnRangeX = config.getParameter("siloTurretSpawn.spawnRangeX"),
+    spawnRangeY = config.getParameter("siloTurretSpawn.spawnRangeY"),
+    spawnTolerance = config.getParameter("siloTurretSpawn.spawnTolerance"),
+    spawnAnimationStatus = config.getParameter("siloTurretSpawn.spawnAnimationStatus"),
+	entityId = nil
   }
 end
 
-function siloMonsterSpawnAirborne.enteringState(stateData)
-  monster.setActiveSkillName("siloMonsterSpawnAirborne")
+function siloTurretSpawn.enteringState(stateData)
+  if stateData.entityId then if world.entityExists(stateData.entityId) then return true end end
+  if not hasTarget() then return true end
+  monster.setActiveSkillName("siloTurretSpawn")
   self.firstChoice = math.random(1, 2)
   self.secondChoice = math.random(1, 2)
   animator.playSound("ventAlert")
 end
 
-function siloMonsterSpawnAirborne.update(dt, stateData)
+function siloTurretSpawn.update(dt, stateData)
   if not hasTarget() then return true end
   
   if animator.animationState("topLeftSilo") == "risen" and not self.active then
-	animator.setAnimationState("topLeftSilo", "dooropen")
 	self.active = true
   end
   if animator.animationState("topLeftSilo") == "risen" and not self.active then
-	animator.setAnimationState("topLeftSilo", "dooropen")
 	self.active = true
   end
   
@@ -58,8 +59,8 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
   end
   
   if self.active then
-	if animator.animationState("topLeftSilo") == "openidle" and self.canFire and not self.finished then
-	  for i = 1, math.random(stateData.monsterCount[1], stateData.monsterCount[2]) do
+	if animator.animationState("topLeftSilo") == "risen" and self.canFire and not self.finished then
+	  for i = 1, math.random(stateData.monsterCount) do
 	    --Calculate initial x and y offset for the spawn position
 	    local xOffset = math.random((self.leftSiloOffset[1] - stateData.spawnRangeX), self.leftSiloOffset[1])
 	    --xOffset = xOffset * util.randomChoice({-1, 1})
@@ -77,7 +78,7 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 	  
 	    if resolvedPosition then
 		  --Spawn the monster and optionally force the monster spawn effect on them
-		  local entityId = world.spawnMonster(util.randomChoice(stateData.monsterTypes), resolvedPosition, {level = self.monsterLevel, aggressive = true})
+		  stateData.entityId = world.spawnMonster(util.randomChoice(stateData.monsterTypes), resolvedPosition, {level = self.monsterLevel, aggressive = true})
 		  if stateData.spawnAnimation then
 		    world.callScriptedEntity(entityId, "status.addEphemeralEffect", stateData.spawnAnimationStatus)
 		  end
@@ -85,9 +86,9 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 	  end
 	  self.finished = true
 	end
-	if animator.animationState("topLeftSilo") == "openidle" and self.canFire and not self.finished then
+	if animator.animationState("topLeftSilo") == "risen" and self.canFire and not self.finished then
 
-	  for i = 1, math.random(stateData.monsterCount[1], stateData.monsterCount[2]) do
+	  for i = 1, math.random(stateData.monsterCount) do
 	    --Calculate initial x and y offset for the spawn position
 	    local xOffset = math.random(self.rightSiloOffset[1], (self.rightSiloOffset[1] + stateData.spawnRangeX))
 	    --xOffset = xOffset * util.randomChoice({-1, 1})
@@ -117,13 +118,6 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 	if self.finished then
       stateData.fireDuration = stateData.fireDuration - dt
 	  
-	  if animator.animationState("topLeftSilo") == "openidle" then
-	    animator.setAnimationState("topLeftSilo", "doorclose")
-	  end
-	  if animator.animationState("topLeftSilo") == "openidle" then
-	    animator.setAnimationState("topLeftSilo", "doorclose")
-	  end
-	  
 	  if stateData.fireDuration <= 0 then
 	    return true
 	  end
@@ -151,8 +145,7 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
   return false
 end
 
-function siloMonsterSpawnAirborne.leavingState(stateData)
-  sb.logInfo(animator.animationState("topLeftSilo"))
+function siloTurretSpawn.leavingState(stateData)
   self.active = false
   self.canFire = false
 end

@@ -14,6 +14,9 @@ function init()
   self.closedCollisionPoly = config.getParameter("collisionPolys.closedCollisionPoly", {})
   self.shieldCollisionPoly = config.getParameter("collisionPolys.shieldCollisionPoly", {})
   self.maxHealth = status.resource("health")
+  
+  self.leftSiloPlatformId = world.spawnVehicle("neb-sgfortresscoresilos", vec2.add(entity.position(), {-30, -22.5}))
+  self.rightSiloPlatformId = world.spawnVehicle("neb-sgfortresscoresilos", vec2.add(entity.position(), {30, -22.5}))
 	  
   if rangedAttack then
     rangedAttack.loadConfig()
@@ -67,6 +70,36 @@ end
 
 function update(dt)
   self.tookDamage = false
+  
+  --Force an invisible vehicle platform to follow the silos
+  if animator.animationState("bottomLeftSilo") == "rise" and not self.leftActed then
+    world.sendEntityMessage(self.leftSiloPlatformId, "moveUp", 3, 0.8)
+	self.leftActed = true
+  end
+  if animator.animationState("bottomLeftSilo") == "risen" and self.leftActed then
+	self.leftActed = false
+  end
+  if animator.animationState("bottomRightSilo") == "rise" and not self.rightActed then
+    world.sendEntityMessage(self.rightSiloPlatformId, "moveUp", 3, 0.8)
+	self.rightActed = true
+  end  
+  if animator.animationState("bottomRightSilo") == "risen" and self.rightActed then
+	self.rightActed = false
+  end
+  if animator.animationState("bottomLeftSilo") == "sink" and not self.leftActed then
+    world.sendEntityMessage(self.leftSiloPlatformId, "moveDown", 3, 0.8)
+	self.leftActed = true
+  end
+  if animator.animationState("bottomLeftSilo") == "idle" and self.leftActed then
+	self.leftActed = false
+  end
+  if animator.animationState("bottomRightSilo") == "sink" and not self.rightActed then
+    world.sendEntityMessage(self.rightSiloPlatformId, "moveDown", 3, 0.8)
+	self.rightActed = true
+  end
+  if animator.animationState("bottomRightSilo") == "idle" and self.rightActed then
+	self.rightActed = false
+  end
   
   --sb.logInfo("The current phase is: %s", self.phase)
   
