@@ -5,7 +5,7 @@
   "rarity" : "Legendary",
   "description" : "Blisteringly fast fire rate. Charge to overload the firing systems.",
   "shortdescription" : "Shellguard Assault SMG",
-  "tooltipKind" : "gun",
+  "tooltipKind" : "base",
   "category" : "uniqueWeapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","ranged","upgradeableWeapon"],

@@ -1,0 +1,52 @@
+{
+  "itemName" : "sgofficersword",
+  "price" : 3000,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A sharp Sabre used by Shellguard base Commanders.",
+  "shortdescription" : "Commander's Sabre",
+  //"tooltipKind" : "sword",
+  "category" : "uniqueweapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","broadsword","upgradeableWeapon"],
+
+  "inventoryIcon" : "sgofficersword.png",
+
+  "animation" : "/items/active/weapons/melee/broadsword/combobroadsword.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "sgofficersword.png"
+  },
+  "animationCustom" : { },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "broadswordcombo",
+  "primaryAbility" : {
+    "fireTime" : 0.83,
+    "baseDps" : 11.5,
+    "damageConfig" : {
+      "damageSourceKind" : "hammer"
+    }
+  },
+
+  "altAbilityType" : "parry",
+  "altAbility" : {
+    "damageConfig" : {
+      "damageSourceKind" : "hammer"
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgofficerswordelite.png",
+    "animationParts" : {
+      "blade" : "sgofficerswordelite.png"
+    },
+    "shortdescription" : "Commander's Elite Sabre ^yellow;^reset;",
+    "description" : "A sharp Sabre used by Shellguard base commanders."
+  }
+}

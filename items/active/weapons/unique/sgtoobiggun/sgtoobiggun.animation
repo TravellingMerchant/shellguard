@@ -15,23 +15,27 @@
             "mode" : "transition",
             "transition" : "fullcharge",
             "properties" : {
-              "persistentSound" : "/sfx/gun/dragonhead_charge2.ogg",
+              "persistentSound" : "/sfx/melee/barrier_create_electric.ogg",
               "persistentSoundStopTime" : 0.5
             }
           },
           "fullcharge" : {
-            "frames" : 2,
+            "frames" : 3,
             "cycle" : 0.2,
-            "mode" : "loop"
+            "mode" : "loop",
+            "properties" : {
+              "persistentSound" : "/sfx/melee/barrier_create_electric.ogg",
+              "persistentSoundStopTime" : 0.5
+            }
           },
           "fire" : {
             "frames" : 3,
-            "cycle" : 0.5,
+            "cycle" : 0.3,
             "mode" : "transition",
             "transition" : "cooldown"
           },
           "cooldown" : {
-            "frames" : 3,
+            "frames" : 2,
             "cycle" : 1.5,
             "mode" : "transition",
             "transition" : "off"
@@ -161,10 +165,10 @@
   },
 
   "sounds" : {
-    "fire" : [ "/sfx/gun/mech/sgmechartilleryfire.ogg" ],
-    "fire2" : [ "/sfx/gun/mech/sgmechartilleryfire.ogg" ],
-    "fire3" : [ "/sfx/gun/mech/sgmechartilleryfire.ogg" ],
-    "fire4" : [ "/sfx/gun/mech/sgmechartilleryfire.ogg" ],
+    "fire" : [ "/sfx/gun/sgbiggunplasma.ogg" ],
+    "fire2" : [ "/sfx/gun/sgbiggunplasma.ogg" ],
+    "fire3" : [ "/sfx/gun/sgmechartilleryfire.ogg" ],
+    "fire4" : [ "/sfx/gun/sgmechartilleryfire.ogg" ],
     "altFire" : [ "/sfx/gun/PlasmiteRPGLaunch.ogg" ]
   }
 }

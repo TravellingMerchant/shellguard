@@ -1,6 +1,6 @@
 {
   "itemName" : "sgshotgun",
-  "price" : 7000,
+  "price" : 3000,
   "inventoryIcon" : "ShellGuardshotgun.png",
   "maxStack" : 1,
   "rarity" : "legendary",

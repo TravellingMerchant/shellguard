@@ -8,9 +8,9 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":4,
+ "tilecount":6,
  "tiledversion":"1.2.4",
- "tileheight":38,
+ "tileheight":94,
  "tileproperties":
     {
      "0":
@@ -51,6 +51,26 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"sgheatvent",
+         "tilesetDirection":"right"
+        },
+     "4":
+        {
+         "\/\/description":"sgadvancedmart",
+         "\/\/name":"sgadvancedmart",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-64",
+         "imagePositionY":"0",
+         "object":"sgadvancedmart",
+         "tilesetDirection":"right"
+        },
+     "5":
+        {
+         "\/\/description":"sgfortressbase",
+         "\/\/name":"sgfortressbase",
+         "\/\/shortdescription":"boss stand",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgfortressbase",
          "tilesetDirection":"right"
         }
     },
@@ -95,6 +115,26 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
+        },
+     "4":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "5":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         }
     },
  "tiles":
@@ -122,9 +162,21 @@
          "image":"..\/..\/objects\/breakables\/sgheatvent\/sgheatventicon.png",
          "imageheight":38,
          "imagewidth":31
+        },
+     "4":
+        {
+         "image":"..\/..\/objects\/sgadvancedmart\/icon.png",
+         "imageheight":78,
+         "imagewidth":120
+        },
+     "5":
+        {
+         "image":"..\/..\/objects\/bossplatforms\/sgfortressbase\/sgfortressbaseicon.png",
+         "imageheight":94,
+         "imagewidth":172
         }
     },
- "tilewidth":31,
+ "tilewidth":172,
  "type":"tileset",
  "version":1.1
 }
