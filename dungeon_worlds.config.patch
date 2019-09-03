@@ -32,6 +32,27 @@
       "biome": "sgalpine"
     }
   },
+
+  {
+    "op" : "add",
+    "path" : "/sgfortresscorebase",
+    "value" : {
+      "primaryDungeon" : "sgfortresscorebase",
+      "weatherPool" : [
+        [1.0, "snow"]
+      ],
+      "threatLevel" : 2,
+      "gravity" : 80,
+      "worldSize" : [1000, 500],
+      "dungeonBaseHeight" : 400,
+      "dungeonSurfaceHeight" : 5,
+      "ambientLightLevel" : [200, 200, 200],
+      "ambientNoises" : "/sfx/environmental/garden_day.ogg",
+      "musicTrack" : "/music/arctic-constellation2.ogg",
+      "biome": "sgalpine"
+    }
+  },  
+
   {
     "op" : "add",
     "path" : "/lockjawcourse",

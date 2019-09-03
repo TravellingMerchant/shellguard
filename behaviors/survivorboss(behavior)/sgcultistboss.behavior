@@ -111,7 +111,7 @@
                         "name": "addEphemeralEffect",
                         "parameters": {
                           "duration": {"value": 10},
-                          "name": {"value": "cultistshield"}
+                          "name": {"value": "dontstarve"}
                         }
                       }
                     ]
@@ -176,6 +176,25 @@
                           "aggressive": {"value": true}
                         }
                       },
+					  {
+                        "title": "setResourcePercentage",
+                        "type": "action",
+                        "name": "setResourcePercentage",
+                        "parameters": {
+                          "percentage": {"value": 1},
+                          "resource": {"value": "health"}
+                        }
+                      },
+					  {
+                        "title": "survivorboss-dashattack",
+                        "type": "module",
+                        "name": "survivorboss-dashattack",
+                        "parameters": {
+                          "dashSpeed": {"value": 119},
+                          "dashTime": {"value": 0.55},
+                          "teleportPosition": {"value": "cultistupperdashposition"}
+                        }
+                      },
                       {
                         "title": "repeater",
                         "type": "decorator",
@@ -187,7 +206,7 @@
                         "child": {
                           "title": "Reset",
                           "type": "composite",
-                          "name": "sequence",
+                          "name": "randomize",
                           "parameters": {},
                           "children": [
                             {
@@ -195,15 +214,6 @@
                               "type": "action",
                               "name": "halt",
                               "parameters": {}
-                            },
-                            {
-                              "title": "survivorboss-flyingslash",
-                              "type": "module",
-                              "name": "survivorboss-flyingslash",
-                              "parameters": {
-                                "projectileAngleStep": {"value": 0.14},
-                                "projectileCount": {"value": 4}
-                              }
                             },
                             {
                               "title": "unsetFlag",
@@ -216,7 +226,7 @@
                             {
                               "title": "Reset",
                               "type": "composite",
-                              "name": "sequence",
+                              "name": "randomize",
                               "parameters": {},
                               "children": [
                                 {
@@ -224,81 +234,41 @@
                                   "type": "module",
                                   "name": "survivorboss-dashattack",
                                   "parameters": {
-                                    "dashSpeed": {"value": 75},
-                                    "dashTime": {"value": 0.43},
+                                    "dashSpeed": {"value": 119},
+                                    "dashTime": {"value": 0.55},
                                     "teleportPosition": {"value": "cultistupperdashposition"}
                                   }
                                 },
-                                {
-                                  "title": "survivorboss-dashattack",
+								{
+                                  "title": "survivorboss-flyingslash",
                                   "type": "module",
-                                  "name": "survivorboss-dashattack",
+                                  "name": "survivorboss-flyingslash",
                                   "parameters": {
-                                    "dashSpeed": {"value": 75},
-                                    "dashTime": {"value": 0.8},
-                                    "teleportPosition": {"value": "cultistlowerdashposition"}
+                                    "projectileAngleStep": {"value": 0.14},
+                                    "projectileCount": {"value": 4}
+                                  }
+                                },
+								{
+                                  "title": "survivorboss-fireball",
+                                  "type": "module",
+                                  "name": "survivorboss-fireball",
+                                  "parameters": {
+                                    "projectileAngleStep": {"value": 0},
+                                    "projectileCount": {"value": 1}
+                                  }
+                                },
+								{
+                                  "title": "survivorboss-sgguardianminion",
+                                  "type": "module",
+                                  "name": "survivorboss-sgguardianminion",
+                                  "parameters": {
+                                    "projectileAngleStep": {"value": 0},
+                                    "projectileCount": {"value": 1}
                                   }
                                 }
                               ]
                             },
-                            {
-                              "title": "survivorboss-slash",
-                              "type": "module",
-                              "name": "survivorboss-slash",
-                              "parameters": {
-                                "idleTime": {"value": 0.5}
-                              }
-                            },
-                            {
-                              "title": "Reset",
-                              "type": "composite",
-                              "name": "sequence",
-                              "parameters": {},
-                              "children": [
-                                {
-                                  "title": "survivorboss-dashattack",
-                                  "type": "module",
-                                  "name": "survivorboss-dashattack",
-                                  "parameters": {
-                                    "dashSpeed": {"value": 75},
-                                    "dashTime": {"value": 0.43},
-                                    "teleportPosition": {"value": "cultistupperdashposition"}
-                                  }
-                                },
-                                {
-                                  "title": "survivorboss-dashattack",
-                                  "type": "module",
-                                  "name": "survivorboss-dashattack",
-                                  "parameters": {
-                                    "dashSpeed": {"value": 75},
-                                    "dashTime": {"value": 0.8},
-                                    "teleportPosition": {"value": "cultistlowerdashposition"}
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "title": "survivorboss-flyingslash",
-                              "type": "module",
-                              "name": "survivorboss-flyingslash",
-                              "parameters": {
-                                "projectileAngleStep": {"value": 0.14},
-                                "projectileCount": {"value": 6}
-                              }
-                            },
-                            {
-                              "title": "survivorboss-sphereattack",
-                              "type": "module",
-                              "name": "survivorboss-sphereattack",
-                              "parameters": {}
-                            },
-                            {
-                              "title": "survivorboss-exhaust",
-                              "type": "module",
-                              "name": "survivorboss-exhaust",
-                              "parameters": {}
-                            },
-                            {
+							{
                               "title": "survivorboss-beamattack",
                               "type": "module",
                               "name": "survivorboss-beamattack",
@@ -307,11 +277,56 @@
                               }
                             },
                             {
-                              "title": "survivorboss-slash",
+                              "title": "Reset",
+                              "type": "composite",
+                              "name": "randomize",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "survivorboss-dashattack",
+                                  "type": "module",
+                                  "name": "survivorboss-dashattack",
+                                  "parameters": {
+                                    "dashSpeed": {"value": 119},
+                                    "dashTime": {"value": 0.55},
+                                    "teleportPosition": {"value": "cultistupperdashposition"}
+                                  }
+                                },
+								{
+                                  "title": "survivorboss-flyingslash",
+                                  "type": "module",
+                                  "name": "survivorboss-flyingslash",
+                                  "parameters": {
+                                    "projectileAngleStep": {"value": 0.14},
+                                    "projectileCount": {"value": 4}
+                                  }
+                                },
+								{
+                                  "title": "survivorboss-fireball",
+                                  "type": "module",
+                                  "name": "survivorboss-fireball",
+                                  "parameters": {
+                                    "projectileAngleStep": {"value": 0},
+                                    "projectileCount": {"value": 1}
+                                  }
+                                },
+								{
+                                  "title": "survivorboss-sgguardianminion",
+                                  "type": "module",
+                                  "name": "survivorboss-sgguardianminion",
+                                  "parameters": {
+                                    "projectileAngleStep": {"value": 0},
+                                    "projectileCount": {"value": 1}
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "title": "survivorboss-beamattack",
                               "type": "module",
-                              "name": "survivorboss-slash",
+                              "name": "survivorboss-beamattack",
                               "parameters": {
-                                "idleTime": {"value": 0.5}
+                                "teleportPosition": {"value": "cultistbeamposition"}
                               }
                             }
                           ]

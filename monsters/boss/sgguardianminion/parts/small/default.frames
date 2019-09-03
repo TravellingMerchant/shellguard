@@ -1,0 +1,10 @@
+{
+  "frameGrid" : {
+    "size" : [44, 24],
+    "dimensions" : [20, 2],
+    "names" : [
+      [ null, "spawn.1", "spawn.2", "spawn.3", "spawn.4", "spawn.5", "spawn.6", "spawn.7", "spawn.8", "spawn.9", "spawn.10", "spawn.11", "spawn.12", null, "idle.1", "idle.2", "idle.3", "idle.4", "idle.5", "idle.6" ],
+      [ "idle.7", "idle.8", "idle.9", "idle.10", "idle.11", "idle.12", "idle.13", "idle.14", "idle.15", "idle.16", null, "despawn.1", "despawn.2", "despawn.3", "despawn.4", "despawn.5", "despawn.6", "despawn.7", "despawn.8", "despawn.9"]
+    ]
+  }
+}

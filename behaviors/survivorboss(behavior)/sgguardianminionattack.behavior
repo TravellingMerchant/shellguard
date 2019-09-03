@@ -1,5 +1,5 @@
 {
-  "name": "survivorboss-flyingslash",
+  "name": "survivorboss-sgguardianminion",
   "description": "",
   "scripts": [
     "/scripts/actions/time.lua",
@@ -11,13 +11,13 @@
   ],
   "parameters": {
     "beaminTime": 0.5,
-    "jumpVelocity": 40,
-    "stopForce": 30,
-    "stopTime": 2,
-    "projectileAngleStep": 0.2,
-    "projectileCount": 5,
+    "jumpVelocity": 100,
+    "stopForce": 100,
+    "stopTime": 0.3,
+    "projectileAngleStep": 0,
+    "projectileCount": 1,
     "projectileInterval": 0.05,
-    "startAngle": -0.5
+    "startAngle": -0.7
   },
   "root": {
     "title": "Reset",
@@ -25,17 +25,6 @@
     "name": "sequence",
     "parameters": {},
     "children": [
-      {
-        "title": "survivorboss-teleport",
-        "type": "module",
-        "name": "survivorboss-teleport",
-        "parameters": {
-          "positionType": {"value": "cultistflyingslashposition"},
-          "shufflePositions": {"value": true},
-          "reverseOrder": {"value": false},
-          "positionIndex": {"value": 1}
-        }
-      },
       {
         "title": "survivorboss-facecenter",
         "type": "module",
@@ -278,8 +267,8 @@
                             "offset": {"value": [0, 0]},
                             "position": {"key": "spawnPosition"},
                             "projectileConfig": {"value": {}},
-                            "projectileType": {"value": "sgbounceheavy"},
-                            "scalePower": {"value": true},
+                            "projectileType": {"value": "sgguardianminionspawn"},
+                            "scalePower": {"value": false},
                             "sourceEntity": {"key": "self"},
                             "trackSource": {"value": false}
                           }

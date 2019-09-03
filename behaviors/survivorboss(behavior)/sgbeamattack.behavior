@@ -15,17 +15,6 @@
     "parameters": {},
     "children": [
       {
-        "title": "survivorboss-teleport",
-        "type": "module",
-        "name": "survivorboss-teleport",
-        "parameters": {
-          "positionType": {"value": "<teleportPosition>"},
-          "shufflePositions": {"value": true},
-          "reverseOrder": {"value": false},
-          "positionIndex": {"value": 1}
-        }
-      },
-      {
         "title": "survivorboss-facecenter",
         "type": "module",
         "name": "survivorboss-facecenter",
@@ -36,7 +25,7 @@
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 1}
+          "time": {"value": 0.5}
         }
       },
       {
@@ -53,7 +42,7 @@
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 4}
+          "time": {"value": 0.7}
         }
       },
       {

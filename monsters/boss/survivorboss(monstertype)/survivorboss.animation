@@ -14,7 +14,7 @@
             "mode" : "transition",
             "transition" : "invisible",
             "frameProperties" : {
-              "immediateSound" : [ "/sfx/npc/boss/cultistboss_recharge.ogg", "", "", "", "", "/sfx/npc/boss/cultistboss_blink.ogg", "", "", "", "", "" ]
+              "immediateSound" : [ "", "", "", "", "", "", "", "", "", "", "" ]
             }
           },
           "idle" : {
@@ -27,8 +27,7 @@
             "cycle" : 0.4,
             "mode" : "loop",
             "properties" : {
-              "immediateSound" : "/sfx/tech/tech_rocketboots_thrust1.ogg",
-              "persistentSound" : "/sfx/tech/tech_rocketboots.ogg"
+              "immediateSound" : "/sfx/tech/tech_jetpack_thrust1.ogg"
             }
           },
           "fall" : {
@@ -65,7 +64,7 @@
             "mode" : "transition",
             "transition" : "dash",
             "properties" : {
-              "immediateSound" :  "/sfx/melee/charge_combo1.ogg"
+              "immediateSound" :  "/sfx/npc/monsters/orbide_charge.ogg"
             }
           },
           "dash" : {
@@ -73,7 +72,7 @@
             "cycle" : 0.4,
             "mode" : "loop",
             "properties" : {
-              "persistentSound" : "/sfx/npc/boss/cultistboss_dash_loop.ogg"
+              "persistentSound" : "/sfx/npc/monsters/orbide_charge.ogg"
             }
           },
           "spherein" : {

@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "sgfortresscorebase",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "sgfortresscorebase" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "sgfortresscorebase",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "sgfortresscorebase.json" ]
+    }
+  ]
+}

@@ -54,7 +54,7 @@
     "cruiseDistance" : 25,
 
     "metaBoundBox" : [-14.0, -4.0, 14.0, 4.0],
-    "scale" : 2.0,
+    "scale" : 1.5,
 
     "movementSettings" : {
       "gravityEnabled" : false,
