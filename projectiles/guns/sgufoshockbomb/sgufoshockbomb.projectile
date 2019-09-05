@@ -26,14 +26,7 @@
 	{
       "action" : "projectile",
       "inheritDamageFactor" : 0.5,
-      "type" : "shellsmoke"
-    },
-	{
-      "action" : "projectile",
-      "inheritDamageFactor" : 1.0,
-      "type" : "dragonblockbuster",
-      "projectileCount" : 1,
-      "angleAdjust" : 90
+      "type" : "sgheatexplosionknockback"
     },
     {
       "action" : "sound",
@@ -46,8 +39,8 @@
     {
       "action" : "explosion",
       "foregroundRadius" : 3,
-      "backgroundRadius" : 2,
-      "explosiveDamageAmount" : 50.0,
+      "backgroundRadius" : 0,
+      "explosiveDamageAmount" : 300.0,
       "delaySteps" : 2
     }
 
