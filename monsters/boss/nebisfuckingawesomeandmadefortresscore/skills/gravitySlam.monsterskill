@@ -8,7 +8,7 @@
 
     "ufoPulseCannonAttack" : {
       "zeroGravityDuration" : 0.01,
-      "heavyGravityDuration" : 2
+      "heavyGravityDuration" : 0.4
     }
   },
 

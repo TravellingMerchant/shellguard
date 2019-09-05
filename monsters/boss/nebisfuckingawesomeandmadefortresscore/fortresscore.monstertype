@@ -27,28 +27,37 @@
 	"renderLayer" : "Projectile-1",
 	
     "skillCount" : 13,
-    "skills" : [ "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "radiationLeak", "miniTurrets", "rocketTurret", "laserTurret", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch" ],
+    "skills" : [ "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "siloTurretSpawn", "engageHeavyTurret", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch" ],
 
     "phases" : [
 	  //Skills/Abilities the core will possess in each phase, it is randomly picked by whats in the tables
 	  //Introduction, with the default skills
       {
         "enterPhase" : "blastShieldSlam",
-        "skills" : ["siloMonsterSpawnGrounded", "gravitySlam", "aerialMineLaunch", "ventExhaustFlame", "gravitySlam", "siloMonsterSpawnAirborne", "gravitySlam", "ventExhaustFlame", "ventExhaustFlame", "gravitySlam", "ventExhaustFlame"]
+        "skills" : ["siloMonsterSpawnGrounded", "ventExhaustFlame", "ventExhaustFlame", "ventExhaustFlame", "ventExhaustFlame", "ventExhaustFlame"]
       },
 	  //After breaking open blastshield, core will talk and then activate energyshield
 	  {
-	    "enterphase" : "blastShieldSlam",
-        "skills" : []
-	  }
+	    "enterPhase" : "energyShieldActivate",
+        "skills" : [ "ventExhaustFlame" ]
+	  },
 	  //Reactivates blast shield
-	  
+      {
+        "enterPhase" : "blastShieldSlam",
+        "skills" : [ "ventExhaustFlame" ]
+      },
 	  //Reactivates energy shield
-	  
+	  {
+	    "enterPhase" : "energyShieldActivate",
+        "skills" : [ "ventExhaustFlame" ]
+	  }//,
 	  //Ruin cleaver finisher
+	  //{
+	  //  "enterPhase" : "RUINED",
+      //  "skills" : []
+	  //}
     ],
 
-	//temp
 	"musicStagehands" : [ "bossmusic" ],
 
     "chatPortrait" : "/interface/chatbubbles/SGUFO.png",
@@ -59,16 +68,16 @@
 	  //Survivor's line is set in the sgfortress.radiomessages
 	  //Andros's line is set in the sgfortress.radiomessages
 	  //Fortress
-      "intro3" : "Welcome <player>.",
-      "intro4" : "It appears to be time for your extermination.",
-      "intro5" : "Analyses prove that small talk is an inefficient way to kill someone.",
+      "intro3" : "Entity detected in central core room.",
+      "intro4" : "Entity identified as <player>. Age: Unknown. Occupation: Shellguard Mercenary.",
+      "intro5" : "Commencing termination protocols.",
 	  
 	  //Rematch Lines - if the player dies, and re-enters the arena
-      "rematch1" : "Enough small talk.",
+      "rematch1" : "Analyses prove that small talk is an inefficient way to kill someone.",
 	  
 	  //Death dialogue - Currently unused
 	  "deadLines" : 1,
-      "death1" : "We will meet again."
+      "death1" : "I- <player> I wil-... I wo- This isn- o-ver..."
     },
 	
     "projectileSourcePosition" : [-2.5, -1.25],
@@ -149,12 +158,15 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 40000
+          "baseValue" : 5111
         },
         "protection" : {
-          "baseValue" : 50
+          "baseValue" : 25
         },
         "healthRegen" : {
+          "baseValue" : 0.01
+        },
+        "shieldRegen" : {
           "baseValue" : 0.0
         },
         "fireStatusImmunity" : {
@@ -193,6 +205,9 @@
           "maxStat" : "maxHealth",
           "deltaStat" : "healthRegen",
           "defaultPercentage" : 100
+        },
+        "shieldHealth" : {
+          "initialValue" : 0
         }
       }
     },

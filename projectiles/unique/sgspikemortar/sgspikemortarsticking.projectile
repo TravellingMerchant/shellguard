@@ -44,8 +44,9 @@
   "renderLayer" : "Monster+1",
   
   "scripts" : [ "/projectiles/scripts/nebsgprojectilesticking.lua" ],
-  "searchDistance" : 0.09,			//The search distance, should always be 0.125 or lower
-  "stickToPlayers" : false,			//Changes entities to stick to from enemies to allies, good for enemy attacks
-  "stickToTargetTime" : 3,			//when stuck to an enemy sets time to live to this, so ones stuck in the ground can last longer
-  "proximitySearchRadius" : false	//When stuck in the ground, search around the projectile for enemies to stick into, if its the same as search distance, it will stick into enemies feet, if false it does nothing, if a number it sticks
+  "searchDistance" : 0.09,						
+  "stickToTargetTime" : 3,						
+  "proximitySearchRadius" : false,				
+  "validEntityTypes" : ["monster", "npc"],	    
+  "enemyAllyDistinguishing" : false		    
 }

@@ -1,0 +1,38 @@
+{
+  "name" : "neb-sgfortresscoresilos",
+  "boundBox" : [-2.5, -0.25, 2.5, 0.75],
+  "slaveControlTimeout" : 2.0,
+  "slaveControlHeartbeat" : 1.0,
+  "canBeHit" : false,
+
+  "persistent" : true,
+
+  "script" : "/vehicles/fortresscoresilos/sgfortresscoresilos.lua",
+  "animation" : "/vehicles/railplatform/compositerailplatform.animation",
+
+  "animationPartTags" : {
+    "platform" : {
+      "partImage" : "assetmissing.png"
+    },
+    "platformfullbright" : {
+      "partImage" : "assetmissing.png"
+    }
+  },
+
+  "movementSettings" : {
+    "collisionPoly" : [ [-9, 0.75], [9, 0.75], [9, 0.5], [-9, 0.5] ],
+    "mass" : 0.0,
+    "ignorePlatformCollision" : true,
+    "physicsEffectCategories" : []
+  },
+
+  "loungePositions" : {},
+
+  "physicsCollisions" : {
+    "platform" : {
+      "collision" : [ [-9, 0.875], [9, 0.875] ],
+      "collisionKind" : "platform",
+      "attachToPart" : "platform"
+    }
+  }
+}

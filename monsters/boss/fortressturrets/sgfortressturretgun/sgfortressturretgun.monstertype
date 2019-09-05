@@ -49,7 +49,7 @@
             "windupStopForce" : 50,
             "windupState" : "idle",
 
-            "projectileType" : "shelluforocket",
+            "projectileType" : "nebsgfortressturretmissile.png",
 			"projectileCount" : 6,
 			"projectileInterval" : 0.1,
             "fireOffset" : [8.0, 0.25],
@@ -163,10 +163,10 @@
           "baseValue" : 100
         },
         "maxHealth" : {
-          "baseValue" : 40
+          "baseValue" : 500
         },
         "protection" : {
-          "baseValue" : 0.0
+          "baseValue" : 0.1
         },
         "healthRegen" : {
           "baseValue" : 0.0

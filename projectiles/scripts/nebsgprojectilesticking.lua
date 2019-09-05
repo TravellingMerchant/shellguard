@@ -1,18 +1,19 @@
+--Scripted by nebulox, allows sticking into enemies and allies, along with distinguishing between friendly and enemy and doing an action respectively
+
 require "/scripts/vec2.lua"
 require "/scripts/util.lua"
 
 function init()
-  self.stickToPlayers = config.getParameter("stickToPlayers", false)
+  self.validEntityTypes = config.getParameter("validEntityTypes", {"npc", "monster"})
+  self.enemyAllyDistinguishing = config.getParameter("enemyAllyDistinguishing", false)
+  self.allyActionOnStick = config.getParameter("allyActionOnStick")
+  self.enemyActionOnStick = config.getParameter("enemyActionOnStick")
   self.searchDistance = config.getParameter("searchDistance", 0.1)
   self.stickingTarget = nil
   self.stickingOffset = {0,0}
   self.stuckToTarget = false
   self.stuckToGround = false
-  if self.stickToPlayers then
-    self.includedTypes = {"player", "crew"}
-  else
-    self.includedTypes = {"npc", "monster"}
-  end
+  self.hasActioned = false
 end
 
 function update(dt)
@@ -24,7 +25,7 @@ function update(dt)
 	self.stuckToGround = world.lineTileCollision(mcontroller.position(), vec2.add(mcontroller.position(), projectileLengthVector))
 	targets = world.entityQuery(mcontroller.position(), self.searchDistance, {
 	  withoutEntityId = projectile.sourceEntity(),
-	  includedTypes = self.includedTypes,
+	  includedTypes = self.validEntityTypes,
 	  order = "nearest"
 	})
   end
@@ -44,6 +45,17 @@ function update(dt)
   
   --While our target lives, make the projectile follow the target
   if self.stickingTarget and world.entityExists(self.stickingTarget) then
+    if self.enemyAllyDistinguishing and not self.hasActioned then
+	    sb.logInfo("pppppppppppppppppphhhhhh")
+      if world.entityDamageTeam(self.stickingTarget).type == "enemy" and self.allyActionOnStick then
+	    sb.logInfo("aaaaaaaaaaahhh")
+		projectile.processAction(self.allyActionOnStick)
+	  elseif world.entityDamageTeam(self.stickingTarget).type == "friendly" and self.enemyActionOnStick then
+	    sb.logInfo("aaaaaaaaaaahhh")
+		projectile.processAction(self.enemyActionOnStick)
+	  end
+	  self.hasActioned = true
+	end
 	local targetStickingPosition = vec2.add(world.entityPosition(self.stickingTarget), self.stickingOffset)
 	mcontroller.setPosition(targetStickingPosition)
 	local stickingVelocity = vec2.mul(self.stickingOffset, -1)
