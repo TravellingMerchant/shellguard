@@ -1,0 +1,59 @@
+{
+  "objectName" : "sgweaponsdesigner",
+  "colonyTags" : ["outpost"],
+  "rarity" : "Common",
+  "category" : "other",
+  "description" : "Tech lab scientist.",
+  "shortdescription" : "Tech Lab Scientist",
+  "race" : "generic",
+
+  "scannable" : false,
+  "printable" : false,
+
+  "inventoryIcon" : "sgweaponsdesignericon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "sgweaponsdesigner.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgweaponsdesignerlit.png:<color>.<frame>" } ],
+      "imagePosition" : [-12, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "frames" : 75,
+      "animationCycle" : 7.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "sgweaponsdesigner.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgweaponsdesignerlit.png:<color>.<frame>" } ],
+      "imagePosition" : [-8, 0],
+
+      "direction" : "right",
+
+      "frames" : 75,
+      "animationCycle" : 7.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "offeredQuests" : [
+    "sgdadchase1", "sgdadchase2", "sgdadchase3"
+  ],
+  "turnInQuests" : [
+    "sgdadchase1", "sgdadchase2", "sgdadchase3"
+  ],
+
+  "scripts" : ["/scripts/chattyObject.lua"],
+  "scriptDelta" : 60,
+
+  "uniqueId" : "sgweaponsdesigner",
+
+  "chatOptions" : [
+    "If I increase the capacity here, I can- Oh! Sorry, I've got no more jobs for you right now.",
+    "Brilliant, this gun will be my best yet!",
+    "With 50% extra power on the firing systems.. Yes, that's perfect!"
+  ]
+}

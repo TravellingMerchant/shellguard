@@ -25,6 +25,17 @@
     "parameters": {},
     "children": [
       {
+        "title": "survivorboss-teleport",
+        "type": "module",
+        "name": "survivorboss-teleport",
+        "parameters": {
+          "positionType": {"value": "<teleportPosition>"},
+          "shufflePositions": {"value": true},
+          "reverseOrder": {"value": false},
+          "positionIndex": {"value": 1}
+        }
+      },
+      {
         "title": "distance",
         "type": "action",
         "name": "distance",
@@ -67,6 +78,14 @@
         }
       },
       {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": "<beaminTime>"}
+        }
+      },
+      {
         "title": "setAnimationState",
         "type": "action",
         "name": "setAnimationState",
@@ -80,7 +99,7 @@
         "type": "action",
         "name": "timer",
         "parameters": {
-          "time": {"value": 0.1}
+          "time": {"value": 0.4}
         }
       },
       {
@@ -100,7 +119,7 @@
         "type": "action",
         "name": "setParticleEmitterActive",
         "parameters": {
-          "active": {"value": false},
+          "active": {"value": true},
           "emitter": {"value": "dash"}
         }
       },

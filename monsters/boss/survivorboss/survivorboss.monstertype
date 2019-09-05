@@ -62,7 +62,7 @@
     "damageSources" : {
       "dash" : {
         "poly" : [ [-0.75, -2.0], [-0.35, -2.5], [0.35, -2.5], [0.75, -2.0], [0.75, 0.65], [0.35, 1.22], [-0.35, 1.22], [-0.75, 0.65] ],
-        "damage" : 20.0,
+        "damage" : 10.0,
 
         "teamType" : "enemy",
         "damageSourceKind" : "broadsword",
@@ -81,7 +81,7 @@
 
     "damageParts" : {
       "beam" : {
-        "damage" : 25,
+        "damage" : 10,
 
         "teamType" : "enemy",
         "damageSourceKind" : "plasma",
@@ -89,7 +89,7 @@
         "damageRepeatTimeout" : 0.5
       },
       "body" : {
-        "damage" : 20,
+        "damage" : 10,
 
         "teamType" : "enemy",
         "damageSourceKind" : "broadsword",
@@ -146,7 +146,7 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 1500
+          "baseValue" : 750
         },
         "protection" : {
           "baseValue" : 0.0

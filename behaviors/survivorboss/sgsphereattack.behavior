@@ -1,0 +1,285 @@
+{
+  "name": "survivorboss-sphereattack",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/time.lua",
+    "/scripts/actions/animator.lua",
+    "/scripts/actions/movement.lua",
+    "/scripts/actions/monster.lua",
+    "/scripts/actions/boss/survivorboss.lua"
+  ],
+  "parameters": {
+    "sphereDashSpeed": 120,
+    "beaminTime": 0.5,
+    "stopForce": 1000,
+    "sphereDashForce": 1000,
+    "sphereCentripetalForce": 1000,
+    "teleportPosition": "cultistsphereposition",
+    "bounceTime": 0.1,
+    "startTime": 0.4,
+    "repeats": 8,
+    "sphereDashTime": 2
+  },
+  "root": {
+    "title": "Reset",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "survivorboss-teleport",
+        "type": "module",
+        "name": "survivorboss-teleport",
+        "parameters": {
+          "positionType": {"value": "<teleportPosition>"},
+          "shufflePositions": {"value": true},
+          "reverseOrder": {"value": false},
+          "positionIndex": {"value": 1}
+        }
+      },
+      {
+        "title": "survivorboss-facecenter",
+        "type": "module",
+        "name": "survivorboss-facecenter",
+        "parameters": {}
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": "<beaminTime>"}
+        }
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "spherein"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.7}
+        }
+      },
+      {
+        "title": "setVelocity",
+        "type": "action",
+        "name": "setVelocity",
+        "parameters": {
+          "velocity": {"value": [0, 80]}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": "<startTime>"}
+        }
+      },
+      {
+        "title": "parallel",
+        "type": "composite",
+        "name": "parallel",
+        "parameters": {
+          "fail": {"value": -1},
+          "success": {"value": -1}
+        },
+        "children": [
+          {
+            "title": "controlParameters",
+            "type": "action",
+            "name": "controlParameters",
+            "parameters": {
+              "parameters": {"value": {"gravityEnabled": false, "airFriction": 0, "bounceFactor": 1, "stopOnFirstBounce": true}}
+            }
+          },
+          {
+            "title": "controlDown",
+            "type": "action",
+            "name": "controlDown",
+            "parameters": {}
+          },
+          {
+            "title": "setDamageSourceActive",
+            "type": "action",
+            "name": "setDamageSourceActive",
+            "parameters": {
+              "name": {"value": "sphere"}
+            }
+          },
+          {
+            "title": "sequence",
+            "type": "composite",
+            "name": "sequence",
+            "parameters": {},
+            "children": [
+              {
+                "title": "setParticleEmitterActive",
+                "type": "action",
+                "name": "setParticleEmitterActive",
+                "parameters": {
+                  "active": {"value": true},
+                  "emitter": {"value": "spheredash"}
+                }
+              },
+              {
+                "title": "repeater",
+                "type": "decorator",
+                "name": "repeater",
+                "parameters": {
+                  "maxLoops": {"key": "<repeats>"},
+                  "untilSuccess": {"value": false}
+                },
+                "child": {
+                  "title": "sequence",
+                  "type": "composite",
+                  "name": "sequence",
+                  "parameters": {},
+                  "children": [
+                    {
+                      "title": "parallel",
+                      "type": "composite",
+                      "name": "parallel",
+                      "parameters": {
+                        "fail": {"value": -1},
+                        "success": {"value": -1}
+                      },
+                      "children": [
+                        {
+                          "title": "controlApproachVelocity",
+                          "type": "action",
+                          "name": "controlApproachVelocity",
+                          "parameters": {
+                            "force": {"key": "<stopForce>"},
+                            "velocity": {"value": [0, 0]}
+                          }
+                        },
+                        {
+                          "title": "timer",
+                          "type": "action",
+                          "name": "timer",
+                          "parameters": {
+                            "time": {"value": 0.2}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "title": "playSound",
+                      "type": "action",
+                      "name": "playSound",
+                      "parameters": {
+                        "sound": {"value": "sphereDash"}
+                      }
+                    },
+                    {
+                      "title": "parallel",
+                      "type": "composite",
+                      "name": "parallel",
+                      "parameters": {
+                        "fail": {"value": 1},
+                        "success": {"value": 1}
+                      },
+                      "children": [
+                        {
+                          "title": "cultistSphereDash",
+                          "type": "action",
+                          "name": "cultistSphereDash",
+                          "parameters": {
+                            "centripetalForce": {"key": "<sphereCentripetalForce>"},
+                            "controlForce": {"key": "<sphereDashForce>"},
+                            "initialOffset": {"value": [0, 10]},
+                            "speed": {"key": "<sphereDashSpeed>"},
+                            "target": {"key": "target"}
+                          }
+                        },
+                        {
+                          "title": "timer",
+                          "type": "action",
+                          "name": "timer",
+                          "parameters": {
+                            "time": {"value": "<sphereDashTime>"}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "title": "timer",
+                      "type": "action",
+                      "name": "timer",
+                      "parameters": {
+                        "time": {"value": "<bounceTime>"}
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "setParticleEmitterActive",
+                "type": "action",
+                "name": "setParticleEmitterActive",
+                "parameters": {
+                  "active": {"value": false},
+                  "emitter": {"value": "spheredash"}
+                }
+              },
+              {
+                "title": "parallel",
+                "type": "composite",
+                "name": "parallel",
+                "parameters": {
+                  "fail": {"value": -1},
+                  "success": {"value": -1}
+                },
+                "children": [
+                  {
+                    "title": "controlApproachVelocity",
+                    "type": "action",
+                    "name": "controlApproachVelocity",
+                    "parameters": {
+                      "force": {"key": "<stopForce>"},
+                      "velocity": {"value": [0, 0]}
+                    }
+                  },
+                  {
+                    "title": "timer",
+                    "type": "action",
+                    "name": "timer",
+                    "parameters": {
+                      "time": {"value": 0.5}
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "setAnimationState",
+        "type": "action",
+        "name": "setAnimationState",
+        "parameters": {
+          "state": {"value": "sphereout"},
+          "type": {"value": "body"}
+        }
+      },
+      {
+        "title": "timer",
+        "type": "action",
+        "name": "timer",
+        "parameters": {
+          "time": {"value": 0.5}
+        }
+      }
+    ]
+  }
+}
