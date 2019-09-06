@@ -346,6 +346,24 @@
       "biome": "sgalpine"
     }
   },
+  
+  {
+    "op" : "add",
+    "path" : "/sguforematch",
+    "value" : {
+      "primaryDungeon" : "sguforematch",
+      "weatherPool" : [],
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [1000, 600],
+      "dungeonBaseHeight" : 700,
+      "dungeonSurfaceHeight" : 5,
+      "ambientLightLevel" : [32, 32, 32],
+      "musicTrack" : "/music/arctic-battle3-loop.ogg",
+      "biome": "sgalpine"
+    }
+  },
+  
   {
     "op" : "add",
     "path" : "/sggarden",

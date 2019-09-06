@@ -1,0 +1,44 @@
+{
+  "objectName" : "sguforematchtele",
+  "objectType" : "teleporter",
+  "colonyTags" : ["misc"],
+  "printable" : false,
+  "price" : 3000,
+  "rarity" : "Common",
+  "description" : "This teleporter should get you to a Shellguard outpost!",
+  "shortdescription" : "Shellguard Outpost Teleporter",
+  "race" : "ancient",
+
+  "apexDescription" : "This will take me back to a Shellguard outpost!",
+  "avianDescription" : "This will take me back to a Shellguard outpost!",
+  "floranDescription" : "This will take me back to a Shellguard outpost!",
+  "glitchDescription" : "This will take me back to a Shellguard outpost!",
+  "humanDescription" : "This will take me back to a Shellguard outpost!",
+  "hylotlDescription" : "This will take me back to a Shellguard outpost!",
+  "novakidDescription" : "This will take me back to a Shellguard outpost!",
+
+  "category" : "teleporter",
+  "lightColor" : [56, 102, 124],
+
+  "interactAction" : "OpenTeleportDialog",
+  "interactData" : "/interface/warping/returnsgbase.config",
+
+  "inventoryIcon" : "sguforematchteleicon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "sguforematchtele.png:<color>", "fullbright" : true }, { "image" : "sguforematchtelelit.png:<color>" } ],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "solid",
+      "collisionSpaces" : [ [-2, 0], [-1, 0], [-0, 0], [1, 0] ]
+    }
+  ],
+  
+  "teleporterFootPosition" : [0, 1]
+
+}

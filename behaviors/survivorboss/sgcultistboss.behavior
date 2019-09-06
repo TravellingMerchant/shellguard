@@ -299,6 +299,51 @@
                               "parameters": {}
                             },
                             {
+                              "title": "Reset",
+                              "type": "composite",
+                              "name": "sequence",
+                              "parameters": {},
+                              "children": [
+                                {
+                                  "title": "survivorboss-dashattack",
+                                  "type": "module",
+                                  "name": "survivorboss-dashattack",
+                                  "parameters": {
+                                    "dashSpeed": {"value": 75},
+                                    "dashTime": {"value": 0.43},
+                                    "teleportPosition": {"value": "cultistupperdashposition"}
+                                  }
+                                },
+                                {
+                                  "title": "survivorboss-dashattack",
+                                  "type": "module",
+                                  "name": "survivorboss-dashattack",
+                                  "parameters": {
+                                    "dashSpeed": {"value": 75},
+                                    "dashTime": {"value": 0.8},
+                                    "teleportPosition": {"value": "cultistlowerdashposition"}
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "title": "survivorboss-beamattack",
+                              "type": "module",
+                              "name": "survivorboss-beamattack",
+                              "parameters": {
+                                "teleportPosition": {"value": "cultistbeamposition"}
+                              }
+                            },
+                            {
+                              "title": "survivorboss-flyingslash",
+                              "type": "module",
+                              "name": "survivorboss-flyingslash",
+                              "parameters": {
+                                "projectileAngleStep": {"value": 0.14},
+                                "projectileCount": {"value": 6}
+                              }
+                            },
+                            {
                               "title": "survivorboss-beamattack",
                               "type": "module",
                               "name": "survivorboss-beamattack",
