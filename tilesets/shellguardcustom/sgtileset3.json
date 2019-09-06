@@ -8,7 +8,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":8,
+ "tilecount":9,
  "tiledversion":"1.2.4",
  "tileheight":400,
  "tileproperties":
@@ -91,6 +91,16 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"shellguardlogodisplay",
+         "tilesetDirection":"right"
+        },
+     "8":
+        {
+         "\/\/description":"sguforematchtele",
+         "\/\/name":"sguforematchtele",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sguforematchtele",
          "tilesetDirection":"right"
         }
     },
@@ -175,6 +185,16 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
+        },
+     "8":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         }
     },
  "tiles":
@@ -226,6 +246,12 @@
          "image":"..\/..\/objects\/decorations\/shellguardlogodisplay\/shellguardlogodisplayicon.png",
          "imageheight":272,
          "imagewidth":464
+        },
+     "8":
+        {
+         "image":"..\/..\/objects\/rematch teleporters\/sguforematchtele\/sguforematchteleicon.png",
+         "imageheight":67,
+         "imagewidth":40
         }
     },
  "tilewidth":464,

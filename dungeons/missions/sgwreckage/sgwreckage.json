@@ -2037,7 +2037,7 @@
                  "y":2488
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2210,
                  "name":"",
@@ -2049,7 +2049,7 @@
                  "y":2328
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2211,
                  "name":"",
@@ -2061,7 +2061,7 @@
                  "y":2328
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2212,
                  "name":"",
@@ -2073,7 +2073,7 @@
                  "y":2248
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2213,
                  "name":"",
@@ -2085,7 +2085,7 @@
                  "y":2248
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2214,
                  "name":"",
@@ -2097,7 +2097,7 @@
                  "y":2168
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2215,
                  "name":"",
@@ -2109,7 +2109,7 @@
                  "y":2168
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2216,
                  "name":"",
@@ -2121,7 +2121,7 @@
                  "y":2088
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2217,
                  "name":"",
@@ -2133,7 +2133,7 @@
                  "y":2088
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2218,
                  "name":"",
@@ -2145,7 +2145,7 @@
                  "y":2008
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2219,
                  "name":"",
@@ -2157,7 +2157,7 @@
                  "y":2008
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2220,
                  "name":"",
@@ -2169,7 +2169,7 @@
                  "y":1928
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2221,
                  "name":"",
@@ -2181,7 +2181,7 @@
                  "y":1928
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2222,
                  "name":"",
@@ -2193,7 +2193,7 @@
                  "y":1848
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2223,
                  "name":"",
@@ -2205,7 +2205,7 @@
                  "y":1848
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2224,
                  "name":"",
@@ -2217,7 +2217,7 @@
                  "y":1768
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2225,
                  "name":"",
@@ -2229,7 +2229,7 @@
                  "y":1768
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2226,
                  "name":"",
@@ -2241,7 +2241,7 @@
                  "y":2408
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2227,
                  "name":"",
@@ -2253,7 +2253,7 @@
                  "y":2408
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2228,
                  "name":"",
@@ -2265,7 +2265,7 @@
                  "y":2488
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9631,
                  "height":16,
                  "id":2229,
                  "name":"",
@@ -2675,6 +2675,78 @@
                  "width":0,
                  "x":9792,
                  "y":2456
+                }, 
+                {
+                 "gid":9581,
+                 "height":16,
+                 "id":2256,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"treasurePools\":[\"basicTreasure\"]}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":2472,
+                 "y":2440
+                }, 
+                {
+                 "gid":8796,
+                 "height":16,
+                 "id":2257,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"treasurePools\":[\"basicTreasure\"]}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":2488,
+                 "y":2456
+                }, 
+                {
+                 "gid":2147493229,
+                 "height":16,
+                 "id":2258,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"treasurePools\":[\"basicTreasure\"]}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":2464,
+                 "y":2456
+                }, 
+                {
+                 "gid":9619,
+                 "height":26,
+                 "id":2259,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":17,
+                 "x":2496,
+                 "y":2440
                 }],
          "opacity":0.97,
          "type":"objectgroup",
@@ -3503,7 +3575,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":2256,
+ "nextobjectid":2260,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
@@ -3702,7 +3774,7 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }, 
         {
-         "firstgid":9624,
+         "firstgid":9627,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/human.json"
         }],
  "tilewidth":8,

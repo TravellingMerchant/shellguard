@@ -21,7 +21,7 @@
   "lightColor" : [56, 102, 124],
 
   "interactAction" : "OpenTeleportDialog",
-  "interactData" : "/interface/warping/returnsgbase.config",
+  "interactData" : "/interface/warping/sguforematch.config",
 
   "inventoryIcon" : "sguforematchteleicon.png",
   "orientations" : [

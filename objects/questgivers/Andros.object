@@ -50,10 +50,10 @@
   ],
 
   "offeredQuests" : [
-    "sgmercmission1", "sgmercmission2", "shellufoquest", "sgmercmission3", "sgsurvivormission", "sgcolonyattack1", "sgspiderfactorymission", "sgweaponfacilitymission"
+    "sgmercmission1", "sgmercmission2", "shellufoquest", "sgmercmission3", "sgsurvivormission", "sgcolonyattack1", "sgspiderfactorymission", "sgweaponfacilitymission", "sgfortressassault"
   ],
   "turnInQuests" : [
-    "sgmercmission1", "sgmercmission2", "shellufoquest", "sgmercmission3", "sgsurvivormission", "sgcolonyattack1", "sgspiderfactorymission", "sgweaponfacilitymission"
+    "sgmercmission1", "sgmercmission2", "shellufoquest", "sgmercmission3", "sgsurvivormission", "sgcolonyattack1", "sgspiderfactorymission", "sgweaponfacilitymission", "sgfortressassault"
   ],
   
   "uniqueId" : "Andros",
