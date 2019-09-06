@@ -1,0 +1,126 @@
+{
+  "itemName" : "sgtoobiggun",
+  "price" : 3500,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A huge gun from a Shellguard ship. Takes great strength to lift.",
+  "shortdescription" : "",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","upgradeableWeapon"],
+  "level" : 6,
+
+  "inventoryIcon" : "sgtoobiggunicon.png",
+
+  "animation" : "sgtoobiggun.animation",
+  "animationParts" : {
+    "gun" : "sgtoobiggun.png",
+    "gunfullbright" : "sgtoobiggunfullbright.png"
+  },
+  "animationCustom" : {},
+  "muzzleOffset" : [4.5, 2.25],
+  "aimOffset" : 0,
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "ice",
+
+  "primaryAbilityType" : "neb-enhancedchargefire",
+  "primaryAbility" : {
+    "name" : "Charged Shot",
+    "scripts" : ["/items/active/weapons/ranged/abilities/neb-enhancedchargefire/neb-enhancedchargefire.lua"],
+    "class" : "NebsEnhancedChargeFire",
+	
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 60,
+        "cooldown" : 2,
+        "projectileType" : "sgplasmabouncer",
+        "projectileParameters" : {},
+        "projectileCount" : 1,
+        "inaccuracy" : 0.02,
+        "baseDamage" : 11,
+        "fireType" : "single",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
+        //"burstTime" : 0.15,		//delay between shots in the burst
+        //"burstCount" : 10,		//amount of bullets to fire in the burst, must be a integer
+        "fireSound" : "fire",
+	  
+	    //Recoil Stuffs
+	    "recoilKnockbackVelocity" : 40,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    "crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
+	    "crouchRecoilKnockbackVelocity" : 0	//When crouching it uses this instead of recoilKnockbackVelocity
+      },
+      {
+        "time" : 1,
+        "energyCost" : 60,
+        "cooldown" : 2,
+        "projectileType" : "sgplasmabouncer",
+        "projectileParameters" : {},
+        "projectileCount" : 5,
+        "inaccuracy" : 0.03,
+        "baseDamage" : 15,
+        "spreadAngle" : 5,
+        "fireType" : "single",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
+        //"burstTime" : 0.2,		//delay between shots in the burst
+        //"burstCount" : 0,		//amount of bullets to fire in the burst, must be a integer
+        "fireSound" : "fire2",
+	  
+	    //Recoil Stuffs
+	    "recoilKnockbackVelocity" : 40,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    "crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
+	    "crouchRecoilKnockbackVelocity" : 3	//When crouching it uses this instead of recoilKnockbackVelocity
+      }
+    ],
+	//Movement Whilst Charging
+	"walkWhileCharging" : false,		//if false, the player can run normally else if true it just makes the player walk while charging
+	"allowJumping" : true,			//if true allows for jumping while charging if false the player is unable to jump
+	
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : -6,
+        "weaponRotation" : 5,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : 0,
+        "weaponRotation" : 5,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgtoobigguneliteicon.png",
+    "animationParts" : {
+    "gun" : "sgtoobiggunelite.png"
+    },
+    "shortdescription" : "Elite Heavy Cannon ^yellow;^reset;"
+  }
+}

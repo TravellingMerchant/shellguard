@@ -48,10 +48,10 @@
             ],
             "sheathedprimary" : [
               "shellguardpistol",
-              "shellguardsmg"
+              "sgofficersword"
             ],
             "alt" : [
-              { "name" : "shellguardsmg" }
+              { "name" : "sgofficersword" }
             ]
           }
         ] ],
@@ -74,7 +74,7 @@
             ],
             "sheathedprimary" : [
               "shellguardpistol",
-              "shellguardsmg"
+              "sgofficersword"
             ],
             "alt" : [
               { "name" : "shellshield" }

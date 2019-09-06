@@ -1,0 +1,29 @@
+{
+  "name" : "aerialMineLaunch",
+  "label" : "EXHAUST VENTS",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/aerialMineLaunch.lua" ],
+
+    "aerialMineLaunch" : {
+      "fireDuration" : 1.25,
+      "windupDuration" : 1,
+
+      "leftProjectileOffset" : [-5.25, 23.75],
+      "rightProjectileOffset" : [5.25, 23.75],
+      "fireInterval" : 2,
+      "projectile" : {
+        "type" : "sgplasmitegrenade",
+        "power" : 20,
+        "config" : {}
+      }
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "ventAlert" : [ "/sfx/monsters/boss/fortresscore/windupalert.ogg" ]
+    }
+  }
+}

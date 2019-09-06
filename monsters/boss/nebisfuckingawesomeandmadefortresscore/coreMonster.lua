@@ -13,6 +13,10 @@ function init()
   self.openCollisionPoly = config.getParameter("collisionPolys.openCollisionPoly", {})
   self.closedCollisionPoly = config.getParameter("collisionPolys.closedCollisionPoly", {})
   self.shieldCollisionPoly = config.getParameter("collisionPolys.shieldCollisionPoly", {})
+  self.maxHealth = status.resource("health")
+  
+  self.leftSiloPlatformId = world.spawnVehicle("neb-sgfortresscoresilos", vec2.add(entity.position(), {-30, -22.5}))
+  self.rightSiloPlatformId = world.spawnVehicle("neb-sgfortresscoresilos", vec2.add(entity.position(), {30, -22.5}))
 	  
   if rangedAttack then
     rangedAttack.loadConfig()
@@ -67,25 +71,70 @@ end
 function update(dt)
   self.tookDamage = false
   
+  --Force an invisible vehicle platform to follow the silos
+  if animator.animationState("bottomLeftSilo") == "rise" and not self.leftActed then
+    world.sendEntityMessage(self.leftSiloPlatformId, "moveUp", 3, 0.8)
+	self.leftActed = true
+  end
+  if animator.animationState("bottomLeftSilo") == "risen" and self.leftActed then
+	self.leftActed = false
+  end
+  if animator.animationState("bottomRightSilo") == "rise" and not self.rightActed then
+    world.sendEntityMessage(self.rightSiloPlatformId, "moveUp", 3, 0.8)
+	self.rightActed = true
+  end  
+  if animator.animationState("bottomRightSilo") == "risen" and self.rightActed then
+	self.rightActed = false
+  end
+  if animator.animationState("bottomLeftSilo") == "sink" and not self.leftActed then
+    world.sendEntityMessage(self.leftSiloPlatformId, "moveDown", 3, 0.8)
+	self.leftActed = true
+  end
+  if animator.animationState("bottomLeftSilo") == "idle" and self.leftActed then
+	self.leftActed = false
+  end
+  if animator.animationState("bottomRightSilo") == "sink" and not self.rightActed then
+    world.sendEntityMessage(self.rightSiloPlatformId, "moveDown", 3, 0.8)
+	self.rightActed = true
+  end
+  if animator.animationState("bottomRightSilo") == "idle" and self.rightActed then
+	self.rightActed = false
+  end
+  
+  --sb.logInfo("The current phase is: %s", self.phase)
+  
+  if self.phase == 2 then
+    status.addPersistentEffect("nebuloxWasHereAYO", "fortresscore-energyShield")
+  elseif self.phase == 4 then
+    status.addPersistentEffect("nebuloxWasHereAYO", "fortresscore-energyShield")
+  else
+    status.clearPersistentEffects("nebuloxWasHereAYO")
+  end
+  
   if animator.animationState("blastShield") == "closed" then
 	mcontroller.controlParameters({collisionPoly = self.closedCollisionPoly})
-  elseif animator.animationState("energyShield") == "idle" then
-	mcontroller.controlParameters({collisionPoly = self.shieldCollisionPoly})
   else
 	mcontroller.controlParameters({collisionPoly = self.openCollisionPoly})
   end
-
-  if not status.resourcePositive("health") then
+  
+  if not status.resourcePositive("health") and self.phase == 5 then
+    
+    --Check if death phase is ready
+    local nextPhase = self.phases[self.phase + 1]
+    if nextPhase then
+      self.phase = self.phase + 1
+    end
+  
     local inState = self.state.stateDesc()
     if inState ~= "dieState" and not self.state.pickState({ die = true }) then
       self.state.endState()
-      self.dead = true
+	  
+	  world.setDungeonGravity(0, self.worldGravity)
+
+	  self.state.update(dt)
+
+	  setBattleMusicEnabled(false)
     end
-    world.setDungeonGravity(0, self.worldGravity)
-
-    self.state.update(dt)
-
-    setBattleMusicEnabled(false)
   else
     trackTargets(self.keepTargetInSight, self.queryTargetDistance, self.trackTargetDistance, self.switchTargetDistance)
 
@@ -134,6 +183,7 @@ function update(dt)
 			  self.startPhase = true
 		    end	
 		  end
+		--WIP rematch dialogue if the player dies and reenters arena
 		--else
 		--  monster.sayPortrait(config.getParameter("dialog.rematch1"), config.getParameter("chatPortrait"), { player = playerName })
 		--  monster.setDamageBar("Special")
@@ -262,10 +312,9 @@ function updatePhase(dt)
   --Check if next phase is ready
   local nextPhase = self.phases[self.phase + 1]
   if nextPhase then
-    if nextPhase.trigger and nextPhase.trigger == "healthPercentage" then
-      if status.resourcePercentage("health") < nextPhase.healthPercentage then
-        self.phase = self.phase + 1
-      end
+    if not status.resourcePositive("health") then
+	  status.modifyResource("health", self.maxHealth)
+      self.phase = self.phase + 1
     end
   end
 

@@ -32,6 +32,27 @@
       "biome": "sgalpine"
     }
   },
+
+  {
+    "op" : "add",
+    "path" : "/sgfortresscorebase",
+    "value" : {
+      "primaryDungeon" : "sgfortresscorebase",
+      "weatherPool" : [
+        [1.0, "snow"]
+      ],
+      "threatLevel" : 2,
+      "gravity" : 80,
+      "worldSize" : [1000, 500],
+      "dungeonBaseHeight" : 400,
+      "dungeonSurfaceHeight" : 5,
+      "ambientLightLevel" : [200, 200, 200],
+      "ambientNoises" : "/sfx/environmental/garden_day.ogg",
+      "musicTrack" : "/music/arctic-constellation2.ogg",
+      "biome": "sgalpine"
+    }
+  },  
+
   {
     "op" : "add",
     "path" : "/lockjawcourse",
@@ -78,7 +99,7 @@
       ],
       "threatLevel" : 6,
       "gravity" : 80,
-      "worldSize" : [2000, 2000],
+      "worldSize" : [1400, 700],
       "dungeonBaseHeight" : 500,
       "dungeonSurfaceHeight" : 115,
       "ambientLightLevel" : [200, 200, 200],
@@ -268,10 +289,10 @@
       "gravity" : 80,
       "worldSize" : [2500, 1000],
       "dungeonBaseHeight" : 1000,
-      "dungeonSurfaceHeight" : 0,
+      "dungeonSurfaceHeight" : 450,
       "ambientLightLevel" : [200, 50, 200],
       "musicTrack" : "/music/the-apex.ogg",
-      "biome": "ocean"
+      "biome": "sgcentensskycity"
     }
   },  
   

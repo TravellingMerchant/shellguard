@@ -1,0 +1,21 @@
+{
+  "name" : "energyShieldActivate",
+  "label" : "QUANTUM SHIELDING",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/energyShieldActivate.lua" ],
+
+    "energyShieldActivate" : {
+      "skillTime" : 1.15,
+      "rotateInterval" : 0.2,
+      "rotateMaxAngle" : 0.05
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "energyShieldActivate" : [ "/sfx/monsters/boss/fortresscore/energyShieldActivate.ogg" ]
+    }
+  }
+}

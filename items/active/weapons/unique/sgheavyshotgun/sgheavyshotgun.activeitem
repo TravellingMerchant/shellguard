@@ -42,7 +42,7 @@
         "projectileParameters" : {},
         "projectileCount" : 5,
         "inaccuracy" : 0.02,
-        "baseDamage" : 4,
+        "baseDamage" : 7,
         "spreadAngle" : 2,
         "fireType" : "single",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
         //"burstTime" : 0.15,		//delay between shots in the burst
@@ -62,7 +62,7 @@
         "projectileParameters" : {},
         "projectileCount" : 5,
         "inaccuracy" : 0.02,
-        "baseDamage" : 3,
+        "baseDamage" : 6,
         "spreadAngle" : 2,
         "fireType" : "burst",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
         "burstTime" : 0.15,		//delay between shots in the burst
@@ -126,6 +126,6 @@
     "animationParts" : {
     "gun" : "sgheavyshotgunelite.png"
     },
-    "shortdescription" : "Elite Incinerator ^yellow;^reset;"
+    "shortdescription" : "Elite HBL-F Shotgun ^yellow;^reset;"
   }
 }

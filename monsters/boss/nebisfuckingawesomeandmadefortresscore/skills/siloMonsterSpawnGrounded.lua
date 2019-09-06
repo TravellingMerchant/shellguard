@@ -7,9 +7,10 @@ function siloMonsterSpawnGrounded.enter()
   self.active = false
   self.finished = false
   self.canFire = false
+  self.first = false
   self.leftSiloOffset = config.getParameter("siloMonsterSpawnGrounded.leftSiloOffset")
   self.rightSiloOffset = config.getParameter("siloMonsterSpawnGrounded.rightSiloOffset")
-  self.monsterLevel = monster.level()
+  self.monsterLevel = monster.level() - 1
   
   return {
     fireDuration = config.getParameter("siloMonsterSpawnGrounded.fireDuration", 1),
@@ -81,7 +82,9 @@ function siloMonsterSpawnGrounded.update(dt, stateData)
 		  end
 	    end
 	  end
-	  self.finished = true
+	  if self.first then
+	    self.finished = true
+	  end
 	end
 	if animator.animationState("bottomRightSilo") == "openidle" and self.canFire and not self.finished then
 
@@ -144,6 +147,7 @@ function siloMonsterSpawnGrounded.update(dt, stateData)
     if self.firstChoice == 1 then	
 	  if animator.animationState("bottomLeftSilo") == "idle" then
 	    animator.setAnimationState("bottomLeftSilo", "rise")
+	    self.first = true
 	  end
 	elseif self.firstChoice == 2 then
 	  if animator.animationState("bottomRightSilo") == "idle" then
@@ -159,4 +163,5 @@ function siloMonsterSpawnGrounded.leavingState(stateData)
   sb.logInfo(animator.animationState("bottomRightSilo"))
   self.active = false
   self.canFire = false
+  self.first = false
 end

@@ -1,0 +1,74 @@
+{
+  "projectileName" : "sgcryoventbase",
+  "image" : "sgcryoventbase.png",
+  "timeToLive" : 6,
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  "piercing" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "physics" : "sgruincleaverphysics",
+  "bounces" : 0,
+  "lightColor" : [225, 100, 0],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.1,
+      "type" : "sgshrapnelblastsmall"
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.1,
+      "repeat" : true,
+
+      "action" : "loop",
+      "count" : 1,
+      "body" : [
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "sgcryoventgas",
+      "angleAdjust" : 90,
+      "fuzzAngle" : 10
+    }
+      ]
+    },
+	
+    {
+      "time" : 0.5,
+      "repeat" : true,
+
+      "action" : "loop",
+      "count" : 1,
+      "body" : [
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 1,
+      "type" : "sgicecrabcanosnowball",
+      "angleAdjust" : 90,
+      "fuzzAngle" : 10
+    }
+      ]
+    }
+  ],
+  "power" : 20.0,
+  "speed" : 0,
+  "damageKind" : "default"
+}

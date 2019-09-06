@@ -1,5 +1,5 @@
 {
-  "objectName" : "sgsiloclosed",
+  "objectName" : "sgfortressbase",
   "colonyTags" : ["valuable","pretty"],
   "rarity" : "legendary",
   "category" : "decorative",
@@ -17,7 +17,7 @@
   "shortdescription" : "Silo Open",
   "race" : "human",
 
-  "inventoryIcon" : "sgfortressbase.png",
+  "inventoryIcon" : "sgfortressbaseicon.png",
   "orientations" : [
     {
       "dualImage" : "sgfortressbase.png:<color>",

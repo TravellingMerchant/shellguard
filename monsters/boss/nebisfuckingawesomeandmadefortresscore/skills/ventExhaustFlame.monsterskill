@@ -12,7 +12,7 @@
 
       "leftProjectileOffset" : [-5.25, -23.75],
       "rightProjectileOffset" : [5.25, -23.75],
-      "fireInterval" : 0.3,
+      "fireInterval" : 0.4,
       "projectile" : {
         "type" : "sglongflame",
         "config" : {

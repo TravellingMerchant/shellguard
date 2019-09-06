@@ -1,14 +1,14 @@
 {
   "itemName" : "sgsurvivorsrifle",
-  "price" : 1500,
+  "price" : 3500,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A heavilly customised rifle that has been lovingly cared for.",
-  "shortdescription" : "Survivors Rifle",
+  "description" : "A heavilly customised rifle with a multitude of firing modes.",
+  "shortdescription" : "Customised Rifle",
   "tooltipKind" : "base",
   "category" : "uniqueWeapon",
   "twoHanded" : true,
-  "itemTags" : ["weapon","ranged"],
+  "itemTags" : ["weapon","ranged","upgradeableWeapon"],
   "level" : 6,
 
   "inventoryIcon" : "sgsurvivorsrifleicon.png",
@@ -146,11 +146,11 @@
         "time" : 1.0,
         "energyCost" : 60,
         "cooldown" : 0.5,
-        "projectileType" : "sgamshotincen",
+        "projectileType" : "sgmotoroundheavyspawner",
         "projectileParameters" : {},
         "projectileCount" : 1,
         "inaccuracy" : 0,
-        "baseDamage" : 5,
+        "baseDamage" : 9,
         "spreadAngle" : 0,
 		"chargeMuzzleOffset" : [0, 0],
         "fireType" : "burst",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
@@ -206,5 +206,12 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgsurvivorsrifleeliteicon.png",
+    "animationParts" : {
+    "gun" : "sgsurvivorsrifleelite.png"
+    },
+    "shortdescription" : "Elite Customised Rifle ^yellow;^reset;"
+  }
 }
