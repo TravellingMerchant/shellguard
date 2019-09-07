@@ -9,7 +9,7 @@
       [ "fire.3", "cooldown.1", "cooldown.2", "cooldown.3"]
     ]
   },
-  "aliases" : {
-    "fullcharge.3" : "fire.1"
+    "aliases" : {
+    "default.default" : "empty.1"
   }
 }

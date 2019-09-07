@@ -218,7 +218,7 @@
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
     "text" : "Quick, the ship's coming apart! You have to get to an escape pod!"
-  }
+  },
 
   "sgfortressescape2" : {
     "type" : "mission",
@@ -232,7 +232,7 @@
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
     "text" : "Escape pods just a little further ahead."
-  }
+  },
 
   "sgelevatormusic" : {
     "type" : "mission",
