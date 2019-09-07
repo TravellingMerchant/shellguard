@@ -1,9 +1,0 @@
-{
-  "name" : "coreAi",
-  "category" : "sgnebisamadladandmadefortress",
-  "type" : "coreAi",
-
-  "frames" : {
-    "coreAi" : "core.png"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "name" : "fortressbase",
-  "category" : "sgnebisamadladandmadefortress",
-  "type" : "base",
-
-  "frames" : {
-    "base" : "fortressbase.png"
-  }
-}
