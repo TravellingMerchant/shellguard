@@ -8,7 +8,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":9,
+ "tilecount":10,
  "tiledversion":"1.2.4",
  "tileheight":400,
  "tileproperties":
@@ -101,6 +101,16 @@
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"sguforematchtele",
+         "tilesetDirection":"right"
+        },
+     "9":
+        {
+         "\/\/description":"sgfortressteleporter2",
+         "\/\/name":"sgfortressteleporter2",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sgfortressteleporter2",
          "tilesetDirection":"right"
         }
     },
@@ -195,6 +205,16 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
+        },
+     "9":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         }
     },
  "tiles":
@@ -250,6 +270,12 @@
      "8":
         {
          "image":"..\/..\/objects\/rematch teleporters\/sguforematchtele\/sguforematchteleicon.png",
+         "imageheight":67,
+         "imagewidth":40
+        },
+     "9":
+        {
+         "image":"..\/..\/objects\/sgfortressteleporter2\/sgfortressteleporter2icon.png",
          "imageheight":67,
          "imagewidth":40
         }
