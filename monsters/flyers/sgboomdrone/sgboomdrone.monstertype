@@ -121,7 +121,7 @@
       "flySpeed" : 60
     },
 
-    "bodyMaterialKind" : "organic",
+    "bodyMaterialKind" : "robotic",
 
     "knockoutTime" : 0.8,
     "knockoutAnimationStates" : {

@@ -1,30 +1,29 @@
 {
-  "name" : "shellufoMoveFireAttack",
+  "name" : "sgufoairstrike",
   "label" : "CIRCLE",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
-    "scripts" : [ "/monsters/boss/shellufo/skills/ufoMoveFireAttack.lua" ],
+    "scripts" : [ "/monsters/boss/shellufo/skills/sgufoairstrike.lua" ],
 
-    "ufoMoveFireAttack" : {
-      "skillTime": 4,
+    "sgufoairstrike" : {
+      "skillTime": 0.2,
       "bobTime" : 2,
       "bobHeight" : 1,
 
-      "projectileOffset" : [0, -7],
-      "fireInterval" : 0.4,
+      "projectileOffset" : [0, -8],
+      "fireInterval" : 0.5,
       "projectile" : {
-        "type" : "sgmicroshot",
+        "type" : "sgairstrikeflarespawner",
         "config" : {
-          "speed" : 40,
-		  "inaccuracy" : 0.05,
-          "power" : 10,
+          "speed" : 20,
+          "power" : 15,
           "periodicActions" : [
             {
               "time" : 0,
               "repeat" : false,
               "action" : "sound",
-              "options" : [ "/sfx/gun/tankshot.ogg" ]
+              "options" : [ "/sfx/gun/Dronespawn.ogg" ]
             }
           ]
         }

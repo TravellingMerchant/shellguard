@@ -1,6 +1,6 @@
 {
-  "type" : "shellufo",
-  "shortdescription" : "FORTRESS",
+  "type" : "shelluforematch",
+  "shortdescription" : "FORTRESS MK2",
 
   "categories" : [ "shellufo" ],
   "parts" : [ "ufo", "pilot" ],
@@ -22,26 +22,26 @@
       "/monsters/boss/shellufo/dieState.lua"
     ],
 
-    "skills" : ["shellufoMoveFireAttack", "ufoSwoopAttack", "ufoSlamAttack", "ufoTeleportAttack", "shellufoPulseCannonAttack", "ufoMoveFireAttackbullet", "ufohomingrocket", "ufofloordestroyer"],
-    "skillCount" : 8,
-	"level" : 6,
+    "skills" : ["shellufoMoveFireAttack", "sgufoairstrike", "sgufoMoveFireAttackrocket", "ufoSwoopAttack", "ufoSlamAttack", "ufoTeleportAttack", "shellufoPulseCannonAttack", "ufoMoveFireAttackbullet", "ufohomingrocket", "ufofloordestroyer"],
+    "skillCount" : 10,
+	"level" : 10,
   	"damageTeamType" : "enemy",
 
     "phases" : [
       {
-        "skills" : ["ufoMoveFireAttack", "ufohomingrocket"]
+        "skills" : ["sgufoMoveFireAttackrocket", "ufoMoveFireAttack", "ufohomingrocket", "ufohomingrocket", "ufoTeleportAttack" ]
       },
       {
-        "enterPhase" : "ufofloordestroyer",
+        "enterPhase" : "sgufoairstrike",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.8,
-        "skills" : ["ufoMoveFireAttack", "ufoMoveFireAttack", "ufoSlamAttack", "ufoMoveFireAttackbullet"]
+        "skills" : ["sgufoMoveFireAttackrocket", "ufoMoveFireAttack", "ufoMoveFireAttack", "ufoSlamAttack", "ufofloordestroyer", "ufoTeleportAttack", "sgufoMoveFireAttackrocket", "ufoMoveFireAttackbullet"]
       },
       {
-        "enterPhase" : "ufofloordestroyer",
+        "enterPhase" : "sgufoairstrike",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.4,
-        "skills" : ["ufoMoveFireAttack", "ufoTeleportAttack", "ufoSlamAttack", "ufofloordestroyer", "ufoMoveFireAttackbullet"]
+        "skills" : ["sgufoMoveFireAttackrocket", "ufoMoveFireAttack", "ufoTeleportAttack", "sgufoairstrike", "ufoTeleportAttack", "ufoSlamAttack", "ufofloordestroyer", "ufoMoveFireAttackbullet"]
       }
     ],
 

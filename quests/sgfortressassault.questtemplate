@@ -1,0 +1,45 @@
+{
+  "id" : "sgfortressassault",
+  "prerequisites" : ["sgweaponfacilitymission"],
+  "title" : "^green;Assault the Fortress!",
+  "text" : "Now that you have the Ruin Cleaver, it's time to take that ship down. We've got an ambush set up in it's flight path. Are you ready?",
+  "completionText" : "That was quite the explosion! Half the wreckage has crashed down on a nearby planet, I need you to go look for survivors. We also managed to recover the Fortress AI. You can visit it using the teleporter to the right.",
+  "moneyRange" : [1200, 1200],
+  "rewards" : [
+    [ [ "sgsupernovalauncher", 1 ], ["money", 4000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Assault the ^orange; massive spaceship.^reset;",
+      "findGoal" : "Finish the Fortress!",
+      "turnIn" : "Return to ^orange;Commander Andros Galvanek^reset;"
+    },
+
+    "warpEntityUid" : "Andros",
+    "warpAction" : "instanceworld:sgfactoryspaceapproach",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgfortressassult",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgfortressassaultstele",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Andros"
+  }
+}

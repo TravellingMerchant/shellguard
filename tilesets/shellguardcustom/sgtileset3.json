@@ -8,9 +8,9 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":6,
+ "tilecount":10,
  "tiledversion":"1.2.4",
- "tileheight":94,
+ "tileheight":400,
  "tileproperties":
     {
      "0":
@@ -71,6 +71,46 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"sgfortressbase",
+         "tilesetDirection":"right"
+        },
+     "6":
+        {
+         "\/\/description":"sgfortressbase",
+         "\/\/name":"sgfortressbase",
+         "\/\/shortdescription":"boss stand",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgfortressbasechatty",
+         "tilesetDirection":"right"
+        },
+     "7":
+        {
+         "\/\/description":"shellguardlogodisplay",
+         "\/\/name":"shellguardlogodisplay",
+         "\/\/shortdescription":"boss stand",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"shellguardlogodisplay",
+         "tilesetDirection":"right"
+        },
+     "8":
+        {
+         "\/\/description":"sguforematchtele",
+         "\/\/name":"sguforematchtele",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sguforematchtele",
+         "tilesetDirection":"right"
+        },
+     "9":
+        {
+         "\/\/description":"sgfortressteleporter2",
+         "\/\/name":"sgfortressteleporter2",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sgfortressteleporter2",
          "tilesetDirection":"right"
         }
     },
@@ -135,6 +175,46 @@
          "imagePositionY":"string",
          "object":"string",
          "tilesetDirection":"string"
+        },
+     "6":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "7":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "8":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "9":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
         }
     },
  "tiles":
@@ -174,9 +254,33 @@
          "image":"..\/..\/objects\/bossplatforms\/sgfortressbase\/sgfortressbaseicon.png",
          "imageheight":94,
          "imagewidth":172
+        },
+     "6":
+        {
+         "image":"..\/..\/objects\/questgivers\/sgfortressbase\/sgfortressbaseicon.png",
+         "imageheight":400,
+         "imagewidth":290
+        },
+     "7":
+        {
+         "image":"..\/..\/objects\/decorations\/shellguardlogodisplay\/shellguardlogodisplayicon.png",
+         "imageheight":272,
+         "imagewidth":464
+        },
+     "8":
+        {
+         "image":"..\/..\/objects\/rematch teleporters\/sguforematchtele\/sguforematchteleicon.png",
+         "imageheight":67,
+         "imagewidth":40
+        },
+     "9":
+        {
+         "image":"..\/..\/objects\/sgfortressteleporter2\/sgfortressteleporter2icon.png",
+         "imageheight":67,
+         "imagewidth":40
         }
     },
- "tilewidth":172,
+ "tilewidth":464,
  "type":"tileset",
  "version":1.1
 }

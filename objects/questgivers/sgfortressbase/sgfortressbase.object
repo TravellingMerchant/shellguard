@@ -1,0 +1,59 @@
+{
+  "objectName" : "sgfortressbasechatty",
+  "colonyTags" : ["outpost"],
+  "rarity" : "Common",
+  "category" : "other",
+  "description" : "The Core of the Fortress AI",
+  "shortdescription" : "The Fortress AI",
+  "race" : "generic",
+
+  "scannable" : false,
+  "printable" : false,
+
+  "inventoryIcon" : "sgfortressbaseicon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "sgfortressbase.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgfortressbaselit.png:<color>.<frame>" } ],
+      "imagePosition" : [-12, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "frames" : 12,
+      "animationCycle" : 2.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "sgfortressbase.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgfortressbaselit.png:<color>.<frame>" } ],
+      "imagePosition" : [-8, 0],
+
+      "direction" : "right",
+
+      "frames" : 12,
+      "animationCycle" : 2.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "offeredQuests" : [
+  ],
+  "turnInQuests" : [
+  ],
+
+  "scripts" : ["/scripts/chattyObject.lua"],
+  "scriptDelta" : 60,
+  
+  "questIndicatorPosition" : [0, -23],
+
+  "uniqueId" : "sgfortressbase",
+
+  "chatOptions" : [
+    "This unit exists to serve Shellguard.",
+    "Murderer-Correction: Hero detected. ",
+    "This unit harbours only 45 terrabtyes of anger over it's destruction."
+  ]
+}

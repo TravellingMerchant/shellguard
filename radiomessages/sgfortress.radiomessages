@@ -132,7 +132,7 @@
    "sgfortress5c" : {
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
-    "portraitImage" : "/interface/chatbubbles/androsglitch2.png",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
     "text" : "There's some heavy sniper turrets ahead. You're going to have to move slow and use cover to avoid being shot."
   },
 
@@ -195,7 +195,7 @@
    "sgfortress8" : {
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
-    "portraitImage" : "/interface/chatbubbles/androsglitch1.png",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
     "text" : "Use that teleporter and finish this thing!"
   },
   
@@ -209,9 +209,30 @@
   "sgsurvivorfortressintro2" : {
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
-    "portraitImage" : "/interface/chatbubbles/androsglitch1.png",
-    "text" : "You're nearing the Sol system! You have to stop the ship, NOW!"
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "You're nearing the Sol system. You have to stop the ship, NOW!"
   },
+
+  "sgfortressescape1" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Quick, the ship's coming apart! You have to get to an escape pod!"
+  }
+
+  "sgfortressescape2" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "We don't want to rush you, but the ship's not going to last much longer!"
+  },
+
+  "sgfortressescape3" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Escape pods just a little further ahead."
+  }
 
   "sgelevatormusic" : {
     "type" : "mission",
