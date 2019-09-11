@@ -1,0 +1,47 @@
+{
+  "itemName" : "sgtitansword",
+  "price" : 3000,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A wide, flat and heavy blade that possess great cutting power.",
+  "shortdescription" : "Titan Sword",
+  //"tooltipKind" : "sword",
+  "category" : "uniqueweapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","broadsword","upgradeableWeapon"],
+
+  "inventoryIcon" : "sgtitansword.png",
+
+  "animation" : "/items/active/weapons/melee/broadsword/sgheavyswordcomboanimation.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "sgtitansword.png"
+  },
+  "animationCustom" : { },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "sgheavyswordcombo",
+  "primaryAbility" : {
+    "fireTime" : 1.25,
+    "baseDps" : 11.5,
+    "damageConfig" : {
+      "damageSourceKind" : "hammer"
+    }
+  },
+
+  "altAbilityType" : "superspinslash",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgtitanswordelite.png",
+    "animationParts" : {
+      "blade" : "sgtitanswordelite.png"
+    },
+    "shortdescription" : "Elite Titan Sword ^yellow;^reset;",
+    "description" : "A wide, flat and heavy blade that possess great cutting power."
+  }
+}

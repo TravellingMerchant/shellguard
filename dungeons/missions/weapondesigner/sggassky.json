@@ -2467,6 +2467,38 @@
                  "width":32,
                  "x":12696,
                  "y":2928
+                }, 
+                {
+                 "gid":2147491088,
+                 "height":20,
+                 "id":2576,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"sgtitansword\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":5064,
+                 "y":2576
+                }, 
+                {
+                 "gid":6266,
+                 "height":10,
+                 "id":2578,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":5088,
+                 "y":2576
                 }],
          "opacity":0.97,
          "type":"objectgroup",
@@ -4084,7 +4116,7 @@
          "y":0
         }],
  "nextlayerid":19,
- "nextobjectid":2576,
+ "nextobjectid":2579,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",

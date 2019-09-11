@@ -46,6 +46,8 @@
 
   "scripts" : ["/scripts/chattyObject.lua"],
   "scriptDelta" : 60,
+  
+  "questIndicatorPosition" : [0, -23],
 
   "uniqueId" : "sgfortressbase",
 

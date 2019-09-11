@@ -36,13 +36,13 @@ function uninit()
 end
 
 function moveUp(distance, time)
-  local distance = distance * 4.5 + 0.125
+  local distance = distance * 4.5
   self.resolvedVelocity = distance * time
   self.timer = time
 end
 
 function moveDown(distance, time)
-  local distance = -distance * 4.5 + 0.125
+  local distance = -distance * 4.5
   self.resolvedVelocity = distance * time
   self.timer = time
 end

@@ -213,6 +213,30 @@
     }]
   ],
   
+  "sgrobotcleaver" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgrobotcleaver", 1]}
+      ]
+    }]
+  ],
+  
+  "sgtitansword" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgtitansword", 1]}
+      ]
+    }]
+  ],
+  
+  "sgplasmitestaff" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgplasmitestaff", 1]}
+      ]
+    }]
+  ],
+  
   "sgflameclaw" : [
     [1, {
       "fill" : [

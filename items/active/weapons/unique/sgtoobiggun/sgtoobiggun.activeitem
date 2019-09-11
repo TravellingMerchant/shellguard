@@ -16,7 +16,8 @@
   "animation" : "sgtoobiggun.animation",
   "animationParts" : {
     "gun" : "sgtoobiggun.png",
-    "gunfullbright" : "sgtoobiggunfullbright.png"
+    "gunfullbright" : "sgtoobiggunfullbright.png",
+    "muzzleFlash" : ""
   },
   "animationCustom" : {},
   "muzzleOffset" : [4.5, 2.25],

@@ -1,0 +1,33 @@
+{
+  "name" : "sgufoairstrike",
+  "label" : "CIRCLE",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/shellufo/skills/sgufoairstrike.lua" ],
+
+    "sgufoairstrike" : {
+      "skillTime": 0.2,
+      "bobTime" : 2,
+      "bobHeight" : 1,
+
+      "projectileOffset" : [0, -8],
+      "fireInterval" : 0.5,
+      "projectile" : {
+        "type" : "sgairstrikeflarespawner",
+        "config" : {
+          "speed" : 20,
+          "power" : 15,
+          "periodicActions" : [
+            {
+              "time" : 0,
+              "repeat" : false,
+              "action" : "sound",
+              "options" : [ "/sfx/gun/Dronespawn.ogg" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
