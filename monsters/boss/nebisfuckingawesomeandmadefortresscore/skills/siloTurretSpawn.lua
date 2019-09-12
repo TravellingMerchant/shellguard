@@ -16,17 +16,10 @@ function siloTurretSpawn.enter()
   return {
     fireDuration = config.getParameter("siloTurretSpawn.fireDuration", 1),
     windupDuration = config.getParameter("siloTurretSpawn.windupDuration", 1),
-	monsterCount = config.getParameter("siloTurretSpawn.monsterCount", 5),
-	monsters = config.getParameter("siloTurretSpawn.monsters"),
-    monsterTypes = config.getParameter("siloTurretSpawn.monsterTypes"),
-    monsterCount = config.getParameter("siloTurretSpawn.monsterCount"),
+    monsterType = config.getParameter("siloTurretSpawn.monsterType"),
     monsterTestPoly = config.getParameter("siloTurretSpawn.monsterTestPoly"),
     spawnOnGround = config.getParameter("siloTurretSpawn.spawnOnGround"),
-    spawnAnimation = config.getParameter("siloTurretSpawn.spawnAnimation"),
-    spawnRangeX = config.getParameter("siloTurretSpawn.spawnRangeX"),
-    spawnRangeY = config.getParameter("siloTurretSpawn.spawnRangeY"),
     spawnTolerance = config.getParameter("siloTurretSpawn.spawnTolerance"),
-    spawnAnimationStatus = config.getParameter("siloTurretSpawn.spawnAnimationStatus"),
 	entityId = nil
   }
 end
@@ -60,57 +53,44 @@ function siloTurretSpawn.update(dt, stateData)
   
   if self.active then
 	if animator.animationState("topLeftSilo") == "risen" and self.canFire and not self.finished then
-	  for i = 1, math.random(stateData.monsterCount) do
-	    --Calculate initial x and y offset for the spawn position
-	    local xOffset = math.random((self.leftSiloOffset[1] - stateData.spawnRangeX), self.leftSiloOffset[1])
-	    --xOffset = xOffset * util.randomChoice({-1, 1})
-	    local yOffset = math.random(self.leftSiloOffset[2], (stateData.spawnRangeY + self.leftSiloOffset[2]))
-	    local position = vec2.add(entity.position(), {xOffset, yOffset})
+	  --Calculate initial x and y offset for the spawn position
+	  local xOffset = self.leftSiloOffset[1]
+	  local yOffset = self.leftSiloOffset[2]
+	  local position = vec2.add(entity.position(), {xOffset, yOffset})
 	  
-	    --Optionally correct the position by finding the ground below the projected position
-	    local correctedPositionAndNormal = {position, nil}
-	    if stateData.spawnOnGround then
-	  	  correctedPositionAndNormal = world.lineTileCollisionPoint(position, vec2.add(position, {0, -50})) or {position, 0}
-	    end
+	  --Optionally correct the position by finding the ground below the projected position
+	  local correctedPositionAndNormal = {position, nil}
+	  if stateData.spawnOnGround then
+	   correctedPositionAndNormal = world.lineTileCollisionPoint(position, vec2.add(position, {0, -50})) or {position, 0}
+	  end
 	  
-	    --Resolve the monster poly collision to ensure that we can place an monster at the designated position
-	    local resolvedPosition = world.resolvePolyCollision(stateData.monsterTestPoly, correctedPositionAndNormal[1], stateData.spawnTolerance)
+	  --Resolve the monster poly collision to ensure that we can place an monster at the designated position
+	  local resolvedPosition = world.resolvePolyCollision(stateData.monsterTestPoly, correctedPositionAndNormal[1], stateData.spawnTolerance)
 	  
-	    if resolvedPosition then
-		  --Spawn the monster and optionally force the monster spawn effect on them
-		  stateData.entityId = world.spawnMonster(util.randomChoice(stateData.monsterTypes), resolvedPosition, {level = self.monsterLevel, aggressive = true})
-		  if stateData.spawnAnimation then
-		    world.callScriptedEntity(entityId, "status.addEphemeralEffect", stateData.spawnAnimationStatus)
-		  end
-	    end
+	  if resolvedPosition then
+		--Attempt to spawn the monster
+		world.sendEntityMessage(self.leftSiloPlatformId, "attemptToSpawnTurret", world.spawnMonster(stateData.monsterType, resolvedPosition, {level = self.monsterLevel, aggressive = true}))
 	  end
 	  self.finished = true
 	end
 	if animator.animationState("topLeftSilo") == "risen" and self.canFire and not self.finished then
-
-	  for i = 1, math.random(stateData.monsterCount) do
-	    --Calculate initial x and y offset for the spawn position
-	    local xOffset = math.random(self.rightSiloOffset[1], (self.rightSiloOffset[1] + stateData.spawnRangeX))
-	    --xOffset = xOffset * util.randomChoice({-1, 1})
-	    local yOffset = math.random(self.rightSiloOffset[2], (stateData.spawnRangeY + self.rightSiloOffset[2]))
-	    local position = vec2.add(entity.position(), {xOffset, yOffset})
+	  --Calculate initial x and y offset for the spawn position
+	  local xOffset = self.rightSiloOffset[1]
+	  local yOffset = self.rightSiloOffset[2]
+	  local position = vec2.add(entity.position(), {xOffset, yOffset})
 	  
-	    --Optionally correct the position by finding the ground below the projected position
-	    local correctedPositionAndNormal = {position, nil}
-	    if stateData.spawnOnGround then
-	  	  correctedPositionAndNormal = world.lineTileCollisionPoint(position, vec2.add(position, {0, -50})) or {position, 0}
-	    end
+	  --Optionally correct the position by finding the ground below the projected position
+	  local correctedPositionAndNormal = {position, nil}
+	  if stateData.spawnOnGround then
+	   correctedPositionAndNormal = world.lineTileCollisionPoint(position, vec2.add(position, {0, -50})) or {position, 0}
+	  end
 	  
-	    --Resolve the monster poly collision to ensure that we can place an monster at the designated position
-	    local resolvedPosition = world.resolvePolyCollision(stateData.monsterTestPoly, correctedPositionAndNormal[1], stateData.spawnTolerance)
+	  --Resolve the monster poly collision to ensure that we can place an monster at the designated position
+	  local resolvedPosition = world.resolvePolyCollision(stateData.monsterTestPoly, correctedPositionAndNormal[1], stateData.spawnTolerance)
 	  
-	    if resolvedPosition then
-		  --Spawn the monster and optionally force the monster spawn effect on them
-		  local entityId = world.spawnMonster(util.randomChoice(stateData.monsterTypes), resolvedPosition, {level = self.monsterLevel, aggressive = true})
-		  if stateData.spawnAnimation then
-		    world.callScriptedEntity(entityId, "status.addEphemeralEffect", stateData.spawnAnimationStatus)
-		  end
-	    end
+	  if resolvedPosition then
+		--Attempt to spawn the monster
+		world.sendEntityMessage(self.leftSiloPlatformId, "attemptToSpawnTurret", world.spawnMonster(stateData.monsterType, resolvedPosition, {level = self.monsterLevel, aggressive = true}))
 	  end
 	  self.finished = true
 	end

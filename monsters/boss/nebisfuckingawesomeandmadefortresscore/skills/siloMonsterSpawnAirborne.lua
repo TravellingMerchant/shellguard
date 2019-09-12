@@ -44,8 +44,8 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 	animator.setAnimationState("topLeftSilo", "dooropen")
 	self.active = true
   end
-  if animator.animationState("topLeftSilo") == "risen" and not self.active then
-	animator.setAnimationState("topLeftSilo", "dooropen")
+  if animator.animationState("topRightSilo") == "risen" and not self.active then
+	animator.setAnimationState("topRightSilo", "dooropen")
 	self.active = true
   end
   
@@ -85,7 +85,7 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 	  end
 	  self.finished = true
 	end
-	if animator.animationState("topLeftSilo") == "openidle" and self.canFire and not self.finished then
+	if animator.animationState("topRightSilo") == "openidle" and self.canFire and not self.finished then
 
 	  for i = 1, math.random(stateData.monsterCount[1], stateData.monsterCount[2]) do
 	    --Calculate initial x and y offset for the spawn position
@@ -120,8 +120,8 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 	  if animator.animationState("topLeftSilo") == "openidle" then
 	    animator.setAnimationState("topLeftSilo", "doorclose")
 	  end
-	  if animator.animationState("topLeftSilo") == "openidle" then
-	    animator.setAnimationState("topLeftSilo", "doorclose")
+	  if animator.animationState("topRightSilo") == "openidle" then
+	    animator.setAnimationState("topRightSilo", "doorclose")
 	  end
 	  
 	  if stateData.fireDuration <= 0 then
@@ -132,9 +132,9 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 
 
   if self.secondChoice ~= self.firstChoice and not self.active then
-	if animator.animationState("topLeftSilo") == "idle" and animator.animationState("topLeftSilo") == "idle" then
+	if animator.animationState("topLeftSilo") == "idle" and animator.animationState("topRightSilo") == "idle" then
 	  animator.setAnimationState("topLeftSilo", "rise")
-	  animator.setAnimationState("topLeftSilo", "rise")
+	  animator.setAnimationState("topRightSilo", "rise")
 	end
   elseif not self.active then
     if self.firstChoice == 1 then	
@@ -142,8 +142,8 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 	    animator.setAnimationState("topLeftSilo", "rise")
 	  end
 	elseif self.firstChoice == 2 then
-	  if animator.animationState("topLeftSilo") == "idle" then
-	    animator.setAnimationState("topLeftSilo", "rise")
+	  if animator.animationState("topRightSilo") == "idle" then
+	    animator.setAnimationState("topRightSilo", "rise")
 	  end
 	end
   end
@@ -152,7 +152,6 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 end
 
 function siloMonsterSpawnAirborne.leavingState(stateData)
-  sb.logInfo(animator.animationState("topLeftSilo"))
   self.active = false
   self.canFire = false
 end

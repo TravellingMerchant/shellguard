@@ -1,7 +1,12 @@
+require "/scripts/messageutil.lua"
 require "/scripts/util.lua"
 require "/scripts/rect.lua"
 
 function init()
+  --Message Handling--
+  message.setHandler("attemptToCloseSilo", localHandler(attemptToCloseSilo))
+  message.setHandler("attemptToSpawnTurret", localHandler(attemptToSpawnTurret))
+  
   self.weHaventSaidThisYes = false
   self.tookDamage = false
   self.startPhase = false
@@ -14,6 +19,7 @@ function init()
   self.closedCollisionPoly = config.getParameter("collisionPolys.closedCollisionPoly", {})
   self.shieldCollisionPoly = config.getParameter("collisionPolys.shieldCollisionPoly", {})
   self.maxHealth = status.resource("health")
+  self.turretEntityId = nil
   
   self.leftSiloPlatformId = world.spawnVehicle("neb-sgfortresscoresilos", vec2.add(entity.position(), {-30, -22.5}))
   self.rightSiloPlatformId = world.spawnVehicle("neb-sgfortresscoresilos", vec2.add(entity.position(), {30, -22.5}))
@@ -66,6 +72,22 @@ function init()
   monster.setDamageBar("None")
 
   self.musicEnabled = false
+end
+
+function attemptToCloseSilo(relativeSide)
+  if not self.spawnedTurret then
+	if animator.animationState("top"..relativeSide.."Silo") == "risen" then
+	  animator.setAnimationState("top"..relativeSide.."Silo", "rise")
+	end
+  end
+end
+
+function attemptToSpawnTurret(turretSpawn)
+  if not self.turretEntityId then
+    self.turretEntityId = turretSpawn
+    world.callScriptedEntity(self.turretEntityId, "status.addEphemeralEffect", stateData.spawnAnimationStatus)
+    self.spawnedTurret = true
+  end
 end
 
 function update(dt)

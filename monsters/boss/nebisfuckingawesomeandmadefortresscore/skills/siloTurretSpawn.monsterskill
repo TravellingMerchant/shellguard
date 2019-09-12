@@ -13,15 +13,9 @@
       "leftSiloOffset" : [-30, 10],
       "rightSiloOffset" : [30, 10],
 	  
-      "monsterCount" : 1,
-	  "monsterTypes" : [
-		"sgfortressturretgun"
-	  ],
+	  "monsterType" : "sgfortressturretgun",
 	  "monsterTestPoly" : [ [0.8125, 1.25], [1.3125, 0.75],  [1.3125, -1.05], [0.8125, -1.55],  [-0.8125, -1.55], [-1.3125, -1.05],  [-1.3125, 0.75], [-0.8125, 1.25] ],
 	  "spawnOnGround" : false,
-	  "spawnAnimation" : false,
-	  "spawnRangeX" : 0,
-	  "spawnRangeY" : 0,
 	  "spawnTolerance" : 20
     }
   },

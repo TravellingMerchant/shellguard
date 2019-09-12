@@ -54,7 +54,11 @@
             "frames" : 2,
             "cycle" : 0.2,
             "mode" : "transition",
-            "transition" : "open"
+            "transition" : "open",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/ventopen.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
           },
           "open" : {
             "frames" : 1
@@ -78,7 +82,11 @@
             "frames" : 2,
             "cycle" : 0.2,
             "mode" : "transition",
-            "transition" : "open"
+            "transition" : "open",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/ventopen.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
           },
           "open" : {
             "frames" : 1
@@ -102,7 +110,11 @@
             "frames" : 2,
             "cycle" : 0.2,
             "mode" : "transition",
-            "transition" : "open"
+            "transition" : "open",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/ventopen.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
           },
           "open" : {
             "frames" : 1
@@ -126,7 +138,11 @@
             "frames" : 2,
             "cycle" : 0.2,
             "mode" : "transition",
-            "transition" : "open"
+            "transition" : "open",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/ventopen.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
           },
           "open" : {
             "frames" : 1
@@ -152,7 +168,11 @@
             "frames" : 8,
             "cycle" : 0.8,
             "mode" : "transition",
-            "transition" : "risen"
+            "transition" : "risen",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/siloopen.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
           },
           "risen" : {
             "frames" : 1
@@ -176,7 +196,11 @@
             "frames" : 8,
             "cycle" : 0.8,
             "mode" : "transition",
-            "transition" : "idle"
+            "transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/siloclose.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
           }
         }
       },
@@ -191,7 +215,11 @@
             "frames" : 8,
             "cycle" : 0.8,
             "mode" : "transition",
-            "transition" : "risen"
+            "transition" : "risen",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/siloopen.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
           },
           "risen" : {
             "frames" : 1
@@ -215,7 +243,11 @@
             "frames" : 8,
             "cycle" : 0.8,
             "mode" : "transition",
-            "transition" : "idle"
+            "transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/siloclose.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
           }
         }
       },
@@ -230,7 +262,11 @@
             "frames" : 8,
             "cycle" : 0.8,
             "mode" : "transition",
-            "transition" : "risen"
+            "transition" : "risen",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/siloopen.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
           },
           "risen" : {
             "frames" : 1
@@ -254,7 +290,11 @@
             "frames" : 8,
             "cycle" : 0.8,
             "mode" : "transition",
-            "transition" : "idle"
+            "transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/siloclose.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
           }
         }
       },
@@ -269,7 +309,11 @@
             "frames" : 8,
             "cycle" : 0.8,
             "mode" : "transition",
-            "transition" : "risen"
+            "transition" : "risen",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/siloopen.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
           },
           "risen" : {
             "frames" : 1
@@ -293,7 +337,11 @@
             "frames" : 8,
             "cycle" : 0.8,
             "mode" : "transition",
-            "transition" : "idle"
+            "transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/siloclose.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
           }
         }
       },
