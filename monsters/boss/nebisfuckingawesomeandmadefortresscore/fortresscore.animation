@@ -1,0 +1,853 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "coreIdle" : {
+        "priority" : 1,
+        "default" : "on",
+        "states" : {
+          "off" : {
+          },
+          "on" : {
+            "properties" : {
+              "persistentSound" : "/sfx/npc/boss/crystalboss_hum.ogg",
+              "persistentSoundRangeMultiplier" : 1.5
+            }
+          }
+        }
+      },
+	  
+	  //CORE
+      "stages" : {
+        "priority" : 1,
+        "default" : "stage1",
+        "states" : {
+          "stage1" : {
+            "frames" : 1
+          },
+          "stage2" : {
+            "frames" : 1
+          },
+          "stage3" : {
+            "frames" : 1
+          },
+          "stage4" : {
+            "frames" : 1
+          },
+          "stage5" : {
+            "frames" : 1
+          },
+          "destroyed" : {
+            "frames" : 1
+          }
+        }
+      },
+
+	  //VENTS
+      "topLeftVents" : {
+        "priority" : 1,
+        "default" : "closed",
+        "states" : {
+          "closed" : {
+            "frames" : 1
+          },
+          "activate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "open"
+          },
+          "open" : {
+            "frames" : 1
+          },
+          "deactivate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "closed"
+          }
+        }
+      },
+      "topRightVents" : {
+        "priority" : 1,
+        "default" : "closed",
+        "states" : {
+          "closed" : {
+            "frames" : 1
+          },
+          "activate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "open"
+          },
+          "open" : {
+            "frames" : 1
+          },
+          "deactivate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "closed"
+          }
+        }
+      },
+      "bottomLeftVents" : {
+        "priority" : 1,
+        "default" : "closed",
+        "states" : {
+          "closed" : {
+            "frames" : 1
+          },
+          "activate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "open"
+          },
+          "open" : {
+            "frames" : 1
+          },
+          "deactivate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "closed"
+          }
+        }
+      },
+      "bottomRightVents" : {
+        "priority" : 1,
+        "default" : "closed",
+        "states" : {
+          "closed" : {
+            "frames" : 1
+          },
+          "activate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "open"
+          },
+          "open" : {
+            "frames" : 1
+          },
+          "deactivate" : {
+            "frames" : 2,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "closed"
+          }
+        }
+      },
+	  
+	  //SILOS
+      "topLeftSilo" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "rise" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "risen" : {
+            "frames" : 1
+          },
+          "dooropen" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "openidle"
+          },
+          "openidle" : {
+            "frames" : 1
+          },
+          "doorclose" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "sink" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      },
+      "topRightSilo" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "rise" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "risen" : {
+            "frames" : 1
+          },
+          "dooropen" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "openidle"
+          },
+          "openidle" : {
+            "frames" : 1
+          },
+          "doorclose" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "sink" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      },
+      "bottomRightSilo" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "rise" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "risen" : {
+            "frames" : 1
+          },
+          "dooropen" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "openidle"
+          },
+          "openidle" : {
+            "frames" : 1
+          },
+          "doorclose" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "sink" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      },
+      "bottomLeftSilo" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "rise" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "risen" : {
+            "frames" : 1
+          },
+          "dooropen" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "openidle"
+          },
+          "openidle" : {
+            "frames" : 1
+          },
+          "doorclose" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "risen"
+          },
+          "sink" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      },
+
+
+	  //SHIELDING
+      "blastShield" : {
+        "priority" : 1,
+        "default" : "open",
+        "states" : {
+          "closed" : {
+            "frames" : 1
+          },
+          "open" : {
+            "frames" : 1
+          },
+          "slam" : {
+            "frames" : 9,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "closed"
+          },
+          "winddown" : {
+            "frames" : 9,
+            "cycle" : 0.95,
+            "mode" : "transition",
+            "transition" : "open"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "coreAi" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 1,
+          "transformationGroups" : ["core"],
+          "rotationGroup" : "core"
+        },
+
+        "partStates" : {
+          "stages" : {
+            "stage1" : {
+              "properties" : {
+                "image" : "<partImage>:stage1"
+              }
+            },
+            "stage2" : {
+              "properties" : {
+                "image" : "<partImage>:stage2"
+              }
+            },
+            "stage3" : {
+              "properties" : {
+                "image" : "<partImage>:stage3"
+              }
+            },
+            "stage4" : {
+              "properties" : {
+                "image" : "<partImage>:stage4"
+              }
+            },
+            "stage5" : {
+              "properties" : {
+                "image" : "<partImage>:stage5"
+              }
+            },
+            "destroyed" : {
+              "properties" : {
+                "image" : "<partImage>:destroyed"
+              }
+            }
+          }
+        }
+      },
+	  
+      "base" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 0,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "stages" : {
+            "stage1" : {
+              "properties" : {
+                "image" : "<partImage>:stage1"
+              }
+            },
+            "stage2" : {
+              "properties" : {
+                "image" : "<partImage>:stage2"
+              }
+            },
+            "stage3" : {
+              "properties" : {
+                "image" : "<partImage>:stage3"
+              }
+            },
+            "stage4" : {
+              "properties" : {
+                "image" : "<partImage>:stage4"
+              }
+            },
+            "stage5" : {
+              "properties" : {
+                "image" : "<partImage>:stage5"
+              }
+            },
+            "destroyed" : {
+              "properties" : {
+                "image" : "<partImage>:destroyed"
+              }
+            }
+          }
+        }
+      },
+	  
+	  //VENTS
+      "topLeftVents" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 2,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "topLeftVents" : {
+            "closed" : {
+              "properties" : {
+                "image" : "<partImage>:ltopclosed"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "image" : "<partImage>:ltopactivate.<frame>"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:ltopopen"
+              }
+            },
+            "deactivate" : {
+              "properties" : {
+                "image" : "<partImage>:ltop.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "topRightVents" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 2,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "topRightVents" : {
+            "closed" : {
+              "properties" : {
+                "image" : "<partImage>:rtopclosed"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "image" : "<partImage>:rtopactivate.<frame>"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:rtopopen"
+              }
+            },
+            "deactivate" : {
+              "properties" : {
+                "image" : "<partImage>:rtop.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "bottomLeftVents" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 2,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "bottomLeftVents" : {
+            "closed" : {
+              "properties" : {
+                "image" : "<partImage>:lbotclosed"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "image" : "<partImage>:lbotactivate.<frame>"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:lbotopen"
+              }
+            },
+            "deactivate" : {
+              "properties" : {
+                "image" : "<partImage>:lbot.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "bottomRightVents" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 2,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "bottomRightVents" : {
+            "closed" : {
+              "properties" : {
+                "image" : "<partImage>:rbotclosed"
+              }
+            },
+            "activate" : {
+              "properties" : {
+                "image" : "<partImage>:rbotactivate.<frame>"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:rbotopen"
+              }
+            },
+            "deactivate" : {
+              "properties" : {
+                "image" : "<partImage>:rbot.<frame>"
+              }
+            }
+          }
+        }
+      },
+	  
+	  //SILOS
+      "topLeftSilo" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 3,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "topLeftSilo" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:topleftidle"
+              }
+            },
+            "rise" : {
+              "properties" : {
+                "image" : "<partImage>:topleftrise.<frame>"
+              }
+            },
+            "risen" : {
+              "properties" : {
+                "image" : "<partImage>:topleftrisenidle"
+              }
+            },
+            "dooropen" : {
+              "properties" : {
+                "image" : "<partImage>:topleftopen.<frame>"
+              }
+            },
+            "openidle" : {
+              "properties" : {
+                "image" : "<partImage>:topleftopenidle"
+              }
+            },
+            "doorclose" : {
+              "properties" : {
+                "image" : "<partImage>:topleftclose.<frame>"
+              }
+            },
+            "sink" : {
+              "properties" : {
+                "image" : "<partImage>:topleftsink.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "topRightSilo" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 3,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "topRightSilo" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:toprightidle"
+              }
+            },
+            "rise" : {
+              "properties" : {
+                "image" : "<partImage>:toprightrise.<frame>"
+              }
+            },
+            "risen" : {
+              "properties" : {
+                "image" : "<partImage>:toprightrisenidle"
+              }
+            },
+            "dooropen" : {
+              "properties" : {
+                "image" : "<partImage>:toprightopen.<frame>"
+              }
+            },
+            "openidle" : {
+              "properties" : {
+                "image" : "<partImage>:toprightopenidle"
+              }
+            },
+            "doorclose" : {
+              "properties" : {
+                "image" : "<partImage>:toprightclose.<frame>"
+              }
+            },
+            "sink" : {
+              "properties" : {
+                "image" : "<partImage>:toprightsink.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "bottomLeftSilo" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 3,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "bottomLeftSilo" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:bottomleftidle"
+              }
+            },
+            "rise" : {
+              "properties" : {
+                "image" : "<partImage>:bottomleftrise.<frame>"
+              }
+            },
+            "risen" : {
+              "properties" : {
+                "image" : "<partImage>:bottomleftrisenidle"
+              }
+            },
+            "dooropen" : {
+              "properties" : {
+                "image" : "<partImage>:bottomleftopen.<frame>"
+              }
+            },
+            "openidle" : {
+              "properties" : {
+                "image" : "<partImage>:bottomleftopenidle"
+              }
+            },
+            "doorclose" : {
+              "properties" : {
+                "image" : "<partImage>:bottomleftclose.<frame>"
+              }
+            },
+            "sink" : {
+              "properties" : {
+                "image" : "<partImage>:bottomleftsink.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "bottomRightSilo" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 3,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "bottomRightSilo" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:bottomrightidle"
+              }
+            },
+            "rise" : {
+              "properties" : {
+                "image" : "<partImage>:bottomrightrise.<frame>"
+              }
+            },
+            "risen" : {
+              "properties" : {
+                "image" : "<partImage>:bottomrightrisenidle"
+              }
+            },
+            "dooropen" : {
+              "properties" : {
+                "image" : "<partImage>:bottomrightopen.<frame>"
+              }
+            },
+            "openidle" : {
+              "properties" : {
+                "image" : "<partImage>:bottomrightopenidle"
+              }
+            },
+            "doorclose" : {
+              "properties" : {
+                "image" : "<partImage>:bottomrightclose.<frame>"
+              }
+            },
+            "sink" : {
+              "properties" : {
+                "image" : "<partImage>:bottomrightsink.<frame>"
+              }
+            }
+          }
+        }
+      },
+
+	  //SHIELDING
+      "blastShield" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 3,
+          "offset" : [-0.0, 0.0],
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "blastShield" : {
+            "closed" : {
+              "properties" : {
+                "image" : "<partImage>:closed"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:open"
+              }
+            },
+            "slam" : {
+              "properties" : {
+                "image" : "<partImage>:slam.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "rotationGroups" : {
+    "all" : {
+      "angularVelocity" : 10
+    },
+    "core" : {
+      "angularVelocity" : 5
+    }
+  },
+  
+  "transformationGroups" : {
+    "core" : {}
+  },
+
+
+  "particleEmitters" : {
+    "damage" : {
+      "emissionRate" : 0.7,
+      "particles" : [
+      ]
+    },
+
+    "deathPoof" : {
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/puff2c/puff2c.animation",
+            "size" : 1,
+            "angularVelocity" : 35,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0, 0],
+            "approach" : [1, 1],
+            "timeToLive" : 0.4,
+            "layer" : "middle"
+          }
+        }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "turnHostile" : [ "/sfx/npc/robotboss_turnhostile.ogg" ],
+    "deathPuff" : {
+      "pool" : [ "/sfx/npc/robotboss_death.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "destruction" : {
+      "pool" : [ "/sfx/npc/robotboss_death.ogg" ],
+      "rangeMultiplier" : 1.5
+	},
+    "hurt" : {
+      "pool" : [ "/sfx/npc/boss/robotboss_pain1.ogg", "/sfx/npc/boss/robotboss_pain2.ogg", "/sfx/npc/boss/robotboss_pain3.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "death" : {
+      "pool" : [ "/sfx/npc/boss/robotboss_death.ogg" ],
+      "rangeMultiplier" : 1.5
+    }
+  },
+
+  "lights" : {
+    "glow" : {
+      "active" : true,
+      "position" : [0, 0],
+      "color" : [150, 50, 50],
+      "pointLight" : false
+    }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.15"
+    }
+  }
+}

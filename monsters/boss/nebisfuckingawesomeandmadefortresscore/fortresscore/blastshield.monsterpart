@@ -1,0 +1,9 @@
+{
+  "name" : "blastShield",
+  "category" : "sgnebisamadladandmadefortress",
+  "type" : "blastShield",
+
+  "frames" : {
+    "blastShield" : "blastshield.png"
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "type" : "sgnebisamadladandmadefortress",
+  "shortdescription" : "Fortress Core",
+
+  "categories" : [ "sgnebisamadladandmadefortress" ],
+  "parts" : [ "base", "coreAi", "blastShield", "vents", "fortresssilos" ],
+
+  "animation" : "fortresscore.animation",
+  "reversed" : true,
+
+  "dropPools" : [ ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/boss/nebisfuckingawesomeandmadefortresscore/coreMonster.lua",
+      "/monsters/simpleRangedAttack.lua",
+      "/scripts/stateMachine.lua",
+      "/scripts/util.lua",
+      "/scripts/vec2.lua",
+
+	  //Custom Stuff
+      "/monsters/boss/nebisfuckingawesomeandmadefortresscore/dieState.lua",
+      "/monsters/boss/nebisfuckingawesomeandmadefortresscore/idleState.lua",
+      "/monsters/boss/nebisfuckingawesomeandmadefortresscore/fortressreset.lua"
+    ],
+
+	"renderLayer" : "Projectile-1",
+	
+    "skillCount" : 11,
+    "skills" : [ "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "siloTurretSpawn", "cryoTurretSpawn", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch", "radiationLeak", "skyMissiles" ],
+
+    "phases" : [
+	  //Skills/Abilities the core will possess in each phase, it is randomly picked by whats in the tables
+	  //Introduction, with the default skills
+      {
+        "enterPhase" : "blastShieldSlam",
+        "skills" : ["siloMonsterSpawnGrounded", "aerialMineLaunch", "ventExhaustFlame", "siloMonsterSpawnAirborne", "ventExhaustFlame", "aerialMineLaunch"]
+      },
+	  //After breaking open blastshield, core will talk and then activate energyshield
+	  {
+	    "enterPhase" : "energyShieldActivate",
+        "skills" : [ "gravitySlam" ]
+	  },
+	  //Reactivates blast shield
+      {
+        "enterPhase" : "blastShieldSlam",
+        "skills" : [ "ventExhaustFlame" ]
+      },
+	  //Reactivates energy shield
+	  {
+	    "enterPhase" : "energyShieldActivate",
+        "skills" : [ "ventExhaustFlame" ]
+	  }//,
+	  //Ruin cleaver finisher
+	  //{
+	  //  "enterPhase" : "RUINED",
+      //  "skills" : []
+	  //}
+    ],
+
+	"musicStagehands" : [ "bossmusic" ],
+
+    "chatPortrait" : "/interface/chatbubbles/SGUFO.png",
+    "dialog" : {
+	  "lineDuration" : 3, //Duration a text bubble stays for, before being overwritten by the next
+	  //Intro dialogue
+	  "introLines" : 5,
+	  //Survivor's line is set in the sgfortress.radiomessages
+	  //Andros's line is set in the sgfortress.radiomessages
+	  //Fortress
+      "intro3" : "Entity detected in central core room.",
+      "intro4" : "Entity identified as <player>. Age: Unknown. Occupation: Shellguard Mercenary.",
+      "intro5" : "Commencing termination protocols.",
+	  
+	  //Rematch Lines - if the player dies, and re-enters the arena
+      "rematch1" : "Analyses prove that small talk is an inefficient way to kill someone.",
+	  
+	  //Death dialogue - Currently unused
+	  "deadLines" : 1,
+      "death1" : "I- <player> I wil-... I wo- This isn- o-ver..."
+    },
+	
+    "projectileSourcePosition" : [-2.5, -1.25],
+    "projectileSourceOffset" : [7, 0],
+
+    "trackTargetDistance" : 50.0,
+    "switchTargetDistance" : 0,
+    "keepTargetInSight" : false,
+
+    "knockoutTime" : 0.1,
+    "knockoutEffect" : "blink",
+    "deathParticles" : "deathPoof",
+
+    "alwaysAggressive" : true,
+
+    "scale" : 1,
+
+    "portraitIcon" : "/monsters/boss/nebisfuckingawesomeandmadefortresscore/fortresscore/fortresscoreicon.png",
+
+	//WIP doesnt change hitbox, only in debug
+	"collisionPolys" : {
+	  "closedCollisionPoly" : [ [10.5, -11.5], [-10.5, -11.5], [-10.5, 11.5], [10.5, 11.5] ],
+	  "shieldCollisionPoly" : [ [6, -11.5], [-6, -11.5], [-6, 11.5], [6, 11.5] ],
+	  "openCollisionPoly" : [ [3, -11.5], [-3, -11.5], [-3, 11.5], [3, 11.5] ]
+	},
+
+    "movementSettings" : {
+      "gravityEnabled" : false,
+
+      "collisionPoly" : [ [3, -11.5], [-3, -11.5], [-3, 11.5], [3, 11.5] ],
+      "mass" : 4.0,
+      "walkSpeed" : 5,
+      "runSpeed" : 13,
+      "airForce" : 200,
+      "airJumpProfile" : {
+        "jumpControlForce" : 0,
+        "jumpInitialPercentage" : 0
+      },
+      "physicsEffectCategories" : ["boss"]
+    },
+	
+    "jumpTargetDistance" : 4,
+    "jumpTime" : [0.4, 0.7],
+
+    "metaBoundBox" : [-15, -15, 15, 15],
+
+    "blockedSensors" : [ [1.5, -4.5], [1.5, -3.5], [1.5, -2.5], [1.5, -1.5], [1.5, -0.5], [1.5, 0.5] ],
+    "fallSensors" : [ [2, -3.5], [2, -5.5], [2, -6.5], [4, -4.5], [4, -5.5], [4, -6.5] ],
+
+    "touchDamage" : {
+      "poly" : [ [10, -11.5], [-10, -11.5], [-10, 11.5], [10, 11.5] ],
+      "damage" : 100,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "hammer",
+      "statusEffects" : [ ]
+    },
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : false,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0
+        },
+        "grit" : {
+          "baseValue" : 1.0
+        },
+        "maxHealth" : {
+          "baseValue" : 5111
+        },
+        "protection" : {
+          "baseValue" : 25
+        },
+        "healthRegen" : {
+          "baseValue" : 0.01
+        },
+        "shieldRegen" : {
+          "baseValue" : 0.0
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "specialStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "healingStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "stunImmunity" : {
+          "baseValue" : 1.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0,
+          "maxValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        },
+        "shieldHealth" : {
+          "initialValue" : 0
+        }
+      }
+    },
+
+    "projectiles" : {
+      "deathexplosion" : {
+        "type" : "regularexplosionknockback",
+        "config" : {
+          "speed" : 0.1,
+          "power" : 2,
+
+          "actionOnReap" : [
+            {
+              "action" : "config",
+              "file" : "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config"
+            }
+          ]
+        },
+
+        "fireTime" : 8.0,
+        "fireInterval" : 0.2,
+        "cooldown" : 0.1
+      }
+    },
+
+    "mouthOffset" : [1.0, -1.5],
+    "feetOffset" : [0, -21]
+  }
+}

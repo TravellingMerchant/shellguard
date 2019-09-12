@@ -1,0 +1,12 @@
+{
+  "name" : "fortresssilos",
+  "category" : "sgnebisamadladandmadefortress",
+  "type" : "fortresssilos",
+
+  "frames" : {
+    "topLeftSilo" : "fortresssilos.png",
+    "topRightSilo" : "fortresssilos.png",
+    "bottomLeftSilo" : "fortresssilos.png",
+    "bottomRightSilo" : "fortresssilos.png"
+  }
+}
