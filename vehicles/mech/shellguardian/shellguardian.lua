@@ -16,27 +16,32 @@ function init()
 	self.mechHorizontalMovement = config.getParameter("mechHorizontalMovement")
 	self.time = 0
 	self.walking = false
+	self.controlHeld = false
 	message.setHandler("changeParameter", function(_, _, args)
 		self[args.key] = args.value
 	end)
 end
 
 function update()
-	if vehicle.controlHeld("seat", "left") then
-		mcontroller.setXVelocity(- self.mechHorizontalMovement)
-		self.facingDirection = -1
-	elseif vehicle.controlHeld("seat", "right") then
-		mcontroller.setXVelocity(self.mechHorizontalMovement)
-		self.facingDirection = 1
-	end
-	
+	collectControls()
 	animate()
-	sb.setLogMap("Time", sb.print(self.time % (self.T / 2)))
+	move()
+end
+
+function collectControls()
+	if vehicle.controlHeld("seat", "left") then
+		self.facingDirection = -1
+		self.controlHeld = true
+	elseif vehicle.controlHeld("seat", "right") then
+		self.facingDirection = 1
+		self.controlHeld = true
+	else
+		self.controlHeld = false
+	end
 end
 
 function animate()
-
-	if math.abs(mcontroller.xVelocity()) >= 0.1 then
+	if self.controlHeld then
 		self.walking = true
 		self.time = self.time + script.updateDt()
 	else
@@ -91,6 +96,59 @@ function animate()
 			animator.rotateTransformationGroup(layer .. "ArmUp", shoulderAngle, animator.partProperty(layer .. "ArmUp", "rotationCenter"))
 			offset = offset + math.pi
 		end
+	end
+end
+
+function move()
+	local layers = {"front", "back"}
+	
+	local poly = {}
+	for _, layer in ipairs(layers) do
+		world.debugLine(vec2.add(mcontroller.position(), animator.partPoint(layer .. "LegLow", "leftAnchor")), 
+		vec2.add(mcontroller.position(), animator.partPoint(layer .. "Foot", "heel")), "red")
+		
+		world.debugLine(vec2.add(mcontroller.position(), animator.partPoint(layer .. "Foot", "heel")), 
+		vec2.add(mcontroller.position(), animator.partPoint(layer .. "Foot", "toe")), "red")
+		
+		world.debugLine(vec2.add(mcontroller.position(), animator.partPoint(layer .. "Foot", "toe")), 
+		vec2.add(mcontroller.position(), animator.partPoint(layer .. "LegLow", "rightAnchor")), "red")
+		--[[
+		local collisionPoint = world.lineCollision(vec2.add(mcontroller.position(), animator.partPoint(layer .. "Foot", "heel")), 
+			vec2.add(mcontroller.position(), animator.partPoint(layer .. "Foot", "toe")))
+		
+		if collisionPoint then
+			-- Find the top block
+			local topBlock = world.lineCollision(vec2.add(collisionPoint, {0, 50}), collisionPoint)
+			if topBlock then
+				sb.setLogMap("TopBlock" .. layer, sb.print(topBlock))
+				sb.setLogMap("CollisionPoint" .. layer, sb.print(collisionPoint))
+				mcontroller.translate({0, math.abs(topBlock[2] - collisionPoint[2])})
+				world.debugLine(topBlock, collisionPoint, "yellow")
+			end
+		end
+		
+		--]]
+		table.insert(poly, animator.partPoint(layer .. "LegLow", "leftAnchor"))
+		table.insert(poly, animator.partPoint(layer .. "Foot", "heel"))
+		table.insert(poly, animator.partPoint(layer .. "Foot", "toe"))
+		table.insert(poly, animator.partPoint(layer .. "LegLow", "rightAnchor"))
+	end
+	
+	--test for changing the collision poly in runtime
+	if vehicle.entityLoungingIn("seat") then
+		mcontroller.applyParameters({
+			collisionPoly = poly
+		})
+	else
+		mcontroller.resetParameters()
+	end
+	
+	if self.controlHeld then
+		--if (self.time % self.T) < self.T / 2.0 then
+			mcontroller.setXVelocity(self.mechHorizontalMovement * self.facingDirection)
+		--end
+	else
+		mcontroller.setXVelocity(0)
 	end
 end
 

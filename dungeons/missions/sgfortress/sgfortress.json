@@ -8328,6 +8328,26 @@
                  "width":40,
                  "x":12824,
                  "y":2376
+                }, 
+                {
+                 "gid":7440,
+                 "height":20,
+                 "id":3180,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"sgrobotcleaver\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":9360,
+                 "y":1856
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -11702,7 +11722,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":3180,
+ "nextobjectid":3181,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",

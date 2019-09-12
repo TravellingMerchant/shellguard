@@ -51,7 +51,9 @@
 		  "anchorPart": "backLegUp",
 		  "offset": [-1, -6.5],
 		  "rotationCenter": [2.375, 6.625],
-		  "transformationGroups": ["backLegLow"]
+		  "transformationGroups": ["backLegLow"],
+		  "leftAnchor": [0.25, 2.375],
+		  "rightAnchor": [5.375, 3.75]
         }
       },
 	  "backLegUp" : {
@@ -73,7 +75,9 @@
 		  "anchorPart": "frontLegUp",
 		  "offset": [-1, -6.5],
 		  "rotationCenter": [2.5, 6.625],
-		  "transformationGroups": ["frontLegLow"]
+		  "transformationGroups": ["frontLegLow"],
+		  "leftAnchor": [0.25, 2.375],
+		  "rightAnchor": [5.375, 3.75]
         }
       },
 	  "frontLegUp" : {
@@ -111,7 +115,9 @@
 		  "anchorPart": "backLegLow",
 		  "offset": [-0.875, -2.375],
 		  "rotationCenter": [2.5, 3],
-		  "transformationGroups": ["backFoot"]
+		  "transformationGroups": ["backFoot"],
+		  "heel": [0, 0],
+		  "toe": [8.25, 0]
         }
       },
 	  "frontFoot" : {
@@ -122,7 +128,9 @@
 		  "anchorPart": "frontLegLow",
 		  "offset": [-0.875, -2.375],
 		  "rotationCenter": [2.5, 3],
-		  "transformationGroups": ["frontFoot"]
+		  "transformationGroups": ["frontFoot"],
+		  "heel": [0, 0],
+		  "toe": [8.25, 0]
         }
       },
 	  "backArmLow": {

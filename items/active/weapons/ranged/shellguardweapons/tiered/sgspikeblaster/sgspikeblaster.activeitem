@@ -4,8 +4,8 @@
   "inventoryIcon" : "sgspikeblaster.png",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "Advanced Shellguard Rifle with cooling jacket. Robust and powerful.",
-  "shortdescription" : "Shellguard Advanced Rifle",
+  "description" : "A gun that fires a mass amount of spike mortars that latch onto targets and explode.",
+  "shortdescription" : "Spike Mortar Launcher",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
@@ -37,7 +37,7 @@
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
     "fireTime" : 0.4,
-    "baseDps" : 8.5,
+    "baseDps" : 6.5,
     "energyUsage" : 35.0,
     "projectileCount" : 1,
     "inaccuracy" : 0.05,
@@ -84,10 +84,10 @@
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
-    "inventoryIcon" : "eliteguardrifle.png",
+    "inventoryIcon" : "elitesgspikeblaster.png",
     "animationParts" : {
-      "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/sgspikeblaster/eliteguardrifle.png"
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/sgspikeblaster/elitesgspikeblaster.png"
     },
-    "shortdescription" : "Shellguard Elite Rifle ^yellow;^reset;"
+    "shortdescription" : "Spike Mortar Blaster ^yellow;^reset;"
   }
 }
