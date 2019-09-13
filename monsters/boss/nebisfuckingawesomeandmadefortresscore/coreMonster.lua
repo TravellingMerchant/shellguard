@@ -7,23 +7,33 @@ function init()
   message.setHandler("attemptToCloseSilo", localHandler(attemptToCloseSilo))
   message.setHandler("attemptToSpawnTurret", localHandler(attemptToSpawnTurret))
   
+  --Dialogue--
   self.weHaventSaidThisYes = false
   self.tookDamage = false
   self.startPhase = false
   self.rematch = false
-  self.dead = false
   self.currentIntro = 1
-  self.worldGravity = world.gravity(mcontroller.position())
   self.sayTime = config.getParameter("dialog.lineDuration", 4)
+  
+  --Collision Init--
   self.openCollisionPoly = config.getParameter("collisionPolys.openCollisionPoly", {})
   self.closedCollisionPoly = config.getParameter("collisionPolys.closedCollisionPoly", {})
-  self.shieldCollisionPoly = config.getParameter("collisionPolys.shieldCollisionPoly", {})
-  self.maxHealth = status.resource("health")
-  self.turretEntityId = nil
   
+  --Turret Init--
+  self.leftTurretEntityId = nil
+  self.rightTurretEntityId = nil
+  self.leftSpawnedTurret = false
+  self.rightSpawnedTurret = false
+  
+  --Silo Platforming--
   self.leftSiloPlatformId = world.spawnVehicle("neb-sgfortresscoresilos", vec2.add(entity.position(), {-30, -22.5}))
   self.rightSiloPlatformId = world.spawnVehicle("neb-sgfortresscoresilos", vec2.add(entity.position(), {30, -22.5}))
 	  
+  --General Init--
+  self.dead = false
+  self.worldGravity = world.gravity(mcontroller.position())
+  self.maxHealth = status.resource("health")
+  
   if rangedAttack then
     rangedAttack.loadConfig()
   end
@@ -66,34 +76,46 @@ function init()
   end
 
   monster.setUniqueId(config.getParameter("uniqueId"))
-
   monster.setDeathParticleBurst("deathPoof")
-
   monster.setDamageBar("None")
-
   self.musicEnabled = false
 end
 
 function attemptToCloseSilo(relativeSide)
-  if not self.spawnedTurret then
-	if animator.animationState("top"..relativeSide.."Silo") == "risen" then
-	  animator.setAnimationState("top"..relativeSide.."Silo", "rise")
+  if not self[relativeSide .."TurretEntityId"] then
+	if animator.animationState("top"..relativeSide.."Silo") == "risen" then\
+	  animator.setAnimationState("top"..relativeSide.."Silo", "sink")
 	end
   end
 end
 
-function attemptToSpawnTurret(turretSpawn)
-  if not self.turretEntityId then
-    self.turretEntityId = turretSpawn
-    world.callScriptedEntity(self.turretEntityId, "status.addEphemeralEffect", stateData.spawnAnimationStatus)
-    self.spawnedTurret = true
+function attemptToSpawnTurret(data)
+  monsterType = data.monsterType 
+  position = data.position
+  monsterParameters = data.monsterParameters
+  relativeSide = data.relativeSide
+  
+  if not self[relativeSide .."TurretEntityId"] then
+    self[relativeSide .."TurretEntityId"] = world.spawnMonster(monsterType, position, monsterParameters)
+    --world.callScriptedEntity(self.turretEntityId, "status.addEphemeralEffect", stateData.spawnAnimationStatus)
+    self[relativeSide .."SpawnedTurret"] = true
   end
 end
 
 function update(dt)
-  self.tookDamage = false
+  --Messager Handling Update--
+  if self.LeftSpawnedTurret and not world.entityExists(self.LeftTurretEntityId) then
+	attemptToCloseSilo("Left")
+    self.LeftSpawnedTurret = false
+	self.LeftTurretEntityId = nil
+  end
+  if self.RightSpawnedTurret and not world.entityExists(self.RightTurretEntityId) then
+	attemptToCloseSilo("Right")
+    self.RightSpawnedTurret = false
+	self.RightTurretEntityId = nil
+  end
   
-  --Force an invisible vehicle platform to follow the silos
+  --Silo Platforming--
   if animator.animationState("bottomLeftSilo") == "rise" and not self.leftActed then
     world.sendEntityMessage(self.leftSiloPlatformId, "moveUp", 3, 0.8)
 	self.leftActed = true
@@ -123,8 +145,7 @@ function update(dt)
 	self.rightActed = false
   end
   
-  --sb.logInfo("The current phase is: %s", self.phase)
-  
+  --Initiate Energy Shield--
   if self.phase == 2 then
     status.addPersistentEffect("nebuloxWasHereAYO", "fortresscore-energyShield")
   elseif self.phase == 4 then
@@ -133,11 +154,16 @@ function update(dt)
     status.clearPersistentEffects("nebuloxWasHereAYO")
   end
   
+  --Collision Correction--
   if animator.animationState("blastShield") == "closed" then
 	mcontroller.controlParameters({collisionPoly = self.closedCollisionPoly})
   else
 	mcontroller.controlParameters({collisionPoly = self.openCollisionPoly})
   end
+  
+  --sb.logInfo("The current phase is: %s", self.phase)
+
+  self.tookDamage = false
   
   if not status.resourcePositive("health") and self.phase == 5 then
     

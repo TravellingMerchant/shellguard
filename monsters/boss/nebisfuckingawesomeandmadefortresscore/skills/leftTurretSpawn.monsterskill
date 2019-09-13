@@ -1,17 +1,16 @@
 {
-  "name" : "siloTurretSpawn",
+  "name" : "leftTurretSpawn",
   "label" : "EXHAUST VENTS",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
-    "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/siloTurretSpawn.lua" ],
+    "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/leftTurretSpawn.lua" ],
 
-    "siloTurretSpawn" : {
+    "leftTurretSpawn" : {
       "windupDuration" : 1,
       "fireDuration" : 2.5,
 
-      "leftSiloOffset" : [-30, 10],
-      "rightSiloOffset" : [30, 10],
+      "turretOffset" : [-30, 10],
 	  
 	  "monsterType" : "sgfortressturretgun",
 	  "monsterTestPoly" : [ [0.8125, 1.25], [1.3125, 0.75],  [1.3125, -1.05], [0.8125, -1.55],  [-0.8125, -1.55], [-1.3125, -1.05],  [-1.3125, 0.75], [-0.8125, 1.25] ],

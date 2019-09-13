@@ -152,6 +152,8 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 end
 
 function siloMonsterSpawnAirborne.leavingState(stateData)
+  world.sendEntityMessage(entity.id(), "attemptToCloseSilo", "Left")
+  world.sendEntityMessage(entity.id(), "attemptToCloseSilo", "Right")
   self.active = false
   self.canFire = false
 end
