@@ -1,0 +1,10 @@
+{
+  "frameGrid" : {
+    "size" : [144,52],
+    "dimensions" : [1, 1],
+
+    "names" : [
+      [ "move.undamaged" ]
+    ]
+  }
+}

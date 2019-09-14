@@ -36,11 +36,11 @@
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 0.2,
+    "fireTime" : 0.1,
     "baseDps" : 10.5,
     "energyUsage" : 30.0,
-    "projectileCount" : 1,
-    "inaccuracy" : 0,
+    "projectileCount" : 2,
+    "inaccuracy" : 0.04,
       "stances" : {
       "idle" : {
         "armRotation" : 0,
@@ -60,7 +60,7 @@
         "allowFlip" : false
       },
       "cooldown" : {
-        "duration" : 0.1,
+        "duration" : 0.025,
         "armRotation" : -20,
         "weaponRotation" : 30,
         "twoHanded" : true,
@@ -72,7 +72,7 @@
 
     "fireType" : "auto",
 
-    "projectileType" : "sgairstrikeflare",
+    "projectileType" : "sentinelshard",
     "projectileParameters" : { 
       "knockback" : 6
     }

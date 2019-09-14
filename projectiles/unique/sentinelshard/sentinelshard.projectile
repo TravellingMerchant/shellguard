@@ -1,0 +1,54 @@
+{
+  "projectileName" : "sentinelshard",
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/gun/shellbulletimpact.ogg"
+      ]
+    }
+  ],
+  "image" : "sentinelshard.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 0.0
+  },
+  "pointLight" : true,
+  "lightColor" : [255, 100, 0],
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "shellsmoke"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/fire_out.ogg" ]
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 3,
+      "backgroundRadius" : 2,
+      "explosiveDamageAmount" : 0.1,
+      "delaySteps" : 2
+    }
+
+  ],
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 2,
+  "power" : 20,
+  "speed" : 25,
+  "damageKind" : "bow",
+  
+  "fullbright" : true,
+  
+  "scripts" : [ "/projectiles/scripts/sgswarm.lua.lua" ],
+  "scriptDelta" : 1,
+  "speedEqualsPower" : false,
+  "minHomingControlForce" : 1,
+  "maxHomingControlForce" : 3,
+  "minWavePeriod" : 0.35,
+  "maxWavePeriod" : 0.35,
+  "minWaveAmplitude" : -0.5,
+  "maxWaveAmplitude" : 0.5
+}

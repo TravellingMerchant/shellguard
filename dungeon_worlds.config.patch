@@ -231,6 +231,23 @@
       "biome": "barren"
     }
   },
+  
+  {
+    "op" : "add",
+    "path" : "/sgplatformtest2",
+    "value" : {
+      "primaryDungeon" : "sgplatformtest2",
+      "threatLevel" : 3,
+      "gravity" : 80,
+      "worldSize" : [3000, 500],
+      "dungeonBaseHeight" : 400,
+      "dungeonSurfaceHeight" : 100,
+      "ambientLightLevel" : [0, 0, 0],
+      "musicTrack" : "/music/lava-exploration2.ogg",
+      "biome": "barren"
+    }
+  },
+  
   {
     "op" : "add",
     "path" : "/sgmercmission1",

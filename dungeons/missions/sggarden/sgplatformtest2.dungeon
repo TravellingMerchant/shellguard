@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "sgplatformtest2",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "sgplatformtest2" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "sgplatformtest2",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "sgplatformtest2.json" ]
+    }
+  ]
+}
