@@ -34,12 +34,12 @@
 	  //Introduction, with the default skills
       {
         "enterPhase" : "blastShieldSlam",
-        "skills" : ["siloMonsterSpawnGrounded", "aerialMineLaunch", "ventExhaustFlame", "siloMonsterSpawnAirborne", "ventExhaustFlame", "aerialMineLaunch", "leftTurretSpawn"]
-      },
+        "skills" : [ "ventExhaustFlame", "rightTurretSpawn" ]
+			},
 	  //After breaking open blastshield, core will talk and then activate energyshield
 	  {
 	    "enterPhase" : "energyShieldActivate",
-        "skills" : [ "gravitySlam" ]
+        "skills" : [ "gravitySlam", "leftTurretSpawn" ]
 	  },
 	  //Reactivates blast shield
       {

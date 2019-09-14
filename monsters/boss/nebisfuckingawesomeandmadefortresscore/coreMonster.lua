@@ -83,7 +83,7 @@ end
 
 function attemptToCloseSilo(relativeSide)
   if not self[relativeSide .."TurretEntityId"] then
-	if animator.animationState("top"..relativeSide.."Silo") == "risen" then\
+	if animator.animationState("top"..relativeSide.."Silo") == "risen" then
 	  animator.setAnimationState("top"..relativeSide.."Silo", "sink")
 	end
   end
@@ -97,7 +97,7 @@ function attemptToSpawnTurret(data)
   
   if not self[relativeSide .."TurretEntityId"] then
     self[relativeSide .."TurretEntityId"] = world.spawnMonster(monsterType, position, monsterParameters)
-    --world.callScriptedEntity(self.turretEntityId, "status.addEphemeralEffect", stateData.spawnAnimationStatus)
+    world.callScriptedEntity(self[relativeSide .."TurretEntityId"], "status.addEphemeralEffect", "nebfortressturretspawn")
     self[relativeSide .."SpawnedTurret"] = true
   end
 end
@@ -153,7 +153,7 @@ function update(dt)
   else
     status.clearPersistentEffects("nebuloxWasHereAYO")
   end
-  
+	
   --Collision Correction--
   if animator.animationState("blastShield") == "closed" then
 	mcontroller.controlParameters({collisionPoly = self.closedCollisionPoly})

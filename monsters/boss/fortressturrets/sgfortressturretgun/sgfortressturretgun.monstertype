@@ -49,7 +49,7 @@
             "windupStopForce" : 50,
             "windupState" : "idle",
 
-            "projectileType" : "nebsgfortressturretmissile.png",
+            "projectileType" : "nebsgfortressturretmissile",
 			"projectileCount" : 6,
 			"projectileInterval" : 0.1,
             "fireOffset" : [8.0, 0.25],

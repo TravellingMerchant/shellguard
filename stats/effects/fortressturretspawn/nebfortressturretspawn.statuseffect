@@ -1,0 +1,11 @@
+{
+  "name" : "nebfortressturretspawn",
+  "effectConfig" : {},
+  "defaultDuration" : 0.5,
+
+  "scripts" : [
+    "nebfortressturretspawn.lua"
+  ],
+
+  "animationConfig" : "nebfortressturretspawn.animation"
+}
