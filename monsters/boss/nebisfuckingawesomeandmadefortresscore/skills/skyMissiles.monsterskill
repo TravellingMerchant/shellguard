@@ -1,0 +1,29 @@
+{
+  "name" : "skyMissiles",
+  "label" : "EXHAUST VENTS",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/skyMissiles.lua" ],
+
+    "skyMissiles" : {
+      "fireDuration" : 1.5,
+      "windupDuration" : 1,
+
+      "leftProjectileOffset" : [-5.25, 23.75],
+      "rightProjectileOffset" : [5.25, 23.75],
+      "fireInterval" : 3.4,
+      "projectile" : {
+        "type" : "shelluforocket",
+        "power" : 20,
+        "config" : {}
+      }
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "ventAlert" : [ "/sfx/monsters/boss/fortresscore/windupalert.ogg" ]
+    }
+  }
+}
