@@ -27,6 +27,7 @@
 	  { "item" : "sgmoto" },
 	  { "item" : "sgspikeblaster" },
 	  { "item" : "sgheavyshotgun" },
+	  { "item" : "sgsupershotgun" },
 	  { "item" : "sgheavycannon" },
 	  { "item" : "sgheavyboomer" },
 	  { "item" : "sgtoobiggun" }
