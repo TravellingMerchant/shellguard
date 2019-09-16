@@ -1,6 +1,6 @@
 {
   "type" : "sgnebisamadladandmadefortress",
-  "shortdescription" : "Fortress Core",
+  "shortdescription" : "Foreskin Core",
 
   "categories" : [ "sgnebisamadladandmadefortress" ],
   "parts" : [ "base", "coreAi", "blastShield", "vents", "fortresssilos" ],
@@ -24,41 +24,41 @@
       "/monsters/boss/nebisfuckingawesomeandmadefortresscore/fortressreset.lua"
     ],
 
-	"renderLayer" : "Projectile-1",
+		"renderLayer" : "Projectile-1",
 	
-    "skillCount" : 12,
-    "skills" : [ "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "rightTurretSpawn", "leftTurretSpawn", "cryoTurretSpawn", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch", "radiationLeak", "skyMissiles" ],
+    "skillCount" : 13,
+    "skills" : [ "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "rightTurretSpawn", "leftTurretSpawn", "cryoTurretSpawn", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch", "radiationLeak", "skyMissiles", "ruined" ],
 
     "phases" : [
-	  //Skills/Abilities the core will possess in each phase, it is randomly picked by whats in the tables
-	  //Introduction, with the default skills
+			//Skills/Abilities the core will possess in each phase, it is randomly picked by whats in the tables
+			//Introduction, with the default skills
       {
         "enterPhase" : "blastShieldSlam",
-        "skills" : [ "ventExhaustFlame", "rightTurretSpawn" ]
+        "skills" : [ "siloMonsterSpawnGrounded", "skyMissiles", "ventExhaustFlame", "aerialMineLaunch", "siloMonsterSpawnAirborne", "ventExhaustFlame", "aerialMineLaunch", "skyMissiles" ]
 			},
-	  //After breaking open blastshield, core will talk and then activate energyshield
-	  {
-	    "enterPhase" : "energyShieldActivate",
-        "skills" : [ "gravitySlam", "leftTurretSpawn" ]
-	  },
-	  //Reactivates blast shield
+			//After breaking open blastshield, core will talk and then activate energyshield
+			{
+				"enterPhase" : "energyShieldActivate",
+				"skills" : ["siloMonsterSpawnGrounded", "skyMissiles", "ventExhaustFlame", "aerialMineLaunch", "siloMonsterSpawnAirborne", "ventExhaustFlame", "aerialMineLaunch", "skyMissiles", "leftTurretSpawn" ]
+			},
+			//Reactivates blast shield
       {
         "enterPhase" : "blastShieldSlam",
-        "skills" : [ "ventExhaustFlame", "rightTurretSpawn" ]
+        "skills" : [ "siloMonsterSpawnGrounded", "skyMissiles", "ventExhaustFlame", "aerialMineLaunch", "siloMonsterSpawnAirborne", "ventExhaustFlame", "aerialMineLaunch", "skyMissiles", "rightTurretSpawn" ]
       },
-	  //Reactivates energy shield
-	  {
-	    "enterPhase" : "energyShieldActivate",
-        "skills" : [ "ventExhaustFlame" ]
-	  }//,
-	  //Ruin cleaver finisher
-	  //{
-	  //  "enterPhase" : "RUINED",
-      //  "skills" : []
-	  //}
+			//Reactivates energy shield
+			{
+				"enterPhase" : "energyShieldActivate",
+				"skills" : [ "siloMonsterSpawnGrounded", "skyMissiles", "ventExhaustFlame", "aerialMineLaunch", "siloMonsterSpawnAirborne", "ventExhaustFlame", "aerialMineLaunch", "skyMissiles", "leftTurretSpawn", "rightTurretSpawn" ]
+			},
+			//Ruin cleaver finisher
+			{
+				"enterPhase" : "ruined",
+				"skills" : []
+			}
     ],
 
-	"musicStagehands" : [ "bossmusic" ],
+		"musicStagehands" : [ "bossmusic" ],
 
     "chatPortrait" : "/interface/chatbubbles/SGUFO.png",
     "dialog" : {

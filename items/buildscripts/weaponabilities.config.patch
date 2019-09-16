@@ -1,4 +1,5 @@
 [
+	//Abilities
   { "op" : "add", "path" : "/shellbolt", "value" : "/items/active/weapons/staff/abilities/guidedbolt/shellbolt.weaponability" },
   { "op": "add", "path": "/sgrocketburst", "value": "/items/active/weapons/ranged/abilities/sgrocketburst/sgrocketburst.weaponability" },
   { "op": "add", "path": "/sgspiderburst", "value": "/items/active/weapons/ranged/abilities/sgspiderburst/sgspiderburst.weaponability" },
@@ -15,6 +16,9 @@
   { "op": "add", "path": "/sgflashlight", "value": "/items/active/weapons/ranged/sg_built/abilities/sgflashlight.weaponability" },
   { "op": "add", "path": "/sgheavyswordcombo", "value": "/items/active/weapons/melee/broadsword/sgheavyswordcombo.weaponability" },
   { "op": "add", "path": "/sgshockwave", "value": "/items/active/weapons/melee/spear/sgshockwave/sgshockwave.weaponability" },
+  { "op": "add", "path": "/sggrenadelauncher", "value": "/items/active/weapons/ranged/sg_built/abilities/sggrenadelauncher.weaponability" },
+	
+	//Neb's Abilties
   {"op" : "add", "path": "/neb-enhancedchargefire", "value" : "/items/active/weapons/ranged/abilities/neb-enhancedchargefire/neb-enhancedchargefire.weaponability"},
-  { "op": "add", "path": "/sggrenadelauncher", "value": "/items/active/weapons/ranged/sg_built/abilities/sggrenadelauncher.weaponability" }
+  { "op": "add", "path": "/nebsgprojectilecombo", "value": "/items/active/weapons/melee/abilities/speargun/spearguncombo.weaponability" }
 ]

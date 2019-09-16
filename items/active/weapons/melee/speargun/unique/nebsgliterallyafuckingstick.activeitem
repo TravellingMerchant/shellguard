@@ -1,0 +1,43 @@
+{
+  "itemName" : "nebsgliterallyafuckingstick",
+  "price" : 7500,
+  "inventoryIcon" : "nebsgliterallyafuckingstick.png:closed.1",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "It's in the name, folks.",
+  "shortdescription" : "Literally a Fucking Stick",
+  "level" : 6,
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "itemTags" : ["weapon","ranged","spear","speargun","gunspear"],
+  "twoHanded" : true,
+
+  "animation" : "/items/active/weapons/melee/speargun/nebsgspeargun.animation",
+  "animationParts" : {
+    "blade" : "nebsgliterallyafuckingstick.png",
+    "bladefullbright" : "nebsgliterallyafuckingstickfullbright.png",
+    "handle" : "",
+    "handlefullbright" : "",
+    "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/swing_broadsword.ogg" ],
+      "fire2" : [ "/sfx/melee/swing_shortsword.ogg" ],
+      "fire3" : [ "/sfx/melee/swing_spear.ogg" ],
+      "gunfire" : [ "/sfx/gun/ar4.ogg" ]
+    }
+  },
+
+  "baseOffset" : [0.0, 0.0],
+  "muzzleOffset" : [3.5, 0.0],
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "nebsgprojectilecombo",
+  //"primaryAbility" : {},
+
+  "builder" : "/items/buildscripts/buildweapon.lua"
+}

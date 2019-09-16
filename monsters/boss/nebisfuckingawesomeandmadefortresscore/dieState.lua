@@ -19,7 +19,6 @@ function dieState.enteringState(stateData)
   world.objectQuery(mcontroller.position(), 50, { name = "lunarbaselaser", callScript = "openLunarBaseDoor" })
 
   animator.setAnimationState("coreIdle", "off")
-  animator.setAnimationState("blastShield", "winddown")
   
   local playerId = world.entityName(world.playerQuery(mcontroller.position(), 50, {order = "random"})[1])
   local currentLine = 1

@@ -9,7 +9,7 @@
           },
           "on" : {
             "properties" : {
-              "persistentSound" : "/sfx/npc/boss/crystalboss_hum.ogg",
+              "persistentSound" : "/sfx/monsters/boss/fortresscore/fortressambience.ogg",
               "persistentSoundRangeMultiplier" : 1.5
             }
           }
@@ -57,7 +57,7 @@
             "transition" : "open",
             "properties" : {
               "immediateSound" : "/sfx/monsters/boss/fortresscore/ventopen.ogg",
-              "immediateSoundRangeMultiplier" : 1.5
+              "immediateSoundRangeMultiplier" : 1
             }
           },
           "open" : {
@@ -67,7 +67,11 @@
             "frames" : 2,
             "cycle" : 0.2,
             "mode" : "transition",
-            "transition" : "closed"
+            "transition" : "closed",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/ventclose.ogg",
+              "immediateSoundRangeMultiplier" : 1
+            }
           }
         }
       },
@@ -85,7 +89,7 @@
             "transition" : "open",
             "properties" : {
               "immediateSound" : "/sfx/monsters/boss/fortresscore/ventopen.ogg",
-              "immediateSoundRangeMultiplier" : 1.5
+              "immediateSoundRangeMultiplier" : 1
             }
           },
           "open" : {
@@ -95,7 +99,11 @@
             "frames" : 2,
             "cycle" : 0.2,
             "mode" : "transition",
-            "transition" : "closed"
+            "transition" : "closed",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/ventclose.ogg",
+              "immediateSoundRangeMultiplier" : 1
+            }
           }
         }
       },
@@ -113,7 +121,7 @@
             "transition" : "open",
             "properties" : {
               "immediateSound" : "/sfx/monsters/boss/fortresscore/ventopen.ogg",
-              "immediateSoundRangeMultiplier" : 1.5
+              "immediateSoundRangeMultiplier" : 1
             }
           },
           "open" : {
@@ -123,7 +131,11 @@
             "frames" : 2,
             "cycle" : 0.2,
             "mode" : "transition",
-            "transition" : "closed"
+            "transition" : "closed",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/ventclose.ogg",
+              "immediateSoundRangeMultiplier" : 1
+            }
           }
         }
       },
@@ -141,7 +153,7 @@
             "transition" : "open",
             "properties" : {
               "immediateSound" : "/sfx/monsters/boss/fortresscore/ventopen.ogg",
-              "immediateSoundRangeMultiplier" : 1.5
+              "immediateSoundRangeMultiplier" : 1
             }
           },
           "open" : {
@@ -151,7 +163,11 @@
             "frames" : 2,
             "cycle" : 0.2,
             "mode" : "transition",
-            "transition" : "closed"
+            "transition" : "closed",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/ventclose.ogg",
+              "immediateSoundRangeMultiplier" : 1
+            }
           }
         }
       },

@@ -1,0 +1,9 @@
+{
+  "name" : "fortressidontwanttodie",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "fortressidontwanttodie.lua"
+  ]
+}

@@ -6,6 +6,7 @@ function init()
   --Message Handling--
   message.setHandler("attemptToCloseSilo", localHandler(attemptToCloseSilo))
   message.setHandler("attemptToSpawnTurret", localHandler(attemptToSpawnTurret))
+  message.setHandler("killYourself", localHandler(fuckingDie))
   
   --Dialogue--
   self.weHaventSaidThisYes = false
@@ -81,11 +82,20 @@ function init()
   self.musicEnabled = false
 end
 
+function fuckingDie()
+  --self.state.endState()
+	world.setDungeonGravity(0, self.worldGravity)
+
+	self.state.update(dt)
+
+	setBattleMusicEnabled(false)
+end
+
 function attemptToCloseSilo(relativeSide)
   if not self[relativeSide .."TurretEntityId"] then
-	if animator.animationState("top"..relativeSide.."Silo") == "risen" then
-	  animator.setAnimationState("top"..relativeSide.."Silo", "sink")
-	end
+		if animator.animationState("top"..relativeSide.."Silo") == "risen" then
+			animator.setAnimationState("top"..relativeSide.."Silo", "sink")
+		end
   end
 end
 
@@ -118,31 +128,31 @@ function update(dt)
   --Silo Platforming--
   if animator.animationState("bottomLeftSilo") == "rise" and not self.leftActed then
     world.sendEntityMessage(self.leftSiloPlatformId, "moveUp", 3, 0.8)
-	self.leftActed = true
+		self.leftActed = true
   end
   if animator.animationState("bottomLeftSilo") == "risen" and self.leftActed then
-	self.leftActed = false
+		self.leftActed = false
   end
   if animator.animationState("bottomRightSilo") == "rise" and not self.rightActed then
     world.sendEntityMessage(self.rightSiloPlatformId, "moveUp", 3, 0.8)
-	self.rightActed = true
+		self.rightActed = true
   end  
   if animator.animationState("bottomRightSilo") == "risen" and self.rightActed then
-	self.rightActed = false
+		self.rightActed = false
   end
   if animator.animationState("bottomLeftSilo") == "sink" and not self.leftActed then
     world.sendEntityMessage(self.leftSiloPlatformId, "moveDown", 3, 0.8)
-	self.leftActed = true
+		self.leftActed = true
   end
   if animator.animationState("bottomLeftSilo") == "idle" and self.leftActed then
-	self.leftActed = false
+		self.leftActed = false
   end
   if animator.animationState("bottomRightSilo") == "sink" and not self.rightActed then
     world.sendEntityMessage(self.rightSiloPlatformId, "moveDown", 3, 0.8)
-	self.rightActed = true
+		self.rightActed = true
   end
   if animator.animationState("bottomRightSilo") == "idle" and self.rightActed then
-	self.rightActed = false
+		self.rightActed = false
   end
   
   --Initiate Energy Shield--
@@ -177,11 +187,11 @@ function update(dt)
     if inState ~= "dieState" and not self.state.pickState({ die = true }) then
       self.state.endState()
 	  
-	  world.setDungeonGravity(0, self.worldGravity)
+			world.setDungeonGravity(0, self.worldGravity)
 
-	  self.state.update(dt)
+			self.state.update(dt)
 
-	  setBattleMusicEnabled(false)
+			setBattleMusicEnabled(false)
     end
   else
     trackTargets(self.keepTargetInSight, self.queryTargetDistance, self.trackTargetDistance, self.switchTargetDistance)

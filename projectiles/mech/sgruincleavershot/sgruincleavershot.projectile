@@ -88,5 +88,5 @@
   ],
   "power" : 500.0,
   "speed" : 150,
-  "damageKind" : "default"
+  "damageKind" : "ruincleaverfinisher"
 }

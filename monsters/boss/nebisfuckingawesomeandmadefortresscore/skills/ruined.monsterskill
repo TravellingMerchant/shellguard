@@ -1,0 +1,15 @@
+{
+  "name" : "ruined",
+  "label" : "CRUSH",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/ruined.lua" ],
+
+    "ruined" : {
+			"vehicleType" : "sgprotoruincleaver"
+    }
+  },
+
+  "animationParameters" : {}
+}
