@@ -32,6 +32,7 @@ function init()
 	  
   --General Init--
   self.dead = false
+	self.slappedToDeath = false
   self.worldGravity = world.gravity(mcontroller.position())
   self.maxHealth = status.resource("health")
   
@@ -83,12 +84,14 @@ function init()
 end
 
 function fuckingDie()
-  --self.state.endState()
+  self.state.endState()
 	world.setDungeonGravity(0, self.worldGravity)
+	self.slappedToDeath = true
 
 	self.state.update(dt)
 
 	setBattleMusicEnabled(false)
+	monster.setDamageBar("None")
 end
 
 function attemptToCloseSilo(relativeSide)
@@ -193,7 +196,7 @@ function update(dt)
 
 			setBattleMusicEnabled(false)
     end
-  else
+  elseif not self.slappedToDeath then
     trackTargets(self.keepTargetInSight, self.queryTargetDistance, self.trackTargetDistance, self.switchTargetDistance)
 
     for skillName, params in pairs(self.skillParameters) do

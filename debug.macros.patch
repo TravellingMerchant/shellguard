@@ -13,7 +13,7 @@
     "op": "add",
     "path": "/fortressfight",
     "value": [
-			"/warp instanceworld:sgfortressbossroom"
+			"/warp instanceworld:sgfortressbossroom=430.730"
 		]
   }
 ]

@@ -27,7 +27,7 @@
 		"renderLayer" : "Projectile-1",
 	
     "skillCount" : 13,
-    "skills" : [ "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "rightTurretSpawn", "leftTurretSpawn", "cryoTurretSpawn", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch", "radiationLeak", "skyMissiles", "ruined" ],
+    "skills" : [ "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "rightTurretSpawn", "leftTurretSpawn", "cryoFreezeSpawn", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch", "radiationLeak", "skyMissiles", "ruined" ],
 
     "phases" : [
 			//Skills/Abilities the core will possess in each phase, it is randomly picked by whats in the tables
