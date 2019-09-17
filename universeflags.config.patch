@@ -1,0 +1,19 @@
+[
+  {
+    "op": "add",
+    "path": "/sgoutpost_fortressbase",
+    "value": {
+      "actions": [
+        {
+          "type": "placeDungeon",
+          "dungeonId": "Shellguardbasefortressteleport",
+          "targetInstance": "shellguardbase",
+          "targetPosition": [
+            773,
+            411
+          ]
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "Shellguardbasefortressteleport",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "Shellguardbasefortressteleport" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "Shellguardbasefortressteleport",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "Shellguardbasefortressteleport.json" ]
+    }
+  ]
+}
