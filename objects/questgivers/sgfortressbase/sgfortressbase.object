@@ -50,6 +50,8 @@
   "questIndicatorPosition" : [0, -23],
 
   "uniqueId" : "sgfortressbase",
+  
+  "soundEffect" : "/sfx/monsters/boss/fortresscore/fortressidle.ogg",
 
   "chatOptions" : [
     "This unit exists to serve Shellguard.",
