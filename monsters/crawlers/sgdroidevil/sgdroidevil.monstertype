@@ -8,20 +8,18 @@
 
   "animation" : "sgdroidevil.animation",
 
-  "dropPools" : [],
+  "dropPools" : [ { "default" : "triplodTreasure", "bow" : "triplodHunting" } ],
 
   "baseParameters" : {
     "scripts" : [
-      "/monsters/debugmonster.lua"
-    ],
-    "debugParts" : [ "armclaw", "head", "armclaw2" ],
+      "/monsters/monster.lua"
+    ],												 
 
     "behavior" : "monster",
+	"facingMode" : "transformation",
     "level" : 6,
 	"damageTeamType" : "enemy",
     "damageTeam" : 2,
-
-    "facingMode" : "transformation",
 
     "behaviorConfig" : {
       "damageOnTouch" : true,
@@ -67,13 +65,13 @@
         }
       ],
 
-      "periodicActions" : [],
+      "periodicActions" : [ ],
 
       "approachActions" : [
         {
           "name" : "approach-walk",
           "parameters" : {
-            "canJump" : false
+            "resetHeading" : false
           }
         }
       ],
@@ -87,7 +85,7 @@
         {
           "name" : "approach-walk",
           "parameters" : {
-            "canJump" : false
+            "resetHeading" : false
           }
         }
       ],
@@ -95,12 +93,17 @@
       "wanderActions" : [
         {
           "name" : "wander-walk",
-          "cooldown" : 6.0,
           "parameters" : {
-            "wanderTime" : [5, 20]
+            "wanderTime" : [5,20],
+            "idleTime" : [3,6],
+            "stopForce" : 50
           }
         }
-      ]
+      ],
+
+      "concurrentActions" : [],
+
+      "concurrentHostileActions" : []
     },
 
     "touchDamage" : {
@@ -117,7 +120,7 @@
     "scale" : 1.0,
 
     "movementSettings" : {
-     "collisionPoly" : [ [0.41, 3.0],  [1.0, 2],  [1.0, -2],  [0.41, -3.25],  [-0.41, -3.25],  [-1.0, -2],  [-1.0, 2],  [-0.41, 3.0] ],
+           "collisionPoly" : [ [0.41, 3.0],  [1.0, 2],  [1.0, -2],  [0.41, -3.25],  [-0.41, -3.25],  [-1.0, -2],  [-1.0, 2],  [-0.41, 3.0] ],
 
       "mass" : 1.0,
       "walkSpeed" : 3,
