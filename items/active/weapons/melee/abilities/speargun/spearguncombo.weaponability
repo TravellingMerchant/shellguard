@@ -2,9 +2,10 @@
   "animationParts" : { },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/melee/swing_broadsword.ogg" ],
-      "fire2" : [ "/sfx/melee/swing_shortsword.ogg" ],
-      "fire3" : [ "/sfx/melee/swing_spear.ogg" ],
+      "fire" : [ "/sfx/melee/swing_spear.ogg" ],
+      "fire2" : [ "/sfx/melee/swing_broadsword.ogg" ],
+      "fire3" : [ "/sfx/melee/swing_shortsword.ogg" ],
+      "fire4" : [ "/sfx/melee/swing_spear.ogg" ],
       "gunfire" : [ "/sfx/gun/ar4.ogg" ]
     }
   },
@@ -15,7 +16,7 @@
     "scripts" : ["/items/active/weapons/melee/nebsgprojectilecombo.lua"],
     "class" : "NebSGProjectileCombo",
 
-    "comboSteps" : 3,
+    "comboSteps" : 4,
 
     "flashTime" : 0.15,
     "flashDirectives" : "fade=FFFFFFFF=0.15",
@@ -23,7 +24,8 @@
     "swooshOffsetRegions" : [
       [1.5, -1.0, 5.5, 1.0],
       [3.0, -0.5, 6.5, 2.0],
-      [0.75, 0.0, 4.25, 5.0]
+      [0.75, 0.0, 4.25, 5.0],
+      [1.5, -1.0, 5.5, 1.0]
     ],
 
     // cooldown time multiplier for steps after the first, compounded per combo step
@@ -32,7 +34,7 @@
     "edgeTriggerGrace" : 0.25,
 
     "fireTime" : 0.8,
-    "baseDps" : 11.,
+    "baseDps" : 10.75,
 
     "damageConfig" : {
       "damageSourceKind" : "spear",
@@ -42,12 +44,16 @@
     },
     "stepDamageConfig" : [
       {
+        "baseDamageFactor" : 0.75,
+        "knockback" : 25
+      },
+      {
         "baseDamageFactor" : 1.0,
         "knockback" : 15
       },
       {
         "baseDamageFactor" : 0.5,
-        "knockback" : 10
+        "knockback" : -10
       },
       {
         "baseDamageFactor" : 1.0,
@@ -59,20 +65,21 @@
       "idle" : {
         "aimAngle" : 0,
         "armRotation" : -90,
-        "weaponRotation" : -10,
+        "weaponRotation" : -20,
         "twoHanded" : false,
-        "allowRotate" : false,
+        "allowRotate" : true,
+        "weaponOffset" : [0, -0.5],
         "allowFlip" : true
       },
       "windup1" : {
-        "duration" : 0.15,
+        "duration" : 0.25,
         "armRotation" : -110,
         "weaponRotation" : 20,
         "twoHanded" : true,
         "weaponOffset" : [0, 0.5],
 
-        "allowRotate" : false,
-        "allowFlip" : false,
+        "allowRotate" : true,
+        "allowFlip" : true,
 				
 				//Not required, but makes the animationState open to reveal the blade
 				"animationStates" : {
@@ -93,20 +100,20 @@
         "armRotation" : -20,
         "weaponRotation" : -70,
         "twoHanded" : true,
-        "weaponOffset" : [0, 2.5],
+        "weaponOffset" : [0, 1],
 
-        "allowRotate" : false,
-        "allowFlip" : false,
+        "allowRotate" : true,
+        "allowFlip" : true,
 
 				//If this exists it will try to shoot based on the variables within
 				"gunShotConfig" : {
 					//General
 					"aimAtCursor" : false,	//If true, will fire toward the cursor instead of the rotation of the weapon
 					"fireTime" : 0.1, 			//If this exists it loops during the stance duration firing in intervals of this number
-					"energyUsage" : 25,
+					"energyUsage" : 5,
 					"fireSound" : "gunfire",
 				
-					//Recoil - If this doesnt exist, you won't experience recoil
+					//Recoil
 					"recoilKnockbackVelocity" : 3,
 					"crouchStopsRecoil" : true,
 					"crouchRecoilKnockbackVelocity" : 1,
@@ -114,9 +121,9 @@
 					//Projectile
 					"projectile" : "standardbullet",
 					"projectileCount" : 1,
-					"projectileDamage" : 5,
+					"projectileDamage" : 2,
 					"projectileParameters" : {
-						"knockback" : 22
+						"knockback" : 5
 					},
 					"projectileInaccuracy" : 0,
 					"projectileAimAngleOffset" : 0,
@@ -140,7 +147,7 @@
 				}
       },
       "windup2" : {
-        "duration" : 0.1,
+        "duration" : 0.15,
         "armRotation" : 90,
         "weaponRotation" : -10,
         "twoHanded" : true,
@@ -158,7 +165,7 @@
         "allowFlip" : false
       },
       "fire2" : {
-        "duration" : 0.15,
+        "duration" : 0.2,
         "armRotation" : -45,
         "weaponRotation" : -55,
         "twoHanded" : true,
@@ -184,6 +191,15 @@
         "allowRotate" : true
       },
       "fire3" : {
+        "duration" : 0.3,
+        "armRotation" : -150,
+        "weaponRotation" : 55,
+        "weaponOffset" : [0, 0],
+        "twoHanded" : true,
+        "allowFlip" : true,
+        "allowRotate" : false
+      },
+      "wait3" : {
         "duration" : 0.2,
         "armRotation" : -150,
         "weaponRotation" : 55,
@@ -191,6 +207,55 @@
         "twoHanded" : true,
         "allowFlip" : true,
         "allowRotate" : false
+      },
+      "windup4" : {
+        "duration" : 0.25,
+        "armRotation" : -110,
+        "weaponRotation" : 20,
+        "twoHanded" : true,
+        "weaponOffset" : [0, 0.5],
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+				
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "open"
+				}
+      },
+      "fire4" : {
+        "duration" : 0.3,
+        "armRotation" : -20,
+        "weaponRotation" : -70,
+        "twoHanded" : true,
+        "weaponOffset" : [0, 1],
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+
+				//If this exists it will try to shoot based on the variables within
+				"gunShotConfig" : {
+					//General
+					"aimAtCursor" : false,
+					"energyUsage" : 25,
+					"fireSound" : "gunfire",
+				
+					//Recoil
+					"recoilKnockbackVelocity" : 3,
+					"crouchStopsRecoil" : true,
+					"crouchRecoilKnockbackVelocity" : 1,
+					
+					//Projectile
+					"projectile" : "standardbullet",
+					"projectileCount" : 5,
+					"projectileDamage" : 5,
+					"projectileParameters" : {
+						"knockback" : 22
+					},
+					"projectileInaccuracy" : 0,
+					"projectileAimAngleOffset" : 0,
+          "projectileFirePoint" : [3.0, 0.0]
+				}
       }
     }
   }

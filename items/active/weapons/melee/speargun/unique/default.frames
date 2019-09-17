@@ -12,6 +12,7 @@
 		"open.1" : "closed.1",
 		"open.3" : "opened.1",
 		"close.1" : "opened.1",
+		"close.2" : "open.2",
 		"close.3" : "closed.1"
 	}
 }

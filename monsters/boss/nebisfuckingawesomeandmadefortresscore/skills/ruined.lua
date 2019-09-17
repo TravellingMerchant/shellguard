@@ -32,7 +32,7 @@ function ruined.enteringState(stateData)
 end
 
 function ruined.update(dt, stateData)
-  --status.setResource("health", status.stat("maxHealth"))
+  status.setResource("health", status.stat("maxHealth"))
 
   self.slapsTaken:update()
 end
