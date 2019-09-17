@@ -211,7 +211,7 @@
           "centered" : true,
           "offset" : [5.75, 0],
           "fullbright" : true,
-          "transformationGroups" : ["muzzle"]
+          "transformationGroups" : ["weapon"]
         },
 
         "partStates" : {
@@ -229,8 +229,7 @@
 
   "transformationGroups" : {
     "weapon" : {},
-    "swoosh" : {},
-    "muzzle" : {}
+    "swoosh" : {}
   },
 
   "particleEmitters" : {
@@ -242,7 +241,7 @@
       "particles" : []
     },
     "muzzleFlash" : {
-      "transformationGroups" : ["muzzle"],
+      "transformationGroups" : ["weapon"],
       "offsetRegion" : [0, 0, 0, 0],
       "particles" : [ ]
     },

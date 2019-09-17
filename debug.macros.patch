@@ -1,0 +1,19 @@
+[
+  //Shellguard Hub Shortcut
+  {
+    "op": "add",
+    "path": "/shellguardhub",
+    "value": [
+			"/warp instanceworld:shellguardbase"
+		]
+  },
+	
+  //Fortress Fight Shortcut
+  {
+    "op": "add",
+    "path": "/fortressfight",
+    "value": [
+			"/warp instanceworld:sgfortressbossroom"
+		]
+  }
+]
