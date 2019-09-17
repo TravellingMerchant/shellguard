@@ -1,5 +1,5 @@
 {
-  "objectName" : "sgfortressteleporter2",
+  "objectName" : "sgbasefortressteleporter",
   "objectType" : "teleporter",
   "colonyTags" : ["misc"],
   "printable" : false,
@@ -21,12 +21,12 @@
   "lightColor" : [56, 102, 124],
 
   "interactAction" : "OpenTeleportDialog",
-  "interactData" : "/interface/warping/sgfortresswarp2.config",
+  "interactData" : "/interface/warping/sgfortresswarpbase.config",
 
-  "inventoryIcon" : "sgfortressteleporter2icon.png",
+  "inventoryIcon" : "sgbasefortressteleportericon.png",
   "orientations" : [
     {
-      "imageLayers" : [ { "image" : "sgfortressteleporter2.png:<color>", "fullbright" : true }, { "image" : "sgfortressteleporter2lit.png:<color>" } ],
+      "imageLayers" : [ { "image" : "sgbasefortressteleporter.png:<color>", "fullbright" : true }, { "image" : "sgbasefortressteleporterlit.png:<color>" } ],
 
       "imagePosition" : [-8, 0],
       "frames" : 1,

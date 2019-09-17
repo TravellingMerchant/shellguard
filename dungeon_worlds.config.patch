@@ -45,7 +45,7 @@
       "gravity" : 80,
       "worldSize" : [1000, 500],
       "dungeonBaseHeight" : 400,
-      "dungeonSurfaceHeight" : 5,
+      "dungeonSurfaceHeight" : 20,
       "ambientLightLevel" : [200, 200, 200],
       "ambientNoises" : "/sfx/environmental/garden_day.ogg",
       "musicTrack" : "/music/arctic-constellation2.ogg",
