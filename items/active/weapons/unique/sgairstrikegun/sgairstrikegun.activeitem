@@ -53,7 +53,7 @@
 	    //"crouchRecoilKnockbackVelocity" : 0	//When crouching it uses this instead of recoilKnockbackVelocity
       },
       {
-        "time" : 15,
+        "time" : 10,
         "energyCost" : 50,
         "cooldown" : 0.1,
         "projectileType" : "sgairstrikeflarespawner",

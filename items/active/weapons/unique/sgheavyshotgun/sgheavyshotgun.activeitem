@@ -16,8 +16,7 @@
   "animation" : "sgheavyshotgun.animation",
   "animationParts" : {
     "gun" : "sgheavyshotgun.png",
-    "gunfullbright" : "sgheavyshotgunfullbright.png",
-    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+    "gunfullbright" : "sgheavyshotgunfullbright.png"
   },
   "animationCustom" : {},
   "muzzleOffset" : [3.5, 0.375],

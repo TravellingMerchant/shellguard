@@ -7,7 +7,7 @@
           "off" : {},
           "charge" : {
             "frames" : 4,
-            "cycle" : 15.0,
+            "cycle" : 10.0,
             "mode" : "transition",
             "transition" : "fullcharge",
             "properties" : {

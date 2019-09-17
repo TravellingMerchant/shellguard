@@ -3,7 +3,7 @@
     "size" : [70, 16],
     "dimensions" : [4, 4],
     "names" : [
-      [ "empty.1", "empty.2", "empty.3", "empty.4" ],
+      [ "empty.1", "null", "null", "null" ],
       [ "charge.1", "charge.2", "charge.3", "charge.4" ],
       [ "fullcharge.1", "fullcharge.2", "fire.1", "fire.2"],
       [ "fire.3", "cooldown.1", "cooldown.2", "cooldown.3"]

@@ -116,25 +116,6 @@
             }
           }
         }
-      },
-      "muzzleFlash" : {
-        "properties" : {
-          "zLevel" : -1,
-          "centered" : true,
-          "offset" : [1.5, 0],
-          "fullbright" : true,
-          "transformationGroups" : ["muzzle"]
-        },
-
-        "partStates" : {
-          "firing" : {
-            "fire" : {
-              "properties" : {
-                "image" : "<partImage>:<variant>.<frame>"
-              }
-            }
-          }
-        }
       }
     }
   },
