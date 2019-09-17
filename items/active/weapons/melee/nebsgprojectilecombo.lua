@@ -135,46 +135,47 @@ function NebSGProjectileCombo:fire()
 		if stance.gunShotConfig and canFire then
 			local firePosition = vec2.add(mcontroller.position(), activeItem.handPosition(stance.gunShotConfig.projectileFirePoint or animator.partPoint("blade", "projectileFirePoint") or {0,0}))
 			local params = stance.gunShotConfig.projectileParameters or {}
-			params.power = stance.gunShotConfig.projectileDamage * config.getParameter("damageLevelMultiplier")
+			params.power = stance.gunShotConfig.projectileDamage * config.getParameter("damageLevelMultiplier") / stance.gunShotConfig.projectileCount or 1
 			params.powerMultiplier = activeItem.ownerPowerMultiplier()
 			params.speed = util.randomInRange(params.speed)
 			
 			world.debugPoint(firePosition, "red")
 			
 			if not world.lineTileCollision(mcontroller.position(), firePosition) and status.overConsumeResource("energy", stance.gunShotConfig.energyUsage) then
-				for i = 1, (stance.projectileCount or 1) do
-				  --Muzzle Flash--
-					animator.setPartTag("muzzleFlash", "variant", math.random(1, 3))
-					animator.burstParticleEmitter("muzzleFlash")
-					animator.setAnimationState("firing", "fire")
-					animator.playSound(stance.gunShotConfig.fireSound or "gunfire")
+				--Muzzle Flash--
+				animator.setPartTag("muzzleFlash", "variant", math.random(1, 3))
+				animator.burstParticleEmitter("muzzleFlash")
+				animator.setAnimationState("firing", "fire")
+				animator.playSound(stance.gunShotConfig.fireSound or "gunfire")
 
-					animator.setLightActive("muzzleFlash", true)
-				
-					--Aim Vector--
-					local aimVector = vec2.rotate({1, 0}, (stance.gunShotConfig.aimAtCursor and activeItem.aimAngle(0, activeItem.ownerAimPosition()) or self.weapon.aimAngle) + sb.nrand(stance.gunShotConfig.projectileInaccuracy or 0, 0) + (stance.gunShotConfig.projectileAimAngleOffset or 0))
-					aimVector[1] = aimVector[1] * mcontroller.facingDirection()
-				
-					--Recoil--
-					if stance.gunShotConfig.recoilKnockbackVelocity then
-						--If not crouching or if crouch does not impact recoil
-						if not (stance.gunShotConfig.crouchStopsRecoil and mcontroller.crouching()) then
-							local recoilVelocity = vec2.mul(vec2.norm(vec2.mul(aimVector, -1)), stance.gunShotConfig.recoilKnockbackVelocity)
-							--If aiming down and not in zero G, reset Y velocity first to allow for breaking of falls
-							if (self.weapon.aimAngle <= 0 and not mcontroller.zeroG()) then
-							mcontroller.setYVelocity(0)
-							end
-							mcontroller.addMomentum(recoilVelocity)
-							mcontroller.controlJump()
-						--If crouching
-						elseif stance.gunShotConfig.crouchRecoilKnockbackVelocity then
-							local recoilVelocity = vec2.mul(vec2.norm(vec2.mul(aimVector, -1)), stance.gunShotConfig.crouchRecoilKnockbackVelocity)
-							mcontroller.setYVelocity(0)
-							mcontroller.addMomentum(recoilVelocity)
-						end
-					end
+				animator.setLightActive("muzzleFlash", true)
 			
-					--Spawn the Projectile--
+				--Aim Vector--
+				local aimVector = vec2.rotate({1, 0}, (stance.gunShotConfig.aimAtCursor and activeItem.aimAngle(0, activeItem.ownerAimPosition()) or self.weapon.aimAngle) + sb.nrand(stance.gunShotConfig.projectileInaccuracy or 0, 0) + (stance.gunShotConfig.projectileAimAngleOffset or 0))
+				aimVector[1] = aimVector[1] * mcontroller.facingDirection()
+			
+				--Recoil--
+				if stance.gunShotConfig.recoilKnockbackVelocity then
+					--If not crouching or if crouch does not impact recoil
+					if not (stance.gunShotConfig.crouchStopsRecoil and mcontroller.crouching()) then
+						local recoilVelocity = vec2.mul(vec2.norm(vec2.mul(aimVector, -1)), stance.gunShotConfig.recoilKnockbackVelocity)
+						--If aiming down and not in zero G, reset Y velocity first to allow for breaking of falls
+						if (self.weapon.aimAngle <= 0 and not mcontroller.zeroG()) then
+						mcontroller.setYVelocity(0)
+						end
+						mcontroller.addMomentum(recoilVelocity)
+						mcontroller.controlJump()
+					--If crouching
+					elseif stance.gunShotConfig.crouchRecoilKnockbackVelocity then
+						local recoilVelocity = vec2.mul(vec2.norm(vec2.mul(aimVector, -1)), stance.gunShotConfig.crouchRecoilKnockbackVelocity)
+						mcontroller.setYVelocity(0)
+						mcontroller.addMomentum(recoilVelocity)
+					end
+				end
+		
+				
+				--Spawn the Projectile--
+				for i = 1, (stance.gunShotConfig.projectileCount or 1) do
 					world.spawnProjectile(
 						stance.gunShotConfig.projectile,
 						firePosition,
@@ -184,8 +185,8 @@ function NebSGProjectileCombo:fire()
 						params
 					)
 				end
-				canFire = false
 			end
+			canFire = false
 		end
 		if stance.gunShotConfig then
 			if stance.gunShotConfig.fireTime and not canFire then
