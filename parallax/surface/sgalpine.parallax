@@ -32,7 +32,7 @@
       "fadePercent" : 0.3
     },
     {
-      "kind" : "frozenback",
+      "kind" : "moonback",
       "baseCount" : 1,
       "offset" : [0, 420],
       "parallax" : 12.5,

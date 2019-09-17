@@ -253,19 +253,7 @@
                  "y":48
                 }, 
                 {
-                 "gid":7607,
-                 "height":67,
-                 "id":4749,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":272,
-                 "y":136
-                }, 
-                {
-                 "gid":7699,
+                 "gid":7700,
                  "height":32,
                  "id":4751,
                  "name":"",
@@ -277,7 +265,7 @@
                  "y":136
                 }, 
                 {
-                 "gid":2147491347,
+                 "gid":2147491348,
                  "height":32,
                  "id":4756,
                  "name":"",
@@ -311,6 +299,18 @@
                  "width":8,
                  "x":0,
                  "y":144
+                }, 
+                {
+                 "gid":7609,
+                 "height":67,
+                 "id":4760,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":264,
+                 "y":136
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -408,7 +408,7 @@
          "y":0
         }],
  "nextlayerid":17,
- "nextobjectid":4760,
+ "nextobjectid":4761,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
@@ -567,7 +567,7 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }, 
         {
-         "firstgid":7609,
+         "firstgid":7610,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/human.json"
         }],
  "tilewidth":8,

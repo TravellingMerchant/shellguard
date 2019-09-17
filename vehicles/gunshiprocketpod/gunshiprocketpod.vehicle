@@ -1,11 +1,11 @@
 {
-  "name" : "sgbasicgunship",
+  "name" : "gunshiprocketpod",
   "script" : "sggunship.lua",
   "boundBox" : [-10, -3, 10, 3],
   "slaveControlTimeout" : 2.0,
   "slaveControlHeartbeat" : 1.0,
   "canBeHit" : true,
-  "animation" : "sgbasicgunship.animation",
+  "animation" : "gunshiprocketpod.animation",
 
   "loungePositions" : {
     "drivingSeat" : {
@@ -16,7 +16,7 @@
       "emote" : "neutral",
       "dance" : "typing",
       "cameraFocus" : true,
-      "directives" : "?addmask=/vehicles/gunship/sgbasicgunshipplayermask.png"
+      "directives" : "?addmask=/vehicles/gunshiprocketpod/sgbasicgunshipplayermask.png"
     },
     "passengerSeat" : {
       "part" : "foreground",
@@ -56,12 +56,11 @@
 					"gunName" : "forwardDoubleCannonFront",
 					"aimMinMax" : [-75,60],
 					"emptyAim" : 0,
-					"projectileType" : "swarmadvancedrockethoming",
+					"projectileType" : "sgswarmrocket",
 					"slaves" : [2],
 					"punishSlaves" : {"forwardDoubleCannonBack":0.5},
 					"projectileParams" : {
-						"power" : 40,
-					    "speed" : 60
+						"power" : 10
 					},
 					"inaccuracy" : 0.005,
 					"projectileCount" : 1,
@@ -77,10 +76,9 @@
 					"aimMinMax" : [-75,60],
 					"emptyAim" : 0,
 					"slavedTo" : 1,
-					"projectileType" : "swarmadvancedrockethoming",
+					"projectileType" : "sgswarmrocket",
 					"projectileParams" : {
-						"power" : 40,
-					    "speed" : 60
+						"power" : 10
 					},
 					"inaccuracy" : 0.005,
 					"projectileCount" : 1,
