@@ -504,7 +504,7 @@
 				"properties" : {
 					"centered" : true,
 					"zLevel" : 4,
-					"offset" : [6, -1.125],
+					"offset" : [5.5, -1.125],
 					"transformationGroups" : ["forwardDoubleCannonFront"],
 					"anchorPart" : "foreground"
 				},
@@ -648,9 +648,8 @@
 		"/sfx/gun/tankshot.ogg"
 	],
 	"forwardDoubleCannons" : [
-			"/sfx/gun/cannonfire1.ogg",
-			"/sfx/gun/cannonfire1.ogg",
-			"/sfx/gun/sgmotoshot.ogg"
+			"/sfx/gun/fireworkgun_large1.ogg",
+			"/sfx/gun/fireworkgun_large2.ogg"
 		],
 		"collisionNotification" : [
 			"/sfx/tech/hoverbike_bump1.ogg",
@@ -673,7 +672,7 @@
 		"engineStart" : [ "/sfx/tools/teleport_up.ogg" ],
 		"engineLoop" : [ "/sfx/vehicles/gunship engine.ogg" ],
 		"engineStartDamaged" : [ "/sfx/tools/teleport_up.ogg" ],
-		"engineLoopDamaged" : [ "/sfx/tech/hoverbike_idle_loop.ogg" ],
+		"engineLoopDamaged" : [ "/sfx/vehicles/gunship enginealarm.ogg" ],
 		"damageIntermittent" : [
 			"/sfx/gun/grenadeblast_small_fire1.ogg",
 			"/sfx/gun/grenadeblast_small_fire2.ogg",

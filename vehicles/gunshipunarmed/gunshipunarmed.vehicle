@@ -1,5 +1,5 @@
 {
-  "name" : "sgbasicgunship",
+  "name" : "gunshipunarmed",
   "script" : "sggunship.lua",
   "boundBox" : [-10, -3, 10, 3],
   "slaveControlTimeout" : 2.0,
@@ -42,94 +42,14 @@
   "hoverVelocityFactor" : 0,
   "hoverControlForce" : 100,
   "targetHorizontalVelocity" : 40,
-  "horizontalControlForce" : 120,
+  "horizontalControlForce" : 200,
   "targetUpwardVelocity" : 40,
-  "upwardControlForce" : 60,
+  "upwardControlForce" : 160,
   "targetDownwardVelocity" : -40,
-  "downwardControlForce" : 120,
+  "downwardControlForce" : 200,
   "spinFriction" : 0.1,
 	"mainStates" : {"opening":true,"closing":true},
 	"gunnery" : {
-		"drivingSeat" : {
-			"PrimaryFire" : [
-				{
-					"gunName" : "forwardDoubleCannonFront",
-					"aimMinMax" : [-75,60],
-					"emptyAim" : 0,
-					"projectileType" : "swarmadvancedrockethoming",
-					"slaves" : [2],
-					"punishSlaves" : {"forwardDoubleCannonBack":0.5},
-					"projectileParams" : {
-						"power" : 40,
-					    "speed" : 60
-					},
-					"inaccuracy" : 0.005,
-					"projectileCount" : 1,
-					"gunCenter" : [2.5, -1.125],
-					"gunLength" : 3,
-					"fireRate" : 1,
-					"barrels" : [[0,-0.75],[0,0.75]],
-					"playSounds" : ["forwardDoubleCannons"],
-					"setAnimationStates" : {"forwardDoubleCannonFront":"fire"}
-				},
-				{
-					"gunName" : "forwardDoubleCannonBack",
-					"aimMinMax" : [-75,60],
-					"emptyAim" : 0,
-					"slavedTo" : 1,
-					"projectileType" : "swarmadvancedrockethoming",
-					"projectileParams" : {
-						"power" : 40,
-					    "speed" : 60
-					},
-					"inaccuracy" : 0.005,
-					"projectileCount" : 1,
-					"gunCenter" : [7.5, -1.125],
-					"gunLength" : 3,
-					"fireRate" : 1,
-					"barrels" : [[0,-0.75],[0,0.75]],
-					"playSounds" : ["forwardDoubleCannons"],
-					"setAnimationStates" : {"forwardDoubleCannonBack":"fire"}
-				}
-			],
-			"AltFire" : [
-				{
-					"gunName" : "ventralAutocannon",
-					"aimMinMax" : [-175,0],
-					"emptyAim" : 0,
-					"projectileType" : "sgsuperheated",
-					"projectileParams" : {
-						"power" : 10
-					},
-					"inaccuracy" : 0.01,
-					"projectileCount" : 1,
-					"gunCenter" : [4, -3.75],
-					"gunLength" : 2.25,
-					"fireRate" : 0.12,
-					"playSounds" : ["ventralAutocannon"],
-					"setAnimationStates" : {"ventralAutocannon":"fire"}
-				}
-			],
-			"Special1" : [
-				{
-					"gunName" : "bombingBay",
-					"noGroup" : true,
-					"aimMinMax" : [-90,-90],
-					"projectileType" : "sgplasmitegrenade",
-					"projectileParams" : {
-						"power" : 50,
-						"speed" : 30
-					},
-					"inaccuracy" : 0.025,
-					"projectileCount" : 1,
-					"gunCenter" : [-2, -1],
-					"gunLength" : 0,
-					"fireRate" : 1.5,
-					"barrels" : [[0,-1.5],[0,0],[0,1.5]],
-					"playSounds" : ["ventralAutocannon"]
-				}
-			]
-		}
 	},
 	"thrusters" : {"sideThrusterFront":{"thrusterTargets":[0,-40,-60],"approach":0.005,"thrusterCenter":[-3,1.75]},"sideThrusterBack":{"thrusterTargets":[0,-40,-60],"approach":0.005,"thrusterCenter":[9,2]}},
 	"leveledGroups" : {"backFinFront":[-9, 2],"backFinBack":[-4.25, 2]},
@@ -162,7 +82,7 @@
 
   "minNotificationCollisionAccel" : 15,
   "minDamageCollisionAccel" : 45,
-  "terrainCollisionDamage" : 10,
+  "terrainCollisionDamage" : 400,
 
 
   //Damage visual effects
