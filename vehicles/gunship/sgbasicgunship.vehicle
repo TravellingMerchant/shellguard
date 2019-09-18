@@ -58,16 +58,16 @@
 					"emptyAim" : 0,
 					"projectileType" : "swarmadvancedrockethoming",
 					"slaves" : [2],
-					"punishSlaves" : {"forwardDoubleCannonBack":0.5},
+					"punishSlaves" : {"forwardDoubleCannonBack":0.7},
 					"projectileParams" : {
-						"power" : 40,
+						"power" : 50,
 					    "speed" : 60
 					},
 					"inaccuracy" : 0.005,
 					"projectileCount" : 1,
 					"gunCenter" : [2.5, -1.125],
 					"gunLength" : 3,
-					"fireRate" : 1,
+					"fireTime" : 1.4,
 					"barrels" : [[0,-0.75],[0,0.75]],
 					"playSounds" : ["forwardDoubleCannons"],
 					"setAnimationStates" : {"forwardDoubleCannonFront":"fire"}
@@ -79,14 +79,14 @@
 					"slavedTo" : 1,
 					"projectileType" : "swarmadvancedrockethoming",
 					"projectileParams" : {
-						"power" : 40,
+						"power" : 50,
 					    "speed" : 60
 					},
 					"inaccuracy" : 0.005,
 					"projectileCount" : 1,
 					"gunCenter" : [7.5, -1.125],
 					"gunLength" : 3,
-					"fireRate" : 1,
+					"fireTime" : 1.4,
 					"barrels" : [[0,-0.75],[0,0.75]],
 					"playSounds" : ["forwardDoubleCannons"],
 					"setAnimationStates" : {"forwardDoubleCannonBack":"fire"}
@@ -95,17 +95,17 @@
 			"AltFire" : [
 				{
 					"gunName" : "ventralAutocannon",
-					"aimMinMax" : [-175,0],
+					"aimMinMax" : [-179,0],
 					"emptyAim" : 0,
 					"projectileType" : "sgsuperheated",
 					"projectileParams" : {
-						"power" : 10
+						"power" : 13
 					},
 					"inaccuracy" : 0.01,
 					"projectileCount" : 1,
 					"gunCenter" : [4, -3.75],
-					"gunLength" : 2.25,
-					"fireRate" : 0.12,
+					"gunLength" : 2.5,
+					"fireTime" : 0.2,
 					"playSounds" : ["ventralAutocannon"],
 					"setAnimationStates" : {"ventralAutocannon":"fire"}
 				}
@@ -115,7 +115,7 @@
 					"gunName" : "bombingBay",
 					"noGroup" : true,
 					"aimMinMax" : [-90,-90],
-					"projectileType" : "sgplasmitegrenade",
+					"projectileType" : "impactgrenade",
 					"projectileParams" : {
 						"power" : 50,
 						"speed" : 30
@@ -124,7 +124,7 @@
 					"projectileCount" : 1,
 					"gunCenter" : [-2, -1],
 					"gunLength" : 0,
-					"fireRate" : 1.5,
+					"fireTime" : 1.5,
 					"barrels" : [[0,-1.5],[0,0],[0,1.5]],
 					"playSounds" : ["ventralAutocannon"]
 				}
@@ -142,27 +142,25 @@
 
   //Health and damage
   "protection" : 50,
-  "maxHealth" : 1000,
+  "maxHealth" : 2000,
 
   "damageStateNames" : ["undamaged"],
 
-  "lightsInDamageState" : [
-                          ["headlightBeam","dashboardGlow"]
-                          ],
+  "lightsInDamageState" : [[]],
 
   "damageStatePassengerDances" : ["","","",""],
 
-  "damageStateDriverEmotes" : ["neutral","annoyed","annoyed","annoyed"],
-  "damageStatePassengerEmotes" : ["neutral","annoyed","sad","oh"],
+  "damageStateDriverEmotes" : ["neutral"],
+  "damageStatePassengerEmotes" : ["neutral"],
 
 
 
   "damageTakenEmote" : "oooh",
   "damageEmoteTime" : 2.0,
 
-  "minNotificationCollisionAccel" : 15,
-  "minDamageCollisionAccel" : 45,
-  "terrainCollisionDamage" : 10,
+  "minNotificationCollisionAccel" : 20,
+  "minDamageCollisionAccel" : 60,
+  "terrainCollisionDamage" : 100,
 
 
   //Damage visual effects

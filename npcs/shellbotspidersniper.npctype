@@ -139,9 +139,9 @@
             "chest" : [ { "name" : "ironwatchdronespiderchest" } ],
             "legs" : [ { "name" : "ironwatchdronespiderlegs" } ],
             "primary" : [
-              "sgincenerator"
+              "sgpraxisimperium"
 			  ],
-            "sheathedprimary" : [ "sgincenerator" ],
+            "sheathedprimary" : [ "sgpraxisimperium" ],
             "alt" : [
               { "name" : "" }
             ]

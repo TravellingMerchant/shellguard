@@ -153,13 +153,6 @@
 						"mode" : "loop"
 					}
 				}
-			},
-			"headlights" : {
-				"default" : "off",
-				"states" : {
-					"off" : {},
-					"on" : {}
-				}
 			}
 		},
 
@@ -302,43 +295,12 @@
 					}
 				}
 			},
-			"lights" : {
-				"properties" : {
-					"centered" : true,
-					"zLevel" : 2,
-					"fullbright" : true,
-					"transformationGroups" : ["flip", "rotation"]
-				},
-				"partStates" : {
-					"headlights" : {
-						"off" : {
-							"properties" : {
-							}
-						},
-						"on" : {
-							"properties" : {
-								"image" : "hoverbikeheadlights.png:headlights.<damageState>",
-								"offset" : [3.1875, -0.0625 ]
-							}
-						}
-					}
-				}
-			},
 			"fire" : {
 				"properties" : {
 					"centered" : true,
 					"zLevel" : 2,
 					"fullbright" : true,
 					"transformationGroups" : ["flip", "rotation"]
-				},
-				"partStates" : {
-					"onfire" : {
-						"on" : {
-							"properties" : {
-								"image" : "hoverbikefire.png:burn.<frame>"
-							}
-						}
-					}
 				}
 			},
 			"rearThrust" : {
@@ -392,7 +354,7 @@
 				"properties" : {
 					"centered" : true,
 					"zLevel" : 4,
-					"offset" : [-2.75, -0.25],
+					"offset" : [-2.75,-0.625],
 					"transformationGroups" : ["sideThrusterFront"],
 			"anchorPart" : "foreground"
 				},
@@ -415,7 +377,7 @@
 				"properties" : {
 					"centered" : true,
 					"zLevel" : -4,
-					"offset" : [10, -0.25],
+					"offset" : [10, -0.625],
 					"transformationGroups" : ["sideThrusterBack"],
 			"anchorPart" : "foreground"
 				},
@@ -548,31 +510,6 @@
 	},
 
 	"particleEmitters" : {
-		"rearThrusterIdle" : {
-			"transformationGroups" : ["flip", "rotation"],
-			"emissionRate" : 5.0,
-			"offsetRegion" : [ -5, 0.5, -5, 1.5],
-			"particles" : [ { "particle" : "hoverbikethrust"} ]
-		},
-		"rearThrusterDrive" : {
-			"transformationGroups" : ["flip", "rotation"],
-			"emissionRate" : 15.0,
-			"offsetRegion" : [-3.5, 0.5, -3.5, -0.5],
-			"particles" : [ { "particle" : "hoverbikethrust"} ]
-		},
-		"ventralThrusterIdle" : {
-			"transformationGroups" : ["flip", "rotation"],
-			"emissionRate" : 5.0,
-			"offsetRegion" : [-0.5, -1.5, 0.5, -1.55],
-			"particles" : [ { "particle" : "hoverbikedownthrust"} ]
-		},
-		"ventralThrusterJump" : {
-			"transformationGroups" : ["flip", "rotation"],
-			"emissionRate" : 15.0,
-			"burstCount"	: 2,
-			"offsetRegion" : [-0.5, -1.5, 0.5, -1.55],
-			"particles" : [ { "particle" : "hoverbikedownthrust"} ]
-		},
 		"smoke" : {
 			"transformationGroups" : ["flip", "rotation"],
 			"emissionRate" : 0.0,
@@ -605,8 +542,7 @@
         "emissionRate" : 0.0,
         "burstCount"  : 50,
         "offsetRegion" : [0, -1.5, 7, 1.5],
-        "particles" : [{ "particle" : "hoverbikegreenshard"},
-                       { "particle" : "fireshard"}]
+        "particles" : [{ "particle" : "fireshard"}]
       },
 
       "wreckage" : {
@@ -622,26 +558,7 @@
       }
 	},
 
- "lights" : {
-	 "dashboardGlow" : {
-			"active" : false,
-			"transformationGroups" : ["flip", "rotation"],
-			"position" : [2.0, 0.5],
-			"color" : [120, 80, 0],
-			"pointLight" : true,
-			"pointAngle" : 140,
-			"pointBeam" : 5
-		},
-		"headlightBeam" : {
-			"active" : false,
-			"transformationGroups" : ["flip", "rotation"],
-			"position" : [4.5, 0.0],
-			"color" : [250, 250, 200],
-			"pointLight" : true,
-			"pointAngle" : -5,
-			"pointBeam" : 5
-		}
-	},
+ "lights" : {},
 
 	"sounds" : {
 	"ventralAutocannon" : [
@@ -673,16 +590,12 @@
 		"engineStart" : [ "/sfx/tools/teleport_up.ogg" ],
 		"engineLoop" : [ "/sfx/vehicles/gunship engine.ogg" ],
 		"engineStartDamaged" : [ "/sfx/tools/teleport_up.ogg" ],
-		"engineLoopDamaged" : [ "/sfx/tech/hoverbike_idle_loop.ogg" ],
+		"engineLoopDamaged" : [ "/sfx/vehicles/gunship enginealarm.ogg" ],
 		"damageIntermittent" : [
 			"/sfx/gun/grenadeblast_small_fire1.ogg",
 			"/sfx/gun/grenadeblast_small_fire2.ogg",
 			"/sfx/gun/grenadeblast_small_fire3.ogg"
 		],
-
-		"hornLoop" : [ "/sfx/tech/honk.ogg" ],
-		"headlightSwitchOn" : [ "/sfx/objects/floodlights_on.ogg" ],
-		"headlightSwitchOff" : [ "/sfx/objects/floodlights_off.ogg" ],
 
 		"returnvehicle" : [ "/sfx/tech/vehicle_disappear1.ogg" ]
 

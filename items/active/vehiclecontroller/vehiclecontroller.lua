@@ -50,7 +50,6 @@ function activate(fireMode, shiftHeld)
 
   elseif self.consumePromise == nil then
     local vehicleId = world.entityQuery(activeItem.ownerAimPosition(), 0, {includedTypes = {"vehicle"}, order = "nearest"})[1]
-	sb.logInfo("%s",vehicleId)
     if vehicleId then
       self.consumePromise = world.sendEntityMessage(vehicleId, "store", config.getParameter("key"))
     end

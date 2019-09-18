@@ -64,6 +64,8 @@ function init()
 	self.engineIdleVolume = config.getParameter("engineIdleVolume")
 	self.engineRevVolume = config.getParameter("engineRevVolume")
 
+	self.rearThrusterParticles = config.getParameter("rearThrusterParticles")
+	self.ventralThrusterParticles = config.getParameter("ventralThrusterParticles")
 
 	self.damageStatePassengerDances = config.getParameter("damageStatePassengerDances")
 	self.damageStatePassengerEmotes = config.getParameter("damageStatePassengerEmotes")
@@ -101,8 +103,10 @@ function init()
 	self.headlightCanToggle = true
 	self.headlightsOn = false
 	self.hornPlaying = false
-
-	animator.setAnimationState("headlights", "off")
+	
+	if self.primaryFireHeadlight or self.altFireHeadlight then
+		animator.setAnimationState("headlights", "off")
+	end
 
 	--this comes in from the controller.
 	self.ownerKey = config.getParameter("ownerKey")
@@ -125,7 +129,9 @@ function init()
 			function(_, _, ownerKey)
 				if (self.ownerKey and self.ownerKey == ownerKey and self.driver == nil) then
 					animator.setAnimationState("movement", "warpOutPart1")
-					switchHeadLights(1, 1, false)
+					if self.primaryFireHeadlight or self.altFireHeadlight then
+						switchHeadLights(1, 1, false)
+					end
 					animator.playSound("returnvehicle")
 					return {storable = true, healthFactor = storage.health / self.maxHealth}
 				else
@@ -139,7 +145,7 @@ function init()
 		for seat,arsenal in pairs(self.gunnery) do
 			for arsenalTrigger,subarsenal in pairs(arsenal) do
 				for i,gun in ipairs(subarsenal) do
-					gun.cooldown = gun.fireRate
+					gun.cooldown = gun.fireTime
 					gun.aimAngle = 0
 				end
 			end
@@ -319,10 +325,10 @@ function updateDriveEffects(healthFactor, driverThisFrame)
 
 	-- is the engine sound playing ?
 	if (self.loopPlaying ~= nil) then
-		if (self.engineVolume == self.engineIdleVolume) then
+		if (self.engineVolume == self.engineIdleVolume) and self.rearThrusterParticles then
 			animator.setParticleEmitterActive("rearThrusterIdle", true)
 			animator.setParticleEmitterActive("rearThrusterDrive", false)
-		else
+		elseif self.rearThrusterParticles then
 			animator.setParticleEmitterActive("rearThrusterIdle", false)
 			animator.setParticleEmitterActive("rearThrusterDrive", true)
 			rearThrusterFrame = 3
@@ -334,10 +340,12 @@ function updateDriveEffects(healthFactor, driverThisFrame)
 			self.engineRevTimer = 0.5
 			animator.setSoundPitch(self.loopPlaying, self.engineRevPitch, self.engineRevTimer)
 			animator.setSoundVolume(self.loopPlaying, self.engineRevVolume, self.engineRevTimer)
-
-			animator.setParticleEmitterActive("ventralThrusterIdle", false)
-			animator.setParticleEmitterActive("ventralThrusterJump", true)
-			animator.burstParticleEmitter("ventralThrusterJump")
+			
+			if self.ventralThrusterParticles then
+				animator.setParticleEmitterActive("ventralThrusterIdle", false)
+				animator.setParticleEmitterActive("ventralThrusterJump", true)
+				animator.burstParticleEmitter("ventralThrusterJump")
+			end
 			ventralThrusterFrame = 3
 
 			self.revEngine = false
@@ -346,9 +354,10 @@ function updateDriveEffects(healthFactor, driverThisFrame)
 				self.engineRevTimer = self.engineRevTimer - script.updateDt()
 				ventralThrusterFrame = 3
 			else
-				animator.setParticleEmitterActive("ventralThrusterIdle", true)
-				animator.setParticleEmitterActive("ventralThrusterJump", false)
-
+				if self.ventralThrusterParticles then
+					animator.setParticleEmitterActive("ventralThrusterIdle", true)
+					animator.setParticleEmitterActive("ventralThrusterJump", false)
+				end
 				--settling to the normal engine pitch and volume
 				animator.setSoundPitch(self.loopPlaying, self.enginePitch, 1.5)
 				animator.setSoundVolume(self.loopPlaying, self.engineVolume, 1.5)
@@ -359,11 +368,14 @@ function updateDriveEffects(healthFactor, driverThisFrame)
 		animator.setAnimationState(thruster, "on")
 	end
 	else
-		animator.setParticleEmitterActive("rearThrusterIdle", false)
-		animator.setParticleEmitterActive("rearThrusterDrive", false)
-		animator.setParticleEmitterActive("ventralThrusterIdle", false)
-		animator.setParticleEmitterActive("ventralThrusterJump", false)
-
+		if self.rearThrusterParticles then
+			animator.setParticleEmitterActive("rearThrusterIdle", false)
+			animator.setParticleEmitterActive("rearThrusterDrive", false)
+		end
+		if self.ventralThrusterParticles then
+			animator.setParticleEmitterActive("ventralThrusterIdle", false)
+			animator.setParticleEmitterActive("ventralThrusterJump", false)
+		end
 		for thruster,thrusterStats in pairs(self.thrusters) do
 		animator.setAnimationState(thruster, "off")
 	end
@@ -473,7 +485,7 @@ function switchHeadLights(oldIndex, newIndex, activate)
 
 		if (self.headlightsOn) then
 			animator.setAnimationState("headlights", "on")
-		else
+		elseif self.primaryFireHeadlight or self.altFireHeadlight then
 			animator.setAnimationState("headlights", "off")
 		end
 	end
@@ -647,12 +659,12 @@ function controls()
 						if gun.cooldown == 0 then
 							if gun.barrels then
 								for barrel,barrelOffset in ipairs(gun.barrels) do
-									fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(vec2.add(vec2.add(mcontroller.position(),vec2.rotate(barrelOffset,gun.aimAngle+self.angle)),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)),vec2.rotate({gun.gunLength,0},gun.aimAngle)),gun.projectileCount,gun.fireRate,util.wrapAngle(gun.aimAngle+self.angle))
+									fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(vec2.add(vec2.add(mcontroller.position(),vec2.rotate(barrelOffset,gun.aimAngle+self.angle)),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)),vec2.rotate({gun.gunLength,0},gun.aimAngle)),gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
 								end
 							else
-								fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)),vec2.rotate({gun.gunLength,0},gun.aimAngle)),gun.projectileCount,gun.fireRate,util.wrapAngle(gun.aimAngle+self.angle))
+								fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)),vec2.rotate({gun.gunLength,0},gun.aimAngle)),gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
 							end
-							gun.cooldown = gun.fireRate
+							gun.cooldown = gun.fireTime
 							if gun.punishSlaves then
 								for slave,punishment in pairs(gun.punishSlaves) do
 									for i,gun in ipairs(subarsenal) do
