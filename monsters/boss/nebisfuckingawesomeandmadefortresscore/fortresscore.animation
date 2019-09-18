@@ -42,6 +42,30 @@
         }
       },
 
+	  //CORE CHARGE
+      "chargeUp" : {
+        "priority" : 1,
+        "default" : "hidden",
+        "states" : {
+          "hidden" : {},
+          "charge" : {
+            "frames" : 5,
+            "cycle" : 0.75,
+            "mode" : "transition",
+            "transition" : "charged",
+            "properties" : {
+              //"immediateSound" : "/sfx/monsters/boss/fortresscore/ventopen.ogg",
+              "immediateSoundRangeMultiplier" : 1
+            }
+          },
+          "charged" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "loop"
+          }
+        }
+      },
+			
 	  //VENTS
       "topLeftVents" : {
         "priority" : 1,
@@ -477,7 +501,37 @@
           }
         }
       },
+			
 	  
+	  //CORE CHARGE
+      "chargeUp" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 5,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "chargeUp" : {
+            "hidden" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "charge" : {
+              "properties" : {
+                "image" : "<partImage>:charge.<frame>"
+              }
+            },
+            "charged" : {
+              "properties" : {
+                "image" : "<partImage>:charged.<frame>"
+              }
+            }
+          }
+        }
+      },
+			
 	  //VENTS
       "topLeftVents" : {
         "properties" : {

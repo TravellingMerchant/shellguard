@@ -1,0 +1,9 @@
+{
+  "name" : "chargeUp",
+  "category" : "sgnebisamadladandmadefortress",
+  "type" : "chargeUp",
+
+  "frames" : {
+    "chargeUp" : "fortresscharge.png"
+  }
+}

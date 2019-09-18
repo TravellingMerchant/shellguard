@@ -1,0 +1,22 @@
+{
+  "name" : "coreChargeLaser",
+  "label" : "CRUSH",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/coreChargeLaser.lua" ],
+
+    "coreChargeLaser" : {
+      "chargeUpTime" : 2,
+      "shots" : 3,
+      "projectileType" : "standardbullet",
+      "projectileConfig" : {}
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/tankshot.ogg" ]
+    }
+  }
+}
