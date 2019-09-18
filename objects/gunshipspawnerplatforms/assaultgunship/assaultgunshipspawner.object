@@ -1,0 +1,66 @@
+{
+  "objectName" : "nebsgassaultgunshipspawner",
+  "colonyTags" : ["shellguard"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 500,
+  "description" : "A platform devised to warp in gunships from the Shellguard Base.",
+  "shortdescription" : "Assault Gunship Warpgate",
+  "race" : "human",
+  
+  "health" : 666,
+
+  "apexDescription" : "TODO",
+  "avianDescription" : "TODO",
+  "floranDescription" : "TODO",
+  "glitchDescription" : "TODO",
+  "humanDescription" : "TODO",
+  "hylotlDescription" : "TODO",
+  "novakidDescription" : "TODO",
+
+  "inventoryIcon" : "assaultgunshipspawnericon.png",
+  "orientations" : [
+    {
+	  "dualImage" : "platform.png:<color>",
+      "imagePosition" : [0, 0],
+
+	  "spaces" : [
+        [0, 1], [0, 2], [0, 3],
+        [0, 4], [0, 5], [0, 6],
+        [0, 7], [0, 8], [0, 9],
+        [0, 10], [0, 11], [0, 12],
+        [0, 13], [0, 14], [0, 15],
+        [0, 16], [0, 17], [0, 18],
+        [0, 19], [0, 20], [0, 21],
+        [0, 22], [0, 23], [0, 24],
+      ],
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "animation" : "/objects/gunshipspawnerplatforms/gunshipspawnerplatform.animation",
+  "animationParts" : {
+    "platform" : "platform.png",
+    "shiphologram" : "shiphologram.png"
+  },
+  "animationPosition" : [0, 0],
+  
+  "scripts" : [
+    "/objects/scripts/thea-interactpickup.lua"
+  ],
+  "scriptDelta" : 1,
+  
+	//Vehicle
+	"vehicleType" : "",
+	//"vehicleOverrideParameters" : {}, don't use this if you dont know how to
+	"vehicleSpawnOffset" : [0, 1],
+	
+	//Cooldown
+	"cooldown" : 15
+	
+	//Floating
+  "useFloatingObject" : true,			//If true, the item will smoothly float up and down
+  "floatingObjectCycle" : 2.0,			//Time for the item to move a full cycle
+  "floatingObjectMaxTransform" : 0.5	//Maximum up and down movement from origin
+}

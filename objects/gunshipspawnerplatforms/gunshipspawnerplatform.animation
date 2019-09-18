@@ -1,0 +1,86 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "objectState" : {
+        "default" : "ready",
+        "states" : {
+          "ready" : {
+            "frames" : 1,
+            "cycle" : 1.2,
+            "mode" : "loop"
+          },
+          "buttonpress" : {
+            "frames" : 1
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "charging"
+          },
+          "charging" : {
+            "frames" : 1
+            "cycle" : 1.2,
+            "mode" : "loop"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "platform" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : false
+        },
+        "partStates" : {
+          "objectState" : {
+            "ready" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.ready"
+              }
+            },
+            "buttonpress" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.buttonpress"
+              }
+            },
+            "charging" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.charging"
+              }
+            }
+          }
+        }
+      },
+      "shiphologram" : {
+        "properties" : {
+          "zLevel" : 0,
+					"offset" : [0, 2.5],
+          "centered" : false,
+          "transformationGroups" : [ "floatingShip" ]
+        },
+        "partStates" : {
+          "objectState" : {
+            "ready" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.<frame>"
+              }
+            },
+            "buttonpress" : {
+              "properties" : {
+                "image" : "<partImage>:<color>.<frame>"
+              }
+            },
+            "charging" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  
+  "transformationGroups" : {
+    "floatingShip" : {}
+  }
+}
