@@ -564,6 +564,9 @@
 	"ventralAutocannon" : [
 		"/sfx/gun/tankshot.ogg"
 	],
+	"bombbay" : [
+		"/sfx/gun/grenadeblast_small_fire2.ogg"
+	],
 	"forwardDoubleCannons" : [
 			"/sfx/gun/cannonfire1.ogg",
 			"/sfx/gun/cannonfire1.ogg",

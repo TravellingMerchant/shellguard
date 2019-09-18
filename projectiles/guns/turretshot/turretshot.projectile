@@ -13,7 +13,7 @@
   "actionOnReap" : [
     {
       "action" : "config",
-      "file" : "/projectiles/explosions/turretsmoke/turretsmoke.config"
+      "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
     }
   ],
   "power" : 50.0,

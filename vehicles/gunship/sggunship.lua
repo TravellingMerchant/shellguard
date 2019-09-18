@@ -83,8 +83,10 @@ function init()
 	self.engineVolume = self.engineIdleVolume;
 
 	self.driver = nil;
-	self.facingDirection = 1
+	self.facingDirection = config.getParameter("spawnFacingDirection",1)
 	self.angle = 0
+	animate()
+	
 	self.jumpTimer = 0
 	self.engineRevTimer = 0.0
 	self.revEngine = false
@@ -137,6 +139,13 @@ function init()
 				else
 					return {storable = false, healthFactor = storage.health / self.maxHealth}
 				end
+			end)
+			
+	--setup the kms functionality
+	message.setHandler("terminateSelf",
+			function(_,_)
+				animator.setAnimationState("movement", "warpOutPart1")
+				animator.playSound("returnvehicle")
 			end)
 
 	updateVisualEffects(storage.health, 0, false)

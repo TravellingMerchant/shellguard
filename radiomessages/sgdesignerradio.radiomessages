@@ -206,6 +206,57 @@
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
     "text" : "This.. This is incredible. We'll rescue him in no time with this. Get back to the outpost and fast!"
-  }
+  },
+  
+// -------  flight test ------------
 
+  "sglethalwarning" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "There's live robots to fight against past this point, careful, they shoot back!"
+  },
+
+  "sgflighttest1" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "Welcome to the flight test platform! Here you can try out some brand new gunships!"
+  },
+
+  "sgflighttest2" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "Once you're done, use the teleporter to return back to base."
+  },
+
+  "sgassaultgunship" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "The Assault Gunship sports powerful incendiary cannons, but is heavy and hard to control. It has decent armour too, making it a good all rounder."  
+  },
+  
+  "sgbombgunship" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "The Bomber Gunship has massive air to ground firepower and armour, but lacks direct fighting power. It's easy to control, but has a low top speed."  
+  },
+  
+  "sginterceptorgunship" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "The Interceptor Gunship is fast and easy to control, but has low armour. It also has two powerful rotary guns, with a limited firing angle."  
+  },
+
+  "sgflightturorial" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "Primary fire will fire your side guns, alternate fire will fire your secondary gun. Some aircraft also let you use their bomb-bay with your special key, normally [F]."
+  }
+  
 }

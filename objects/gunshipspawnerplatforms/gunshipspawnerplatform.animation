@@ -10,13 +10,13 @@
             "mode" : "loop"
           },
           "buttonpress" : {
-            "frames" : 1
+            "frames" : 1,
             "cycle" : 0.1,
             "mode" : "transition",
             "transition" : "charging"
           },
           "charging" : {
-            "frames" : 1
+            "frames" : 1,
             "cycle" : 1.2,
             "mode" : "loop"
           }
@@ -53,7 +53,7 @@
       "shiphologram" : {
         "properties" : {
           "zLevel" : 0,
-					"offset" : [0, 2.5],
+					"offset" : [0, 0.5],
           "centered" : false,
           "transformationGroups" : [ "floatingShip" ]
         },
@@ -82,5 +82,11 @@
   
   "transformationGroups" : {
     "floatingShip" : {}
+  },
+  
+  "sounds" : {
+	"spawnShip" : [
+		"/sfx/npc/boss/ufo_teleport_appear.ogg"
+	]
   }
 }

@@ -18,7 +18,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt1bERACAIBEEaoVL6sAxrNDFUHMOHu5mPiDYi3GzYeeGae3myu1p48eLFqxJevN282dT68cy9KlXzEFGvbr+q6haO4KeR",
+         "data":"eJyrlmVgmMaAHVfLDk1MyD\/45IcaGPXvqH9H\/Tvq36ECRv076t+R5l98eKgBUvyzDoqHCxhu\/hkFo2AUjCww0H1zemMAwUSoCQ==",
          "encoding":"base64",
          "height":18,
          "id":16,
@@ -253,7 +253,7 @@
                  "y":48
                 }, 
                 {
-                 "gid":7700,
+                 "gid":7701,
                  "height":32,
                  "id":4751,
                  "name":"",
@@ -265,7 +265,7 @@
                  "y":136
                 }, 
                 {
-                 "gid":2147491348,
+                 "gid":2147491349,
                  "height":32,
                  "id":4756,
                  "name":"",
@@ -567,7 +567,7 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }, 
         {
-         "firstgid":7610,
+         "firstgid":7611,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/human.json"
         }],
  "tilewidth":8,

@@ -29,10 +29,10 @@
 
       "hurtWaitForGround" : false,
 
-      "targetQueryRange" : 45,
+      "targetQueryRange" : 80,
       "targetOnDamage" : true,
       "keepTargetInSight" : true,
-      "keepTargetInRange" : 60,
+      "keepTargetInRange" : 80,
       "targetOutOfSightTime" : 5.0,
 
       "foundTargetActions" : [],

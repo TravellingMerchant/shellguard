@@ -1,23 +1,23 @@
 {
-  "objectName" : "nebsgassaultgunshipspawner",
+  "objectName" : "nebassaultgunshipspawner",
   "colonyTags" : ["shellguard"],
   "rarity" : "Rare",
   "category" : "decorative",
   "printable" : false,
-  "price" : 500,
+  "price" : 50000,
   "description" : "A platform devised to warp in gunships from the Shellguard Base.",
   "shortdescription" : "Assault Gunship Warpgate",
   "race" : "human",
   
-  "health" : 666,
+  "health" : 1,
 
-  "apexDescription" : "TODO",
-  "avianDescription" : "TODO",
-  "floranDescription" : "TODO",
-  "glitchDescription" : "TODO",
-  "humanDescription" : "TODO",
-  "hylotlDescription" : "TODO",
-  "novakidDescription" : "TODO",
+  "apexDescription" : "This can warp in a Shellguard Gunship!",
+  "avianDescription" : "This can warp in a Shellguard Gunship!",
+  "floranDescription" : "Thissss can warp in a Sssshellguard Gunssship!",
+  "glitchDescription" : "Enthused. This can warp in a Shellguard Gunship.",
+  "humanDescription" : "This can warp in a Shellguard Gunship!",
+  "hylotlDescription" : "This can warp in a Shellguard Gunship!",
+  "novakidDescription" : "This 'ere can warp in a Shellguard Gunship!",
 
   "inventoryIcon" : "assaultgunshipspawnericon.png",
   "orientations" : [
@@ -26,14 +26,7 @@
       "imagePosition" : [0, 0],
 
 	  "spaces" : [
-        [0, 1], [0, 2], [0, 3],
-        [0, 4], [0, 5], [0, 6],
-        [0, 7], [0, 8], [0, 9],
-        [0, 10], [0, 11], [0, 12],
-        [0, 13], [0, 14], [0, 15],
-        [0, 16], [0, 17], [0, 18],
-        [0, 19], [0, 20], [0, 21],
-        [0, 22], [0, 23], [0, 24],
+        [0, 0]
       ],
       "anchors" : [ "bottom" ]
     }
@@ -47,17 +40,17 @@
   "animationPosition" : [0, 0],
   
   "scripts" : [
-    "/objects/scripts/thea-interactpickup.lua"
+    "/objects/scripts/neb-interactvehicle.lua"
   ],
   "scriptDelta" : 1,
   
 	//Vehicle
-	"vehicleType" : "",
+	"vehicleType" : "sgbasicgunship",
 	//"vehicleOverrideParameters" : {}, don't use this if you dont know how to
-	"vehicleSpawnOffset" : [0, 1],
+	"vehicleSpawnOffset" : [12, 6],
 	
 	//Cooldown
-	"cooldown" : 15
+	"cooldown" : 15,
 	
 	//Floating
   "useFloatingObject" : true,			//If true, the item will smoothly float up and down

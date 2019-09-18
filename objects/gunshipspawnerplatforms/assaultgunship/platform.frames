@@ -1,9 +1,9 @@
 {
   "frameGrid" : {
     "size" : [196, 90],
-    "dimensions" : [2, 1],
+    "dimensions" : [3, 1],
     "names" : [
-      [ "default.ready", "default.buttonpress", "default.charging.1" ]
+      [ "default.ready", "default.buttonpress", "default.charging" ]
     ]
   },
   
