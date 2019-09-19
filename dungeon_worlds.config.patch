@@ -330,6 +330,25 @@
       "musicTrack" : "/music/the-apex.ogg",
       "biome": "sgcentensskycity"
     }
+  },
+  
+  {
+    "op" : "add",
+    "path" : "/sgskyattack",
+    "value" : {
+      "primaryDungeon" : "sgskyattack",
+      "weatherPool" : [
+        [1.0, "windstorm"]
+      ],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2500, 1000],
+      "dungeonBaseHeight" : 1000,
+      "dungeonSurfaceHeight" : 450,
+      "ambientLightLevel" : [80, 200, 80],
+      "musicTrack" : "/music/arctic-battle2-loop.ogg",
+      "biome": "sgcentensskycity"
+    }
   },  
   
   {

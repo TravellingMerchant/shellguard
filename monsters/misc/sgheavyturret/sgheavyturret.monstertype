@@ -219,7 +219,7 @@
           "baseValue" : 0.0
         },
         "powerMultiplier" : {
-          "baseValue" : 2.0
+          "baseValue" : 0.8
         },
         "fireStatusImmunity" : {
           "baseValue" : 1.0
