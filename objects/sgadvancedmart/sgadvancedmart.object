@@ -29,6 +29,7 @@
 	  { "item" : "sgspikeblaster" },
 	  { "item" : "sgheavyshotgun" },
 	  { "item" : "sgsupershotgun" },
+	  { "item" : "sgsurvivorsrifle" },
 	  { "item" : "sgheavycannon" },
 	  { "item" : "sgheavyboomer" },
 	  { "item" : "sgtoobiggun" }

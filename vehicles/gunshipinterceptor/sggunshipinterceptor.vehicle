@@ -92,24 +92,6 @@
 					"setAnimationStates" : {"forwardDoubleCannonBack":["fire",true]}
 				}
 			],
-			"AltFire" : [
-				{
-					"gunName" : "ventralAutocannon",
-					"aimMinMax" : [-179,0],
-					"emptyAim" : 0,
-					"projectileType" : "sgsuperheated",
-					"projectileParams" : {
-						"power" : 13
-					},
-					"inaccuracy" : 0.01,
-					"projectileCount" : 1,
-					"gunCenter" : [4, -3.75],
-					"gunLength" : 2.5,
-					"fireTime" : 0.2,
-					"playSounds" : ["ventralAutocannon"],
-					"setAnimationStates" : {"ventralAutocannon":"fire"}
-				}
-			],
 			"Special1" : [
 				{
 					"gunName" : "bombingBay",
