@@ -1,6 +1,6 @@
 {
-  "name" : "gunshipinterceptor",
-  "script" : "sggunship.lua",
+  "name" : "sggunshipbomber",
+  "script" : "/vehicles/gunship/sggunship.lua",
   "boundBox" : [-10, -3, 10, 3],
   "slaveControlTimeout" : 2.0,
   "slaveControlHeartbeat" : 1.0,
@@ -41,12 +41,12 @@
   "hoverTargetDistance" : 4,
   "hoverVelocityFactor" : 0,
   "hoverControlForce" : 100,
-  "targetHorizontalVelocity" : 50,
-  "horizontalControlForce" : 200,
-  "targetUpwardVelocity" : 50,
-  "upwardControlForce" : 170,
-  "targetDownwardVelocity" : -50,
-  "downwardControlForce" : 200,
+  "targetHorizontalVelocity" : 40,
+  "horizontalControlForce" : 120,
+  "targetUpwardVelocity" : 40,
+  "upwardControlForce" : 70,
+  "targetDownwardVelocity" : -40,
+  "downwardControlForce" : 120,
   "spinFriction" : 0.1,
 	"mainStates" : {"opening":true,"closing":true},
 	"gunnery" : {
@@ -54,40 +54,40 @@
 			"PrimaryFire" : [
 				{
 					"gunName" : "forwardDoubleCannonFront",
-					"aimMinMax" : [-30,-10],
-					"emptyAim" : -10,
-					"projectileType" : "flakbullet",
+					"aimMinMax" : [-75,90],
+					"emptyAim" : 0,
+					"projectileType" : "sgswarmrocket",
 					"slaves" : [2],
-					"punishSlaves" : {"forwardDoubleCannonBack":0.05},
+					"punishSlaves" : {"forwardDoubleCannonBack":0.2},
 					"projectileParams" : {
-						"power" : 10,
-					    "speed" : 120
+						"power" : 13,
+					    "speed" : 30
 					},
-					"inaccuracy" : 0.015,
+					"inaccuracy" : 0.005,
 					"projectileCount" : 1,
 					"gunCenter" : [2.5, -1.125],
-					"gunLength" : 8,
-					"fireTime" : 0.1,
-					"barrels" : [[0,0]],
+					"gunLength" : 3,
+					"fireTime" : 0.4,
+					"barrels" : [[0,-0.75],[0,0.75]],
 					"playSounds" : ["forwardDoubleCannons"],
-					"setAnimationStates" : {"forwardDoubleCannonFront":"fire"}
+					"setAnimationStates" : {"forwardDoubleCannonFront":["fire",true]}
 				},
 				{
 					"gunName" : "forwardDoubleCannonBack",
-					"aimMinMax" : [-30,-10],
-					"emptyAim" : -10,
+					"aimMinMax" : [-75,90],
+					"emptyAim" : 0,
 					"slavedTo" : 1,
-					"projectileType" : "flakbullet",
+					"projectileType" : "sgswarmrocket",
 					"projectileParams" : {
-						"power" : 10,
-					    "speed" : 120
+						"power" : 13,
+					    "speed" : 30
 					},
-					"inaccuracy" : 0.015,
+					"inaccuracy" : 0.005,
 					"projectileCount" : 1,
 					"gunCenter" : [7.5, -1.125],
-					"gunLength" : 8,
-					"fireTime" : 0.1,
-					"barrels" : [[0,0]],
+					"gunLength" : 3,
+					"fireTime" : 0.4,
+					"barrels" : [[0,-0.75],[0,0.75]],
 					"playSounds" : ["forwardDoubleCannons"],
 					"setAnimationStates" : {"forwardDoubleCannonBack":"fire"}
 				}
@@ -97,15 +97,15 @@
 					"gunName" : "ventralAutocannon",
 					"aimMinMax" : [-179,0],
 					"emptyAim" : 0,
-					"projectileType" : "sgsuperheated",
+					"projectileType" : "sgboomerround",
 					"projectileParams" : {
-						"power" : 13
+						"power" : 100
 					},
 					"inaccuracy" : 0.01,
 					"projectileCount" : 1,
 					"gunCenter" : [4, -3.75],
 					"gunLength" : 2.5,
-					"fireTime" : 0.2,
+					"fireTime" : 1,
 					"playSounds" : ["ventralAutocannon"],
 					"setAnimationStates" : {"ventralAutocannon":"fire"}
 				}
@@ -142,7 +142,7 @@
 
   //Health and damage
   "protection" : 50,
-  "maxHealth" : 2000,
+  "maxHealth" : 2600,
 
   "damageStateNames" : ["undamaged"],
 

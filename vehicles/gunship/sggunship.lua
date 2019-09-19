@@ -690,7 +690,7 @@ function controls()
 							end
 							if gun.setAnimationStates then
 								for animation,state in pairs(gun.setAnimationStates) do
-									animator.setAnimationState(animation,state)
+									animator.setAnimationState(animation,type(state) == "table" and state[1] or state,type(state) == "table" and state[2] or false)
 								end
 							end
 						end

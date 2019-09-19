@@ -1,6 +1,6 @@
 {
-  "name" : "gunshipbomber",
-  "script" : "sggunship.lua",
+  "name" : "sggunshipassault",
+  "script" : "/vehicles/gunship/sggunship.lua",
   "boundBox" : [-10, -3, 10, 3],
   "slaveControlTimeout" : 2.0,
   "slaveControlHeartbeat" : 1.0,
@@ -54,39 +54,39 @@
 			"PrimaryFire" : [
 				{
 					"gunName" : "forwardDoubleCannonFront",
-					"aimMinMax" : [-75,90],
+					"aimMinMax" : [-75,60],
 					"emptyAim" : 0,
-					"projectileType" : "sgswarmrocket",
+					"projectileType" : "swarmadvancedrockethoming",
 					"slaves" : [2],
-					"punishSlaves" : {"forwardDoubleCannonBack":0.2},
+					"punishSlaves" : {"forwardDoubleCannonBack":0.7},
 					"projectileParams" : {
-						"power" : 13,
-					    "speed" : 30
+						"power" : 50,
+					    "speed" : 60
 					},
 					"inaccuracy" : 0.005,
 					"projectileCount" : 1,
 					"gunCenter" : [2.5, -1.125],
 					"gunLength" : 3,
-					"fireTime" : 0.4,
+					"fireTime" : 1.4,
 					"barrels" : [[0,-0.75],[0,0.75]],
 					"playSounds" : ["forwardDoubleCannons"],
 					"setAnimationStates" : {"forwardDoubleCannonFront":"fire"}
 				},
 				{
 					"gunName" : "forwardDoubleCannonBack",
-					"aimMinMax" : [-75,90],
+					"aimMinMax" : [-75,60],
 					"emptyAim" : 0,
 					"slavedTo" : 1,
-					"projectileType" : "sgswarmrocket",
+					"projectileType" : "swarmadvancedrockethoming",
 					"projectileParams" : {
-						"power" : 13,
-					    "speed" : 30
+						"power" : 50,
+					    "speed" : 60
 					},
 					"inaccuracy" : 0.005,
 					"projectileCount" : 1,
 					"gunCenter" : [7.5, -1.125],
 					"gunLength" : 3,
-					"fireTime" : 0.4,
+					"fireTime" : 1.4,
 					"barrels" : [[0,-0.75],[0,0.75]],
 					"playSounds" : ["forwardDoubleCannons"],
 					"setAnimationStates" : {"forwardDoubleCannonBack":"fire"}
@@ -97,15 +97,15 @@
 					"gunName" : "ventralAutocannon",
 					"aimMinMax" : [-179,0],
 					"emptyAim" : 0,
-					"projectileType" : "sgboomerround",
+					"projectileType" : "sgsuperheated",
 					"projectileParams" : {
-						"power" : 100
+						"power" : 13
 					},
 					"inaccuracy" : 0.01,
 					"projectileCount" : 1,
 					"gunCenter" : [4, -3.75],
 					"gunLength" : 2.5,
-					"fireTime" : 1,
+					"fireTime" : 0.2,
 					"playSounds" : ["ventralAutocannon"],
 					"setAnimationStates" : {"ventralAutocannon":"fire"}
 				}
@@ -142,7 +142,7 @@
 
   //Health and damage
   "protection" : 50,
-  "maxHealth" : 2600,
+  "maxHealth" : 2000,
 
   "damageStateNames" : ["undamaged"],
 
