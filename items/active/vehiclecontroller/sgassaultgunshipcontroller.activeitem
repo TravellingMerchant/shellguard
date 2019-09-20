@@ -19,7 +19,7 @@
 
   "respawnTime" : 1.0,
 
-  "vehicleType" : "sgassaultgunship",
+  "vehicleType" : "sggunshipassault",
   "vehicleBoundingBox" : [-11, -4, 11, 4],
   "vehicleImage" : "/vehicles/gunship/sgbasicgunshipwarp.png:warpInPart1.1",
 
