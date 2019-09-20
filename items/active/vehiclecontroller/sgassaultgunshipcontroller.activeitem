@@ -15,7 +15,7 @@
   "animationScripts" : ["vehiclecursor.lua"],
   "filled" : true,
   "tooltipKind" : "vehicle",
-  "largeImage" : "sgbasicgunship.png",
+  "largeImage" : "sgassaultgunship.png",
 
   "respawnTime" : 1.0,
 
