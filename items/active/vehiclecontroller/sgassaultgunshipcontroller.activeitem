@@ -1,5 +1,5 @@
 {
-  "itemName" : "sgbasicgunshipcontroller",
+  "itemName" : "sgassaultgunshipcontroller",
   "level" : 1,
   "price" : 696969,
   "rarity" : "Legendary",
@@ -19,16 +19,16 @@
 
   "respawnTime" : 1.0,
 
-  "vehicleType" : "sgbasicgunship",
+  "vehicleType" : "sgassaultgunship",
   "vehicleBoundingBox" : [-11, -4, 11, 4],
   "vehicleImage" : "/vehicles/gunship/sgbasicgunshipwarp.png:warpInPart1.1",
 
   "animationParts" : {
-    "casing" : "sgbasicgunshipcontroller.png"
+    "casing" : "sgassaultgunshipcontroller.png"
   },
 
-  "inventoryIcon" : "/items/active/vehiclecontroller/sgbasicgunshipcontroller.png:full",
-  "emptyInventoryIcon" : "/items/active/vehiclecontroller/sgbasicgunshipcontroller.png:empty",
-  "filledInventoryIcon" : "/items/active/vehiclecontroller/sgbasicgunshipcontroller.png:full"
+  "inventoryIcon" : "/items/active/vehiclecontroller/sgassaultgunshipcontroller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/sgassaultgunshipcontroller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/sgassaultgunshipcontroller.png:full"
 
 }
