@@ -60,7 +60,7 @@
 					"slaves" : [2],
 					"punishSlaves" : {"forwardDoubleCannonBack":0.05},
 					"projectileParams" : {
-						"power" : 10,
+						"power" : 20,
 					    "speed" : 120
 					},
 					"inaccuracy" : 0.015,
@@ -79,7 +79,7 @@
 					"slavedTo" : 1,
 					"projectileType" : "flakbullet",
 					"projectileParams" : {
-						"power" : 10,
+						"power" : 20,
 					    "speed" : 120
 					},
 					"inaccuracy" : 0.015,
@@ -124,7 +124,7 @@
 
   //Health and damage
   "protection" : 50,
-  "maxHealth" : 2000,
+  "maxHealth" : 3000,
 
   "damageStateNames" : ["undamaged"],
 

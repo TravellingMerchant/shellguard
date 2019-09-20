@@ -60,7 +60,7 @@
 					"slaves" : [2],
 					"punishSlaves" : {"forwardDoubleCannonBack":0.2},
 					"projectileParams" : {
-						"power" : 13,
+						"power" : 15,
 					    "speed" : 30
 					},
 					"inaccuracy" : 0.005,
@@ -79,7 +79,7 @@
 					"slavedTo" : 1,
 					"projectileType" : "sgswarmrocket",
 					"projectileParams" : {
-						"power" : 13,
+						"power" : 15,
 					    "speed" : 30
 					},
 					"inaccuracy" : 0.005,
@@ -142,7 +142,7 @@
 
   //Health and damage
   "protection" : 50,
-  "maxHealth" : 2600,
+  "maxHealth" : 4000,
 
   "damageStateNames" : ["undamaged"],
 

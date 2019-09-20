@@ -99,7 +99,7 @@
 					"emptyAim" : 0,
 					"projectileType" : "sgsuperheated",
 					"projectileParams" : {
-						"power" : 13
+						"power" : 20
 					},
 					"inaccuracy" : 0.01,
 					"projectileCount" : 1,
@@ -142,7 +142,7 @@
 
   //Health and damage
   "protection" : 50,
-  "maxHealth" : 2000,
+  "maxHealth" : 3500,
 
   "damageStateNames" : ["undamaged"],
 
