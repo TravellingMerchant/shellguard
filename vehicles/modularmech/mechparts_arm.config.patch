@@ -106,13 +106,190 @@
       }
     }
   },
+  
+   {
+    "op": "add",
+    "path": "/sgmechheavyminigun",
+    "value": {
+      "stats": {
+        "power": 6,
+        "energy": 6
+      },
+      "partParameters": {
+        "script": "/vehicles/modularmech/armscripts/gunarm.lua",
+        "armClass": "GunArm",
+        "rotationLimits": [
+          -1.75,
+          1.75
+        ],
+        "fireOffset": [
+          7.3,
+          -0.1
+        ],
+        "extendTime": 2,
+        "fireTime": 0.1,
+        "projectileType": "flakbullet",
+        "projectileParameters": {
+          "power": 10,
+          "speed": 100
+        },
+        "projectileInaccuracy": 0.03
+      },
+      "partImages": {
+        "<armName>": "arm/sgmechminigun.png",
+        "<armName>Fullbright": "arm/sgmechminigun_fullbright.png"
+      },
+      "defaultPrimaryColors": [
+      "A3381C",
+      "7B1500",
+      "5B0600",
+      "3C0000"
+      ],
+      "defaultSecondaryColors": [
+      "555555",
+      "3d3d3d",
+      "2f2f2f",
+      "202020"
+      ],
+      "animationCustom": {
+      "animatedParts" : {
+      "stateTypes" : {
+      "leftArm" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {},
+          "rotate" : {},
+          "windup" : {
+            "frames" : 4,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "active"
+          },
+          "active" : {
+            "frames" : 3,
+            "cycle" : 0.1,
+            "mode" : "loop"
+          },
+          "winddown" : {
+            "frames" : 4,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "rotate"
+          },
+          "cooldown" : {},
+          "recover" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      },
+      "rightArm" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {},
+          "rotate" : {},
+          "windup" : {
+            "frames" : 4,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "active"
+          },
+          "active" : {
+            "frames" : 3,
+            "cycle" : 0.1,
+            "mode" : "loop"
+          },
+          "winddown" : {
+            "frames" : 4,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "rotate"
+          },
+          "cooldown" : {},
+          "recover" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+         }
+        }
+       }
+      },
+        "particleEmitters": {
+          "<armName>Fire": {
+            "active": false,
+            "burstCount": 8,
+            "anchorPart": "<armName>",
+            "offsetRegion": [
+              7.3,
+              2.875,
+              7.3,
+              2.375
+            ],
+            "particles": [
+              {
+                "particle": {
+                  "type": "ember",
+                  "size": 1.2,
+                  "color": [
+                    255,
+                    200,
+                    0,
+                    255
+                  ],
+                  "light": [
+                    100,
+                    100,
+                    50
+                  ],
+                  "fullbright": true,
+                  "fade": 0.9,
+                  "initialVelocity": [
+                    10,
+                    0
+                  ],
+                  "finalVelocity": [
+                    0,
+                    -50
+                  ],
+                  "approach": [
+                    0,
+                    20
+                  ],
+                  "timeToLive": 0.6,
+                  "layer": "middle",
+                  "variance": {
+                    "initialVelocity": [
+                      5,
+                      5
+                    ],
+                    "timeToLive": 0.2
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "sounds": {
+          "<armName>Fire": [
+ "/sfx/vehicles/sgminigun.ogg",
+ "/sfx/vehicles/sgminigun2.ogg"
+          ]
+        }
+      }
+    }
+  },
+ 
   {
     "op": "add",
     "path": "/sgmechrailgun",
     "value": {
       "stats": {
-        "power": 6,
-        "energy": 6
+        "power": 4,
+        "energy": 3
       },
       "partParameters": {
         "script": "/vehicles/modularmech/armscripts/gunarm.lua",
