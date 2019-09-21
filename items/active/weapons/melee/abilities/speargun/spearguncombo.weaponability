@@ -69,7 +69,11 @@
         "twoHanded" : false,
         "allowRotate" : true,
         "weaponOffset" : [0, -0.5],
-        "allowFlip" : true
+        "allowFlip" : true,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "closed"
+				}
       },
       "windup1" : {
         "duration" : 0.25,
@@ -79,12 +83,7 @@
         "weaponOffset" : [0, 0.5],
 
         "allowRotate" : true,
-        "allowFlip" : true,
-				
-				//Not required, but makes the animationState open to reveal the blade
-				"animationStates" : {
-					"blade" : "open"
-				}
+        "allowFlip" : true
       },
       "preslash1" : {
         "duration" : 0.0,
@@ -103,32 +102,7 @@
         "weaponOffset" : [0, 1],
 
         "allowRotate" : true,
-        "allowFlip" : true,
-
-				//If this exists it will try to shoot based on the variables within
-				"gunShotConfig" : {
-					//General
-					"aimAtCursor" : false,	//If true, will fire toward the cursor instead of the rotation of the weapon
-					"fireTime" : 0.1, 			//If this exists it loops during the stance duration firing in intervals of this number
-					"energyUsage" : 5,
-					"fireSound" : "gunfire",
-				
-					//Recoil
-					"recoilKnockbackVelocity" : 3,
-					"crouchStopsRecoil" : true,
-					"crouchRecoilKnockbackVelocity" : 1,
-					
-					//Projectile
-					"projectile" : "standardbullet",
-					"projectileCount" : 1,
-					"projectileDamage" : 2,
-					"projectileParameters" : {
-						"knockback" : 5
-					},
-					"projectileInaccuracy" : 0,
-					"projectileAimAngleOffset" : 0,
-          "projectileFirePoint" : [3.0, 0.0]
-				}
+        "allowFlip" : true
       },
       "wait1" : {
         "duration" : 0.2,
@@ -138,13 +112,7 @@
         "weaponOffset" : [0, 2.5],
 
         "allowRotate" : false,
-        "allowFlip" : false,
-				
-								
-				//Not required, but makes the animationState close to hide the blade
-				"animationStates" : {
-					"blade" : "close"
-				}
+        "allowFlip" : false
       },
       "windup2" : {
         "duration" : 0.15,
@@ -165,9 +133,10 @@
         "allowFlip" : false
       },
       "fire2" : {
-        "duration" : 0.2,
-        "armRotation" : -45,
-        "weaponRotation" : -55,
+        "duration" : 0.5,
+        "armRotation" : 50,
+        "weaponRotation" : 360,
+        "weaponAngularVelocity" : 1200,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -191,7 +160,7 @@
         "allowRotate" : true
       },
       "fire3" : {
-        "duration" : 0.3,
+        "duration" : 0.1,
         "armRotation" : -150,
         "weaponRotation" : 55,
         "weaponOffset" : [0, 0],
@@ -224,7 +193,7 @@
 				}
       },
       "fire4" : {
-        "duration" : 0.3,
+        "duration" : 0.5,
         "armRotation" : -20,
         "weaponRotation" : -70,
         "twoHanded" : true,
