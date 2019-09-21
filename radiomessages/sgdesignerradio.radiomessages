@@ -213,7 +213,7 @@
   "sglethalwarning" : {
     "type" : "mission",
     "senderName" : "Weapons Designer",
-    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "portraitImage" : "/interface/chatbubbles/wdsonslyeyebrow.png:<frame>",
     "text" : "There's live robots to fight against past this point, careful, they shoot back!"
   },
 
@@ -257,6 +257,84 @@
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
     "text" : "Primary fire will fire your side guns, alternate fire will fire your secondary gun. Some aircraft also let you use their bomb-bay with your special key, normally [F]."
-  }
+  },
+
+//------------ RESCUE ---------
+
+  "sgskyattack1a" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsonsad.png:<frame>",
+    "text" : "Alright, the dropship is waiting at the enterance to the cities under-section. You need to fly inside and take out their defenses."
+  },
+
+  "sgskyattack1b" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsonsad.png:<frame>",
+    "text" : "Once you've done it, a recovery team will be sent in to rescue my Dad from these rebels."
+  },
+
+  "sgskyattack2" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "They know you're here now, good luck! A stealth unit has set up some warp pads further in, should you need a replacement gunship."
+  },
+
+  "sgskyattack3a" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wddadtalkeyebrow.png:<frame>",
+    "text" : "Hello? Hello? Does anyone read? If you're there, please reply!"
+  },
+
+  "sgskyattack3b" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "Dad? Is that you?!"
+  },
+
+  "sgskyattack4a" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wddadtalk.png:<frame>",
+    "text" : "Ryan, my boy! I knew that you'd be behind all this commotion! I'm glad you're here!"
+  },
+
+  "sgskyattack4b" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "We are here to rescue you! Are you ok?"
+  },
+
+  "sgskyattack4c" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wddadtalk.png:<frame>",
+    "text" : "I'm fine, I'm fine! I stole a guards radio, I'm being held in sector 7c-A of the city."
+  },
+
+  "sgskyattack4d" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "Got it! Stay safe, a recovery team will be with you shortly."
+  },
   
+   "sgskyattack5" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "You're almost there, but it looks like you'll have to go on foot from here!"
+  },
+  
+   "sgskyattack6" : {
+    "type" : "mission",
+    "senderName" : "Weapons Designer",
+    "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
+    "text" : "That's the defense control console! Shut it down and extract, we'll send in the recovery team when it's down! There's a teleporter signal further ahead, you can use that."
+  }
 }

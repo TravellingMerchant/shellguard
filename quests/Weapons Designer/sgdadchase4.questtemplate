@@ -1,0 +1,45 @@
+{
+  "id" : "sgdadchase4",
+  "prerequisites" : ["sgdadchase3"],
+  "title" : "^green;Gunship Testing.",
+  "text" : "Thanks to my Dad's message, we obtained plans to build some prototype gunships! We've set them up on a flight test platform, you should head there and learn to fly them. They will be important in the rescue.",
+  "completionText" : "Now you've learned to fly, we can start the rescue mission. You're going to use it to take out the rebels anti-air defenses.",
+  "moneyRange" : [500, 500],
+  "rewards" : [
+    [ [ "sgbigiron", 1 ], ["money", 500 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/sgweaponsdesigner/sgweaponsdesignerportrait.png"} ],
+        "title" : "Ryan"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/sgweaponsdesigner/sgweaponsdesignerportrait.png"} ],
+        "title" : "Ryan"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to the ^orange;weapons designer^reset;",
+      "findGoal" : "Learn to fly.",
+      "turnIn" : "Return to the ^orange;weapons designer^reset;"
+    },
+
+    "warpEntityUid" : "sgweaponsdesigner",
+    "warpAction" : "instanceworld:sgflighttest",
+    "warpDialog" : "/interface/confirmation/sgdesignerconfirmation.config:weapondesignermission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "sgflighttele",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgweaponsdesigner"
+  }
+}

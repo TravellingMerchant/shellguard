@@ -1,0 +1,45 @@
+{
+  "id" : "sgdadchase5",
+  "prerequisites" : ["sgdadchase4"],
+  "title" : "^green;Rescue Mission",
+  "text" : "Alright, this is it! We know where he's being held and we have the means to rescue him! Your job will be to fly inside the city and shut down it's anti-air defenses so that a recovery team can get my Dad back.",
+  "completionText" : "Thank you for your help in rescuing my Dad, he's back safe and sound! As payment, please take one of these ships as your own. Once we are set up, you can buy some armed gunships over at the landing pad.",
+  "moneyRange" : [500, 500],
+  "rewards" : [
+    [ [ "sgbigiron", 1 ], ["money", 500 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/sgweaponsdesigner/sgweaponsdesignerportrait.png"} ],
+        "title" : "Ryan"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/sgweaponsdesigner/sgweaponsdesignerportrait.png"} ],
+        "title" : "Ryan"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to the ^orange;weapons designer^reset;",
+      "findGoal" : "Shut off the defenses.",
+      "turnIn" : "Return to the ^orange;weapons designer^reset;"
+    },
+
+    "warpEntityUid" : "sgweaponsdesigner",
+    "warpAction" : "instanceworld:sgskyattack",
+    "warpDialog" : "/interface/confirmation/sgdesignerconfirmation.config:weapondesignermission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "sgrescuetele",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgweaponsdesigner"
+  }
+}

@@ -3020,7 +3020,7 @@
                  "y":2792
                 }, 
                 {
-                 "gid":9299,
+                 "gid":2147492947,
                  "height":16,
                  "id":3850,
                  "name":"",
@@ -3036,8 +3036,8 @@
                  "type":"",
                  "visible":true,
                  "width":24,
-                 "x":10216,
-                 "y":2776
+                 "x":12648,
+                 "y":2472
                 }, 
                 {
                  "gid":2147493261,
@@ -4154,6 +4154,66 @@
                  "width":172,
                  "x":3736,
                  "y":2224
+                }, 
+                {
+                 "gid":2147491088,
+                 "height":20,
+                 "id":3951,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"sgsurvivorsrifle\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":12656,
+                 "y":2456
+                }, 
+                {
+                 "gid":7440,
+                 "height":20,
+                 "id":3952,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"sgrobotsword\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":10216,
+                 "y":2776
+                }, 
+                {
+                 "gid":9299,
+                 "height":16,
+                 "id":3953,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"treasurePools\":[\"basicTreasure\"]}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":12672,
+                 "y":2472
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4699,7 +4759,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":3951,
+ "nextobjectid":3954,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",

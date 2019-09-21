@@ -29,6 +29,7 @@
 	  { "item" : "sgquadshot" },
       { "item" : "sgmechrocket" },
       { "item" : "sgmechgattling" },
+      { "item" : "sgmechheavyminigun" },
       { "item" : "sgmechartillery" },
       { "item" : "sgmechrailgun" }
     ]
