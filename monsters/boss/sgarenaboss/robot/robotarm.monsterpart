@@ -1,0 +1,9 @@
+{
+  "name" : "sgarenabossarms",
+  "category" : "sgarenaboss",
+  "type" : "arm",
+
+  "frames" : {
+    "arm" : "sgarenabossarm.png"
+  }
+}

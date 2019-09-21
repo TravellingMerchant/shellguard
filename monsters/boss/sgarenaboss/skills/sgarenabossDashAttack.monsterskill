@@ -1,0 +1,92 @@
+{
+  "name" : "sgarenabossDashAttack",
+  "label" : "DASH 2000",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgarenaboss/skills/sgarenabossDashAttack.lua" ],
+    "sgarenabossDashAttack" : {
+      "edgeDistance" : 30,
+      "dashDistance" : 80,
+      "dashSpeed" : 300,
+      "windupTime" : 0.35,
+
+      "stunTime" : 4
+    }
+  },
+
+  "animationParameters" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "dashing" : {
+          "default" : "off",
+          "states" : {
+            "off" : {
+            },
+            "on" : {
+              "properties" : {
+                "immediateSound" : "/sfx/gun/electricrailgun1.ogg"
+              }
+            },
+            "stunned" : {
+              "properties" : {
+                "persistentSound" : "/sfx/objects/plasmadisc.ogg"
+              }
+            }
+          }
+        }
+      }
+    },
+    "particleEmitters" : {
+      "dashstun" : {
+        "emissionRate" : 50,
+        "particles" : [
+          {
+            "particle" : {
+              "type" : "animated",
+              "animation" : "/animations/electroshock/electroshock.animation",
+              "timeToLive" : 0.2,
+              "rotation" : 0,
+              "initialVelocity" : [0, 0],
+              "layer" : "front",
+              "variance" : {
+                "rotation" : 180
+              }
+            }
+          }
+        ]
+      },
+      "dashParticles" : {
+        "emissionRate" : 80.0,
+        "particles" : [
+          { "particle" : "gravitybubbledot" },
+          { "particle" : "gravitybubbledot" },
+          { "particle" : "gravitybubbledot" },
+          { "particle" : "gravitybubbledot" },
+          { "particle" : "gravitybubbledot" },
+          { "particle" : "gravitybubbledot" },
+          { "particle" : "gravitybubbledotwhite" },
+          { "particle" : "gravitybubbledotwhite" },
+          { "particle" : "gravitybubbledotwhite" },
+          { "particle" : "gravitybubbledotwhite" },
+          { "particle" : "gravitybubbledotwhite" },
+          { "particle" : "gravitybubbledotwhite" }
+        ]
+      },
+      "crashing" : {
+        "emissionRate" : 1.0,
+        "offsetRegion" : [-2, -3, -2, 3],
+        "particles" : [
+          { "particle" : "dust4" },
+          { "particle" : "dust4" },
+          { "particle" : "dust4" },
+          { "particle" : "dust4" }
+        ]
+      }
+    },
+    "sounds" : {
+      "dash" : [ "/sfx/tech/tech_dashftl.ogg" ],
+      "crash" : [ "/sfx/gun/grenadeblast2.ogg" ]
+    }
+  }
+}
