@@ -8,10 +8,10 @@
     "sgarenabossDashAttack" : {
       "edgeDistance" : 30,
       "dashDistance" : 80,
-      "dashSpeed" : 300,
+      "dashSpeed" : 350,
       "windupTime" : 0.35,
 
-      "stunTime" : 4
+      "stunTime" : 0.5
     }
   },
 

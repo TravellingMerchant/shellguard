@@ -31,7 +31,7 @@
 
     "phases" : [
       {
-        "skills" : [ "sgarenabossPunchAttack", "sgarenabossMissileBarrageAttack" ]
+        "skills" : [ "sgarenabossPunchAttack", "sgarenabossDashAttack" ]
       },
       {
         "trigger" : "healthPercentage",
@@ -72,8 +72,8 @@
       "collisionPoly" : [ [-2, -4.5], [2, -4.5], [2, 4], [-2, 4] ],
 
       "mass" : 2.0,
-      "walkSpeed" : 5,
-      "runSpeed" : 13,
+      "walkSpeed" : 35,
+      "runSpeed" : 50,
       "physicsEffectCategories" : ["boss"]
     },
     "jumpTargetDistance" : 4,
