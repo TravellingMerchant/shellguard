@@ -77,6 +77,7 @@ function init()
 	self.leveledGroups = config.getParameter("leveledGroups")
 	self.primaryFireHorn = config.getParameter("primaryFireHorn")
 	self.altFireHorn = config.getParameter("altFireHorn")
+	self.special1ShipFlipLock = config.getParameter("special1ShipFlipLock")
 	
 	self.loopPlaying = nil;
 	self.enginePitch = self.engineRevPitch;
@@ -163,6 +164,7 @@ function init()
 end
 
 function update()
+
 	if mcontroller.atWorldLimit() then
 		vehicle.destroy()
 		return
@@ -178,6 +180,13 @@ function update()
 
 		if (driverThisFrame ~= nil) then
 			vehicle.setDamageTeam(world.entityDamageTeam(driverThisFrame))
+			if not self.special1ShipFlipLock then
+				if world.distance(vehicle.aimPosition("drivingSeat"),mcontroller.position())[1] > 0 then
+					self.facingDirection = 1
+				else
+					self.facingDirection = -1
+				end
+			end
 		else
 			vehicle.setDamageTeam({type = "passive"})
 		end
@@ -239,13 +248,21 @@ function update()
 				end
 			end
 		end
-		if (vehicle.controlHeld("drivingSeat","left") or vehicle.controlHeld("drivingSeat","right")) and vehicle.controlHeld("drivingSeat","up") then
+		if ((vehicle.controlHeld("drivingSeat","left") and self.facingDirection == -1) or (vehicle.controlHeld("drivingSeat","right") and self.facingDirection == 1)) and vehicle.controlHeld("drivingSeat","up") then
 			for thruster,thrusterStats in pairs(self.thrusters) do
 				thrusterStats.thrusterTargetAngle = thrusterStats.thrusterTargets[2]*math.pi/180
 			end
-		elseif (vehicle.controlHeld("drivingSeat","left") or vehicle.controlHeld("drivingSeat","right")) then
+		elseif ((vehicle.controlHeld("drivingSeat","left") and self.facingDirection == -1) or (vehicle.controlHeld("drivingSeat","right")) and self.facingDirection == 1) then
 			for thruster,thrusterStats in pairs(self.thrusters) do
 				thrusterStats.thrusterTargetAngle = thrusterStats.thrusterTargets[3]*math.pi/180
+			end
+		elseif ((vehicle.controlHeld("drivingSeat","left") and self.facingDirection == 1) or (vehicle.controlHeld("drivingSeat","right") and self.facingDirection == -1)) and vehicle.controlHeld("drivingSeat","up") then
+			for thruster,thrusterStats in pairs(self.thrusters) do
+				thrusterStats.thrusterTargetAngle = thrusterStats.thrusterTargets[4]*math.pi/180
+			end
+		elseif ((vehicle.controlHeld("drivingSeat","left") and self.facingDirection == 1) or (vehicle.controlHeld("drivingSeat","right")) and self.facingDirection == -1) then
+			for thruster,thrusterStats in pairs(self.thrusters) do
+				thrusterStats.thrusterTargetAngle = thrusterStats.thrusterTargets[5]*math.pi/180
 			end
 		else
 			for thruster,thrusterStats in pairs(self.thrusters) do
@@ -576,7 +593,6 @@ function move()
 	
 	if vehicle.controlHeld("drivingSeat", "left") then
 		mcontroller.approachXVelocity(-self.targetHorizontalVelocity, self.horizontalControlForce)
-		self.facingDirection = -1
 	if self.velocityRotation then
 		targetAngle = math.atan(mcontroller.yVelocity(),math.max(math.abs(mcontroller.xVelocity()),10))
 		targetAngle = (self.facingDirection < 0) and -targetAngle or targetAngle
@@ -585,7 +601,6 @@ function move()
 		self.engineVolume = self.engineRevVolume;
 	elseif vehicle.controlHeld("drivingSeat", "right") then
 		mcontroller.approachXVelocity(self.targetHorizontalVelocity, self.horizontalControlForce)
-		self.facingDirection = 1
 	if self.velocityRotation then
 		targetAngle = math.atan(mcontroller.yVelocity(),math.max(math.abs(mcontroller.xVelocity()),10))
 		targetAngle = (self.facingDirection < 0) and -targetAngle or targetAngle

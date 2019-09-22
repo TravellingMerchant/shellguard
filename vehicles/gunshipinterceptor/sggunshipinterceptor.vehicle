@@ -113,7 +113,7 @@
 			]
 		}
 	},
-	"thrusters" : {"sideThrusterFront":{"thrusterTargets":[0,-40,-60],"approach":0.005,"thrusterCenter":[-3,1.75]},"sideThrusterBack":{"thrusterTargets":[0,-40,-60],"approach":0.005,"thrusterCenter":[9,2]}},
+	"thrusters" : {"sideThrusterFront":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[-3,1.75]},"sideThrusterBack":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[9,2]}},
 	"leveledGroups" : {"backFinFront":[-9, 2],"backFinBack":[-4.25, 2]},
   "canFly" : true,
   "canJump" : false,
