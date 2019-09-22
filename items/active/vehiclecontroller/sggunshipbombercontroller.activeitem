@@ -1,0 +1,34 @@
+{
+  "itemName" : "sggunshipbombercontroller",
+  "level" : 1,
+  "price" : 696969,
+  "rarity" : "Legendary",
+  "category" : "vehicleController",
+  "description" : "High armour, low speed gunship with powerful bombing weapons.",
+  "shortdescription" : "Olympus-I Bomber Controller",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["vehiclecontroller.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "vehicle",
+  "largeImage" : "sggunshipbomber.png",
+
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "sggunshipbomber",
+  "vehicleBoundingBox" : [-11, -4, 11, 4],
+  "vehicleImage" : "/vehicles/gunship/sgbasicgunshipwarp.png:warpInPart1.1",
+
+  "animationParts" : {
+    "casing" : "sggunshipunarmedcontroller.png"
+  },
+
+  "inventoryIcon" : "/items/active/vehiclecontroller/sgassaultgunshipcontroller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/sgassaultgunshipcontroller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/sgassaultgunshipcontroller.png:full"
+
+}

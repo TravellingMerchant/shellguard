@@ -6,7 +6,7 @@
   "completionText" : "Thank you for your help in rescuing my Dad, he's back safe and sound! As payment, please take one of these ships as your own. Once we are set up, you can buy some armed gunships over at the landing pad.",
   "moneyRange" : [500, 500],
   "rewards" : [
-    [ [ "sgbigiron", 1 ], ["money", 500 ] ]
+    [ [ "sggunshipunarmedcontroller", 1 ], ["money", 500 ] ]
   ],
 
   "updateDelta" : 10,

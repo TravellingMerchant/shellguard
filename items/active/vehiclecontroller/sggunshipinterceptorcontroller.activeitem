@@ -1,0 +1,34 @@
+{
+  "itemName" : "sggunshipinterceptorcontroller",
+  "level" : 1,
+  "price" : 696969,
+  "rarity" : "Legendary",
+  "category" : "vehicleController",
+  "description" : "High speed, nimble gunship with powerful rotary cannons. Limited firing angle.",
+  "shortdescription" : "Olympus-I interceptor Controller",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["vehiclecontroller.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "vehicle",
+  "largeImage" : "sggunshipinterceptor.png",
+
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "sggunshipinterceptor",
+  "vehicleBoundingBox" : [-11, -4, 11, 4],
+  "vehicleImage" : "/vehicles/gunship/sgbasicgunshipwarp.png:warpInPart1.1",
+
+  "animationParts" : {
+    "casing" : "sggunshipunarmedcontroller.png"
+  },
+
+  "inventoryIcon" : "/items/active/vehiclecontroller/sgassaultgunshipcontroller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/sgassaultgunshipcontroller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/sgassaultgunshipcontroller.png:full"
+
+}
