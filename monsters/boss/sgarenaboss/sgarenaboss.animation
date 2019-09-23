@@ -79,7 +79,7 @@
           "offset" : [-1.5, 0],
           "centered" : true,
           "rotationGroup" : "projectileAim",
-          "rotationCenter" : [2.5, -1.25],
+          "rotationCenter" : [0.5, -1.25],
           "zLevel" : 4
         },
 

@@ -1,11 +1,11 @@
 {
-  "name" : "sgarenabossFlamethrowerAttack",
+  "name" : "sgarenabossgrenadetoss",
   "label" : "FLAMETHROWER",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
-    "scripts" : [ "/monsters/boss/sgarenaboss/skills/sgarenabossFlamethrowerAttack.lua" ],
-    "sgarenabossFlamethrowerAttack" : {
+    "scripts" : [ "/monsters/boss/sgarenaboss/skills/sgarenabossgrenadetoss.lua" ],
+    "sgarenabossgrenadetoss" : {
       "distanceRange" : [13, 16],
 
       "windupTime" : 0.5,
@@ -13,7 +13,7 @@
 
       "skillDuration" : 1,
       "angleCycle" : 1.5,
-      "maxFireAngle" : 0.05,
+      "maxFireAngle" : 0.4,
       "fireInterval" : 0.2,
 
       "changeFacingTime" : 0.5,
@@ -21,10 +21,10 @@
       "moveSpeed" : 2,
 
       "projectile" : {
-        "type" : "sentinelshardrocket",
+        "type" : "crabcanoball",
         "config" : {
           "power" : 2.5,
-          "speed" : 5.5,
+          "speed" : 40,
           "damageRepeatGroup" : "shockhopper-flamethrower",
           "damageRepeatTimeout" : 0.1
         }

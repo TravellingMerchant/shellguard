@@ -26,12 +26,12 @@
 
     "renderLayer" : "Projectile-10",
 
-    "skillCount" : 5,
-    "skills" : [ "sgarenabossMissileBarrageAttack", "sgarenabossPunchAttack", "sgarenabossElectricBurstAttack", "sgarenabossFlamethrowerAttack", "sgarenabossDashAttack" ],
+    "skillCount" : 6,
+    "skills" : [ "sgarenabossgrenadetoss", "sgarenabossMissileBarrageAttack", "sgarenabossPunchAttack", "sgarenabossElectricBurstAttack", "sgarenabossFlamethrowerAttack", "sgarenabossDashAttack" ],
 
     "phases" : [
       {
-        "skills" : [ "sgarenabossPunchAttack", "sgarenabossDashAttack" ]
+        "skills" : [ "sgarenabossgrenadetoss", "sgarenabossgrenadetoss", "sgarenabossFlamethrowerAttack", "sgarenabossPunchAttack", "sgarenabossDashAttack" ]
       },
       {
         "trigger" : "healthPercentage",
