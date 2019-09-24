@@ -1,0 +1,9 @@
+{
+  "name" : "shelldroidcyroevil",
+  "category" : "shelldroidcyroevil",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "shelldroidcyroevil.png"
+  }
+}

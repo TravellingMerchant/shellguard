@@ -1,0 +1,16 @@
+{
+  "frameGrid" : {
+    "size" : [32, 38],
+    "dimensions" : [9, 5],
+
+    "names" : [
+      [ null, "idle.1", "idle.2", "idle.3", "idle.4", "idle.5", "idle.6"],
+      [ null, "aggro.1", "aggro.2", "aggro.3", "aggro.4", "aggro.5", "aggro.6"],
+      [ null, "fire.1", "fire.2", "fire.3", "fire.4", "fire.5", "fire.6"],
+      [ null, "hurt.1", null, "aggrohurt.1"]
+    ]
+  },
+  "aliases" : {
+    "aggroidle.1" : "aggro.1",     "aggroidle.2" : "aggro.2",     "aggroidle.3" : "aggro.3",     "aggroidle.4" : "aggro.4",     "aggroidle.5" : "aggro.5",     "aggroidle.6" : "aggro.6"
+  }
+}
