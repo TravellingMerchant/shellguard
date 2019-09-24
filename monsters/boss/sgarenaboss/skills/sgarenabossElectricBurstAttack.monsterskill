@@ -19,7 +19,7 @@
       "projectile" : {
         "type" : "sgdelayedplasma",
         "config" : {
-          "power" : 5,
+          "power" : 10,
           "speed" : 0,
           "bounces" : 0,
           "physics" : "default",

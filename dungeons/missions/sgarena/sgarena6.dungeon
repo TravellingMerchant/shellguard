@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "sgarena6",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "sgarena6" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "sgarena6",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "sgarena6.json" ]
+    }
+  ]
+}

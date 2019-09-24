@@ -15,7 +15,7 @@
       "projectile" : {
         "type" : "sgplasmiteblast",
         "config" : {
-          "power" : 20,
+          "power" : 30,
           "speed" : 0,
           "damageKind" : "hammer"
         },
