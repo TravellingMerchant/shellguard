@@ -7,7 +7,7 @@
     "scripts" : [ "/monsters/boss/sgarenaboss/skills/sgarenabossElectricBurstAttack.lua" ],
     "sgarenabossElectricBurstAttack" : {
       "riseHeight" : 10,
-      "riseSpeed" : 8,
+      "riseSpeed" : 10,
 
       "skillDuration" : 12,
       "winddownTime" : 1,
@@ -17,10 +17,10 @@
       "fireInterval" : 0.2,
       "projectileCount" : 6,
       "projectile" : {
-        "type" : "sgarenabossshock",
+        "type" : "sgdelayedplasma",
         "config" : {
           "power" : 5,
-          "speed" : 20,
+          "speed" : 0,
           "bounces" : 0,
           "physics" : "default",
           "timeToLive" : 2.2

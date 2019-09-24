@@ -26,24 +26,24 @@
 
     "renderLayer" : "Projectile-10",
 
-    "skillCount" : 6,
-    "skills" : [ "sgarenabossgrenadetoss", "sgarenabossMissileBarrageAttack", "sgarenabossPunchAttack", "sgarenabossElectricBurstAttack", "sgarenabossFlamethrowerAttack", "sgarenabossDashAttack" ],
+    "skillCount" : 7,
+    "skills" : [ "sgarenabossPunchAttackblast", "sgarenabossgrenadetoss", "sgarenabossMissileBarrageAttack", "sgarenabossPunchAttack", "sgarenabossElectricBurstAttack", "sgarenabossFlamethrowerAttack", "sgarenabossDashAttack" ],
 
     "phases" : [
       {
-        "skills" : [ "sgarenabossgrenadetoss", "sgarenabossgrenadetoss", "sgarenabossFlamethrowerAttack", "sgarenabossPunchAttack", "sgarenabossDashAttack" ]
+        "skills" : [ "sgarenabossPunchAttackblast", "sgarenabossDashAttack", "sgarenabossPunchAttack",  "sgarenabossPunchAttack", "sgarenabossDashAttack", "sgarenabossgrenadetoss"  ]
       },
       {
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.8,
         "enterPhase" : "sgarenabossElectricBurstAttack",
-        "skills" : [ "sgarenabossFlamethrowerAttack", "sgarenabossMissileBarrageAttack", "sgarenabossDashAttack" ]
+        "skills" : [ "sgarenabossDashAttack",  "sgarenabossgrenadetoss", "sgarenabossPunchAttack", "sgarenabossgrenadetoss", "sgarenabossDashAttack", "sgarenabossFlamethrowerAttack", "sgarenabossPunchAttack" ]
       },
       {
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.5,
         "enterPhase" : "sgarenabossElectricBurstAttack",
-        "skills" : [ "sgarenabossFlamethrowerAttack", "sgarenabossMissileBarrageAttack", "sgarenabossDashAttack" ]
+        "skills" : [ "sgarenabossDashAttack", "sgarenabossFlamethrowerAttack", "sgarenabossPunchAttack", "sgarenabossgrenadetoss", "sgarenabossgrenadetoss", "sgarenabossgrenadetoss", "sgarenabossPunchAttack"  ]
       },
       {
         "trigger" : "healthPercentage",

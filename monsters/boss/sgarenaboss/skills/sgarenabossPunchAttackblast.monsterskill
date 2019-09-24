@@ -1,0 +1,32 @@
+{
+  "name" : "sgarenabossPunchAttackblast",
+  "label" : "FIST PUNCH",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgarenaboss/skills/sgarenabossPunchAttackblast.lua" ],
+    "sgarenabossPunchAttackblast" : {
+      "skillTime" : 4.0,
+
+      "distanceRange" : [4, 8],
+      "windupTime" : 0.3,
+      "winddownTime" : 0.7,
+
+      "projectile" : {
+        "type" : "sgplasmiteblast",
+        "config" : {
+          "power" : 20,
+          "speed" : 0,
+          "damageKind" : "hammer"
+        },
+        "offset" : [3.5, -1]
+      }
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "punch" : [ "/sfx/npc/boss/robotboss_punch2.ogg" ]
+    }
+  }
+}
