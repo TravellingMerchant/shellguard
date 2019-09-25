@@ -37,7 +37,7 @@
   "sgarenabossdrop" : [
     [1, {
       "pool" : [
-        {"weight" : 0.20, "item" : "sgpraxisemperium"}
+        {"weight" : 0.20, "item" : "sgpraxisimperium"}
       ]
     }]
   ],
