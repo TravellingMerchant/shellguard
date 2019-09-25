@@ -18,10 +18,10 @@
   "race" : "human",
   
   "offeredQuests" : [
-    "sgarenaquest1", "sgarenaquest2", "sgarenaquest3", "sgarenaquest4", "sgarenaquest5"
+    "sgarenaquest1", "sgarenaquest2", "sgarenaquest3", "sgarenaquest4", "sgarenaquest5", "sgarenaquest6"
   ],
   "turnInQuests" : [
-    "sgarenaquest1", "sgarenaquest2", "sgarenaquest3", "sgarenaquest4", "sgarenaquest5"
+    "sgarenaquest1", "sgarenaquest2", "sgarenaquest3", "sgarenaquest4", "sgarenaquest5", "sgarenaquest6"
   ],
   "uniqueId" : "Arenaman",
 

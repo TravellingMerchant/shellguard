@@ -1,0 +1,45 @@
+{
+  "id" : "sgarenaquest6",
+  "prerequisites" : ["sgarenaquest5"],
+  "title" : "^green;Nanotrasen Arena 6",
+  "text" : "You're up against someone crazy powerful now! Watch out, he's decimated every one of his opponents so far. I'd suggest making sure you have some jump tech for this.",
+  "completionText" : "Wow, that was crazy! You deserve his helmet as a reward, plus the cash prize!",
+  "moneyRange" : [5000, 5000],
+  "rewards" : [
+    [ [ "sgpraxishelmet", 1 ], ["money", 10000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/arenaman/sgarenamanicon.png"} ],
+        "title" : "Arena Fan"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/arenaman/sgarenamanicon.png"} ],
+        "title" : "Arena Fan"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Enter the ^orange;Nanotrasen Arena^reset;",
+      "findGoal" : "Win in the Arena!",
+      "turnIn" : "Return to ^orange;the Arena Fan^reset;"
+    },
+
+    "warpEntityUid" : "Arenaman",
+    "warpAction" : "instanceworld:sgarena6",
+    "warpDialog" : "/interface/confirmation/sgarenateleportconfirmation.config:sgarenaquest",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgarenatele6",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Arenaman"
+  }
+}
