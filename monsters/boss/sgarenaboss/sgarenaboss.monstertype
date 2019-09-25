@@ -31,7 +31,7 @@
 
     "phases" : [
       {
-        "skills" : [ "sgarenabossDashAttack", "sgarenabossPunchAttack",  "sgarenabossPunchAttack", "sgarenabossDashAttack", "sgarenabossgrenadetoss"  ]
+        "skills" : [ "sgarenabossDashAttack", "sgarenabossPunchAttack",  "sgarenabossPunchAttack", "sgarenabossDashAttack", "sgarenabossgrenadetoss",  "sgarenabossPunchAttack"  ]
       },
       {
         "trigger" : "healthPercentage",
