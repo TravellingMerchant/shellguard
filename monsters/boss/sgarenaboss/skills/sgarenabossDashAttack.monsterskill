@@ -6,8 +6,8 @@
   "parameters" : {
     "scripts" : [ "/monsters/boss/sgarenaboss/skills/sgarenabossDashAttack.lua" ],
     "sgarenabossDashAttack" : {
-      "edgeDistance" : 30,
-      "dashDistance" : 80,
+      "edgeDistance" : 60,
+      "dashDistance" : 200,
       "dashSpeed" : 350,
       "windupTime" : 0.35,
 

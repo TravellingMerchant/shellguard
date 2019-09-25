@@ -6,7 +6,7 @@
   "parameters" : {
     "scripts" : [ "/monsters/boss/sgarenaboss/skills/sgarenabossgrenadetoss.lua" ],
     "sgarenabossgrenadetoss" : {
-      "distanceRange" : [13, 16],
+      "distanceRange" : [18, 21],
 
       "windupTime" : 0.5,
       "winddownTime" : 0.5,
