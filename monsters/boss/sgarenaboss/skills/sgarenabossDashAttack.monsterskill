@@ -11,7 +11,7 @@
       "dashSpeed" : 350,
       "windupTime" : 0.35,
 
-      "stunTime" : 0.5
+      "stunTime" : 1
     }
   },
 
