@@ -9,12 +9,7 @@ function dieState.enterWith(args)
 end
 
 function dieState.enteringState(stateData)
-  world.spawnNpc(mcontroller.position(), "penguin", "penguinscientist", 1)
 
-  local players = world.players()
-  for _,playerId in pairs(players) do
-    world.sendEntityMessage(playerId, "shockhopperDeath")
-  end
 end
 
 function dieState.update(dt, stateData)
