@@ -115,6 +115,8 @@ end
 function sgarenabossElectricBurstAttack.fire(angle, count)
   local projectileType = config.getParameter("sgarenabossElectricBurstAttack.projectile.type")
   local projectileConfig = config.getParameter("sgarenabossElectricBurstAttack.projectile.config")
+  local projectileCenterOffset = config.getParameter("sgarenabossElectricBurstAttack.projectile.centerOffset")
+  projectileCenterOffset[1] = projectileCenterOffset[1] * mcontroller.facingDirection()
 
   if projectileConfig.power then
     projectileConfig.power = projectileConfig.power * root.evalFunction("monsterLevelPowerMultiplier", monster.level())
@@ -130,7 +132,7 @@ function sgarenabossElectricBurstAttack.fire(angle, count)
     offset = vec2.rotate(offset, projectileAngle)
 
     local fireVector = {math.cos(projectileAngle), math.sin(projectileAngle)}
-    local firePosition = vec2.add(mcontroller.position(), offset)
+    local firePosition = vec2.add(vec2.add(mcontroller.position(), projectileCenterOffset), offset)
     world.spawnProjectile(projectileType, firePosition, entity.id(), fireVector, false, projectileConfig)
   end
 

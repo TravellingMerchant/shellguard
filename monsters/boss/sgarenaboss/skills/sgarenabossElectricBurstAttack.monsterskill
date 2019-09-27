@@ -25,7 +25,8 @@
           "physics" : "default",
           "timeToLive" : 2.2
         },
-        "innerRadius" : 2
+        "innerRadius" : 2,
+		"centerOffset" : [ 0.5, -0.75 ]
       }
     }
   },
