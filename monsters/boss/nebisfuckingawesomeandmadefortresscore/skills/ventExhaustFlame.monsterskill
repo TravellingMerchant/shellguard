@@ -17,7 +17,7 @@
         "type" : "sglongflame",
         "config" : {
           "speed" : 45,
-          "power" : 2,
+          "power" : 1,
           "actionOnReap" : []
         }
       }

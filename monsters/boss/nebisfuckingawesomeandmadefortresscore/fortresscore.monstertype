@@ -1,6 +1,6 @@
 {
   "type" : "sgnebisamadladandmadefortress",
-  "shortdescription" : "Foreskin Core",
+  "shortdescription" : "Fortress Core",
 
   "categories" : [ "sgnebisamadladandmadefortress" ],
   "parts" : [ "base", "coreAi", "blastShield", "vents", "fortresssilos", "chargeUp" ],
@@ -25,8 +25,8 @@
 		
 		"dropPools" : [ ],
 	
-    "skillCount" : 13,
-    "skills" : [ "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "rightTurretSpawn", "leftTurretSpawn", "cryoFreezeSpawn", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch", "skyMissiles", "ruined", "coreChargeLaser" ],
+    "skillCount" : 14,
+    "skills" : [ "gravitySlam", "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "rightTurretSpawn", "leftTurretSpawn", "cryoFreezeSpawn", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch", "skyMissiles", "ruined", "coreChargeLaser" ],
 
     "phases" : [
 			//Skills/Abilities the core will possess in each phase, it is randomly picked by whats in the tables
@@ -38,17 +38,17 @@
 			//After breaking open blastshield, core will talk and then activate energyshield
 			{
 				"enterPhase" : "energyShieldActivate",
-				"skills" : ["siloMonsterSpawnGrounded", "skyMissiles", "ventExhaustFlame", "aerialMineLaunch", "siloMonsterSpawnAirborne", "ventExhaustFlame", "aerialMineLaunch", "skyMissiles", "leftTurretSpawn" ]
+				"skills" : ["siloMonsterSpawnGrounded", "skyMissiles", "ventExhaustFlame", "aerialMineLaunch", "skyMissiles", "siloMonsterSpawnAirborne", "ventExhaustFlame", "ventExhaustFlame", "aerialMineLaunch", "skyMissiles", "skyMissiles", "leftTurretSpawn" ]
 			},
 			//Reactivates blast shield
       {
         "enterPhase" : "blastShieldSlam",
-        "skills" : [ "siloMonsterSpawnGrounded", "skyMissiles", "ventExhaustFlame", "aerialMineLaunch", "siloMonsterSpawnAirborne", "ventExhaustFlame", "aerialMineLaunch", "skyMissiles", "rightTurretSpawn" ]
+        "skills" : [ "gravitySlam", "siloMonsterSpawnGrounded", "skyMissiles", "skyMissiles", "ventExhaustFlame", "ventExhaustFlame", "aerialMineLaunch", "skyMissiles", "siloMonsterSpawnAirborne", "ventExhaustFlame", "ventExhaustFlame",  "aerialMineLaunch", "skyMissiles", "rightTurretSpawn" ]
       },
 			//Reactivates energy shield
 			{
 				"enterPhase" : "energyShieldActivate",
-				"skills" : [ "siloMonsterSpawnGrounded", "skyMissiles", "ventExhaustFlame", "aerialMineLaunch", "siloMonsterSpawnAirborne", "ventExhaustFlame", "aerialMineLaunch", "skyMissiles", "leftTurretSpawn", "rightTurretSpawn" ]
+				"skills" : [ "gravitySlam", "siloMonsterSpawnGrounded", "skyMissiles", "skyMissiles", "ventExhaustFlame", "ventExhaustFlame", "aerialMineLaunch", "skyMissiles", "siloMonsterSpawnAirborne", "ventExhaustFlame", "ventExhaustFlame",  "aerialMineLaunch", "skyMissiles", "leftTurretSpawn", "rightTurretSpawn" ]
 			},
 			//Ruin cleaver finisher
 			{
@@ -72,7 +72,7 @@
       "intro5" : "Commencing termination protocols.",
 	  
 	  //Rematch Lines - if the player dies, and re-enters the arena
-      "rematch1" : "Analyses prove that small talk is an inefficient way to kill someone.",
+      "rematch1" : "Analyses proves that small talk is an inefficient way to kill someone.",
 	  
 	  //Death dialogue - Currently unused
 	  "deadLines" : 1,

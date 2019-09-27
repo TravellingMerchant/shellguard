@@ -14,8 +14,8 @@
       "rightProjectileOffset" : [5.25, 23.75],
       "fireInterval" : 2,
       "projectile" : {
-        "type" : "sgplasmitegrenade",
-        "power" : 20,
+        "type" : "sgplasmitegrenadeboss",
+        "power" : 15,
         "config" : {}
       }
     }

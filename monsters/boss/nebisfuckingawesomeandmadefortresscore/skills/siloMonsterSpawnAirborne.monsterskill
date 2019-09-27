@@ -13,7 +13,7 @@
       "leftSiloOffset" : [-25, 21],
       "rightSiloOffset" : [25, 21],
 	  
-      "monsterCount" : [ 2, 5 ],
+      "monsterCount" : [ 2, 3 ],
 	  "monsterTypes" : [
 		"shelldroidevil",
 		"shelldroidevil",

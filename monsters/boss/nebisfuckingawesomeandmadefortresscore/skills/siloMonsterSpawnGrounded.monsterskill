@@ -13,7 +13,7 @@
       "leftSiloOffset" : [-25, -22],
       "rightSiloOffset" : [25, -22],
 	  
-      "monsterCount" : [ 2, 4 ],
+      "monsterCount" : [ 2, 3 ],
 	  "monsterTypes" : [
 		"sgshottop",
 		"sgchomperevil",

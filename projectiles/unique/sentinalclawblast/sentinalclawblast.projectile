@@ -1,0 +1,48 @@
+{
+  "projectileName" : "sentinalclawblast",
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/gun/shellbulletimpact.ogg"
+      ]
+    }
+  ],
+  "image" : "sentinelshard.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 0.0
+  },
+  "pointLight" : true,
+  "lightColor" : [255, 100, 0],
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "shellsmoke"
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 3,
+      "backgroundRadius" : 2,
+      "explosiveDamageAmount" : 0.1,
+      "delaySteps" : 2
+    }
+  ],
+
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 0,
+  "power" : 20,
+  "speed" : 20,
+  "damageKind" : "bow",
+  
+  "fullbright" : true
+}
