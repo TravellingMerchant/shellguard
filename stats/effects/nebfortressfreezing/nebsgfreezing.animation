@@ -2,7 +2,7 @@
   "particleEmitters" : {
     "icetrail" : {
       "enabled" : true,
-      "emissionRate" : 15.0,
+      "emissionRate" : 10.0,
       "particles" : [
         {
           "particle" : "icetrail"
@@ -23,6 +23,37 @@
           }
         }
       ]
-    }
+    },
+		"clouds" : {
+      "enabled" : true,
+      "emissionRate" : 3.0,
+      "particles" : [
+        {
+					"particle" : {
+						"type" : "textured",
+						"image" : "/stats/effects/nebfortressfreezing/freezingfog.png",
+						"position" : [0, 0],
+						"size" : 1.0,
+						"color" : [255, 255, 255, 255],
+						"fade" : 0,
+						"initialVelocity" : [0.0, 0.0],
+						"finalVelocity" : [0, 0],
+						"approach" : [5, 50],
+						"rotation" : 0,
+						"flippable" : true,
+						"angularVelocity" : 0,
+						"timeToLive" : 0.25,
+						"destructionAction" : "fade",
+						"destructionTime" : 0.75,
+						"layer" : "front",
+						"variance" : {
+							"rotation" : 360,
+							"angularVelocity" : 90,
+							"size" : 0.35
+						}
+					}
+				}
+			]
+		}
   }
 }

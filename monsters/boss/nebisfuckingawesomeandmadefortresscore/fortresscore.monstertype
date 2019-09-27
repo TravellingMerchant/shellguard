@@ -7,6 +7,7 @@
 
   "animation" : "fortresscore.animation",
   "reversed" : true,
+	"renderLayer" : "Projectile-10",
 
   "baseParameters" : {
     "scripts" : [
@@ -16,25 +17,23 @@
       "/scripts/util.lua",
       "/scripts/vec2.lua",
 
-	  //Custom Stuff
+			//Custom Stuff
       "/monsters/boss/nebisfuckingawesomeandmadefortresscore/dieState.lua",
       "/monsters/boss/nebisfuckingawesomeandmadefortresscore/idleState.lua",
       "/monsters/boss/nebisfuckingawesomeandmadefortresscore/fortressreset.lua"
     ],
 		
 		"dropPools" : [ ],
-
-		"renderLayer" : "Projectile-1",
 	
     "skillCount" : 13,
-    "skills" : [ "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "rightTurretSpawn", "leftTurretSpawn", "cryoFreezeSpawn", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch", "radiationLeak", "skyMissiles", "ruined", "coreChargeLaser" ],
+    "skills" : [ "siloMonsterSpawnGrounded", "siloMonsterSpawnAirborne", "rightTurretSpawn", "leftTurretSpawn", "cryoFreezeSpawn", "energyShieldActivate", "blastShieldSlam", "ventExhaustFlame", "gravitySlam", "aerialMineLaunch", "skyMissiles", "ruined", "coreChargeLaser" ],
 
     "phases" : [
 			//Skills/Abilities the core will possess in each phase, it is randomly picked by whats in the tables
 			//Introduction, with the default skills
       {
         "enterPhase" : "blastShieldSlam",
-        "skills" : [ "coreChargeLaser",  "skyMissiles" ]
+        "skills" : [ "cryoFreezeSpawn", "skyMissiles", "ventExhaustFlame", "aerialMineLaunch", "siloMonsterSpawnAirborne", "ventExhaustFlame", "aerialMineLaunch", "skyMissiles" ]
 			},
 			//After breaking open blastshield, core will talk and then activate energyshield
 			{
@@ -83,7 +82,7 @@
     "projectileSourcePosition" : [-2.5, -1.25],
     "projectileSourceOffset" : [7, 0],
 
-    "trackTargetDistance" : 50.0,
+    "trackTargetDistance" : 100.0,
     "switchTargetDistance" : 0,
     "keepTargetInSight" : false,
 

@@ -1,4 +1,3 @@
---Blast shield slam transitional phase
 coreChargeLaser = {}
 
 function coreChargeLaser.enterWith(args)

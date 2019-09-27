@@ -1,6 +1,7 @@
 function init()
   animator.setParticleEmitterOffsetRegion("icetrail", mcontroller.boundBox())
   animator.setParticleEmitterActive("icetrail", true)
+  animator.setParticleEmitterActive("clouds", true)
   effect.setParentDirectives("fade=00BBFF=0.85?border=2;00BBFF80;00000000")
   
   --Check for damage taken in the init() step to ensure that damage taken before the status was applied won't get calculated for the damage increase

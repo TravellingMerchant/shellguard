@@ -1,6 +1,7 @@
 function init()
   animator.setParticleEmitterOffsetRegion("icetrail", mcontroller.boundBox())
   animator.setParticleEmitterActive("icetrail", true)
+  animator.setParticleEmitterActive("clouds", true)
   effect.setParentDirectives("fade=00BBFF=0.15")
 
   script.setUpdateDelta(5)

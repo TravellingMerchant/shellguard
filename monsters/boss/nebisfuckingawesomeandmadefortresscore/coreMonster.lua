@@ -208,7 +208,7 @@ function update(dt)
     if hasTarget() then
       script.setUpdateDelta(1)
 	  if self.startPhase then
-		updatePhase(dt)
+				updatePhase(dt)
         animator.setGlobalTag("phase", "phase"..currentPhase())
 	  end
 

@@ -4,7 +4,7 @@ cryoFreezeSpawn = {}
 function cryoFreezeSpawn.enter()
   if not hasTarget() then return nil end
   
-  self.active = false
+  self.active = true
   self.finished = false
   self.canFire = false
   self.leftOffset = config.getParameter("cryoFreezeSpawn.leftOffset")
@@ -27,8 +27,6 @@ end
 
 function cryoFreezeSpawn.enteringState(stateData)
   monster.setActiveSkillName("cryoFreezeSpawn")
-  self.firstChoice = math.random(1, 2)
-  self.secondChoice = math.random(1, 2)
   animator.playSound("cryoAlert")
 end
 
@@ -45,38 +43,37 @@ function cryoFreezeSpawn.update(dt, stateData)
   
   if self.active then
 		if self.canFire and not self.finished then
-			for i = 1, math.random(stateData.monsterCount[1], stateData.monsterCount[2]) do
-				--Calculate initial x and y offset for the left spawn position
-				local leftxOffset = math.random((self.leftOffset[1] - stateData.spawnRangeX), self.leftOffset[1])
-				local leftyOffset = math.random(self.leftOffset[2], (stateData.spawnRangeY + self.leftOffset[2]))
-				local leftPosition = vec2.add(entity.position(), {leftxOffset, leftyOffset})
-				--Calculate initial x and y offset for the right spawn position
-				local rightxOffset = math.random((self.rightOffset[1] - stateData.spawnRangeX), self.rightOffset[1])
-				local rightyOffset = math.random(self.rightOffset[2], (stateData.spawnRangeY + self.rightOffset[2]))
-				local rightPosition = vec2.add(entity.position(), {leftxOffset, leftyOffset})
-			
-				--Resolve the monster poly collision to ensure that we can place an monster at the designated position
-				local leftResolvedPosition = world.resolvePolyCollision(stateData.monsterTestPoly, leftPosition, stateData.spawnTolerance)
-			
-				if leftResolvedPosition then
-					--Spawn the monster and optionally force the monster spawn effect on them
-					local leftEntityId = world.spawnMonster(util.randomChoice(stateData.monsterTypes), leftResolvedPosition, {level = self.monsterLevel, aggressive = true})
-					if stateData.spawnAnimation then
-						world.callScriptedEntity(leftEntityId, "status.addEphemeralEffect", stateData.spawnAnimation)
-					end
-				end
-				
-				--Resolve the monster poly collision to ensure that we can place an monster at the designated position
-				local rightResolvedPosition = world.resolvePolyCollision(stateData.monsterTestPoly, rightPosition[1], stateData.spawnTolerance)
-			
-				if rightResolvedPosition then
-					--Spawn the monster and optionally force the monster spawn effect on them
-					local leftEntityId = world.spawnMonster(util.randomChoice(stateData.monsterTypes), rightResolvedPosition, {level = self.monsterLevel, aggressive = true})
-					if stateData.spawnAnimation then
-						world.callScriptedEntity(leftEntityId, "status.addEphemeralEffect", stateData.spawnAnimation)
-					end
+			--Calculate initial x and y offset for the left spawn position
+			local leftxOffset = math.random((self.leftOffset[1] - stateData.spawnRangeX), self.leftOffset[1])
+			local leftyOffset = math.random(self.leftOffset[2], (stateData.spawnRangeY + self.leftOffset[2]))
+			local leftPosition = vec2.add(entity.position(), {leftxOffset, leftyOffset})
+			--Calculate initial x and y offset for the right spawn position
+			local rightxOffset = math.random((self.rightOffset[1] - stateData.spawnRangeX), self.rightOffset[1])
+			local rightyOffset = math.random(self.rightOffset[2], (stateData.spawnRangeY + self.rightOffset[2]))
+			local rightPosition = vec2.add(entity.position(), {leftxOffset, leftyOffset})
+		
+			--Resolve the monster poly collision to ensure that we can place an monster at the designated position
+			local leftResolvedPosition = world.resolvePolyCollision(stateData.monsterTestPoly, leftPosition, stateData.spawnTolerance)
+		
+			if leftResolvedPosition then
+				--Spawn the monster and optionally force the monster spawn effect on them
+				local leftEntityId = world.spawnMonster(stateData.monsterType, leftResolvedPosition, {level = self.monsterLevel, aggressive = true})
+				if stateData.spawnAnimation then
+					world.callScriptedEntity(leftEntityId, "status.addEphemeralEffect", stateData.spawnAnimation)
 				end
 			end
+			
+			--Resolve the monster poly collision to ensure that we can place an monster at the designated position
+			local rightResolvedPosition = world.resolvePolyCollision(stateData.monsterTestPoly, rightPosition, stateData.spawnTolerance)
+		
+			if rightResolvedPosition then
+				--Spawn the monster and optionally force the monster spawn effect on them
+				local rightEntityId = world.spawnMonster(stateData.monsterType, rightResolvedPosition, {level = self.monsterLevel, aggressive = true})
+				if stateData.spawnAnimation then
+					world.callScriptedEntity(rightEntityId, "status.addEphemeralEffect", stateData.spawnAnimation)
+				end
+			end
+			self.finished = true
 		end
 	end
 	
