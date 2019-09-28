@@ -1,6 +1,6 @@
 function init()
   effect.addStatModifierGroup({
-    {stat = "protection", amount = 25.0}
+    {stat = "protection", amount = 10.0}
   })
 
    script.setUpdateDelta(0)
