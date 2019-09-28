@@ -3,7 +3,7 @@
   "colonyTags" : ["outpost"],
   "rarity" : "Common",
   "category" : "other",
-  "description" : "Tech lab scientist.",
+  "description" : "Ryan, a weapons designer.",
   "shortdescription" : "Tech Lab Scientist",
   "race" : "generic",
 
@@ -52,6 +52,7 @@
   "uniqueId" : "sgweaponsdesigner",
 
   "chatOptions" : [
+    "Thanks again for resucing my dad, I'm glad he's back safe! You can see him over at the landing pad.",
     "If I increase the capacity here, I can- Oh! Sorry, I've got no more jobs for you right now.",
     "Brilliant, this gun will be my best yet!",
     "With 50% extra power on the firing systems.. Yes, that's perfect!"

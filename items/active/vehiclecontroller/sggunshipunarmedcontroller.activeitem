@@ -1,7 +1,7 @@
 {
   "itemName" : "sggunshipunarmedcontroller",
   "level" : 1,
-  "price" : 696969,
+  "price" : 25000,
   "rarity" : "Legendary",
   "category" : "vehicleController",
   "description" : "Creates an Olympus-I Unarmed gunship from stored nanites.",

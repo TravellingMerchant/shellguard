@@ -1,0 +1,57 @@
+{
+  "objectName" : "sgweaponsdesignerdad",
+  "colonyTags" : ["outpost"],
+  "rarity" : "Common",
+  "category" : "other",
+  "description" : "Ryans dad, also a weapons researcher.",
+  "shortdescription" : "Tech Lab Scientist",
+  "race" : "generic",
+
+  "scannable" : false,
+  "printable" : false,
+
+  "inventoryIcon" : "sgweaponsdesignerdadicon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "sgweaponsdesignerdad.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgweaponsdesignerdadlit.png:<color>.<frame>" } ],
+      "imagePosition" : [-12, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "frames" : 75,
+      "animationCycle" : 7.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "sgweaponsdesignerdad.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgweaponsdesignerdadlit.png:<color>.<frame>" } ],
+      "imagePosition" : [-8, 0],
+
+      "direction" : "right",
+
+      "frames" : 75,
+      "animationCycle" : 7.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "offeredQuests" : [
+  ],
+  "turnInQuests" : [
+  ],
+
+  "scripts" : ["/scripts/chattyObject.lua"],
+  "scriptDelta" : 60,
+
+  "uniqueId" : "sgweaponsdesignerdad",
+
+  "chatOptions" : [
+    "Thanks for rescuing me and helping my son.",
+    "I'm happy that I can return to my work, lots of designs to make into reality!",
+    "You can buy a gunship from Sangure, if you'd like!"
+  ]
+}

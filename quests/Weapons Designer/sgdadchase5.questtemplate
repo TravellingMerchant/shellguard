@@ -40,6 +40,7 @@
     "indicateGoal" : false,
     "trackGoalEntity" : false,
 
-    "turnInEntityUid" : "sgweaponsdesigner"
+    "turnInEntityUid" : "sgweaponsdesigner",
+    "setUniverseFlags" : ["sgoutpost_gunshipshop"]
   }
 }

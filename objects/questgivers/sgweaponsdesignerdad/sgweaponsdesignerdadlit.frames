@@ -1,0 +1,78 @@
+{
+
+  "frameGrid" : {
+    "size" : [20, 32],
+    "dimensions" : [16, 1],
+    "names" : [
+      [ "default.0", "default.1", "default.2", "default.3", "default.4", "default.5", "default.6", "default.7", "default.8", "default.9", "default.30", "default.31", "default.32", "default.53", "default.54", "default.55" ]
+    ]
+  },
+
+  "aliases" : {
+    "default.default" : "default.0",
+    // 2 SECOND PAUSE AFTER WRITING
+    "default.10" : "default.9",
+    "default.11" : "default.9",
+    "default.12" : "default.9",
+    "default.13" : "default.9",
+    "default.14" : "default.9",
+    "default.15" : "default.9",
+    "default.16" : "default.9",
+    "default.17" : "default.9",
+    "default.18" : "default.9",
+    "default.19" : "default.9",
+    "default.20" : "default.9",
+    "default.21" : "default.9",
+    "default.22" : "default.9",
+    "default.23" : "default.9",
+    "default.24" : "default.9",
+    "default.25" : "default.9",
+    "default.26" : "default.9",
+    "default.27" : "default.9",
+    "default.28" : "default.9",
+    "default.29" : "default.9",
+    // 2 SECOND HOLDING GOGGLES UP
+    "default.33" : "default.32",
+    "default.34" : "default.32",
+    "default.35" : "default.32",
+    "default.36" : "default.32",
+    "default.37" : "default.32",
+    "default.38" : "default.32",
+    "default.39" : "default.32",
+    "default.40" : "default.32",
+    "default.41" : "default.32",
+    "default.42" : "default.32",
+    "default.43" : "default.32",
+    "default.44" : "default.32",
+    "default.45" : "default.32",
+    "default.46" : "default.32",
+    "default.47" : "default.32",
+    "default.48" : "default.32",
+    "default.49" : "default.32",
+    "default.50" : "default.32",
+    "default.51" : "default.32",
+    "default.52" : "default.32",
+    // WRITING AFTER GOGGLES DOWN
+    "default.56" : "default.0",
+    "default.57" : "default.1",
+    "default.58" : "default.2",
+    "default.59" : "default.3",
+    "default.60" : "default.4",
+    "default.61" : "default.5",
+    "default.62" : "default.6",
+    "default.63" : "default.7",
+    "default.64" : "default.8",
+    "default.65" : "default.9",
+    // 1 SECOND PAUSE
+    "default.66" : "default.9",
+    "default.67" : "default.9",
+    "default.68" : "default.9",
+    "default.69" : "default.9",
+    "default.70" : "default.9",
+    "default.71" : "default.9",
+    "default.72" : "default.9",
+    "default.73" : "default.9",
+    "default.74" : "default.9",
+    "default.75" : "default.9"
+  }
+}
