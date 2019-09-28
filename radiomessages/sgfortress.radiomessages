@@ -212,6 +212,27 @@
     "portraitImage" : "/interface/chatbubbles/Andros.png",
     "text" : "You're nearing the Sol system. You have to stop the ship, NOW!"
   },
+  
+  "sgfortressenergyshielddeployment" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "It's shields are up, you're going to have to shoot them down to deal damage!"
+  },
+  
+  "sgfortresscorelaserattack" : {
+    "type" : "mission",
+    "senderName" : "Engineer Peter Atmos",
+    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "text" : "Shoot it now, its defences are lowered! You can damage it more!"
+  },
+
+  "sgfortressturretspawn" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Activating explosive counter-measures: Probability of self damage: 35%. Risk assessment: Acceptable"
+  },
 
   "sgfortressescape1" : {
     "type" : "mission",

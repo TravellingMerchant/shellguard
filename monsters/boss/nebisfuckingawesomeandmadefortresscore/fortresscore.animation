@@ -508,6 +508,7 @@
         "properties" : {
           "centered" : true,
           "zLevel" : 5,
+					"fullbright" : true,
           "rotationGroup" : "all"
         },
 

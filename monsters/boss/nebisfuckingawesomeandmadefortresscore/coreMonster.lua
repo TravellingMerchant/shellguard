@@ -118,14 +118,14 @@ end
 function update(dt)
   --Messager Handling Update--
   if self.LeftSpawnedTurret and not world.entityExists(self.LeftTurretEntityId) then
-	attemptToCloseSilo("Left")
     self.LeftSpawnedTurret = false
-	self.LeftTurretEntityId = nil
+		self.LeftTurretEntityId = nil
+		attemptToCloseSilo("Left")
   end
   if self.RightSpawnedTurret and not world.entityExists(self.RightTurretEntityId) then
-	attemptToCloseSilo("Right")
     self.RightSpawnedTurret = false
-	self.RightTurretEntityId = nil
+		self.RightTurretEntityId = nil
+		attemptToCloseSilo("Right")
   end
   
   --Silo Platforming--
@@ -169,9 +169,11 @@ function update(dt)
 	
   --Collision Correction--
   if animator.animationState("blastShield") == "closed" then
-	mcontroller.controlParameters({collisionPoly = self.closedCollisionPoly})
+		mcontroller.controlParameters({collisionPoly = self.closedCollisionPoly})
+    status.addPersistentEffect("nebuloxWasntHereAYO", "fortressidontwanttodie")
   else
-	mcontroller.controlParameters({collisionPoly = self.openCollisionPoly})
+		mcontroller.controlParameters({collisionPoly = self.openCollisionPoly})
+    status.clearPersistentEffects("nebuloxWasntHereAYO")
   end
   
   --sb.logInfo("The current phase is: %s", self.phase)

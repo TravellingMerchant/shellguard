@@ -17,7 +17,7 @@
 
     "behavior" : "monster",
     "level" : 6,
-	"damageTeamType" : "enemy",
+		"damageTeamType" : "enemy",
     "damageTeam" : 2,
 
     "facingMode" : "transformation",
@@ -38,7 +38,7 @@
 
       "fleeActions" : [ ],
 
-      "hostileActions" : [
+      "concurrentHostileActions" : [
         {
           "name" : "action-fire",
           "parameters" : {
@@ -50,8 +50,8 @@
             "windupState" : "idle",
 
             "projectileType" : "nebsgfortressturretmissile",
-			"projectileCount" : 6,
-			"projectileInterval" : 0.1,
+						"projectileCount" : 6,
+						"projectileInterval" : 0.1,
             "fireOffset" : [8.0, 0.25],
             "fireSound" : "fire",
             "fireState" : "",
@@ -59,6 +59,7 @@
             "rotateAim" : true,
             "holdAim" : false,
             "inaccuracy" : 0.05,
+						"onGround" : false,
 
             "winddownState" : "",
             "winddownTime" : 0.0
@@ -68,38 +69,11 @@
 
       "periodicActions" : [],
 
-      "approachActions" : [
-        {
-          "name" : "approach-walk",
-          "parameters" : {
-            "canJump" : false
-          }
-        }
-      ],
+      "approachActions" : [],
 
-      "followActions" : [
-        {
-          "name" : "approach-teleport",
-          "parameters" : {
-          }
-        },
-        {
-          "name" : "approach-walk",
-          "parameters" : {
-            "canJump" : false
-          }
-        }
-      ],
+      "followActions" : [],
 
-      "wanderActions" : [
-        {
-          "name" : "wander-walk",
-          "cooldown" : 6.0,
-          "parameters" : {
-            "wanderTime" : [0, 0]
-          }
-        }
-      ]
+      "wanderActions" : []
     },
 
     "touchDamage" : {
@@ -118,7 +92,7 @@
     "movementSettings" : {
       "collisionPoly" : [ [0.41, 2.0],  [7.0, 0.41],  [7.0, -0.41],  [0.41, -2.0],  [-0.41, -2.0],  [-7.0, -0.41],  [-7.0, 0.41],  [-0.41, 2.0] ],
 
-      "mass" : 1.0,
+      "mass" : 0,
       "walkSpeed" : 0,
       "runSpeed" : 0,
       "gravityEnabled" : false,
@@ -126,8 +100,8 @@
       "airFriction" : 0,
 
       "airJumpProfile" : {
-        "jumpSpeed" : 45.0,
-        "jumpInitialPercentage" : 1.0,
+        "jumpSpeed" : 0.0,
+        "jumpInitialPercentage" : 0.0,
         "jumpHoldTime" : 0.0
       }
     },
@@ -151,13 +125,16 @@
       "minimumLiquidStatusEffectPercentage" : 0.1,
 
       "primaryScriptSources" : [
-        "/stats/monster_primary.lua"
+        "/stats/spacemonster_primary.lua"
       ],
       "primaryScriptDelta" : 5,
 
       "stats" : {
         "knockbackStunTime" : {
           "baseValue" : 0.25
+        },
+        "grit" : {
+          "baseValue" : 1.0
         },
         "knockbackThreshold" : {
           "baseValue" : 100
@@ -178,16 +155,16 @@
           "baseValue" : 0.0
         },
         "fireResistance" : {
-          "baseValue" : 0.0
+          "baseValue" : 0.5
         },
         "fireStatusImmunity" : {
-          "baseValue" : 0.0
+          "baseValue" : 1.0
         },
         "iceResistance" : {
-          "baseValue" : 0.0
+          "baseValue" : 0.5
         },
         "iceStatusImmunity" : {
-          "baseValue" : 0.0
+          "baseValue" : 1.0
         },
         "electricResistance" : {
           "baseValue" : -0.5
@@ -219,7 +196,7 @@
     "mouthOffset" : [0, 0],
     "feetOffset" : [0, -8],
     "capturable" : false,
-    "captureHealthFraction" : 0.5,
+    "captureHealthFraction" : 0.001,
     "nametagColor" : [64, 200, 255],
     "captureCollectables" : { "monsters" : "triplod" }
   }

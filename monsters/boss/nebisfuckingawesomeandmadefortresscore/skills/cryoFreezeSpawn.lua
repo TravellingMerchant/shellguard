@@ -47,10 +47,6 @@ function cryoFreezeSpawn.update(dt, stateData)
 			local leftxOffset = math.random((self.leftOffset[1] - stateData.spawnRangeX), self.leftOffset[1])
 			local leftyOffset = math.random(self.leftOffset[2], (stateData.spawnRangeY + self.leftOffset[2]))
 			local leftPosition = vec2.add(entity.position(), {leftxOffset, leftyOffset})
-			--Calculate initial x and y offset for the right spawn position
-			local rightxOffset = math.random((self.rightOffset[1] - stateData.spawnRangeX), self.rightOffset[1])
-			local rightyOffset = math.random(self.rightOffset[2], (stateData.spawnRangeY + self.rightOffset[2]))
-			local rightPosition = vec2.add(entity.position(), {leftxOffset, leftyOffset})
 		
 			--Resolve the monster poly collision to ensure that we can place an monster at the designated position
 			local leftResolvedPosition = world.resolvePolyCollision(stateData.monsterTestPoly, leftPosition, stateData.spawnTolerance)
@@ -62,6 +58,11 @@ function cryoFreezeSpawn.update(dt, stateData)
 					world.callScriptedEntity(leftEntityId, "status.addEphemeralEffect", stateData.spawnAnimation)
 				end
 			end
+			
+			--Calculate initial x and y offset for the right spawn position
+			local rightxOffset = math.random((self.rightOffset[1] - stateData.spawnRangeX), self.rightOffset[1])
+			local rightyOffset = math.random(self.rightOffset[2], (stateData.spawnRangeY + self.rightOffset[2]))
+			local rightPosition = vec2.add(entity.position(), {rightxOffset, rightyOffset})
 			
 			--Resolve the monster poly collision to ensure that we can place an monster at the designated position
 			local rightResolvedPosition = world.resolvePolyCollision(stateData.monsterTestPoly, rightPosition, stateData.spawnTolerance)

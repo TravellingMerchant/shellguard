@@ -3,8 +3,8 @@
   "blockingStat" : "iceStatusImmunity",
 
   "effectConfig" : {
-  	"damageAdditionPercentage" : 0.1,	//How much additional damage the target should take when taking damage. If set to 1.0, incoming damage is effectively doubled
-  	"damageBeforeBreaking" : 100		//How much damage we can take before breaking
+  	"damageReductionPercentage" : 0.1,		//How much additional damage the target should take when taking damage. If set to 1.0, incoming damage is effectively doubled
+  	"damageBeforeBreaking" : 50						//How much damage we can take before breaking
   },
   "defaultDuration" : 5,
 
