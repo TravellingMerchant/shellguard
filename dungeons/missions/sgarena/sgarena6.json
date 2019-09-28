@@ -281,7 +281,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"messageType\" : \"playAltMusic\", \"messageArgs\" : [[\"\/music\/gravitational-collapse-loop.ogg\"], 2.0] }",
+                     "parameters":"{ \"messageType\" : \"playAltMusic\", \"messageArgs\" : [[\"\/music\/swansong.ogg\"], 2.0] }",
                      "stagehand":"messenger"
                     },
                  "propertytypes":
