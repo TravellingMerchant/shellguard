@@ -1,5 +1,5 @@
 {
-  "objectName" : "sguforematchtele",
+  "objectName" : "sgarenarematchtele",
   "objectType" : "teleporter",
   "colonyTags" : ["misc"],
   "printable" : false,
@@ -21,12 +21,12 @@
   "lightColor" : [56, 102, 124],
 
   "interactAction" : "OpenTeleportDialog",
-  "interactData" : "/interface/warping/sguforematch.config",
+  "interactData" : "/interface/warping/sgarenarematch.config",
 
-  "inventoryIcon" : "sguforematchteleicon.png",
+  "inventoryIcon" : "sgarenarematchteleicon.png",
   "orientations" : [
     {
-      "imageLayers" : [ { "image" : "sguforematchtele.png:<color>", "fullbright" : true }, { "image" : "sguforematchtelelit.png:<color>" } ],
+      "imageLayers" : [ { "image" : "sgarenarematchtele.png:<color>", "fullbright" : true }, { "image" : "sgarenarematchtelelit.png:<color>" } ],
 
       "imagePosition" : [-16, 0],
       "frames" : 1,

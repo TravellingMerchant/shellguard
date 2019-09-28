@@ -1,0 +1,53 @@
+{
+  "name" : "sgarenabossrocket",
+  "label" : "FLAMETHROWER",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgarenaboss/skills/sgarenabossrocket.lua" ],
+    "sgarenabossrocket" : {
+      "distanceRange" : [18, 21],
+
+      "windupTime" : 0.2,
+      "winddownTime" : 0.2,
+
+      "skillDuration" : 0.5,
+      "angleCycle" : 0.5,
+      "maxFireAngle" : 0.5,
+      "fireInterval" : 0.1,
+
+      "changeFacingTime" : 0.5,
+
+      "moveSpeed" : 1,
+
+      "projectile" : {
+        "type" : "sgdelayedbomb",
+        "config" : {
+          "power" : 5,
+          "speed" : 0,
+          "damageRepeatGroup" : "shockhopper-flamethrower",
+          "damageRepeatTimeout" : 0.1
+        }
+      }
+    }
+  },
+
+  "animationParameters" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "flameSound" : {
+          "default" : "off",
+          "states" : {
+            "off" : {
+            },
+            "on" : {
+              "properties" : {
+                "persistentSound" : "/sfx/gun/flamethrower.ogg"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

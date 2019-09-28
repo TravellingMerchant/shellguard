@@ -8,7 +8,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":17,
+ "tilecount":18,
  "tiledversion":"1.2.4",
  "tileheight":400,
  "tileproperties":
@@ -101,6 +101,16 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"sgweaponsdesignerdad",
+         "tilesetDirection":"right"
+        },
+     "17":
+        {
+         "\/\/description":"sgarenarematchtele",
+         "\/\/name":"sgarenarematchtele",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sgarenarematchtele",
          "tilesetDirection":"right"
         },
      "2":
@@ -276,6 +286,16 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "17":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "2":
         {
          "\/\/description":"string",
@@ -412,6 +432,12 @@
          "image":"..\/..\/objects\/questgivers\/sgweaponsdesignerdad\/sgweaponsdesignerdadportrait.png",
          "imageheight":36,
          "imagewidth":36
+        },
+     "17":
+        {
+         "image":"..\/..\/objects\/rematch teleporters\/sgarenarematchtele\/sgarenarematchteleicon.png",
+         "imageheight":67,
+         "imagewidth":40
         },
      "2":
         {

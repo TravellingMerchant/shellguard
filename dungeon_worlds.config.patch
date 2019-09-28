@@ -570,6 +570,23 @@
 
   {
     "op" : "add",
+    "path" : "/sgarena7",
+    "value" : {
+      "primaryDungeon" : "sgarena7",
+      "weatherPool" : [],
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 1200,
+      "dungeonSurfaceHeight" : 1115,
+      "ambientLightLevel" : [125, 125, 125],
+      "musicTrack" : "/music/psyche.ogg",
+      "biome": "scorchedcity"
+    }
+  },
+
+  {
+    "op" : "add",
     "path" : "/shellguardspiderfactory",
     "value" : {
       "primaryDungeon" : "shellguardspiderfactory",

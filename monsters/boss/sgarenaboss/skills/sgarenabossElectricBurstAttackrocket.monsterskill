@@ -1,0 +1,55 @@
+{
+  "name" : "sgarenabossElectricBurstAttackrocket",
+  "label" : "OVERLOAD",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgarenaboss/skills/sgarenabossElectricBurstAttackrocket.lua" ],
+    "sgarenabossElectricBurstAttackrocket" : {
+      "riseHeight" : 10,
+      "riseSpeed" : 10,
+
+      "skillDuration" : 12,
+      "winddownTime" : 1,
+      "angleCycle" : 6,
+      "maxFireAngle" : 0.75,
+
+      "fireInterval" : 0.4,
+      "projectileCount" : 6,
+      "projectile" : {
+        "type" : "sgdelayedbomb",
+        "config" : {
+          "power" : 7,
+          "speed" : 0,
+          "bounces" : 0,
+          "physics" : "default",
+          "timeToLive" : 2.2
+        },
+        "innerRadius" : 2,
+		"centerOffset" : [ 0.5, -0.75 ]
+      }
+    }
+  },
+
+  "animationParameters" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "electricBurst" : {
+          "default" : "off",
+          "states" : {
+            "off" : {
+            },
+            "on" : {
+              "properties" : {
+                "persistentSound" : "/sfx/objects/plasmadisc.ogg"
+              }
+            }
+          }
+        }
+      }
+    },
+    "sounds" : {
+      "electricBurst" : [ "/sfx/gun/lightningcoil1.ogg" ]
+    }
+  }
+}

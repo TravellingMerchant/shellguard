@@ -1,0 +1,53 @@
+{
+  "name" : "sgarenabosslaser",
+  "label" : "FLAMETHROWER",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgarenaboss/skills/sgarenabosslaser.lua" ],
+    "sgarenabosslaser" : {
+      "distanceRange" : [18, 21],
+
+      "windupTime" : 0.2,
+      "winddownTime" : 0.2,
+
+      "skillDuration" : 0.3,
+      "angleCycle" : 0.5,
+      "maxFireAngle" : 5,
+      "fireInterval" : 0.1,
+
+      "changeFacingTime" : 0.5,
+
+      "moveSpeed" : 10,
+
+      "projectile" : {
+        "type" : "sgdelayedlaser",
+        "config" : {
+          "power" : 5,
+          "speed" : 0,
+          "damageRepeatGroup" : "shockhopper-flamethrower",
+          "damageRepeatTimeout" : 0.1
+        }
+      }
+    }
+  },
+
+  "animationParameters" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "flameSound" : {
+          "default" : "off",
+          "states" : {
+            "off" : {
+            },
+            "on" : {
+              "properties" : {
+                "persistentSound" : "/sfx/gun/flamethrower.ogg"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
