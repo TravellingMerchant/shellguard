@@ -15,7 +15,7 @@
       "fireInterval" : 3.4,
       "projectile" : {
         "type" : "shelluforocket",
-        "power" : 20,
+        "power" : 10,
         "config" : {}
       }
     }

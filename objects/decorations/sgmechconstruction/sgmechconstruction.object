@@ -1,0 +1,33 @@
+{
+  "objectName" : "sgmechconstruction",
+  "colonyTags" : ["valuable","pretty"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 100,
+
+  "apexDescription" : "Wow, that's huge!",
+  "avianDescription" : "Wow, that's huge!",
+  "floranDescription" : "Wow, that'ssss huge!",
+  "glitchDescription" : "Awed. That's huge.",
+  "humanDescription" : "Wow, that's huge!",
+  "hylotlDescription" : "Wow, that's huge!",
+  "novakidDescription" : "Wow, that's huge!",
+
+  "description" : "A huge mech under construction.",
+  "shortdescription" : "Shellguard Mech Construction.",
+  "race" : "human",
+
+  "inventoryIcon" : "sgmechconstruction.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgmechconstruction.png:<color>",
+      "imagePosition" : [-8, -0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ ]
+
+    }
+  ]
+}

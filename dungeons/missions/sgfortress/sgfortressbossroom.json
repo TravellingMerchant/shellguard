@@ -260,6 +260,27 @@
                  "width":88,
                  "x":9008,
                  "y":2368
+                }, 
+                {
+                 "height":232,
+                 "id":3954,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"messageType\" : \"playAltMusic\", \"messageArgs\" : [[\"\/music\/temple-of-kluex.ogg\"], 5.0] }",
+                     "stagehand":"messenger"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":2584,
+                 "x":904,
+                 "y":2000
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -290,7 +311,7 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1480,
+                 "x":3328,
                  "y":2176
                 }, 
                 {
@@ -4214,6 +4235,18 @@
                  "width":24,
                  "x":12672,
                  "y":2472
+                }, 
+                {
+                 "gid":6362,
+                 "height":8,
+                 "id":3955,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":3336,
+                 "y":2088
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4759,7 +4792,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":3954,
+ "nextobjectid":3956,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",

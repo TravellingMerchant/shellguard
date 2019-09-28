@@ -3,8 +3,8 @@
   "blockingStat" : "iceStatusImmunity",
 
   "effectConfig" : {
-		"timeToFreeze" : 4,
-		"freezeDuration" : 3
+		"timeToFreeze" : 5,
+		"freezeDuration" : 1.5
   },
   "defaultDuration" : 0.15,
 

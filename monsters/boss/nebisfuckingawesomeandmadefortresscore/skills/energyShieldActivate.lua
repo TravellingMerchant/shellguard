@@ -17,11 +17,15 @@ function energyShieldActivate.enteringState(stateData)
   if animator.animationState("blastShield") == "closed" then
     animator.setAnimationState("blastShield", "winddown")
   end
-
-  sb.logInfo("did i activate?")
   
   animator.setAnimationState("stages", "stage"..currentPhase())
   animator.playSound("energyShieldActivate")
+	
+	if not self.radioMessage then
+		local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
+		world.sendEntityMessage(playerId, "queueRadioMessage", "sgfortressenergyshielddeployment")
+		self.radioMessage = true
+	end
 end
 
 function energyShieldActivate.update(dt, stateData)

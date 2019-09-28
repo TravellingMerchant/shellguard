@@ -35,6 +35,7 @@
       { "item" : "sgtankspawner" },
       { "item" : "sgdronespawner" },
       { "item" : "sgspidertankspawner" },
+	  { "item" : "shellguardhatch" },
       { "item" : "sgbench1" },
       { "item" : "sgtable" },
       { "item" : "sgshippingcontainer" },

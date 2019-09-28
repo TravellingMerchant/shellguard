@@ -1,11 +1,11 @@
 {
   "itemName" : "sgassaultgunshipcontroller",
   "level" : 1,
-  "price" : 696969,
+  "price" : 30000,
   "rarity" : "Legendary",
   "category" : "vehicleController",
   "description" : "Creates an Olympus-I gunship from stored nanites.",
-  "shortdescription" : "Olympus-I Controller",
+  "shortdescription" : "Olympus-I Assault Controller",
   "twoHanded" : true,
   "maxStack" : 1,
   "itemTags" : ["vehiclecontroller"],

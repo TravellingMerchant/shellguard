@@ -363,7 +363,7 @@
       "dungeonBaseHeight" : 1000,
       "dungeonSurfaceHeight" : 600,
       "ambientLightLevel" : [200, 50, 200],
-      "musicTrack" : "/music/the-apex.ogg",
+      "musicTrack" : "/music/sgtheguardsmarch2.ogg",
       "biome": "scorched"
     }
   },  

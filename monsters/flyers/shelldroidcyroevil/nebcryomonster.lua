@@ -49,6 +49,8 @@ function init()
   mcontroller.setAutoClearControls(false)
   self.behaviorTickRate = config.getParameter("behaviorUpdateDelta", 2)
   self.behaviorTick = math.random(1, self.behaviorTickRate)
+	
+  animator.setParticleEmitterActive("clouds", true)
 
   animator.setGlobalTag("flipX", "")
   self.board:setNumber("facingDirection", mcontroller.facingDirection())

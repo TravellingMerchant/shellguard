@@ -160,10 +160,9 @@
 
   "builder" : "/items/buildscripts/buildweapon.lua",
   "upgradeParameters" : {
-    "inventoryIcon" : "sgheavyshotguneliteicon.png",
+    "inventoryIcon" : "sgpraxisimperiumelite.png:closed.1",
     "animationParts" : {
-    "blade" : "sgpraxisimperiumelite.png",
-    "bladefullbright" : "sgpraxisimperiumfullbrightelite.png"
+    "blade" : "sgpraxisimperiumelite.png"
     },
     "shortdescription" : "Praxis Imperium ^yellow;^reset;"
   }

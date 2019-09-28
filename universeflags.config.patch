@@ -15,5 +15,23 @@
         }
       ]
     }
+  },
+  
+  {
+    "op": "add",
+    "path": "/sgoutpost_gunshipshop",
+    "value": {
+      "actions": [
+        {
+          "type": "placeDungeon",
+          "dungeonId": "Shellguardbasegunshipshop",
+          "targetInstance": "shellguardbase",
+          "targetPosition": [
+            210,
+            203
+          ]
+        }
+      ]
+    }
   }
 ]

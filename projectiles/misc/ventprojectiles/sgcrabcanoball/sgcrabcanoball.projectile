@@ -20,6 +20,5 @@
   ],
   "power" : 50,
   "emitters" : [ "fireplasma", "smoke", "flames", "fireplasma", "flames" ],
-  "damageType" : "NoDamage",
   "damageKind" : "slash"
 }

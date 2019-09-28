@@ -8,7 +8,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":14,
+ "tilecount":17,
  "tiledversion":"1.2.4",
  "tileheight":400,
  "tileproperties":
@@ -71,6 +71,36 @@
          "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"nebinterceptorgunshipspawner",
+         "tilesetDirection":"right"
+        },
+     "14":
+        {
+         "\/\/description":"mech",
+         "\/\/name":"mech",
+         "\/\/shortdescription":"mech",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgmechconstruction",
+         "tilesetDirection":"right"
+        },
+     "15":
+        {
+         "\/\/description":"ship shop",
+         "\/\/name":"ship shop",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sgshipshop",
+         "tilesetDirection":"right"
+        },
+     "16":
+        {
+         "\/\/description":"dad dude",
+         "\/\/name":"dad dude",
+         "\/\/shortdescription":"dad dude",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgweaponsdesignerdad",
          "tilesetDirection":"right"
         },
      "2":
@@ -216,6 +246,36 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "14":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "15":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "16":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "2":
         {
          "\/\/description":"string",
@@ -334,6 +394,24 @@
          "image":"..\/..\/objects\/gunshipspawnerplatforms\/interceptorgunship\/interceptorgunshipspawnericon.png",
          "imageheight":90,
          "imagewidth":196
+        },
+     "14":
+        {
+         "image":"..\/..\/objects\/decorations\/sgmechconstruction\/sgmechconstructionicon.png",
+         "imageheight":295,
+         "imagewidth":235
+        },
+     "15":
+        {
+         "image":"..\/..\/objects\/sgshipshop\/sgshipshop.png",
+         "imageheight":75,
+         "imagewidth":193
+        },
+     "16":
+        {
+         "image":"..\/..\/objects\/questgivers\/sgweaponsdesignerdad\/sgweaponsdesignerdadportrait.png",
+         "imageheight":36,
+         "imagewidth":36
         },
      "2":
         {

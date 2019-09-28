@@ -17,15 +17,20 @@ function rightTurretSpawn.enter()
     monsterTestPoly = config.getParameter("rightTurretSpawn.monsterTestPoly"),
     spawnOnGround = config.getParameter("rightTurretSpawn.spawnOnGround"),
     spawnTolerance = config.getParameter("rightTurretSpawn.spawnTolerance"),
-	entityId = nil
+		entityId = nil
   }
 end
 
 function rightTurretSpawn.enteringState(stateData)
-  if stateData.entityId then if world.entityExists(stateData.entityId) then return true end end
   if not hasTarget() then return true end
   monster.setActiveSkillName("rightTurretSpawn")
   animator.playSound("ventAlert")
+	
+	if not self.radioMessage then
+		local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
+		world.sendEntityMessage(playerId, "queueRadioMessage", "sgfortressturretspawn")
+		self.radioMessage = true
+	end
 end
 
 function rightTurretSpawn.update(dt, stateData)
