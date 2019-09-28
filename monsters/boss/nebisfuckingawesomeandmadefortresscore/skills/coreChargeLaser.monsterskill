@@ -11,7 +11,7 @@
       "shots" : 3,
       "projectileType" : "nebsgfortresslaser",
 			"projectileConfig" : {
-				"power" : 25
+				"power" : 55
 			}
     }
   },

@@ -7,7 +7,7 @@
     "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/blastShieldSlamPhase.lua" ],
 
     "blastShieldSlamPhase" : {
-      "windupDuration" : 3,
+      "windupDuration" : 2,
       "winddownDuration" : 0.5,
       "skillTime" : 1.15,
       "rotateInterval" : 0.2,
