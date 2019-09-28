@@ -62,7 +62,9 @@
 						"onGround" : false,
 
             "winddownState" : "",
-            "winddownTime" : 0.0
+            "winddownTime" : 0.0,			
+						
+						"damageRepeatGroup" : "" //Removes the damage cooldown time, allowing every projectile that connects to damage the target
           }
         }
       ],
