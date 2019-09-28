@@ -260,18 +260,6 @@
                  "width":40,
                  "x":400,
                  "y":224
-                }, 
-                {
-                 "gid":5278,
-                 "height":32,
-                 "id":4829,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":38,
-                 "x":656,
-                 "y":224
                 }],
          "opacity":1,
          "type":"objectgroup",

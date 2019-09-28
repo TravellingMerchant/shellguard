@@ -7964,27 +7964,6 @@
                 }, 
                 {
                  "height":8,
-                 "id":2242,
-                 "name":"",
-                 "properties":
-                    {
-                     "npc":"human",
-                     "typeName":"villager"
-                    },
-                 "propertytypes":
-                    {
-                     "npc":"string",
-                     "typeName":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":4752,
-                 "y":3552
-                }, 
-                {
-                 "height":8,
                  "id":2244,
                  "name":"",
                  "properties":
@@ -9495,27 +9474,6 @@
                  "y":3048
                 }, 
                 {
-                 "height":8,
-                 "id":2707,
-                 "name":"",
-                 "properties":
-                    {
-                     "npc":"human",
-                     "typeName":"villager"
-                    },
-                 "propertytypes":
-                    {
-                     "npc":"string",
-                     "typeName":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":6184,
-                 "y":3048
-                }, 
-                {
                  "gid":814,
                  "height":8,
                  "id":2708,
@@ -9694,7 +9652,7 @@
                  "properties":
                     {
                      "npc":"human",
-                     "typeName":"villager"
+                     "typeName":"scientist"
                     },
                  "propertytypes":
                     {
@@ -9705,8 +9663,8 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":5456,
-                 "y":3056
+                 "x":4680,
+                 "y":2944
                 }, 
                 {
                  "height":8,
@@ -15689,6 +15647,48 @@
                  "width":235,
                  "x":2848,
                  "y":3248
+                }, 
+                {
+                 "height":8,
+                 "id":4815,
+                 "name":"",
+                 "properties":
+                    {
+                     "npc":"human",
+                     "typeName":"scientist"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "typeName":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":3960,
+                 "y":2944
+                }, 
+                {
+                 "height":8,
+                 "id":4816,
+                 "name":"",
+                 "properties":
+                    {
+                     "npc":"human",
+                     "typeName":"scientist"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "typeName":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":4088,
+                 "y":2864
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -16880,7 +16880,7 @@
          "y":0
         }],
  "nextlayerid":17,
- "nextobjectid":4815,
+ "nextobjectid":4817,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
