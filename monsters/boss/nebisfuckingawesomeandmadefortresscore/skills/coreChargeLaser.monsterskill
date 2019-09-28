@@ -9,8 +9,10 @@
     "coreChargeLaser" : {
       "chargeUpTime" : 2,
       "shots" : 3,
-      "projectileType" : "standardbullet",
-      "projectileConfig" : {}
+      "projectileType" : "nebsgfortresslaser",
+			"projectileConfig" : {
+				"power" : 25
+			}
     }
   },
 

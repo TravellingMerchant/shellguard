@@ -1,13 +1,13 @@
 --Blast shield slam transitional phase
 blastShieldSlam = {}
 
-function blastShieldSlam.enterWith(args)
-  if not args or not args.enteringPhase then return nil end
+function blastShieldSlam.enter()
+  if not hasTarget() then return nil end
 
   return {
     windupDuration = config.getParameter("blastShieldSlam.windupDuration", 1),
-	winddownDuration = config.getParameter("blastShieldSlam.winddownDuration", 1),
-    timer = config.getParameter("blastShieldSlam.skillTime", 1),
+		winddownDuration = config.getParameter("blastShieldSlam.winddownDuration", 1),
+    timer = config.getParameter("blastShieldSlam.skillTime", 1) + config.getParameter("blastShieldSlam.windupDuration", 1),
     rotateInterval = config.getParameter("blastShieldSlam.rotateInterval", 0.2),
     rotateAngle = config.getParameter("blastShieldSlam.rotateAngle", 0.05),
     prepareSlam = false,
@@ -16,14 +16,6 @@ function blastShieldSlam.enterWith(args)
 end
 
 function blastShieldSlam.enteringState(stateData)
-  if animator.animationState("blastShield") == "open" then
-  end
-  if animator.animationState("blastShield") == "closed" then
-    animator.setAnimationState("blastShield", "winddown")
-	stateData.windupDuration = stateData.windupDuration * 1.25
-  end
-  
-  animator.setAnimationState("stages", "stage"..currentPhase())
   animator.playSound("blastShieldSlamWindup")
 end
 

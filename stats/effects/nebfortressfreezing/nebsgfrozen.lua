@@ -40,12 +40,12 @@ function update(dt)
   
   if self.canMultiplyDamage then
 	for _, notification in ipairs(damageNotifications) do
-	  if notification.healthLost > 1 and config.getParameter("damageAdditionPercentage", 0) > 0 then
+	  if notification.healthLost > 1 and config.getParameter("damageReductionPercentage", 0) > 0 then
 		--sb.logInfo(sb.printJson(notification, 1))
 	  
 		local damageRequest = {}
 		damageRequest.damageType = "IgnoresDef"
-		damageRequest.damage = notification.damageDealt * config.getParameter("damageAdditionPercentage", 0)
+		damageRequest.damage = notification.damageDealt / config.getParameter("damageReductionPercentage", 0)
 		damageRequest.damageSourceKind = notification.damageSourceKind
 		damageRequest.sourceEntityId = notification.sourceEntityId
 		status.applySelfDamageRequest(damageRequest)

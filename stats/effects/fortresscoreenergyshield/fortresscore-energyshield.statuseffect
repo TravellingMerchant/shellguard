@@ -1,12 +1,12 @@
 {
   "name" : "fortresscore-energyShield",
   "effectConfig" : {
-    "shieldHealth" : 3500,			//Maximum damage absorbed by shield
-    "startHealthPercentage" : 0.40,	//How much health the shield starts out with, in percentages of maxHealth
-	"regenPercentage" : 0.10,		//How much health the shield regens per second, in percentages of maxHealth
-	"rechargeTimeAfterHit" : 3,		//Cooldown before regen begins after being hit
-	"cooldownTimeAfterBreak" : 7,	//If shield is broken, it will stay down for this long before starting regen
-	"maxAnimationRate" : 2.5		//How quickly the shield animates when at breaking point
+    "shieldHealth" : 1250,					//Maximum damage absorbed by shield
+    "startHealthPercentage" : 0.95,	//How much health the shield starts out with, in percentages of maxHealth
+		"regenPercentage" : 0.05,				//How much health the shield regens per second, in percentages of maxHealth
+		"rechargeTimeAfterHit" : 3,			//Cooldown before regen begins after being hit
+		"cooldownTimeAfterBreak" : 7,		//If shield is broken, it will stay down for this long before starting regen
+		"maxAnimationRate" : 3					//How quickly the shield animates when at breaking point
   },
   "defaultDuration" : 0.5,
 

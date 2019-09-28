@@ -169,9 +169,11 @@ function update(dt)
 	
   --Collision Correction--
   if animator.animationState("blastShield") == "closed" then
-	mcontroller.controlParameters({collisionPoly = self.closedCollisionPoly})
+		mcontroller.controlParameters({collisionPoly = self.closedCollisionPoly})
+    status.addPersistentEffect("nebuloxWasntHereAYO", "fortressidontwanttodie")
   else
-	mcontroller.controlParameters({collisionPoly = self.openCollisionPoly})
+		mcontroller.controlParameters({collisionPoly = self.openCollisionPoly})
+    status.clearPersistentEffects("nebuloxWasntHereAYO")
   end
   
   --sb.logInfo("The current phase is: %s", self.phase)

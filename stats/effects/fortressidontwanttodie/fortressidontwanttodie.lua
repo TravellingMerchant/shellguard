@@ -1,8 +1,6 @@
 function init()
   effect.addStatModifierGroup({
-    {stat = "protection", amount = 100.0},
-		{stat = "invulnerable", amount = 1},
-		{stat = "maxHealth", amount = 3000000}
+    {stat = "protection", amount = 25.0}
   })
 
    script.setUpdateDelta(0)

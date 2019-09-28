@@ -1,6 +1,6 @@
 coreChargeLaser = {}
 
-function coreChargeLaser.enterWith(args)
+function coreChargeLaser.enter()
   if not hasTarget() then return nil end
 	
   self.hasCharged = false
@@ -10,18 +10,23 @@ function coreChargeLaser.enterWith(args)
   return {
     chargeUpTime = config.getParameter("coreChargeLaser.chargeUpTime", 1),
     projectileType = config.getParameter("coreChargeLaser.projectileType", 1),
-    projectileConfig = config.getParameter("coreChargeLaser.projectileConfig", {})
+    projectileConfig = config.getParameter("coreChargeLaser.projectileConfig")
   }
 end
 
 function coreChargeLaser.enteringState(stateData)
-	sb.logInfo("hm")
   monster.setActiveSkillName("coreChargeLaser")
   if animator.animationState("blastShield") == "open" then
   end
   if animator.animationState("blastShield") == "closed" then
     animator.setAnimationState("blastShield", "winddown")
   end
+	
+	if not self.radioMessage then
+		local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
+		world.sendEntityMessage(playerId, "queueRadioMessage", "sgfortresscorelaserattack")
+		self.radioMessage = true
+	end
 end
 
 function coreChargeLaser.update(dt, stateData)
@@ -40,13 +45,15 @@ function coreChargeLaser.update(dt, stateData)
 		  local projectileOffset = {0,0}
 			local toTarget = vec2.norm(world.distance(self.targetPosition, monster.toAbsolutePosition(projectileOffset)))
 			rangedAttack.aim(projectileOffset, toTarget)
-			rangedAttack.fireOnce(projectileType, projectileConfig)
+			rangedAttack.fireOnce(stateData.projectileType, stateData.projectileConfig)
 			
 			--Reset Charge--
 			self.shots = self.shots - 1
-			self.hasCharged = false
+			if self.shots > 0 then
+			  self.hasCharged = false
+			end
 			stateData.chargeUpTime = self.chargeUpTime
-		else
+		elseif self.shots == 0 then
 			return true
 		end
 	end

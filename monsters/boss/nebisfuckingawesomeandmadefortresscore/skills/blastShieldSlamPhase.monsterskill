@@ -1,12 +1,12 @@
 {
-  "name" : "blastShieldSlam",
+  "name" : "blastShieldSlamPhase",
   "label" : "CRUSH",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
-    "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/blastShieldSlam.lua" ],
+    "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/blastShieldSlamPhase.lua" ],
 
-    "blastShieldSlam" : {
+    "blastShieldSlamPhase" : {
       "windupDuration" : 3,
       "winddownDuration" : 0.5,
       "skillTime" : 1.15,

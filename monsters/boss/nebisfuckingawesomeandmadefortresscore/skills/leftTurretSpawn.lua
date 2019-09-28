@@ -22,10 +22,15 @@ function leftTurretSpawn.enter()
 end
 
 function leftTurretSpawn.enteringState(stateData)
-  if stateData.entityId then if world.entityExists(stateData.entityId) then return true end end
   if not hasTarget() then return true end
   monster.setActiveSkillName("leftTurretSpawn")
   animator.playSound("ventAlert")
+	
+	if not self.radioMessage then
+		local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
+		world.sendEntityMessage(playerId, "queueRadioMessage", "sgfortressturretspawn")
+		self.radioMessage = true
+	end
 end
 
 function leftTurretSpawn.update(dt, stateData)
