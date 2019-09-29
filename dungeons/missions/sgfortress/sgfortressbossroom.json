@@ -281,6 +281,27 @@
                  "width":2584,
                  "x":904,
                  "y":2000
+                }, 
+                {
+                 "height":64,
+                 "id":3956,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"bossIds\" : [ \"sgnebisamadladandmadefortress\" ], \"open\" : true }",
+                     "stagehand":"bossdooropener"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":4152,
+                 "y":2128
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4792,7 +4813,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":3956,
+ "nextobjectid":3957,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",

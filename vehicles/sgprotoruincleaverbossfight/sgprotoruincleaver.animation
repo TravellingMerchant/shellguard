@@ -1,0 +1,139 @@
+{
+  "globalTagDefaults" : {
+    "colour" : ""
+  },
+
+  "animatedParts" : {
+    "stateTypes" : {
+      "movement" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {},
+          "invisible" : {}
+        }
+      },
+	  "firing": {
+		"default": "idle",
+		"states": {
+		  "idle": {
+		  "properties" : {
+          "persistentSound" : "/sfx/gun/magnorbs_shield_loop1.ogg",
+          "persistentSoundRangeMultiplier" : 0.45,
+          "persistentSoundStopTime" : 1.7 }
+		  },
+		  
+		  "charge": {
+			"frames": 9,
+			"cycle": 1.2,
+			"mode": "transition",
+			"transition": "fire",
+            "properties" : {
+              "immediateSound" : "/sfx/melee/staff_charge2.ogg",
+              "immediateSoundRangeMultiplier" : 1.50
+            }
+		  },
+		  
+		  "fire": {
+			"frames": 9,
+			"cycle": 0.6,
+			"mode": "transition",
+			"transition": "cooldown",
+            "properties" : {
+              "immediateSound" : "/sfx/turret/ruincleavershot.ogg",
+              "immediateSoundRangeMultiplier" : 1.75
+            }
+		  },
+		  
+		  "cooldown": {
+			"frames": 5,
+			"cycle": 0.7,
+			"mode": "transition",
+			"transition": "idle"
+		  }
+		}
+	  }
+
+    },
+
+    "parts" : {
+      "background" : {
+        "properties" : {
+          "zLevel" : -1
+        },
+
+        "partStates" : {
+          "movement" : {
+            "idle" : {
+              "properties" : {
+                "image" : "sgprotoruincleaverbackground.png:<damageState>"
+              }
+            },
+            "invisible" : {
+              "properties" : {}
+            }
+          }
+        }
+      },
+      "foreground" : {
+        "properties" : {
+          "zLevel" : 2,
+          "drivingSeatPosition" : [-7.8, -1]
+        },
+
+        "partStates" : {
+          "movement" : {
+            "idle" : {
+              "properties" : {
+                "image" : "sgprotoruincleaverforeground.png:<damageState>"
+              }
+            },
+            "invisible" : {
+              "properties" : {}
+            }
+          }
+        }
+      },
+
+	  "gun": {
+		  "properties" : {
+			  "zLevel" : 1,
+			  "offset": [1.2, 2],
+			  "rotationCenter": [-6, 0],
+			  "firePosition": [3, 0],
+			  "transformationGroups" : ["gun"]
+			},
+
+        "partStates" : {
+          "firing" : {
+            "idle" : {
+              "properties" : {
+				"image": "ruincleavergun.png:idle"
+              }
+            },
+            "charge" : {
+              "properties" : {
+				"image": "ruincleavergun.png:charge.<frame>"
+              }
+            },
+            "fire" : {
+              "properties" : {
+				"image": "ruincleavergun.png:fire.<frame>"
+              }
+            },
+            "cooldown" : {
+              "properties" : {
+				"image": "ruincleavergun.png:cooldown.<frame>"
+              }
+            }
+          }
+        }
+	  }
+    }
+  },
+
+  "transformationGroups" : {
+	"gun": {}
+  },
+  "sounds" : {
+  }
+}

@@ -184,6 +184,6 @@
   "sounds" : {
     "aggroHop" : [ "/sfx/alertalarm.ogg" ],
     "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
-    "fire" : [ "/sfx/gun/fireworkgun_large1.ogg", "/sfx/gun/fireworkgun_large2.ogg" ]
+    "fire" : [ "/sfx/gun/cannonfire1.ogg" ]
   }
 }

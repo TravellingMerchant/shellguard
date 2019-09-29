@@ -7,7 +7,7 @@
     "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/ruined.lua" ],
 
     "ruined" : {
-			"vehicleType" : "sgprotoruincleaver"
+			"vehicleType" : "sgprotoruincleaverbossfight"
     }
   },
 

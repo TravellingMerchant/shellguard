@@ -1,0 +1,11 @@
+{
+  "name" : "cryodronespawneffect",
+  "effectConfig" : {},
+  "defaultDuration" : 0.5,
+
+  "scripts" : [
+    "cryodronespawneffect.lua"
+  ],
+
+  "animationConfig" : "cryodronespawneffect.animation"
+}

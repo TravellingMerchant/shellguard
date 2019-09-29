@@ -15,7 +15,7 @@
 
   "animationParameters" : {
     "sounds" : {
-      "energyShieldActivate" : [ "/sfx/monsters/boss/fortresscore/energyShieldActivate.ogg" ]
+      "energyShieldActivate" : [ "/sfx/monsters/boss/fortresscore/shieldup.ogg" ]
     }
   }
 }
