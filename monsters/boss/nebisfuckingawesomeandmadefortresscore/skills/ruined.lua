@@ -32,7 +32,7 @@ function ruined.enteringState(stateData)
 	
 	if not self.radioMessage then
 		local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
-		world.sendEntityMessage(playerId, "queueRadioMessage", "sgfortressRUINED")
+		world.sendEntityMessage(playerId, "queueRadioMessage", "sgfortressRUINED1")
 		self.radioMessage = true
 	end
 end

@@ -221,7 +221,7 @@ function update(dt)
 			animator.setGlobalTag("phase", "phase"..currentPhase())
 	  end
 
-	  local playerId = world.playerQuery(mcontroller.position(), 75, {order = "random"})[1]
+	  local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
 		if playerId then
 			local playerName = world.entityName(playerId)
 		else

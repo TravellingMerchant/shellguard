@@ -50,6 +50,12 @@ function dieState.enteringState(stateData)
         power = 0
       })
     end
+		
+	if not self.radioMessage then
+		local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
+		world.sendEntityMessage(playerId, "queueRadioMessage", "sgfortressRUINED2")
+		self.radioMessage = true
+	end
 end
 
 function dieState.update(dt, stateData)
