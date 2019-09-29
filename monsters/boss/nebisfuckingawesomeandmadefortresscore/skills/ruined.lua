@@ -24,11 +24,16 @@ function ruined.enteringState(stateData)
 				status.removeEphemeralEffect("fortressidontwanttodie")
 				status.setResource("health", 0)
 				world.sendEntityMessage(entity.id(), "killYourself")
-				sb.logInfo("I went to kermit's sewer slide")
         return true
       end
     end
   end)
+	
+	if not self.radioMessage then
+		local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
+		world.sendEntityMessage(playerId, "queueRadioMessage", "sgfortressRUINED")
+		self.radioMessage = true
+	end
 end
 
 function ruined.update(dt, stateData)

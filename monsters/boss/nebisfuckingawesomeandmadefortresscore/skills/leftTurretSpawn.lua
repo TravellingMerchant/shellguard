@@ -11,7 +11,6 @@ function leftTurretSpawn.enter()
   self.monsterLevel = monster.level() - 1
   
   return {
-    fireDuration = config.getParameter("leftTurretSpawn.fireDuration", 1),
     windupDuration = config.getParameter("leftTurretSpawn.windupDuration", 1),
     monsterType = config.getParameter("leftTurretSpawn.monsterType"),
     monsterTestPoly = config.getParameter("leftTurretSpawn.monsterTestPoly"),
@@ -52,7 +51,6 @@ function leftTurretSpawn.update(dt, stateData)
   end
   
   if self.active and animator.animationState("topLeftSilo") == "risen" and self.canFire and not self.finished then
-    if not self.finished then
 	  --Calculate initial x and y offset for the spawn position
 	  local xOffset = self.turretOffset[1]
 	  local yOffset = self.turretOffset[2]
@@ -70,29 +68,19 @@ function leftTurretSpawn.update(dt, stateData)
 	  if resolvedPosition then
 	    --Attempt to spawn the monster
 	    world.sendEntityMessage(entity.id(), "attemptToSpawnTurret", {
-		  monsterType  = stateData.monsterType,
-		  position = resolvedPosition, 
-		  monsterParameters  = {level = self.monsterLevel, aggressive = true},
-		  relativeSide = "Left"
-		})
+				monsterType  = stateData.monsterType,
+				position = resolvedPosition, 
+				monsterParameters  = {level = self.monsterLevel, aggressive = true},
+				relativeSide = "Left"
+			})
 	  end
-	  self.finished = true
+		return true
 	end
-	
-	if self.finished then
-      stateData.fireDuration = stateData.fireDuration - dt
-	  
-	  if stateData.fireDuration <= 0 then
-	    return true
-	  end
-	end
-  end
-
 
   if not self.active then
-	if animator.animationState("topLeftSilo") == "idle" then
-	  animator.setAnimationState("topLeftSilo", "rise")
-	end
+		if animator.animationState("topLeftSilo") == "idle" then
+			animator.setAnimationState("topLeftSilo", "rise")
+		end
   end
 
   return false

@@ -85,8 +85,12 @@ end
 
 function fuckingDie()
   self.state.endState()
+	local dropPools = config.getParameter("dropPools")
 	world.setDungeonGravity(0, self.worldGravity)
 	self.slappedToDeath = true
+	for _, pool in pairs(dropPools) do
+		world.spawnTreasure(pool)
+	end
 
 	self.state.update(dt)
 
@@ -175,8 +179,6 @@ function update(dt)
 		mcontroller.controlParameters({collisionPoly = self.openCollisionPoly})
     status.clearPersistentEffects("nebuloxWasntHereAYO")
   end
-  
-  --sb.logInfo("The current phase is: %s", self.phase)
 
   self.tookDamage = false
   
@@ -208,20 +210,25 @@ function update(dt)
     end
 
     if hasTarget() then
-      script.setUpdateDelta(1)
+			script.setUpdateDelta(1)
 	  if self.startPhase then
-				updatePhase(dt)
-        animator.setGlobalTag("phase", "phase"..currentPhase())
+			updatePhase(dt)
+			animator.setGlobalTag("phase", "phase"..currentPhase())
 	  end
 
-	  local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
-	  local playerName = world.entityName(playerId)
+	  local playerId = world.playerQuery(mcontroller.position(), 75, {order = "random"})[1]
+		if playerId then
+			local playerName = world.entityName(playerId)
+		else
+			local playerId = 1
+			local playerName = "Mr. Shellyguard"
+		end
 	  
 	  if self.sayTime > 0 then
-	    self.sayTime = self.sayTime - dt
+			self.sayTime = self.sayTime - dt
 		
 		--if not self.rematch then
-		  if not self.weHaventSaidThisYes then
+			if not self.weHaventSaidThisYes then
 		    if self.currentIntro == 1 then
 		      world.sendEntityMessage(playerId, "queueRadioMessage", "sgsurvivorfortressintro1")
 		      self.weHaventSaidThisYes = true
@@ -246,15 +253,6 @@ function update(dt)
 			  self.startPhase = true
 		    end	
 		  end
-		--WIP rematch dialogue if the player dies and reenters arena
-		--else
-		--  monster.sayPortrait(config.getParameter("dialog.rematch1"), config.getParameter("chatPortrait"), { player = playerName })
-		--  monster.setDamageBar("Special")
-		--  monster.setAggressive(true)
-		--  setBattleMusicEnabled(true)  
-		--  self.startPhase = true
-	    --  self.rematch = false
-		--end
 	  end
     else
       if self.hadTarget then
@@ -271,9 +269,6 @@ function update(dt)
         monster.setDamageBar("None")
         monster.setAggressive(false)
       end
-
-	  --Prepare Rematch Dialogue
-	  self.rematch = true
 	  
       script.setUpdateDelta(10)
 

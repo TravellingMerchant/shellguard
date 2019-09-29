@@ -22,7 +22,7 @@
       "/monsters/boss/nebisfuckingawesomeandmadefortresscore/fortressreset.lua"
     ],
 		
-		"dropPools" : [ ],
+		"dropPools" : ["sgarenabossdrop", "sgufoclaw" ],
 		"renderLayer" : "Projectile-1",
 	
     "skillCount" : 14,
@@ -126,7 +126,7 @@
 
     "touchDamage" : {
       "poly" : [ [10, -11.5], [-10, -11.5], [-10, 11.5], [10, 11.5] ],
-      "damage" : 20,
+      "damage" : 15,
       "knockback" : 50,
 
       "teamType" : "enemy",

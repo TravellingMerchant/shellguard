@@ -8,8 +8,10 @@ function skyMissiles.enter()
   self.canFire = false
   self.leftProjectileOffset = config.getParameter("skyMissiles.leftProjectileOffset")
   self.rightProjectileOffset = config.getParameter("skyMissiles.rightProjectileOffset")
+	self.config = config.getParameter("skyMissiles.projectile.config", {})
+	self.config.power = config.getParameter("skyMissiles.projectile.power") * (root.evalFunction("monsterLevelPowerMultiplier", monster.level())) / (config.getParameter("skyMissiles.fireInterval") / config.getParameter("skyMissiles.fireDuration"))
 
-  rangedAttack.setConfig(config.getParameter("skyMissiles.projectile.type"), config.getParameter("skyMissiles.projectile.config"), config.getParameter("skyMissiles.fireInterval"))
+  rangedAttack.setConfig(config.getParameter("skyMissiles.projectile.type"), self.config, config.getParameter("skyMissiles.fireInterval"))
 
   return {
     fireDuration = config.getParameter("skyMissiles.fireDuration", 1),

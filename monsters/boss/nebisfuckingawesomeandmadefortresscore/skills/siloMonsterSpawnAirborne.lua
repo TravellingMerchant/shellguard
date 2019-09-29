@@ -87,6 +87,7 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 				end
 			end
 			if self.first then
+				animator.setAnimationState("topLeftSilo", "doorclose")
 				self.finished = true
 			end
 		end
@@ -116,6 +117,7 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 					end
 				end
 			end
+			animator.setAnimationState("topRightSilo", "doorclose")
 			self.finished = true
 		end
 		

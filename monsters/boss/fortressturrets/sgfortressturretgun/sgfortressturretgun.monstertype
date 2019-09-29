@@ -62,10 +62,8 @@
 						"onGround" : false,
 
             "winddownState" : "",
-            "winddownTime" : 0.0,			
-						
-						"damageRepeatGroup" : "" //Removes the damage cooldown time, allowing every projectile that connects to damage the target
-          }
+            "winddownTime" : 0.0
+					}
         }
       ],
 
@@ -142,7 +140,7 @@
           "baseValue" : 100
         },
         "maxHealth" : {
-          "baseValue" : 500
+          "baseValue" : 200
         },
         "protection" : {
           "baseValue" : 0.1

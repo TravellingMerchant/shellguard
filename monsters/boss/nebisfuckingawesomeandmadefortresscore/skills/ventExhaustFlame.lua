@@ -8,8 +8,10 @@ function ventExhaustFlame.enter()
   self.canFire = false
   self.leftProjectileOffset = config.getParameter("ventExhaustFlame.leftProjectileOffset")
   self.rightProjectileOffset = config.getParameter("ventExhaustFlame.rightProjectileOffset")
+  self.config = config.getParameter("ventExhaustFlame.projectile.config", {})
+	self.config.power = config.getParameter("ventExhaustFlame.projectile.config.power") * (root.evalFunction("monsterLevelPowerMultiplier", monster.level())) * (config.getParameter("ventExhaustFlame.fireInterval") / config.getParameter("ventExhaustFlame.fireDuration"))
 
-  rangedAttack.setConfig(config.getParameter("ventExhaustFlame.projectile.type"), config.getParameter("ventExhaustFlame.projectile.config"), config.getParameter("ventExhaustFlame.fireInterval"))
+  rangedAttack.setConfig(config.getParameter("ventExhaustFlame.projectile.type"), self.config, config.getParameter("ventExhaustFlame.fireInterval"))
 
   return {
     fireDuration = config.getParameter("ventExhaustFlame.fireDuration", 1),
@@ -18,6 +20,7 @@ function ventExhaustFlame.enter()
 end
 
 function ventExhaustFlame.enteringState(stateData)
+	
   monster.setActiveSkillName("ventExhaustFlame")
   self.firstChoice = math.random(1, 2)
   self.secondChoice = math.random(1, 2)

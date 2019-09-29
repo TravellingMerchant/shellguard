@@ -11,7 +11,6 @@ function rightTurretSpawn.enter()
   self.monsterLevel = monster.level() - 1
   
   return {
-    fireDuration = config.getParameter("rightTurretSpawn.fireDuration", 1),
     windupDuration = config.getParameter("rightTurretSpawn.windupDuration", 1),
     monsterType = config.getParameter("rightTurretSpawn.monsterType"),
     monsterTestPoly = config.getParameter("rightTurretSpawn.monsterTestPoly"),
@@ -52,7 +51,6 @@ function rightTurretSpawn.update(dt, stateData)
   end
   
   if self.active and animator.animationState("topRightSilo") == "risen" and self.canFire then
-    if not self.finished then
 	  --Calculate initial x and y offset for the spawn position
 	  local xOffset = self.turretOffset[1]
 	  local yOffset = self.turretOffset[2]
@@ -76,17 +74,8 @@ function rightTurretSpawn.update(dt, stateData)
 		  relativeSide = "Right"
 		})
 	  end
-	  self.finished = true
+		return true
 	end
-	
-	if self.finished then
-      stateData.fireDuration = stateData.fireDuration - dt
-	  
-	  if stateData.fireDuration <= 0 then
-	    return true
-	  end
-	end
-  end
 
 
   if not self.active then

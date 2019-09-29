@@ -78,7 +78,7 @@
 
     "touchDamage" : {
       "poly" : [ [-1.5, 1], [-1, 1.5], [1, 1.5], [1.5, 1], [1.5, -1], [1, -1.5], [-1, -1.5], [-1.5, -1] ],
-      "damage" : 9,
+      "damage" : 2,
 
       "teamType" : "enemy",
       "damageSourceKind" : "lash",
@@ -136,7 +136,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 75
+          "baseValue" : 50
         },
         "protection" : {
           "baseValue" : 0.1

@@ -15,6 +15,8 @@ function coreChargeLaser.enter()
 end
 
 function coreChargeLaser.enteringState(stateData)
+	stateData.projectileConfig.power = config.getParameter("coreChargeLaser.projectileConfig.power") * (root.evalFunction("monsterLevelPowerMultiplier", monster.level())) / self.shots
+
   monster.setActiveSkillName("coreChargeLaser")
   if animator.animationState("blastShield") == "open" then
   end

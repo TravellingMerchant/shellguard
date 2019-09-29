@@ -15,8 +15,7 @@
       "fireInterval" : 2,
       "projectile" : {
         "type" : "sgplasmitegrenadeboss",
-        "power" : 15,
-        "config" : {}
+				"power" : 5
       }
     }
   },

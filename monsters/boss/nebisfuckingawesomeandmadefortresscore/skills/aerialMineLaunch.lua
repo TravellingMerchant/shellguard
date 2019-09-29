@@ -8,8 +8,10 @@ function aerialMineLaunch.enter()
   self.canFire = false
   self.leftProjectileOffset = config.getParameter("aerialMineLaunch.leftProjectileOffset")
   self.rightProjectileOffset = config.getParameter("aerialMineLaunch.rightProjectileOffset")
+	self.config = config.getParameter("aerialMineLaunch.projectile.config", {})
+	self.config.power = config.getParameter("aerialMineLaunch.projectile.power") * (root.evalFunction("monsterLevelPowerMultiplier", monster.level())) / (config.getParameter("aerialMineLaunch.fireInterval") / config.getParameter("aerialMineLaunch.fireDuration"))
 
-  rangedAttack.setConfig(config.getParameter("aerialMineLaunch.projectile.type"), config.getParameter("aerialMineLaunch.projectile.config"), config.getParameter("aerialMineLaunch.fireInterval"))
+  rangedAttack.setConfig(config.getParameter("aerialMineLaunch.projectile.type"), self.config, config.getParameter("aerialMineLaunch.fireInterval"))
 
   return {
     fireDuration = config.getParameter("aerialMineLaunch.fireDuration", 1),
