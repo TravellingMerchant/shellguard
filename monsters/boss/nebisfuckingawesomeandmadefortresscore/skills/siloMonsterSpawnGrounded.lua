@@ -61,7 +61,7 @@ function siloMonsterSpawnGrounded.update(dt, stateData)
   end
   
   if self.active then
-		if animator.animationState("bottomLeftSilo") == "openidle" and self.canFire and not self.finished then
+		if animator.animationState("bottomLeftSilo") == "openidle" and self.canFire and not self.leftFinished then
 			for i = 1, math.random(stateData.monsterCount[1], stateData.monsterCount[2]) do
 				--Calculate initial x and y offset for the spawn position
 				local xOffset = math.random((self.leftSiloOffset[1] - stateData.spawnRangeX), self.leftSiloOffset[1])
@@ -86,11 +86,10 @@ function siloMonsterSpawnGrounded.update(dt, stateData)
 					end
 				end
 			end
-			if self.first then
-				self.finished = true
-			end
+			self.leftFinished = true
+			self.finished = true
 		end
-		if animator.animationState("bottomRightSilo") == "openidle" and self.canFire and not self.finished then
+		if animator.animationState("bottomRightSilo") == "openidle" and self.canFire and not self.rightFinished then
 			for i = 1, math.random(stateData.monsterCount[1], stateData.monsterCount[2]) do
 				--Calculate initial x and y offset for the spawn position
 				local xOffset = math.random(self.rightSiloOffset[1], (self.rightSiloOffset[1] + stateData.spawnRangeX))
@@ -115,6 +114,7 @@ function siloMonsterSpawnGrounded.update(dt, stateData)
 					end
 				end
 			end
+			self.rightFinished = true
 			self.finished = true
 		end
 		

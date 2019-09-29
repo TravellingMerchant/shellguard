@@ -61,7 +61,7 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
   end
   
   if self.active then
-		if animator.animationState("topLeftSilo") == "openidle" and self.canFire and not self.finished then
+		if animator.animationState("topLeftSilo") == "openidle" and self.canFire and not self.leftFinished then
 			for i = 1, math.random(stateData.monsterCount[1], stateData.monsterCount[2]) do
 				--Calculate initial x and y offset for the spawn position
 				local xOffset = math.random((self.leftSiloOffset[1] - stateData.spawnRangeX), self.leftSiloOffset[1])
@@ -89,9 +89,10 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 			if self.first then
 				animator.setAnimationState("topLeftSilo", "doorclose")
 				self.finished = true
+				self.leftFinished = true
 			end
 		end
-		if animator.animationState("topRightSilo") == "openidle" and self.canFire and not self.finished then
+		if animator.animationState("topRightSilo") == "openidle" and self.canFire and not self.rightFinished then
 
 			for i = 1, math.random(stateData.monsterCount[1], stateData.monsterCount[2]) do
 				--Calculate initial x and y offset for the spawn position
@@ -119,6 +120,7 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 			end
 			animator.setAnimationState("topRightSilo", "doorclose")
 			self.finished = true
+			self.rightFinished = true
 		end
 		
 		if self.finished then
