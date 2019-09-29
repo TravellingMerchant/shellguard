@@ -12,6 +12,7 @@ function ruined.enterWith(args)
 end
 
 function ruined.enteringState(stateData)
+	world.sendEntityMessage(entity.id(), "cutTheMusic", false)
   world.spawnVehicle(stateData.vehicleType, vec2.add(entity.position(), {-30, -15}))
   animator.setAnimationState("stages", "stage"..currentPhase())
   status.addEphemeralEffect("fortressidontwanttodie")
@@ -19,11 +20,11 @@ function ruined.enteringState(stateData)
   --Set up a damagelistener for incoming damage
 	self.slapsTaken = damageListener("damageTaken", function(notifications)
     for _,notification in pairs(notifications) do
-			sb.logInfo(sb.printJson(notification, 1))
+			--sb.logInfo(sb.printJson(notification, 1))
       if notification.damageSourceKind == "ruincleaverfinisher" then
 				status.removeEphemeralEffect("fortressidontwanttodie")
 				status.setResource("health", 0)
-				world.sendEntityMessage(entity.id(), "killYourself")
+				world.sendEntityMessage(entity.id(), "killYourself", "none")
         return true
       end
     end

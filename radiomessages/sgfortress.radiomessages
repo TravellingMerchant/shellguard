@@ -234,6 +234,13 @@
     "text" : "Activating explosive counter-measures: Probability of self damage: 35%. Risk assessment: Acceptable"
   },
 
+  "sgfortressRUINED" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Quick use the Ruincleaver to finish him off!"
+  },
+
   "sgfortressescape1" : {
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",

@@ -7,6 +7,8 @@ function init()
   message.setHandler("attemptToCloseSilo", localHandler(attemptToCloseSilo))
   message.setHandler("attemptToSpawnTurret", localHandler(attemptToSpawnTurret))
   message.setHandler("killYourself", localHandler(fuckingDie))
+  message.setHandler("cutTheMusic", localHandler(cutTheMusic))
+	self.hasDiedFromMessage = false
   
   --Dialogue--
   self.weHaventSaidThisYes = false
@@ -83,19 +85,22 @@ function init()
   self.musicEnabled = false
 end
 
-function fuckingDie()
+function fuckingDie(damageBar)
+	monster.setDamageBar(damageBar)
   self.state.endState()
-	local dropPools = config.getParameter("dropPools")
 	world.setDungeonGravity(0, self.worldGravity)
 	self.slappedToDeath = true
+	local dropPools = config.getParameter("dropPools")
 	for _, pool in pairs(dropPools) do
-		world.spawnTreasure(pool)
+		world.spawnTreasure(mcontroller.position(), pool, 1)
 	end
+	self.hasDiedFromMessage = true
 
 	self.state.update(dt)
+end
 
+function cutTheMusic(music)
 	setBattleMusicEnabled(false)
-	monster.setDamageBar("None")
 end
 
 function attemptToCloseSilo(relativeSide)
@@ -246,11 +251,11 @@ function update(dt)
 		  	  self.weHaventSaidThisYes = false
 		    end
 		    self.sayTime = config.getParameter("dialog.lineDuration", 4)
-		    if self.currentIntro == config.getParameter("dialog.introLines", 1) then
+		    if self.currentIntro == config.getParameter("dialog.introLines", 1) and not self.hasDiedFromMessage then
 		      monster.setDamageBar("Special")
 		      monster.setAggressive(true)
 		      setBattleMusicEnabled(true)  
-			  self.startPhase = true
+					self.startPhase = true
 		    end	
 		  end
 	  end
@@ -269,6 +274,16 @@ function update(dt)
         monster.setDamageBar("None")
         monster.setAggressive(false)
       end
+			
+			--Cull existing monsters
+			local remainingMonsters = world.monsterQuery(mcontroller.position(), 100, {
+				withoutEntityId = entity.id()
+			})
+			for _, monster in pairs(remainingMonsters) do
+				world.sendEntityMessage(monster, "applyStatusEffect", "monsterdespawn")
+				world.sendEntityMessage(monster, "despawn")
+				world.sendEntityMessage(monster, "applyStatusEffect", "beamoutanddie")
+			end
 	  
       script.setUpdateDelta(10)
 
@@ -548,7 +563,6 @@ end
 function setBattleMusicEnabled(enabled)
   if self.musicEnabled ~= enabled then
     local musicStagehands = config.getParameter("musicStagehands", {})
-    sb.logInfo("%s", musicStagehands)
     for _,stagehand in pairs(musicStagehands) do
       local entityId = world.loadUniqueEntity(stagehand)
 

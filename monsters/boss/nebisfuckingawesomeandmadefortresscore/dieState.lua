@@ -8,7 +8,7 @@ function dieState.enterWith(params)
 
   return {
     timer = 3,
-	sayTime = 1,
+		sayTime = 1,
     rotateInterval = 0.1,
     rotateAngle = 0.05,
     deathSound = true
@@ -40,7 +40,7 @@ function dieState.enteringState(stateData)
   animator.playSound("death")
 
   --Explode to signify death
-    for i = 1, 7 do
+    for i = 1, 12 do
       local randAngle = math.random() * math.pi * 2
       local spawnPosition = vec2.add(mcontroller.position(), vec2.rotate({math.random() * 8, 0}, randAngle))
       local aimVector = {math.cos(randAngle), math.sin(randAngle)}
@@ -67,7 +67,6 @@ function dieState.update(dt, stateData)
   end
 
   --Since we want a destroyed final fortress due to the finisher, dont kill it and leave it alive with no state  
-  --Lets also clear the health bar cus the boss is dead
   if stateData.timer < 0 then
     animator.rotateGroup("core", 0, true)
     --self.dead = true

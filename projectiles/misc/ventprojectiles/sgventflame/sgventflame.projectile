@@ -17,7 +17,7 @@
   "piercing" : true,
   "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
   "lightColor" : [235, 126, 2],
-  "damageKind" : "sgventflame",
+  "damageKind" : "fireplasma",
   "damageKindImage" : "/interface/statuses/fire.png",
   "statusEffects" : [
     "burning"

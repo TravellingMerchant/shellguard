@@ -22,7 +22,7 @@
       "/monsters/boss/nebisfuckingawesomeandmadefortresscore/fortressreset.lua"
     ],
 		
-		"dropPools" : ["sgarenabossdrop", "sgufoclaw" ],
+		"dropPools" : ["sgarenabossdrop"],
 		"renderLayer" : "Projectile-1",
 	
     "skillCount" : 14,
@@ -56,8 +56,6 @@
 				"skills" : []
 			}
     ],
-
-		"musicStagehands" : [ "bossmusic" ],
 
     "chatPortrait" : "/interface/chatbubbles/SGUFO.png",
     "dialog" : {
@@ -156,7 +154,7 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 1500
+          "baseValue" : 1150
         },
         "protection" : {
           "baseValue" : 0

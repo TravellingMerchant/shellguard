@@ -507,7 +507,7 @@
       "chargeUp" : {
         "properties" : {
           "centered" : true,
-          "zLevel" : 5,
+          "zLevel" : 3,
 					"fullbright" : true,
           "rotationGroup" : "all"
         },
@@ -857,7 +857,7 @@
       "blastShield" : {
         "properties" : {
           "centered" : true,
-          "zLevel" : 3,
+          "zLevel" : 4,
           "offset" : [-0.0, 0.0],
           "rotationGroup" : "all"
         },
