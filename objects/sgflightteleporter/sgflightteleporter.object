@@ -1,0 +1,44 @@
+{
+  "objectName" : "sgflightteleporter",
+  "objectType" : "teleporter",
+  "colonyTags" : ["misc"],
+  "printable" : false,
+  "price" : 500,
+  "rarity" : "Common",
+  "description" : "A short range teleporter.",
+  "shortdescription" : "Flight Platform Teleporter.",
+  "race" : "ancient",
+
+  "apexDescription" : "This will take me to another location.",
+  "avianDescription" : "This will take me to another location.",
+  "floranDescription" : "Thisssss will take me to another location.",
+  "glitchDescription" : "Hopeful. This will take me to another location.",
+  "humanDescription" : "This will take me to another location.",
+  "hylotlDescription" : "This will take me to another location.",
+  "novakidDescription" : "This will take me to another location.",
+
+  "category" : "teleporter",
+  "lightColor" : [56, 102, 124],
+
+  "interactAction" : "OpenTeleportDialog",
+  "interactData" : "/interface/warping/sgflightwarp.config",
+
+  "inventoryIcon" : "sgflightteleportericon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "sgflightteleporter.png:<color>", "fullbright" : true }, { "image" : "sgflightteleporterlit.png:<color>" } ],
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "solid",
+      "collisionSpaces" : [ [-2, 0], [-1, 0], [-0, 0], [1, 0] ]
+    }
+  ],
+  
+  "teleporterFootPosition" : [0, 1]
+
+}

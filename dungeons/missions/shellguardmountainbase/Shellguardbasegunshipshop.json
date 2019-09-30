@@ -238,7 +238,7 @@
                  "y":176
                 }, 
                 {
-                 "gid":7706,
+                 "gid":7708,
                  "height":32,
                  "id":4827,
                  "name":"",
@@ -250,7 +250,7 @@
                  "y":224
                 }, 
                 {
-                 "gid":2147491354,
+                 "gid":2147491356,
                  "height":32,
                  "id":4828,
                  "name":"",
@@ -259,6 +259,18 @@
                  "visible":true,
                  "width":40,
                  "x":400,
+                 "y":224
+                }, 
+                {
+                 "gid":7617,
+                 "height":67,
+                 "id":4830,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":328,
                  "y":224
                 }],
          "opacity":1,
@@ -358,7 +370,7 @@
          "y":0
         }],
  "nextlayerid":19,
- "nextobjectid":4830,
+ "nextobjectid":4831,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
@@ -517,7 +529,7 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }, 
         {
-         "firstgid":7616,
+         "firstgid":7618,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/human.json"
         }],
  "tilewidth":8,
