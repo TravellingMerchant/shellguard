@@ -87,6 +87,7 @@
   },
 
   "sounds" : {
-    "break" : [ "/sfx/statuseffects/thea_bubbleshield_break.ogg" ]
+    "activate" : [ "/sfx/monsters/boss/fortresscore/shieldup.ogg" ],
+    "break" : [ "/sfx/monsters/boss/fortresscore/shielddown.ogg" ]
   }
 }

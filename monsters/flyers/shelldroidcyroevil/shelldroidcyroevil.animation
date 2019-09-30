@@ -21,8 +21,15 @@
             "mode" : "loop"
           },
           "fire" : {
-            "frames" : 6,
-            "cycle" : 0.6
+            "frames" : 3,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "fireloop"
+          },
+          "fireloop" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+            "mode" : "loop"
           }
         }
       },
@@ -86,6 +93,11 @@
             "fire" : {
               "properties" : {
                 "image" : "<partImage>:fire.<frame>"
+              }
+            },
+            "fireloop" : {
+              "properties" : {
+                "image" : "<partImage>:fireloop.<frame>"
               }
             }
           },

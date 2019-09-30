@@ -51,6 +51,7 @@ function init()
   self.behaviorTick = math.random(1, self.behaviorTickRate)
 	
   animator.setParticleEmitterActive("clouds", true)
+  animator.setAnimationState("body", "fire")
 
   animator.setGlobalTag("flipX", "")
   self.board:setNumber("facingDirection", mcontroller.facingDirection())

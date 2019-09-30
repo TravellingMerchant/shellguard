@@ -68,6 +68,7 @@ function activateShield()
   animator.setAnimationState("shield", "activate")
   animator.setLightActive("glow", true)
   animator.setAnimationRate(1)
+  animator.playSound("activate")
   status.setResource("shieldHealth", self.startHealthPercentage * self.maxHealth)
   self.active = true
 end

@@ -54,7 +54,7 @@
             "mode" : "transition",
             "transition" : "charged",
             "properties" : {
-              //"immediateSound" : "/sfx/monsters/boss/fortresscore/ventopen.ogg",
+              "immediateSound" : "/sfx/melee/charge_up15.ogg",
               "immediateSoundRangeMultiplier" : 1
             }
           },
@@ -210,7 +210,7 @@
             "mode" : "transition",
             "transition" : "risen",
             "properties" : {
-              "immediateSound" : "/sfx/monsters/boss/fortresscore/siloopen.ogg",
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/silodooropen.ogg",
               "immediateSoundRangeMultiplier" : 1.5
             }
           },
@@ -221,7 +221,11 @@
             "frames" : 5,
             "cycle" : 0.5,
             "mode" : "transition",
-            "transition" : "openidle"
+            "transition" : "openidle",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/ventopen.ogg",
+              "immediateSoundRangeMultiplier" : 1
+            }
           },
           "openidle" : {
             "frames" : 1
@@ -268,7 +272,11 @@
             "frames" : 5,
             "cycle" : 0.5,
             "mode" : "transition",
-            "transition" : "openidle"
+            "transition" : "openidle",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/ventopen.ogg",
+              "immediateSoundRangeMultiplier" : 1
+            }
           },
           "openidle" : {
             "frames" : 1
@@ -315,7 +323,11 @@
             "frames" : 5,
             "cycle" : 0.5,
             "mode" : "transition",
-            "transition" : "openidle"
+            "transition" : "openidle",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/ventopen.ogg",
+              "immediateSoundRangeMultiplier" : 1
+            }
           },
           "openidle" : {
             "frames" : 1
@@ -362,7 +374,11 @@
             "frames" : 5,
             "cycle" : 0.5,
             "mode" : "transition",
-            "transition" : "openidle"
+            "transition" : "openidle",
+            "properties" : {
+              "immediateSound" : "/sfx/monsters/boss/fortresscore/ventopen.ogg",
+              "immediateSoundRangeMultiplier" : 1
+            }
           },
           "openidle" : {
             "frames" : 1
