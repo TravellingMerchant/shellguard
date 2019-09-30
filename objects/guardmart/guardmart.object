@@ -78,7 +78,6 @@
 	  { "item" : "Shellcleaver" },
 	  { "item" : "shellshield" },
 	  { "item" : "sgheavyshield" },
-      { "item" : "sgairstrikegun" },
       { "item" : "shellguarddroner" },
       { "item" : "sgsentrybasethrow" },
       { "item" : "sgflamesentrythrow" },
