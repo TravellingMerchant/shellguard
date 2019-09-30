@@ -16,7 +16,7 @@ function dieState.enterWith(params)
 end
 
 function dieState.enteringState(stateData)
-  world.objectQuery(mcontroller.position(), 100, { name = "fortressdoor", callScript = "becomeBreakable" })
+  world.objectQuery(mcontroller.position(), 100, { name = "sgfortressdoor", callScript = "becomeBreakable" })
 
   animator.setAnimationState("coreIdle", "off")
   

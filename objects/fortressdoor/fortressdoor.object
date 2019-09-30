@@ -1,5 +1,5 @@
 {
-  "objectName" : "fortressdoor",
+  "objectName" : "sgfortressdoor",
   "colonyTags" : ["door"],
   "printable" : false,
   "rarity" : "Legendary",
