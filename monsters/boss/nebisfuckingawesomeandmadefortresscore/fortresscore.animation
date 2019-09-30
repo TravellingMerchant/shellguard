@@ -952,11 +952,11 @@
   "sounds" : {
     "turnHostile" : [ "/sfx/npc/robotboss_turnhostile.ogg" ],
     "deathPuff" : {
-      "pool" : [ "/sfx/npc/robotboss_death.ogg" ],
+      "pool" : [ "/sfx/npc/guardian_death_explosion.ogg" ],
       "rangeMultiplier" : 1.5
     },
     "destruction" : {
-      "pool" : [ "/sfx/npc/robotboss_death.ogg" ],
+      "pool" : [ "/sfx/npc/guardian_death_explosion.ogg" ],
       "rangeMultiplier" : 1.5
 	},
     "hurt" : {
@@ -964,7 +964,7 @@
       "rangeMultiplier" : 1.5
     },
     "death" : {
-      "pool" : [ "/sfx/npc/boss/robotboss_death.ogg" ],
+      "pool" : [ "/sfx/npc/boss/guardian_death_explosion.ogg" ],
       "rangeMultiplier" : 1.5
     }
   },

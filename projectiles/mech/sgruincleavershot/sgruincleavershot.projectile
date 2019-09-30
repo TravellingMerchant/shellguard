@@ -4,7 +4,7 @@
   "physics" : "sgruincleaverphysics",
   "animationCycle" : 0.3,
   "animationLoops" : true,
-  "windupFrames" : 2,
+  "windupFrames" : 1,
   "timeToLive" : 1,
   "frameNumber" : 3,
   "fullbright" : true,
