@@ -1,0 +1,49 @@
+{
+  "objectName" : "fortressdoor",
+  "colonyTags" : ["door"],
+  "printable" : false,
+  "rarity" : "Legendary",
+  "objectType" : "physics",
+
+  "category" : "door",
+  "price" : 15,
+  "description" : "A blast door that can only be broken by the ruin cleaver.",
+  "shortdescription" : "Blast Door",
+  "race" : "generic",
+
+  "apexDescription" : "A durable blast door, built to withstand heavy impacts.",
+  "avianDescription" : "This door is unbreakable without some form of cannon.",
+  "floranDescription" : "Large door withsstandss sstabss.",
+  "glitchDescription" : "Baffled. This door can withstand impact from my weaponry.",
+  "humanDescription" : "This door appears to stop incoming hits...",
+  "hylotlDescription" : "This door is nigh unbreakable, one could not break it with traditional weaponry.",
+  "novakidDescription" : "This door ain't breakin' any time soon.",
+
+  "inventoryIcon" : "fortressdoor.png:default",
+  "orientations" : [
+    {
+      "dualImage" : "fortressdoor.png:default",
+      "imagePosition" : [-13, -48],
+
+      "renderLayer" : "Player+10",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom", "top" ]
+    }
+  ],
+
+  "animation" : "fortressdoor.animation",
+  "animationParts" : {
+    "door" : "fortressdoor.png",
+    "doorlit" : "fortressdoorlit.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "smashable" : true,
+  "smashSounds" : [ "/sfx/melee/kill_robotic1.ogg" ],
+  "health" : 50000,
+  "interactive" : false,
+
+  "scripts" : [ "/objects/fortressdoor/fortressdoor.lua" ],
+  "scriptDelta" : 5
+}

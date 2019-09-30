@@ -1,0 +1,65 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "doorState" : {
+        "default" : "default",
+        "states" : {
+          "default" : {
+            "frames" : 1
+          },
+          "destroyed" : {
+            "frames" : 1
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "door" : {
+        "properties" : {
+          "centered" : true
+        },
+
+        "partStates" : {
+          "doorState" : {
+            "default" : {
+              "properties" : {
+                "image" : "<partImage>:default"
+              }
+            },
+            "destroyed" : {
+              "properties" : {
+                "image" : "<partImage>:destroyed"
+              }
+            }
+          }
+        }
+      },
+      "doorlit" : {
+        "properties" : {
+          "centered" : true,
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "doorState" : {
+            "default" : {
+              "properties" : {
+                "image" : "<partImage>:default"
+              }
+            },
+            "destroyed" : {
+              "properties" : {
+                "image" : "<partImage>:destroyed"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "sounds" : {
+    "break" : [ ]
+  }
+}
