@@ -8,7 +8,7 @@
   "animation" : "shellufo.animation",
   "reversed" : true,
 
-  "dropPools" : [ "sgufoclaw" ],
+  "dropPools" : [ "sgufoclawrematch" ],
 
   "baseParameters" : {
     "scripts" : [

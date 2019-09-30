@@ -34,6 +34,15 @@
       ]
     }]
   ], 
+  
+  "sgufoclawrematch" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "sgairstrikegun"}
+      ]
+    }]
+  ], 
+ 
   "fortressdrop" : [
     [1, {
       "pool" : [
@@ -48,6 +57,15 @@
       ]
     }]
   ],
+ 
+  "sgarenabossdroprematch" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "sglockjawpraxis"}
+      ]
+    }]
+  ],
+
   "sgsurvivorstaff" : [
     [1, {
       "pool" : [

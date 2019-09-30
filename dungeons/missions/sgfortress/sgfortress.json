@@ -8348,6 +8348,26 @@
                  "width":24,
                  "x":9360,
                  "y":1856
+                }, 
+                {
+                 "gid":2147491088,
+                 "height":20,
+                 "id":3181,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"sgplasmitestaff\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":11840,
+                 "y":2696
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -11722,7 +11742,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":3181,
+ "nextobjectid":3182,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
