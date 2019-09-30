@@ -23,7 +23,7 @@
   "orientations" : [
     {
       "dualImage" : "fortressdoor.png:default",
-      "imagePosition" : [-13, -48],
+      "imagePosition" : [0, 0],
 
       "renderLayer" : "Player+10",
 
@@ -37,7 +37,7 @@
     "door" : "fortressdoor.png",
     "doorlit" : "fortressdoorlit.png"
   },
-  "animationPosition" : [0, 0],
+  "animationPosition" : [13, 48],
 
   "smashable" : true,
   "smashSounds" : [ "/sfx/melee/kill_robotic1.ogg" ],

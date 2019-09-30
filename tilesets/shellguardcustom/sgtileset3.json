@@ -128,7 +128,7 @@
          "\/\/description":"sgfortressdoor",
          "\/\/name":"sgfortressdoor",
          "\/\/shortdescription":"sgfortressdoor",
-         "imagePositionX":"-13",
+         "imagePositionX":"0",
          "imagePositionY":"0",
          "object":"sgfortressdoor",
          "tilesetDirection":"right"
