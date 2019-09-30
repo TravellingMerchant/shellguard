@@ -32,33 +32,33 @@ function update(dt)
   --world.debugText("Health is " .. self.shieldHealth, vec2.add(mcontroller.position(), {0,2}), "red")
   
   if not self.active then
-	if self.cooldownTimer == 0 then
-	  animator.setAnimationState("shield", "recharge")
-	  self.rechargeTimer = math.max(0, self.rechargeTimer - dt)
-	  if self.rechargeTimer == 0 then
-		activateShield()
-	  end
-	end
-  elseif self.active then
-	self.shieldHealth = status.resource("shieldHealth")
-	
-	self.rechargeTimer = math.max(0, self.rechargeTimer - dt)
-	
-	--Check if we got hit recently by comparing current damage absorption to that of last frame
-	if self.shieldHealth ~= self.lastShieldHealth then
-	  self.rechargeTimer = self.rechargeTimeAfterHit
-	elseif self.shieldHealth ~= self.maxHealth and self.rechargeTimer == 0 then
-	  status.setResource("shieldHealth", math.min(self.maxHealth, self.shieldHealth + (self.maxHealth * self.regenPercentage * dt)))
-	end
-	
-	local healthFactor =  1 - (self.shieldHealth / self.maxHealth)
-	local animationRate =  1 + (healthFactor * (self.maxAnimationRate - 1))
-	animator.setAnimationRate(animationRate)
-	--world.debugText("Animation Rate is " .. animationRate, vec2.add(mcontroller.position(), {0,3}), "red")
-	
-	if status.resource("shieldHealth") <= 0 then
-	  breakShield()
-	end
+		if self.cooldownTimer == 0 then
+			animator.setAnimationState("shield", "recharge")
+			self.rechargeTimer = math.max(0, self.rechargeTimer - dt)
+			if self.rechargeTimer == 0 then
+			activateShield()
+			end
+		end
+		elseif self.active then
+		self.shieldHealth = status.resource("shieldHealth")
+		
+		self.rechargeTimer = math.max(0, self.rechargeTimer - dt)
+		
+		--Check if we got hit recently by comparing current damage absorption to that of last frame
+		if self.shieldHealth ~= self.lastShieldHealth then
+			self.rechargeTimer = self.rechargeTimeAfterHit
+		elseif self.shieldHealth ~= self.maxHealth and self.rechargeTimer == 0 then
+			status.setResource("shieldHealth", math.min(self.maxHealth, self.shieldHealth + (self.maxHealth * self.regenPercentage * dt)))
+		end
+		
+		local healthFactor =  1 - (self.shieldHealth / self.maxHealth)
+		local animationRate =  1 + (healthFactor * (self.maxAnimationRate - 1))
+		animator.setAnimationRate(animationRate)
+		--world.debugText("Animation Rate is " .. animationRate, vec2.add(mcontroller.position(), {0,3}), "red")
+		
+		if status.resource("shieldHealth") <= 0 then
+			breakShield()
+		end
   end
   
   self.lastShieldHealth = status.resource("shieldHealth")

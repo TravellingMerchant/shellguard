@@ -5,6 +5,7 @@ ruined = {}
 
 function ruined.enterWith(args)
   if not args or not args.enteringPhase then return nil end
+	self.radioMessage = false
 
   return {
 		vehicleType = config.getParameter("ruined.vehicleType")
