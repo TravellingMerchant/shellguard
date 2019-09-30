@@ -25,7 +25,7 @@
   "protection" : 75,
   "maxHealth" : 2000,
 
-  "projectileType": "sgruincleavershot",
+  "projectileType": "sgruincleavershotshort",
   "projectileParameters": {},
 
   "backSpringPositions" : [
