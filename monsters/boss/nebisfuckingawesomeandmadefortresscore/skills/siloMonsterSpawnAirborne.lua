@@ -132,6 +132,12 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 			if animator.animationState("topRightSilo") == "openidle" then
 				animator.setAnimationState("topRightSilo", "doorclose")
 			end
+			if animator.animationState("bottomRightSilo") == "risen" then
+				animator.setAnimationState("bottomRightSilo", "sink")
+			end
+			if animator.animationState("bottomLeftSilo") == "risen" then
+				animator.setAnimationState("bottomLeftSilo", "sink")
+			end
 			
 			if stateData.fireDuration <= 0 then
 				return true
@@ -146,10 +152,10 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 			animator.setAnimationState("topRightSilo", "rise")
 		end
 	elseif not self.active then
-		if self.firstChoice == 1 then	
-			self.first = true
+		if self.firstChoice == 1 then
 			if animator.animationState("topLeftSilo") == "idle" then
 				animator.setAnimationState("topLeftSilo", "rise")
+				self.first = true
 			end
 		elseif self.firstChoice == 2 then
 			if animator.animationState("topRightSilo") == "idle" then
@@ -167,6 +173,8 @@ function siloMonsterSpawnAirborne.leavingState(stateData)
   self.active = false
   self.canFire = false
   self.first = false
+    self.leftFinished = false
+  self.rightFinished = false
 	self.activeRight = false
 	self.activeLeft = false
 end
