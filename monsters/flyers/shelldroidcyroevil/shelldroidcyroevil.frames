@@ -6,7 +6,7 @@
     "names" : [
       [ null, "idle.1", "idle.2", "idle.3", "idle.4", "idle.5", "idle.6"],
       [ null, "aggro.1", "aggro.2", "aggro.3", "aggro.4", "aggro.5", "aggro.6"],
-      [ null, "fire.1", "fire.2", "fire.3", "fire.4", "fire.5", "fire.6"],
+      [ null, "fire.1", "fire.2", "fire.3", "fireloop.1", "fireloop.2", "fireloop.3"],
       [ null, "hurt.1", null, "aggrohurt.1"]
     ]
   },

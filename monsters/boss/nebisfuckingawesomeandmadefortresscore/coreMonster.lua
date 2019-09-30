@@ -222,11 +222,11 @@ function update(dt)
 	  end
 
 	  local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
+		local playerName = "Mr. Shellyguard"
 		if playerId then
-			local playerName = world.entityName(playerId)
+			playerName = world.entityName(playerId)
 		else
-			local playerId = 1
-			local playerName = "Mr. Shellyguard"
+			playerId = entity.id()
 		end
 	  
 	  if self.sayTime > 0 then
