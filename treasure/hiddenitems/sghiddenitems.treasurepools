@@ -33,6 +33,13 @@
         {"weight" : 0.20, "item" : "shellguardclawboss"}
       ]
     }]
+  ], 
+  "fortressdrop" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "neb-shellguardrail"}
+      ]
+    }]
   ],
   "sgarenabossdrop" : [
     [1, {
