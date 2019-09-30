@@ -24,11 +24,9 @@ function coreChargeLaser.enteringState(stateData)
     animator.setAnimationState("blastShield", "winddown")
   end
 	
-	if not self.radioMessage then
-		local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
-		world.sendEntityMessage(playerId, "queueRadioMessage", "sgfortresscorelaserattack")
-		self.radioMessage = true
-	end
+	local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
+	world.sendEntityMessage(playerId, "queueRadioMessage", "sgfortresscorelaserattack")
+	self.radioMessage = true
 end
 
 function coreChargeLaser.update(dt, stateData)

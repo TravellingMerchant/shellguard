@@ -21,11 +21,9 @@ function energyShieldActivate.enteringState(stateData)
   animator.setAnimationState("stages", "stage"..currentPhase())
   animator.playSound("energyShieldActivate")
 	
-	if not self.radioMessage then
-		local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
-		world.sendEntityMessage(playerId, "queueRadioMessage", "sgfortressenergyshielddeployment")
-		self.radioMessage = true
-	end
+	local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
+	world.sendEntityMessage(playerId, "queueRadioMessage", "sgfortressenergyshielddeployment")
+	self.radioMessage = true
 end
 
 function energyShieldActivate.update(dt, stateData)
