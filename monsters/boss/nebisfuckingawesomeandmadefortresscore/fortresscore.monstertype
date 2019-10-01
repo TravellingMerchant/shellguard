@@ -22,7 +22,7 @@
       "/monsters/boss/nebisfuckingawesomeandmadefortresscore/fortressreset.lua"
     ],
 		
-		"dropPools" : ["sgarenabossdrop"],
+		"dropPools" : ["fortressdrop"],
 		"renderLayer" : "Projectile-1",
 	
     "skillCount" : 14,

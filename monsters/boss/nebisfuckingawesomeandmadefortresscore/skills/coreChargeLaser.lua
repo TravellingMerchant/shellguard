@@ -25,6 +25,9 @@ function coreChargeLaser.enteringState(stateData)
   end
 	
 	local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
+	if not playerId then
+		playerId = entity.id()
+	end
 	world.sendEntityMessage(playerId, "queueRadioMessage", "sgfortresscorelaserattack")
 	self.radioMessage = true
 end

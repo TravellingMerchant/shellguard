@@ -222,7 +222,7 @@ function update(dt)
 	  end
 
 	  local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
-		local playerName = "Mr. Shellyguard"
+		local playerName = "Mr. Deadass"
 		if playerId then
 			playerName = world.entityName(playerId)
 		else
