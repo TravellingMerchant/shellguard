@@ -20,11 +20,11 @@ function dieState.enteringState(stateData)
 
   animator.setAnimationState("coreIdle", "off")
   
-  local playerId = world.entityName(world.playerQuery(mcontroller.position(), 50, {order = "random"})[1])
+  local playerName = world.entityName(world.playerQuery(mcontroller.position(), 50, {order = "random"})[1])
   local currentLine = 1
   
   if stateData.sayTime > 0 then
-	monster.sayPortrait(config.getParameter("dialog.death"..currentLine), config.getParameter("chatPortrait"), { player = playerId })
+	monster.sayPortrait(config.getParameter("dialog.death"..currentLine), config.getParameter("chatPortrait"), { player = playerName })
 	if stateData.sayTime <= 0 then
 	  stateData.sayTime = 1
 	  if currentLine < 3 then
@@ -51,11 +51,9 @@ function dieState.enteringState(stateData)
       })
     end
 		
-	if not self.radioMessage then
-		local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
-		world.sendEntityMessage(playerId, "queueRadioMessage", "sgfortressRUINED2")
-		self.radioMessage = true
-	end
+	local playerId = world.playerQuery(mcontroller.position(), 50, {order = "random"})[1]
+	world.sendEntityMessage(playerId, "queueRadioMessage", "sgfortressRUINED2")
+	self.radioMessage = true
 end
 
 function dieState.update(dt, stateData)
