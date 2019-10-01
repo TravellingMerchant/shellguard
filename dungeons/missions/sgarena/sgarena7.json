@@ -1998,26 +1998,6 @@
                  "y":496
                 }, 
                 {
-                 "gid":4557,
-                 "height":67,
-                 "id":1010,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"uniqueId\" : \"sgarenatelerematch\" }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":3424,
-                 "y":960
-                }, 
-                {
                  "gid":4888,
                  "height":24,
                  "id":1018,
@@ -2216,6 +2196,18 @@
                  "width":16,
                  "x":2888,
                  "y":768
+                }, 
+                {
+                 "gid":4911,
+                 "height":67,
+                 "id":1072,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":3424,
+                 "y":960
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -3291,7 +3283,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":1072,
+ "nextobjectid":1073,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
@@ -3400,6 +3392,10 @@
         {
          "firstgid":4895,
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgmaterials.json"
+        }, 
+        {
+         "firstgid":4901,
+         "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }],
  "tilewidth":8,
  "type":"map",

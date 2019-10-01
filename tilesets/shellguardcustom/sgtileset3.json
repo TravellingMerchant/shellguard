@@ -8,7 +8,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":20,
+ "tilecount":21,
  "tiledversion":"1.2.4",
  "tileheight":400,
  "tileproperties":
@@ -141,6 +141,16 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"sgheattank",
+         "tilesetDirection":"right"
+        },
+     "20":
+        {
+         "\/\/description":"sgcorerematchtele",
+         "\/\/name":"sgcorerematchtele",
+         "\/\/shortdescription":"sgcorerematchtele",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sgcorerematchtele",
          "tilesetDirection":"right"
         },
      "3":
@@ -346,6 +356,16 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "20":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "3":
         {
          "\/\/description":"string",
@@ -496,6 +516,12 @@
          "image":"..\/..\/objects\/breakables\/sgheattank\/sgheattankicon.png",
          "imageheight":26,
          "imagewidth":17
+        },
+     "20":
+        {
+         "image":"..\/..\/objects\/rematch teleporters\/sgcorerematchtele\/sgcorerematchteleicon.png",
+         "imageheight":67,
+         "imagewidth":40
         },
      "3":
         {

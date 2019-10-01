@@ -976,18 +976,6 @@
                  "y":2896
                 }, 
                 {
-                 "gid":7489,
-                 "height":67,
-                 "id":6478,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":5304,
-                 "y":3008
-                }, 
-                {
                  "gid":2147486857,
                  "height":20,
                  "id":6482,
@@ -1026,6 +1014,18 @@
                  "width":24,
                  "x":5384,
                  "y":3024
+                }, 
+                {
+                 "gid":8352,
+                 "height":67,
+                 "id":6496,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":5304,
+                 "y":3008
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1176,7 +1176,7 @@
          "y":0
         }],
  "nextlayerid":18,
- "nextobjectid":6495,
+ "nextobjectid":6497,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
@@ -1337,6 +1337,10 @@
         {
          "firstgid":8336,
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgmaterials.json"
+        }, 
+        {
+         "firstgid":8342,
+         "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }],
  "tilewidth":8,
  "type":"map",

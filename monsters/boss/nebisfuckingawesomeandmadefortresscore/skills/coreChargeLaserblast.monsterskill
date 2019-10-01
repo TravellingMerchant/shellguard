@@ -1,0 +1,24 @@
+{
+  "name" : "coreChargeLaserblast",
+  "label" : "CRUSH",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/coreChargeLaserblast.lua" ],
+
+    "coreChargeLaser" : {
+      "chargeUpTime" : 2,
+      "shots" : 5,
+      "projectileType" : "nebsgfortresslaserblast",
+			"projectileConfig" : {
+				"power" : 65
+			}
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "fire" : [ "/sfx/turret/sglaserartillery1.ogg" ]
+    }
+  }
+}

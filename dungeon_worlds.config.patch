@@ -200,6 +200,24 @@
     "biome" : "space"
     }
   },
+  
+  {
+    "op" : "add",
+    "path" : "/sgfortressbossroomrematch",
+    "value" : {
+    "primaryDungeon" : "sgfortressbossroomrematch",
+    "threatLevel" : 10,
+    "gravity" : 80,
+    "worldSize" : [2500, 2000],
+    "dungeonBaseHeight" : 1000,
+    "dungeonSurfaceHeight" : 810,
+    "ambientLightLevel" : [32, 32, 32],
+    "musicTrack" : "",
+    "environmentStatusEffects" : ["dontstarve"],
+    "worldEdgeForceRegions" : "TopAndBottom",
+    "biome" : "space"
+    }
+  },
 
   {
     "op" : "add",
