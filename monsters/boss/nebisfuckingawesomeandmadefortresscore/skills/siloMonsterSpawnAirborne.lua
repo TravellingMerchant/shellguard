@@ -153,9 +153,9 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 		end
 	elseif not self.active then
 		if self.firstChoice == 1 then
+			self.first = true
 			if animator.animationState("topLeftSilo") == "idle" then
 				animator.setAnimationState("topLeftSilo", "rise")
-				self.first = true
 			end
 		elseif self.firstChoice == 2 then
 			if animator.animationState("topRightSilo") == "idle" then
