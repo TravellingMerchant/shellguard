@@ -166,6 +166,8 @@ function siloMonsterSpawnGrounded.leavingState(stateData)
   self.active = false
   self.canFire = false
   self.first = false
+    self.leftFinished = false
+  self.rightFinished = false
 	self.activeRight = false
 	self.activeLeft = false
 end
