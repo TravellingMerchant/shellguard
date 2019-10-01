@@ -9,7 +9,6 @@ function siloMonsterSpawnAirborne.enter()
   self.leftFinished = false
   self.rightFinished = false
   self.canFire = false
-  self.first = false
   self.leftSiloOffset = config.getParameter("siloMonsterSpawnAirborne.leftSiloOffset")
   self.rightSiloOffset = config.getParameter("siloMonsterSpawnAirborne.rightSiloOffset")
   self.monsterLevel = monster.level() - 2
@@ -86,11 +85,9 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 				end
 				end
 			end
-			if self.first then
-				animator.setAnimationState("topLeftSilo", "doorclose")
-				self.finished = true
-				self.leftFinished = true
-			end
+			animator.setAnimationState("topLeftSilo", "doorclose")
+			self.finished = true
+			self.leftFinished = true
 		end
 		if animator.animationState("topRightSilo") == "openidle" and self.canFire and not self.rightFinished then
 
@@ -153,7 +150,6 @@ function siloMonsterSpawnAirborne.update(dt, stateData)
 		end
 	elseif not self.active then
 		if self.firstChoice == 1 then
-			self.first = true
 			if animator.animationState("topLeftSilo") == "idle" then
 				animator.setAnimationState("topLeftSilo", "rise")
 			end
@@ -172,7 +168,6 @@ function siloMonsterSpawnAirborne.leavingState(stateData)
   world.sendEntityMessage(entity.id(), "attemptToCloseSilo", "Right")
   self.active = false
   self.canFire = false
-  self.first = false
     self.leftFinished = false
   self.rightFinished = false
 	self.activeRight = false
