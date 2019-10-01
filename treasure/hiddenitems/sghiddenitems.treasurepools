@@ -50,6 +50,15 @@
       ]
     }]
   ],
+  
+  "fortressdroprematch" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "sgmechastaff"}
+      ]
+    }]
+  ],
+  
   "sgarenabossdrop" : [
     [1, {
       "pool" : [

@@ -26,7 +26,7 @@
       "fire2" : [ "/sfx/melee/swing_broadsword.ogg" ],
       "fire3" : [ "/sfx/melee/swing_shortsword.ogg" ],
       "fire4" : [ "/sfx/melee/swing_spear.ogg" ],
-      "gunfire" : [ "/sfx/gun/Needle Lazer.ogg", "/sfx/gun/Needle Lazer2.ogg", "/sfx/gun/Needle Lazer3.ogg" ]
+      "gunfire" : [ "/sfx/gun/railshots/heavyshot.ogg" ]
     }
   },
 
@@ -90,39 +90,40 @@
 					"blade" : "closed"
 				}
       },
+
       "fire2" : {
         "duration" : 0.5,
-        "armRotation" : -20,
+        "armRotation" : 50,
         "weaponRotation" : -70,
+        "weaponAngularVelocity" : 1200,
         "twoHanded" : true,
-        "weaponOffset" : [0, 2.5],
 
         "allowRotate" : false,
         "allowFlip" : false,
-
 				//If this exists it will try to shoot based on the variables within
 				"gunShotConfig" : {
 					//General
 					"aimAtCursor" : false,	//If true, will fire toward the cursor instead of the rotation of the weapon
-					"fireTime" : 0.4, 			//If this exists it loops during the stance duration firing in intervals of this number
-					"energyUsage" : 25,
+					"fireTime" : 0.1, 			//If this exists it loops during the stance duration firing in intervals of this number
+					"energyUsage" : 15,
 					"fireSound" : "gunfire",
 					
 					//Recoil
 					"recoilKnockbackVelocity" : false,
 					
 					//Projectile
-					"projectile" : "nebsgfortresslaserblast",
+					"projectile" : "sgdelayedbeam",
 					"projectileCount" : 1,
 					"projectileDamage" : 5,
 					"projectileParameters" : {
 						"knockback" : 22
 					},
-					"projectileInaccuracy" : 0.15,
+					"projectileInaccuracy" : 10,
 					"projectileAimAngleOffset" : 0,
-					"projectileFirePoint" : [6.375, 2.25]
+					"projectileFirePoint" : [3, 0]
 				}
-			},
+      },
+
       "fire4" : {
         "duration" : 0.5,
         "armRotation" : -20,
@@ -137,15 +138,15 @@
 				"gunShotConfig" : {
 					//General
 					"aimAtCursor" : false,	//If true, will fire toward the cursor instead of the rotation of the weapon
-					"fireTime" : 0.4, 			//If this exists it loops during the stance duration firing in intervals of this number
-					"energyUsage" : 25,
+					"fireTime" : 0.1, 			//If this exists it loops during the stance duration firing in intervals of this number
+					"energyUsage" : 15,
 					"fireSound" : "gunfire",
 					
 					//Recoil
 					"recoilKnockbackVelocity" : false,
 					
 					//Projectile
-					"projectile" : "nebsgfortresslaserblast",
+					"projectile" : "sgdelayedbeam",
 					"projectileCount" : 1,
 					"projectileDamage" : 5,
 					"projectileParameters" : {
