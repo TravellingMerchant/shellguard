@@ -238,7 +238,7 @@
                  "y":176
                 }, 
                 {
-                 "gid":7708,
+                 "gid":7710,
                  "height":32,
                  "id":4827,
                  "name":"",
@@ -250,7 +250,7 @@
                  "y":224
                 }, 
                 {
-                 "gid":2147491356,
+                 "gid":2147491358,
                  "height":32,
                  "id":4828,
                  "name":"",
@@ -270,7 +270,7 @@
                  "type":"",
                  "visible":true,
                  "width":40,
-                 "x":328,
+                 "x":320,
                  "y":224
                 }],
          "opacity":1,
@@ -529,7 +529,7 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }, 
         {
-         "firstgid":7618,
+         "firstgid":7620,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/human.json"
         }],
  "tilewidth":8,
