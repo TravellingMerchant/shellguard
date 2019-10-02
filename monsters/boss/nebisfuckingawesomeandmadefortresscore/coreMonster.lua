@@ -321,7 +321,7 @@ function trackTargets(keepInSight, queryRange, trackingRange)
   if keepInSight == nil then keepInSight = true end
 
   if #self.targets == 0 then
-    local newTarget = util.closestValidTarget(queryRange)
+    local newTarget = closestValidTarget(queryRange)
     table.insert(self.targets, newTarget)
   end
 
@@ -329,6 +329,8 @@ function trackTargets(keepInSight, queryRange, trackingRange)
     if not world.entityExists(targetId) then return false end
 
     if keepInSight and not entity.entityInSight(targetId) then return false end
+	
+	if entity.damageTeam(targetId).type ~= "enemy" then return false end
 
     if trackingRange and world.magnitude(mcontroller.position(), world.entityPosition(targetId)) > trackingRange then
       return false
@@ -498,6 +500,12 @@ function move(delta, run, jumpThresholdX)
   end
 end
 
+function closestValidTarget(range)
+  local newTargets = world.entityQuery(entity.position(), range, { includedTypes = {"player"}, order = "nearest" })
+  local valid = util.find(newTargets, function(targetId) return entity.damageTeam(targetId).type == "enemy" and entity.entityInSight(targetId) end)
+  return valid or 0
+end
+
 --------------------------------------------------------------------------------
 --TODO: this could probably be further optimized by creating a list of discrete points and using sensors... project for another time
 function checkTerrain(direction)
@@ -554,7 +562,6 @@ end
 function isBlocked()
   return self.isBlocked
 end
-
 --------------------------------------------------------------------------------
 function willFall()
   return self.willFall
