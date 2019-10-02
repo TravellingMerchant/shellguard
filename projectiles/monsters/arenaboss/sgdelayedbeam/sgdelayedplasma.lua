@@ -22,7 +22,7 @@ end
 function destroy()
   if projectile.sourceEntity() and world.entityExists(projectile.sourceEntity()) then
     local rotation = mcontroller.rotation()
-    world.spawnProjectile("nebsgfortresslaserblast", mcontroller.position(), projectile.sourceEntity(), {math.cos(rotation), math.sin(rotation)}, false, { speed = 80, power = projectile.getParameter("power")})
+    world.spawnProjectile("nebsgfortresslaserblastplayer", mcontroller.position(), projectile.sourceEntity(), {math.cos(rotation), math.sin(rotation)}, false, { speed = 80, power = projectile.getParameter("power")})
     projectile.processAction(projectile.getParameter("explosionAction"))
   end
 end
