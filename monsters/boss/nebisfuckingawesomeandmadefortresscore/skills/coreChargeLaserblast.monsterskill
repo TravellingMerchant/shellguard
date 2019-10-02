@@ -6,7 +6,7 @@
   "parameters" : {
     "scripts" : [ "/monsters/boss/nebisfuckingawesomeandmadefortresscore/skills/coreChargeLaserblast.lua" ],
 
-    "coreChargeLaser" : {
+    "coreChargeLaserblast" : {
       "chargeUpTime" : 2,
       "shots" : 5,
       "projectileType" : "nebsgfortresslaserblast",
