@@ -4,8 +4,8 @@
   "inventoryIcon" : "sgmechastaff.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A high tech gun staff.",
-  "shortdescription" : "Praxis Imperium",
+  "description" : "An aggressive laser-casting spear, trophy to the victor of the core.",
+  "shortdescription" : "Fulcrum",
   "level" : 6,
   "tooltipKind" : "base",
   "category" : "uniqueWeapon",
@@ -162,10 +162,6 @@
 
   "builder" : "/items/buildscripts/buildweapon.lua",
   "upgradeParameters" : {
-    "inventoryIcon" : "sgmechastaffelite.png:closed.1",
-    "animationParts" : {
-    "blade" : "sgmechastaffelite.png"
-    },
-    "shortdescription" : "Praxis Imperium ^yellow;^reset;"
+    "shortdescription" : "Fulcrum ^yellow;^reset;"
   }
 }
