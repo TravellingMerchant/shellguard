@@ -14,7 +14,7 @@ end
 
 function ruined.enteringState(stateData)
 	world.sendEntityMessage(entity.id(), "cutTheMusic", false)
-  world.spawnVehicle(stateData.vehicleType, vec2.add(entity.position(), {-30, -15}))
+  world.spawnVehicle(stateData.vehicleType, vec2.add(entity.position(), {-30, -18.5}))
   animator.setAnimationState("stages", "stage"..currentPhase())
   status.addEphemeralEffect("fortressidontwanttodie")
 	

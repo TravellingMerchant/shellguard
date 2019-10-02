@@ -51,7 +51,7 @@
   ],
 
   "movementSettings" : {
-    "collisionPoly" : [[-8.5, 0.4], [-8.5, -6.6], [7.8, -6.6], [7.8, 0.4]],
+    "collisionPoly" : [[-8.5, 0.4], [-8.5, -3.6], [7.8, -3.6], [7.8, 0.4]],
     "mass" : 10,
     "airFriction" : 20000,
     "ignorePlatformCollision" : true,
@@ -60,7 +60,7 @@
   },
 
   "occupiedMovementSettings" : {
-    "collisionPoly" : [[-8.5, 0.4], [-8.5, -6.6], [7.8, -6.6], [7.8, 0.4]],
+    "collisionPoly" : [[-8.5, 0.4], [-8.5, -3.6], [7.8, -3.6], [7.8, 0.4]],
     "mass" : 10,
     "airFriction" : 20000,
     "gravityEnabled" : false,
@@ -68,7 +68,7 @@
   },
 
   "zeroGMovementSettings" : {
-    "collisionPoly" : [[-8.5, 0.4], [-8.5, -6.6], [7.8, -6.6], [7.8, 0.4]],
+    "collisionPoly" : [[-8.5, 0.4], [-8.5, -3.6], [7.8, -3.6], [7.8, 0.4]],
     "mass" : 10,
     "airFriction" : 20000,
     "collisionEnabled" : true

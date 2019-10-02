@@ -215,15 +215,15 @@
   
   "sgfortressenergyshielddeployment" : {
     "type" : "mission",
-    "senderName" : "Engineer Peter Atmos",
-    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
     "text" : "It's shields are up, you're going to have to shoot them down to deal damage!"
   },
   
   "sgfortresscorelaserattack" : {
     "type" : "mission",
-    "senderName" : "Engineer Peter Atmos",
-    "portraitImage" : "/interface/chatbubbles/atmos.png",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
     "text" : "Shoot it now, its defences are lowered! You can damage it more!"
   },
 
@@ -243,9 +243,9 @@
 
   "sgfortressRUINED2" : {
     "type" : "mission",
-    "senderName" : "Engineer Peter Atmos",
-    "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "Energy readings are climbing through the roof! I think it's going to explode, you have to get out of there!"
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Energy readings are climbing through the roof! I think it's going to explode, you have to get out of there! Shoot that door with the ruin cleaver to get out!"
   },
 
   "sgfortressescape1" : {
