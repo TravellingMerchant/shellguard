@@ -54,7 +54,7 @@
   "soundEffect" : "/sfx/monsters/boss/fortresscore/fortressidle.ogg",
 
   "chatOptions" : [
-    "This unit exists to serve Shellguard.",
+    "This unit now exists to serve Shellguard.",
     "Murderer-Correction: Hero detected. ",
     "This unit harbours only 45 terabytes of anger over it's destruction."
   ],
