@@ -262,6 +262,21 @@ function update(dt)
     else
       if self.hadTarget then
         --Lost target, reset boss
+		self.finished = true
+		world.sendEntityMessage(entity.id(), "attemptToCloseSilo", "Left")
+		world.sendEntityMessage(entity.id(), "attemptToCloseSilo", "Right")
+		if animator.animationState("bottomRightSilo") ~= "idle" then
+			animator.setAnimationState("bottomRightSilo", "sink")
+		end
+		if animator.animationState("bottomLeftSilo") ~= "idle" then
+			animator.setAnimationState("bottomLeftSilo", "sink")
+		end
+		if animator.animationState("topRightSilo") ~= "idle" then
+			animator.setAnimationState("topRightSilo", "sink")
+		end
+		if animator.animationState("topLeftSilo") ~= "idle" then
+			animator.setAnimationState("topLeftSilo", "sink")
+		end
         if currentPhase() then
           self.phaseStates[currentPhase()].endState()
         end

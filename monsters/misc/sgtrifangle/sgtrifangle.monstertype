@@ -8,15 +8,17 @@
 
   "animation" : "sgtrifangle.animation",
 
-  "dropPools" : ["spaceRobot"],
+  "dropPools" : [],
 
   "baseParameters" : {
+    "sgTimeToLive" : 15,
   	"damageTeamType" : "friendly",
     "damageTeam" : 0,
     "scripts" : [
-      "/monsters/monster.lua"
+      "/monsters/monster.lua",
+	  "/monsters/sgtimedmonster.lua"
     ],
-
+	
     "behavior" : "monster",
     "deathBehavior" : "monster-death",
 
@@ -36,9 +38,14 @@
 
       "wanderActions" : [
         {
-          "name" : "action-stop",
+          "name" : "wander-fly",
           "parameters" : {
-            "stopForce" : 20
+            "wanderTime" : [2,4],
+            "groundDistance" : 8,
+            "ceilingDistance" : 8,
+            "xVelocity" : 4,
+            "yVelocity" : 12,
+			"flyState" : "idle"
           }
         }
       ],

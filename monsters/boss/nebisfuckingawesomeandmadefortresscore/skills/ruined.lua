@@ -6,7 +6,21 @@ ruined = {}
 function ruined.enterWith(args)
   if not args or not args.enteringPhase then return nil end
 	self.radioMessage = false
-
+	self.finished = true
+	world.sendEntityMessage(entity.id(), "attemptToCloseSilo", "Left")
+	world.sendEntityMessage(entity.id(), "attemptToCloseSilo", "Right")
+	if animator.animationState("bottomRightSilo") ~= "idle" then
+		animator.setAnimationState("bottomRightSilo", "sink")
+	end
+	if animator.animationState("bottomLeftSilo") ~= "idle" then
+		animator.setAnimationState("bottomLeftSilo", "sink")
+	end
+	if animator.animationState("topRightSilo") ~= "idle" then
+		animator.setAnimationState("topRightSilo", "sink")
+	end
+	if animator.animationState("topLeftSilo") ~= "idle" then
+		animator.setAnimationState("topLeftSilo", "sink")
+	end
   return {
 		vehicleType = config.getParameter("ruined.vehicleType")
 	}
