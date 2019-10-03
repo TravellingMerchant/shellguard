@@ -2613,6 +2613,46 @@
                  "width":24,
                  "x":10832,
                  "y":3888
+                }, 
+                {
+                 "gid":2147485445,
+                 "height":24,
+                 "id":3441,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"treasurePools\":[\"basicTreasure\"]}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":7160,
+                 "y":3464
+                }, 
+                {
+                 "gid":1797,
+                 "height":24,
+                 "id":3442,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{\"treasurePools\":[\"basicTreasure\"]}"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":7144,
+                 "y":3440
                 }],
          "opacity":0.97,
          "type":"objectgroup",
@@ -4614,7 +4654,7 @@
          "y":0
         }],
  "nextlayerid":25,
- "nextobjectid":3441,
+ "nextobjectid":3443,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
@@ -4817,11 +4857,11 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }, 
         {
-         "firstgid":9797,
+         "firstgid":9804,
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset2.json"
         }, 
         {
-         "firstgid":9807,
+         "firstgid":9814,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/apexcamp.json"
         }],
  "tilewidth":8,
