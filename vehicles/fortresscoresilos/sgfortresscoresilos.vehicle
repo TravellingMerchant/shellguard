@@ -12,10 +12,10 @@
 
   "animationPartTags" : {
     "platform" : {
-      "partImage" : "assetmissing.png"
+      "partImage" : "sgfortresscoresilos.png"
     },
     "platformfullbright" : {
-      "partImage" : "assetmissing.png"
+      "partImage" : "sgfortresscoresilos.png"
     }
   },
 
