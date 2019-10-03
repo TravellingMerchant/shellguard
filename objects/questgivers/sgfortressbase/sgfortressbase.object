@@ -44,7 +44,7 @@
   "turnInQuests" : [
   ],
 
-  "scripts" : ["/scripts/chattyObject.lua"],
+  "scripts" : ["/scripts/sgAdvancedChattyObject.lua"],
   "scriptDelta" : 60,
   
   "questIndicatorPosition" : [0, -23],
@@ -56,6 +56,7 @@
   "chatOptions" : [
     "This unit exists to serve Shellguard.",
     "Murderer-Correction: Hero detected. ",
-    "This unit harbours only 45 terrabtyes of anger over it's destruction."
-  ]
+    "This unit harbours only 45 terabytes of anger over it's destruction."
+  ],
+  "mouthPosition" : [-0.375, -23]
 }
