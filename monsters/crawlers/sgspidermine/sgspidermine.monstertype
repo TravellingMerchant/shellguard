@@ -11,11 +11,13 @@
   "dropPools" : [ ],
 
   "baseParameters" : {
+    "sgTimeToLive" : 15,
   	"damageTeamType" : "friendly",
     "damageTeam" : 0,
     "level" : 6,
     "scripts" : [
-      "/monsters/monster.lua"
+      "/monsters/monster.lua",
+	  "/monsters/sgtimedmonster.lua"
     ],
 
     "behavior" : "monster",
