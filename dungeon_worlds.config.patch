@@ -364,7 +364,7 @@
       "dungeonBaseHeight" : 1000,
       "dungeonSurfaceHeight" : 450,
       "ambientLightLevel" : [80, 200, 80],
-      "musicTrack" : "/music/arctic-battle2-loop.ogg",
+      "musicTrack" : "/music/Gears_of_the_Machine_4.ogg",
       "biome": "sgcentensskycity"
     }
   },  

@@ -1,0 +1,10 @@
+{
+  "name" : "sgtrifangle",
+  "category" : "sgtrifangle",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgtrifangle.png",
+    "bodyfullbright" : "sgtrifanglefullbright.png"
+  }
+}
