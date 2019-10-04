@@ -1,0 +1,15 @@
+{
+  "itemName" : "sgmemorypanel",
+  "price" : 10,
+  "category" : "block",
+  "rarity" : "Common",
+  "inventoryIcon" : "sgmemorypanel.png",
+  "shortdescription" : "Shellguard Grey Panel",
+  "description" : "Cheap, resilient panelling widely used for ship and station construction.",
+  "glitchdescription" : "Observant. This is panelling widely used for ship and station construction.",
+  "florandescription" : "Shiny sssmooth space metal.",
+  "novakiddescription" : "Some thick metal plating, looks mighty solid.",
+
+  "materialId" : 26202,
+  "learnBlueprintsOnPickup" : [ "sgmemorypanel" ]
+}

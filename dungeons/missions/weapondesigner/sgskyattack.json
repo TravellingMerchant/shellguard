@@ -42,7 +42,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"radioMessages\" : [\"sgskyattack1a\", \"sgskyattack1ab\"] }",
+                     "parameters":"{ \"radioMessages\" : [\"sgskyattack1a\", \"sgskyattack1b\"] }",
                      "stagehand":"radiomessage"
                     },
                  "propertytypes":

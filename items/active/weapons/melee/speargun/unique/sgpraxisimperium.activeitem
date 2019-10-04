@@ -113,7 +113,7 @@
 					//Projectile
 					"projectile" : "sentinelshardrocket",
 					"projectileCount" : 1,
-					"projectileDamage" : 5,
+					"projectileDamage" : 3,
 					"projectileParameters" : {
 						"knockback" : 22
 					},

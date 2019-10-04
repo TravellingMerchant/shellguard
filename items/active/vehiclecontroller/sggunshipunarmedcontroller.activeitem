@@ -5,7 +5,7 @@
   "rarity" : "Legendary",
   "category" : "vehicleController",
   "description" : "Creates an Olympus-I Unarmed gunship from stored nanites.",
-  "shortdescription" : "Olympus-I Unarmed Controller",
+  "shortdescription" : "O-I Unarmed Controller",
   "twoHanded" : true,
   "maxStack" : 1,
   "itemTags" : ["vehiclecontroller"],

@@ -105,7 +105,7 @@
 					//General
 					"aimAtCursor" : false,	//If true, will fire toward the cursor instead of the rotation of the weapon
 					"fireTime" : 0.1, 			//If this exists it loops during the stance duration firing in intervals of this number
-					"energyUsage" : 15,
+					"energyUsage" : 10,
 					"fireSound" : "gunfire",
 					
 					//Recoil
@@ -114,7 +114,7 @@
 					//Projectile
 					"projectile" : "sgdelayedbeam",
 					"projectileCount" : 1,
-					"projectileDamage" : 5,
+					"projectileDamage" : 3,
 					"projectileParameters" : {
 						"knockback" : 22
 					},
@@ -148,7 +148,7 @@
 					//Projectile
 					"projectile" : "sgdelayedbeam",
 					"projectileCount" : 1,
-					"projectileDamage" : 5,
+					"projectileDamage" : 4,
 					"projectileParameters" : {
 						"knockback" : 22
 					},

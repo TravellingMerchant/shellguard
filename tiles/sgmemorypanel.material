@@ -4,12 +4,12 @@
   "particleColor" : [182, 182, 182, 255],
   "itemDrop" : "sgmemorypanel",
 
-  "description" : "Something feels.. off about this.",
-  "glitchDescription" : "Observant. Something feels.. off about this.",
-  "floranDescription" : "Sssssomething feels.. off about thissss.",
-  "novakidDescription" : "Something feels.. off about this.",
+  "description" : "A high tech alloy.",
+  "glitchDescription" : "Observant. A high tech alloy.",
+  "floranDescription" : "A high tech alloy.",
+  "novakidDescription" : "A high tech alloy.",
 
-  "shortdescription" : "Memory Hull Panel",
+  "shortdescription" : "Grey Hull Panel",
   "footstepSound" : "/sfx/blocks/footstep_lightmetal.ogg",
   "health" : 20,
   "category" : "materials",

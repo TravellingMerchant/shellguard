@@ -5,7 +5,7 @@
   "rarity" : "Legendary",
   "category" : "vehicleController",
   "description" : "High speed, nimble gunship with powerful rotary cannons. Limited firing angle.",
-  "shortdescription" : "Olympus-I interceptor Controller",
+  "shortdescription" : "O-I Interceptor Controller",
   "twoHanded" : true,
   "maxStack" : 1,
   "itemTags" : ["vehiclecontroller"],

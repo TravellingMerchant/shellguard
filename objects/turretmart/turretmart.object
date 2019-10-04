@@ -23,6 +23,7 @@
     "items" : [
 	  { "item" : "sgslopedredpanel" },
 	  { "item" : "sgslopedhullpanel" },
+	  { "item" : "sgmemorypanel" },
 	  { "item" : "sgbaseturret" },
 	  { "item" : "sgrocketturret" },
 	  { "item" : "sgflakturret" },
