@@ -52,8 +52,7 @@
   "timeToLive" : 10,
   "power" : 20,
   "speed" : 35,
-  "damageKind" : "bow",
-  "damageTeam" : { "type" : "indiscriminate" },
+  "damageKind" : "default",
   
   "persistentAudio" : "/sfx/tech/tech_rocketboots.ogg"
 }
