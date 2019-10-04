@@ -13,5 +13,5 @@
   "timeToLive" : 0.1,
   "power" : 0.0,
   "damageKind" : "hidden",
-  "damageType" : "ignoresdef"
+  "damageType" : "status"
 }
