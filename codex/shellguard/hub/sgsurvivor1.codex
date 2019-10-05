@@ -5,9 +5,10 @@
   "description" : "Medical records of a high ranking Shellguard Soldier",
   "icon" : "sgsurvivor1.png",
   "contentPages" : [
-    "Subject: N2-512, otherwise known as Ironwatch member [REDACTED], was the only survivor of squad N2-5. All other members squad of N2-5 are confirmed dead, killed in the destruction of earth. Subject N2-512 was inflicted with multiple blunt force trauma wounds, burns from intense friction damage, presumably from the Ruins tentacles and 236 seperate laceraciones.",
+     "Subject: N2-512, otherwise known as Ironwatch member [REDACTED], was the only survivor of squad N2-5. All other members squad of N2-5 are confirmed dead, killed in the destruction of Earth. Subject N2-512 was inflicted with multiple blunt force trauma wounds, burns from intense friction damage- presumably from the Ruin’s tentacles- and 236 separate lacerations.",
 
-"Subject: N2-512 was revived with intensive bio-mechanical treatments. Complete replacements of [REDACTED], [REDACTED] and [REDACTED]. Subject made a full physical recovery, but has yet to have his mental stabilty tested."
+"Subject: N2-512 was revived with intensive bio-mechanical treatments. Complete replacements of [REDACTED], [REDACTED], and [REDACTED]. Subject made a full physical recovery, but has yet to have his mental stability tested."
+
 
   ],
     "itemConfig" : {

@@ -5,21 +5,21 @@
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "Alright, we've got you into the asteroid field next to its flight path. A forward team has set up the Ruincleaver in an ambush position further ahead."
+    "text" : "Alright, we've got you into the asteroid field next to its flight path. A forward team has set up the Ruin Cleaver in an ambush position further ahead."
   },  
 
   "sgspaceapproach2" : {
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "Commander! The sensors show that the ship has released defenisve forces, it must have detected the teleport signal!"
+    "text" : "Commander! The sensors show that the ship has released defensive forces, it must have detected the teleport signal!"
   },
   
   "sgspaceapproach3a" : {
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "Darn it, that's not good. You need to get to that Ruincleaver and fast."
+    "text" : "Darn it, that's not good. You need to get to that Ruin Cleaver and fast."
   },  
   
   "sgspaceapproach3b" : {
@@ -40,7 +40,7 @@
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "The Ruincleaver is all set up and ready to fire! It'll cut through the ships armour like a hot knife through Fluffalo milk butter!"
+    "text" : "The Ruin Cleaver is all set up and ready to fire! It'll cut through the ships armor like a hot knife through Fluffalo milk butter!"
   },
   
   "sgspaceapproach6" : {
@@ -91,7 +91,7 @@
     "type" : "mission",
     "senderName" : "SG-F0RTR355",
     "portraitImage" : "/interface/chatbubbles/SGUFO.png",
-    "text" : "Alert: Primary blast doors disenaged."
+    "text" : "Alert: Primary blast doors disengaged."
   },
   
    "sgfortress4a" : {
@@ -112,7 +112,7 @@
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivor.png",
-    "text" : "Not litertally, you stupid machine! Get those defensive turrets online!"
+    "text" : "Not literally, you stupid machine! Get those defensive turrets online!"
   },
   
    "sgfortress5a" : {
@@ -168,7 +168,7 @@
     "type" : "mission",
     "senderName" : "SG-F0RTR355",
     "portraitImage" : "/interface/chatbubbles/SGUFO.png",
-    "text" : "Warning: Smashing the interface keyboard will not improve producitivy."
+    "text" : "Warning: Smashing the interface keyboard will not improve productivity."
   },
   
    "sgfortresscodexroom1" : {
@@ -203,14 +203,14 @@
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivor.png",
-    "text" : "So, you've finally arrived... It's about time. Fortress, engage defences measures!"
+    "text" : "So, you've finally arrived... It's about time. Fortress, engage defense measures!"
   },
   
   "sgsurvivorfortressintro2" : {
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "You're nearing the Sol system. You have to stop the ship, NOW!"
+    "text" : "You're nearing the Sol System. You have to stop the ship, NOW!"
   },
   
   "sgfortressenergyshielddeployment" : {
@@ -224,7 +224,7 @@
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "Shoot it now, its defences are lowered! You can damage it more!"
+    "text" : "Shoot it now, its defenses are lowered! You can damage it more!"
   },
 
   "sgfortressturretspawn" : {
@@ -245,7 +245,7 @@
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "Energy readings are climbing through the roof! I think it's going to explode, you have to get out of there! Shoot that door with the ruin cleaver to get out!"
+    "text" : "Energy readings are climbing through the roof! I think it's going to explode; you have to get out of there! Shoot that door with the ruin cleaver to get out!"
   },
 
   "sgfortressescape1" : {
@@ -273,7 +273,7 @@
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "Oh.. NOW there's elevator music. Of course there is.."
+    "text" : "Oh... NOW there's elevator music. Of course there is..."
   }
 
 }

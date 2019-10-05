@@ -6,25 +6,25 @@
   "icon" : "sgsurvivorstory2.png",
   "contentPages" : [
     "^cyan;Personal log number 421:^white; 
-The honeymoon was fantastic! It cost a lot, but a vacation planet like that was worth it! Sure, it's about a year's setback for my Earth travel funds, but what's another year after an experience like that?",
+The honeymoon was fantastic! It cost a lot, but a vacation planet like that was worth it! Sure, set me back for about a year for my Earth travel funds, but what's another year after an experience like that?",
 
     "^cyan;Personal log number 442:^white;
-Huh, she's been acting so weird recently. I hope everything is ok?",
+Huh... She's been acting so weird recently. I hope everything is okay...",
 	
     "^cyan;Personal log number 446:^white;
-Oh my word! I can't believe it, this is the best day of my life! She's pregnant! Hah! It's all so surreal! At least all the late night runs to the shop for Oculemon Meringue make sense!",
+Oh, my word! I can't believe it! This is the best day of my life! She's pregnant! Hah! It's all so surreal! At least now, all the late-night runs to the shop for Oculemon Meringue makes sense!",
 	
     "^cyan;Personal log number 489:^white;
-I'm a father now! It didn't really sink in until I held her in my hands. I have a daughter! She has her mothers hair, and my big nose. Haha!",
+I'm a father now! It didn't really sink in until I held her in my hands. I have a daughter! She has her mother’s hair and my big nose. Haha!",
 
 	"^cyan;Personal log number 555:^white;
-She's growing fast! My wife and I are so proud.",
+She's growing up so fast! My wife and I are so proud.",
 	
 	"^cyan;Personal log number 576:^white;
-I've decided, I'm going to take them both to Earth one day. These outer systems are getting more and more dangerous. Problem is, the Peacekeeprs don't pay much. My wife told me that a mercanry company called Shellguard is hiring. Can't say I've heard of them, but they pay seems good.",
+I've decided. I'm going to take them both to Earth one day. These outer systems are getting more and more dangerous. The problem is... the Peacekeepers don't pay very much. I remember my wife once told me that a mercenary company, called Shellguard, is always hiring. Can't say that I've ever heard of them, but the pay seems pretty good.",
 	
 	"^cyan;Personal log number 599:^white;
-I quit my job today, got signed up under Shellguard instead. Even choosing the safer bounties, we should have enough money in no time. I'm catching a shuttle to their nearest outpost tomorrow but my family are staying behind, they should be safe here." 
+I quit my job today; got signed up with Shellguard instead. Even with choosing the safer bounties, we should still have enough money in no time. I'll be catching a shuttle to their nearest outpost tomorrow, but my family is staying behind; they should be safe here." 
   ],
     "itemConfig" : {
     "rarity" : "common",

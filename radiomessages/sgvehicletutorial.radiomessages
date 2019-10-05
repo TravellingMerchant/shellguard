@@ -19,14 +19,14 @@
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "This heavy transport has a ton of armour and a pretty good cannon. Don't worry about damaging it! Though.. saying that, it's not invincible. So don't be TOO careless!"
+    "text" : "This heavy transport has a ton of armor and a pretty good cannon. Don't worry about damaging it! Though... saying that, it's not invincible- so don't be TOO careless!"
   },
   
   "sgvehicletutorial4" : {
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "You can activeate the headlights using the F button. Handy huh?"
+    "text" : "You can activate the headlights using the F button. Handy huh?"
   },
   
   "sgvehicletutorial5" : {

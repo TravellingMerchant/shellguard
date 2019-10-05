@@ -32,7 +32,7 @@
     "type" : "mission",
     "senderName" : "SG-F0RTR355",
     "portraitImage" : "/interface/chatbubbles/SGUFO.png",
-    "text" : "Intruders have breached the foundry. Activating all reserve forces and begining AI upload."
+    "text" : "Intruders have breached the foundry. Activating all reserve forces and beginning AI upload."
   },
   
   "sgufomissionfoundryb" : {
@@ -74,7 +74,7 @@
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "I think we stopped it in time, but I can't be sure. This data shows that it had its failsafes removed, but doesn't tell me how. Teleport back to the base of the mountain and we'll talk."
+    "text" : "I think we stopped it in time, but I can't be sure. This data shows that it had its fail safes removed, but doesn't tell me how. Teleport back to the base of the mountain and we'll talk."
   },
   
 //survivor
@@ -89,21 +89,21 @@
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "So many dead, but they don't look like the ruins doing.. Be careful."
+    "text" : "So many dead, but they don't look like the ruins doing... Be careful."
   },
 
    "survivorencounter3" : {
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/androsglitch1.png",
-    "text" : "Oh no.. These logs.. If these are what I think they are.."
+    "text" : "Oh no... These logs... If these are what I think they are..."
   },
 
    "survivorencounter4" : {
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/androsglitch2.png",
-    "text" : "You... out.. have to... leave. Don't... ahead-BZZZT"
+    "text" : "You... out... have to... leave. Don't... ahead-BZZZT"
   },
 //Colony Attack
 
@@ -118,7 +118,7 @@
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/androsglitch2.png",
-    "text" : "Wait, those looked like Shellguard robots, but we certainly didn't make those.."
+    "text" : "Wait, those looked like Shellguard robots, but we certainly didn't make those..."
   },
 
    "sgcolonyattack3" : {
@@ -146,7 +146,7 @@
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivor.png",
-    "text" : "Yet here you are, trying to save them.. For what, money? A fantasy of being a hero? Can't be. No hero would help people like these."
+    "text" : "Yet here you are, trying to save them... For what, money? A fantasy of being a hero? Can't be. No hero would help people like these."
   },
   
    "sgcolonyattack7" : {
@@ -167,7 +167,7 @@
     "type" : "mission",
     "senderName" : "SG-F0RTR355",
     "portraitImage" : "/interface/chatbubbles/SGUFO.png",
-    "text" : "Begining extraction. Package transferred, teleporters active."
+    "text" : "Beginning extraction. Package transferred; teleporters active."
   },
 
    "sgcolonyattack8c" : {
@@ -181,7 +181,7 @@
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivor.png",
-    "text" : "But I won't. I'll make this right. You'll see.. Yes... You'll see."
+    "text" : "But I won't. I'll make this right. You'll see... Yes... You'll see."
   },
 
    "sgcolonyattack9a" : {
@@ -204,7 +204,7 @@
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "Welcome to the training course. There's some training lockjaws in the chest in front of you. You can keep these, but I'll also sell you some more advanced ones after this test is done."
+    "text" : "Welcome to the training course. There are some training lockjaws in the chest in front of you. You can keep these, but I'll also sell you some more advanced ones after this test is done."
   },
   
   "lockjawcourse2" : {
@@ -232,6 +232,6 @@
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "Good job with the test! Come back and talk to me again, I'd be happy to sell you some more advanced and even weaponised lockjaws."
+    "text" : "Good job with the test! Come back and talk to me again, I'd be happy to sell you some more advanced and even weaponized lockjaws."
   }
 }

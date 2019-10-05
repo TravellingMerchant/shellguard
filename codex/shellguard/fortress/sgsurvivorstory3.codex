@@ -6,28 +6,28 @@
   "icon" : "sgsurvivorstory2.png",
   "contentPages" : [
     "^cyan;Personal log number 600:^white; 
-I woke up in the hospitol today. Last thing I remember was being on that shuttle. We were taking off, I could see my family waving goodbye, smiling.. so happy. Then.. something hit the shuttle. After that, it's all blank. I've tried asking for my family, but they won't tell me anything. They must be worried about me!",
+I woke up in the hospital today. The last thing I remember was being on that shuttle. We were taking off- I could see my family waving goodbye, smiling... so happy... Then... Something hit the shuttle! After that, it's all blank. I've tried asking for my family numerous times, practically begging them for information... but they won't tell me anything! My family must be worried sick about me!",
 
     "^cyan;Personal log number 603:^white;
-It can't be true.. It just can't..",
+It... It can't be true... It just can't...",
 	
     "^cyan;Personal log number 604:^white;
-They told me the settlement was attacked. My family.. they.. they're gone. All gone.. The only reason I'm alive is because the automatic shuttle managed to keep flying.",
+The other day, I overheard the hospital staff talking amongst themselves... It can’t be true, can it? I grabbed one of the staff and wouldn’t let them go until they told me everything! I... He told me the settlement was attacked before slapping my hand off of his arm. It was attacked... My... My family... They... They're gone. They’re all gone... The only reason I'm still alive is because the pilot-less shuttle was undamaged enough to be able to keep flying.",
 	
     "^cyan;Personal log number 607:^white;
-The scum in this hospitol kept this from me for weeks. How could they? HOW COULD THEY? I could have gone back! They might have survived! I could have saved them.. But I was stuck here.",
+The scum in this hospital kept this from me for weeks! How could they!? HOW COULD THEY!? I could have gone back! They might have survived! I could have saved them... But I was stuck here in this filthy hospital, surrounded by these morons! I hate them all!",
 
 	"^cyan;Personal log number 610:^white;
-I don't know what to do anymore. My family.. Everyone that knew me.. I've got nothing left. ",
+I don't know what to do anymore. My family... All of my close friends... The people I’ve lived around and worked with for years... They’re all gone. I've got nothing left.",
 	
 	"^cyan;Personal log number 660:^white;
-I've been here recovering for months now.. And apparently I have a visitor tomorrow? Who in the world could it be?",
+I've been here in this stupid hospital, recovering for months now with no contact with the outside... One of the staff mentioned to me that I have a visitor tomorrow? A visitor? I don’t have anyone left. Who in the world would come to visit me?",
 	
 	"^cyan;Personal log number 661:^white;
-Someone from Shellguard visited me today. I forgot I still technically work for them. They made me an offer. They want to hire me for some secret project. I have no family, no ties and a lot of combat experience. They said I'd be perfect for it. I said I'd think about it.",
+Someone from Shellguard visited me today. I completely forgot that I still technically work for them. They made me an offer. They want to hire me for some super secret project. I no longer have any family, any ties to other people, and I have a lot of combat experience. They said that I'd be perfect for it. I told them that I'd think about it.",
 
 	"^cyan;Personal log number 663:^white;
-I said yes. I'm going to become part of their elite Ironwatch force. I've got nothing left to lose. At the very least, it'll get me out of this hosptiol." 
+I said yes. I'm going to become part of their elite Ironwatch force. I've got nothing left to lose now. At the very least, it'll get me out of this stupid hospital. I hate this place so much." 
   ],
     "itemConfig" : {
     "rarity" : "common",
