@@ -5,14 +5,14 @@
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "Welcome to one of our state of the art weapons research facilities!"
+    "text" : "Welcome to one of our state-of-the-art weapons research facilities!"
   },
   
   "sgweaponfacility2" : {
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "Ever since the ruin showed up, we've started expanding our operations here, trying to make bigger and bigger weapons to take out threats like that."
+    "text" : "Ever since the Ruin showed up, we've started expanding our operations here, trying to make bigger and bigger weapons to take out threats like that."
   },
   
   "sgweaponfacility3" : {
@@ -33,21 +33,21 @@
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "Give it a try! The firing range is set up with some SERIOUSLY heavy duty targets. Once you're done, use the tunnel under the range to access the rest of the facility."
+    "text" : "Give it a try! The firing range is set up with some SERIOUSLY heavy-duty targets. Once you're done, use the tunnel under the range to access the rest of the facility."
   },
   
   "sgweaponfiringrange" : {
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "You.. probably don't want to stand in front of this thing."
+    "text" : "You... probably don't want to stand in front of this thing."
   },
   
   "sgweaponfacility6" : {
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "See? Pretty darn awesome huh? We have plenty more tech to show you in the main facility! I can't wait to.. uh.. huh, there's an alarm going off in building B."
+    "text" : "See? Pretty darn awesome huh? We have plenty more tech to show you in the main facility! I can't wait to... uh... huh, there's an alarm going off in building B."
   },
 
   "sgweaponfacility7a" : {
@@ -61,7 +61,7 @@
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "I'm here, stay calm. It appears a large force of robotics have infilrated the base. Has the lockdown engaged successfully?"
+    "text" : "I'm here, stay calm. It appears a large force of robotics have infiltrated the base. Has the lockdown engaged successfully?"
   },
   
   "sgweaponfacility7c" : {
@@ -82,28 +82,28 @@
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "We've managed to retreive the Ruin Cleaver, but we lost a lot of people doing so. These robots are CRAZY advanced!"
+    "text" : "We've managed to retrieve the Ruin Cleaver, but we lost a lot of people doing so. These robots are CRAZY advanced!"
   },
   
   "sgweaponfacility10a" : {
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "They are even using our own weapons against us... Damn it, I'm just an engineer, I'm not made for fighting!"
+    "text" : "They are even using our own weapons against us... Dang it, I'm just an engineer, I'm not made for fighting!"
   },  
 
   "sgweaponfacility10b" : {
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "Peter, breath. We need you here, you know this facility better than I do. The defenses are offline. We need them back on."
+    "text" : "Peter, breathe. We need you here, you know this facility better than I do. The defenses are offline. We need them back on."
   },
  
   "sgweaponfacility10c" : {
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "Right, right.. Yeah. Ok. Let me think."
+    "text" : "Right, right... Yeah. Okay. Let me think."
   },  
   
   "sgweaponfacility10d" : {
@@ -138,7 +138,7 @@
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "We really need to clean down here more often.."
+    "text" : "We really need to clean down here more often..."
   },
   
   "sgweaponfacility11" : {
@@ -194,7 +194,7 @@
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "Hiding does seem like a good idea right now.. But we need you!"
+    "text" : "Hiding does seem like a good idea right now... But we need you!"
   },
   
   "sgweaponfacilityeasteregg3" : {

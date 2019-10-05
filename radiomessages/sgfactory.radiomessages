@@ -5,14 +5,14 @@
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "Woah! It's dark here. Looks like the teleporter missed the mark. You're going to have to enter this place the old fashioned way."
+    "text" : "Woah! It's dark here. Looks like the teleporter missed the mark. You're going to have to enter this place the old-fashioned way."
   },
   
   "sgspiderfactory1a" : {
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "Ah! My bad! There appears to be some sort of teleporation jammer active over the area. Somehow we didn't catch it."
+    "text" : "Ah! My bad! There appears to be some sort of teleportation jammer active over the area. Somehow we didn't catch it."
   },
 
   "sgspiderfactory1b" : {
@@ -54,14 +54,14 @@
     "type" : "mission",
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
-    "text" : "Just how many robots are being made here? Those assult spiders are barely in their prototype phase back in our own factories."
+    "text" : "Just how many robots are being made here? Those assault spiders are barely in their prototype phase back in our own factories."
   },
 
   "sgspiderfactory6" : {
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "Great.. an elevator. Classic ambush location. Be on guard."
+    "text" : "Great... an elevator. Classic ambush location. Be on guard."
   },
   
   "sgspiderfactory7" : {
@@ -89,7 +89,7 @@
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "You may have been part of Ironwatch, but you were still one of us! Your armour is old, we traced it right back to where it was made."
+    "text" : "You may have been part of Ironwatch, but you were still one of us! Your armor is old, we traced it right back to where it was made."
   },
 
   "sgspiderfactory8d" : {
@@ -139,21 +139,21 @@
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "Not another elevator.. They don't even play elevator music."
+    "text" : "Not another elevator... They don't even play elevator music."
   },
 
    "sgspiderfactory13a" : {
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivor.png",
-    "text" : "What do you think you're going to acomplish here? What happens if you stop me?"
+    "text" : "What do you think you're going to accomplish here? What happens if you stop me?"
   },
   
    "sgspiderfactory13b" : {
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivor.png",
-    "text" : "If I die.. We all die."
+    "text" : "If I die... we all die."
   },
 
    "sgspiderelevator1a" : {
@@ -195,14 +195,14 @@
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivor.png",
-    "text" : "A necessary sacrifice. The technology I've aquired will save so many more."
+    "text" : "A necessary sacrifice. The technology I've acquired will save so many more."
   },
 
    "sgspiderfactory14a" : {
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivor.png",
-    "text" : "Destroying this part of the factory will not stop me. Fortress, activate all reserve forces and begin proccess WAYLAND-C"
+    "text" : "Destroying this part of the factory will not stop me. Fortress, activate all reserve forces and begin process WAYLAND-C"
   },
 
   "sgspiderfactory14b" : {
@@ -216,14 +216,14 @@
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "Something HUGE just broke off from the planets surface.. By the cultivator, it's the biggest ship I've ever seen."
+    "text" : "Something HUGE just broke off from the planet's surface... By the Cultivator, it's the biggest ship I've ever seen."
   },  
 
   "sgspiderfactory15b" : {
     "type" : "mission",
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
-    "text" : "It's breaking out of the atmosphere and into space. How could somethig this utterly massive be flying?"
+    "text" : "It's breaking out of the atmosphere and into space. How could something this utterly massive be flying?"
   },  
   
   "sgspiderfactory15c" : {
@@ -237,7 +237,7 @@
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivor.png",
-    "text" : "Why are they in the pipeworks? There's nothing even there."
+    "text" : "Why are they in the pipework? There's nothing even there."
   },
   
    "sgspidereasteregg2" : {
@@ -251,6 +251,6 @@
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivor.png",
-    "text" : "You.. must really like those pipes."
+    "text" : "You... must really like those pipes."
   }
 }

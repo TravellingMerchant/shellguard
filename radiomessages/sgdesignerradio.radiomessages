@@ -5,14 +5,14 @@
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
-    "text" : "Alright, this is the place! It doesn't look very nice.. I wonder what he was doing here?"
+    "text" : "Alright, this is the place! It doesn't look very nice... I wonder what he was doing here?"
   },
   
   "sgscrapyard2" : {
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsonsad.png:<frame>",
-    "text" : "I know I said it's my co-worker, but.. He's also my dad. I'm not allowed to call him that at work though."
+    "text" : "I know I said it's my co-worker, but... He's also my dad. I'm not allowed to call him that at work though."
   },
   
   "sgscrapyard3" : {
@@ -70,21 +70,21 @@
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
-    "text" : "I hope you're not afraid of hights! Please be careful up here, because you're going to have to traverse the underside of the colony."
+    "text" : "I hope you're not afraid of heights! Please be careful up here, because you're going to have to traverse the underside of the colony."
   },
   
   "sgsky2" : {
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
-    "text" : "Miniknog are here? Are they the one's who kidnapped my dad?"
+    "text" : "Miniknog are here? Are they the ones who kidnapped my dad?"
   },
   
   "sgsky3" : {
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsonsad.png:<frame>",
-    "text" : "It doesn't make any sense.. We've sold weapons to the Miniknog before, why would they pull a move like this?"
+    "text" : "It doesn't make any sense... We've sold weapons to the Miniknog before, why would they pull a move like this?"
   },
   
   "sgsky4" : {
@@ -105,7 +105,7 @@
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsonsly.png:<frame>",
-    "text" : "So.. Bad news, it was the Apex. Worse news, it wasn't the Miniknog.. The Rebels have him!"
+    "text" : "So... Bad news, it was the Apex. Worse news, it wasn't the Miniknog... The Rebels have him!"
   },
   
   "sgsky6b" : {
@@ -135,7 +135,7 @@
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsonslyeyebrow.png:<frame>",
-    "text" : "Be careful here, it's a pretty tight place to fight in. And the rebels seem pretty.. Dug in."
+    "text" : "Be careful here, it's a pretty tight place to fight in. And the rebels seem pretty... dug in."
   },
 
   "sgmine3" : {
@@ -170,14 +170,14 @@
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wddadtalkeyebrow.png:<frame>",
-    "text" : "This is an encoded emergancy broadcast, please send a rescue team to the old city of Zarakina Val 1. "
+    "text" : "This is an encoded emergency broadcast, please send a rescue team to the old city of Zarakina Val 1. "
   },
   
   "sgmine7b" : {
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wddadtalkeyebrow.png:<frame>",
-    "text" : "The second part of this message is addresed to my son. Please make sure he hears it."
+    "text" : "The second part of this message is addressed to my son. Please make sure he hears it."
   },
 
   "sgminec" : {
@@ -205,7 +205,7 @@
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
-    "text" : "This.. This is incredible. We'll rescue him in no time with this. Get back to the outpost and fast!"
+    "text" : "This... This is incredible. We'll rescue him in no time with this. Get back to the outpost and fast!"
   },
   
 // -------  flight test ------------
@@ -214,14 +214,14 @@
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsonslyeyebrow.png:<frame>",
-    "text" : "There's live robots to fight against past this point, careful, they shoot back!"
+    "text" : "There are live robots to fight against past this point, so be careful; they shoot back!"
   },
 
   "sgflighttest1" : {
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
-    "text" : "Welcome to the flight test platform! Here you can try out some brand new gunships!"
+    "text" : "Welcome to the flight test platform! Here you can try out some brand-new gunships!"
   },
 
   "sgflighttest2" : {
@@ -235,21 +235,21 @@
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
-    "text" : "The Assault Gunship sports powerful incendiary cannons, but is heavy and hard to control. It has decent armour too, making it a good all rounder."  
+    "text" : "The Assault Gunship sports powerful incendiary cannons, but is heavy and hard to control. It has decent armor too, making it a good all-rounder."  
   },
   
   "sgbombgunship" : {
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
-    "text" : "The Bomber Gunship has massive air to ground firepower and armour, but lacks direct fighting power. It's easy to control, but has a low top speed."  
+    "text" : "The Bomber Gunship has massive air to ground firepower and armor, but lacks direct fighting power. It's easy to control, but has a low top speed."  
   },
   
   "sginterceptorgunship" : {
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
-    "text" : "The Interceptor Gunship is fast and easy to control, but has low armour. It also has two powerful rotary guns, with a limited firing angle."  
+    "text" : "The Interceptor Gunship is fast and easy to control, but has low armor. It also has two powerful rotary guns, with a limited firing angle."  
   },
 
   "sgflightturorial" : {
@@ -265,7 +265,7 @@
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsonsad.png:<frame>",
-    "text" : "Alright, the dropship is waiting at the enterance to the cities under-section. You need to fly inside and take out their defenses."
+    "text" : "Alright, the dropship is waiting at the entrance to the cities under-section. You need to fly inside and take out their defenses."
   },
 
   "sgskyattack1b" : {
@@ -293,7 +293,7 @@
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wdsontalk.png:<frame>",
-    "text" : "Dad? Is that you?!"
+    "text" : "Dad? Is that you!?"
   },
 
   "sgskyattack4a" : {
@@ -314,7 +314,7 @@
     "type" : "mission",
     "senderName" : "Weapons Designer",
     "portraitImage" : "/interface/chatbubbles/wddadtalk.png:<frame>",
-    "text" : "I'm fine, I'm fine! I stole a guards radio, I'm being held in sector 7c-A of the city."
+    "text" : "I'm fine, I'm fine! I stole a guard's radio, I'm being held in sector 7c-A of the city."
   },
 
   "sgskyattack4d" : {
