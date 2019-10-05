@@ -7,7 +7,7 @@
   "description" : "A wide, flat and heavy blade that possess great cutting power.",
   "shortdescription" : "Titan Sword",
   //"tooltipKind" : "sword",
-  "category" : "uniqueweapon",
+  "category" : "broadsword",
   "twoHanded" : true,
   "itemTags" : ["weapon","melee","broadsword","upgradeableWeapon"],
 

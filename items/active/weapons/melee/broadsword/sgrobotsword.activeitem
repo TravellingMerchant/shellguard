@@ -7,7 +7,7 @@
   "description" : "A serrated Sabre used by Ironwatch Robots.",
   "shortdescription" : "Ironwatch Sabre",
   //"tooltipKind" : "sword",
-  "category" : "uniqueweapon",
+  "category" : "broadsword",
   "twoHanded" : true,
   "itemTags" : ["weapon","melee","broadsword","upgradeableWeapon"],
 

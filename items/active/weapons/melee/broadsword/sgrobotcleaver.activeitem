@@ -7,7 +7,7 @@
   "description" : "A huge hunk of metal, made to be swung by powerful robots.",
   "shortdescription" : "Ironwatch Mace",
   //"tooltipKind" : "sword",
-  "category" : "uniqueweapon",
+  "category" : "broadsword",
   "twoHanded" : true,
   "itemTags" : ["weapon","melee","broadsword"],
 

@@ -81,42 +81,6 @@
           }
         }
       },
-      "bodyfullbright" : {
-        "properties" : {
-          "transformationGroups" : [ "body", "facing" ],
-          "offset" : [0.0, 1.0],
-          "zLevel" : 2,
-          "fullbright" : true
-        },
-        "partStates" : {
-          "body" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle.<frame><aggro>"
-              }
-            },
-            "wake" : {
-              "properties" : {
-                "image" : "<partImage>:wake.<frame>"
-              }
-            }
-          },
-          "attack" : {
-            "fire" : {
-              "properties" : {
-                "image" : "<partImage>:fire.<frame>"
-              }
-            }
-          },
-          "damage" : {
-            "stunned" : {
-              "properties" : {
-                "image" : "<partImage>:hurt.<frame>"
-              }
-            }
-          }
-        }
-      },
       "turret" : {
         "properties" : {
           "transformationGroups" : [ "aim", "facing", "body" ],
