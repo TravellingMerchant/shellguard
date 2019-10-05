@@ -32,7 +32,8 @@
 	  { "item" : "sgsurvivorsrifle" },
 	  { "item" : "sgheavycannon" },
 	  { "item" : "sgheavyboomer" },
-	  { "item" : "sgtoobiggun" }
+	  { "item" : "sgtoobiggun" },
+	  { "item" : "sgpraxispistol" }
     ]
   },
 
