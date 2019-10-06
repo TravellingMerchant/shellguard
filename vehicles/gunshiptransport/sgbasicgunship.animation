@@ -345,7 +345,7 @@
 				"properties" : {
 			"centered" : true,
 			"zLevel" : -3,
-			"offset" : [8.375,1.9375],
+			"offset" : [12.5,3.1975],
 			"anchorPart" : "foreground",
 			"image" : "sgbasicgunshipwingback.png"
 			}
@@ -354,7 +354,7 @@
 				"properties" : {
 					"centered" : true,
 					"zLevel" : 4,
-					"offset" : [-1.75, 0.625],
+					"offset" : [2.75, -0.25],
 					"transformationGroups" : ["sideThrusterFront"],
 			"anchorPart" : "foreground"
 				},
@@ -377,7 +377,7 @@
 				"properties" : {
 					"centered" : true,
 					"zLevel" : -4,
-					"offset" : [10, -0.625],
+					"offset" : [16, -0.25],
 					"transformationGroups" : ["sideThrusterBack"],
 			"anchorPart" : "foreground"
 				},

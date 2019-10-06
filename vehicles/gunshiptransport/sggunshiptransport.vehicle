@@ -95,7 +95,7 @@
 			"AltFire" : [
 				{
 					"gunName" : "ventralAutocannon",
-					"aimMinMax" : [-179,0],
+					"aimMinMax" : [-100,10],
 					"emptyAim" : 0,
 					"projectileType" : "sgvehicleshot",
 					"projectileParams" : {
@@ -131,7 +131,7 @@
 			]
 		}
 	},
-	"thrusters" : {"sideThrusterFront":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[0,2.75]},"sideThrusterBack":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[9,2]}},
+	"thrusters" : {"sideThrusterFront":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[2,2.75]},"sideThrusterBack":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[13,2.75]}},
 	"leveledGroups" : {"backFinFront":[-20, 3.5],"backFinBack":[-15.25, 3.5]},
   "canFly" : true,
   "canJump" : false,
@@ -217,7 +217,7 @@
 
   "movementSettings" : {
 	"collisionPoly" : [[15,-5], [11,-1.5], [11,1.5], [-10,4.25], [-11,1.5]],
-	"leftCollisionPoly" : [[-10,-4.25], [-11,-1.5], [-11,1.5], [10,4.25], [11,1.5]],
+	"leftCollisionPoly" : [[15,-5], [18,0.5], [11,2.5], [-17,4.25], [-2,-5]],
 	"rightCollisionPoly" : [[15,-5], [18,0.5], [11,2.5], [-17,4.25], [-2,-5]],
     "mass" : 8,
     "airFriction" : 2,
