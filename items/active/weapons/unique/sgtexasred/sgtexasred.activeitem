@@ -4,7 +4,7 @@
 	"level" : 6,
 	"maxStack" : 1,
 	"rarity" : "legendary",
-	"description" : "Andros hasn't made a fatal slip yet- make it for him with this motorized gunblade.",
+	"description" : "Andros hasn't made a fatal slip yet- make it for him.  Shift+Rightclick to swap.",
 	"shortdescription" : "SPEC-OPS Texas Red",
 	//"tooltipKind" : "sword",
 	"category" : "SG SPEC-OPS",
