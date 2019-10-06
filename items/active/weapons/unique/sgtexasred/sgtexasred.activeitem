@@ -1,0 +1,385 @@
+{
+	"itemName" : "sgtexasred",
+	"price" : 15000,
+	"level" : 6,
+	"maxStack" : 1,
+	"rarity" : "legendary",
+	"description" : "Andros hasn't made a fatal slip yet- make it for him with this motorized gunblade.",
+	"shortdescription" : "SPEC-OPS Texas Red",
+	//"tooltipKind" : "sword",
+	"category" : "SG SPEC-OPS",
+	"twoHanded" : true,
+	"itemTags" : ["weapon","melee","gunblade","upgradeableWeapon"],
+
+	"inventoryIcon" : "sgtexasredicon.png",
+
+	"animation" : "sgtexasred.animation",
+	"animationParts" : {
+		"blade" : "sgtexasred.png",
+		"bladeFullbright" : "sgtexasredfullbright.png"
+	},
+	"animationCustom" : { },
+
+	"scripts" : ["/items/active/weapons/unique/sgtexasred/sgtexasredweapon.lua"],
+	"activeTime" : 5,
+
+	"elementalType" : "fire",
+	"muzzleOffset" : [5.25,0.9],
+
+	"primaryAbility" : {
+		"scripts" : ["/items/active/weapons/unique/sgtexasred/sgtexasredprimary.lua"],
+		"class" : "TexasRedPrimary",
+		"name" : "Texas Massacre",
+		"flipCooldownTime" : 0.5,
+
+		"flipDamageConfig" : {
+			"damageSourceKind" : "broadsword",
+			"statusEffects" : [ ],
+			"baseDamage" : 6,
+			"knockback" : [0, -35],
+			"timeout" : 0.2,
+			"timeoutGroup" : "alt"
+		},
+
+		"flipMovementParameters" : {
+			"collisionPoly" : [ [-2.0, -1.0], [-1.0, -2.0], [1.0, -2.0], [2.0, -1.0], [2.0, 1.0], [1.0, 2.0], [-1.0, 2.0], [-2.0, 1.0] ]
+		},
+
+		"flipEnergyUsage" : 60.0,
+		"rotations" : 4,
+		"rotationTime" : 0.12,
+
+		"jumpVelocity" : [50, 30],
+		"jumpDuration" : 0.3,
+
+		"fullAutoEnergy" : 7.5,
+		"fireTime" : 0.75,
+		"baseDps" : 10,
+		"comboSteps" : 3,
+		"flashTime" : 0.15,
+		"flashDirectives" : "fade=FFFFFFFF=0.15",
+		"chargeAnimation" : true,
+
+		"swooshOffsetRegions" : [
+			[0.75, 0.0, 4.25, 5.0],
+			[3.0, -0.5, 6.5, 2.0],
+			[1.5, -1.0, 5.5, 1.0],
+			[3.0, -0.5, 6.5, 2.0],
+			[3.0, -0.5, 6.5, 2.0],
+			[3.0, -0.5, 6.5, 2.0]
+		],
+		
+		"comboSpeedFactor" : 1,
+	
+		"edgeTriggerGrace" : 0.25,
+
+		"damageConfig" : {
+			"damageSourceKind" : "broadsword",
+			"statusEffects" : [ ],
+			"knockbackMode" : "facing",
+			"timeout" : 0.5
+		},
+		"stepDamageConfig" : [
+			{
+				"baseDamageFactor" : 0.8,
+				"knockback" : 10
+			},
+			{
+				"baseDamageFactor" : 0.8,
+				"knockback" : 15
+			},
+			{
+				"baseDamageFactor" : 1.0,
+				"knockback" : 15
+			},
+			{
+				"baseDamageFactor" : 0.7,
+				"knockback" : 10
+			},
+			{
+				"baseDamageFactor" : 0.7,
+				"knockback" : 10
+			},
+			{
+				"baseDamageFactor" : 1.1,
+				"knockback" : [0,50]
+			}
+		],
+		"chargeLevels" : [
+			{
+				"time" : 0,
+				"energyCost" : 15,
+				"cooldown" : 0.1,
+				"projectileType" : "sgmagnumround",
+				"projectileParameters" : {},
+				"projectileCount" : 1,
+				"inaccuracy" : 0.02,
+				"baseDamage" : 4,
+				"fireType" : "single",
+				"fireSound" : "gunfire"
+			},
+			{
+				"time" : 0.33,
+				"energyCost" : 17.5,
+				"cooldown" : 0.3,
+				"projectileType" : "sgmagnumround",
+				"projectileParameters" : {},
+				"projectileCount" : 1,
+				"inaccuracy" : 0.02,
+				"baseDamage" : 4,
+				"fireType" : "burst",
+				"burstTime" : 0.15,
+				"burstCount" : 5,
+				"fireSound" : "gunfire"
+			},
+			{
+				"time" : 1.1,
+				"energyCost" : 90,
+				"cooldown" : 0.5,
+				"projectileType" : "sgchargebounce",
+				"projectileParameters" : {"speed":250,"bounces":7},
+				"projectileCount" : 1,
+				"inaccuracy" : 0,
+				"baseDamage" : 9,
+				"spreadAngle" : 5,
+				"fireType" : "single",
+				"fireSound" : "gunfire2",
+				"recoilKnockbackVelocity" : [-15,0],
+				"crouchStallsRecoil" : true,
+				"crouchRecoilKnockbackVelocity" : [-5,0]
+			},
+			{
+				"time" : 3.5,
+				"energyCost" : 300,
+				"cooldown" : 0.5,
+				"projectileType" : "sgchargebounce",
+				"projectileParameters" : {"speed":250,"bounces":4},
+				"projectileCount" : 4,
+				"inaccuracy" : 0.05,
+				"baseDamage" : 13,
+				"spreadAngle" : 10,
+				"fireType" : "single",
+				"fireSound" : "gunfire2",
+				"recoilKnockbackVelocity" : [-45,0],
+				"crouchStallsRecoil" : true,
+				"crouchRecoilKnockbackVelocity" : [-15,0]
+			}
+		],
+		"stances" : {
+			"flipWindup" : {
+				"duration" : 0.05,
+				"armRotation" : 30,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+			"flip" : {
+				"armRotation" : 0,
+				"weaponRotation" : 0,
+				"twoHanded" : true,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : false
+			},
+			"bladeIdle" : {
+				"armRotation" : -30,
+				"weaponRotation" : 45,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : true,
+				"aimAngle" : 0
+			},
+			"windup1" : {
+				"duration" : 0.1,
+				"armRotation" : 90,
+				"weaponRotation" : -10,
+				"twoHanded" : true,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+			"preslash1" : {
+				"duration" : 0.025,
+				"armRotation" : 55,
+				"weaponRotation" : -45,
+				"twoHanded" : true,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : false
+			},
+			"fire1" : {
+				"duration" : 0.15,
+				"armRotation" : -45,
+				"weaponRotation" : -55,
+				"twoHanded" : true,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : false
+			},
+			"wait1" : {
+				"duration" : 0.4,
+				"armRotation" : -45,
+				"weaponRotation" : -55,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : true,
+				"twoHanded" : true
+			},
+			"windup2" : {
+				"duration" : 0.1,
+				"armRotation" : 90,
+				"weaponRotation" : -10,
+				"twoHanded" : true,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+			"preslash2" : {
+				"duration" : 0.1,
+				"armRotation" : 55,
+				"weaponRotation" : -45,
+				"twoHanded" : true,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : false
+			},
+			"fire2" : {
+				"duration" : 0.25,
+				"armRotation" : -45,
+				"weaponRotation" : -55,
+				"twoHanded" : true,
+				"weaponAngularVelocity" : -1440,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : false
+			},
+			"wait2" : {
+				"duration" : 0.2,
+				"armRotation" : -150,
+				"weaponRotation" : 55,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : true,
+				"twoHanded" : true
+			},
+			"windup3" : {
+				"duration" : 0.15,
+				"armRotation" : -150,
+				"weaponRotation" : 55,
+				"twoHanded" : true,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+			"fire3" : {
+				"duration" : 0.3,
+				"armRotation" : 0,
+				"weaponRotation" : -90,
+				"twoHanded" : true,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+			"wait3" : {
+				"duration" : 0.2,
+				"armRotation" : -150,
+				"weaponRotation" : 55,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : true,
+				"twoHanded" : true
+			},
+			"windup4" : {
+				"duration" : 0.15,
+				"armRotation" : -150,
+				"weaponRotation" : 55,
+				"twoHanded" : true,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+			"fire4" : {
+				"duration" : 0.3,
+				"armRotation" : 0,
+				"weaponRotation" : -90,
+				"twoHanded" : true,
+				"weaponOffset" : [0,3],
+				"allowRotate" : false,
+				"allowFlip" : true
+			},
+			"gunIdle" : {
+				"armRotation" : 0,
+				"weaponRotation" : -90,
+				"weaponOffset" : [-0.25,2],
+				"twoHanded" : true,
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
+			"gunCharge" : {
+				"duration" : 0,
+				"armRotation" : 0,
+				"weaponRotation" : -90,
+				"twoHanded" : true,
+				"weaponOffset" : [-0.25,2],
+
+				"allowRotate" : true,
+				"allowFlip" : true
+			},
+			"gunFire" : {
+				"duration" : 0,
+				"armRotation" : 1,
+				"weaponRotation" : -90,
+				"allowRotate" : true,
+				"twoHanded" : true,
+				"weaponOffset" : [-0.25,2],
+				"allowFlip" : true
+			},
+			"gunCooldown" : {
+				"duration" : 0,
+				"armRotation" : 1,
+				"weaponRotation" : -90,
+				"allowRotate" : true,
+				"twoHanded" : true,
+				"weaponOffset" : [-0.25,2],
+				"allowFlip" : true
+			}
+		}
+	},
+
+	"altAbility" : {
+		"scripts" : ["/items/active/weapons/unique/sgtexasred/sgtexasredswap.lua"],
+		"class" : "TexasRedAlt",
+		"waitTime" : 1,
+		"stances" : {
+			"gunTransition" : {
+				"duration" : 0.333,
+				"armRotation" : -30,
+				"weaponRotation" : 45,
+				"twoHanded" : false,
+
+				"allowRotate" : false,
+				"allowFlip" : true,
+				"animationStates" : {"blade" : "gunTransition"}
+			},
+			"bladeTransition" : {
+				"duration" : 0.333,
+				"armRotation" : 0,
+				"weaponRotation" : -90,
+				"twoHanded" : false,
+				"aimAngle" : 0,
+
+				"allowRotate" : false,
+				"allowFlip" : true,
+				"animationStates" : {"blade" : "bladeTransition"}
+			}
+		}
+	},
+
+	"builder" : "/items/buildscripts/buildunrandweapon.lua",
+	"upgradeParameters" : {
+		"shortdescription" : "Texas Red Custom ^yellow;^reset;",
+		"description" : "Amped up by a vicious SPEC-OPS member, this gunblade invites death to dance."
+	}
+}
