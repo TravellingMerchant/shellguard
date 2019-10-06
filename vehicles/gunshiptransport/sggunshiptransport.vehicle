@@ -1,0 +1,239 @@
+{
+  "name" : "sggunshiptransport",
+  "script" : "/vehicles/gunship/sggunship.lua",
+  "boundBox" : [-10, -3, 10, 3],
+  "slaveControlTimeout" : 2.0,
+  "slaveControlHeartbeat" : 1.0,
+  "canBeHit" : true,
+  "animation" : "sgbasicgunship.animation",
+
+  "loungePositions" : {
+    "drivingSeat" : {
+      "part" : "foreground",
+      "partAnchor" : "drivingSeatPosition",
+      "orientation" : "sit",
+      "statusEffects" : ["maxprotection"],
+      "emote" : "neutral",
+      "dance" : "typing",
+      "cameraFocus" : true,
+      "directives" : "?addmask=/vehicles/gunship/sgbasicgunshipplayermask.png"
+    },
+    "passengerSeat" : {
+      "part" : "foreground",
+      "partAnchor" : "passengerSeatPosition",
+      "orientation" : "sit",
+      "statusEffects" : ["maxprotection"],
+      "emote" : "neutral",
+      "dance" : "typing",
+      "cameraFocus" : true
+    }
+  },
+
+  "warpInDelay" : 1.0,
+
+  "levelApproachFactor" : 0,
+  "angleApproachFactor" : 0,
+  "constantAngleCheck" : true,
+  "maxGroundSearchDistance" : 5,
+  "maxAngle" : 30,
+  "velocityRotation" : true,
+  "velocityRotationApproach" : 0.005,
+  "hoverTargetDistance" : 4,
+  "hoverVelocityFactor" : 0,
+  "hoverControlForce" : 100,
+  "targetHorizontalVelocity" : 40,
+  "horizontalControlForce" : 170,
+  "targetUpwardVelocity" : 40,
+  "upwardControlForce" : 120,
+  "targetDownwardVelocity" : -40,
+  "downwardControlForce" : 170,
+  "spinFriction" : 0.1,
+	"mainStates" : {"opening":true,"closing":true},
+	"gunnery" : {
+		"drivingSeat" : {
+			"PrimaryFire" : [
+				{
+					"gunName" : "forwardDoubleCannonFront",
+					"aimMinMax" : [-75,60],
+					"emptyAim" : 0,
+					"projectileType" : "swarmadvancedrockethoming",
+					"slaves" : [2],
+					"punishSlaves" : {"forwardDoubleCannonBack":0.7},
+					"projectileParams" : {
+						"power" : 50,
+					    "speed" : 60
+					},
+					"inaccuracy" : 0.005,
+					"projectileCount" : 1,
+					"gunCenter" : [2.5, -1.125],
+					"gunLength" : 3,
+					"fireTime" : 1.4,
+					"barrels" : [[0,-0.75],[0,0.75]],
+					"playSounds" : ["forwardDoubleCannons"],
+					"setAnimationStates" : {"forwardDoubleCannonFront":"fire"}
+				},
+				{
+					"gunName" : "forwardDoubleCannonBack",
+					"aimMinMax" : [-75,60],
+					"emptyAim" : 0,
+					"slavedTo" : 1,
+					"projectileType" : "swarmadvancedrockethoming",
+					"projectileParams" : {
+						"power" : 50,
+					    "speed" : 60
+					},
+					"inaccuracy" : 0.005,
+					"projectileCount" : 1,
+					"gunCenter" : [7.5, -1.125],
+					"gunLength" : 3,
+					"fireTime" : 1.4,
+					"barrels" : [[0,-0.75],[0,0.75]],
+					"playSounds" : ["forwardDoubleCannons"],
+					"setAnimationStates" : {"forwardDoubleCannonBack":"fire"}
+				}
+			],
+			"AltFire" : [
+				{
+					"gunName" : "ventralAutocannon",
+					"aimMinMax" : [-179,0],
+					"emptyAim" : 0,
+					"projectileType" : "sgvehicleshot",
+					"projectileParams" : {
+						"power" : 5
+					},
+					"inaccuracy" : 0.02,
+					"projectileCount" : 1,
+					"gunCenter" : [15, -4],
+					"gunLength" : 4,
+					"fireTime" : 0.2,
+					"playSounds" : ["ventralAutocannon"],
+					"setAnimationStates" : {"ventralAutocannon":"fire"}
+				}
+			],
+			"Special1" : [
+				{
+					"gunName" : "bombingBay",
+					"noGroup" : true,
+					"aimMinMax" : [-90,-90],
+					"projectileType" : "bouncyclustergrenade",
+					"projectileParams" : {
+						"power" : 50,
+						"speed" : 30
+					},
+					"inaccuracy" : 0.025,
+					"projectileCount" : 1,
+					"gunCenter" : [-2, -1],
+					"gunLength" : 0,
+					"fireTime" : 1.5,
+					"barrels" : [[0,-1.5],[0,0],[0,1.5]],
+					"playSounds" : ["bombbay"]
+				}
+			]
+		}
+	},
+	"thrusters" : {"sideThrusterFront":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[-3,1.75]},"sideThrusterBack":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[9,2]}},
+	"leveledGroups" : {"backFinFront":[-20, 3.5],"backFinBack":[-15.25, 3.5]},
+  "canFly" : true,
+  "canJump" : false,
+
+  "nearGroundDistance" : 6,
+  "jumpVelocity" : 40,
+  "jumpTimeout" : 0.25,
+
+  //Health and damage
+  "protection" : 50,
+  "maxHealth" : 4500,
+
+  "damageStateNames" : ["undamaged"],
+
+  "lightsInDamageState" : [[]],
+
+  "damageStatePassengerDances" : ["","","",""],
+
+  "damageStateDriverEmotes" : ["neutral"],
+  "damageStatePassengerEmotes" : ["neutral"],
+
+
+
+  "damageTakenEmote" : "oooh",
+  "damageEmoteTime" : 2.0,
+
+  "minNotificationCollisionAccel" : 20,
+  "minDamageCollisionAccel" : 60,
+  "terrainCollisionDamage" : 100,
+
+
+  //Damage visual effects
+  "smokeParticleHealthThreshold" : 0.5,
+  "smokeRateAtZeroHealth" : 500,
+
+  "fireParticleHealthThreshold" : 0.25,
+  "fireRateAtZeroHealth" : 120,
+
+  "onFireHealthThreshold" : 0.125,
+  "damagePerSecondWhenOnFire" : 1.0,
+  "explosionConfig" : "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config",
+  "explosionDamage" : 300,
+
+
+
+  //Sound effects
+  "engineDamageSoundThreshold" : 0.40,
+
+  "intermittentDamageSoundThreshold" : 0.33,
+  "maxDamageSoundInterval" : 10,
+  "minDamageSoundInterval" : 1,
+
+  "engineIdlePitch" : 0.75,
+  "engineRevPitch" : 1.5,
+  "engineIdleVolume" : 1.0,
+  "engineRevVolume" : 1.5,
+
+  "materialKind" : "robotic",
+  "terrainCollisionDamageSourceKind" : "falling",
+  "accelerationTrackingCount" : 2,
+
+  "backSpringPositions" : [
+      [-3.0, -2.0],
+      [-4.0, -2.0],
+      [-5.0, -2.0],
+      [-6.0, -2.0]
+  ],
+
+  "frontSpringPositions" : [
+      [3.0, -2.0],
+      [4.0, -2.0],
+      [5.0, -2.0],
+      [6.0, -2.0]
+  ],
+
+  "bodySpringPositions" : [
+      [-4.0, -3.0],
+      [-2.0, -3.0],
+      [0.0, -3.0],
+      [2.0, -3.0],
+      [4.0, -3.0]
+  ],
+
+  "movementSettings" : {
+	"collisionPoly" : [[15,-5], [11,-1.5], [11,1.5], [-10,4.25], [-11,1.5]],
+	"leftCollisionPoly" : [[-10,-4.25], [-11,-1.5], [-11,1.5], [10,4.25], [11,1.5]],
+	"rightCollisionPoly" : [[15,-5], [18,0.5], [11,2.5], [-17,4.25], [-2,-5]],
+    "mass" : 8,
+    "airFriction" : 2,
+    "ignorePlatformCollision" : true,
+    "gravityEnabled" : true
+  },
+
+  "occupiedMovementSettings" : {
+    "mass" : 8,
+    "gravityEnabled" : false
+  },
+
+  "zeroGMovementSettings" : {
+    "mass" : 8,
+    "airFriction" : 0.1,
+	"gravityEnabled" : false
+  }
+
+}
