@@ -379,6 +379,13 @@
 
 	"builder" : "/items/buildscripts/buildunrandweapon.lua",
 	"upgradeParameters" : {
+		"inventoryIcon" : "sgtexasredt8icon.png",
+
+		"animation" : "sgtexasred.animation",
+		"animationParts" : {
+			"blade" : "sgtexasredt8.png",
+			"bladeFullbright" : "sgtexasredt8fullbright.png"
+		},
 		"shortdescription" : "Texas Red Custom ^yellow;^reset;",
 		"description" : "Amped up by a vicious SPEC-OPS member, this gunblade invites death to dance."
 	}
