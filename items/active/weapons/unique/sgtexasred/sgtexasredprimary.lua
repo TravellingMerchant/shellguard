@@ -60,6 +60,7 @@ function TexasRedPrimary:update(dt, fireMode, shiftHeld)
 		self:setState(self.gunFullAuto)
 	end
 	if not self.weapon.currentAbility and not shiftHeld
+		and self.weapon.currentType == "blade"
 		and self.cooldownTimer == 0
 		and self.fireMode == "alt"
 		and not status.statPositive("activeMovementAbilities")
