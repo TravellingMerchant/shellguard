@@ -71,7 +71,7 @@ function TexasRedPrimary:update(dt, fireMode, shiftHeld)
 end
 
 function TexasRedPrimary:shouldActivate()
-	if self.cooldownTimer == 0 and (self.energyUsage == 0 or not status.resourceLocked("energy")) then
+	if self.cooldownTimer == 0 and (self.meleeEnergyUsage == 0 or self.meleeEnergyUsage == nil or not status.resourceLocked("energy")) then
 		if self.comboStep > 1 then
 			return self.edgeTriggerTimer > 0 and self.weapon.currentType == "blade"
 		else
