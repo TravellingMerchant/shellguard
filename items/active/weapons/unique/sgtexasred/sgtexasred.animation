@@ -129,7 +129,7 @@
 						"properties" : {
 								"particleEmittersOn" : ["smoke"],
 								"lightsOn" : ["glow"],
-								"immediateSound" : "/sfx/melee/wfsystem/chainsword1rev.ogg"
+								"immediateSound" : "/sfx/melee/sgchainsword1rev.ogg"
 						}
 					},
 					"active" : {
@@ -139,7 +139,7 @@
 						"properties" : {
 								"particleEmittersOn" : ["smoke"],
 								"lightsOn" : ["glow"],
-								"persistentSound" : "/sfx/melee/wfsystem/chainsword1idle.ogg"
+								"persistentSound" : "/sfx/melee/sgchainsword1idle.ogg"
 						}
 					},
 					"retract" : {
@@ -150,7 +150,7 @@
 						"properties" : {
 								"particleEmittersOn" : ["smoke"],
 								"lightsOn" : ["glow"],
-								"immediateSound" : "/sfx/melee/wfsystem/chainsword1die.ogg"
+								"immediateSound" : "/sfx/melee/sgchainsword1die.ogg"
 						}
 					},
 					"gunTransition" : {
