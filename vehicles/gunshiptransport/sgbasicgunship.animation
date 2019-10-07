@@ -216,7 +216,7 @@
 					"centered" : true,
 					"zLevel" : 1,
 					"transformationGroups" : ["flip", "rotation"],
-					"drivingSeatPosition" : [8.1875, 0.25],
+					"drivingSeatPosition" : [13.1875, -0.5],
 					"passengerSeatPosition" : [0, 0]
 				},
 

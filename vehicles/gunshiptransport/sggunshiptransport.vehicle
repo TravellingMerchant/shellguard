@@ -16,7 +16,7 @@
       "emote" : "neutral",
       "dance" : "typing",
       "cameraFocus" : true,
-      "directives" : "?addmask=/vehicles/gunship/sgbasicgunshipplayermask.png"
+      "directives" : "?addmask=/vehicles/gunshiptransport/sgbasicgunshipplayermask.png"
     },
     "passengerSeat" : {
       "part" : "foreground",
@@ -99,7 +99,7 @@
 					"emptyAim" : 0,
 					"projectileType" : "sgvehicleshot",
 					"projectileParams" : {
-						"power" : 5
+						"power" : 20
 					},
 					"inaccuracy" : 0.02,
 					"projectileCount" : 1,
