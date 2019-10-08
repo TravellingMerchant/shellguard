@@ -26,6 +26,7 @@
 	  { "item" : "sgassaultgunshipcontroller" },
 	  { "item" : "sggunshipbombercontroller" },
 	  { "item" : "sggunshipinterceptorcontroller" },
+	  { "item" : "sggunshiptransportcontroller" },
 	  { "item" : "nebassaultgunshipspawner" },
 	  { "item" : "nebbombergunshipspawner" },
 	  { "item" : "nebinterceptorgunshipspawner" }

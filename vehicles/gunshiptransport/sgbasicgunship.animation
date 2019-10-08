@@ -217,7 +217,10 @@
 					"zLevel" : 1,
 					"transformationGroups" : ["flip", "rotation"],
 					"drivingSeatPosition" : [13.1875, -0.5],
-					"passengerSeatPosition" : [0, 0]
+					"passengerSeatPosition" : [9, -0.5],
+                    "passenger2SeatPosition" : [6,-0.5],
+					"passenger3SeatPosition" : [3,-0.5],
+					"passenger4SeatPosition" : [0,-0.5]
 				},
 
 				"partStates" : {

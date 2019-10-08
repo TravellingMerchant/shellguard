@@ -26,6 +26,33 @@
       "emote" : "neutral",
       "dance" : "typing",
       "cameraFocus" : true
+    },
+    "passenger2Seat" : {
+      "part" : "foreground",
+      "partAnchor" : "passenger2SeatPosition",
+      "orientation" : "sit",
+      "statusEffects" : ["maxprotection"],
+      "emote" : "neutral",
+      "dance" : "typing",
+      "cameraFocus" : true
+    },
+	    "passenger3Seat" : {
+      "part" : "foreground",
+      "partAnchor" : "passenger3SeatPosition",
+      "orientation" : "sit",
+      "statusEffects" : ["maxprotection"],
+      "emote" : "neutral",
+      "dance" : "typing",
+      "cameraFocus" : true
+    },
+	  "passenger4Seat" : {
+      "part" : "foreground",
+      "partAnchor" : "passenger4SeatPosition",
+      "orientation" : "sit",
+      "statusEffects" : ["maxprotection"],
+      "emote" : "neutral",
+      "dance" : "typing",
+      "cameraFocus" : true
     }
   },
 
@@ -161,14 +188,22 @@
 
   "movementSettings" : {
 	"collisionPoly" : [[15,-5], [11,-1.5], [11,1.5], [-10,4.25], [-11,1.5]],
-	"leftCollisionPoly" : [[15,-5], [18,0.5], [11,2.5], [-17,4.25], [-2,-5]],
+	"leftCollisionPoly" : [[-15,-5], [-18,-1.5], [-11,4.5], [17,4.5], [2,-5]],
 	"rightCollisionPoly" : [[15,-5], [18,-1.5], [11,4.5], [-17,4.5], [-2,-5]],
     "mass" : 8,
     "airFriction" : 2,
     "ignorePlatformCollision" : true,
     "gravityEnabled" : true
   },
-
+  
+  "physicsCollisions" : {
+    "platform1" : {
+      "collision" : [ [-18,0], [-18,3.75], [15,3.75], [15,0] ],
+	  "collisionKind" : "platform",
+      "attachToPart" : "foreground"
+    }
+  },
+  
   "occupiedMovementSettings" : {
     "mass" : 8,
     "gravityEnabled" : false
