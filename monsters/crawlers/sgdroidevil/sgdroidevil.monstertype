@@ -71,7 +71,7 @@
         {
           "name" : "approach-walk",
           "parameters" : {
-            "resetHeading" : false
+            "canJump" : false
           }
         }
       ],
@@ -85,7 +85,7 @@
         {
           "name" : "approach-walk",
           "parameters" : {
-            "resetHeading" : false
+            "canJump" : false
           }
         }
       ],
