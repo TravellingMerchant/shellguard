@@ -271,7 +271,7 @@
 					"centered" : true,
 					"zLevel" : 10,
 					"fullbright" : true,
-					"offset" : [-0.125,0.5625],
+					"offset" : [-2.125,0.8625],
 					"transformationGroups" : ["flip", "rotation"]
 				},
 				"partStates" : {
