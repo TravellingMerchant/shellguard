@@ -8,6 +8,7 @@
   "pointLight" : true,
   "physics" : "laser",
   "bounces" : 4,
+  "timeToLive" : 3,
   "lightColor" : [225, 100, 0],
   "actionOnReap" : [
     {
