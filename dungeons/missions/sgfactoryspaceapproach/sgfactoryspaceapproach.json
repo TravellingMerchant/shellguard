@@ -1795,7 +1795,7 @@
                  "y":1192
                 }, 
                 {
-                 "gid":2147492946,
+                 "gid":2147492947,
                  "height":16,
                  "id":1914,
                  "name":"",
@@ -1815,7 +1815,7 @@
                  "y":1288
                 }, 
                 {
-                 "gid":9298,
+                 "gid":9299,
                  "height":16,
                  "id":1915,
                  "name":"",
@@ -1835,7 +1835,7 @@
                  "y":1288
                 }, 
                 {
-                 "gid":2147492946,
+                 "gid":2147492947,
                  "height":16,
                  "id":1916,
                  "name":"",
@@ -1855,7 +1855,7 @@
                  "y":1272
                 }, 
                 {
-                 "gid":2147492946,
+                 "gid":2147492947,
                  "height":16,
                  "id":1917,
                  "name":"",
@@ -1875,7 +1875,7 @@
                  "y":1096
                 }, 
                 {
-                 "gid":9298,
+                 "gid":9299,
                  "height":16,
                  "id":1918,
                  "name":"",
@@ -1895,7 +1895,7 @@
                  "y":1096
                 }, 
                 {
-                 "gid":2147492946,
+                 "gid":2147492947,
                  "height":16,
                  "id":1919,
                  "name":"",
@@ -1915,7 +1915,7 @@
                  "y":1080
                 }, 
                 {
-                 "gid":9312,
+                 "gid":9313,
                  "height":80,
                  "id":1936,
                  "name":"",
@@ -1927,7 +1927,7 @@
                  "y":1280
                 }, 
                 {
-                 "gid":9312,
+                 "gid":9313,
                  "height":80,
                  "id":1937,
                  "name":"",
@@ -2337,7 +2337,7 @@
                  "y":1248
                 }, 
                 {
-                 "gid":9351,
+                 "gid":9352,
                  "height":96,
                  "id":2048,
                  "name":"",
@@ -2349,7 +2349,7 @@
                  "y":1248
                 }, 
                 {
-                 "gid":9353,
+                 "gid":9354,
                  "height":96,
                  "id":2050,
                  "name":"",
@@ -2359,6 +2359,26 @@
                  "width":48,
                  "x":13432,
                  "y":1248
+                }, 
+                {
+                 "gid":9362,
+                 "height":40,
+                 "id":2060,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"queryArea\" : [-10, -10, 10, 10] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":184,
+                 "y":1184
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -3399,7 +3419,7 @@
          "y":0
         }],
  "nextlayerid":11,
- "nextobjectid":2060,
+ "nextobjectid":2061,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.4",
@@ -3562,20 +3582,24 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgmaterials.json"
         }, 
         {
-         "firstgid":9231,
+         "firstgid":9232,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/space.json"
         }, 
         {
-         "firstgid":9236,
+         "firstgid":9237,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/humanbunker.json"
         }, 
         {
-         "firstgid":9308,
+         "firstgid":9309,
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgfactory.json"
         }, 
         {
-         "firstgid":9318,
+         "firstgid":9319,
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset.json"
+        }, 
+        {
+         "firstgid":9355,
+         "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-category\/tool.json"
         }],
  "tilewidth":8,
  "type":"map",
