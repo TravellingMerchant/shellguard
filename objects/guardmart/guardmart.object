@@ -79,6 +79,7 @@
 	  { "item" : "shellshield" },
 	  { "item" : "sgheavyshield" },
       { "item" : "shellguarddroner" },
+      { "item" : "sgminingcharge" },
       { "item" : "sgsentrybasethrow" },
       { "item" : "sgflamesentrythrow" },
       { "item" : "tankthrow" }

@@ -1,0 +1,33 @@
+{
+  "itemName" : "sgminingcharge",
+  "price" : 500,
+  "rarity" : "uncommon",
+  "category" : "throwableItem",
+  "inventoryIcon" : "sgminingcharge.png",
+  "image" : "sgminingcharge.png",
+  "shortdescription" : "Mining Charge",
+  "description" : "A single use explosive that destroys long lines of terrain.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.0,
+  "cooldown" : 1,
+
+  "projectileType" : "sgchargebomb",
+  "projectileConfig" : {
+    "speed" : 50,
+    "power" : 22.5,
+    "knockback" : 20,
+
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  }
+
+}
