@@ -1,6 +1,6 @@
 {
   "itemName" : "sgminingcharge",
-  "price" : 500,
+  "price" : 800,
   "rarity" : "uncommon",
   "category" : "throwableItem",
   "inventoryIcon" : "sgminingcharge.png",
