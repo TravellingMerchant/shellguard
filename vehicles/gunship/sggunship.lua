@@ -34,6 +34,7 @@ function init()
 	self.zeroGMovementSettings = config.getParameter("zeroGMovementSettings")
 	self.protection = config.getParameter("protection")
 	self.maxHealth = config.getParameter("maxHealth")
+	self.visualRotationCenter = config.getParameter("visualRotationCenter")
 
 	self.smokeThreshold =	config.getParameter("smokeParticleHealthThreshold")
 	self.fireThreshold =	config.getParameter("fireParticleHealthThreshold")
@@ -681,12 +682,14 @@ function controls()
 				if (vehicle.controlHeld(seat, arsenalTrigger)) then
 					for i,gun in ipairs(subarsenal) do
 						if gun.cooldown == 0 then
+							local gunCenter = vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle))
+							local gunTip = vec2.add(gunCenter,vec2.rotate({gun.gunLength,0},gun.aimAngle+self.angle))
 							if gun.barrels then
 								for barrel,barrelOffset in ipairs(gun.barrels) do
-									fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(vec2.add(vec2.add(mcontroller.position(),vec2.rotate(barrelOffset,gun.aimAngle+self.angle)),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)),vec2.rotate({gun.gunLength,0},gun.aimAngle)),gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
+									fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(gunTip,vec2.rotate(barrelOffset,gun.aimAngle+self.angle)),gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
 								end
 							else
-								fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)),vec2.rotate({gun.gunLength,0},gun.aimAngle)),gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
+								fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,gunTip,gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
 							end
 							gun.cooldown = gun.fireTime
 							if gun.punishSlaves then
