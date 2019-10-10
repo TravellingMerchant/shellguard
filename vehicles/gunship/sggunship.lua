@@ -221,7 +221,6 @@ function update()
 							if self[seat.."Entity"] then
 								aimOffset = world.distance(vehicle.aimPosition(seat),vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)))
 								gun.aimAngle = math.atan(aimOffset[2],aimOffset[1]) - self.angle
-								world.debugLine(vehicle.aimPosition(seat),vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)),{0,255,0})
 							elseif gun.emptyAim then
 								gun.aimAngle = self.facingDirection > 0 and gun.emptyAim/180*math.pi or util.wrapAngle(-gun.emptyAim/180*math.pi-math.pi)
 							else
