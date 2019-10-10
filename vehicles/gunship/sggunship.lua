@@ -221,6 +221,7 @@ function update()
 							if self[seat.."Entity"] then
 								aimOffset = world.distance(vehicle.aimPosition(seat),vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)))
 								gun.aimAngle = math.atan(aimOffset[2],aimOffset[1]) - self.angle
+								world.debugLine(vehicle.aimPosition(seat),vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)),{0,255,0})
 							elseif gun.emptyAim then
 								gun.aimAngle = self.facingDirection > 0 and gun.emptyAim/180*math.pi or util.wrapAngle(-gun.emptyAim/180*math.pi-math.pi)
 							else
@@ -274,6 +275,25 @@ function update()
 			thrusterStats.angle = (thrusterStats.angle or 0) + (thrusterStats.thrusterTargetAngle - (thrusterStats.angle or 0)) * thrusterStats.approach
 			animator.resetTransformationGroup(thruster)
 			animator.rotateTransformationGroup(thruster,thrusterStats.angle,thrusterStats.thrusterCenter)
+		end
+	end
+	
+	--debug
+	if self.gunnery then
+		for seat,arsenal in pairs(self.gunnery) do
+			for arsenalTrigger,subarsenal in pairs(arsenal) do
+				for i,gun in ipairs(subarsenal) do
+					local gunCenter = vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle))
+					local gunTip = vec2.add(gunCenter,vec2.rotate({gun.gunLength,0},gun.aimAngle+self.angle))
+					if gun.barrels then
+						for barrel,barrelOffset in ipairs(gun.barrels) do
+							world.debugPoint(vec2.add(gunTip,vec2.rotate(barrelOffset,gun.aimAngle+self.angle)), "blue")
+						end
+					else
+						world.debugPoint(gunTip, "blue")
+					end
+				end
+			end
 		end
 	end
 end
