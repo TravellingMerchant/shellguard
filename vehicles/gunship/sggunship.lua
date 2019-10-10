@@ -220,7 +220,8 @@ function update()
 						if not (self.Special1Held and gun.special1AimLock) then
 							if self[seat.."Entity"] then
 								aimOffset = world.distance(vehicle.aimPosition(seat),vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)))
-								gun.aimAngle = math.atan(aimOffset[2],aimOffset[1])
+								gun.aimAngle = math.atan(aimOffset[2],aimOffset[1]) - self.angle
+								world.debugLine(vehicle.aimPosition(seat),vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)),{0,255,0})
 							elseif gun.emptyAim then
 								gun.aimAngle = self.facingDirection > 0 and gun.emptyAim/180*math.pi or util.wrapAngle(-gun.emptyAim/180*math.pi-math.pi)
 							else
@@ -231,9 +232,9 @@ function update()
 							gun.aimAngle = subarsenal[gun.slavedTo].aimAngle or gun.aimAngle or 0
 						elseif gun.aimMinMax then
 							if self.facingDirection > 0 then
-								gun.aimAngle = util.clamp(gun.aimAngle,gun.aimMinMax[1]/180*math.pi,gun.aimMinMax[2]/180*math.pi)
+								gun.aimAngle = util.clamp(gun.aimAngle,(gun.aimMinMax[1]-self.angle)/180*math.pi,(gun.aimMinMax[2]-self.angle)/180*math.pi)
 							else
-								gun.aimAngle = util.clamp(util.wrapAngle(gun.aimAngle),util.wrapAngle(-math.pi-gun.aimMinMax[2]/180*math.pi),util.wrapAngle(-math.pi-gun.aimMinMax[1]/180*math.pi))
+								gun.aimAngle = util.clamp(util.wrapAngle(gun.aimAngle),util.wrapAngle(-math.pi-(gun.aimMinMax[2]-self.angle)/180*math.pi),util.wrapAngle(-math.pi-(gun.aimMinMax[1]-self.angle)/180*math.pi))
 							end
 						end
 						if gun.slaves then
