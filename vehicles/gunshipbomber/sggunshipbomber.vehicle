@@ -51,9 +51,8 @@
 	"mainStates" : {"opening":true,"closing":true},
 	"gunnery" : {
 		"drivingSeat" : {
-			"PrimaryFire" : [
-				{
-					"gunName" : "forwardDoubleCannonFront",
+			"PrimaryFire" : {
+				"forwardDoubleCannonFront" : {
 					"aimMinMax" : [-75,90],
 					"emptyAim" : 0,
 					"projectileType" : "sgswarmrocket",
@@ -72,8 +71,7 @@
 					"playSounds" : ["forwardDoubleCannons"],
 					"setAnimationStates" : {"forwardDoubleCannonFront":["fire",true]}
 				},
-				{
-					"gunName" : "forwardDoubleCannonBack",
+				"forwardDoubleCannonBack" : {
 					"aimMinMax" : [-75,90],
 					"emptyAim" : 0,
 					"slavedTo" : 1,
@@ -91,10 +89,9 @@
 					"playSounds" : ["forwardDoubleCannons"],
 					"setAnimationStates" : {"forwardDoubleCannonBack":"fire"}
 				}
-			],
-			"AltFire" : [
-				{
-					"gunName" : "ventralAutocannon",
+			},
+			"AltFire" : {
+				"ventralAutocannon" : {
 					"aimMinMax" : [-179,0],
 					"emptyAim" : 0,
 					"projectileType" : "sgboomerround",
@@ -109,10 +106,9 @@
 					"playSounds" : ["ventralAutocannon"],
 					"setAnimationStates" : {"ventralAutocannon":"fire"}
 				}
-			],
-			"Special1" : [
-				{
-					"gunName" : "bombingBay",
+			},
+			"Special1" : {
+				"bombingBay" : {
 					"noGroup" : true,
 					"aimMinMax" : [-90,-90],
 					"projectileType" : "spidermineprojectile",
@@ -128,7 +124,7 @@
 					"barrels" : [[0,-1.5],[0,0],[0,1.5]],
 					"playSounds" : ["bombbay"]
 				}
-			]
+			}
 		}
 	},
 	"thrusters" : {"sideThrusterFront":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[-3,1.75]},"sideThrusterBack":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[9,2]}},

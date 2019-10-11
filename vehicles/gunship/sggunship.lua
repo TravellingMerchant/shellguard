@@ -155,7 +155,7 @@ function init()
 	if self.gunnery then
 		for seat,arsenal in pairs(self.gunnery) do
 			for arsenalTrigger,subarsenal in pairs(arsenal) do
-				for i,gun in ipairs(subarsenal) do
+				for gunName,gun in pairs(subarsenal) do
 					gun.cooldown = gun.fireTime
 					gun.aimAngle = 0
 				end
@@ -215,13 +215,12 @@ function update()
 				self.Special1Held = vehicle.controlHeld(seat,"Special1")
 				self[seat.."Entity"] = vehicle.entityLoungingIn(seat)
 				for arsenalTrigger,subarsenal in pairs(arsenal) do
-					for i,gun in pairs(subarsenal) do
+					for gunName,gun in pairs(subarsenal) do
 						gun.cooldown = math.max(gun.cooldown - script.updateDt(),0)
 						if not (self.Special1Held and gun.special1AimLock) then
 							if self[seat.."Entity"] then
 								aimOffset = world.distance(vehicle.aimPosition(seat),vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)))
 								gun.aimAngle = math.atan(aimOffset[2],aimOffset[1]) - self.angle
-								world.debugLine(vehicle.aimPosition(seat),vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)),{0,255,0})
 							elseif gun.emptyAim then
 								gun.aimAngle = self.facingDirection > 0 and gun.emptyAim/180*math.pi or util.wrapAngle(-gun.emptyAim/180*math.pi-math.pi)
 							else
@@ -243,8 +242,8 @@ function update()
 							end
 						end
 						if not gun.noGroup then
-							animator.resetTransformationGroup(gun.gunName)
-							animator.rotateTransformationGroup(gun.gunName,(gun.aimAngle-0.5*math.pi)*self.facingDirection+0.5*math.pi,gun.gunCenter)
+							animator.resetTransformationGroup(gun.gunName or gunName)
+							animator.rotateTransformationGroup(gun.gunName or gunName,(gun.aimAngle-0.5*math.pi)*self.facingDirection+0.5*math.pi,gun.gunCenter)
 						end
 					end
 				end
@@ -282,9 +281,10 @@ function update()
 	if self.gunnery then
 		for seat,arsenal in pairs(self.gunnery) do
 			for arsenalTrigger,subarsenal in pairs(arsenal) do
-				for i,gun in ipairs(subarsenal) do
+				for gunName,gun in pairs(subarsenal) do
 					local gunCenter = vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle))
 					local gunTip = vec2.add(gunCenter,vec2.rotate({gun.gunLength,0},gun.aimAngle+self.angle))
+					world.debugLine(gunCenter,vec2.add(gunCenter,vec2.rotate({world.magnitude(gunCenter,vehicle.aimPosition(seat)),0},gun.aimAngle+self.angle)),{0,255,0})
 					if gun.barrels then
 						for barrel,barrelOffset in ipairs(gun.barrels) do
 							world.debugPoint(vec2.add(gunTip,vec2.rotate(barrelOffset,gun.aimAngle+self.angle)), "blue")
@@ -700,38 +700,17 @@ function controls()
 		for seat,arsenal in pairs(self.gunnery) do
 			for arsenalTrigger,subarsenal in pairs(arsenal) do
 				if (vehicle.controlHeld(seat, arsenalTrigger)) then
-					for i,gun in ipairs(subarsenal) do
-						if gun.cooldown == 0 then
-							local gunCenter = vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle))
-							local gunTip = vec2.add(gunCenter,vec2.rotate({gun.gunLength,0},gun.aimAngle+self.angle))
-							if gun.barrels then
-								for barrel,barrelOffset in ipairs(gun.barrels) do
-									fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(gunTip,vec2.rotate(barrelOffset,gun.aimAngle+self.angle)),gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
-								end
-							else
-								fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,gunTip,gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
-							end
-							gun.cooldown = gun.fireTime
-							if gun.punishSlaves then
-								for slave,punishment in pairs(gun.punishSlaves) do
-									for i,gun in ipairs(subarsenal) do
-										if gun.gunName == slave then
-											gun.cooldown = punishment
-										end
-									end
-								end
-							end
-							if gun.playSounds then
-								for i,sound in ipairs(gun.playSounds) do
-									animator.playSound(sound)
-								end
-							end
-							if gun.setAnimationStates then
-								for animation,state in pairs(gun.setAnimationStates) do
-									animator.setAnimationState(animation,type(state) == "table" and state[1] or state,type(state) == "table" and state[2] or false)
-								end
-							end
-						end
+					for gunName,gun in pairs(subarsenal) do
+						fireSubarsenal(subarsenal,gunName,gun,gun.punishSlaves)
+					end
+				end
+			end
+		end
+		for seat,arsenal in pairs(self.gunnery) do
+			for arsenalTrigger,subarsenal in pairs(arsenal) do
+				if (vehicle.controlHeld(seat, arsenalTrigger)) then
+					for gunName,gun in pairs(subarsenal) do
+						fireSubarsenal(subarsenal,gunName,gun,not gun.punishSlaves)
 					end
 				end
 			end
@@ -747,6 +726,48 @@ function controls()
 		if self.hornPlaying then
 			animator.stopAllSounds("hornLoop")
 			self.hornPlaying = false;
+		end
+	end
+end
+
+function fireSubarsenal(subarsenal,gunName,gun,condition)
+	if gun.cooldown == 0 and condition then
+		local gunCenter = vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle))
+		local gunTip = vec2.add(gunCenter,vec2.rotate({gun.gunLength,0},gun.aimAngle+self.angle))
+		if gun.firingType == "flak" then
+			local speed = gun.projectileParams.speed or root.projectileConfig(gun.projectileType).speed
+			gun.projectileParams.timeToLive = world.magnitude(gunTip,vehicle.aimPosition(seat)) / speed
+		end
+		if gun.barrels then
+			for barrelI,barrelOffset in ipairs(gun.barrels) do
+				fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(gunTip,vec2.rotate(barrelOffset,gun.aimAngle+self.angle)),gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
+			end
+		else
+			fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,gunTip,gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
+		end
+		gun.cooldown = gun.fireTime
+		if gun.punishSlaves then
+			for slave,punishment in pairs(gun.punishSlaves) do
+				if subarsenal[slave] then
+					subarsenal[slave].cooldown = punishment
+				else
+					for slaveName,slaveGun in pairs(subarsenal) do
+						if slaveGun.gunName == slave then
+							slaveGun.cooldown = punishment
+						end
+					end
+				end
+			end
+		end
+		if gun.playSounds then
+			for i,sound in ipairs(gun.playSounds) do
+				animator.playSound(sound)
+			end
+		end
+		if gun.setAnimationStates then
+			for animation,state in pairs(gun.setAnimationStates) do
+				animator.setAnimationState(animation,type(state) == "table" and state[1] or state,type(state) == "table" and state[2] or false)
+			end
 		end
 	end
 end

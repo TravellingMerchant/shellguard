@@ -78,9 +78,8 @@
 	"mainStates" : {"opening":true,"closing":true},
 	"gunnery" : {
 		"drivingSeat" : {
-			"PrimaryFire" : [
-				{
-					"gunName" : "ventralAutocannon",
+			"PrimaryFire" : {
+				"ventralAutocannon" : {
 					"aimMinMax" : [-100,10],
 					"emptyAim" : 0,
 					"projectileType" : "sgvehicleshot",
@@ -95,11 +94,11 @@
 					"playSounds" : ["ventralAutocannon"],
 					"setAnimationStates" : {"ventralAutocannon":"fire"}
 				}
-			],
-			"AltFire" : [
-			],
-			"Special1" : [
-			]
+			},
+			"AltFire" : {
+			},
+			"Special1" : {
+			}
 		}
 	},
 	"thrusters" : {"sideThrusterFront":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[2,2.75]},"sideThrusterBack":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[13,2.75]}},
