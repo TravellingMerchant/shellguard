@@ -287,7 +287,7 @@ function update()
 					world.debugLine(gunCenter,vec2.add(gunCenter,vec2.rotate({world.magnitude(gunCenter,vehicle.aimPosition(seat)),0},gun.aimAngle+self.angle)),{0,255,0})
 					if gun.barrels then
 						for barrel,barrelOffset in ipairs(gun.barrels) do
-							world.debugPoint(vec2.add(gunTip,vec2.rotate(barrelOffset,gun.aimAngle+self.angle)), "blue")
+							world.debugPoint(vec2.add(gunTip,vec2.rotate(vec2.mul(barrelOffset,{1,self.facingDirection}),gun.aimAngle+self.angle)), "blue")
 						end
 					else
 						world.debugPoint(gunTip, "blue")
@@ -740,7 +740,7 @@ function fireSubarsenal(subarsenal,gunName,gun,condition)
 		end
 		if gun.barrels then
 			for barrelI,barrelOffset in ipairs(gun.barrels) do
-				fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(gunTip,vec2.rotate(barrelOffset,gun.aimAngle+self.angle)),gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
+				fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(gunTip,vec2.rotate(vec2.mul(barrelOffset,{1,self.facingDirection}),gun.aimAngle+self.angle)),gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
 			end
 		else
 			fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,gunTip,gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
