@@ -1,0 +1,41 @@
+{
+  "id" : "ambitiousdrone1",
+  "title" : "^green;The Upgrade",
+  "text" : "I'm tiwed of being a fwidge uwu... Can chu give me owo some ^darkmagenta;10 sawvaged awmow pwate^reset; uwu? i'ww spwead happinyess to evewyone owo!",
+  "completionText" : "Yes owo! yes owo! i can be bettew than anyone owo! fank chu uwu~",
+  "moneyRange" : [50, 50],
+  "ephemeral" : true,
+  "rewards" : [
+    [ [ "rewardbag", 1 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/ambitiousdrone/ambitiousdroneportrait.png"} ],
+        "title" : "Fridroid"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/ambitiousdrone/ambitiousdroneportrait.png"} ],
+        "title" : "Fridroid"
+      },
+      "questFailed" : {
+        "portrait" : [ {"image" : "/objects/ambitiousdrone/ambitiousdroneportrait.png"} ],
+        "title" : "Fridroid"
+      }
+    },
+    "requireTurnIn" : true,
+    "conditions" : [
+      {
+        "type" : "gatherItem",
+        "itemName" : "salvagebody",
+        "count" : 10,
+        "consume" : true
+      }
+    ],
+
+    "setUniverseFlags" : ["shellguard_ambitiousdrone"]
+  }
+}

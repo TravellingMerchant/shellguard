@@ -1,0 +1,59 @@
+{
+  "objectName" : "ambitiousdrone",
+  "colonyTags" : ["outpost"],
+  "rarity" : "Common",
+  "category" : "other",
+  "description" : "Don't let your dreams be dreams.",
+  "shortdescription" : "Ambitious Drone",
+  "race" : "generic",
+
+  "scannable" : false,
+  "printable" : false,
+
+  "inventoryIcon" : "ambitiousdroneicon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "ambitiousdrone.png:<color>.<frame>", "fullbright" : true }, { "image" : "ambitiousdronelit.png:<color>.<frame>" } ],
+      "imagePosition" : [-12, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "frames" : 1,
+      "animationCycle" : 7.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "ambitiousdrone.png:<color>.<frame>", "fullbright" : true }, { "image" : "ambitiousdronelit.png:<color>.<frame>" } ],
+      "imagePosition" : [-8, 0],
+
+      "direction" : "right",
+
+      "frames" : 1,
+      "animationCycle" : 7.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "offeredQuests" : [
+    "ambitiousdrone1"
+  ],
+  "turnInQuests" : [
+    "ambitiousdrone1"
+  ],
+
+  "scripts" : ["/scripts/chattyObject.lua"],
+  "scriptDelta" : 60,
+
+  "uniqueId" : "ambitiousdrone",
+
+  "chatOptions" : [
+    "I was a weguwaw heavy dwonye~ fwying in space and shooting staws.",
+    "But then dey captuwed me owo and owo make me owo into a fwidge uwu.",
+	"I wannya be big and owo stwonk one day~"
+  ]
+}
