@@ -424,6 +424,8 @@
 					"centered" : true,
 					"zLevel" : 1,
 					"offset" : [17.25, -4],
+					"beamSource" : [0,0],
+					"beamEnd" : [60,0],
 					"transformationGroups" : ["ventralAutocannon"],
 					"anchorPart" : "foreground"
 				},
@@ -509,7 +511,8 @@
 	"backFinBack" : {},
 	"ventralAutocannon" : {},
 	"forwardDoubleCannonFront" : {},
-	"forwardDoubleCannonBack" : {}
+	"forwardDoubleCannonBack" : {},
+	"ventralLaserTurretBeam" : {}
 	},
 
 	"particleEmitters" : {

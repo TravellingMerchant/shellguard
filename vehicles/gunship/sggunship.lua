@@ -157,7 +157,11 @@ function init()
 			for arsenalTrigger,subarsenal in pairs(arsenal) do
 				for gunName,gun in pairs(subarsenal) do
 					gun.cooldown = gun.fireTime
+					gun.activeCooldown = 0
 					gun.aimAngle = 0
+					if gun.chain ~= nil then
+						gun.chain.sourcePart = gunName
+					end
 				end
 			end
 		end
@@ -217,6 +221,19 @@ function update()
 				for arsenalTrigger,subarsenal in pairs(arsenal) do
 					for gunName,gun in pairs(subarsenal) do
 						gun.cooldown = math.max(gun.cooldown - script.updateDt(),0)
+						if gun.firingType == "laser" then	
+							gun.activeCooldown = math.max(gun.activeCooldown - script.updateDt(),0)
+							if gun.activeCooldown == 0 then
+								for i,damageSource in ipairs(gun.damageSourceList) do
+									vehicle.setDamageSourceEnabled(damageSource,false)
+								end
+								vehicle.setAnimationParameter("chains", {})
+							elseif self[seat.."Entity"] then
+								local chains = {}
+								table.insert(chains, gun.chain)
+								vehicle.setAnimationParameter("chains", chains)
+							end
+						end
 						if not (self.Special1Held and gun.special1AimLock) then
 							if self[seat.."Entity"] then
 								aimOffset = world.distance(vehicle.aimPosition(seat),vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)))
@@ -738,14 +755,22 @@ function fireSubarsenal(subarsenal,gunName,gun,condition)
 			local speed = gun.projectileParams.speed or root.projectileConfig(gun.projectileType).speed
 			gun.projectileParams.timeToLive = world.magnitude(gunTip,vehicle.aimPosition(seat)) / speed
 		end
-		if gun.barrels then
-			for barrelI,barrelOffset in ipairs(gun.barrels) do
-				fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(gunTip,vec2.rotate(vec2.mul(barrelOffset,{1,self.facingDirection}),gun.aimAngle+self.angle)),gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
+		if gun.firingType == "laser" and gun.activeCooldown == 0 then
+			gun.activeCooldown = gun.activeTime
+			gun.cooldown = gun.fireTime
+			for i,damageSource in ipairs(gun.damageSourceList) do
+				vehicle.setDamageSourceEnabled(damageSource,true)
 			end
-		else
-			fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,gunTip,gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
+		elseif gun.firingType ~= "laser" then
+			if gun.barrels then
+				for barrelI,barrelOffset in ipairs(gun.barrels) do
+					fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(gunTip,vec2.rotate(vec2.mul(barrelOffset,{1,self.facingDirection}),gun.aimAngle+self.angle)),gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
+				end
+			else
+				fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,gunTip,gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
+			end
+			gun.cooldown = gun.fireTime
 		end
-		gun.cooldown = gun.fireTime
 		if gun.punishSlaves then
 			for slave,punishment in pairs(gun.punishSlaves) do
 				if subarsenal[slave] then
