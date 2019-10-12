@@ -46,11 +46,39 @@
       "hostileActions" : [
         {
           "name" : "action-fire",
+		  "cooldown": 1,
           "parameters" : {
             "requireLineOfSight" : true,
             "maximumRange" : 20,
             "minimumRange" : 2,
-            "windupTime" : 2.0,
+            "windupTime" : 1.0,
+            "windupStopForce" : 50,
+            "windupState" : "idle",
+
+            "projectileType" : "sgshot",
+			"projectileCount": 10,
+			"projectileInterval": 0.1,
+			"inaccuracy": 0.2,
+            "fireOffset" : [13.1, -3.0],
+			"rotationCenter" : [-5, 7],
+            "fireSound" : "fire",
+			"fireStateType": "body",
+            "fireState" : "firingBack",
+            "fireDelay" : 0.1,
+            "rotateAim" : true,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.0
+          }
+        },
+		{
+          "name" : "action-fire",
+		  "cooldown": 1,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 20,
+            "minimumRange" : 2,
+            "windupTime" : 1.0,
             "windupStopForce" : 50,
             "windupState" : "idle",
 
@@ -65,7 +93,6 @@
             "fireState" : "firing",
             "fireDelay" : 0.1,
             "rotateAim" : true,
-			"holdAim": true,
 
             "winddownState" : "idle",
             "winddownTime" : 0.0

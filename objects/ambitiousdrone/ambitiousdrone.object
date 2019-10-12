@@ -13,26 +13,30 @@
   "inventoryIcon" : "ambitiousdroneicon.png",
   "orientations" : [
     {
-      "imageLayers" : [ { "image" : "ambitiousdrone.png:<color>.<frame>", "fullbright" : true }, { "image" : "ambitiousdronelit.png:<color>.<frame>" } ],
+      "imageLayers" : [ { "image" : "ambitiousdrone.png:<color>.<frame>"}, { "image" : "ambitiousdronelit.png:<color>.<frame>", "fullbright" : true  } ],
       "imagePosition" : [-8, 0],
 
       "direction" : "left",
       "flipImages" : true,
-
-      "frames" : 1,
-      "animationCycle" : 7.5,
+	  "collision": "platform",
+	  "collisionSpaces": [ [0, 8], [1, 8], [2, 8], [3, 8], [4, 8], [5, 8], [6, 8], [7, 8] ],
+	  
+      "frames" : 4,
+      "animationCycle" : 1,
 
       "spaceScan" : 0.1,
       "anchors" : [ "bottom" ]
     },
     {
-      "imageLayers" : [ { "image" : "ambitiousdrone.png:<color>.<frame>", "fullbright" : true }, { "image" : "ambitiousdronelit.png:<color>.<frame>" } ],
+      "imageLayers" : [ { "image" : "ambitiousdrone.png:<color>.<frame>"}, { "image" : "ambitiousdronelit.png:<color>.<frame>", "fullbright" : true  } ],
       "imagePosition" : [-8, 0],
 
       "direction" : "right",
-
-      "frames" : 1,
-      "animationCycle" : 7.5,
+	  "collision": "platform",
+	  
+	  "collisionSpaces": [ [0, 8], [1, 8], [2, 8], [3, 8], [4, 8], [5, 8], [6, 8], [7, 8] ],
+      "frames" : 4,
+      "animationCycle" : 1,
 
       "spaceScan" : 0.1,
       "anchors" : [ "bottom" ]

@@ -46,6 +46,12 @@
             "mode" : "transition",
             "transition" : "idle"
           },
+          "firingBack" : {
+            "frames" : 15,
+            "cycle" : 1.5,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
           "fireRockets" : {
             "frames" : 1,
             "cycle" : 1.5,
@@ -110,6 +116,11 @@
               "properties" : {
                 "image" : "<partImage>:firing.<frame>"
               }
+            },
+            "firingBack" : {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
             }
           },
           "damage" : {
@@ -159,6 +170,11 @@
               }
             },
 			"fireRockets": {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            },
+            "firingBack" : {
               "properties" : {
                 "image" : "<partImage>:firing.<frame>"
               }
@@ -212,6 +228,11 @@
               }
             },
 			"fireRockets": {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            },
+            "firingBack" : {
               "properties" : {
                 "image" : "<partImage>:firing.<frame>"
               }
@@ -269,7 +290,7 @@
         "properties" : {
           "zLevel" : 1,
           "offset" : [3.7, 5.825],
-          "transformationGroups" : [ "backgun" ],
+          "transformationGroups" : [ "backgun", "aim" ],
 		  "image" : "<partImage>:idle.1"
         },
         "partStates" : {
@@ -278,7 +299,12 @@
 			  "frameProperties": {
 			    "offset": [[3.7, 6.7], [3.7, 6.45],[3.7, 6.325],[3.7, 6.45],[3.7, 6.575],[3.7, 6.7],[3.7, 6.45],[3.7, 6.325],[3.7, 6.45],[3.7, 6.575]]
 			  }
-			}
+			},
+            "firingBack" : {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            }
           }
         }
       },
@@ -288,6 +314,15 @@
           "anchorPart" : "backgun",
           "fullbright" : true,
 		  "image" : "<partImage>:idle.1"
+        },
+        "partStates" : {
+          "body" : {
+            "firingBack" : {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            }
+          }
         }
       }
     }
