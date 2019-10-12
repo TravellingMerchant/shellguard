@@ -17,7 +17,17 @@
     ],
 
     "behavior" : "monster",
-
+	"dialog" : {
+      "converse" : {
+        "default" : {
+          "default" : [
+            "Thank chu so much!!!",
+			"I'm teh biggest! OwO",
+			"Fwiend~"
+          ]
+        }
+      }
+    },
     "behaviorConfig" : {
       "damageOnTouch" : true,	  
 	  
@@ -124,7 +134,11 @@
         }
       ],
 
-      "periodicActions" : [],
+      "periodicActions" : [
+		{
+		  "name": "converseseq"
+		}
+	  ],
 
       "approachActions" : [
         {
@@ -137,7 +151,7 @@
             "jumpXControlForce" : 50,
             "minXRange" : 10
           }
-        }
+        }		
       ],
 
       "followActions" : [
@@ -182,7 +196,7 @@
     },
 
     "touchDamage" : {
-      "poly" : [ [1.75, 2.55], [2.25, 2.05],  [2.75, -3.55], [2.25, -3.95],  [-2.25, -3.95], [-2.75, -3.55],  [-2.25, 2.05], [-1.75, 2.55] ],
+      "poly" : [ [1.75, 4.55], [2.25, 4.05],  [2.75, -3.55], [2.25, -3.95],  [-2.25, -3.95], [-2.75, -3.55],  [-2.25, 4.05], [-1.75, 4.55] ],
       "damage" : 13,
 
       "teamType" : "enemy",
@@ -195,7 +209,7 @@
     "scale" : 1.0,
 
     "movementSettings" : {
-      "collisionPoly" : [ [1.75, 2.55], [2.25, 2.05],  [2.75, -3.55], [2.25, -3.95],  [-2.25, -3.95], [-2.75, -3.55],  [-2.25, 2.05], [-1.75, 2.55] ],
+      "collisionPoly" : [ [1.75, 4.55], [2.25, 4.05],  [2.75, -3.55], [2.25, -3.95],  [-2.25, -3.95], [-2.75, -3.55],  [-2.25, 4.05], [-1.75, 4.55] ],
 
       "mass" : 2.5,
       "walkSpeed" : 4,
@@ -211,7 +225,8 @@
     },
 
     "bodyMaterialKind" : "robotic",
-
+	"aggressive": false,
+	"interactive": true,
     "knockoutTime" : 0.3,
     "knockoutAnimationStates" : {
       "damage" : "stunned"
@@ -294,7 +309,7 @@
       }
     },
 
-    "mouthOffset" : [0, 0],
+    "mouthOffset" : [0, 50],
     "feetOffset" : [0, -8],
     "capturable" : false,
     "nametagColor" : [64, 200, 255]
