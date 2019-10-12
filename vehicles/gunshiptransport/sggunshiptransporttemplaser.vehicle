@@ -86,6 +86,7 @@
 					"firingType" : "laser",
 					"damageSourceList" : ["ventralLaserTurretBeam"],
 					"activeTime" : 0.25,
+					"weakActiveTime" : 0.25,
 					"gunCenter" : [15, -4],
 					"gunLength" : 4,
 					"scriptedBeam" : true,
@@ -94,6 +95,24 @@
 						"endPart" : "ventralAutocannon",
 						"segmentImage" : "/vehicles/modularmech/beam/neolaserbeam.png",
 						"endSegmentImage" : "/vehicles/modularmech/beam/neolaserbeamend.png",
+						"segmentSize" : 0.5,
+						"overdrawLength" : 0.0,
+						"taper" : 0.0,
+						"jitter" : 0.0,
+						"waveform" : {
+							"frequency" : 3.0,
+							"amplitude" : 0.0625,
+							"movement" : 50.0
+						},
+						"fullbright" : true,
+						"light" : [249, 21, 207],
+						"testCollision" : true
+					},
+					"weakChain" : {
+						"sourcePart" : "ventralAutocannon",
+						"endPart" : "ventralAutocannon",
+						"segmentImage" : "/items/active/weapons/ranged/abilities/erchiusbeam/beam.png:1",
+						"endSegmentImage" : "/items/active/weapons/ranged/abilities/erchiusbeam/beamend.png:1",
 						"segmentSize" : 0.5,
 						"overdrawLength" : 0.0,
 						"taper" : 0.0,

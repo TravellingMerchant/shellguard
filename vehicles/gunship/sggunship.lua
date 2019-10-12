@@ -158,6 +158,7 @@ function init()
 				for gunName,gun in pairs(subarsenal) do
 					gun.cooldown = gun.fireTime
 					gun.activeCooldown = 0
+					gun.weakActiveCooldown = 0
 					gun.aimAngle = 0
 					if gun.chain ~= nil then
 						gun.chain.sourcePart = gunName
@@ -224,10 +225,17 @@ function update()
 						if gun.firingType == "laser" then	
 							gun.activeCooldown = math.max(gun.activeCooldown - script.updateDt(),0)
 							if gun.activeCooldown == 0 then
+								gun.weakActiveCooldown = math.max(gun.weakActiveCooldown - script.updateDt(),0)
 								for i,damageSource in ipairs(gun.damageSourceList) do
 									vehicle.setDamageSourceEnabled(damageSource,false)
 								end
-								vehicle.setAnimationParameter("chains", {})
+								if not gun.weakChain or gun.weakActiveCooldown == 0 then
+									vehicle.setAnimationParameter("chains", {})
+								else
+									local chains = {}
+									table.insert(chains, gun.weakChain)
+									vehicle.setAnimationParameter("chains", chains)
+								end
 							elseif self[seat.."Entity"] then
 								local chains = {}
 								table.insert(chains, gun.chain)
@@ -758,6 +766,7 @@ function fireSubarsenal(subarsenal,gunName,gun,condition)
 		if gun.firingType == "laser" and gun.activeCooldown == 0 then
 			gun.activeCooldown = gun.activeTime
 			gun.cooldown = gun.fireTime
+			gun.weakActiveCooldown = gun.weakActiveTime or 0
 			for i,damageSource in ipairs(gun.damageSourceList) do
 				vehicle.setDamageSourceEnabled(damageSource,true)
 			end
