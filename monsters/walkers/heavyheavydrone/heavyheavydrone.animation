@@ -11,7 +11,7 @@
           },
           "walk" : {
             "frames" : 10,
-            "cycle" : 0.6,
+            "cycle" : 0.5,
             "mode" : "loop",
             "properties" : {
             "particleEmittersOff" : [ "spindust" ]
@@ -26,30 +26,10 @@
             "frames" : 4,
             "cycle" : 0.5,
             "mode" : "loop"
-          }
-        }
-      },
-      "frontgun" : {
-        "priority" : 0,
-        "default" : "idle",
-        "states" : {
-          "idle" : {},
+          },
           "firing" : {
-            "frames" : 3,
-            "cycle" : 0.3,
-            "mode" : "transition",
-            "transition" : "idle"
-          }
-        }
-      },
-      "backgun" : {
-        "priority" : 0,
-        "default" : "idle",
-        "states" : {
-          "idle" : {},
-          "firing" : {
-            "frames" : 3,
-            "cycle" : 0.3,
+            "frames" : 15,
+            "cycle" : 1.5,
             "mode" : "transition",
             "transition" : "idle"
           }
@@ -99,6 +79,11 @@
               "properties" : {
                 "image" : "<partImage>:fall.<frame>"
               }
+            },
+			"firing": {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
             }
           },
           "damage" : {
@@ -135,6 +120,11 @@
             "fall" : {
               "properties" : {
                 "image" : "<partImage>:fall.<frame>"
+              }
+            },
+			"firing": {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
               }
             }
           },
@@ -174,6 +164,11 @@
               "properties" : {
                 "image" : "<partImage>:fall.<frame>"
               }
+            },
+			"firing": {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
             }
           },
           "damage" : {
@@ -189,16 +184,16 @@
         "properties" : {
           "zLevel" : 6,
           "offset" : [-1, 5.825],
-          "rotationCenter" : [-10, 4],
-          "transformationGroups" : [ "frontgun", "aim" ]
+          "transformationGroups" : [ "frontgun", "aim" ],
+		  "image" : "<partImage>:idle.1"
         },
         "partStates" : {
-          "frontgun" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle.<frame>"
-              }
-            },
+          "body" : {
+		    "walk": {
+			  "frameProperties": {
+			    "offset": [[-1, 6.7], [-1, 6.45],[-1, 6.325],[-1, 6.45],[-1, 6.575],[-1, 6.7],[-1, 6.45],[-1, 6.325],[-1, 6.45],[-1, 6.575]]
+			  }
+			},
             "firing" : {
               "properties" : {
                 "image" : "<partImage>:firing.<frame>"
@@ -211,15 +206,11 @@
         "properties" : {
           "zLevel" : 7,
           "anchorPart" : "frontgun",
-          "fullbright" : true
+          "fullbright" : true,
+		  "image" : "<partImage>:idle.1"
         },
         "partStates" : {
-          "frontgun" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle.<frame>"
-              }
-            },
+          "body" : {
             "firing" : {
               "properties" : {
                 "image" : "<partImage>:firing.<frame>"
@@ -232,21 +223,16 @@
         "properties" : {
           "zLevel" : 1,
           "offset" : [3.7, 5.825],
-          "rotationCenter" : [0, 0],
-          "transformationGroups" : [ "backgun" ]
+          "transformationGroups" : [ "backgun" ],
+		  "image" : "<partImage>:idle.1"
         },
         "partStates" : {
-          "backgun" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle.<frame>"
-              }
-            },
-            "firing" : {
-              "properties" : {
-                "image" : "<partImage>:firing.<frame>"
-              }
-            }
+          "body" : {
+		    "walk": {
+			  "frameProperties": {
+			    "offset": [[3.7, 6.7], [3.7, 6.45],[3.7, 6.325],[3.7, 6.45],[3.7, 6.575],[3.7, 6.7],[3.7, 6.45],[3.7, 6.325],[3.7, 6.45],[3.7, 6.575]]
+			  }
+			}
           }
         }
       },
@@ -254,21 +240,8 @@
         "properties" : {
           "zLevel" : 2,
           "anchorPart" : "backgun",
-          "fullbright" : true
-        },
-        "partStates" : {
-          "backgun" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle.<frame>"
-              }
-            },
-            "firing" : {
-              "properties" : {
-                "image" : "<partImage>:firing.<frame>"
-              }
-            }
-          }
+          "fullbright" : true,
+		  "image" : "<partImage>:idle.1"
         }
       }
     }

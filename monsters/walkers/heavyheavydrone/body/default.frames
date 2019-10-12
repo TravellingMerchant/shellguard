@@ -4,7 +4,7 @@
     "dimensions" : [10, 3],
 
     "names" : [
-      [ null, "idle.1", null, "blink.1" ],
+      [ null, "idle.1", null, "blink.1", null, "firing.1" ],
       [ "walk.1", "walk.2", "walk.3", "walk.4", "walk.5", "walk.6", "walk.7", "walk.8", "walk.9", "walk.10" ],
       [ null, "jump.1", "jump.2", "jump.3", "jump.3", null, "fall.1", "fall.2", "fall.3", "fall.4" ]
     ]
@@ -22,6 +22,20 @@
   	"idle.11" : "idle.1",
   	"idle.12" : "idle.1",
   	"idle.13" : "idle.1",
+	"firing.2": "firing.1",
+	"firing.3": "firing.1",
+	"firing.4": "firing.1",
+	"firing.5": "firing.2",
+	"firing.6": "firing.3",
+	"firing.7": "firing.1",
+	"firing.8": "firing.2",
+	"firing.9": "firing.3",
+	"firing.10": "firing.1",
+	"firing.11": "firing.2",
+	"firing.12": "firing.3",
+	"firing.13": "firing.1",
+	"firing.14": "firing.2",
+	"firing.15": "firing.3",
     "hurt.1" : "blink.1"
   }
 }

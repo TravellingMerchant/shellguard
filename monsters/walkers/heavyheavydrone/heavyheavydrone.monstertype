@@ -19,10 +19,7 @@
     "behavior" : "monster",
 
     "behaviorConfig" : {
-      "damageOnTouch" : true,
-
-	  "rotationCenter" : [-5, 7],
-	  
+      "damageOnTouch" : true,	  
 	  
       "targetQueryRange" : 20,
       "targetOnDamage" : true,
@@ -49,14 +46,18 @@
             "windupState" : "idle",
 
             "projectileType" : "sgshot",
+			"projectileCount": 10,
+			"projectileInterval": 0.1,
+			"inaccuracy": 0.2,
             "fireOffset" : [6.25, -3.0],
+			"rotationCenter" : [-5, 7],
             "fireSound" : "fire",
-			"fireStateType": "frontgun",
+			"fireStateType": "body",
             "fireState" : "firing",
-            "fireDelay" : 0.0,
+            "fireDelay" : 0.1,
             "rotateAim" : true,
 
-            "winddownState" : "",
+            "winddownState" : "idle",
             "winddownTime" : 0.0
           }
         }
@@ -136,8 +137,8 @@
       "collisionPoly" : [ [1.75, 2.55], [2.25, 2.05],  [2.75, -3.55], [2.25, -3.95],  [-2.25, -3.95], [-2.75, -3.55],  [-2.25, 2.05], [-1.75, 2.55] ],
 
       "mass" : 2.5,
-      "walkSpeed" : 4,
-      "runSpeed" : 5,
+      "walkSpeed" : 2,
+      "runSpeed" : 3,
 
       "airFriction" : 0,
 

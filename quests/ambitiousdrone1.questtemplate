@@ -1,6 +1,6 @@
 {
   "id" : "ambitiousdrone1",
-  "requiredItems" : [ "salvagebody" ],
+  //"requiredItems" : [ "salvagebody" ],
   "title" : "^green;The Upgrade",
   "text" : "I'm tiwed of being a fwidge uwu... Can chu give me owo some ^darkmagenta;10 sawvaged awmow pwate^reset; uwu? i'ww spwead happinyess to evewyone owo!",
   "completionText" : "Yes! yes! i can be bettew than anyone owo! fank chu uwu!!! Come back later~",
