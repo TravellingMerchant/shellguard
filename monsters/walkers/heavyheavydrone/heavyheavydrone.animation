@@ -9,12 +9,25 @@
             "frames" : 13,
             "cycle" : 1.5
           },
+		  "alert": {
+			"frames": 1,
+			"cycle": 0.6,
+			"mode": "transition",
+			"transition": "idle",
+			"properties" : {
+              "persistentSound" : "/sfx/monsters/mgsalert.ogg",
+              "persistentSoundStopTime" : 1.25
+            }
+		  },
           "walk" : {
             "frames" : 10,
-            "cycle" : 0.5,
+            "cycle" : 0.6,
             "mode" : "loop",
             "properties" : {
-            "particleEmittersOff" : [ "spindust" ]
+				"particleEmittersOff" : [ "spindust" ]
+            },
+            "frameProperties" : {
+              "immediateSound" : [ "/sfx/gun/railshots/mechsteporgun.ogg", "", "", "", "", "/sfx/gun/railshots/mechsteporgun.ogg", "", "", "", "" ]
             }
           },
           "jump" : {
@@ -29,6 +42,12 @@
           },
           "firing" : {
             "frames" : 15,
+            "cycle" : 1.5,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "fireRockets" : {
+            "frames" : 1,
             "cycle" : 1.5,
             "mode" : "transition",
             "transition" : "idle"
@@ -62,12 +81,14 @@
                 "image" : "<partImage>:idle.<frame>"
               }
             },
+            "alert" : {
+              "properties" : {
+                "image" : "<partImage>:alert.<frame>"
+              }
+            },
             "walk" : {
               "properties" : {
                 "image" : "<partImage>:walk.<frame>"
-              },
-              "frameProperties" : {
-                "immediateSound" : [ "/sfx/gun/railshots/mechsteporgun.ogg", "", "", "", "", "/sfx/gun/railshots/mechsteporgun.ogg", "", "", "", "" ]
               }
             },
             "jump" : {
@@ -81,6 +102,11 @@
               }
             },
 			"firing": {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            },
+			"fireRockets": {
               "properties" : {
                 "image" : "<partImage>:firing.<frame>"
               }
@@ -107,6 +133,11 @@
                 "image" : "<partImage>:idle.<frame>"
               }
             },
+            "alert" : {
+              "properties" : {
+                "image" : "<partImage>:alert.<frame>"
+              }
+            },
             "walk" : {
               "properties" : {
                 "image" : "<partImage>:walk.<frame>"
@@ -123,6 +154,11 @@
               }
             },
 			"firing": {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            },
+			"fireRockets": {
               "properties" : {
                 "image" : "<partImage>:firing.<frame>"
               }
@@ -150,6 +186,11 @@
                 "image" : "<partImage>:idle.<frame>"
               }
             },
+            "alert" : {
+              "properties" : {
+                "image" : "<partImage>:alert.<frame>"
+              }
+            },
             "walk" : {
               "properties" : {
                 "image" : "<partImage>:walk.<frame>"
@@ -166,6 +207,11 @@
               }
             },
 			"firing": {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            },
+			"fireRockets": {
               "properties" : {
                 "image" : "<partImage>:firing.<frame>"
               }
@@ -296,6 +342,7 @@
   "sounds" : {
     "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
     "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
-	"fire": [ "/sfx/gun/railshots/railshot.ogg" ]
+	"fire": [ "/sfx/gun/railshots/railshot.ogg" ],
+	"fireRocket": [ "/sfx/gun/mech_flakcannon1.ogg", "/sfx/gun/mech_flakcannon2.ogg","/sfx/gun/mech_flakcannon3.ogg" ]
   }
 }

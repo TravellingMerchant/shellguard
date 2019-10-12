@@ -30,7 +30,16 @@
       "hurtWaitForGround": false,
       "hurtWaitForGroundTime": 0.1,
 
-      "foundTargetActions" : [  ],
+      "foundTargetActions" : [ 
+		{
+          "name" : "action-animate",
+          "parameters" : {
+            "stateType" : "body",
+            "state" : "alert",
+            "animationTime" : 0.6
+          }
+        }
+	  ],
 
       "fleeActions" : [],
 
@@ -39,7 +48,7 @@
           "name" : "action-fire",
           "parameters" : {
             "requireLineOfSight" : true,
-            "maximumRange" : 40,
+            "maximumRange" : 20,
             "minimumRange" : 2,
             "windupTime" : 2.0,
             "windupStopForce" : 50,
@@ -56,9 +65,34 @@
             "fireState" : "firing",
             "fireDelay" : 0.1,
             "rotateAim" : true,
+			"holdAim": true,
 
             "winddownState" : "idle",
             "winddownTime" : 0.0
+          }
+        },
+		{
+          "name" : "action-fire",
+		  "cooldown": 3.0,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 40,
+            "minimumRange" : 21,
+            "windupTime" : 0.0,
+            "windupStopForce" : 50,
+            "windupState" : "idle",
+
+            "projectileType" : "homingrocket",
+			"projectileCount": 3,
+            "fireOffsets" : [[4.0, 10.0], [3.0, 10.75], [4.0, 11.0]],
+            "fireSound" : "fireRocket",
+			"fireStateType": "body",
+            "fireState" : "fireRockets",
+            "fireDelay" : 0.1,
+            "rotateAim" : false,
+
+            "winddownState" : "",
+            "winddownTime" : 0.6
           }
         }
       ],
@@ -137,8 +171,8 @@
       "collisionPoly" : [ [1.75, 2.55], [2.25, 2.05],  [2.75, -3.55], [2.25, -3.95],  [-2.25, -3.95], [-2.75, -3.55],  [-2.25, 2.05], [-1.75, 2.55] ],
 
       "mass" : 2.5,
-      "walkSpeed" : 2,
-      "runSpeed" : 3,
+      "walkSpeed" : 4,
+      "runSpeed" : 5,
 
       "airFriction" : 0,
 
