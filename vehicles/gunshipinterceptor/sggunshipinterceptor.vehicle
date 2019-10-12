@@ -57,7 +57,7 @@
 					"aimMinMax" : [-30,20],
 					"emptyAim" : -10,
 					"projectileType" : "flakbullet",
-					"slaves" : [2],
+					"slaves" : ["forwardDoubleCannonBack"],
 					"punishSlaves" : {"forwardDoubleCannonBack":0.05},
 					"projectileParams" : {
 						"power" : 20,
@@ -75,7 +75,7 @@
 				"forwardDoubleCannonBack" : {
 					"aimMinMax" : [-30,20],
 					"emptyAim" : -10,
-					"slavedTo" : 1,
+					"slavedTo" : "forwardDoubleCannonFront",
 					"projectileType" : "flakbullet",
 					"projectileParams" : {
 						"power" : 20,

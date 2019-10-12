@@ -56,7 +56,7 @@
 					"aimMinMax" : [-75,90],
 					"emptyAim" : 0,
 					"projectileType" : "sgswarmrocket",
-					"slaves" : [2],
+					"slaves" : ["forwardDoubleCannonBack"],
 					"punishSlaves" : {"forwardDoubleCannonBack":0.2},
 					"projectileParams" : {
 						"power" : 15,
@@ -74,7 +74,7 @@
 				"forwardDoubleCannonBack" : {
 					"aimMinMax" : [-75,90],
 					"emptyAim" : 0,
-					"slavedTo" : 1,
+					"slavedTo" : "forwardDoubleCannonFront",
 					"projectileType" : "sgswarmrocket",
 					"projectileParams" : {
 						"power" : 15,
