@@ -726,7 +726,7 @@ function controls()
 			for arsenalTrigger,subarsenal in pairs(arsenal) do
 				if (vehicle.controlHeld(seat, arsenalTrigger)) then
 					for gunName,gun in pairs(subarsenal) do
-						fireSubarsenal(subarsenal,gunName,gun,gun.punishSlaves)
+						fireSubarsenal(seat,subarsenal,gunName,gun,gun.punishSlaves)
 					end
 				end
 			end
@@ -735,7 +735,7 @@ function controls()
 			for arsenalTrigger,subarsenal in pairs(arsenal) do
 				if (vehicle.controlHeld(seat, arsenalTrigger)) then
 					for gunName,gun in pairs(subarsenal) do
-						fireSubarsenal(subarsenal,gunName,gun,not gun.punishSlaves)
+						fireSubarsenal(seat,subarsenal,gunName,gun,not gun.punishSlaves)
 					end
 				end
 			end
@@ -755,7 +755,7 @@ function controls()
 	end
 end
 
-function fireSubarsenal(subarsenal,gunName,gun,condition)
+function fireSubarsenal(seat,subarsenal,gunName,gun,condition)
 	if gun.cooldown == 0 and condition then
 		local gunCenter = vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle))
 		local gunTip = vec2.add(gunCenter,vec2.rotate({gun.gunLength,0},gun.aimAngle+self.angle))

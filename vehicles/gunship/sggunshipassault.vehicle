@@ -56,6 +56,7 @@
 					"aimMinMax" : [-75,60],
 					"emptyAim" : 0,
 					"projectileType" : "swarmadvancedrockethoming",
+					"firingType" : "flak",
 					"slaves" : ["forwardDoubleCannonBack"],
 					"punishSlaves" : {"forwardDoubleCannonBack":0.7},
 					"projectileParams" : {
@@ -75,6 +76,7 @@
 					"aimMinMax" : [-75,60],
 					"emptyAim" : 0,
 					"slavedTo" : "forwardDoubleCannonFront",
+					"firingType" : "flak",
 					"projectileType" : "swarmadvancedrockethoming",
 					"projectileParams" : {
 						"power" : 50,
