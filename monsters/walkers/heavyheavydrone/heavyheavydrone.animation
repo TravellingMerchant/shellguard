@@ -11,7 +11,7 @@
           },
           "walk" : {
             "frames" : 10,
-            "cycle" : 0.5,
+            "cycle" : 0.6,
             "mode" : "loop",
             "properties" : {
             "particleEmittersOff" : [ "spindust" ]
