@@ -84,6 +84,7 @@
 					"aimMinMax" : [-100,10],
 					"emptyAim" : 0,
 					"firingType" : "laser",
+					"laserRotationLock" : true,
 					"damageSourceList" : ["ventralLaserTurretBeam"],
 					"activeTime" : 0.25,
 					"weakActiveTime" : 0.25,

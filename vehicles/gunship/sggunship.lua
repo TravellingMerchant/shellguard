@@ -266,7 +266,7 @@ function update()
 								subarsenal[slave].aimAngle = gun.aimAngle
 							end
 						end
-						if not gun.noGroup then
+						if not gun.noGroup and not (gun.laserRotationLock and (gun.activeCooldown > 0 or gun.weakActiveCooldown > 0)) then
 							animator.resetTransformationGroup(gun.gunName or gunName)
 							animator.rotateTransformationGroup(gun.gunName or gunName,(gun.aimAngle-0.5*math.pi)*self.facingDirection+0.5*math.pi,gun.gunCenter)
 						end
