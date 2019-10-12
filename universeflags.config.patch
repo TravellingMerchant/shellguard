@@ -33,5 +33,22 @@
         }
       ]
     }
+  },
+  
+  {
+    "op": "add",
+    "path": "/shellguard_ambitiousdrone",
+    "value": {
+      "actions": [
+        {
+          "type": "placeDungeon",
+          "dungeonId": "Shellguardbaseheavydrone",
+          "targetInstance": "shellguardbase",
+          "targetPosition": [
+            549, 222
+          ]
+        }
+      ]
+    }
   }
 ]

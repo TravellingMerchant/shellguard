@@ -1,0 +1,25 @@
+{
+  "name" : "gun1",
+  "category" : "heavyheavydrone",
+  "type" : "frontgun",
+
+  "parameters" : {
+    "frontgun" : {
+      "offset" : [2.75, 0.0],
+      "projectileType" : "twigunbullet",
+      "projectileParameters" : {
+        "speed" : 40
+      },
+      "count" : 5,
+      "power" : 10,
+      "fireInterval" : 0.05,
+      "fireCooldown" : 2.0,
+      "range" : 25
+    }
+  },
+
+  "frames" : {
+    "frontgun" : "gun1.png",
+    "frontgunfullbright" : "gun1fullbright.png"
+  }
+}

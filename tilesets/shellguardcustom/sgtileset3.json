@@ -8,7 +8,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":21,
+ "tilecount":22,
  "tiledversion":"1.2.4",
  "tileheight":400,
  "tileproperties":
@@ -151,6 +151,16 @@
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"sgcorerematchtele",
+         "tilesetDirection":"right"
+        },
+     "21":
+        {
+         "\/\/description":"ambitiousdrone",
+         "\/\/name":"ambitiousdrone",
+         "\/\/shortdescription":"ambitiousdrone",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"ambitiousdrone",
          "tilesetDirection":"right"
         },
      "3":
@@ -366,6 +376,16 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "21":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "3":
         {
          "\/\/description":"string",
@@ -522,6 +542,12 @@
          "image":"..\/..\/objects\/rematch teleporters\/sgcorerematchtele\/sgcorerematchteleicon.png",
          "imageheight":67,
          "imagewidth":40
+        },
+     "21":
+        {
+         "image":"..\/..\/objects\/ambitiousdrone\/ambitiousdrone.png",
+         "imageheight":86,
+         "imagewidth":70
         },
      "3":
         {

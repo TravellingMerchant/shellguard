@@ -1,10 +1,11 @@
 {
   "id" : "ambitiousdrone1",
+  "requiredItems" : [ "salvagebody" ],
   "title" : "^green;The Upgrade",
   "text" : "I'm tiwed of being a fwidge uwu... Can chu give me owo some ^darkmagenta;10 sawvaged awmow pwate^reset; uwu? i'ww spwead happinyess to evewyone owo!",
-  "completionText" : "Yes owo! yes owo! i can be bettew than anyone owo! fank chu uwu~",
+  "completionText" : "Yes! yes! i can be bettew than anyone owo! fank chu uwu!!! Come back later~",
   "moneyRange" : [50, 50],
-  "ephemeral" : true,
+  "ephemeral" : false,
   "rewards" : [
     [ [ "rewardbag", 1 ] ]
   ],
@@ -14,11 +15,11 @@
   "scriptConfig" : {
     "portraits" : {
       "questStarted" : {
-        "portrait" : [ {"image" : "/objects/ambitiousdrone/ambitiousdroneportrait.png"} ],
+        "portrait" : [ {"image" : "/objects/ambitiousdrone/ambitiousdroneportraitgivequest.png"} ],
         "title" : "Fridroid"
       },
       "questComplete" : {
-        "portrait" : [ {"image" : "/objects/ambitiousdrone/ambitiousdroneportrait.png"} ],
+        "portrait" : [ {"image" : "/objects/ambitiousdrone/ambitiousdroneportraitcompletequest.png"} ],
         "title" : "Fridroid"
       },
       "questFailed" : {

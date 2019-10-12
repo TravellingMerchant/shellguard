@@ -14,7 +14,7 @@
   "orientations" : [
     {
       "imageLayers" : [ { "image" : "ambitiousdrone.png:<color>.<frame>", "fullbright" : true }, { "image" : "ambitiousdronelit.png:<color>.<frame>" } ],
-      "imagePosition" : [-12, 0],
+      "imagePosition" : [-8, 0],
 
       "direction" : "left",
       "flipImages" : true,
