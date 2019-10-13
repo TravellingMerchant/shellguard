@@ -47,6 +47,8 @@
   "upwardControlForce" : 70,
   "targetDownwardVelocity" : -40,
   "downwardControlForce" : 120,
+  "hoverToggle" : true,
+  "hoverToggleControlForce" : 60,
   "spinFriction" : 0.1,
 	"mainStates" : {"opening":true,"closing":true},
 	"gunnery" : {
@@ -56,7 +58,6 @@
 					"aimMinMax" : [-75,60],
 					"emptyAim" : 0,
 					"projectileType" : "swarmadvancedrockethoming",
-					"firingType" : "flak",
 					"slaves" : ["forwardDoubleCannonBack"],
 					"punishSlaves" : {"forwardDoubleCannonBack":0.7},
 					"projectileParams" : {
@@ -76,7 +77,6 @@
 					"aimMinMax" : [-75,60],
 					"emptyAim" : 0,
 					"slavedTo" : "forwardDoubleCannonFront",
-					"firingType" : "flak",
 					"projectileType" : "swarmadvancedrockethoming",
 					"projectileParams" : {
 						"power" : 50,

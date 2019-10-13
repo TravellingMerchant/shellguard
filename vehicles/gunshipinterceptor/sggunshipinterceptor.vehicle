@@ -48,6 +48,8 @@
   "targetDownwardVelocity" : -50,
   "downwardControlForce" : 200,
   "spinFriction" : 0.1,
+    "hoverToggle" : true,
+  "hoverToggleControlForce" : 60,
   "visualRotationCenter" : [1,2],
 	"mainStates" : {"opening":true,"closing":true},
 	"gunnery" : {

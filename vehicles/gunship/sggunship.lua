@@ -34,7 +34,8 @@ function init()
 	self.zeroGMovementSettings = config.getParameter("zeroGMovementSettings")
 	self.protection = config.getParameter("protection")
 	self.maxHealth = config.getParameter("maxHealth")
-	self.visualRotationCenter = config.getParameter("visualRotationCenter")
+	self.hoverToggle = config.getParameter("hoverToggle")
+	self.hoverToggleControlForce = config.getParameter("hoverToggleControlForce")
 
 	self.smokeThreshold =	config.getParameter("smokeParticleHealthThreshold")
 	self.fireThreshold =	config.getParameter("fireParticleHealthThreshold")
@@ -87,6 +88,7 @@ function init()
 	self.driver = nil;
 	self.facingDirection = config.getParameter("spawnFacingDirection",1)
 	self.angle = 0
+	self.spaceToggled = false
 	animate()
 	
 	self.jumpTimer = 0
@@ -274,7 +276,11 @@ function update()
 				end
 			end
 		end
-		if ((vehicle.controlHeld("drivingSeat","left") and self.facingDirection == -1) or (vehicle.controlHeld("drivingSeat","right") and self.facingDirection == 1)) and vehicle.controlHeld("drivingSeat","up") then
+		if self.hoverToggled then
+			for thruster,thrusterStats in pairs(self.thrusters) do
+				thrusterStats.thrusterTargetAngle = thrusterStats.thrusterTargets[1]*math.pi/180
+			end
+		elseif ((vehicle.controlHeld("drivingSeat","left") and self.facingDirection == -1) or (vehicle.controlHeld("drivingSeat","right") and self.facingDirection == 1)) and vehicle.controlHeld("drivingSeat","up") then
 			for thruster,thrusterStats in pairs(self.thrusters) do
 				thrusterStats.thrusterTargetAngle = thrusterStats.thrusterTargets[2]*math.pi/180
 			end
@@ -382,9 +388,11 @@ function updateDriveEffects(healthFactor, driverThisFrame)
 		end
 	else
 		--no driver, stop the engine
-		if (self.loopPlaying ~= nil) then
-			animator.stopAllSounds(self.loopPlaying, 0.5)
-			self.loopPlaying = nil
+		if not self.hoverToggled then
+			if (self.loopPlaying ~= nil) then
+				animator.stopAllSounds(self.loopPlaying, 0.5)
+				self.loopPlaying = nil
+			end
 		end
 		-- driver last frame, open the cockpit
 		if self.mainStates.opening and self.driver then
@@ -437,8 +445,8 @@ function updateDriveEffects(healthFactor, driverThisFrame)
 		end
 
 		for thruster,thrusterStats in pairs(self.thrusters) do
-		animator.setAnimationState(thruster, "on")
-	end
+			animator.setAnimationState(thruster, "on")
+		end
 	else
 		if self.rearThrusterParticles then
 			animator.setParticleEmitterActive("rearThrusterIdle", false)
@@ -630,49 +638,70 @@ function move()
 		if groundDistance <= self.hoverTargetDistance then
 			mcontroller.approachVelocityAlongAngle(math.pi/2,(self.hoverTargetDistance - groundDistance) * self.hoverVelocityFactor, self.hoverControlForce,true)
 		end
-	targetAngle = 0
-	else
-	if self.velocityRotation then
 		targetAngle = 0
-	end
+	else
+		if self.velocityRotation then
+			targetAngle = 0
+		end
+		if self.hoverToggled then
+			mcontroller.applyParameters(self.occupiedMovementSettings)
+			if groundDistance <= self.hoverTargetDistance then
+				mcontroller.approachVelocityAlongAngle(math.pi/2,(self.hoverTargetDistance - groundDistance) * self.hoverVelocityFactor, self.hoverControlForce,true)
+			end
+		end
 	end
 	
-	if vehicle.controlHeld("drivingSeat", "left") then
+	if vehicle.controlHeld("drivingSeat", "jump") then
+		if not self.holdingJumpLastFrame then
+			self.spaceToggled = not self.spaceToggled
+		end
+		self.holdingJumpLastFrame = true
+	else
+		self.holdingJumpLastFrame = false
+	end
+	
+	if self.hoverToggle then
+		self.hoverToggled = self.spaceToggled
+	end
+	if self.hoverToggled and self.hoverToggleControlForce then
+		mcontroller.approachYVelocity(0, self.hoverToggleControlForce)
+		mcontroller.approachXVelocity(0, self.hoverToggleControlForce)
+	end
+	if vehicle.controlHeld("drivingSeat", "left") and not self.hoverToggled then
 		mcontroller.approachXVelocity(-self.targetHorizontalVelocity, self.horizontalControlForce)
-	if self.velocityRotation then
-		targetAngle = math.atan(mcontroller.yVelocity(),math.max(math.abs(mcontroller.xVelocity()),10))
-		targetAngle = (self.facingDirection < 0) and -targetAngle or targetAngle
-	end
+		if self.velocityRotation then
+			targetAngle = math.atan(mcontroller.yVelocity(),math.max(math.abs(mcontroller.xVelocity()),10))
+			targetAngle = (self.facingDirection < 0) and -targetAngle or targetAngle
+		end
 		self.enginePitch = self.engineRevPitch;
 		self.engineVolume = self.engineRevVolume;
-	elseif vehicle.controlHeld("drivingSeat", "right") then
+	elseif vehicle.controlHeld("drivingSeat", "right") and not self.hoverToggled then
 		mcontroller.approachXVelocity(self.targetHorizontalVelocity, self.horizontalControlForce)
-	if self.velocityRotation then
-		targetAngle = math.atan(mcontroller.yVelocity(),math.max(math.abs(mcontroller.xVelocity()),10))
-		targetAngle = (self.facingDirection < 0) and -targetAngle or targetAngle
-	end
+		if self.velocityRotation then
+			targetAngle = math.atan(mcontroller.yVelocity(),math.max(math.abs(mcontroller.xVelocity()),10))
+			targetAngle = (self.facingDirection < 0) and -targetAngle or targetAngle
+		end
 		self.enginePitch = self.engineRevPitch;
 		self.engineVolume = self.engineRevVolume;
 	end
-	if vehicle.controlHeld("drivingSeat", "up") then
-	if not self.velocityRotation then
-		local targetAngle = (self.facingDirection < 0) and -self.maxAngle or self.maxAngle
-		self.angle = self.angle + (targetAngle - self.angle) * self.angleApproachFactor
-	end
-		self.enginePitch = self.engineRevPitch;
-		self.engineVolume = self.engineRevVolume;
-	
-	if self.canFly then
-		mcontroller.approachYVelocity(self.targetUpwardVelocity, self.upwardControlForce)
-	end
-	elseif vehicle.controlHeld("drivingSeat", "down") then
+	if vehicle.controlHeld("drivingSeat", "up") and not self.hoverToggled then
 		if not self.velocityRotation then
-		local targetAngle = (self.facingDirection < 0) and self.maxAngle or -self.maxAngle
-		self.angle = self.angle + (targetAngle - self.angle) * self.angleApproachFactor
-	end
-	if self.canFly then
-		mcontroller.approachYVelocity(self.targetDownwardVelocity, self.downwardControlForce)
-	end
+			local targetAngle = (self.facingDirection < 0) and -self.maxAngle or self.maxAngle
+			self.angle = self.angle + (targetAngle - self.angle) * self.angleApproachFactor
+		end
+		self.enginePitch = self.engineRevPitch
+		self.engineVolume = self.engineRevVolume
+		if self.canFly then
+			mcontroller.approachYVelocity(self.targetUpwardVelocity, self.upwardControlForce)
+		end
+	elseif vehicle.controlHeld("drivingSeat", "down") and not self.hoverToggled then
+		if not self.velocityRotation then
+			local targetAngle = (self.facingDirection < 0) and self.maxAngle or -self.maxAngle
+			self.angle = self.angle + (targetAngle - self.angle) * self.angleApproachFactor
+		end
+		if self.canFly then
+			mcontroller.approachYVelocity(self.targetDownwardVelocity, self.downwardControlForce)
+		end
 	else
 		local frontSpringDistance = minimumSpringDistance(self.frontSpringPositions)
 		local backSpringDistance = minimumSpringDistance(self.backSpringPositions)

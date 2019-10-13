@@ -76,6 +76,8 @@
 	"targetDownwardVelocity" : -40,
 	"downwardControlForce" : 170,
 	"spinFriction" : 0.1,
+	  "hoverToggle" : true,
+  "hoverToggleControlForce" : 60,
 	"mainStates" : {"opening":true,"closing":true},
 	"gunnery" : {
 		"drivingSeat" : {
