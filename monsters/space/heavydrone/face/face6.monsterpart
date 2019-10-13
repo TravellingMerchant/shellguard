@@ -1,0 +1,9 @@
+{
+  "name" : "face6",
+  "category" : "heavydrone",
+  "type" : "face",
+
+  "frames" : {
+    "face" : "face6.png"
+  }
+}

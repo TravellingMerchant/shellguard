@@ -17,6 +17,8 @@
     ],
 
     "behavior" : "monster",
+	"deathBehavior" : "monster-death",
+	
 	"dialog" : {
       "converse" : {
         "default" : {
@@ -33,12 +35,12 @@
 	  
       "targetQueryRange" : 50,
       "targetOnDamage" : true,
+	  "targetEntityTypes": ["monster", "npc"],
+	  
+	  
       "keepTargetInSight" : true,
       "keepTargetInRange" : 150,
       "targetOutOfSightTime" : 15.5,
-      "hurtTime": 0.10,
-      "hurtWaitForGround": false,
-      "hurtWaitForGroundTime": 0.1,
 
       "foundTargetActions" : [ 
 		{
@@ -128,6 +130,8 @@
             "fireDelay" : 0.1,
             "rotateAim" : false,
 
+			"fireArc": true,
+			"projectileSpeed": 10,
             "winddownState" : "",
             "winddownTime" : 0.6
           }
@@ -181,7 +185,23 @@
             "wanderTime" : [5, 15]
           }
         }
-      ]
+      ],
+	  
+	  "deathActions" : [
+        {
+          "name" : "action-spawnmonster",
+          "parameters" : {
+		    "offset": [0, 6],
+		    "monsterType": "heavydrone",
+			"monsterParameters": {
+			  "selectedParts": {
+			    "body": "body7",
+				"face": "face6"
+			  }
+			}
+          }
+        }
+	  ]
     },
 
     "damageParts" : {
@@ -225,7 +245,7 @@
     },
 
     "bodyMaterialKind" : "robotic",
-	"aggressive": false,
+	"aggressive": true,
 	"interactive": true,
     "knockoutTime" : 0.3,
     "knockoutAnimationStates" : {

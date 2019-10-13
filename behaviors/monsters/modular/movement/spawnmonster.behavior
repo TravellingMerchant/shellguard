@@ -1,0 +1,59 @@
+{
+  "name": "action-spawnmonster",
+  "description": "",
+  "scripts": [
+    "/scripts/actions/math.lua",
+    "/scripts/actions/position.lua",
+    "/scripts/actions/world.lua"
+  ],
+  "parameters": {
+    "position": null,
+    "offset": [0, 0],
+    "monsterType": "smallbiped",
+	"monsterParameters": {},
+    "replacement": false
+  },
+  "root": {
+    "title": "sequence",
+    "type": "composite",
+    "name": "sequence",
+    "parameters": {},
+    "children": [
+      {
+        "title": "vecMultiply",
+        "type": "action",
+        "name": "vecMultiply",
+        "parameters": {
+          "first": {"key": "<offset>"},
+          "second": {"value": ["facingDirection", 1]}
+        },
+        "output": {
+          "vector": "spawnOffset"
+        }
+      },
+      {
+        "title": "offsetPosition",
+        "type": "action",
+        "name": "offsetPosition",
+        "parameters": {
+          "offset": {"key": "spawnOffset"},
+          "position": {"key": "<position>"}
+        },
+        "output": {
+          "position": "spawnPosition"
+        }
+      },
+      {
+        "title": "spawnMonster",
+        "type": "action",
+        "name": "spawnMonster",
+        "parameters": {
+          "position": {"key": "spawnPosition"},
+          "replacement": {"key": "<replacement>"},
+          "type": {"value": "<monsterType>"},
+		  "parameters": {"key": "<monsterParameters>"}
+        }
+      }
+    ]
+  }
+}
