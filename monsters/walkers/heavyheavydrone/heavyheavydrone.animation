@@ -290,7 +290,7 @@
         "properties" : {
           "zLevel" : 1,
           "offset" : [3.7, 5.825],
-          "transformationGroups" : [ "backgun", "aim" ],
+          "transformationGroups" : [ "backgun", "aim2" ],
 		  "image" : "<partImage>:idle.1"
         },
         "partStates" : {
@@ -332,7 +332,9 @@
     "body" : { "interpolated" : true },
 	"frontgun" : { "interpolated" : true },
 	"backgun" : { "interpolated" : true },
-	"aim" : { "interpolated" : true }
+	"aim" : { "interpolated" : true },
+	"aim2" : { "interpolated" : true },
+	"aim3" : { "interpolated" : true }
   },
 
   "effects" : {

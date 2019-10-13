@@ -23,7 +23,7 @@
         "title" : "Fridroid"
       },
       "questFailed" : {
-        "portrait" : [ {"image" : "/objects/ambitiousdrone/ambitiousdroneportrait.png"} ],
+        "portrait" : [ {"image" : "/objects/ambitiousdrone/ambitiousdroneportraitgivequest.png"} ],
         "title" : "Fridroid"
       }
     },

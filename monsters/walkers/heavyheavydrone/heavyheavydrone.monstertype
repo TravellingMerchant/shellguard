@@ -42,6 +42,10 @@
       "keepTargetInRange" : 150,
       "targetOutOfSightTime" : 15.5,
 
+	  "rotationCenter"  : [-5, 7],
+      "rotationCenter2"  : [2, 7],
+      "rotationCenter3"  : [0, 0],
+	  
       "foundTargetActions" : [ 
 		{
           "name" : "action-animate",
@@ -56,8 +60,9 @@
       "fleeActions" : [],
 
       "hostileActions" : [
+		//back gun
         {
-          "name" : "action-fire",
+          "name" : "action-sgdroidshoot",
 		  "cooldown": 1,
           "parameters" : {
             "requireLineOfSight" : true,
@@ -71,8 +76,7 @@
 			"projectileCount": 10,
 			"projectileInterval": 0.1,
 			"inaccuracy": 0.2,
-            "fireOffset" : [13.1, -3.0],
-			"rotationCenter" : [-5, 7],
+            "fireOffset" : [11.0, -0.7],
             "fireSound" : "fire",
 			"fireStateType": "body",
             "fireState" : "firingBack",
@@ -83,8 +87,9 @@
             "winddownTime" : 0.0
           }
         },
+		// front gun
 		{
-          "name" : "action-fire",
+          "name" : "action-sgdroidshoot",
 		  "cooldown": 1,
           "parameters" : {
             "requireLineOfSight" : true,
@@ -99,7 +104,6 @@
 			"projectileInterval": 0.1,
 			"inaccuracy": 0.2,
             "fireOffset" : [6.25, -3.0],
-			"rotationCenter" : [-5, 7],
             "fireSound" : "fire",
 			"fireStateType": "body",
             "fireState" : "firing",
@@ -110,8 +114,9 @@
             "winddownTime" : 0.0
           }
         },
+		//rockets
 		{
-          "name" : "action-fire",
+          "name" : "action-sgdroidshoot",
 		  "cooldown": 3.0,
           "parameters" : {
             "requireLineOfSight" : true,
@@ -121,17 +126,17 @@
             "windupStopForce" : 50,
             "windupState" : "idle",
 
-            "projectileType" : "homingrocket",
+            "projectileType" : "sentinelshardrocket",
 			"projectileCount": 3,
-            "fireOffsets" : [[4.0, 10.0], [3.0, 10.75], [4.0, 11.0]],
+            "fireOffsets" : [[6.0, 3.5], [6.5, 3.25], [6.0, 3.5]],
+			
+			"inaccuracy": 0.1,
             "fireSound" : "fireRocket",
 			"fireStateType": "body",
             "fireState" : "fireRockets",
             "fireDelay" : 0.1,
             "rotateAim" : false,
 
-			"fireArc": true,
-			"projectileSpeed": 10,
             "winddownState" : "",
             "winddownTime" : 0.6
           }
