@@ -1,0 +1,95 @@
+{
+  "itemName" : "sgdrumgun",
+  "price" : 2300,
+  "inventoryIcon" : "sgdrumgun.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Sporting a rotary barrel and drum magazine, this rifle is the king of suppressing fire.",
+  "shortdescription" : "HBL-CRYIL Minigun",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgdrumgun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgdrumgun.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/railshots/sgrailminigunshot.ogg" ]
+    }
+  },
+
+  "baseOffset" : [2.25, 0.1],
+  "muzzleOffset" : [2.625, 0.1],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.1,
+    "baseDps" : 10.5,
+    "energyUsage" : 10.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.02,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -15,
+        "weaponRotation" : 20,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "sgmicroshot",
+    "projectileParameters" : { 
+      "knockback" : 6
+    }
+  },
+
+  "altAbilityType" : "spray",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgdrumgunelite.png",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/sgdrumgun/sgdrumgunelite.png"
+    },
+    "shortdescription" : "HBL-CRYIL Minigun ^yellow;^reset;"
+  }
+}
