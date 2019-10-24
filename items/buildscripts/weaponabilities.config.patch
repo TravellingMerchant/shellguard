@@ -17,6 +17,7 @@
   { "op": "add", "path": "/sgheavyswordcombo", "value": "/items/active/weapons/melee/broadsword/sgheavyswordcombo.weaponability" },
   { "op": "add", "path": "/sgshockwave", "value": "/items/active/weapons/melee/spear/sgshockwave/sgshockwave.weaponability" },
   { "op": "add", "path": "/sggrenadelauncher", "value": "/items/active/weapons/ranged/sg_built/abilities/sggrenadelauncher.weaponability" },
+  { "op": "add", "path": "/sgbayonetpistolcombo", "value": "/items/active/weapons/melee/abilities/speargun/sgbayonetpistolcombo.weaponability" },
 	
 	//Neb's Abilties
   {"op" : "add", "path": "/neb-enhancedchargefire", "value" : "/items/active/weapons/ranged/abilities/neb-enhancedchargefire/neb-enhancedchargefire.weaponability"},
