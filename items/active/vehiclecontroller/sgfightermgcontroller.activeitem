@@ -1,0 +1,34 @@
+{
+  "itemName" : "sgfightermgcontroller",
+  "level" : 1,
+  "price" : 15000,
+  "rarity" : "Legendary",
+  "category" : "vehicleController",
+  "description" : "Fast and nimble fighter craft with turreted machineguns.",
+  "shortdescription" : "SN-FMG Fighter Controller",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["vehiclecontroller.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "vehicle",
+  "largeImage" : "sgfightermg.png",
+
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "sgfightermg",
+  "vehicleBoundingBox" : [-5, -3, 5, 3],
+  "vehicleImage" : "/vehicles/sgfighter/sgfightermgwarp.png:warpInPart1.1",
+
+  "animationParts" : {
+    "casing" : "sggunshipunarmedcontroller.png"
+  },
+
+  "inventoryIcon" : "/items/active/vehiclecontroller/sgfightercontroller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/sgfightercontroller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/sgfightercontroller.png:full"
+
+}
