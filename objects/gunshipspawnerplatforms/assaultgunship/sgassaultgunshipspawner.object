@@ -45,7 +45,7 @@
 	//Vehicle
 	"vehicleType" : "sggunshipassault",
 	//"vehicleOverrideParameters" : {}, don't use this if you dont know how to
-	"vehicleSpawnOffset" : [0, 1],
+	"vehicleSpawnOffset" : [0, -1],
 	
 	//Cooldown
 	"cooldown" : 15,
