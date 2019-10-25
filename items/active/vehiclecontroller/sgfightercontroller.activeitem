@@ -1,11 +1,11 @@
 {
   "itemName" : "sgfightercontroller",
   "level" : 1,
-  "price" : 15000,
+  "price" : 12000,
   "rarity" : "Legendary",
   "category" : "vehicleController",
   "description" : "Fast and nimble fighter craft with mildly homing missiles.",
-  "shortdescription" : "SN-F Fighter Controller",
+  "shortdescription" : "SN-FHM Fighter Controller",
   "twoHanded" : true,
   "maxStack" : 1,
   "itemTags" : ["vehiclecontroller"],

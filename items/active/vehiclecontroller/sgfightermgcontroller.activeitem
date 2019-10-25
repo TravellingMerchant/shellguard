@@ -1,7 +1,7 @@
 {
   "itemName" : "sgfightermgcontroller",
   "level" : 1,
-  "price" : 15000,
+  "price" : 12000,
   "rarity" : "Legendary",
   "category" : "vehicleController",
   "description" : "Fast and nimble fighter craft with turreted machineguns.",
@@ -15,6 +15,7 @@
   "animationScripts" : ["vehiclecursor.lua"],
   "filled" : true,
   "tooltipKind" : "vehicle",
+  
   "largeImage" : "sgfightermg.png",
 
   "respawnTime" : 1.0,

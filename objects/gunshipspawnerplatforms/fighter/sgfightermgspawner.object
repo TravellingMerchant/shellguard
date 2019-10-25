@@ -6,7 +6,7 @@
   "printable" : false,
   "price" : 20000,
   "description" : "A platform devised to warp in fighters from the Shellguard Base.",
-  "shortdescription" : "Fighter MG Warpgate",
+  "shortdescription" : "Machinegun Fighter Warpgate",
   "race" : "human",
   
   "health" : 1,
