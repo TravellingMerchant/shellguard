@@ -1,0 +1,34 @@
+{
+  "itemName" : "sgfightercontroller",
+  "level" : 1,
+  "price" : 15000,
+  "rarity" : "Legendary",
+  "category" : "vehicleController",
+  "description" : "Fast and nimble fighter craft with mildly homing missiles.",
+  "shortdescription" : "SN-F Fighter Controller",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["vehiclecontroller.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "vehicle",
+  "largeImage" : "sgfighter.png",
+
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "sgfighter",
+  "vehicleBoundingBox" : [-5, -3, 5, 3],
+  "vehicleImage" : "/vehicles/sgfighter/sgfighterwarp.png:warpInPart1.1",
+
+  "animationParts" : {
+    "casing" : "sggunshipunarmedcontroller.png"
+  },
+
+  "inventoryIcon" : "/items/active/vehiclecontroller/sgfightercontroller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/sgfightercontroller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/sgfightercontroller.png:full"
+
+}

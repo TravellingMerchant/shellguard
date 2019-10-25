@@ -1,0 +1,57 @@
+{
+  "objectName" : "sgfightermgspawner",
+  "colonyTags" : ["shellguard"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 20000,
+  "description" : "A platform devised to warp in fighters from the Shellguard Base.",
+  "shortdescription" : "Fighter MG Warpgate",
+  "race" : "human",
+  
+  "health" : 1,
+
+  "apexDescription" : "This can warp in a Shellguard Fighter!",
+  "avianDescription" : "This can warp in a Shellguard Fighter!",
+  "floranDescription" : "Thissss can warp in a Sssshellguard Fighter!",
+  "glitchDescription" : "Enthused. This can warp in a Shellguard Fighter.",
+  "humanDescription" : "This can warp in a Shellguard Fighter!",
+  "hylotlDescription" : "This can warp in a Shellguard Fighter!",
+  "novakidDescription" : "This 'ere can warp in a Shellguard Fighter!",
+
+  "inventoryIcon" : "sgfightermgspawnericon.png",
+  "orientations" : [
+    {
+	    "dualImage" : "sgfightermgspawnericon.png",
+      "imagePosition" : [-48, -16],
+
+      "spaceScan" : 0.0,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "animation" : "/objects/gunshipspawnerplatforms/gunshipspawnerplatform.animation",
+  "animationParts" : {
+    "platform" : "platform.png",
+    "shiphologram" : "shipmghologram.png"
+  },
+  "animationPosition" : [-48, -16],
+  
+  "scripts" : [
+    "/objects/scripts/neb-interactvehicle.lua"
+  ],
+  "scriptDelta" : 1,
+  
+	//Vehicle
+	"vehicleType" : "sgfightermg",
+	//"vehicleOverrideParameters" : {}, don't use this if you dont know how to
+	"vehicleSpawnOffset" : [0, 1.5],
+	
+	//Cooldown
+	"cooldown" : 15,
+	
+	//Floating
+  "useFloatingObject" : true,			//If true, the item will smoothly float up and down
+  "floatingObjectCycle" : 2.0,			//Time for the item to move a full cycle
+  "floatingObjectMaxTransform" : 0.5	//Maximum up and down movement from origin
+}

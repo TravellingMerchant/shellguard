@@ -1,0 +1,455 @@
+{
+	"animatedParts" : {
+		"stateTypes" : {
+			"movement" : {
+				"default" : "open",
+				"states" : {
+					"warpInPart1" : {
+						"frames" : 1,	
+						"cycle" : 0.33,
+						"mode" : "transition",
+						"transition" : "opening"
+					},
+					"closing" : {
+						"frames" : 3,
+						"cycle" : 0.33,
+						"mode" : "transition",
+						"transition" : "idle"
+					},
+					"idle" : {},
+					"opening" : {
+						"frames" : 3,
+						"cycle" : 0.33,
+						"mode" : "transition",
+						"transition" : "open"
+					},
+					"open" : {},
+					"warpOutPart1" : {
+						"frames" : 1,
+						"cycle" : 0.33,
+						"mode" : "transition",
+						"transition" : "invisible"
+					},
+					"invisible" : {}
+				}
+			},
+		"forwardDoubleCannonFront" : {
+		"default" : "off",
+				"states" : {
+					"off" : {},
+					"fire" : {
+						"frames" : 4,
+						"cycle" : 0.3,
+						"mode" : "transition",
+			"transition" : "off"
+					}
+				}
+		},
+		"forwardDoubleCannonBack" : {
+		"default" : "off",
+				"states" : {
+					"off" : {},
+					"fire" : {
+						"frames" : 4,
+						"cycle" : 0.3,
+						"mode" : "transition",
+			"transition" : "off"
+					}
+				}
+		},
+			"onfire" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"on" : {
+						"frames" : 6,
+						"cycle" : 0.5,
+						"mode" : "loop"
+					}
+				}
+			},
+		"backFinFront" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"on" : {
+						"frames" : 1,
+						"cycle" : 0.125,
+						"mode" : "loop"
+					}
+				}
+			},
+		"backFinBack" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"on" : {
+						"frames" : 1,
+						"cycle" : 0.125,
+						"mode" : "loop"
+					}
+				}
+			},
+  		"rearThruster" : {
+				"default" : "off",
+				"states" : {
+					"off" : {
+			      "frames" : 1,
+						"cycle" : 0.5,
+						"mode" : "loop"
+			    },
+					"on" : {
+						"frames" : 6,
+						"cycle" : 0.5,
+						"mode" : "loop"
+					}
+				}
+			},
+			"bottomThruster" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"on" : {
+						"frames" : 4,
+						"cycle" : 0.125,
+						"mode" : "loop"
+					}
+				}
+			}
+		},
+
+		"parts" : {
+			"foreground" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 1,
+					"transformationGroups" : ["flip", "rotation"],
+					"drivingSeatPosition" : [1.0, 0.125],
+					"passengerSeatPosition" : [0, 0]
+				},
+
+				"partStates" : {
+					"movement" : {
+						"warpInPart1" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:move.<damageState>"
+							}
+						},
+						"warpInPart2" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:move.<damageState>"
+							}
+						},
+			"closing" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:closing.<frame>.<damageState>"
+							}
+						},
+			"idle" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:move.<damageState>"
+							}
+						},
+			"opening" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:opening.<frame>.<damageState>"
+							}
+						},
+						"open" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:open.<damageState>"
+							}
+						},
+						"warpOutPart1" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:move.<damageState>"
+							}
+						},
+						"warpOutPart2" : {
+							"properties" : {}
+						},
+						"invisible" : {
+							"properties" : {}
+						}
+					}
+				}
+			},
+			"warp" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 10,
+					"fullbright" : true,
+					"offset" : [0.0, 0.0],
+					"transformationGroups" : ["flip", "rotation"]
+				},
+				"partStates" : {
+					"movement" : {
+						"warpInPart1" : {
+							"properties" : {
+								"image" : "sgfighterwarp.png:warpInPart1.<frame>"
+							}
+						},
+						"idle" : {
+							"properties" : {}
+						},
+						"warpOutPart1" : {
+							"properties" : {
+								"image" : "sgfighterwarp.png:warpOutPart1.<frame>"
+							}
+						},
+						"invisible" : {
+							"properties" : {}
+						}
+					}
+				}
+			},
+			"fire" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 2,
+					"fullbright" : true,
+					"transformationGroups" : ["flip", "rotation"]
+				}
+			},
+    	"wing" : {
+  			"properties" : {
+  				"centered" : true,
+  				"zLevel" : 6,
+  				"offset" : [-1.5, -0.75],
+  				"anchorPart" : "foreground",
+  				"image" : "sgfighterwing.png"
+  	    }
+  		},
+    	"backFinFront" : {
+    			"properties" : {
+    				"centered" : true,
+    				"zLevel" : 2,
+    				"offset" : [-4.5625, 0.8125],
+    				"transformationGroups" : ["backFinFront"],
+    				"anchorPart" : "foreground",
+    				"image" : "sgfighterbackfin.png"
+    		  }
+        },
+    	"backFinBack" : {
+    			"properties" : {
+    				"centered" : true,
+    				"zLevel" : -1,
+    				"offset" : [-3.4375, 0.8125],
+    				"transformationGroups" : ["backFinBack"],
+    				"anchorPart" : "foreground",
+    				"image" : "sgfighterbackfin.png"
+    	    }
+    		},
+			"rearThruster" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -1,
+					"fullbright" : true,
+					"light" : [87, 148, 150],
+					"transformationGroups" : ["flip", "rotation"]
+				},
+				"partStates" : {
+					"rearThruster" : {
+						"on" : {
+							"properties" : {
+								"image" : "/vehicles/sgfighter/animations/backthruster.png:thrust.<rearThrusterFrame>",
+								"offset" : [-4.8125, -1.375]
+							}
+						}
+					}
+				}
+			},
+			"bottomThruster" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -1,
+					"fullbright" : true,
+					"light" : [87, 148, 150],
+					"transformationGroups" : ["flip", "rotation"]
+				},
+				"partStates" : {
+					"bottomThruster" : {
+						"on" : {
+							"properties" : {
+								"image" : "/vehicles/sgfighter/animations/hoverthruster.png:thrust.<bottomThrusterFrame>",
+  				      "offset" : [0.0625, -2.4375]
+							}
+						}
+					}
+				}
+			},
+    	"bottomThrusterEngine" : {
+  			"properties" : {
+  				"centered" : true,
+  				"zLevel" : 2,
+  			  "offset" : [-0.5, -2.0625],
+  				"anchorPart" : "foreground",
+  				"image" : "sgfighterhoverthruster.png"
+  	    }
+  		},
+			"forwardDoubleCannonBack" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -2,
+					"offset" : [5.8125, -1],
+					"transformationGroups" : ["forwardDoubleCannonBack"],
+					"anchorPart" : "foreground"
+				},
+		"partStates" : {
+					"forwardDoubleCannonBack" : {
+						"off" : {
+							"properties" : {
+								"image" : "sgfighterdoublecannon.png:idle.1"
+							}
+						},
+			"fire" : {
+							"properties" : {
+								"image" : "sgfighterdoublecannon.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			},
+			"forwardDoubleCannonFront" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 4,
+					"offset" : [1.8125, -1],
+					"transformationGroups" : ["forwardDoubleCannonFront"],
+					"anchorPart" : "foreground"
+				},
+		"partStates" : {
+					"forwardDoubleCannonFront" : {
+						"off" : {
+							"properties" : {
+								"image" : "sgfighterdoublecannon.png:idle.1"
+							}
+						},
+			"fire" : {
+							"properties" : {
+								"image" : "sgfighterdoublecannon.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"globalTagDefaults" : {
+		"colour" : "",
+		"shipName" : "sgfighter"
+	},
+
+	
+
+
+	"transformationGroups" : {
+		"rotation" : {
+			"interpolated" : true
+		},
+		"flip" : {},
+	  "rearThruster" : {},
+	  "bottomThruster" : {},
+    "backFinFront" : {},
+    "backFinBack" : {},
+    "forwardDoubleCannonFront" : {},
+    "forwardDoubleCannonBack" : {}
+	},
+
+	"particleEmitters" : {
+		"smoke" : {
+			"transformationGroups" : ["flip", "rotation"],
+			"emissionRate" : 0.0,
+			"offsetRegion" : [0, -1, 8, 2],
+			"particles" : [ { "particle" : "burningvehiclesmokefront"} ]
+		},
+		"fire" : {
+			"transformationGroups" : ["flip", "rotation"],
+			"emissionRate" : 0.0,
+			"offsetRegion" : [0, -2, 8, 2],
+			"particles" : [
+				{ "particle" : "burningdust"},
+				{ "particle" : "campfireflames"},
+				{ "particle" : "fireshard"},
+				{ "particle" : "burningvehiclesmokeback"}
+			]
+		},
+		"damageIntermittent" : {
+			"transformationGroups" : ["flip", "rotation"],
+			"emissionRate" : 0.0,
+			"burstCount"	: 5,
+			"offsetRegion" : [0, -1.5, 7, 1.5],
+			"particles" : [
+				{ "particle" : "burningvehiclesmokefront"},
+				{ "particle" : "fireshard"}
+			]
+		},
+		"damageShards" : {
+        "transformationGroups" : ["flip", "rotation"],
+        "emissionRate" : 0.0,
+        "burstCount"  : 50,
+        "offsetRegion" : [0, -1.5, 7, 1.5],
+        "particles" : [{ "particle" : "fireshard"}]
+      },
+
+      "wreckage" : {
+        "transformationGroups" : ["flip", "rotation"],
+        "active" : false,
+        "emissionRate" : 0.0,
+        "particles" : [
+                       { "particle" : "sgfighterwreckage1"},
+                       { "particle" : "sgfighterwreckage2"},
+                       { "particle" : "sgfighterwreckage2"},
+                       { "particle" : "sgfighterwreckage3"},
+                       { "particle" : "sgfighterwreckage4"},
+                       { "particle" : "sgfighterwreckage4"},
+                       { "particle" : "sgfighterwreckage5"}]
+      }
+	},
+
+ "lights" : {},
+
+	"sounds" : {
+	"ventralAutocannon" : [
+		"/sfx/gun/tankshot.ogg"
+	],
+	"bombbay" : [
+		"/sfx/gun/grenadeblast_small_fire2.ogg"
+	],
+	"forwardDoubleCannons" : [
+			"/sfx/gun/cannonfire1.ogg",
+			"/sfx/gun/cannonfire1.ogg",
+			"/sfx/gun/sgmotoshot.ogg"
+		],
+		"collisionNotification" : [
+			"/sfx/tech/hoverbike_bump1.ogg",
+			"/sfx/tech/hoverbike_bump2.ogg",
+			"/sfx/tech/hoverbike_bump3.ogg"
+		],
+		"collisionDamage" : [ "/sfx/melee/bite_robotic1.ogg" ],
+		"changeDamageState" : [
+			"/sfx/gun/grenadeblast_small_fire1.ogg",
+			"/sfx/gun/grenadeblast_small_fire2.ogg",
+			"/sfx/gun/grenadeblast_small_fire3.ogg"
+		],
+
+		"explode" : [
+			"/sfx/gun/grenadeblast_small_fire1.ogg",
+			"/sfx/gun/grenadeblast_small_fire2.ogg",
+			"/sfx/gun/grenadeblast_small_fire3.ogg"
+		],
+
+		"engineStart" : [ "/sfx/tools/teleport_up.ogg" ],
+		"engineLoop" : [ "/sfx/vehicles/gunship engine.ogg" ],
+		"engineStartDamaged" : [ "/sfx/tools/teleport_up.ogg" ],
+		"engineLoopDamaged" : [ "/sfx/vehicles/gunship enginealarm.ogg" ],
+		"damageIntermittent" : [
+			"/sfx/gun/grenadeblast_small_fire1.ogg",
+			"/sfx/gun/grenadeblast_small_fire2.ogg",
+			"/sfx/gun/grenadeblast_small_fire3.ogg"
+		],
+
+		"returnvehicle" : [ "/sfx/tech/vehicle_disappear1.ogg" ]
+
+	}
+}
