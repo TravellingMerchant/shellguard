@@ -53,5 +53,5 @@
 	//Floating
   "useFloatingObject" : true,			//If true, the item will smoothly float up and down
   "floatingObjectCycle" : 2.0,			//Time for the item to move a full cycle
-  "floatingObjectMaxTransform" : 0.5	//Maximum up and down movement from origin
+  "floatingObjectMaxTransform" : 0.25	//Maximum up and down movement from origin
 }
