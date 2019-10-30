@@ -1,11 +1,11 @@
 {
-  "itemName" : "sgpraxisdustrifle",
-  "price" : 3000,
-  "inventoryIcon" : "sgpraxisdustrifle.png:idle",
+  "itemName" : "sgbreakerrifle",
+  "price" : 2300,
+  "inventoryIcon" : "sgbreakerrifle.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "Fires a stream of razor sharp energy shards that home in on targets.",
-  "shortdescription" : "Praxis Dust Rifle",
+  "description" : "Sporting a rotary barrel and drum magazine, this rifle is the king of suppressing fire.",
+  "shortdescription" : "HBL-CRYIL Minigun",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
@@ -13,21 +13,21 @@
   "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
   "twoHanded" : true,
   
-  "animation" : "sgpraxisdustrifle.animation",
+  "animation" : "sgbreakerrifle.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "sgpraxisdustrifle.png",
+    "middle" : "sgbreakerrifle.png",
     "barrel" : "",
     "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/railshots/magshotlong.ogg" ]
+      "fire" : [ "/sfx/gun/sgpushshot.ogg" ]
     }
   },
 
-  "baseOffset" : [2.25, 0.25],
-  "muzzleOffset" : [1.25, 0.1],
+  "baseOffset" : [2.25, 0.1],
+  "muzzleOffset" : [1.125, 0.3],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -36,10 +36,10 @@
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 0.1,
-    "baseDps" : 10.5,
-    "energyUsage" : 30.0,
-    "projectileCount" : 3,
+    "fireTime" : 0.7,
+    "baseDps" : 9.5,
+    "energyUsage" : 25.0,
+    "projectileCount" : 1,
     "inaccuracy" : 0.02,
       "stances" : {
       "idle" : {
@@ -76,20 +76,20 @@
 
     "fireType" : "auto",
 
-    "projectileType" : "sentinelshard",
+    "projectileType" : "sgbreakerround",
     "projectileParameters" : { 
       "knockback" : 6
     }
   },
 
-  "altAbilityType" : "sgpushshot",
+  "altAbilityType" : "spray",
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
-    "inventoryIcon" : "sgpraxisdustrifle.png:idle",
+    "inventoryIcon" : "sgbreakerrifleelite.png",
     "animationParts" : {
-      "middle" : "sgpraxisdustrifle"
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/sgbreakerrifle/sgbreakerrifleelite.png"
     },
-    "shortdescription" : "Praxis Dust Rifle ^yellow;^reset;"
+    "shortdescription" : "HBL-CRYIL Minigun ^yellow;^reset;"
   }
 }

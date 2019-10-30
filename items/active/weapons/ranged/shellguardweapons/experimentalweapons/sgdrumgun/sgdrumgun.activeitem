@@ -86,9 +86,9 @@
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
-    "inventoryIcon" : "sgdrumgunelite.png",
+    "inventoryIcon" : "sgdrumgunelite.png:idle",
     "animationParts" : {
-      "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/sgdrumgun/sgdrumgunelite.png"
+      "middle" : "sgdrumgunelite.png"
     },
     "shortdescription" : "HBL-CRYIL Minigun ^yellow;^reset;"
   }

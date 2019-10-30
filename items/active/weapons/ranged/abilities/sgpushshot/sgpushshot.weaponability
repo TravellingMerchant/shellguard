@@ -50,7 +50,7 @@
       }
     },
     "sounds" : {
-      "sgpushshot" : [ "/sfx/gun/burstshot1.ogg" ]
+      "sgpushshot" : [ "/sfx/gun/sgpushshot.ogg" ]
     }
   },
 
@@ -65,7 +65,7 @@
     "damageConfig" : {
       "baseDamage" : 10,
       "damageSourceKind" : "standardbullet",
-      "knockback" : 100,
+      "knockback" : 50,
       "knockbackMode" : "aim",
       "timeout" : 0.5,
       "timeoutGroup" : "alt"
@@ -74,8 +74,8 @@
     "stances" : {
       "fire" : {
         "duration" : 0.20,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
+        "armRotation" : -20,
+        "weaponRotation" : 25,
         "twoHanded" : true,
 
         "allowRotate" : false,

@@ -27,13 +27,16 @@
 	  { "item" : "sgrefleksniper" },
 	  { "item" : "sgmoto" },
 	  { "item" : "sgspikeblaster" },
+	  { "item" : "sgdrumgun" },
 	  { "item" : "sgheavyshotgun" },
 	  { "item" : "sgsupershotgun" },
+	  { "item" : "sgscrapblaster" },
 	  { "item" : "sgsurvivorsrifle" },
 	  { "item" : "sgheavycannon" },
 	  { "item" : "sgheavyboomer" },
 	  { "item" : "sgtoobiggun" },
-	  { "item" : "sgpraxispistol" }
+	  { "item" : "sgpraxispistol" },
+	  { "item" : "sgpraxisdustrifle" }
     ]
   },
 

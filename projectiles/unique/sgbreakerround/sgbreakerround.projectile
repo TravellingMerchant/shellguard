@@ -67,6 +67,6 @@
   ],
 
   "power" : 5.0,
-  "speed" : 50,
+  "speed" : 150,
   "damageKind" : "default"
 }

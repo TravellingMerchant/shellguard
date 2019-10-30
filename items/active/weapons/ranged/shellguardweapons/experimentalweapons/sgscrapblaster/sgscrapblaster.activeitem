@@ -1,11 +1,11 @@
 {
-  "itemName" : "sgpraxisdustrifle",
-  "price" : 3000,
-  "inventoryIcon" : "sgpraxisdustrifle.png:idle",
+  "itemName" : "sgscrapblaster",
+  "price" : 2400,
+  "inventoryIcon" : "sgscrapblaster.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "Fires a stream of razor sharp energy shards that home in on targets.",
-  "shortdescription" : "Praxis Dust Rifle",
+  "description" : "Fire 40 red hot shrapnel shards that shred through targets.",
+  "shortdescription" : "Shrapnel Cannon",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
@@ -13,21 +13,21 @@
   "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
   "twoHanded" : true,
   
-  "animation" : "sgpraxisdustrifle.animation",
+  "animation" : "sgscrapblaster.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "sgpraxisdustrifle.png",
+    "middle" : "sgscrapblaster.png",
     "barrel" : "",
     "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/railshots/magshotlong.ogg" ]
+      "fire" : [ "/sfx/gun/railshots/energyshotmetal.ogg" ]
     }
   },
 
-  "baseOffset" : [2.25, 0.25],
-  "muzzleOffset" : [1.25, 0.1],
+  "baseOffset" : [2.25, 0.1],
+  "muzzleOffset" : [1.375, 0.375],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -36,11 +36,11 @@
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 0.1,
+    "fireTime" : 2,
     "baseDps" : 10.5,
-    "energyUsage" : 30.0,
-    "projectileCount" : 3,
-    "inaccuracy" : 0.02,
+    "energyUsage" : 40.0,
+    "projectileCount" : 40,
+    "inaccuracy" : 0.1,
       "stances" : {
       "idle" : {
         "armRotation" : 0,
@@ -64,9 +64,9 @@
 		}
       },
       "cooldown" : {
-        "duration" : 0.1,
-        "armRotation" : -15,
-        "weaponRotation" : 20,
+        "duration" : 0.2,
+        "armRotation" : -20,
+        "weaponRotation" : 30,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -76,9 +76,11 @@
 
     "fireType" : "auto",
 
-    "projectileType" : "sentinelshard",
+    "projectileType" : "sgshrapnel",
     "projectileParameters" : { 
-      "knockback" : 6
+      "knockback" : 6,
+	  "bounces" : 5,
+	  "speed" : 150
     }
   },
 
@@ -86,10 +88,10 @@
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
-    "inventoryIcon" : "sgpraxisdustrifle.png:idle",
+    "inventoryIcon" : "sgscrapblasterelite.png:idle",
     "animationParts" : {
-      "middle" : "sgpraxisdustrifle"
+      "middle" : "sgscrapblasterelite.png"
     },
-    "shortdescription" : "Praxis Dust Rifle ^yellow;^reset;"
+    "shortdescription" : "Shrapnel Cannon ^yellow;^reset;"
   }
 }
