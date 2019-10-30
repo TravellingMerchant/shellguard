@@ -86,10 +86,6 @@
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
-    "inventoryIcon" : "sgpraxisdustrifle.png:idle",
-    "animationParts" : {
-      "middle" : "sgpraxisdustrifle"
-    },
     "shortdescription" : "Praxis Dust Rifle ^yellow;^reset;"
   }
 }
