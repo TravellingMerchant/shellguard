@@ -22,14 +22,24 @@
     "sellFactor" : 0.2,
     "items" : [
       { "item" : "autochip" },
-	  { "item" : "sggunshipunarmedcontroller" },
-	  { "item" : "sgassaultgunshipcontroller" },
-	  { "item" : "sggunshipbombercontroller" },
-	  { "item" : "sggunshipinterceptorcontroller" },
-	  { "item" : "sggunshiptransportcontroller" },
-	  { "item" : "nebassaultgunshipspawner" },
-	  { "item" : "nebbombergunshipspawner" },
-	  { "item" : "nebinterceptorgunshipspawner" }
+      
+  	  { "item" : "sgfightercontroller" },
+  	  { "item" : "sgfightermgcontroller" },
+  	  
+  	  { "item" : "sggunshipunarmedcontroller" },
+  	  
+  	  { "item" : "sgassaultgunshipcontroller" },
+  	  { "item" : "sggunshipbombercontroller" },
+  	  { "item" : "sggunshipinterceptorcontroller" },
+  	  
+  	  { "item" : "sggunshiptransportcontroller" },
+  	  
+  	  { "item" : "sgfighterspawner" },
+  	  { "item" : "sgfightermgspawner" },
+  	  
+  	  { "item" : "sgassaultgunshipspawner" },
+  	  { "item" : "sgbombergunshipspawner" },
+  	  { "item" : "sginterceptorgunshipspawner" }
     ]
   },
 
