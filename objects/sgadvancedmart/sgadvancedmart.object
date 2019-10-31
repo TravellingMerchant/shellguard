@@ -21,6 +21,7 @@
     "sellFactor" : 0.2,
     "items" : [
 	  { "item" : "sgassaultsmg" },
+	  { "item" : "sgplasmapistol" },
 	  { "item" : "sgbigiron" },
 	  { "item" : "sgmonarchpistol" },
 	  { "item" : "sgdmr" },

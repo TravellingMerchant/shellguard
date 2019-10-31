@@ -1,0 +1,54 @@
+{
+  "projectileName" : "sgplasmaball",
+  "physics" : "laser",
+  "timeToLive" : 10,
+  "image" : "sgplasmaball.png",
+  "animationCycle" : 0.15,
+  "frameNumber" : 4,
+  "winddownFrames" : 0,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/melee/astraltear2.ogg" ]
+    },
+    {
+      "time" : 5.65,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/astraltear_stop3.ogg" ]
+    }
+  ],
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "shellsmoke"
+    },
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/gun/shellbulletimpact.ogg"
+      ]
+    }
+  ],
+  
+  "actionOnCollide" : [
+  ],
+
+  "speed" : 30,
+  "power" : 20,
+  "damagePoly" : [],
+
+  "fullbright" : true,
+  "damageKind" : "sawblade",
+  "flippable" : true,
+
+  "renderLayer" : "Projectile-1",
+  "orientationLocked" : true,
+
+  "bounces" : 0,
+  "onlyHitTerrain" : false
+
+}
