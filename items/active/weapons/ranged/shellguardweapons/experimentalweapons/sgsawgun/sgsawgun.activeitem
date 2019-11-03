@@ -94,6 +94,7 @@
     "fireType" : "auto",
 
     "useParticleEmitter" : false,
+    "usePrimaryFireSound" : false,
 
     "projectileType" : "sgsawblade",
     "projectileParameters" : {},
