@@ -1,0 +1,96 @@
+{
+  "itemName" : "sgbulldogshotgun",
+  "price" : 2450,
+  "inventoryIcon" : "sgbulldogshotgun.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A disgustingly brutal bullpup shotgun with explosive buckshot.",
+  "shortdescription" : "HE Hobgoblin Shotgun",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgbulldogshotgun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgbulldogshotgun.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/railshots/metallicshot.ogg" ]
+    }
+  },
+
+  "baseOffset" : [2.125, 0.1],
+  "muzzleOffset" : [0.25, 0.35],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.4,
+    "baseDps" : 10.5,
+    "energyUsage" : 25.0,
+    "projectileCount" : 6,
+    "inaccuracy" : 0.04,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -15,
+        "weaponRotation" : 25,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "cluster",
+    "projectileParameters" : { 
+      "knockback" : 25,
+	  "speed" : 150
+    }
+  },
+
+  "altAbilityType" : "bayonetstab",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgbulldogshotgunelite.png:idle",
+    "animationParts" : {
+      "middle" : "sgbulldogshotgunelite.png"
+    },
+    "shortdescription" : "HE Hobgoblin Shotgun ^yellow;^reset;"
+  }
+}
