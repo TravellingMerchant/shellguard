@@ -1,0 +1,34 @@
+{
+  "projectileName" : "sgmachinegrenade",
+  "physics" : "grenade",
+  "bounces" : 1,
+  "timeToLive" : 2.0,
+  "damageKindImage" : "icon.png",
+  "image" : "sgmachinegrenade.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 4,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/plasmiteexplode.ogg" ]
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 3,
+      "backgroundRadius" : 3,
+      "explosiveDamageAmount" : 1.0,
+      "delaySteps" : 2
+    }
+
+  ],
+  "power" : 50,
+  "speed" : 70,
+  "emitters" : [ "rocketsmoke" ],
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "scripts" : [ "sgmachinegrenade.lua" ]
+}
