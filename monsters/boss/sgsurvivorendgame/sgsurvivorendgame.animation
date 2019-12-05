@@ -184,7 +184,7 @@
 
   "rotationGroups" : {
     "projectileAim" : {
-      "angularVelocity" : 0.75
+      "angularVelocity" : 100
     }
   },
 
@@ -379,7 +379,8 @@
 
   "sounds" : {
     "turnHostile" : [  ],
-    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ]
+    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
+    "hurt" : [ "/sfx/monsters/boss/survivorpain.ogg", "/sfx/monsters/boss/survivorpainblank.ogg", "/sfx/monsters/boss/survivorpainblank.ogg", "/sfx/monsters/boss/survivorpainblank.ogg", "/sfx/monsters/boss/survivorpainblank.ogg" ]
   },
 
   "effects" : {

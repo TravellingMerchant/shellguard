@@ -21,17 +21,18 @@
       "/scripts/vec2.lua",
 
       "/monsters/boss/sgsurvivorendgame/dieState.lua",
-      "/monsters/boss/sgsurvivorendgame/idleState.lua"
+      "/monsters/boss/sgsurvivorendgame/idleState.lua",
+      "/monsters/boss/sgsurvivorendgame/hurtState.lua"
     ],
 
     "renderLayer" : "Projectile-10",
 
-    "skillCount" : 7,
-    "skills" : [ "sgsurvivorendgamePunchAttackblast", "sgsurvivorendgamegrenadetoss", "sgsurvivorendgameMissileBarrageAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorendgameElectricBurstAttack", "sgsurvivorendgameFlamethrowerAttack", "sgsurvivorendgameDashAttack" ],
+    "skillCount" : 8,
+    "skills" : [ "sgsurvivorendgameFlamethrowerAttackAim", "sgsurvivorendgamePunchAttackblast", "sgsurvivorendgamegrenadetoss", "sgsurvivorendgameMissileBarrageAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorendgameElectricBurstAttack", "sgsurvivorendgameFlamethrowerAttack", "sgsurvivorendgameDashAttack" ],
 
     "phases" : [
       {
-        "skills" : [ "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack",  "sgsurvivorendgamePunchAttack", "sgsurvivorendgameDashAttack", "sgsurvivorendgamegrenadetoss",  "sgsurvivorendgamePunchAttack"  ]
+        "skills" : [ "sgsurvivorendgameFlamethrowerAttackAim", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack",  "sgsurvivorendgamePunchAttack", "sgsurvivorendgameDashAttack", "sgsurvivorendgamegrenadetoss",  "sgsurvivorendgamePunchAttack"  ]
       },
       {
         "trigger" : "healthPercentage",

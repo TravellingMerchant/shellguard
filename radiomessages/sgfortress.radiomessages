@@ -274,6 +274,78 @@
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
     "text" : "Oh... NOW there's elevator music. Of course there is..."
+  },
+  
+//-----------FINAL------------
+
+   "sgfinal1" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgame.png",
+    "text" : "You.. "
+  },
+  
+   "sgfinal2" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgameangry.png",
+    "text" : "You did all of this.. You ruined EVERYTHING."
+  },
+
+   "sgfinal3" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgame.png",
+    "text" : "It's gone.. All gone.. Everything I worked so hard to accomplish.. and you destroyed it."
+  },
+  
+   "sgfinal4" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgame.png",
+    "text" : "Everything was taken from me.. My home, my planet.. my family. I should have been with them by now.."
+  },
+
+   "sgfinal5" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgameangry.png",
+    "text" : "^red;YET WHY AM I STILL HERE?!^white;"
+  },
+  
+   "sgfinal6" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgameready.png",
+    "text" : "Why am I always left here alone?"
+  },
+  
+   "sgfinal7" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgameready.png",
+    "text" : "Though.. now that I think of it it.. I'm not alone now, am I?"
+  },
+
+   "sgfinal8" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgame.png",
+    "text" : "You're here."
+  },
+  
+   "sgfinal9" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgame.png",
+    "text" : "Just you and me in this cold, cursed place."
+  },
+
+   "sgfinal10" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgameangry.png",
+    "text" : "^red;And only one of us will be leaving. Completely. Alone.^white;"
   }
 
 }

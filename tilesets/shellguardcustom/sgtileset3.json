@@ -1,4 +1,12 @@
 { "columns":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"",
+         "target":"."
+        }
+    },
  "grid":
     {
      "height":1,
@@ -8,8 +16,8 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":23,
- "tiledversion":"1.2.5",
+ "tilecount":27,
+ "tiledversion":"1.3.1",
  "tileheight":400,
  "tileproperties":
     {
@@ -171,6 +179,46 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"sgdreadnautobject",
+         "tilesetDirection":"right"
+        },
+     "23":
+        {
+         "\/\/description":"body",
+         "\/\/name":"body",
+         "\/\/shortdescription":"body",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgbody1",
+         "tilesetDirection":"right"
+        },
+     "24":
+        {
+         "\/\/description":"body",
+         "\/\/name":"body",
+         "\/\/shortdescription":"body",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgbody1snow",
+         "tilesetDirection":"right"
+        },
+     "25":
+        {
+         "\/\/description":"body",
+         "\/\/name":"body",
+         "\/\/shortdescription":"body",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgbody2",
+         "tilesetDirection":"right"
+        },
+     "26":
+        {
+         "\/\/description":"body",
+         "\/\/name":"body",
+         "\/\/shortdescription":"body",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgbody2snow",
          "tilesetDirection":"right"
         },
      "3":
@@ -406,6 +454,46 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "23":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "24":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "25":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "26":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "3":
         {
          "\/\/description":"string",
@@ -574,6 +662,30 @@
          "image":"..\/..\/objects\/decorations\/sgdreadnautobject\/sgdreadnautobjecticon.png",
          "imageheight":165,
          "imagewidth":558
+        },
+     "23":
+        {
+         "image":"..\/..\/objects\/decorations\/sgbody1\/sgbody1.png",
+         "imageheight":11,
+         "imagewidth":35
+        },
+     "24":
+        {
+         "image":"..\/..\/objects\/decorations\/sgbody1snow\/sgbody1icon.png",
+         "imageheight":11,
+         "imagewidth":35
+        },
+     "25":
+        {
+         "image":"..\/..\/objects\/decorations\/sgbody2\/sgbody1icon.png",
+         "imageheight":11,
+         "imagewidth":35
+        },
+     "26":
+        {
+         "image":"..\/..\/objects\/decorations\/sgbody2snow\/sgbody1icon.png",
+         "imageheight":11,
+         "imagewidth":35
         },
      "3":
         {
