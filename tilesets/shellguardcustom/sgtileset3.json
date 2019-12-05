@@ -8,8 +8,8 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":21,
- "tiledversion":"1.2.4",
+ "tilecount":23,
+ "tiledversion":"1.2.5",
  "tileheight":400,
  "tileproperties":
     {
@@ -151,6 +151,26 @@
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"sgcorerematchtele",
+         "tilesetDirection":"right"
+        },
+     "21":
+        {
+         "\/\/description":"sglandingpad",
+         "\/\/name":"sglandingpad",
+         "\/\/shortdescription":"sglandingpad",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sglandingpad",
+         "tilesetDirection":"right"
+        },
+     "22":
+        {
+         "\/\/description":"sgdreadnautobject",
+         "\/\/name":"sgdreadnautobject",
+         "\/\/shortdescription":"sgdreadnautobject",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgdreadnautobject",
          "tilesetDirection":"right"
         },
      "3":
@@ -366,6 +386,26 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "21":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "22":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "3":
         {
          "\/\/description":"string",
@@ -523,6 +563,18 @@
          "imageheight":67,
          "imagewidth":40
         },
+     "21":
+        {
+         "image":"..\/..\/objects\/decorations\/sglandingpad\/sglandingpadicon.png",
+         "imageheight":64,
+         "imagewidth":655
+        },
+     "22":
+        {
+         "image":"..\/..\/objects\/decorations\/sgdreadnautobject\/sgdreadnautobjecticon.png",
+         "imageheight":165,
+         "imagewidth":558
+        },
      "3":
         {
          "image":"..\/..\/objects\/breakables\/sgheatvent\/sgheatventicon.png",
@@ -566,7 +618,7 @@
          "imagewidth":40
         }
     },
- "tilewidth":464,
+ "tilewidth":655,
  "type":"tileset",
  "version":1.1
 }

@@ -1,0 +1,91 @@
+{
+  "projectileName" : "sgruincleavershotship",
+  "image" : "sgruincleavershot.png",
+  "physics" : "sgruincleaverphysics",
+  "animationCycle" : 0.3,
+  "animationLoops" : true,
+  "windupFrames" : 1,
+  "timeToLive" : 2,
+  "frameNumber" : 3,
+  "fullbright" : true,
+  "piercing" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [225, 100, 60],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/sgartilleryboom/sgartilleryboom.config"
+    },
+    {
+      "action" : "loop",
+      "count" : 4,
+      "body" : [
+        {
+          "action" : "projectile",
+          "type" : "lavaballoon",
+          "fuzzAngle" : 360,
+          "inheritDamageFactor" : 0.05,
+          "angleAdjust" : 0
+        }
+      ]
+    },
+    {
+      "action" : "loop",
+      "count" : 4,
+      "body" : [
+        {
+          "action" : "projectile",
+          "type" : "molotovflamemonster",
+          "fuzzAngle" : 180,
+          "inheritDamageFactor" : 0.05,
+          "angleAdjust" : 0
+        }
+      ]
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.1,
+      "repeat" : true,
+
+      "action" : "loop",
+      "count" : 2,
+      "body" : [
+       {
+        "action" : "config",
+        "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+       },
+        {
+          "action" : "projectile",
+          "type" : "sgruinshockwave",
+          "fuzzAngle" : 360,
+          "inheritDamageFactor" : 0.1,
+          "angleAdjust" : 0
+        },
+	   {
+        "action" : "explosion",
+        "foregroundRadius" : 5,
+        "backgroundRadius" : 4,
+        "explosiveDamageAmount" : 1000.0,
+        "delaySteps" : 2
+       }
+      ]
+    }
+  ],
+  "power" : 500.0,
+  "speed" : 300,
+  "damageKind" : "ruincleaverfinisher"
+}

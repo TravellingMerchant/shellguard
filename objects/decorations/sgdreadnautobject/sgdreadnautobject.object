@@ -1,0 +1,33 @@
+{
+  "objectName" : "sgdreadnautobject",
+  "colonyTags" : ["valuable","pretty"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 100,
+
+  "apexDescription" : "Wow, this thing is huge!",
+  "avianDescription" : "Wow, this thing is huge!",
+  "floranDescription" : "Wow, thisssss thing isss huge!",
+  "glitchDescription" : "Impressed. This thing is huge!",
+  "humanDescription" : "Wow, this thing is huge!",
+  "hylotlDescription" : "Wow, this thing is huge!",
+  "novakidDescription" : "Wow, this thing is huge!",
+
+  "description" : "A huge Shellguard dreadnaut.",
+  "shortdescription" : "SG Dreadnaut Decoration.",
+  "race" : "human",
+
+  "inventoryIcon" : "sgdreadnautobject.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgdreadnautobject.png:<color>",
+      "imagePosition" : [-8, -0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

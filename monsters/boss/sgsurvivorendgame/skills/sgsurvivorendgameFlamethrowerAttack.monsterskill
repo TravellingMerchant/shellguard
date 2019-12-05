@@ -1,0 +1,53 @@
+{
+  "name" : "sgsurvivorendgameFlamethrowerAttack",
+  "label" : "FLAMETHROWER",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sgsurvivorendgameFlamethrowerAttack.lua" ],
+    "sgsurvivorendgameFlamethrowerAttack" : {
+      "distanceRange" : [13, 16],
+
+      "windupTime" : 0.5,
+      "winddownTime" : 0.5,
+
+      "skillDuration" : 1,
+      "angleCycle" : 1.5,
+      "maxFireAngle" : 0.05,
+      "fireInterval" : 0.2,
+
+      "changeFacingTime" : 0.5,
+
+      "moveSpeed" : 2,
+
+      "projectile" : {
+        "type" : "sentinelshardrocket",
+        "config" : {
+          "power" : 2.5,
+          "speed" : 5.5,
+          "damageRepeatGroup" : "shockhopper-flamethrower",
+          "damageRepeatTimeout" : 0.1
+        }
+      }
+    }
+  },
+
+  "animationParameters" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "flameSound" : {
+          "default" : "off",
+          "states" : {
+            "off" : {
+            },
+            "on" : {
+              "properties" : {
+                "persistentSound" : "/sfx/gun/flamethrower.ogg"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
