@@ -45,13 +45,13 @@
          "name":"mods",
          "objects":[
                 {
-                 "height":34.5,
-                 "id":2262,
+                 "height":48,
+                 "id":2394,
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{\"uniqueId\":\"bosshoverposition\"}",
-                     "stagehand":"glitchmissionspawnpoint"
+                     "parameters":"{ \"bossIds\" : [ \"sgheavyboss\" ], \"open\" : true }",
+                     "stagehand":"bossdooropener"
                     },
                  "propertytypes":
                     {
@@ -61,9 +61,30 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":36.5,
-                 "x":10704,
-                 "y":2048
+                 "width":32,
+                 "x":10232,
+                 "y":2440
+                }, 
+                {
+                 "height":1136,
+                 "id":2396,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"music\": [\"\/music\/forest-battle2.ogg\"], \"uniqueId\": \"bossmusic\"}",
+                     "stagehand":"bossmusic"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":1000,
+                 "x":10256,
+                 "y":1600
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4124,6 +4145,46 @@
                  "width":8,
                  "x":10400,
                  "y":2520
+                }, 
+                {
+                 "gid":7272,
+                 "height":16,
+                 "id":2397,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"spawner\" : { \"monsterTypes\" : [\"sgheavyboss\"], \"monsterLevel\" : [6, 6], \"monsterParams\" : { \"aggressive\" : true }, \"position\" : [0, 1], \"positionVariance\" : [0, 0], \"frequency\" : [8, 8], \"stock\" : 1, \"trigger\" : \"wire\", \"outOfSight\" : false } }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":10920,
+                 "y":1864
+                }, 
+                {
+                 "gid":7862,
+                 "height":8,
+                 "id":2398,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"detectArea\" : [ [-20, -8], [2, 8] ], \"detectDuration\" : 3.5, \"detectEntityTypes\" : [ \"player\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":10216,
+                 "y":2072
                 }],
          "opacity":0.97,
          "type":"objectgroup",
@@ -4136,7 +4197,27 @@
          "draworder":"topdown",
          "id":5,
          "name":"wiring - lights & guns",
-         "objects":[],
+         "objects":[
+                {
+                 "height":0,
+                 "id":2400,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":696,
+                         "y":-216
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":10224,
+                 "y":2064
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -4972,7 +5053,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":2393,
+ "nextobjectid":2401,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.1",

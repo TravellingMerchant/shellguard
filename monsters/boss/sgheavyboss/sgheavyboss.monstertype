@@ -19,7 +19,8 @@
 	"Persistent" : true, 
 	"damageBar" : "Special",
     "scripts" : [
-      "/monsters/monster.lua"
+      "/monsters/monster.lua",
+	  "/monsters/boss/sgheavyboss/bossHandler.lua"
     ],
 
     "behavior" : "monster",
@@ -53,7 +54,7 @@
 
       "hostileActions" : [ 
        {
-          "name" : "action-monstertankfire",
+          "name" : "action-fire-trans",
           "cooldown" : 1,
           "parameters" : {
             "requireLineOfSight" : false,
@@ -61,7 +62,7 @@
             "minimumRange" : 3,
             "windupStopForce" : 0,
             "windupState" : "idle",
-            "windupTime" : 0.5,
+            "windupTime" : 0.1,
 
             "projectileType" : "sgplasmaball",
             "projectileParameters" : {
@@ -70,6 +71,7 @@
             "power" : 10,
             "fireOffset" : [2.5, -3.25],
 			"rotationCenter"  : [2, -2],
+			"transGroup" : "aim",
             "aimAtTarget" : true,
             "rotateAim" : true,
             "onGround" : false,
@@ -77,14 +79,14 @@
             "fireSound" : "fire",
 			"projectileCount" : 5,
 			"projectileInterval" : 0.05,
-			"inaccuracy" : 0.05,
+			"inaccuracy" : 0.1,
 
             "winddownState" : "idle",
             "winddownTime" : 0.3
           }
         },
        {
-          "name" : "action-monstertankfire",
+          "name" : "action-fire-trans",
           "cooldown" : 1,
           "parameters" : {
             "requireLineOfSight" : true,
@@ -100,7 +102,9 @@
             },
             "power" : 10,
             "fireOffset" : [8, 2.25],
-			"rotationCenter"  : [6, 0],
+			"angleOffset" : -90,
+			"rotationCenter"  : [5, -3],
+			"transGroup" : "aim2",
             "aimAtTarget" : true,
             "rotateAim" : true,
             "holdAim" : false,
@@ -109,7 +113,7 @@
             "fireSound" : "fire2",
 			"projectileCount" : 3,
 			"projectileInterval" : 0.1,
-			"inaccuracy" : 0.05,
+			"inaccuracy" : 0.1,
 
             "winddownState" : "idle",
             "winddownTime" : 0.3
@@ -150,9 +154,9 @@
         {
           "name" : "wander-fly",
           "parameters" : {
-            "wanderTime" : [0,0],
-            "groundDistance" : 8,
-            "ceilingDistance" : 8,
+            "wanderTime" : [1,2],
+            "groundDistance" : 130,
+            "ceilingDistance" : 130,
             "xVelocity" : 100,
             "yVelocity" : 100
           }
@@ -197,12 +201,12 @@
       "collisionPoly" : [ [-17.5, 17], [-17, 17.5], [17, 17.5], [17.5, 17], [17.5, -15], [17, -17.5], [-17, -17.5], [-17.5, -17] ],
 
       "mass" : 0.5,
-      "walkSpeed" : 200,
-      "runSpeed" : 200,
+      "walkSpeed" : 300,
+      "runSpeed" : 300,
       "gravityEnabled" : false,
 
       "airFriction" : 1,
-      "airForce" : 50,
+      "airForce" : 80,
       "flySpeed" : 200
     },
 
@@ -265,6 +269,8 @@
         }
       }
     },
+
+	"uniqueId" : "sgheavyboss",
 
     "mouthOffset" : [0, 0],
     "feetOffset" : [0, -8],
