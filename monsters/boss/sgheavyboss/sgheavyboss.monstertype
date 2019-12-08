@@ -100,7 +100,7 @@
             },
             "power" : 10,
             "fireOffset" : [8, 2.25],
-			"rotationCenter2"  : [6, 0],
+			"rotationCenter"  : [6, 0],
             "aimAtTarget" : true,
             "rotateAim" : true,
             "holdAim" : false,
