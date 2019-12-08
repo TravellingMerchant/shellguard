@@ -1,0 +1,9 @@
+{
+  "name" : "dragonbossbody",
+  "category" : "sgdragonboss",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png"
+  }
+}

@@ -21,6 +21,7 @@
     "sellFactor" : 0.2,
     "items" : [
 	  { "item" : "sgbaseteleporter" },
+	  { "item" : "sgbaseteleporteralt" },
 	  { "item" : "sgvendingguard" },
 	  { "item" : "sgvendingturret" },
 	  { "item" : "sgdonatorshop" },

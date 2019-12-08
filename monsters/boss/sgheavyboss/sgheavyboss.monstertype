@@ -1,0 +1,270 @@
+{
+  "type" : "sgheavyboss",
+  "shortdescription" : "Drone",
+  "description" : "A heavy Shellguard drone. Carries an explosive cannon with a built in spotlight.",
+
+  "categories" : [ "sgheavyboss" ],
+  "parts" : [ "bodyback", "bodyfront", "head", "head2", "fullbright", "spotlight" ],
+
+  "animation" : "sgheavyboss.animation",
+
+  "dropPools" : [],
+
+  
+  "baseParameters" : {
+  	"damageTeamType" : "enemy",
+    "damageTeam" : 0,
+    "level" : 6,
+	"renderLayer" : "Projectile-1",
+	"Persistent" : true, 
+	"damageBar" : "Special",
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+
+    "behavior" : "monster",
+
+    "seeThroughLiquid" : false,
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+      "rotationCenter"  : [2, -2],
+      "rotationCenter2"  : [4, -2],
+
+      "targetQueryRange" : 600,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 500,
+      "targetOutOfSightTime" : 30.0,
+
+      "hurtWaitForGround" : false,
+
+      "foundTargetActions" : [
+        {
+          "name" : "action-animate",
+          "parameters" : {
+            "stateType" : "body",
+            "state" : "idle",
+            "animationTime" : 0.6
+          }
+        }
+      ],
+
+      "fleeActions" : [ ],
+
+      "hostileActions" : [ 
+       {
+          "name" : "action-fire",
+          "cooldown" : 1,
+          "parameters" : {
+            "requireLineOfSight" : false,
+            "maximumRange" : 40,
+            "minimumRange" : 3,
+            "windupStopForce" : 0,
+            "windupState" : "idle",
+            "windupTime" : 0.5,
+
+            "projectileType" : "sgplasmaball",
+            "projectileParameters" : {
+              "speed" : 40
+            },
+            "power" : 10,
+            "fireOffset" : [2.5, -3.25],
+            "aimAtTarget" : true,
+            "rotateAim" : true,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire",
+			"projectileCount" : 5,
+			"projectileInterval" : 0.05,
+			"inaccuracy" : 0.05,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.3
+          }
+        },
+       {
+          "name" : "action-fire",
+          "cooldown" : 1,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 40,
+            "minimumRange" : 3,
+            "windupStopForce" : 0,
+            "windupState" : "idle",
+            "windupTime" : 0.5,
+
+            "projectileType" : "sgvehicleshot",
+            "projectileParameters" : {
+              "speed" : 30
+            },
+            "power" : 10,
+            "fireOffset" : [2.5, -3.25],
+            "aimAtTarget" : true,
+            "rotateAim" : true,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire",
+			"projectileCount" : 2,
+			"projectileInterval" : 0.05,
+			"inaccuracy" : 0.05,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.3
+          }
+        }
+      ],
+
+      "periodicActions" : [
+       ],
+
+      "approachActions" : [
+        {
+          "name" : "approach-fly",
+          "parameters" : {
+            "usePathfinding" : false,
+            "minRange" : 1,
+            "maxRange" : 2
+          }
+        }
+      ],
+
+      "followActions" : [
+        {
+          "name" : "approach-teleport",
+          "parameters" : {
+          }
+        },
+        {
+          "name" : "approach-fly",
+          "parameters" : {
+            "usePathfinding" : false,
+            "maxRange" : 100
+          }
+        }
+      ],
+
+      "wanderActions" : [
+        {
+          "name" : "wander-fly",
+          "parameters" : {
+            "wanderTime" : [0,0],
+            "groundDistance" : 8,
+            "ceilingDistance" : 8,
+            "xVelocity" : 100,
+            "yVelocity" : 100
+          }
+        }
+      ],
+
+      "concurrentActions" : [
+        {
+          "name" : "action-globaltag",
+          "parameters" : {
+            "tagName" : "aggro",
+            "tag" : ""
+          }
+        }
+      ],
+
+      "concurrentHostileActions" : [
+        {
+          "name" : "action-globaltag",
+          "parameters" : {
+            "tagName" : "aggro",
+            "tag" : "aggro"
+          }
+        }
+      ]
+    },
+
+    "touchDamage" : {
+      "poly" : [ [-1.5, 1], [-1, 1.5], [1, 1.5], [1.5, 1], [1.5, -1], [1, -1.5], [-1, -1.5], [-1.5, -1] ],
+      "damage" : 9,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "lash",
+      "knockback" : 20,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionPoly" : [ [-15.5, 15], [-15, 15.5], [15, 15.5], [15.5, 15], [15.5, -15], [15, -15.5], [-15, -15.5], [-15.5, -15] ],
+
+      "mass" : 0.5,
+      "walkSpeed" : 200,
+      "runSpeed" : 200,
+      "gravityEnabled" : false,
+
+      "airFriction" : 1,
+      "airForce" : 50,
+      "flySpeed" : 200
+    },
+
+    "bodyMaterialKind" : "robotic",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+	  "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.5
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 40
+        },
+        "maxHealth" : {
+          "baseValue" : 100
+        },
+        "protection" : {
+          "baseValue" : 0.1
+        },
+        "healthRegen" : {
+          "baseValue" : 0.1
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : false
+  }
+}
