@@ -28,7 +28,7 @@
     "behaviorConfig" : {
       "damageOnTouch" : true,
       "rotationCenter"  : [2, -2],
-      "rotationCenter2"  : [4, -2],
+      "rotationCenter2"  : [6, 0],
 
       "targetQueryRange" : 600,
       "targetOnDamage" : true,
@@ -53,7 +53,7 @@
 
       "hostileActions" : [ 
        {
-          "name" : "action-fire",
+          "name" : "action-monstertankfire",
           "cooldown" : 1,
           "parameters" : {
             "requireLineOfSight" : false,
@@ -69,6 +69,7 @@
             },
             "power" : 10,
             "fireOffset" : [2.5, -3.25],
+			"rotationCenter"  : [2, -2],
             "aimAtTarget" : true,
             "rotateAim" : true,
             "onGround" : false,
@@ -83,7 +84,7 @@
           }
         },
        {
-          "name" : "action-fire",
+          "name" : "action-monstertankfire",
           "cooldown" : 1,
           "parameters" : {
             "requireLineOfSight" : true,
@@ -93,19 +94,21 @@
             "windupState" : "idle",
             "windupTime" : 0.5,
 
-            "projectileType" : "sgvehicleshot",
+            "projectileType" : "swarmadvancedrocket",
             "projectileParameters" : {
               "speed" : 30
             },
             "power" : 10,
-            "fireOffset" : [2.5, -3.25],
+            "fireOffset" : [8, 2.25],
+			"rotationCenter2"  : [6, 0],
             "aimAtTarget" : true,
             "rotateAim" : true,
+            "holdAim" : false,
             "onGround" : false,
             "fireState" : "",
-            "fireSound" : "fire",
-			"projectileCount" : 2,
-			"projectileInterval" : 0.05,
+            "fireSound" : "fire2",
+			"projectileCount" : 3,
+			"projectileInterval" : 0.1,
 			"inaccuracy" : 0.05,
 
             "winddownState" : "idle",
@@ -191,7 +194,7 @@
     "scale" : 1.0,
 
     "movementSettings" : {
-      "collisionPoly" : [ [-15.5, 15], [-15, 15.5], [15, 15.5], [15.5, 15], [15.5, -15], [15, -15.5], [-15, -15.5], [-15.5, -15] ],
+      "collisionPoly" : [ [-17.5, 17], [-17, 17.5], [17, 17.5], [17.5, 17], [17.5, -15], [17, -17.5], [-17, -17.5], [-17.5, -17] ],
 
       "mass" : 0.5,
       "walkSpeed" : 200,
