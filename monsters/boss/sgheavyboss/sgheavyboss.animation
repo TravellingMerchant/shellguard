@@ -307,6 +307,8 @@
     "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
 	"fire" : [ "/sfx/monsters/boss/sgdronelaser1.ogg", "/sfx/monsters/boss/sgdronelaser2.ogg", "/sfx/monsters/boss/sgdronelaser3.ogg" ],
 	"fire2" : [ "/sfx/monsters/boss/sgdronerocketlaunch.ogg" ],
-	"fire3" : [ "/sfx/gun/flyingshot.ogg"]
+	"fire3" : [ "/sfx/monsters/boss/sgdronerailgun2.ogg" ],
+	"fire4" : [ "/sfx/monsters/boss/sgdronelaser4.ogg" ],
+	"fire5" : [ "/sfx/monsters/boss/sgdronebigblast.ogg" ]
   }
 }

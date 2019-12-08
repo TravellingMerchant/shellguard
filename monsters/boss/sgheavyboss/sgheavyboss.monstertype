@@ -1,6 +1,6 @@
 {
   "type" : "sgheavyboss",
-  "shortdescription" : "Drone",
+  "shortdescription" : "Drone #621 ",
   "description" : "A heavy Shellguard drone. Carries an explosive cannon with a built in spotlight.",
 
   "categories" : [ "sgheavyboss" ],
@@ -31,10 +31,10 @@
       "rotationCenter"  : [2, -2],
       "rotationCenter2"  : [6, 0],
 
-      "targetQueryRange" : 600,
+      "targetQueryRange" : 300,
       "targetOnDamage" : true,
       "keepTargetInSight" : true,
-      "keepTargetInRange" : 500,
+      "keepTargetInRange" : 1000,
       "targetOutOfSightTime" : 30.0,
 
       "hurtWaitForGround" : false,
@@ -55,7 +55,7 @@
       "hostileActions" : [ 
        {
           "name" : "action-fire-trans",
-          "cooldown" : 1,
+          "cooldown" : 2.5,
           "parameters" : {
             "requireLineOfSight" : false,
             "maximumRange" : 40,
@@ -84,10 +84,10 @@
             "winddownState" : "idle",
             "winddownTime" : 0.3
           }
-        },
+       },
        {
           "name" : "action-fire-trans",
-          "cooldown" : 1,
+          "cooldown" : 2.4,
           "parameters" : {
             "requireLineOfSight" : true,
             "maximumRange" : 40,
@@ -112,6 +112,139 @@
             "fireState" : "",
             "fireSound" : "fire2",
 			"projectileCount" : 3,
+			"projectileInterval" : 0.1,
+			"inaccuracy" : 0.1,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.3
+          }
+       },
+       {
+          "name" : "action-fire-trans",
+          "cooldown" : 2.2,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 40,
+            "minimumRange" : 3,
+            "windupState" : "idle",
+            "windupTime" : 0.1,
+
+            "projectileType" : "sgdelayedbeam",
+            "projectileParameters" : {
+              "speed" : 0
+            },
+            "power" : 10,
+            "fireOffset" : [2.5, -3.25],
+			"rotationCenter"  : [2, -2],
+			"transGroup" : "aim",
+            "aimAtTarget" : true,
+            "rotateAim" : true,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire4",
+			"projectileCount" : 3,
+			"projectileInterval" : 0.1,
+			"inaccuracy" : 0.1,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.3
+          }
+       },
+       {
+          "name" : "action-fire-trans",
+          "cooldown" : 2.1,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 40,
+            "minimumRange" : 3,
+            "windupStopForce" : 0,
+            "windupState" : "idle",
+            "windupTime" : 0.5,
+
+            "projectileType" : "shelluforocket",
+            "projectileParameters" : {
+              "speed" : 10
+            },
+            "power" : 10,
+            "fireOffset" : [8, 2.25],
+			"angleOffset" : -90,
+			"rotationCenter"  : [5, -3],
+			"transGroup" : "aim2",
+            "aimAtTarget" : true,
+            "rotateAim" : true,
+            "holdAim" : false,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire2",
+			"projectileCount" : 6,
+			"projectileInterval" : 0.2,
+			"inaccuracy" : 0.2,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.3
+          }
+       },
+       {
+          "name" : "action-fire-trans",
+          "cooldown" : 5,
+          "parameters" : {
+            "requireLineOfSight" : false,
+            "maximumRange" : 40,
+            "minimumRange" : 3,
+            "windupStopForce" : 0,
+            "windupState" : "idle",
+            "windupTime" : 1.5,
+
+            "projectileType" : "sgrailgunshotboss",
+            "projectileParameters" : {
+              "speed" : 50
+            },
+            "power" : 70,
+            "fireOffset" : [8, 4],
+			"angleOffset" : -90,
+			"rotationCenter"  : [5, -3],
+			"transGroup" : "aim2",
+            "aimAtTarget" : true,
+            "rotateAim" : true,
+            "holdAim" : true,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire3",
+			"projectileCount" : 1,
+			"projectileInterval" : 0.1,
+			"inaccuracy" : 0.1,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.3
+          }
+        },
+       {
+          "name" : "action-fire-trans",
+          "cooldown" : 4.8,
+          "parameters" : {
+            "requireLineOfSight" : false,
+            "maximumRange" : 40,
+            "minimumRange" : 3,
+            "windupStopForce" : 0,
+            "windupState" : "idle",
+            "windupTime" : 1.5,
+
+            "projectileType" : "dragonprojectile",
+            "projectileParameters" : {
+              "speed" : 50
+            },
+            "power" : 70,
+            "fireOffset" : [8, 3.25],
+			"angleOffset" : -90,
+			"rotationCenter"  : [5, -3],
+			"transGroup" : "aim2",
+            "aimAtTarget" : true,
+            "rotateAim" : true,
+            "holdAim" : true,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire5",
+			"projectileCount" : 1,
 			"projectileInterval" : 0.1,
 			"inaccuracy" : 0.1,
 
