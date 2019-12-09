@@ -1,0 +1,102 @@
+{
+  "itemName" : "sgfireblastgun",
+  "price" : 2300,
+  "inventoryIcon" : "sggrenademachinegun.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "An automatic HBL grenade launcher.",
+  "shortdescription" : "HBL-G Launcher",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sggrenademachinegun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sggrenademachinegun.png",
+    "barrel" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/monsters/boss/sgdronebigblast.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.75, -0.625],
+  "muzzleOffset" : [2.125, 0.0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 1,
+    "baseDps" : 10.5,
+    "energyUsage" : 40.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.02,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation"
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation",
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -15,
+        "weaponRotation" : 20,
+        "twoHanded" : true,
+
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation",
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "dragonprojectile",
+    "projectileParameters" : { 
+      "knockback" : 6
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sggrenademachinegunelite.png:idle",
+    "animationParts" : {
+      "middle" : "sggrenademachinegunelite.png"
+    },
+    "shortdescription" : "HBL-CRYIL Minigun ^yellow;^reset;"
+  }
+}

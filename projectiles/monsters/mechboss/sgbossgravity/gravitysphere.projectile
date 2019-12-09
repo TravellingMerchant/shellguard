@@ -13,21 +13,21 @@
   "bounces" : -1,
   "piercing" : true,
 
-  "timeToLive" : 1,
+  "timeToLive" : 10,
 
   "orientationLocked" : true,
 
   "damagePoly" : [ [-48, 0], [-32, -32], [0, -48], [32, -32], [48, 0], [32, 32], [0, 48], [-32, 32] ],
   "damageRepeatTimeout" : 0.1,
 
-  "boundBox" : [-10, -10, 10, 10],
+  "boundBox" : [-15, -15, 15, 15],
   "physicsForces" : {
     "vacuum" : {
       "type" : "RadialForceRegion",
       "outerRadius" : 10,
-      "innerRadius" : 4,
-      "targetRadialVelocity" : -15,
-      "controlForce" : 350,
+      "innerRadius" : 15,
+      "targetRadialVelocity" : 100,
+      "controlForce" : 500,
       "categoryWhitelist" : ["player", "npc", "itemdrop", "projectile"]
     }
   },

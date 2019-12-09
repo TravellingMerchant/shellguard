@@ -189,7 +189,7 @@
           "cooldown" : 5,
           "parameters" : {
             "requireLineOfSight" : false,
-            "maximumRange" : 40,
+            "maximumRange" : 45,
             "minimumRange" : 3,
             "windupStopForce" : 0,
             "windupState" : "idle",
@@ -218,29 +218,26 @@
             "winddownTime" : 0.3
           }
         },
-       {
+        {
           "name" : "action-fire-trans",
-          "cooldown" : 4.8,
+          "cooldown" : 4,
           "parameters" : {
             "requireLineOfSight" : false,
-            "maximumRange" : 40,
+            "maximumRange" : 45,
             "minimumRange" : 3,
-            "windupStopForce" : 0,
             "windupState" : "idle",
-            "windupTime" : 1.5,
+            "windupTime" : 1,
 
             "projectileType" : "dragonprojectile",
             "projectileParameters" : {
               "speed" : 50
             },
             "power" : 70,
-            "fireOffset" : [8, 3.25],
-			"angleOffset" : -90,
-			"rotationCenter"  : [5, -3],
-			"transGroup" : "aim2",
+            "fireOffset" : [2.5, -3.25],
+			"rotationCenter"  : [2, -2],
+			"transGroup" : "aim",
             "aimAtTarget" : true,
             "rotateAim" : true,
-            "holdAim" : true,
             "onGround" : false,
             "fireState" : "",
             "fireSound" : "fire5",
@@ -386,7 +383,7 @@
           "baseValue" : 1.0
         },
         "powerMultiplier" : {
-          "baseValue" : 1.0
+          "baseValue" : 1.3
         }
       },
 
