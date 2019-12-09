@@ -16,7 +16,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":27,
+ "tilecount":28,
  "tiledversion":"1.3.1",
  "tileheight":400,
  "tileproperties":
@@ -219,6 +219,16 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"sgbody2snow",
+         "tilesetDirection":"right"
+        },
+     "27":
+        {
+         "\/\/description":"sgwreckageteleporter1",
+         "\/\/name":"sgwreckageteleporter1",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgwreckageteleporter1",
          "tilesetDirection":"right"
         },
      "3":
@@ -494,6 +504,16 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "27":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "3":
         {
          "\/\/description":"string",
@@ -686,6 +706,12 @@
          "image":"..\/..\/objects\/decorations\/sgbody2snow\/sgbody1icon.png",
          "imageheight":11,
          "imagewidth":35
+        },
+     "27":
+        {
+         "image":"..\/..\/objects\/sgwreckageteleporter1\/sgfortressteleporter1icon.png",
+         "imageheight":96,
+         "imagewidth":48
         },
      "3":
         {

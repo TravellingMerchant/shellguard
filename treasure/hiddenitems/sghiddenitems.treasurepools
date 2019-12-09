@@ -321,6 +321,24 @@
     }]
   ],
   
+//-------- wreckage -----------
+
+  "sggrenademachinegun" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sggrenademachinegun", 1]}
+      ]
+    }]
+  ],
+  
+  "sgfireblastgun" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgfireblastgun", 1]}
+      ]
+    }]
+  ],
+
   
 //-----------misc---------------------
   
