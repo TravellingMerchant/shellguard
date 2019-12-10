@@ -129,6 +129,25 @@
   
   {
     "op" : "add",
+    "path" : "/sgwreckagedronerematch",
+    "value" : {
+      "primaryDungeon" : "sgwreckagedronerematch",
+      "weatherPool" : [
+        [1.0, "snowstorm"]
+      ],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [500, 500],
+      "dungeonBaseHeight" : 450,
+      "dungeonSurfaceHeight" : 100,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/sgtheguardsmarch2.ogg",
+      "biome": "snow"
+    }
+  },
+  
+  {
+    "op" : "add",
     "path" : "/sgwreckagebossroom",
     "value" : {
       "primaryDungeon" : "sgwreckagebossroom",

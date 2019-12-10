@@ -1,0 +1,409 @@
+{
+  "type" : "sgheavybossclone",
+  "shortdescription" : "Drone #621 ",
+  "description" : "A heavy Shellguard drone. Carries an explosive cannon with a built in spotlight.",
+
+  "categories" : [ "sgheavyboss" ],
+  "parts" : [ "bodyback", "bodyfront", "head", "head2", "fullbright", "spotlight" ],
+
+  "animation" : "sgheavyboss.animation",
+
+  "dropPools" : [],
+
+  
+  "baseParameters" : {
+  	"damageTeamType" : "enemy",
+    "damageTeam" : 0,
+    "level" : 6,
+	"renderLayer" : "Projectile-1",
+	"Persistent" : true, 
+	"damageBar" : "Special",
+    "scripts" : [
+      "/monsters/monster.lua",
+	  "/monsters/boss/sgheavyboss/bossHandler.lua"
+    ],
+
+    "behavior" : "monster",
+
+    "seeThroughLiquid" : false,
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+      "rotationCenter"  : [2, -2],
+      "rotationCenter2"  : [6, 0],
+
+      "targetQueryRange" : 300,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 1000,
+      "targetOutOfSightTime" : 30.0,
+
+      "hurtWaitForGround" : false,
+
+      "foundTargetActions" : [
+        {
+          "name" : "action-animate",
+          "parameters" : {
+            "stateType" : "body",
+            "state" : "idle",
+            "animationTime" : 0.6
+          }
+        }
+      ],
+
+      "fleeActions" : [ ],
+
+      "hostileActions" : [ 
+       {
+          "name" : "action-fire-trans",
+          "cooldown" : 2.5,
+          "parameters" : {
+            "requireLineOfSight" : false,
+            "maximumRange" : 40,
+            "minimumRange" : 3,
+            "windupStopForce" : 0,
+            "windupState" : "idle",
+            "windupTime" : 0.1,
+
+            "projectileType" : "sgplasmaball",
+            "projectileParameters" : {
+              "speed" : 40
+            },
+            "power" : 10,
+            "fireOffset" : [2.5, -3.25],
+			"rotationCenter"  : [2, -2],
+			"transGroup" : "aim",
+            "aimAtTarget" : true,
+            "rotateAim" : true,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire",
+			"projectileCount" : 5,
+			"projectileInterval" : 0.05,
+			"inaccuracy" : 0.1,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.3
+          }
+       },
+       {
+          "name" : "action-fire-trans",
+          "cooldown" : 2.4,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 40,
+            "minimumRange" : 3,
+            "windupStopForce" : 0,
+            "windupState" : "idle",
+            "windupTime" : 0.5,
+
+            "projectileType" : "swarmadvancedrocket",
+            "projectileParameters" : {
+              "speed" : 30
+            },
+            "power" : 10,
+            "fireOffset" : [8, 2.25],
+			"angleOffset" : -90,
+			"rotationCenter"  : [5, -3],
+			"transGroup" : "aim2",
+            "aimAtTarget" : true,
+            "rotateAim" : true,
+            "holdAim" : false,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire2",
+			"projectileCount" : 3,
+			"projectileInterval" : 0.1,
+			"inaccuracy" : 0.1,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.3
+          }
+       },
+       {
+          "name" : "action-fire-trans",
+          "cooldown" : 2.2,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 40,
+            "minimumRange" : 3,
+            "windupState" : "idle",
+            "windupTime" : 0.1,
+
+            "projectileType" : "sgdelayedbeam",
+            "projectileParameters" : {
+              "speed" : 0
+            },
+            "power" : 10,
+            "fireOffset" : [2.5, -3.25],
+			"rotationCenter"  : [2, -2],
+			"transGroup" : "aim",
+            "aimAtTarget" : true,
+            "rotateAim" : true,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire4",
+			"projectileCount" : 3,
+			"projectileInterval" : 0.1,
+			"inaccuracy" : 0.1,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.3
+          }
+       },
+       {
+          "name" : "action-fire-trans",
+          "cooldown" : 2.1,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 40,
+            "minimumRange" : 3,
+            "windupStopForce" : 0,
+            "windupState" : "idle",
+            "windupTime" : 0.5,
+
+            "projectileType" : "shelluforocket",
+            "projectileParameters" : {
+              "speed" : 10
+            },
+            "power" : 10,
+            "fireOffset" : [8, 2.25],
+			"angleOffset" : -90,
+			"rotationCenter"  : [5, -3],
+			"transGroup" : "aim2",
+            "aimAtTarget" : true,
+            "rotateAim" : true,
+            "holdAim" : false,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire2",
+			"projectileCount" : 6,
+			"projectileInterval" : 0.2,
+			"inaccuracy" : 0.2,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.3
+          }
+       },
+       {
+          "name" : "action-fire-trans",
+          "cooldown" : 5,
+          "parameters" : {
+            "requireLineOfSight" : false,
+            "maximumRange" : 45,
+            "minimumRange" : 3,
+            "windupStopForce" : 0,
+            "windupState" : "idle",
+            "windupTime" : 1.5,
+
+            "projectileType" : "sgrailgunshotboss",
+            "projectileParameters" : {
+              "speed" : 50
+            },
+            "power" : 70,
+            "fireOffset" : [8, 4],
+			"angleOffset" : -90,
+			"rotationCenter"  : [5, -3],
+			"transGroup" : "aim2",
+            "aimAtTarget" : true,
+            "rotateAim" : true,
+            "holdAim" : true,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire3",
+			"projectileCount" : 1,
+			"projectileInterval" : 0.1,
+			"inaccuracy" : 0.1,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.3
+          }
+        },
+        {
+          "name" : "action-fire-trans",
+          "cooldown" : 4,
+          "parameters" : {
+            "requireLineOfSight" : false,
+            "maximumRange" : 45,
+            "minimumRange" : 3,
+            "windupState" : "idle",
+            "windupTime" : 1,
+
+            "projectileType" : "dragonprojectile",
+            "projectileParameters" : {
+              "speed" : 50
+            },
+            "power" : 70,
+            "fireOffset" : [2.5, -3.25],
+			"rotationCenter"  : [2, -2],
+			"transGroup" : "aim",
+            "aimAtTarget" : true,
+            "rotateAim" : true,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire5",
+			"projectileCount" : 1,
+			"projectileInterval" : 0.1,
+			"inaccuracy" : 0.1,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.3
+          }
+        }
+      ],
+
+      "periodicActions" : [
+       ],
+
+      "approachActions" : [
+        {
+          "name" : "approach-fly",
+          "parameters" : {
+            "usePathfinding" : false,
+            "minRange" : 1,
+            "maxRange" : 2
+          }
+        }
+      ],
+
+      "followActions" : [
+        {
+          "name" : "approach-teleport",
+          "parameters" : {
+          }
+        },
+        {
+          "name" : "approach-fly",
+          "parameters" : {
+            "usePathfinding" : false,
+            "maxRange" : 100
+          }
+        }
+      ],
+
+      "wanderActions" : [
+        {
+          "name" : "wander-fly",
+          "parameters" : {
+            "wanderTime" : [1,2],
+            "groundDistance" : 130,
+            "ceilingDistance" : 130,
+            "xVelocity" : 100,
+            "yVelocity" : 100
+          }
+        }
+      ],
+
+      "concurrentActions" : [
+        {
+          "name" : "action-globaltag",
+          "parameters" : {
+            "tagName" : "aggro",
+            "tag" : ""
+          }
+        }
+      ],
+
+      "concurrentHostileActions" : [
+        {
+          "name" : "action-globaltag",
+          "parameters" : {
+            "tagName" : "aggro",
+            "tag" : "aggro"
+          }
+        }
+      ]
+    },
+
+    "touchDamage" : {
+      "poly" : [ [-1.5, 1], [-1, 1.5], [1, 1.5], [1.5, 1], [1.5, -1], [1, -1.5], [-1, -1.5], [-1.5, -1] ],
+      "damage" : 9,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "lash",
+      "knockback" : 20,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionPoly" : [ [-17.5, 17], [-17, 17.5], [17, 17.5], [17.5, 17], [17.5, -15], [17, -17.5], [-17, -17.5], [-17.5, -17] ],
+
+      "mass" : 0.5,
+      "walkSpeed" : 300,
+      "runSpeed" : 300,
+      "gravityEnabled" : false,
+
+      "airFriction" : 1,
+      "airForce" : 80,
+      "flySpeed" : 200
+    },
+
+    "bodyMaterialKind" : "robotic",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+	  "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.5
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 40
+        },
+        "maxHealth" : {
+          "baseValue" : 100
+        },
+        "protection" : {
+          "baseValue" : 0.1
+        },
+        "healthRegen" : {
+          "baseValue" : 0.1
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.3
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+	"uniqueId" : "sgheavybossclone",
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : false
+  }
+}
