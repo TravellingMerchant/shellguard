@@ -1,0 +1,54 @@
+{
+  "objectName" : "sgrobotshopboss",
+  "colonyTags" : ["peacekeeper","commerce"],
+  "rarity" : "Uncommon",
+  "category" : "other",
+  "description" : "A store that sells certain bosses in capture pods.",
+  "shortdescription" : "Boss Store",
+  "race" : "generic",
+  "printable" : false,
+
+  "interactAction" : "OpenCraftingInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/craftingmerchant.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "Boss Store",
+        "subtitle" : "^#b9b5b2;Some overwhelming firepower!",
+        "icon" : {
+          "file" : "/objects/sgrobotshop/interfaceicon.png"
+        }
+      },
+      "imgPlayerMoneyIcon" : {
+        "visible" : false
+      },
+      "lblPlayerMoney" : {
+        "visible" : false
+      }
+    },
+    "filter" : [ "sgrobotcraftingboss" ]
+  },
+
+  "apexDescription" : "A store that sells bosses in capture pods.",
+  "avianDescription" : "A store that sells bosses in capture pods.",
+  "floranDescription" : "A ssssstore that ssssells bosssses in capture pods..",
+  "glitchDescription" : "Eager. A store that sells bosses in capture pods.",
+  "humanDescription" : "A store that sells bosses in capture pods.",
+  "hylotlDescription" : "A store that sells bosses in capture pods.",
+  "novakidDescription" : "A store that sells bosses in capture pods.",
+
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgrobotshop.png:<color>.<frame>",
+
+      "imagePosition" : [-64, 0],
+      "frames" : 18,
+      "animationCycle" : 2,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

@@ -27,30 +27,30 @@
 
     "renderLayer" : "Projectile-10",
 
-    "skillCount" : 8,
-    "skills" : [ "sgsurvivorendgameFlamethrowerAttackAim", "sgsurvivorendgamePunchAttackblast", "sgsurvivorendgamegrenadetoss", "sgsurvivorendgameMissileBarrageAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorendgameElectricBurstAttack", "sgsurvivorendgameFlamethrowerAttack", "sgsurvivorendgameDashAttack" ],
+    "skillCount" : 9,
+    "skills" : [ "sghologramattack", "sghologramarmy", "sgsurvivorendgamePunchAttackblast", "sgsurvivorendgamegrenadetoss", "sgsurvivorendgameMissileBarrageAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorendgameElectricBurstAttack", "sgsurvivorendgameFlamethrowerAttack", "sgsurvivorendgameDashAttack" ],
 
     "phases" : [
       {
-        "skills" : [ "sgsurvivorendgameFlamethrowerAttackAim", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack",  "sgsurvivorendgamePunchAttack", "sgsurvivorendgameDashAttack", "sgsurvivorendgamegrenadetoss",  "sgsurvivorendgamePunchAttack"  ]
+        "skills" : [ "sghologramattack", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorendgamePunchAttack", "sghologramattack", "sgsurvivorendgameDashAttack", "sghologramattack", "sgsurvivorendgamePunchAttack"  ]
       },
       {
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.8,
         "enterPhase" : "sgsurvivorendgameElectricBurstAttack",
-        "skills" : [ "sgsurvivorendgameDashAttack",  "sgsurvivorendgamegrenadetoss", "sgsurvivorendgamePunchAttack", "sgsurvivorendgamegrenadetoss", "sgsurvivorendgameDashAttack", "sgsurvivorendgameFlamethrowerAttack", "sgsurvivorendgamePunchAttack" ]
+        "skills" : [ "sghologramarmy", "sgsurvivorendgameDashAttack", "sghologramattack"]
       },
       {
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.5,
         "enterPhase" : "sgsurvivorendgameElectricBurstAttack",
-        "skills" : [ "sgsurvivorendgameDashAttack", "sgsurvivorendgameFlamethrowerAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorendgamePunchAttackblast", "sgsurvivorendgamegrenadetoss", "sgsurvivorendgamegrenadetoss", "sgsurvivorendgamegrenadetoss", "sgsurvivorendgamePunchAttack"  ]
+        "skills" : [ "sgsurvivorendgameDashAttack" ]
       },
       {
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.25,
         "enterPhase" : "sgsurvivorendgameElectricBurstAttack",
-        "skills" : [ "sgsurvivorendgameFlamethrowerAttack", "sgsurvivorendgamePunchAttackblast", "sgsurvivorendgameFlamethrowerAttack",  "sgsurvivorendgameDashAttack", "sgsurvivorendgamegrenadetoss", "sgsurvivorendgamegrenadetoss", "sgsurvivorendgamePunchAttackblast", "sgsurvivorendgamePunchAttackblast", "sgsurvivorendgameFlamethrowerAttack", "sgsurvivorendgamePunchAttackblast", "sgsurvivorendgamePunchAttackblast" ]
+        "skills" : [ "sgsurvivorendgamePunchAttackblast" ]
       }
     ],
 
@@ -73,8 +73,8 @@
       "collisionPoly" : [ [-2, -4.5], [2, -4.5], [2, 1], [-2, 1] ],
 
       "mass" : 2.0,
-      "walkSpeed" : 55,
-      "runSpeed" : 75,
+      "walkSpeed" : 100,
+      "runSpeed" : 120,
       "physicsEffectCategories" : ["boss"]
     },
     "jumpTargetDistance" : 4,

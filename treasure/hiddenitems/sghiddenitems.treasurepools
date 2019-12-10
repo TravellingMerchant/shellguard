@@ -339,8 +339,23 @@
     }]
   ],
 
+  "sgbreakerrifle" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgbreakerrifle", 1]}
+      ]
+    }]
+  ],
   
 //-----------misc---------------------
+  
+  "sgrobotshopboss" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgrobotshopboss", 1]}
+      ]
+    }]
+  ],
   
   "shellbehat" : [
     [1, {

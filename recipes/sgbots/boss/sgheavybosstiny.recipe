@@ -1,0 +1,33 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 7000 }
+  ],
+  "output" : {
+    "item" : "filledcapturepod",
+    "count" : 1,
+    "parameters" : {
+      "shortdescription" : "Model Drone",
+      "description" : "A tiny model Escort Drone. It can still fly and shoot.",
+      "tooltipFields" : {
+        "subtitle" : "Shellguard Robot",
+        "objectImage" : "/monsters/boss/sgheavybossfriendly/sgheavybossescorticon.png"
+      },
+      "pets" : [
+        {
+          "name" : "Escort Drone",
+          "portrait" : [
+            {"image" : "/monsters/boss/sgheavybossfriendly/sgheavybossescorticon.png"}
+          ],
+          "config" : {
+            "type" : "sgheavybossfriendlytiny",
+            "parameters" : {
+              "level" : 6,
+              "aggressive" : true
+            }
+          }
+        }
+      ]
+    }
+  },
+  "groups" : [ "sgrobotcraftingboss" ]
+}

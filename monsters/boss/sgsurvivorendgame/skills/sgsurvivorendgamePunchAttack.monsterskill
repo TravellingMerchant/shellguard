@@ -1,6 +1,6 @@
 {
   "name" : "sgsurvivorendgamePunchAttack",
-  "label" : "FIST PUNCH",
+  "label" : "FIST PUNCH new",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {

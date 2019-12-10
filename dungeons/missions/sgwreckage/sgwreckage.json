@@ -5259,7 +5259,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"treasurePools\" : [ \"sgsurvivorsrifle\" ] }"
+                     "parameters":"{ \"treasurePools\" : [ \"sgbreakerrifle\" ] }"
                     },
                  "propertytypes":
                     {

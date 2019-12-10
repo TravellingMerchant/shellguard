@@ -1,6 +1,6 @@
 {
   "name" : "sgsurvivorendgameDashAttack",
-  "label" : "DASH 2000",
+  "label" : "DASH 5000",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
@@ -8,10 +8,10 @@
     "sgsurvivorendgameDashAttack" : {
       "edgeDistance" : 60,
       "dashDistance" : 200,
-      "dashSpeed" : 1000,
+      "dashSpeed" : 2000,
       "windupTime" : 0.1,
 
-      "stunTime" : 0.7
+      "stunTime" : 0.6
     }
   },
 

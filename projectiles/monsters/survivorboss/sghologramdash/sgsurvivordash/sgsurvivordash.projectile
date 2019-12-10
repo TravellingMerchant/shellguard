@@ -1,0 +1,59 @@
+{
+  "projectileName" : "sgsurvivordash",
+  "physics" : "laser",
+  "piercing" : true,
+  "timeToLive" : 1,
+  "image" : "sgsurvivordash.png",
+  "animationCycle" : 1,
+  "frameNumber" : 3,
+  "winddownFrames" : 0,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/melee/astraltear2.ogg" ]
+    },
+    {
+      "time" : 5.65,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/astraltear_stop3.ogg" ]
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/monsters/boss/sghologramslash.ogg",
+        "/sfx/monsters/boss/sghologramslash1.ogg",
+        "/sfx/monsters/boss/sghologramslash2.ogg"
+      ]
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgdash",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    }
+  ],
+  
+  "actionOnCollide" : [
+  ],
+
+  "speed" : 0,
+  "power" : 20,
+  "damagePoly" : [],
+
+  "fullbright" : true,
+  "emitters" : [ "javelinred" ],
+  "damageKind" : "sawblade",
+  "flippable" : true,
+
+  "renderLayer" : "Projectile-1",
+  "orientationLocked" : true,
+
+  "bounces" : 0,
+  "onlyHitTerrain" : false
+
+}

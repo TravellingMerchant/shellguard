@@ -135,7 +135,7 @@
       "weatherPool" : [
         [1.0, "snowstorm"]
       ],
-      "threatLevel" : 6,
+      "threatLevel" : 10,
       "gravity" : 80,
       "worldSize" : [500, 500],
       "dungeonBaseHeight" : 450,
@@ -244,7 +244,7 @@
     "path" : "/sgelevatorsurvival",
     "value" : {
     "primaryDungeon" : "sgelevatorsurvival",
-    "threatLevel" : 6,
+    "threatLevel" : 10,
     "gravity" : 80,
     "worldSize" : [2500, 2000],
     "dungeonBaseHeight" : 1000,

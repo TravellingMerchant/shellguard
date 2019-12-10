@@ -4,9 +4,9 @@ sgsurvivorendgameDashAttack = {}
 function sgsurvivorendgameDashAttack.enter()
   if not hasTarget() then return nil end
 
-  local maxDashes = 1
+  local maxDashes = 2
   if currentPhase() > 2 then
-    maxDashes = 2
+    maxDashes = 4
   end
 
   return {
@@ -96,9 +96,9 @@ function sgsurvivorendgameDashAttack.performDash(stateData, startPosition, direc
     animator.setAnimationState("movement", "idle")
     monster.setDamageOnTouch(false)
 
-    mcontroller.controlApproachXVelocity(0, 200)
+    mcontroller.controlApproachXVelocity(0, 800)
 
-    stateData.dashes = stateData.dashes + 1
+    stateData.dashes = stateData.dashes + 2
     stateData.direction = direction
     stateData.dashing = false
     stateData.windupTimer = config.getParameter("sgsurvivorendgameDashAttack.windupTime")

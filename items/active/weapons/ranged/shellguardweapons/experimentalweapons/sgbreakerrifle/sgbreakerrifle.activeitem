@@ -4,8 +4,8 @@
   "inventoryIcon" : "sgbreakerrifle.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "Sporting a rotary barrel and drum magazine, this rifle is the king of suppressing fire.",
-  "shortdescription" : "HBL-CRYIL Minigun",
+  "description" : "A heavy rifle that fires rounds that shatter on impact.",
+  "shortdescription" : "Breaker Rifle",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
@@ -90,6 +90,6 @@
     "animationParts" : {
       "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/sgbreakerrifle/sgbreakerrifleelite.png"
     },
-    "shortdescription" : "HBL-CRYIL Minigun ^yellow;^reset;"
+    "shortdescription" : "Breaker Rifle ^yellow;^reset;"
   }
 }

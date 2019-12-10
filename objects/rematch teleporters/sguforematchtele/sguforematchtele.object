@@ -5,8 +5,8 @@
   "printable" : false,
   "price" : 3000,
   "rarity" : "Common",
-  "description" : "This teleporter should get you to a Shellguard outpost!",
-  "shortdescription" : "Shellguard Outpost Teleporter",
+  "description" : "This will take me to a digital fight zone.",
+  "shortdescription" : "Shellguard Rematch Teleporter",
   "race" : "ancient",
 
   "apexDescription" : "This will take me to a digital fight zone.",

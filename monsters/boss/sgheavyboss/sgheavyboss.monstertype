@@ -1,7 +1,7 @@
 {
   "type" : "sgheavyboss",
-  "shortdescription" : "Drone #621 ",
-  "description" : "A heavy Shellguard drone. Carries an explosive cannon with a built in spotlight.",
+  "shortdescription" : "Assault Drone",
+  "description" : "A large drone with a huge amount of guns.",
 
   "categories" : [ "sgheavyboss" ],
   "parts" : [ "bodyback", "bodyfront", "head", "head2", "fullbright", "spotlight" ],
@@ -371,7 +371,7 @@
           "baseValue" : 40
         },
         "maxHealth" : {
-          "baseValue" : 100
+          "baseValue" : 1500
         },
         "protection" : {
           "baseValue" : 0.1

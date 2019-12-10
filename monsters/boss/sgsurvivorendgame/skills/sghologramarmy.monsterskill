@@ -1,27 +1,27 @@
 {
-  "name" : "sgsurvivorendgameFlamethrowerAttackAim",
+  "name" : "sghologramarmy",
   "label" : "FLAMETHROWER",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
-    "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sgsurvivorendgameFlamethrowerAttackAim.lua" ],
-    "sgsurvivorendgameFlamethrowerAttackAim" : {
+    "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sghologramarmy.lua" ],
+    "sghologramarmy" : {
       "distanceRange" : [50, 60],
 
-      "windupTime" : 0.7,
-      "winddownTime" : 0.5,
+      "windupTime" : 0.1,
+      "winddownTime" : 0.1,
 
       "skillDuration" : 0.4,
       "angleCycle" : 0,
       "maxFireAngle" : 0,
-      "fireInterval" : 0.5,
+      "fireInterval" : 0.1,
 
       "changeFacingTime" : 0.5,
 
-      "moveSpeed" : 2,
+      "moveSpeed" : 20,
 
       "projectile" : {
-        "type" : "sgsurvivormotospawner",
+        "type" : "sghologramspawner",
         "config" : {
           "power" : 2.5,
           "speed" : 0,
