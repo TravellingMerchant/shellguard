@@ -110,10 +110,10 @@
 
       "stats" : {
         "knockbackStunTime" : {
-          "baseValue" : 0.01
+          "baseValue" : 0
         },
         "grit" : {
-          "baseValue" : 150
+          "baseValue" : 100
         },
         "maxHealth" : {
           "baseValue" : 1750

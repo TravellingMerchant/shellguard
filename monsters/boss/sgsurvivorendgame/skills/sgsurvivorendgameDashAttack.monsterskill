@@ -8,7 +8,7 @@
     "sgsurvivorendgameDashAttack" : {
       "edgeDistance" : 60,
       "dashDistance" : 200,
-      "dashSpeed" : 2000,
+      "dashSpeed" : 10,
       "windupTime" : 0.1,
 
       "stunTime" : 0.6
