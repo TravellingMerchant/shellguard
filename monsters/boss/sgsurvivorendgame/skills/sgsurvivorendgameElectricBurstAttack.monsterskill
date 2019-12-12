@@ -1,31 +1,29 @@
 {
   "name" : "sgsurvivorendgameElectricBurstAttack",
-  "label" : "OVERLOAD",
+  "label" : "OVERLOAD hologram",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
     "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sgsurvivorendgameElectricBurstAttack.lua" ],
     "sgsurvivorendgameElectricBurstAttack" : {
-      "riseHeight" : 10,
-      "riseSpeed" : 10,
+      "riseHeight" : 7,
+      "riseSpeed" : 500,
 
-      "skillDuration" : 12,
+      "skillDuration" : 1,
       "winddownTime" : 1,
       "angleCycle" : 6,
       "maxFireAngle" : 0.75,
 
-      "fireInterval" : 0.2,
-      "projectileCount" : 6,
+      "fireInterval" : 1.1,
+      "projectileCount" : 3,
       "projectile" : {
-        "type" : "sgdelayedplasma",
+        "type" : "sgsurvivordash",
         "config" : {
           "power" : 10,
           "speed" : 0,
-          "bounces" : 0,
-          "physics" : "default",
-          "timeToLive" : 2.2
+          "bounces" : 0
         },
-        "innerRadius" : 2,
+        "innerRadius" : 4,
 		"centerOffset" : [ 0.5, -0.75 ]
       }
     }

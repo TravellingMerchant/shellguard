@@ -28,7 +28,7 @@
       "dungeonSurfaceHeight" : 100,
       "ambientLightLevel" : [200, 200, 200],
       "ambientNoises" : "/sfx/environmental/garden_day.ogg",
-      "musicTrack" : "/music/arctic-constellation2.ogg",
+      "musicTrack" : "/music/Red_Steel_WIP_3.ogg",
       "biome": "sgalpine"
     }
   },

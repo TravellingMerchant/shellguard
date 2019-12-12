@@ -1,11 +1,11 @@
 {
-  "itemName" : "sggrenademachinegun",
-  "price" : 2300,
-  "inventoryIcon" : "sggrenademachinegun.png:idle",
+  "itemName" : "sgtyphoonminigun",
+  "price" : 2700,
+  "inventoryIcon" : "sgtyphoonminigun.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "An automatic HBL grenade launcher.",
-  "shortdescription" : "HBL-G Launcher",
+  "description" : "A heavy minigun with a frankly insane fire rate.",
+  "shortdescription" : "Typhoon Minigun",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
@@ -13,21 +13,21 @@
   "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
   "twoHanded" : true,
   
-  "animation" : "sggrenademachinegun.animation",
+  "animation" : "sgtyphoonminigun.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "sggrenademachinegun.png",
+    "middle" : "sgtyphoonminigun.png",
     "barrel" : "",
-    "muzzleFlash" : ""
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/railshots/grenademachine.ogg" ]
+      "fire" : [ "/sfx/gun/railshots/turretshot.ogg" ]
     }
   },
 
   "baseOffset" : [1.75, -0.625],
-  "muzzleOffset" : [2.125, 0.0],
+  "muzzleOffset" : [2.125, -0.25],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -36,11 +36,11 @@
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 0.3,
-    "baseDps" : 10.5,
-    "energyUsage" : 40.0,
-    "projectileCount" : 1,
-    "inaccuracy" : 0.02,
+    "fireTime" : 0.02,
+    "baseDps" : 25.5,
+    "energyUsage" : 80.0,
+    "projectileCount" : 5,
+    "inaccuracy" : 0.07,
       "stances" : {
       "idle" : {
         "armRotation" : 0,
@@ -70,9 +70,9 @@
 		}
       },
       "cooldown" : {
-        "duration" : 0.1,
-        "armRotation" : -15,
-        "weaponRotation" : 20,
+        "duration" : 0.02,
+        "armRotation" : -45,
+        "weaponRotation" : 55,
         "twoHanded" : true,
 
         "frontArmFrame" : "swim.2",
@@ -85,18 +85,19 @@
 
     "fireType" : "auto",
 
-    "projectileType" : "sgmachinegrenade",
+    "projectileType" : "bullet-4",
     "projectileParameters" : { 
-      "knockback" : 6
+      "knockback" : 2,
+	  "speed" : 150
     }
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
-    "inventoryIcon" : "sggrenademachinegunelite.png:idle",
+    "inventoryIcon" : "sgtyphoonminigunelite.png:idle",
     "animationParts" : {
-      "middle" : "sggrenademachinegunelite.png"
+      "middle" : "sgtyphoonminigunelite.png"
     },
-    "shortdescription" : "HBL-G Launcher ^yellow;^reset;"
+    "shortdescription" : "Typhoon Minigun ^yellow;^reset;"
   }
 }

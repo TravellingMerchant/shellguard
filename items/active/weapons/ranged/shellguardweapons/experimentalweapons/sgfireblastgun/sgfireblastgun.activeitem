@@ -4,8 +4,8 @@
   "inventoryIcon" : "sggrenademachinegun.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "An automatic HBL grenade launcher.",
-  "shortdescription" : "HBL-G Launcher",
+  "description" : "Fires massive balls of fire that sets enemies ablaze.",
+  "shortdescription" : "Thermocatalystic Launcher",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
@@ -97,6 +97,6 @@
     "animationParts" : {
       "middle" : "sggrenademachinegunelite.png"
     },
-    "shortdescription" : "HBL-CRYIL Minigun ^yellow;^reset;"
+    "shortdescription" : "Thermocatalystic Launcher ^yellow;^reset;"
   }
 }

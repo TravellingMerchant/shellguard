@@ -348,6 +348,23 @@
   ],
   
 //-----------misc---------------------
+
+  
+  "sg_modulecreator" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sg_modulecreator", 1]}
+      ]
+    }]
+  ],
+  
+  "sgtyphoonminigun" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgtyphoonminigun", 1]}
+      ]
+    }]
+  ],
   
   "sgrobotshopboss" : [
     [1, {

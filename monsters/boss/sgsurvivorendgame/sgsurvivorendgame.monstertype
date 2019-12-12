@@ -32,7 +32,7 @@
 
     "phases" : [
       {
-        "skills" : [ "sghologramattack", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorendgamePunchAttack", "sghologramattack", "sgsurvivorendgameDashAttack", "sghologramattack", "sgsurvivorendgamePunchAttack"  ]
+        "skills" : [ "sgsurvivorendgameElectricBurstAttack", "sghologramattack", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorendgamePunchAttack", "sghologramattack", "sgsurvivorendgameDashAttack", "sghologramattack", "sgsurvivorendgamePunchAttack"  ]
       },
       {
         "trigger" : "healthPercentage",
@@ -110,7 +110,7 @@
 
       "stats" : {
         "knockbackStunTime" : {
-          "baseValue" : 0.25
+          "baseValue" : 0.01
         },
         "grit" : {
           "baseValue" : 0.99
