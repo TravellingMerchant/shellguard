@@ -32,13 +32,13 @@
 
     "phases" : [
       {
-        "skills" : [ "sghologramattack", "sgsurvivorendgameDashAttack", "sgsurvivorjump", "sgsurvivorsnipe", "sgsurvivorendgamePunchAttack", "sgsurvivorendgamePunchAttack", "sghologramattack", "sgsurvivorjump", "sgsurvivorburst", "sgsurvivorendgamePunchAttack"  ]
+        "skills" : [  "sghologramattack", "sgsurvivorjump", "sgsurvivorsnipe", "sgsurvivorendgamePunchAttack", "sgsurvivorendgamePunchAttack", "sghologramattack", "sgsurvivorjump", "sgsurvivorburst", "sgsurvivorendgamePunchAttack"  ]
       },
       {
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.8,
         "enterPhase" : "sgsurvivorendgameElectricBurstAttack",
-        "skills" : [ "sghologramarmy", "sgsurvivorendgameDashAttack", "sghologramattack"]
+        "skills" : [ "sgsurvivorendgameDashAttack", "sgsurvivorjump", "sgsurvivorendgameDashAttack", "sghologramarmy", "sgsurvivorjump"]
       },
       {
         "trigger" : "healthPercentage",

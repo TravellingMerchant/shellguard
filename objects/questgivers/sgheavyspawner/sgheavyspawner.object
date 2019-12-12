@@ -1,0 +1,61 @@
+{
+  "objectName" : "sgheavyspawner",
+  "colonyTags" : ["commerce"],
+  "rarity" : "Common",
+  "description" : "This machine sells dubloons.",
+  "shortdescription" : "Dubloon Machine.",
+  "race" : "generic",
+  "printable" : false,
+
+  "apexDescription" : "This machine sells dubloons.",
+  "avianDescription" : "This machine sells dubloons.",
+  "floranDescription" : "This machine sells dubloons.",
+  "glitchDescription" : "Bored. This machine sells dubloons.",
+  "humanDescription" : "This machine sells dubloons.",
+  "hylotlDescription" : "This machine sells dubloons.",
+  "novakidDescription" : "This machine sells dubloons.",
+
+  "interactAction" : "OpenCraftingInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/craftingmerchant.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "Dubloon Machine",
+        "subtitle" : "Buy dubloons to hire Shellguard Mercenaries!",
+        "icon" : {
+          "file" : "/objects/questgivers/sgheavyspawner/dublooniicon.png"
+        }
+      },
+      "imgPlayerMoneyIcon" : {
+        "visible" : false
+      },
+      "lblPlayerMoney" : {
+        "visible" : false
+      }
+    },
+    "filter" : [ "beakeasy" ]
+  },
+
+  "inventoryIcon" : "sgheavyspawnericon.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgheavyspawner.png:<color>.<frame>",
+      "imagePosition" : [-48, 0],
+      "frames" : 1,
+      "animationCycle" : 2,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  
+  "scripts" : [
+    "/objects/questgivers/sgheavyspawner/sgheavyspawner.lua"
+  ],
+  "scriptDelta" : 600,
+
+  "spawner" : {
+    "species" : "human",
+    "typeName" : "crewmembershellguardmercheavy"
+  }
+}

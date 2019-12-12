@@ -12,16 +12,16 @@
       "winddownTime" : 0.1,
 
       "skillDuration" : 0.4,
-      "angleCycle" : 0.4,
-      "maxFireAngle" : 40,
+      "angleCycle" : 0,
+      "maxFireAngle" : 0,
       "fireInterval" : 0.1,
 
-      "changeFacingTime" : 0.5,
+      "changeFacingTime" : 0.1,
 
       "moveSpeed" : 20,
 
       "projectile" : {
-        "type" : "sgdelayedplasma",
+        "type" : "sgdelayedlaser",
         "config" : {
           "power" : 50,
           "speed" : 0,

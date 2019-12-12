@@ -276,6 +276,64 @@
     "text" : "Oh... NOW there's elevator music. Of course there is..."
   },
   
+//-------- elevator --------  
+
+  "elevatorsurvival1" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Welcome to the new torture - correction - transport test."
+  },
+  
+  "elevatorsurvival2" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Intro segment complete. This unit hopes you remembered to bring resources to sustain your organic body."
+  },
+
+  "elevatorwarning" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "You may wish to avoid the spikes. Organic bodies are not compatible with spike technology."
+  },
+  
+  "elevatorsurvival3" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "This is your mandatory rest area. Elevators are machines and do not have to rest. Do not be left behind."
+  },
+
+  "elevatorsurvival4" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Tests indicate that \"art\" has a revitalising effect on organics mental fortitude. Please admire this \"art\"."
+  },
+  
+  "elevatorsurvival5" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "You are roughly half way through the test."
+  },
+
+  "elevatorsurvival6" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "The test is almost complete."
+  },
+  
+  "elevatorsurvival7" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Congratulations, you have completed the test without destroying your orangic body. Your mental health status is still pending."
+  },
+
 //-----------FINAL------------
 
    "sgfinal1" : {

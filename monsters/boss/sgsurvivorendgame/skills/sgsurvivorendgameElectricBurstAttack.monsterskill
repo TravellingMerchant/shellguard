@@ -6,8 +6,8 @@
   "parameters" : {
     "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sgsurvivorendgameElectricBurstAttack.lua" ],
     "sgsurvivorendgameElectricBurstAttack" : {
-      "riseHeight" : 10,
-      "riseSpeed" : 1000,
+      "riseHeight" : 8,
+      "riseSpeed" : 1500,
 
       "skillDuration" : 1,
       "winddownTime" : 0.1,

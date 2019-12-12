@@ -23,7 +23,7 @@
         "title" : "Commander Andros Galvanek",
         "subtitle" : "Hire Shellguard Mercenaries!",
         "icon" : {
-          "file" : "/interface/bounty/Androsicon.png"
+          "file" : "/objects/questgivers/sgheavyspawner/dublooniicon.png"
         }
       },
       "imgPlayerMoneyIcon" : {
