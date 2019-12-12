@@ -1,20 +1,42 @@
 {
-  "itemName" : "survivorback",
+  "itemName" : "sgheavyback",
   "price" : 100,
   "inventoryIcon" : "icon.png",
   "rarity" : "Rare",
-  "category" : "backwear",
-  "description" : "A standard backpack with all you could need for long missions.",
-  "shortdescription" : "Shellguard Backpack",
-  "tooltipKind" : "back",
+  "category" : "enviroProtectionPack",
+  "description" : "Equipment of a heavy Shellguard mercenary. Provides envriomental protection and a faint glow.",
+  "shortdescription" : "Heavy Equipment.",
+  "tooltipKind" : "baseaugment",
 
   "maleFrames" : "back.png",
   "femaleFrames" : "back.png",
   "maxStack" : 1,
 
+  "statusEffects" : [
+    {
+      "stat" : "biomeheatImmunity",
+      "amount" : 1.0
+    },
+    {
+      "stat" : "biomecoldImmunity",
+      "amount" : 1.0
+    },
+    {
+      "stat" : "biomeradiationImmunity",
+      "amount" : 1.0
+    },
+    {
+      "stat" : "breathProtection",
+      "amount" : 1.0
+    },
+    "sgbackglow"
+  ],
+  
+  "acceptsAugmentType" : "back",
+
   "colorOptions" : [
-    // FOUNDRY RED
-    { "ffca8a" : "b44f42", "e0975c" : "8f352a", "a85636" : "611c15", "6f2919" : "370d0d" },
+    // BONE
+    { "ffca8a" : "A3381C", "e0975c" : "7B1500", "a85636" : "5B0600", "6f2919" : "3C0000" },
     // BLACK
     { "ffca8a" : "838383", "e0975c" : "555555", "a85636" : "383838", "6f2919" : "151515" },
     // GREY

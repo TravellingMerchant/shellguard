@@ -1,0 +1,135 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "priority" : 1,
+        "default" : "falling",
+        "states" : {
+          "falling" : {},
+          "idle" : {
+            "frames" : 2,
+            "cycle" : 1.0,
+            "mode" : "loop"
+          },
+          "capture" : {}
+        }
+      },
+      "cuffs" : {
+        "priority" : 2,
+        "default" : "inactive",
+        "states" : {
+          "inactive" : {},
+          "activate" : {
+            "frames" : 1,
+            "cycle" : 0.5,
+            "mode" : "transition", 
+            "transition" : "active"  
+          },
+          "active" : {
+            "frames" : 2,
+            "cycle" : 1.0,
+            "mode" : "loop"
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 2,
+        "default" : "none",
+        "states" : {
+          "none" : { },
+          "stunned" : { }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "offset" : [0.0, -0.5]
+        },
+        "partStates" : {
+          "body" : {
+            "falling" : {
+              "properties" : {
+                "image" : "/monsters/boss/sgsurvivorendgame/capture/survivorcapture.png:falling.<frame>"
+              }
+            },
+            "idle" : {
+              "properties" : {
+                "image" : "/monsters/boss/sgsurvivorendgame/capture/survivorcapture.png:idle.<frame>"
+              }
+            },
+            "capture" : {
+              "properties" : {
+                "image" : "/monsters/boss/sgsurvivorendgame/capture/survivorcapture.png:capture.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "cuffs" : {
+        "properties" : {
+          "zLevel" : 2,
+          "centered" : true,
+          "anchorPart" : "body",
+          "offset" : [0.0, 0.0],
+          "transformationGroups" : ["cuffs"]
+        },
+        "partStates" : {
+          "cuffs" : {
+            "activate" : {
+              "properties" : {
+                "image" : "/items/active/unsorted/handcuffs/handcuffs.png:beamin"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "/items/active/unsorted/handcuffs/handcuffs.png:active.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "cuffsfullbright" : {
+        "properties" : {
+          "zLevel" : 3,
+          "centered" : true,
+          "anchorPart" : "cuffs",
+          "fullbright" : true
+        },
+        "partStates" : {
+          "cuffs" : {
+            "activate" : {
+              "properties" : {
+                "image" : "/items/active/unsorted/handcuffs/handcuffsfullbright.png:beamin"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "/items/active/unsorted/handcuffs/handcuffsfullbright.png:active.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "cuffs" : {"interpolated" : false}
+  },
+
+  "sounds" : {
+    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ]
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  }
+}

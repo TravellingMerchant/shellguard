@@ -1,29 +1,29 @@
 {
-  "name" : "sgsurvivorendgamelaser",
-  "label" : "FLAMETHROWER",
+  "name" : "sgsurvivorburst",
+  "label" : "survivor burst",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
-    "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sgsurvivorendgamelaser.lua" ],
-    "sgsurvivorendgamelaser" : {
-      "distanceRange" : [18, 21],
+    "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sgsurvivorburst.lua" ],
+    "sgsurvivorburst" : {
+      "distanceRange" : [50, 60],
 
-      "windupTime" : 0.2,
-      "winddownTime" : 0.2,
+      "windupTime" : 0.01,
+      "winddownTime" : 0.1,
 
-      "skillDuration" : 0.3,
-      "angleCycle" : 0.5,
-      "maxFireAngle" : 5,
+      "skillDuration" : 0.4,
+      "angleCycle" : 0.4,
+      "maxFireAngle" : 40,
       "fireInterval" : 0.1,
 
       "changeFacingTime" : 0.5,
 
-      "moveSpeed" : 10,
+      "moveSpeed" : 20,
 
       "projectile" : {
-        "type" : "sgdelayedlaser",
+        "type" : "sgdelayedplasma",
         "config" : {
-          "power" : 5,
+          "power" : 50,
           "speed" : 0,
           "damageRepeatGroup" : "shockhopper-flamethrower",
           "damageRepeatTimeout" : 0.1

@@ -1,30 +1,30 @@
 {
-  "name" : "sgsurvivorendgameFlamethrowerAttack",
-  "label" : "FLAMETHROWER",
+  "name" : "sgsurvivorsnipe",
+  "label" : "survivor snipe",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
-    "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sgsurvivorendgameFlamethrowerAttack.lua" ],
-    "sgsurvivorendgameFlamethrowerAttack" : {
-      "distanceRange" : [13, 16],
+    "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sgsurvivorsnipe.lua" ],
+    "sgsurvivorsnipe" : {
+      "distanceRange" : [50, 60],
 
-      "windupTime" : 0.5,
-      "winddownTime" : 0.5,
+      "windupTime" : 0.01,
+      "winddownTime" : 0.1,
 
-      "skillDuration" : 1,
-      "angleCycle" : 1.5,
-      "maxFireAngle" : 0.05,
-      "fireInterval" : 0.2,
+      "skillDuration" : 0.4,
+      "angleCycle" : 0,
+      "maxFireAngle" : 0,
+      "fireInterval" : 0.5,
 
       "changeFacingTime" : 0.5,
 
-      "moveSpeed" : 2,
+      "moveSpeed" : 20,
 
       "projectile" : {
-        "type" : "sentinelshardrocket",
+        "type" : "sgsurvivormotospawner",
         "config" : {
-          "power" : 2.5,
-          "speed" : 5.5,
+          "power" : 50,
+          "speed" : 0,
           "damageRepeatGroup" : "shockhopper-flamethrower",
           "damageRepeatTimeout" : 0.1
         }

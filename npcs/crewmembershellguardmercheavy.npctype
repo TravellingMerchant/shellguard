@@ -1,0 +1,82 @@
+{
+  "type" : "crewmembershellguardmercheavy",
+  "baseType" : "crewmemberpenguin",
+
+  "scriptConfig" : {
+    "crew" : {
+      "recruitInteractAction" : {
+        "messageType" : "recruits.offerMercenary",
+        "messageArgs" : [
+          [ { "name" : "dubloon", "count" : 1 } ]
+        ]
+      }
+    }
+  },
+
+  "items" : {
+    "default" : [
+      [0, [
+          {
+            "head" : [ { "name" : "sgflathelmet" }, { "name" : "sgtitanhelmet" } ],
+            "chest" : [ { "name" : "sgcompositechest" } ],
+            "legs" : [ { "name" : "shellarmourlegsnpc" } ],
+			"back" : [ { "name" : "sgheavyback" } ],
+            "primary" : [
+              "sgtyphoonminigun",
+              "sggrenademachinegun",
+			  "neb-shellguardrail"
+            ],
+            "sheathedprimary" : [
+              "heavyhatchet",
+              "sgofficersword"
+            ],
+            "alt" : [
+              { "name" : "sgheavyshield" }
+            ]
+          }
+        ] ]
+    ],
+    "human" : [
+      [0, [
+          {
+            "head" : [ { "name" : "sgflathelmet" }, { "name" : "sgtitanhelmet" } ],
+            "chest" : [ { "name" : "sgcompositechest" } ],
+            "legs" : [ { "name" : "shellarmourlegsnpc" } ],
+			"back" : [ { "name" : "sgheavyback" } ],
+            "primary" : [
+              "sgtyphoonminigun",
+              "sggrenademachinegun",
+			  "neb-shellguardrail"
+            ],
+            "sheathedprimary" : [
+              "heavyhatchet",
+              "sgofficersword"
+            ],
+            "alt" : [
+              { "name" : "sgheavyshield" }
+            ]
+          }
+        ] ],
+      [1, [
+          {
+            "head" : [ { "name" : "sgflathelmet" }, { "name" : "sgtitanhelmet" } ],
+            "chest" : [ { "name" : "sgcompositechest" } ],
+            "legs" : [ { "name" : "shellarmourlegsnpc" } ],
+			"back" : [ { "name" : "sgheavyback" } ],
+            "primary" : [
+              "sgtyphoonminigun",
+              "sggrenademachinegun",
+			  "neb-shellguardrail"
+            ],
+            "sheathedprimary" : [
+              "heavyhatchet",
+              "sgofficersword"
+            ],
+            "alt" : [
+              { "name" : "sgheavyshield" }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

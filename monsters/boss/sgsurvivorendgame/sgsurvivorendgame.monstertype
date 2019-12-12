@@ -27,12 +27,12 @@
 
     "renderLayer" : "Projectile-10",
 
-    "skillCount" : 9,
-    "skills" : [ "sghologramattack", "sghologramarmy", "sgsurvivorendgamePunchAttackblast", "sgsurvivorendgamegrenadetoss", "sgsurvivorendgameMissileBarrageAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorendgameElectricBurstAttack", "sgsurvivorendgameFlamethrowerAttack", "sgsurvivorendgameDashAttack" ],
+    "skillCount" : 8,
+    "skills" : [ "sgsurvivorburst", "sgsurvivorsnipe", "sgsurvivorjump", "sghologramattack", "sghologramarmy", "sgsurvivorendgamePunchAttack", "sgsurvivorendgameElectricBurstAttack", "sgsurvivorendgameDashAttack" ],
 
     "phases" : [
       {
-        "skills" : [ "sgsurvivorendgameElectricBurstAttack", "sghologramattack", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorendgamePunchAttack", "sghologramattack", "sgsurvivorendgameDashAttack", "sghologramattack", "sgsurvivorendgamePunchAttack"  ]
+        "skills" : [ "sghologramattack", "sgsurvivorendgameDashAttack", "sgsurvivorjump", "sgsurvivorsnipe", "sgsurvivorendgamePunchAttack", "sgsurvivorendgamePunchAttack", "sghologramattack", "sgsurvivorjump", "sgsurvivorburst", "sgsurvivorendgamePunchAttack"  ]
       },
       {
         "trigger" : "healthPercentage",
@@ -50,7 +50,7 @@
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.25,
         "enterPhase" : "sgsurvivorendgameElectricBurstAttack",
-        "skills" : [ "sgsurvivorendgamePunchAttackblast" ]
+        "skills" : [ ]
       }
     ],
 
@@ -71,6 +71,8 @@
 
     "movementSettings" : {
       "collisionPoly" : [ [-2, -4.5], [2, -4.5], [2, 1], [-2, 1] ],
+
+      "airForce" : 350,
 
       "mass" : 2.0,
       "walkSpeed" : 100,
@@ -147,6 +149,9 @@
         },
         "powerMultiplier" : {
           "baseValue" : 1.2
+        },
+        "fallDamageMultiplier" : {
+          "baseValue" : 0
         }
       },
 

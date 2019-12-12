@@ -1,56 +1,56 @@
-sgsurvivorendgameElectricBurstAttackrocket = {}
+sgsurvivorjump = {}
 
 --------------------------------------------------------------------------------
-function sgsurvivorendgameElectricBurstAttackrocket.initialStateData()
+function sgsurvivorjump.initialStateData()
   return {
-    riseHeight = config.getParameter("sgsurvivorendgameElectricBurstAttackrocket.riseHeight"),
-    riseSpeed = config.getParameter("sgsurvivorendgameElectricBurstAttackrocket.riseSpeed"),
+    riseHeight = config.getParameter("sgsurvivorjump.riseHeight"),
+    riseSpeed = config.getParameter("sgsurvivorjump.riseSpeed"),
     firing = false,
     skillTimer = 0,
-    skillDuration = config.getParameter("sgsurvivorendgameElectricBurstAttackrocket.skillDuration"),
-    angleCycle = config.getParameter("sgsurvivorendgameElectricBurstAttackrocket.angleCycle"),
+    skillDuration = config.getParameter("sgsurvivorjump.skillDuration"),
+    angleCycle = config.getParameter("sgsurvivorjump.angleCycle"),
     fireTimer = 0,
-    fireInterval = config.getParameter("sgsurvivorendgameElectricBurstAttackrocket.fireInterval"),
+    fireInterval = config.getParameter("sgsurvivorjump.fireInterval"),
     fireAngle = 0,
-    maxFireAngle = config.getParameter("sgsurvivorendgameElectricBurstAttackrocket.maxFireAngle"),
-    projectileCount = config.getParameter("sgsurvivorendgameElectricBurstAttackrocket.projectileCount"),
-    winddownTimer = config.getParameter("sgsurvivorendgameElectricBurstAttackrocket.winddownTime")
+    maxFireAngle = config.getParameter("sgsurvivorjump.maxFireAngle"),
+    projectileCount = config.getParameter("sgsurvivorjump.projectileCount"),
+    winddownTimer = config.getParameter("sgsurvivorjump.winddownTime")
   }
 end
 
-function sgsurvivorendgameElectricBurstAttackrocket.enter()
-  if not hasTarget() or currentPhase() < 4 then return nil end
+function sgsurvivorjump.enter()
+  if not hasTarget() then return nil end
 
-  return sgsurvivorendgameElectricBurstAttackrocket.initialStateData()
+  return sgsurvivorjump.initialStateData()
 end
 
 
-function sgsurvivorendgameElectricBurstAttackrocket.enterWith(args)
+function sgsurvivorjump.enterWith(args)
   if not args or not args.enteringPhase then return nil end
 
-  return sgsurvivorendgameElectricBurstAttackrocket.initialStateData()
+  return sgsurvivorjump.initialStateData()
 end
 
 --------------------------------------------------------------------------------
-function sgsurvivorendgameElectricBurstAttackrocket.enteringState(stateData)
+function sgsurvivorjump.enteringState(stateData)
   animator.setAnimationState("movement", "idle")
 
-  monster.setActiveSkillName("sgsurvivorendgameElectricBurstAttackrocket")
+  monster.setActiveSkillName("sgsurvivorjump")
 
   stateData.lastToSpawn = world.distance(self.spawnPosition, mcontroller.position())
 end
 
 --------------------------------------------------------------------------------
-function sgsurvivorendgameElectricBurstAttackrocket.update(dt, stateData)
+function sgsurvivorjump.update(dt, stateData)
   if not hasTarget() then return true end
 
 
-  local toSpawn = world.distance(self.spawnPosition, mcontroller.position())
+  local toSpawn = {0, 0}
   if math.abs(toSpawn[1]) > 1 then
     --Approach spawn position
     if toSpawn[1] * stateData.lastToSpawn[1] < 0 then
       local position = mcontroller.position()
-      mcontroller.setPosition({self.spawnPosition[1], position[2]})
+      mcontroller.setPosition(position)
       mcontroller.setVelocity({0,0})
     else
       animator.setAnimationState("movement", "move")
@@ -68,7 +68,7 @@ function sgsurvivorendgameElectricBurstAttackrocket.update(dt, stateData)
     mcontroller.controlParameters({ gravityEnabled = false })
     mcontroller.controlApproachXVelocity(0, 50)
 
-    local approachPosition = {self.spawnPosition[1], self.spawnPosition[2] + stateData.riseHeight}
+    local approachPosition = {mcontroller.position()[1], self.spawnPosition[2] + stateData.riseHeight}
     flyTo(approachPosition, stateData.riseSpeed)
 
     local approachDistance = world.magnitude(approachPosition, mcontroller.position())
@@ -90,14 +90,14 @@ function sgsurvivorendgameElectricBurstAttackrocket.update(dt, stateData)
       if stateData.fireTimer <= 0 then
         animator.playSound("electricBurst")
 
-        sgsurvivorendgameElectricBurstAttackrocket.fire(angle, stateData.projectileCount)
+        sgsurvivorjump.fire(angle, stateData.projectileCount)
 
         stateData.fireTimer = stateData.fireTimer + stateData.fireInterval
       end
     --Wind down floating to the ground before leaving the state
     else
-      local toSpawn = world.distance(self.spawnPosition, mcontroller.position())
-      if stateData.winddownTimer == config.getParameter("sgsurvivorendgameElectricBurstAttackrocket.winddownTime") then
+      local toSpawn = world.distance({mcontroller.position()[1], self.spawnPosition[2]}, mcontroller.position())
+      if stateData.winddownTimer == config.getParameter("sgsurvivorjump.winddownTime") then
         animator.setAnimationState("movement", "winddown")
       end
       mcontroller.controlApproachYVelocity(toSpawn[2] / stateData.winddownTimer, 40)
@@ -112,17 +112,17 @@ function sgsurvivorendgameElectricBurstAttackrocket.update(dt, stateData)
   return false
 end
 
-function sgsurvivorendgameElectricBurstAttackrocket.fire(angle, count)
-  local projectileType = config.getParameter("sgsurvivorendgameElectricBurstAttackrocket.projectile.type")
-  local projectileConfig = config.getParameter("sgsurvivorendgameElectricBurstAttackrocket.projectile.config")
-  local projectileCenterOffset = config.getParameter("sgsurvivorendgameElectricBurstAttackrocket.projectile.centerOffset")
+function sgsurvivorjump.fire(angle, count)
+  local projectileType = config.getParameter("sgsurvivorjump.projectile.type")
+  local projectileConfig = config.getParameter("sgsurvivorjump.projectile.config")
+  local projectileCenterOffset = config.getParameter("sgsurvivorjump.projectile.centerOffset")
   projectileCenterOffset[1] = projectileCenterOffset[1] * mcontroller.facingDirection()
 
   if projectileConfig.power then
     projectileConfig.power = projectileConfig.power * root.evalFunction("monsterLevelPowerMultiplier", monster.level())
   end
 
-  local innerRadius = config.getParameter("sgsurvivorendgameElectricBurstAttackrocket.projectile.innerRadius")
+  local innerRadius = config.getParameter("sgsurvivorjump.projectile.innerRadius")
 
   local angleInterval = math.pi * 2 / count
 
@@ -138,7 +138,7 @@ function sgsurvivorendgameElectricBurstAttackrocket.fire(angle, count)
 
 end
 
-function sgsurvivorendgameElectricBurstAttackrocket.leavingState(stateData)
+function sgsurvivorjump.leavingState(stateData)
   animator.setAnimationState("electricBurst", "off")
 
   monster.setActiveSkillName("")

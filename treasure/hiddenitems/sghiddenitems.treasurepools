@@ -347,6 +347,22 @@
     }]
   ],
   
+  "sgtitanhelmet" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgtitanhelmet", 1]}
+      ]
+    }]
+  ],
+  
+  "sgheavyback" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgheavyback", 1]}
+      ]
+    }]
+  ],
+  
 //-----------misc---------------------
 
   

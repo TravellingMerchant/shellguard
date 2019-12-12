@@ -7,15 +7,15 @@
     "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sgsurvivorendgameElectricBurstAttack.lua" ],
     "sgsurvivorendgameElectricBurstAttack" : {
       "riseHeight" : 10,
-      "riseSpeed" : 500,
+      "riseSpeed" : 1000,
 
       "skillDuration" : 1,
-      "winddownTime" : 1,
+      "winddownTime" : 0.1,
       "angleCycle" : 6,
-      "maxFireAngle" : 0.75,
+      "maxFireAngle" : 0,
 
       "fireInterval" : 1.1,
-      "projectileCount" : 3,
+      "projectileCount" : 4,
       "projectile" : {
         "type" : "sgsurvivordash",
         "config" : {
@@ -23,7 +23,7 @@
           "speed" : 0,
           "bounces" : 0
         },
-        "innerRadius" : 4,
+        "innerRadius" : 6,
 		"centerOffset" : [ 0.5, -0.75 ]
       }
     }

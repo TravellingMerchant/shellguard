@@ -19,7 +19,7 @@ function sgsurvivorendgameElectricBurstAttack.initialStateData()
 end
 
 function sgsurvivorendgameElectricBurstAttack.enter()
-  if not hasTarget() or currentPhase() < 4 then return nil end
+  if not hasTarget() then return nil end
 
   return sgsurvivorendgameElectricBurstAttack.initialStateData()
 end
@@ -45,12 +45,12 @@ function sgsurvivorendgameElectricBurstAttack.update(dt, stateData)
   if not hasTarget() then return true end
 
 
-  local toSpawn = world.distance(self.spawnPosition, mcontroller.position())
+  local toSpawn = {0, 0}
   if math.abs(toSpawn[1]) > 1 then
     --Approach spawn position
     if toSpawn[1] * stateData.lastToSpawn[1] < 0 then
       local position = mcontroller.position()
-      mcontroller.setPosition({self.spawnPosition[1], position[2]})
+      mcontroller.setPosition(position)
       mcontroller.setVelocity({0,0})
     else
       animator.setAnimationState("movement", "move")
@@ -68,7 +68,7 @@ function sgsurvivorendgameElectricBurstAttack.update(dt, stateData)
     mcontroller.controlParameters({ gravityEnabled = false })
     mcontroller.controlApproachXVelocity(0, 50)
 
-    local approachPosition = {self.spawnPosition[1], self.spawnPosition[2] + stateData.riseHeight}
+    local approachPosition = {mcontroller.position()[1], self.spawnPosition[2] + stateData.riseHeight}
     flyTo(approachPosition, stateData.riseSpeed)
 
     local approachDistance = world.magnitude(approachPosition, mcontroller.position())
@@ -96,7 +96,7 @@ function sgsurvivorendgameElectricBurstAttack.update(dt, stateData)
       end
     --Wind down floating to the ground before leaving the state
     else
-      local toSpawn = world.distance(self.spawnPosition, mcontroller.position())
+      local toSpawn = world.distance({mcontroller.position()[1], self.spawnPosition[2]}, mcontroller.position())
       if stateData.winddownTimer == config.getParameter("sgsurvivorendgameElectricBurstAttack.winddownTime") then
         animator.setAnimationState("movement", "winddown")
       end

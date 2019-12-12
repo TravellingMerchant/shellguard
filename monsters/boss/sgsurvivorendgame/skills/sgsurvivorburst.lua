@@ -1,41 +1,41 @@
-sgsurvivorendgameFlamethrowerAttack = {}
+sgsurvivorburst = {}
 
 --------------------------------------------------------------------------------
-function sgsurvivorendgameFlamethrowerAttack.enter()
+function sgsurvivorburst.enter()
   if not hasTarget() then return nil end
 
   return {
-    windupTimer = config.getParameter("sgsurvivorendgameFlamethrowerAttack.windupTime"),
-    winddownTimer = config.getParameter("sgsurvivorendgameFlamethrowerAttack.winddownTime"),
-    distanceRange = config.getParameter("sgsurvivorendgameFlamethrowerAttack.distanceRange"),
+    windupTimer = config.getParameter("sgsurvivorburst.windupTime"),
+    winddownTimer = config.getParameter("sgsurvivorburst.winddownTime"),
+    distanceRange = config.getParameter("sgsurvivorburst.distanceRange"),
     skillTimer = 0,
-    skillDuration = config.getParameter("sgsurvivorendgameFlamethrowerAttack.skillDuration"),
-    angleCycle = config.getParameter("sgsurvivorendgameFlamethrowerAttack.angleCycle"),
+    skillDuration = config.getParameter("sgsurvivorburst.skillDuration"),
+    angleCycle = config.getParameter("sgsurvivorburst.angleCycle"),
     fireTimer = 0,
-    fireInterval = config.getParameter("sgsurvivorendgameFlamethrowerAttack.fireInterval"),
+    fireInterval = config.getParameter("sgsurvivorburst.fireInterval"),
     fireAngle = 0,
-    maxFireAngle = config.getParameter("sgsurvivorendgameFlamethrowerAttack.maxFireAngle"),
+    maxFireAngle = config.getParameter("sgsurvivorburst.maxFireAngle"),
     lastFacing = mcontroller.facingDirection(),
     facingTimer = 0
   }
 end
 
 --------------------------------------------------------------------------------
-function sgsurvivorendgameFlamethrowerAttack.enteringState(stateData)
+function sgsurvivorburst.enteringState(stateData)
   animator.setAnimationState("movement", "idle")
 
-  monster.setActiveSkillName("sgsurvivorendgameFlamethrowerAttack")
+  monster.setActiveSkillName("sgsurvivorburst")
 end
 
 --------------------------------------------------------------------------------
-function sgsurvivorendgameFlamethrowerAttack.update(dt, stateData)
+function sgsurvivorburst.update(dt, stateData)
   if not hasTarget() then return true end
 
   local toTarget = world.distance(self.targetPosition, mcontroller.position())
   local targetDir = util.toDirection(toTarget[1])
 
   if stateData.windupTimer > 0 then
-    if stateData.windupTimer == config.getParameter("sgsurvivorendgameFlamethrowerAttack.windupTime") then
+    if stateData.windupTimer == config.getParameter("sgsurvivorburst.windupTime") then
       animator.setAnimationState("flamethrower", "windup")
     end
     stateData.windupTimer = stateData.windupTimer - dt
@@ -43,8 +43,8 @@ function sgsurvivorendgameFlamethrowerAttack.update(dt, stateData)
   end
 
   mcontroller.controlParameters({
-    walkSpeed = config.getParameter("sgsurvivorendgameFlamethrowerAttack.moveSpeed"),
-    runSpeed = config.getParameter("sgsurvivorendgameFlamethrowerAttack.moveSpeed")  
+    walkSpeed = config.getParameter("sgsurvivorburst.moveSpeed"),
+    runSpeed = config.getParameter("sgsurvivorburst.moveSpeed")  
   })
 
   if math.abs(toTarget[1]) > stateData.distanceRange[1] + 4 then
@@ -60,7 +60,7 @@ function sgsurvivorendgameFlamethrowerAttack.update(dt, stateData)
   if stateData.skillTimer > stateData.skillDuration then
     animator.setAnimationState("flameSound", "off")
     if stateData.winddownTimer > 0 then
-      if stateData.winddownTimer == config.getParameter("sgsurvivorendgameFlamethrowerAttack.winddownTime") then
+      if stateData.winddownTimer == config.getParameter("sgsurvivorburst.winddownTime") then
         animator.setAnimationState("flamethrower", "winddown")
       end
       stateData.winddownTimer = stateData.winddownTimer - dt
@@ -71,15 +71,14 @@ function sgsurvivorendgameFlamethrowerAttack.update(dt, stateData)
   end
 
   animator.setAnimationState("flameSound", "on")
-  sgsurvivorendgameFlamethrowerAttack.controlFace(dt, stateData, targetDir)
+  sgsurvivorburst.controlFace(dt, stateData, targetDir)
 
   stateData.skillTimer = stateData.skillTimer + dt
-  local aimAngle = math.sin((stateData.skillTimer / stateData.angleCycle) * math.pi * 2) * stateData.maxFireAngle
 
   stateData.fireTimer = stateData.fireTimer - dt
   if stateData.fireTimer <= 0 then
-    local aimVector = vec2.rotate({mcontroller.facingDirection(), 0}, aimAngle)
-    sgsurvivorendgameFlamethrowerAttack.fire(aimVector)
+    local aimVector = vec2.sub(self.targetPosition, mcontroller.position())
+    sgsurvivorburst.fire(aimVector)
 
     stateData.fireTimer = stateData.fireTimer + stateData.fireInterval
   end
@@ -89,18 +88,18 @@ function sgsurvivorendgameFlamethrowerAttack.update(dt, stateData)
   return false
 end
 
-function sgsurvivorendgameFlamethrowerAttack.controlFace(dt, stateData, direction)
+function sgsurvivorburst.controlFace(dt, stateData, direction)
   if direction ~= mcontroller.facingDirection() and stateData.facingTimer > 0 then
     stateData.facingTimer = stateData.facingTimer - dt
   else
-    stateData.facingTimer = config.getParameter("sgsurvivorendgameFlamethrowerAttack.changeFacingTime")
+    stateData.facingTimer = config.getParameter("sgsurvivorburst.changeFacingTime")
     mcontroller.controlFace(direction)
   end
 end
 
-function sgsurvivorendgameFlamethrowerAttack.fire(aimVector)
-  local projectileType = config.getParameter("sgsurvivorendgameFlamethrowerAttack.projectile.type")
-  local projectileConfig = config.getParameter("sgsurvivorendgameFlamethrowerAttack.projectile.config")
+function sgsurvivorburst.fire(aimVector)
+  local projectileType = config.getParameter("sgsurvivorburst.projectile.type")
+  local projectileConfig = config.getParameter("sgsurvivorburst.projectile.config")
   local sourcePosition = config.getParameter("projectileSourcePosition")
   local sourceOffset = config.getParameter("projectileSourceOffset")
 
@@ -120,7 +119,7 @@ function sgsurvivorendgameFlamethrowerAttack.fire(aimVector)
   world.spawnProjectile(projectileType, monster.toAbsolutePosition(sourcePosition), entity.id(), aimVector, true, projectileConfig)
 end
 
-function sgsurvivorendgameFlamethrowerAttack.leavingState(stateData)
+function sgsurvivorburst.leavingState(stateData)
   animator.setAnimationState("flameSound", "off")
   animator.setAnimationState("flamethrower", "winddown")
   

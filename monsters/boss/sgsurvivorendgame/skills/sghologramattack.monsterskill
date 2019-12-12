@@ -1,6 +1,6 @@
 {
   "name" : "sghologramattack",
-  "label" : "FLAMETHROWER",
+  "label" : "hologram attack",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {

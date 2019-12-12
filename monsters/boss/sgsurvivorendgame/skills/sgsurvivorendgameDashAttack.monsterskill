@@ -1,6 +1,6 @@
 {
   "name" : "sgsurvivorendgameDashAttack",
-  "label" : "DASH 5000",
+  "label" : "DASH 125000",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
