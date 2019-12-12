@@ -113,7 +113,7 @@
           "baseValue" : 0
         },
         "grit" : {
-          "baseValue" : 100
+          "baseValue" : 0.999
         },
         "maxHealth" : {
           "baseValue" : 1750
