@@ -113,7 +113,7 @@
           "baseValue" : 0.01
         },
         "grit" : {
-          "baseValue" : 0.99
+          "baseValue" : 150
         },
         "maxHealth" : {
           "baseValue" : 1750
@@ -146,7 +146,7 @@
           "baseValue" : 1.0
         },
         "powerMultiplier" : {
-          "baseValue" : 1.0
+          "baseValue" : 1.2
         }
       },
 
