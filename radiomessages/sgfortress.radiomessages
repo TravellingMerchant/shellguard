@@ -334,6 +334,43 @@
     "text" : "Congratulations, you have completed the test without destroying your orangic body. Your mental health status is still pending."
   },
 
+//---------WRECKAGE-----------
+
+  "sgwreckage1" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "This is the wreckage of the ship you destroyed, be careful. There are still signs of movement."
+  }, 
+
+  "sgwreckage2" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Search parties have been dispatched in other areas of the wreckage. If he's alive, we'll find him."
+  }, 
+
+  "sgwreckage3" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Look out! Large robotic signature detected!"
+  }, 
+
+  "sgwreckage4" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "I'm glad you're alive, but other search parties are going silent further ahead. I need you to check it out."
+  }, 
+
+  "sgwreckage5" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Scans show this pipe will take you to another area of the wreckage."
+  },
+  
 //-----------FINAL------------
 
    "sgfinal1" : {

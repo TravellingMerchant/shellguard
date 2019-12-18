@@ -1,0 +1,24 @@
+{
+  "projectileName" : "sgcannonball",
+  "image" : "sgcannonball.png",
+  "animationCycle" : 0.35,
+  "physics" : "rollingboulder",
+  "bounces" : -1,
+  "frameNumber" : 4,
+  "pointLight" : false,
+  "speed" : 100,
+  "piercing" : true,
+  "damagePoly" : [ [-4, 0], [-2.5, -2.5], [0, -4], [2.5, -2.5], [4, 0], [2.5, 2.5], [0, 4], [-2.5, 2.5] ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/traps/avianbouldersmash/avianbouldersmash.config"
+    }
+  ],
+  "emitters" : [ "daggerblue" ],
+  "power" : 40.0,
+  "damageKind" : "hammer",
+  "damageType" : "IgnoresDef"
+}
+
+
