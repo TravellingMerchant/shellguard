@@ -1,0 +1,36 @@
+{
+  "name" : "sgenergyshield",
+  "effectConfig" : {
+		//Drone Spawning
+		"droneRespawnTime" : 5,
+		"droneCount" : 5,
+
+		//Drone Orbiting
+		"droneOrbitDistance" : 3,
+		"droneOrbitRate" : 0.8,
+
+		//Drone Config
+		"droneType" : "sgenergyshielddrone",
+		"droneParameters" : {
+			"movementMode" : "Orbit",
+
+			"attackMode" : "none",
+
+			"statusSettings" : {
+				"stats" : {
+					"flatMaxHealth" : { "baseValue" : 100 }
+				}
+			}
+		}
+	},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "sgenergyshield.lua"
+  ],
+
+  "animationConfig" : "sgenergyshield.animation",
+
+  "label" : "Energy Shield",
+  "icon" : "/items/armors/wfsystem/elemental/sgenergyshieldeffect.png"
+}
