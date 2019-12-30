@@ -27,30 +27,12 @@
 
     "renderLayer" : "Projectile-10",
 
-    "skillCount" : 8,
-    "skills" : [ "sgsurvivorburst", "sgsurvivorsnipe", "sgsurvivorjump", "sghologramattack", "sghologramarmy", "sgsurvivorendgamePunchAttack", "sgsurvivorendgameElectricBurstAttack", "sgsurvivorendgameDashAttack" ],
+    "skillCount" : 2,
+    "skills" : ["sgsurvivorjump", "sgSurvivorDeadAim"],
 
     "phases" : [
       {
-        "skills" : [  "sghologramattack", "sgsurvivorjump", "sgsurvivorsnipe", "sgsurvivorendgamePunchAttack", "sgsurvivorendgamePunchAttack", "sghologramattack", "sgsurvivorjump", "sgsurvivorburst", "sgsurvivorendgamePunchAttack"  ]
-      },
-      {
-        "trigger" : "healthPercentage",
-        "healthPercentage" : 0.8,
-        "enterPhase" : "sgsurvivorendgameElectricBurstAttack",
-        "skills" : [ "sgsurvivorendgameDashAttack", "sgsurvivorjump", "sgsurvivorendgameDashAttack", "sghologramarmy", "sgsurvivorjump"]
-      },
-      {
-        "trigger" : "healthPercentage",
-        "healthPercentage" : 0.5,
-        "enterPhase" : "sgsurvivorendgameElectricBurstAttack",
-        "skills" : [ "sgsurvivorendgameDashAttack" ]
-      },
-      {
-        "trigger" : "healthPercentage",
-        "healthPercentage" : 0.25,
-        "enterPhase" : "sgsurvivorendgameElectricBurstAttack",
-        "skills" : [ ]
+        "skills" : ["sgsurvivorjump", "sgSurvivorDeadAim"]
       }
     ],
 

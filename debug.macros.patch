@@ -15,5 +15,41 @@
     "value": [
 			"/warp instanceworld:sgfortressbossroom=430.730"
 		]
+  },
+  {
+    "op": "add",
+    "path": "/fortressfightreload",
+    "value": [
+			"/reload",
+			"/warp instanceworld:sgfortressbossroom=430.730"
+		]
+  },
+	
+  //Survivor Endgame Fight Shortcut
+  {
+    "op": "add",
+    "path": "/survivorendgamefight",
+    "value": [
+			"/warp instanceworld:sgwreckagebossroom=804.55"
+		]
+  },
+  {
+    "op": "add",
+    "path": "/survivorendgamefightreload",
+    "value": [
+			"/reload",
+			"/warp instanceworld:sgwreckagebossroom=804.55"
+		]
+  },
+  
+  {
+    "op": "add",
+    "path": "/letsallsayhitrav",
+    "value": [
+			"person A excitedly: Hiiii trav",
+			"person B in monotonous voice: Hi trav",
+			"person C who is on fire: AAAAAAAHHHHHH trav",
+			"person D who is sucking D: Hey bro"
+		]
   }
 ]

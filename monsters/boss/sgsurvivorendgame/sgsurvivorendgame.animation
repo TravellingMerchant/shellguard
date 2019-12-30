@@ -40,7 +40,7 @@
           }
         }
       },
-      "flamethrower" : {
+      "weapon" : {
         "priority" : 1,
         "default" : "idle",
         "states" : {
