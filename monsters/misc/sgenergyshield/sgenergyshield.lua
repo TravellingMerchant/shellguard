@@ -80,15 +80,16 @@ function moveOrbit()
   while not self.despawning do
     local pos = mcontroller.position()
     local parentPosition = world.entityPosition(self.parentEntity)
-    local targetPosition = vec2.add(parentPosition, self.targetOffset)
-
-    local toTarget = world.distance(targetPosition, mcontroller.position())
-    local targetDist = vec2.mag(toTarget)
-
-    local approachSpeed = math.min(targetDist ^ 0.75 * 15, maxFlySpeed)
-    local approachVec = vec2.mul(vec2.div(toTarget, targetDist), approachSpeed)
-
-    mcontroller.controlApproachVelocity(approachVec, flyForce)
+		local trackingVec = parentPosition
+		local trackingVel = world.entityVelocity(self.parentEntity)
+		
+		if not self.perfectTracking then
+			local targetPosition = vec2.add(parentPosition, self.targetOffset)
+			mcontroller.setPosition(targetPosition)
+		else
+			local targetPosition = vec2.add(parentPosition, self.targetOffset)
+			mcontroller.setPosition(targetPosition)
+		end
 
     updateAttack()
 
@@ -129,7 +130,7 @@ function updateAttack()
   if self.attackMode == "Target" then
     findTarget()
   else
-    local idleAngle = vec2.angle(world.distance(world.entityPosition(self.parentEntity), mcontroller.position())) + math.pi
+    local idleAngle = math.atan(self.targetOffset[2], self.targetOffset[1])
     setRotation(idleAngle)
   end
 
@@ -217,5 +218,5 @@ function findTarget()
   self.fireTimer = self.gunConfig.fireTime
 
   local idleAngle = vec2.angle(world.distance(world.entityPosition(self.parentEntity), mcontroller.position())) + math.pi
-  setRotation(idleAngle)
+	setRotation(idleAngle)
 end
