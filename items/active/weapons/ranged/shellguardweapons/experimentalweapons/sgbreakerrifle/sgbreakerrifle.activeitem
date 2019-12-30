@@ -37,7 +37,7 @@
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
     "fireTime" : 0.7,
-    "baseDps" : 9.5,
+    "baseDps" : 8.5,
     "energyUsage" : 25.0,
     "projectileCount" : 1,
     "inaccuracy" : 0.02,
@@ -82,7 +82,7 @@
     }
   },
 
-  "altAbilityType" : "spray",
+  "altAbilityType" : "sgrocketburst",
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
