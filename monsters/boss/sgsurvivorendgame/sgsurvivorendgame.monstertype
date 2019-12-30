@@ -27,12 +27,18 @@
 
     "renderLayer" : "Projectile-10",
 
-    "skillCount" : 2,
-    "skills" : ["sgsurvivorjump", "sgSurvivorDeadAim"],
+    "skillCount" : 7,
+    "skills" : ["sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sghologram1", "sghologram4", "sghologramburst" ],
 
     "phases" : [
       {
-        "skills" : ["sgsurvivorjump", "sgSurvivorDeadAim"]
+        "skills" : [ "sgsurvivorendgamePunchAttack", "sghologram1", "sgsurvivorendgameDashAttack", "sghologram1" ]
+      },
+      {
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.8,
+        "enterPhase" : "sgsurvivorjump",
+        "skills" : [ "sghologramburst", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack" ]
       }
     ],
 

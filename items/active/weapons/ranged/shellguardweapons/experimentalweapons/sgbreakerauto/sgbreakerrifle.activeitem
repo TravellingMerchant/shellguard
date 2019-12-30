@@ -1,11 +1,11 @@
 {
-  "itemName" : "sgcannon",
+  "itemName" : "sgbreakerauto",
   "price" : 2300,
-  "inventoryIcon" : "sggrenademachinegun.png:idle",
+  "inventoryIcon" : "sgbreakerrifle.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "Fire large cannonballs at foes, that then explode!",
-  "shortdescription" : "Shellguard Cannon",
+  "description" : "A Mercenaries custom Breaker Rifle, custom trigger fires in bursts.",
+  "shortdescription" : "Mercenary Breaker",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
@@ -13,21 +13,21 @@
   "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
   "twoHanded" : true,
   
-  "animation" : "sggrenademachinegun.animation",
+  "animation" : "sgbreakerrifle.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "sggrenademachinegun.png",
+    "middle" : "sgbreakerrifle.png",
     "barrel" : "",
     "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/plasmiteheavy3.ogg" ]
+      "fire" : [ "/sfx/gun/sgpushshot.ogg" ]
     }
   },
 
-  "baseOffset" : [1.75, -0.625],
-  "muzzleOffset" : [1.5, -0.125],
+  "baseOffset" : [2.25, 0.1],
+  "muzzleOffset" : [0.75, 0.3],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -36,9 +36,9 @@
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 1,
-    "baseDps" : 9.5,
-    "energyUsage" : 40.0,
+    "fireTime" : 0.4,
+    "baseDps" : 8.5,
+    "energyUsage" : 25.0,
     "projectileCount" : 1,
     "inaccuracy" : 0.02,
       "stances" : {
@@ -48,10 +48,7 @@
         "twoHanded" : true,
 
         "allowRotate" : true,
-        "allowFlip" : true,
-		
-        "frontArmFrame" : "swim.2",
-        "backArmFrame" : "rotation"
+        "allowFlip" : true
       },
       "fire" : {
         "duration" : 0,
@@ -61,34 +58,29 @@
 
         "allowRotate" : false,
         "allowFlip" : false,
-
-        "frontArmFrame" : "swim.2",
-        "backArmFrame" : "rotation",
 		
 		"animationStates": {
 			"weaponFire": "fire"
 		}
       },
       "cooldown" : {
-        "duration" : 0.5,
-        "armRotation" : -30,
-        "weaponRotation" : 40,
+        "duration" : 0.1,
+        "armRotation" : -15,
+        "weaponRotation" : 20,
         "twoHanded" : true,
-
-        "frontArmFrame" : "swim.2",
-        "backArmFrame" : "rotation",
 
         "allowRotate" : false,
         "allowFlip" : false
       }
     },
 
-    "fireType" : "auto",
+    "fireType" : "burst",
+    "burstCount" : 4,
+    "burstTime" : 0.1,
 
-    "projectileType" : "sgcannonballexplosive",
+    "projectileType" : "sgbreakerround",
     "projectileParameters" : { 
-      "knockback" : 15,
-	  "speed" : 100
+      "knockback" : 6
     }
   },
 
@@ -96,10 +88,10 @@
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
-    "inventoryIcon" : "sggrenademachinegunelite.png:idle",
+    "inventoryIcon" : "sgbreakerrifleelite.png",
     "animationParts" : {
-      "middle" : "sggrenademachinegunelite.png"
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/sgbreakerrifle/sgbreakerrifleelite.png"
     },
-    "shortdescription" : "Thermocatalystic Launcher ^yellow;^reset;"
+    "shortdescription" : "Breaker Rifle ^yellow;^reset;"
   }
 }

@@ -14,22 +14,11 @@
       "angleAdjust" : 0
     }
   ],
-  "actionOnCollide" : [
-    {
-      "action" : "sound",
-      "options" : [
-        "/sfx/gun/impact_arrow.ogg"
-      ]
-    }
-  ],
   "image" : "sghologramdash.png",
   "animationCycle" : 0.25,
-  "pointLight" : true,
-  "lightColor" : [0, 255, 255],
   "frameNumber" : 1,
   "damageKindImage" : "icon.png",
   "timeToLive" : 2,
-  "fullbright" : true,
   "power" : 0,
   "speed" : 100,
   "piercing" : true,

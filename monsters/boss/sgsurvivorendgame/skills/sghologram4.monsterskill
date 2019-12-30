@@ -1,0 +1,43 @@
+{
+  "name" : "sghologram4",
+  "label" : "survivor snipe",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sghologram4.lua" ],
+    "sghologram4" : {
+	  //Skill Config
+      "distanceRange" : [7, 15],
+      "changeFacingTime" : 0.5,
+      "skillDuration" : 0.3,
+
+	  //Gunfire Config
+      "windupTime" : 0.01,
+      "winddownTime" : 0.1,
+      "fireInterval" : 0.1,
+	  "inaccuracy" : 0.4,
+	  "projectileCount" : 1,
+
+	  //Movement Parameters
+	  //"walkSpeed" : 20,		These are completely optional, just here for novelty really :P
+	  //"runSpeed" : 20,		Just use moveSpeed if you want to apply to both
+      "moveSpeed" : 15,
+
+      "projectile" : {
+        "type" : "sghologramspawner",
+        "config" : {
+          "power" : 0,
+          "speed" : 0,
+          "damageRepeatGroup" : "sghologram4",
+          "damageRepeatTimeout" : 0.1
+        }
+      }
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "fireSound" : [ "/sfx/monsters/boss/survivorpainblank.ogg" ]
+    }
+  }
+}

@@ -6,7 +6,7 @@
   "parameters" : {
     "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sgsurvivorjump.lua" ],
     "sgsurvivorjump" : {
-      "riseHeight" : 8,
+      "riseHeight" : 6,
       "riseSpeed" : 1500,
 
       "skillDuration" : 1,

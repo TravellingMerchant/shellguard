@@ -1,50 +1,50 @@
-sghologramattack = {}
+require "/scripts/util.lua"
+
+sghologram1 = {}
 
 --------------------------------------------------------------------------------
-function sghologramattack.enter()
+function sghologram1.enter()
   if not hasTarget() then return nil end
 
   return {
-    windupTimer = config.getParameter("sghologramattack.windupTime"),
-    winddownTimer = config.getParameter("sghologramattack.winddownTime"),
-    distanceRange = config.getParameter("sghologramattack.distanceRange"),
+    windupTimer = config.getParameter("sghologram1.windupTime"),
+    winddownTimer = config.getParameter("sghologram1.winddownTime"),
+    distanceRange = config.getParameter("sghologram1.distanceRange"),
     skillTimer = 0,
-    skillDuration = config.getParameter("sghologramattack.skillDuration"),
-    angleCycle = config.getParameter("sghologramattack.angleCycle"),
+    skillDuration = config.getParameter("sghologram1.skillDuration"),
     fireTimer = 0,
-    fireInterval = config.getParameter("sghologramattack.fireInterval"),
-    fireAngle = 0,
-    maxFireAngle = config.getParameter("sghologramattack.maxFireAngle"),
+    fireInterval = config.getParameter("sghologram1.fireInterval"),
     lastFacing = mcontroller.facingDirection(),
-    facingTimer = 0
+    facingTimer = 0,
+	inaccuracy = config.getParameter("sghologram1.inaccuracy")
   }
 end
 
 --------------------------------------------------------------------------------
-function sghologramattack.enteringState(stateData)
+function sghologram1.enteringState(stateData)
   animator.setAnimationState("movement", "idle")
 
-  monster.setActiveSkillName("sghologramattack")
+  monster.setActiveSkillName("sghologram1")
 end
 
 --------------------------------------------------------------------------------
-function sghologramattack.update(dt, stateData)
+function sghologram1.update(dt, stateData)
   if not hasTarget() then return true end
 
   local toTarget = world.distance(self.targetPosition, mcontroller.position())
   local targetDir = util.toDirection(toTarget[1])
 
   if stateData.windupTimer > 0 then
-    if stateData.windupTimer == config.getParameter("sghologramattack.windupTime") then
-      animator.setAnimationState("flamethrower", "windup")
+    if stateData.windupTimer == config.getParameter("sghologram1.windupTime") then
+      animator.setAnimationState("weapon", "windup")
     end
     stateData.windupTimer = stateData.windupTimer - dt
     return false
   end
 
   mcontroller.controlParameters({
-    walkSpeed = config.getParameter("sghologramattack.moveSpeed"),
-    runSpeed = config.getParameter("sghologramattack.moveSpeed")  
+    walkSpeed = config.getParameter("sghologram1.walkSpeed") or config.getParameter("sghologram1.moveSpeed"),
+    runSpeed = config.getParameter("sghologram1.runSpeed") or config.getParameter("sghologram1.moveSpeed")
   })
 
   if math.abs(toTarget[1]) > stateData.distanceRange[1] + 4 then
@@ -58,10 +58,9 @@ function sghologramattack.update(dt, stateData)
   end
 
   if stateData.skillTimer > stateData.skillDuration then
-    animator.setAnimationState("flameSound", "off")
     if stateData.winddownTimer > 0 then
-      if stateData.winddownTimer == config.getParameter("sghologramattack.winddownTime") then
-        animator.setAnimationState("flamethrower", "winddown")
+      if stateData.winddownTimer == config.getParameter("sghologram1.winddownTime") then
+        animator.setAnimationState("weapon", "winddown")
       end
       stateData.winddownTimer = stateData.winddownTimer - dt
       return false
@@ -70,15 +69,14 @@ function sghologramattack.update(dt, stateData)
     return true
   end
 
-  animator.setAnimationState("flameSound", "on")
-  sghologramattack.controlFace(dt, stateData, targetDir)
+  sghologram1.controlFace(dt, stateData, targetDir)
 
   stateData.skillTimer = stateData.skillTimer + dt
 
   stateData.fireTimer = stateData.fireTimer - dt
   if stateData.fireTimer <= 0 then
     local aimVector = vec2.sub(self.targetPosition, mcontroller.position())
-    sghologramattack.fire(aimVector)
+    sghologram1.fire(aimVector)
 
     stateData.fireTimer = stateData.fireTimer + stateData.fireInterval
   end
@@ -88,26 +86,35 @@ function sghologramattack.update(dt, stateData)
   return false
 end
 
-function sghologramattack.controlFace(dt, stateData, direction)
+function sghologram1.controlFace(dt, stateData, direction)
   if direction ~= mcontroller.facingDirection() and stateData.facingTimer > 0 then
     stateData.facingTimer = stateData.facingTimer - dt
   else
-    stateData.facingTimer = config.getParameter("sghologramattack.changeFacingTime")
+    stateData.facingTimer = config.getParameter("sghologram1.changeFacingTime")
     mcontroller.controlFace(direction)
   end
 end
 
-function sghologramattack.fire(aimVector)
-  local projectileType = config.getParameter("sghologramattack.projectile.type")
-  local projectileConfig = config.getParameter("sghologramattack.projectile.config")
+function sghologram1.fire(aimVector)
+  local projectileType = config.getParameter("sghologram1.projectile.type")
+  local projectileCount = config.getParameter("sghologram1.projectileCount")
+  local projectileConfig = config.getParameter("sghologram1.projectile.config")
   local sourcePosition = config.getParameter("projectileSourcePosition")
   local sourceOffset = config.getParameter("projectileSourceOffset")
+    
+  if type(projectileCount) == "table" then
+    projectileCount = projectileCount[util.randomInRange(projectileCount)]
+  end
+  
+  if type(projectileType) == "table" then
+    projectileType = projectileType[math.random(#projectileType)]
+  end
 
   if projectileConfig.power then
     projectileConfig.power = projectileConfig.power * root.evalFunction("monsterLevelPowerMultiplier", monster.level())
   end
 
-  local animationAngle = math.atan(-aimVector[2], math.abs(aimVector[1])) --Because flipped sprite
+  local animationAngle = math.atan(-aimVector[2], math.abs(aimVector[1])) - math.pi/2 --Because flipped sprite
   animator.rotateGroup("projectileAim", animationAngle)
 
   local currentRotationAngle = animator.currentRotationAngle("projectileAim")
@@ -116,12 +123,22 @@ function sghologramattack.fire(aimVector)
   sourceOffset = vec2.rotate(sourceOffset, currentRotationAngle)
   sourcePosition = vec2.add(sourcePosition, sourceOffset)
 
-  world.spawnProjectile(projectileType, monster.toAbsolutePosition(sourcePosition), entity.id(), aimVector, true, projectileConfig)
+  animator.playSound("fireSound")
+  
+  for i = 1, (projectileCount or stateData.projectileCount) do
+    world.spawnProjectile(
+        projectileType,
+        mcontroller.position(),	--monster.toAbsolutePosition(sourcePosition),
+        entity.id(),
+        aimVector,
+        true,
+        projectileConfig
+      )
+  end
 end
 
-function sghologramattack.leavingState(stateData)
-  animator.setAnimationState("flameSound", "off")
-  animator.setAnimationState("flamethrower", "winddown")
+function sghologram1.leavingState(stateData)
+  animator.setAnimationState("weapon", "winddown")
   
   monster.setActiveSkillName("")
 end
