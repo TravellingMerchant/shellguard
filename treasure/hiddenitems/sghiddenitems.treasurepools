@@ -365,7 +365,39 @@
   
 //-----------misc---------------------
 
+
+  "sgmerchanthead" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgmerchanthead", 1]}
+      ]
+    }]
+  ],
   
+  "sgmerchantjacket" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgmerchantjacket", 1]}
+      ]
+    }]
+  ],
+  
+  "sgmerchantlegs" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgmerchantlegs", 1]}
+      ]
+    }]
+  ],
+
+  "sgbreakerauto" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgbreakerauto", 1]}
+      ]
+    }]
+  ],  
+
   "sg_modulecreator" : [
     [1, {
       "fill" : [

@@ -1,0 +1,44 @@
+{
+  "objectName" : "sgsurvivorrematchtele",
+  "objectType" : "teleporter",
+  "colonyTags" : ["misc"],
+  "printable" : false,
+  "price" : 3000,
+  "rarity" : "Common",
+  "description" : "This will take me to a digital fight zone.",
+  "shortdescription" : "Shellguard Rematch Teleporter",
+  "race" : "ancient",
+
+  "apexDescription" : "This will take me to a digital fight zone.",
+  "avianDescription" : "This will take me to a digital fight zone.",
+  "floranDescription" : "Thisssss will take me to a digital fight zone.",
+  "glitchDescription" : "Aware. This will take me to a digital fight zone.",
+  "humanDescription" : "This will take me to a digital fight zone.",
+  "hylotlDescription" : "This will take me to a digital fight zone.",
+  "novakidDescription" : "This will take me to a digital fight zone.",
+
+  "category" : "teleporter",
+  "lightColor" : [56, 102, 124],
+
+  "interactAction" : "OpenTeleportDialog",
+  "interactData" : "/interface/warping/sgsurvivorrematchport.config",
+
+  "inventoryIcon" : "sgsurvivorrematchicon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "sguforematchtele.png:<color>", "fullbright" : true }, { "image" : "sguforematchtelelit.png:<color>" } ],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "solid",
+      "collisionSpaces" : [ [-2, 0], [-1, 0], [-0, 0], [1, 0] ]
+    }
+  ],
+  
+  "teleporterFootPosition" : [0, 1]
+
+}

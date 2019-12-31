@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "sgwreckagebossroomrematch",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "sgwreckagebossroomrematch" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "sgwreckagebossroomrematch",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "sgwreckagebossroomrematch.json" ]
+    }
+  ]
+}

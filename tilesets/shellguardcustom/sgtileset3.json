@@ -16,7 +16,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":30,
+ "tilecount":31,
  "tiledversion":"1.3.1",
  "tileheight":400,
  "tileproperties":
@@ -259,6 +259,16 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"sgheatvent",
+         "tilesetDirection":"right"
+        },
+     "30":
+        {
+         "\/\/description":"sgdoubletroubletele",
+         "\/\/name":"sgdoubletroubletele",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sgelevatorsurvivaltele",
          "tilesetDirection":"right"
         },
      "4":
@@ -564,6 +574,16 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "30":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "4":
         {
          "\/\/description":"string",
@@ -770,6 +790,12 @@
          "image":"..\/..\/objects\/breakables\/sgheatvent\/sgheatventicon.png",
          "imageheight":38,
          "imagewidth":31
+        },
+     "30":
+        {
+         "image":"..\/..\/objects\/rematch teleporters\/sgelevatorsurvivaltele\/sgelevatorsurvivalteleicon.png",
+         "imageheight":67,
+         "imagewidth":40
         },
      "4":
         {

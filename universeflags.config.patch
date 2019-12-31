@@ -19,6 +19,24 @@
   
   {
     "op": "add",
+    "path": "/sgoutpost_survivorbeat",
+    "value": {
+      "actions": [
+        {
+          "type": "placeDungeon",
+          "dungeonId": "sgfortresscorebaseupdate",
+          "targetInstance": "sgfortresscorebase",
+          "targetPosition": [
+            297,
+            151
+          ]
+        }
+      ]
+    }
+  },
+  
+  {
+    "op": "add",
     "path": "/sgoutpost_gunshipshop",
     "value": {
       "actions": [

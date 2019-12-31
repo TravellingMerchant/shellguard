@@ -26,9 +26,9 @@ end
 
 function die()
   for _,playerId in ipairs(world.players()) do
-    world.sendEntityMessage(playerId, "swansongDead")
+    world.sendEntityMessage(playerId, "SurvivorDead")
   end
-  world.sendEntityMessage("teleporterdoor", "openDoor")
+  world.sendEntityMessage("sgteleporterdoor", "openDoor")
 end
 
 noxCaptureBehavior = async(function()

@@ -1,5 +1,5 @@
 {
-  "type" : "sgsurvivorendgame",
+  "type" : "sgsurvivorendgamerematch",
   "shortdescription" : "The Survivor",
 
   "categories" : [ "sgsurvivorendgame" ],
@@ -32,19 +32,19 @@
 
     "phases" : [
       {
-        "skills" : [ "sgsurvivorendgamePunchAttack", "sgspeartoss", "sghologram1", "sgsurvivorendgameDashAttack", "sgbreakershot", "sghologram1" ]
+        "skills" : [ "sgsurvivorendgamePunchAttack", "sgspeartoss", "sghologram1", "sghologram1", "sghologram1", "sgsurvivorendgameDashAttack", "sgbreakershot", "sgbreakershot", "sghologram1" ]
       },
       {
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.8,
         "enterPhase" : "sgsurvivorjump",
-        "skills" : [ "sgbreakershot", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack" ]
+        "skills" : [ "sghologramburst", "sgbreakershot", "sgsurvivorendgameDashAttack", "sghologram4", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sghologram4", "sgsurvivorendgamePunchAttack" ]
       },
       {
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.5,
         "enterPhase" : "sgsurvivorjump",
-        "skills" : [ "sghologramburst", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgspeartoss",  "sgbreakershot" ]
+        "skills" : [ "sghologramburst", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sghologram4", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgspeartoss", "sgsurvivorjump", "sgspeartoss", "sgsurvivorjump", "sgspeartoss",  "sgbreakershot" ]
       },
       {
         "trigger" : "healthPercentage",

@@ -167,6 +167,25 @@
  
   {
     "op" : "add",
+    "path" : "/sgwreckagebossroomrematch",
+    "value" : {
+      "primaryDungeon" : "sgwreckagebossroomrematch",
+      "weatherPool" : [
+        [1.0, "snowstorm"]
+      ],
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [3299, 900],
+      "dungeonBaseHeight" : 450,
+      "dungeonSurfaceHeight" : 100,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/survivorfightintro.ogg",
+      "biome": "snow"
+    }
+  },
+ 
+  {
+    "op" : "add",
     "path" : "/survivormission",
     "value" : {
       "primaryDungeon" : "survivormission",

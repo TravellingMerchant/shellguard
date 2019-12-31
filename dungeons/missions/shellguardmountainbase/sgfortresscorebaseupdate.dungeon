@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "sgfortresscorebaseupdate",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "sgfortresscorebaseupdate" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "sgfortresscorebaseupdate",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "sgfortresscorebaseupdate.json" ]
+    }
+  ]
+}
