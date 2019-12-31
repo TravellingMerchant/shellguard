@@ -29,8 +29,7 @@
       "stat" : "breathProtection",
       "amount" : 1.0
     },
-    "sgbackglow",
-    "sgenergyshield"
+    "sgbackglow"
   ],
   
   "acceptsAugmentType" : "back",
