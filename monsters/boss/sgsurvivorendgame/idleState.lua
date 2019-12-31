@@ -7,7 +7,7 @@ function idleState.enter()
 end
 
 function idleState.update(dt, stateData)
-  status.addPersistentEffect("yoImNebbyOwO", "sgenergyshield")
+  status.addPersistentEffect("yoImNebbyOwO", "sgsurvivorshield")
   local toSpawn = world.distance(self.spawnPosition, mcontroller.position())
   if math.abs(toSpawn[1]) > 1 then
     move(toSpawn, true)

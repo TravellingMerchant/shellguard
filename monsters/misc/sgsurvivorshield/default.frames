@@ -1,0 +1,14 @@
+{
+  "frameGrid" : {
+    "size" : [16, 32],
+    "dimensions" : [6, 1],
+
+    "names" : [
+      ["deploy.1", "deploy.2", "deploy.3", "deploy.4", "deploy.5", "active.1"]
+    ]
+  },
+
+  "aliases" : {
+    "default" : "deploy.1"
+  }
+}

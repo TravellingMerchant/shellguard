@@ -1,0 +1,103 @@
+{
+  "globalTagDefaults" : {
+    "directives" : ""
+  },
+
+  "animatedParts" : {
+    "stateTypes" : {
+      "droneState" : {
+        "default" : "deploy",
+        "states" : {
+          "deploy" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "active"
+          },
+          "active" : {
+            "frames" : 1,
+            "cycle" : 0.4,
+            "mode" : "loop",
+            "properties" : {
+              "persistentSound" : "/sfx/melee/elemental_aura_ice.ogg",
+              "persistentSoundRangeMultiplier" : 0.5
+            }
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "transformationGroups" : ["body"]
+        },
+        "partStates" : {
+          "droneState" : {
+            "deploy" : {
+              "properties" : {
+                "image" : "<partImage>:deploy.<frame><directives>"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "<partImage>:active.<frame><directives>"
+              }
+            }
+          }
+        }
+      },
+      "bodyFullbright" : {
+        "properties" : {
+          "transformationGroups" : ["body"],
+          "fullbright" : true,
+          "zLevel" : 1
+        },
+        "partStates" : {
+          "droneState" : {
+            "deploy" : {
+              "properties" : {
+                "image" : "<partImage>:deploy.<frame><directives>"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "<partImage>:active.<frame><directives>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "body" : {
+      "interpolated" : true
+    }
+  },
+
+  "particleEmitters" : {
+     "deathPoof" : {
+      "particles" : [
+        { "particle" : "iceshard" },
+        { "particle" : "iceshard" },
+        { "particle" : "iceshard" },
+        { "particle" : "iceshard" },
+        { "particle" : "iceshard" },
+        { "particle" : "iceshard" },
+        { "particle" : "iceshard" },
+        { "particle" : "iceshard" },
+        { "particle" : "iceshard" },
+        { "particle" : "iceshard" },
+        { "particle" : "iceshard" },
+        { "particle" : "iceshard" }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "turnHostile" : [ ],
+    "deathPuff" : [ "/sfx/projectiles/ice_barrier_break1.ogg", "/sfx/projectiles/ice_barrier_break2.ogg", "/sfx/projectiles/ice_barrier_break3.ogg", "/sfx/projectiles/ice_barrier_break4.ogg","/sfx/projectiles/ice_barrier_break5.ogg", "/sfx/projectiles/ice_barrier_break6.ogg", "/sfx/projectiles/ice_barrier_break7.ogg", "/sfx/projectiles/ice_barrier_break8.ogg", "/sfx/projectiles/ice_barrier_break9.ogg", "/sfx/projectiles/ice_barrier_break10.ogg" ]
+  }
+}

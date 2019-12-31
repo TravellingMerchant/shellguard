@@ -1,0 +1,96 @@
+{
+  "type" : "sgsurvivorshield",
+
+  "categories" : [ "sgsurvivorshield" ],
+  "parts" : [ "body" ],
+
+  "animation" : "sgenergyshield.animation",
+
+  "dropPools" : [
+    {
+      "default" : "empty"
+    }
+  ],
+
+  "baseParameters" : {
+    "clientEntityMode" : "ClientMasterAllowed",
+
+    "scripts" : [
+      "/monsters/misc/sgsurvivorshield/sgenergyshield.lua"
+    ],
+    "initialScriptDelta" : 2,
+
+    "level" : 6.5,
+
+    "metaBoundBox" : [-5, -5, 5, 5],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionEnabled" : false,
+      "collisionPoly" : [ [-0.75, -2.125], [-0.75, 2.125], [0.5, 2], [1, 0], [0.5, -2] ],
+
+      "gravityEnabled" : false,
+
+      "mass" : 0.5,
+      "flySpeed" : 8000,
+      "airForce" : 3000,
+
+      "airFriction" : 0,
+
+      "physicsEffectCategories" : []
+    },
+
+    "bodyMaterialKind" : "robotic",
+
+    "knockoutTime" : 0.1,
+    "knockoutEffect" : "",
+    "deathParticles" : "deathPoof",
+
+    "damageTeamType" : "friendly",
+			
+	"perfectTracking" : true,
+
+    "touchDamage" : {
+      "poly" : [ [-0.75, -2.125], [-0.75, 2.125], [0.5, 2], [1, 0], [0.5, -2] ],
+      "damage" : 0,
+      "teamType" : "assistant"
+    },
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : false,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/monsters/mechdrone/drone_status.lua"
+      ],
+      "primaryScriptDelta" : 1,
+
+      "stats" : {
+        "flatMaxHealth" : {
+          "baseValue" : 355
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        }
+      },
+
+      "resources" : {
+        "health" : {
+          "maxStat" : "flatMaxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : false,
+    "relocatable" : false
+  }
+}

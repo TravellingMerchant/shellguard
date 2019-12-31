@@ -1,0 +1,10 @@
+{
+  "name" : "sgenergyshield",
+  "category" : "sgsurvivorshield",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "bodyFullbright" : "body_fullbright.png"
+  }
+}
