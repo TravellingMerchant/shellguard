@@ -88,7 +88,7 @@
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
-    "inventoryIcon" : "sgbreakerrifleelite.png",
+    "inventoryIcon" : "sgbreakerrifleelite.png:idle",
     "animationParts" : {
       "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/sgbreakerrifle/sgbreakerrifleelite.png"
     },

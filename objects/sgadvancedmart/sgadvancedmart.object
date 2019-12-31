@@ -20,6 +20,8 @@
     "buyFactor" : 1.0,
     "sellFactor" : 0.2,
     "items" : [
+	  { "item" : "sgcannon" },
+	  { "item" : "sgcannonshotgun" },
 	  { "item" : "sggoblinsmg" },
 	  { "item" : "sgbulldogshotgun" },
 	  { "item" : "sgassaultsmg" },
