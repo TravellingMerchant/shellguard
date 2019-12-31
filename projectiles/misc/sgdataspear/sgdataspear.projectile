@@ -16,6 +16,31 @@
       ]
     }
   ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/plasmiteexplode.ogg" ]
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgfirecloud",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 3,
+      "backgroundRadius" : 3,
+      "explosiveDamageAmount" : 1.0,
+      "delaySteps" : 2
+    }
+
+  ],
   "lightColor" : [225, 100, 60],
   "power" : 0,
   "speed" : 80,

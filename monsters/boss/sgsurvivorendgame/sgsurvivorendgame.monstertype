@@ -27,18 +27,30 @@
 
     "renderLayer" : "Projectile-10",
 
-    "skillCount" : 7,
-    "skills" : ["sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sghologram1", "sghologram4", "sghologramburst" ],
+    "skillCount" : 9,
+    "skills" : ["sgsurvivorendgameDashAttack", "sgspeartoss", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sghologram1", "sghologram4", "sghologramburst", "sgbreakershot" ],
 
     "phases" : [
       {
-        "skills" : [ "sgsurvivorendgamePunchAttack", "sghologram1", "sgsurvivorendgameDashAttack", "sghologram1" ]
+        "skills" : [ "sgsurvivorendgamePunchAttack", "sgspeartoss", "sghologram1", "sgsurvivorendgameDashAttack", "sgbreakershot", "sghologram1" ]
       },
       {
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.8,
         "enterPhase" : "sgsurvivorjump",
-        "skills" : [ "sghologramburst", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack" ]
+        "skills" : [ "sgbreakershot", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack" ]
+      },
+      {
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.5,
+        "enterPhase" : "sgsurvivorjump",
+        "skills" : [ "sghologramburst", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgspeartoss",  "sgbreakershot" ]
+      },
+      {
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.2,
+        "enterPhase" : "sgsurvivorjump",
+        "skills" : [ "sghologramburst", "sgsurvivorendgamePunchAttack", "sghologram4", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgspeartoss", "sghologram4" ]
       }
     ],
 

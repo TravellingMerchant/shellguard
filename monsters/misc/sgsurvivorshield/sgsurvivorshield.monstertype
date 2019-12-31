@@ -72,7 +72,7 @@
 
       "stats" : {
         "flatMaxHealth" : {
-          "baseValue" : 355
+          "baseValue" : 255
         },
         "healthRegen" : {
           "baseValue" : 0.0
