@@ -65,6 +65,6 @@
   ],
   "emitters" : [ "largefireswoosh" ],
   "power" : 5.0,
-  "speed" : 100,
+  "speed" : 80,
   "damageKind" : "default"
 }

@@ -32,6 +32,9 @@
 	  { "item" : "shelldronehead" },
 	  { "item" : "shelldronechest" },
 	  { "item" : "shelldronelegs" },
+	  { "item" : "sgchristmaschest" },
+	  { "item" : "sgchristmasengineer" },
+	  { "item" : "sgchristmashelmet" },
 	  { "item" : "sgbangcorn" }
     ]
   },

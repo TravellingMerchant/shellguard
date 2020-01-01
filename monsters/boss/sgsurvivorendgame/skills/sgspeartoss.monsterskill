@@ -26,7 +26,7 @@
       "projectile" : {
         "type" : "sgdataspearspawner",
         "config" : {
-          "power" : 50,
+          "power" : 20,
           "speed" : 0,
           "damageRepeatGroup" : "sgspeartoss",
           "damageRepeatTimeout" : 0.1

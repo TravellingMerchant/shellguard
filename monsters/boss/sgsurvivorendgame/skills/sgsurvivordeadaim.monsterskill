@@ -26,7 +26,7 @@
       "projectile" : {
         "type" : "sgsurvivormotospawner",
         "config" : {
-          "power" : 50,
+          "power" : 40,
           "speed" : 0,
           "damageRepeatGroup" : "sgsurvivor-deadaim",
           "damageRepeatTimeout" : 0.1
