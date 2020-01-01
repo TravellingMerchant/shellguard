@@ -1,5 +1,5 @@
 {
-  "projectileName" : "sgsurvivordashspawner",
+  "projectileName" : "sgdashspawner",
   "physics" : "laser",
   "piercing" : true,
   "timeToLive" : 0.01,
