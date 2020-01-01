@@ -88,7 +88,7 @@
   "upgradeParameters" : {
     "inventoryIcon" : "sgbreakerrifleelite.png:idle",
     "animationParts" : {
-      "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/sgbreakerrifle/sgbreakerrifleelite.png"
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgbreakerrifle/sgbreakerrifleelite.png"
     },
     "shortdescription" : "Breaker Rifle ^yellow;^reset;"
   }
