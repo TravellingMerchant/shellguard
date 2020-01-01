@@ -1,5 +1,5 @@
 {
-  "projectileName" : "sgdashspawner",
+  "projectileName" : "sgsurvivordashspawner",
   "physics" : "laser",
   "piercing" : true,
   "timeToLive" : 0.01,
@@ -32,31 +32,25 @@
     },
     {
       "action" : "projectile",
-      "type" : "sgdash",
-      "fuzzAngle" : 0,
-      "angleAdjust" : 0
-    },
-    {
-      "action" : "projectile",
-      "type" : "sgdash",
+      "type" : "sgsurvivordash",
       "fuzzAngle" : 0,
       "angleAdjust" : -20
     },
     {
       "action" : "projectile",
-      "type" : "sgdash",
+      "type" : "sgsurvivordash",
       "fuzzAngle" : 0,
       "angleAdjust" : 20
     },
     {
       "action" : "projectile",
-      "type" : "sgdash",
+      "type" : "sgsurvivordash",
       "fuzzAngle" : 0,
       "angleAdjust" : -35
     },
     {
       "action" : "projectile",
-      "type" : "sgdash",
+      "type" : "sgsurvivordash",
       "fuzzAngle" : 0,
       "angleAdjust" : 35
     }
