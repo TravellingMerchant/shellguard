@@ -23,7 +23,7 @@
   "speed" : 100,
   "piercing" : true,
   "physics" : "sgruincleaverphysics",
-  "damageKind" : "bow",
+  "damageKind" : "noDamage",
   "scripts" : [ "sghologramdash.lua" ],
   "baseHomingControlForce" : 5000
 }

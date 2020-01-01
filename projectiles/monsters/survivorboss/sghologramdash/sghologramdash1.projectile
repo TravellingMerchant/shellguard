@@ -25,5 +25,5 @@
   "speed" : 60,
   "piercing" : true,
   "physics" : "sgruincleaverphysics",
-  "damageKind" : "bow"
+  "damageKind" : "noDamage"
 }
