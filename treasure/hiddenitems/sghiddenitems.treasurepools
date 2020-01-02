@@ -50,6 +50,22 @@
       ]
     }]
   ],
+
+  "endgamedrop" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "sgsurvivoraxe"}
+      ]
+    }]
+  ],
+  
+  "endgamedroprematch" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "sgbayonetpistol"}
+      ]
+    }]
+  ],
   
   "fortressdroprematch" : [
     [1, {

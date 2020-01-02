@@ -1,5 +1,5 @@
 {
-  "projectileName" : "sgbreakerroundblast",
+  "projectileName" : "sgbreakerroundheavy",
   "image" : "sgbreakerround.png",
   "animationCycle" : 0.2,
   "frameNumber" : 1,
@@ -14,23 +14,11 @@
   "actionOnReap" : [
     {
       "action" : "config",
-      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+      "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
     },
     {
       "action" : "light",
       "color" : "orange"
-    },
-    {
-      "action" : "explosion",
-      "foregroundRadius" : 2,
-      "backgroundRadius" : 2,
-      "explosiveDamageAmount" : 100,
-      "delaySteps" : 2
-    },
-	{
-      "action" : "projectile",
-      "inheritDamageFactor" : 0.3,
-      "type" : "sgshrapnelblastbreaker"
     },
 	{
       "action" : "projectile",
@@ -67,17 +55,18 @@
       "action" : "loop",
       "count" : 1,
       "body" : [
-	{
-      "action" : "projectile",
-      "inheritDamageFactor" : 0.0,
-      "type" : "fireguardianexplosion",
-      "fuzzAngle" : 360
-    }
+        {
+          "action" : "projectile",
+          "type" : "sgbulletring",
+          "fuzzAngle" : 360,
+          "inheritDamageFactor" : 0.1,
+          "angleAdjust" : 0
+        }
       ]
     }
   ],
 
   "power" : 5.0,
-  "speed" : 50,
+  "speed" : 150,
   "damageKind" : "default"
 }

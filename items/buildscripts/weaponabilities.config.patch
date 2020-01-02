@@ -21,5 +21,6 @@
 	
 	//Neb's Abilties
   {"op" : "add", "path": "/neb-enhancedchargefire", "value" : "/items/active/weapons/ranged/abilities/neb-enhancedchargefire/neb-enhancedchargefire.weaponability"},
-  { "op": "add", "path": "/nebsgprojectilecombo", "value": "/items/active/weapons/melee/abilities/speargun/spearguncombo.weaponability" }
+  { "op": "add", "path": "/nebsgprojectilecombo", "value": "/items/active/weapons/melee/abilities/speargun/spearguncombo.weaponability" },
+  { "op": "add", "path": "/sgaxeguncombo", "value": "/items/active/weapons/melee/abilities/speargun/sgaxeguncombo.weaponability" }
 ]

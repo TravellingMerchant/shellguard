@@ -9,7 +9,7 @@
   "reversed" : true,
   "dropPools" : [
     {
-      "default" : "sgarenabossdrop"
+      "default" : "endgamedrop"
     }
   ],
 

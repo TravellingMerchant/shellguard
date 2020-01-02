@@ -44,6 +44,7 @@
   "lightColor" : [225, 100, 60],
   "power" : 0,
   "speed" : 80,
+  "emitters" : [ "rocketsmoke" ],
   "orientationLocked" : false,
   "onlyHitTerrain" : false,
   "flippable" : false,

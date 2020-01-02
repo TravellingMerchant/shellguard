@@ -1,0 +1,29 @@
+{
+  "projectileName" : "sgplayerhologramdash",
+    "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "sgplayerhologramdash1",
+      "fuzzAngle" : 30,
+      "angleAdjust" : 180
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgplayerhologramdash1",
+      "fuzzAngle" : 30,
+      "angleAdjust" : 0
+    }
+  ],
+  "image" : "sgplayerhologramdash.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 2,
+  "power" : 0,
+  "speed" : 100,
+  "piercing" : false,
+  "physics" : "laser",
+  "damageKind" : "noDamage",
+  "scripts" : [ "sgplayerhologramdash.lua" ],
+  "baseHomingControlForce" : 5000
+}
