@@ -41,7 +41,7 @@
   "power" : 20,
   "damagePoly" : [],
 
-  "fullbright" : true,
+  "fullbright" : false,
   "persistentAudio" : "/sfx/objects/sawblade.ogg",
   "damageKind" : "sawblade",
   "emitters" : [ "daggerblue" ],

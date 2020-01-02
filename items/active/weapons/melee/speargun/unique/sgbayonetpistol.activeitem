@@ -70,9 +70,9 @@
 					"fireSound" : "gunfire",
 				
 					//Recoil
-					"recoilKnockbackVelocity" : 3,
-					"crouchStopsRecoil" : true,
-					"crouchRecoilKnockbackVelocity" : 1,
+					//"recoilKnockbackVelocity" : 3,
+					//"crouchStopsRecoil" : true,
+					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
 					"projectile" : "sgbreakerround",
@@ -105,9 +105,9 @@
 					"fireSound" : "gunfire",
 				
 					//Recoil
-					"recoilKnockbackVelocity" : 3,
-					"crouchStopsRecoil" : true,
-					"crouchRecoilKnockbackVelocity" : 1,
+					//"recoilKnockbackVelocity" : 3,
+					//"crouchStopsRecoil" : true,
+					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
 					"projectile" : "sgbreakerround",
@@ -140,9 +140,9 @@
 					"fireSound" : "gunfire",
 				
 					//Recoil
-					"recoilKnockbackVelocity" : 3,
-					"crouchStopsRecoil" : true,
-					"crouchRecoilKnockbackVelocity" : 1,
+					//"recoilKnockbackVelocity" : 3,
+					//"crouchStopsRecoil" : true,
+					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
 					"projectile" : "sgbreakerround",
@@ -175,7 +175,7 @@
 					"fireSound" : "gunfire2",
 				
 					//Recoil
-					"recoilKnockbackVelocity" : 10,
+					"recoilKnockbackVelocity" : 15,
 					"crouchStopsRecoil" : true,
 					"crouchRecoilKnockbackVelocity" : 1,
 					
