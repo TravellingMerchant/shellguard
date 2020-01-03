@@ -37,7 +37,7 @@
 
   "animationParameters" : {
     "sounds" : {
-      "fireSound" : [ "/sfx/gun/sgpushshot.ogg" ]
+      "fireSound2" : [ "/sfx/gun/sgpushshot.ogg" ]
     }
   }
 }
