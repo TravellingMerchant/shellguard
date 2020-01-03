@@ -892,7 +892,7 @@
                  "y":2528
                 }, 
                 {
-                 "gid":9558,
+                 "gid":9560,
                  "height":32,
                  "id":2026,
                  "name":"",
@@ -904,7 +904,7 @@
                  "y":2488
                 }, 
                 {
-                 "gid":9713,
+                 "gid":9715,
                  "height":40,
                  "id":2027,
                  "name":"",
@@ -916,7 +916,7 @@
                  "y":2488
                 }, 
                 {
-                 "gid":9713,
+                 "gid":9715,
                  "height":40,
                  "id":2028,
                  "name":"",
@@ -928,7 +928,7 @@
                  "y":2488
                 }, 
                 {
-                 "gid":9602,
+                 "gid":9604,
                  "height":32,
                  "id":2032,
                  "name":"",
@@ -940,7 +940,7 @@
                  "y":2536
                 }, 
                 {
-                 "gid":2147493250,
+                 "gid":2147493252,
                  "height":32,
                  "id":2033,
                  "name":"",
@@ -952,7 +952,7 @@
                  "y":2536
                 }, 
                 {
-                 "gid":9512,
+                 "gid":9514,
                  "height":16,
                  "id":2034,
                  "name":"",
@@ -964,7 +964,7 @@
                  "y":2536
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9630,
                  "height":24,
                  "id":2035,
                  "name":"",
@@ -976,7 +976,7 @@
                  "y":2512
                 }, 
                 {
-                 "gid":9713,
+                 "gid":9715,
                  "height":40,
                  "id":2039,
                  "name":"",
@@ -988,7 +988,7 @@
                  "y":2488
                 }, 
                 {
-                 "gid":9713,
+                 "gid":9715,
                  "height":40,
                  "id":2040,
                  "name":"",
@@ -1000,7 +1000,7 @@
                  "y":2488
                 }, 
                 {
-                 "gid":9602,
+                 "gid":9604,
                  "height":32,
                  "id":2041,
                  "name":"",
@@ -1012,7 +1012,7 @@
                  "y":2536
                 }, 
                 {
-                 "gid":2147493250,
+                 "gid":2147493252,
                  "height":32,
                  "id":2042,
                  "name":"",
@@ -1024,7 +1024,7 @@
                  "y":2536
                 }, 
                 {
-                 "gid":9512,
+                 "gid":9514,
                  "height":16,
                  "id":2043,
                  "name":"",
@@ -1036,7 +1036,7 @@
                  "y":2536
                 }, 
                 {
-                 "gid":9628,
+                 "gid":9630,
                  "height":24,
                  "id":2044,
                  "name":"",
@@ -1080,7 +1080,7 @@
                  "y":2528
                 }, 
                 {
-                 "gid":9602,
+                 "gid":9604,
                  "height":32,
                  "id":2052,
                  "name":"",
@@ -1092,7 +1092,7 @@
                  "y":2536
                 }, 
                 {
-                 "gid":2147493250,
+                 "gid":2147493252,
                  "height":32,
                  "id":2053,
                  "name":"",
@@ -1104,7 +1104,7 @@
                  "y":2536
                 }, 
                 {
-                 "gid":9558,
+                 "gid":9560,
                  "height":32,
                  "id":2054,
                  "name":"",
@@ -1116,7 +1116,7 @@
                  "y":2488
                 }, 
                 {
-                 "gid":2147493250,
+                 "gid":2147493252,
                  "height":32,
                  "id":2055,
                  "name":"",
@@ -1128,7 +1128,7 @@
                  "y":2536
                 }, 
                 {
-                 "gid":9602,
+                 "gid":9604,
                  "height":32,
                  "id":2056,
                  "name":"",
@@ -1140,7 +1140,7 @@
                  "y":2536
                 }, 
                 {
-                 "gid":2147493250,
+                 "gid":2147493252,
                  "height":32,
                  "id":2057,
                  "name":"",
@@ -1152,7 +1152,7 @@
                  "y":2536
                 }, 
                 {
-                 "gid":9602,
+                 "gid":9604,
                  "height":32,
                  "id":2058,
                  "name":"",
@@ -1270,7 +1270,26 @@
          "draworder":"topdown",
          "id":7,
          "name":"monsters & npcs",
-         "objects":[],
+         "objects":[
+                {
+                 "height":8,
+                 "id":2066,
+                 "name":"drone boss",
+                 "properties":
+                    {
+                     "monster":"sgheavyheavydrone"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":5344,
+                 "y":2464
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -1323,7 +1342,7 @@
          "y":0
         }],
  "nextlayerid":14,
- "nextobjectid":2066,
+ "nextobjectid":2067,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.1",
@@ -1506,11 +1525,11 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }, 
         {
-         "firstgid":9512,
+         "firstgid":9514,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/human.json"
         }, 
         {
-         "firstgid":9759,
+         "firstgid":9761,
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgfactory.json"
         }],
  "tilewidth":8,
