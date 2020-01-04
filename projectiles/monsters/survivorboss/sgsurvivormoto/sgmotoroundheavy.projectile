@@ -8,7 +8,7 @@
   "damageKindImage" : "icon.png",
   "pointLight" : true,
   "physics" : "laser",
-  "bounces" : 2,
+  "bounces" : 0,
   "lightColor" : [225, 100, 0],
   "actionOnReap" : [
     {

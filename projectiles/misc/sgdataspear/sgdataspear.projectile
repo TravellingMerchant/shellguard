@@ -26,16 +26,9 @@
       "options" : [ "/sfx/gun/plasmiteexplode.ogg" ]
     },
     {
-      "action" : "projectile",
-      "type" : "sgfirecloud",
-      "fuzzAngle" : 0,
-      "inheritDamageFactor" : 0.2,
-      "angleAdjust" : 0
-    },
-    {
       "action" : "explosion",
-      "foregroundRadius" : 3,
-      "backgroundRadius" : 3,
+      "foregroundRadius" : 2,
+      "backgroundRadius" : 2,
       "explosiveDamageAmount" : 1.0,
       "delaySteps" : 2
     }
@@ -45,6 +38,7 @@
   "power" : 0,
   "speed" : 80,
   "emitters" : [ "rocketsmoke" ],
+  "persistentAudio" : "/sfx/objects/mechbeacon_pulse2.ogg",
   "orientationLocked" : false,
   "onlyHitTerrain" : false,
   "flippable" : false,

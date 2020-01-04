@@ -152,7 +152,7 @@
     "value" : {
       "primaryDungeon" : "sgwreckagebossroom",
       "weatherPool" : [
-        [1.0, "snowstorm"]
+        [1.0, "snow"]
       ],
       "threatLevel" : 6,
       "gravity" : 80,
