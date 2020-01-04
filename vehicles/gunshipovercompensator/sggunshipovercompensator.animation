@@ -1,0 +1,606 @@
+{
+	"animatedParts" : {
+		"stateTypes" : {
+			"movement" : {
+				"default" : "open",
+				"states" : {
+					"warpInPart1" : {
+						"frames" : 1,	
+						"cycle" : 0.33,
+						"mode" : "transition",
+						"transition" : "opening"
+					},
+					"closing" : {
+						"frames" : 3,
+						"cycle" : 0.33,
+						"mode" : "transition",
+						"transition" : "idle"
+					},
+					"idle" : {},
+					"opening" : {
+						"frames" : 3,
+						"cycle" : 0.33,
+						"mode" : "transition",
+						"transition" : "open"
+					},
+					"open" : {},
+					"warpOutPart1" : {
+						"frames" : 1,
+						"cycle" : 0.33,
+						"mode" : "transition",
+						"transition" : "invisible"
+					},
+					"invisible" : {}
+				}
+			},
+		"ventralAutocannon" : {
+		"default" : "off",
+				"states" : {
+					"off" : {},
+					"fire" : {
+						"frames" : 3,
+						"cycle" : 0.05,
+						"mode" : "transition",
+			"transition" : "off"
+					}
+				}
+		},
+		"forwardDoubleCannonFront" : {
+		"default" : "off",
+				"states" : {
+					"off" : {},
+					"fire" : {
+						"frames" : 3,
+						"cycle" : 0.3,
+						"mode" : "transition",
+			"transition" : "off"
+					}
+				}
+		},
+		"forwardDoubleCannonBack" : {
+		"default" : "off",
+				"states" : {
+					"off" : {},
+					"fire" : {
+						"frames" : 3,
+						"cycle" : 0.3,
+						"mode" : "transition",
+			"transition" : "off"
+					}
+				}
+		},
+			"onfire" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"on" : {
+						"frames" : 6,
+						"cycle" : 0.5,
+						"mode" : "loop"
+					}
+				}
+			},
+		"backFinFront" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"on" : {
+						"frames" : 1,
+						"cycle" : 0.125,
+						"mode" : "loop"
+					}
+				}
+			},
+		"backFinBack" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"on" : {
+						"frames" : 1,
+						"cycle" : 0.125,
+						"mode" : "loop"
+					}
+				}
+			},
+			"rearThruster" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"on" : {
+						"frames" : 1,
+						"cycle" : 0.125,
+						"mode" : "loop"
+					}
+				}
+			},
+			"bottomThruster" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"on" : {
+						"frames" : 1,
+						"cycle" : 0.125,
+						"mode" : "loop"
+					}
+				}
+			},
+		"sideThrusterFront" : {
+				"default" : "off",
+				"states" : {
+					"off" : {
+			"frames" : 1,
+						"cycle" : 0.2,
+						"mode" : "loop"
+			},
+					"on" : {
+						"frames" : 4,
+						"cycle" : 0.2,
+						"mode" : "loop"
+					}
+				}
+			},
+		"sideThrusterBack" : {
+				"default" : "off",
+				"states" : {
+					"off" : {
+			"frames" : 1,
+						"cycle" : 0.2,
+						"mode" : "loop"
+			},
+					"on" : {
+						"frames" : 4,
+						"cycle" : 0.2,
+						"mode" : "loop"
+					}
+				}
+			}
+		},
+
+		"parts" : {
+			"background" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -1,
+					"transformationGroups" : ["flip", "rotation"]
+				},
+
+				"partStates" : {
+					"movement" : {
+						"warpInPart1" : {
+							"properties" : {
+								"image" : "<shipName>background.png:default"
+				}
+						},
+						"warpInPart2" : {
+							"properties" : {
+								"image" : "<shipName>background.png:default"
+							}
+						},
+						"closing" : {
+							"properties" : {
+								"image" : "<shipName>background.png:default"
+							}
+						},
+			"idle" : {
+							"properties" : {
+								"image" : "<shipName>background.png:default"
+							}
+						},
+			"opening" : {
+							"properties" : {
+								"image" : "<shipName>background.png:default"
+							}
+						},
+			"open" : {
+							"properties" : {
+								"image" : "<shipName>background.png:default"
+							}
+						},
+						"warpOutPart1" : {
+							"properties" : {
+								"image" : "<shipName>background.png:default"
+							}
+						},
+						"warpOutPart2" : {
+							"properties" : {}
+						},
+						"invisible" : {
+							"properties" : {}
+						}
+					}
+				}
+			},
+
+			"foreground" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 1,
+					"transformationGroups" : ["flip", "rotation"],
+					"drivingSeatPosition" : [8.1875, 0.25],
+					"passengerSeatPosition" : [0, 0]
+				},
+
+				"partStates" : {
+					"movement" : {
+						"warpInPart1" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:move.<damageState>"
+							}
+						},
+						"warpInPart2" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:move.<damageState>"
+							}
+						},
+			"closing" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:closing.<frame>.<damageState>"
+							}
+						},
+			"idle" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:move.<damageState>"
+							}
+						},
+			"opening" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:opening.<frame>.<damageState>"
+							}
+						},
+						"open" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:open.<damageState>"
+							}
+						},
+						"warpOutPart1" : {
+							"properties" : {
+								"image" : "<shipName>foreground.png:move.<damageState>"
+							}
+						},
+						"warpOutPart2" : {
+							"properties" : {}
+						},
+						"invisible" : {
+							"properties" : {}
+						}
+					}
+				}
+			},
+			"warp" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 10,
+					"fullbright" : true,
+					"offset" : [-0.125,0.5625],
+					"transformationGroups" : ["flip", "rotation"]
+				},
+				"partStates" : {
+					"movement" : {
+						"warpInPart1" : {
+							"properties" : {
+								"image" : "sgbasicgunshipwarp.png:warpInPart1.<frame>"
+							}
+						},
+						"idle" : {
+							"properties" : {}
+						},
+						"warpOutPart1" : {
+							"properties" : {
+								"image" : "sgbasicgunshipwarp.png:warpOutPart1.<frame>"
+							}
+						},
+						"invisible" : {
+							"properties" : {}
+						}
+					}
+				}
+			},
+			"fire" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 2,
+					"fullbright" : true,
+					"transformationGroups" : ["flip", "rotation"]
+				}
+			},
+			"rearThrust" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -1,
+					"fullbright" : true,
+					"light" : [87, 148, 150],
+					"transformationGroups" : ["flip", "rotation"]
+				},
+				"partStates" : {
+					"rearThruster" : {
+						"on" : {
+							"properties" : {
+								"image" : "/animations/hoverbikethruster/backthruster.png:thrust.<rearThrusterFrame>",
+								"offset" : [-9, 0.9]
+							}
+						}
+					}
+				}
+			},
+			"bottomThrust" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -1,
+					"fullbright" : true,
+					"light" : [87, 148, 150],
+					"transformationGroups" : ["flip", "rotation"]
+				},
+				"partStates" : {
+					"bottomThruster" : {
+						"on" : {
+							"properties" : {
+								"image" : "/animations/hoverbikethruster/bottomthruster.png:thrust.<bottomThrusterFrame>",
+								"offset" : [0.1, -2.0]
+							}
+						}
+					}
+				}
+			},
+		"wingBack" : {
+				"properties" : {
+			"centered" : true,
+			"zLevel" : -3,
+			"offset" : [8.375,1.9375],
+			"anchorPart" : "foreground",
+			"image" : "sgbasicgunshipwingback.png"
+			}
+		},
+		"sideThrusterFront" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 4,
+					"offset" : [-2.75,-0.625],
+					"transformationGroups" : ["sideThrusterFront"],
+			"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"sideThrusterFront" : {
+						"off" : {
+							"properties" : {
+								"image" : "sgbasicgunshipsidethrusterfront.png:off.<frame>"
+							}
+						},
+			"on" : {
+							"properties" : {
+								"image" : "sgbasicgunshipsidethrusterfront.png:on.<frame>"
+							}
+						}
+					}
+				}
+			},
+		"sideThrusterBack" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -4,
+					"offset" : [10, -0.625],
+					"transformationGroups" : ["sideThrusterBack"],
+			"anchorPart" : "foreground"
+				},
+				"partStates" : {
+					"sideThrusterBack" : {
+			"off" : {
+							"properties" : {
+								"image" : "sgbasicgunshipsidethrusterback.png:off.<frame>"
+							}
+						},
+						"on" : {
+							"properties" : {
+								"image" : "sgbasicgunshipsidethrusterback.png:on.<frame>"
+							}
+						}
+					}
+				}
+			},
+		"backFinFront" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 2,
+					"offset" : [-9, 2.5],
+					"transformationGroups" : ["backFinFront"],
+					"anchorPart" : "foreground",
+					"image" : "sgbasicgunshipbackfin.png"
+			}
+			},
+		"backFinBack" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -1,
+					"offset" : [-4.25, 2.5],
+					"transformationGroups" : ["backFinBack"],
+					"anchorPart" : "foreground",
+					"image" : "sgbasicgunshipbackfin.png"
+		}
+			},
+		"ventralAutocannon" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 1,
+					"offset" : [6.25, -3.75],
+					"transformationGroups" : ["ventralAutocannon"],
+					"anchorPart" : "foreground"
+				},
+		"partStates" : {
+					"ventralAutocannon" : {
+						"off" : {
+							"properties" : {
+								"image" : "sgbasicgunshipautocannon.png:idle.<frame>"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "sgbasicgunshipautocannon.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			},
+			"forwardDoubleCannonBack" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -2,
+					"offset" : [15, -1.125],
+					"transformationGroups" : ["forwardDoubleCannonBack"],
+					"anchorPart" : "foreground"
+				},
+		"partStates" : {
+					"forwardDoubleCannonBack" : {
+						"off" : {
+							"properties" : {
+								"image" : "sgbasicgunshipdoublecannon.png:idle.1"
+							}
+						},
+			"fire" : {
+							"properties" : {
+								"image" : "sgbasicgunshipdoublecannon.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			},
+			"forwardDoubleCannonFront" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 4,
+					"offset" : [10, -1.125],
+					"transformationGroups" : ["forwardDoubleCannonFront"],
+					"anchorPart" : "foreground"
+				},
+		"partStates" : {
+					"forwardDoubleCannonFront" : {
+						"off" : {
+							"properties" : {
+								"image" : "sgbasicgunshipdoublecannon.png:idle.1"
+							}
+						},
+			"fire" : {
+							"properties" : {
+								"image" : "sgbasicgunshipdoublecannon.png:fire.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"globalTagDefaults" : {
+		"colour" : "",
+		"shipName" : "sgbasicgunship"
+	},
+
+	
+
+
+	"transformationGroups" : {
+		"rotation" : {
+			"interpolated" : true
+		},
+		"flip" : {},
+	"sideThrusterFront" : {},
+	"sideThrusterBack" : {},
+	"backFinFront" : {},
+	"backFinBack" : {},
+	"ventralAutocannon" : {},
+	"forwardDoubleCannonFront" : {},
+	"forwardDoubleCannonBack" : {}
+	},
+
+	"particleEmitters" : {
+		"smoke" : {
+			"transformationGroups" : ["flip", "rotation"],
+			"emissionRate" : 0.0,
+			"offsetRegion" : [0, -1, 8, 2],
+			"particles" : [ { "particle" : "burningvehiclesmokefront"} ]
+		},
+		"fire" : {
+			"transformationGroups" : ["flip", "rotation"],
+			"emissionRate" : 0.0,
+			"offsetRegion" : [0, -2, 8, 2],
+			"particles" : [
+				{ "particle" : "burningdust"},
+				{ "particle" : "campfireflames"},
+				{ "particle" : "fireshard"},
+				{ "particle" : "burningvehiclesmokeback"}
+			]
+		},
+		"damageIntermittent" : {
+			"transformationGroups" : ["flip", "rotation"],
+			"emissionRate" : 0.0,
+			"burstCount"	: 5,
+			"offsetRegion" : [0, -1.5, 7, 1.5],
+			"particles" : [
+				{ "particle" : "burningvehiclesmokefront"},
+				{ "particle" : "fireshard"}
+			]
+		},
+		"damageShards" : {
+        "transformationGroups" : ["flip", "rotation"],
+        "emissionRate" : 0.0,
+        "burstCount"  : 50,
+        "offsetRegion" : [0, -1.5, 7, 1.5],
+        "particles" : [{ "particle" : "fireshard"}]
+      },
+
+      "wreckage" : {
+        "transformationGroups" : ["flip", "rotation"],
+        "active" : false,
+        "emissionRate" : 0.0,
+        "particles" : [
+                       { "particle" : "sggunshipwreckage1"},
+                       { "particle" : "sggunshipwreckage2"},
+                       { "particle" : "sggunshipwreckage3"},
+                       { "particle" : "sggunshipwreckage4"},
+                       { "particle" : "sggunshipwreckage5"}]
+      }
+	},
+
+ "lights" : {},
+
+	"sounds" : {
+	"ventralAutocannon" : [
+		"/sfx/gun/tankshot.ogg"
+	],
+	"bombbay" : [
+		"/sfx/gun/grenadeblast_small_fire2.ogg"
+	],
+	"forwardDoubleCannons" : [
+			"/sfx/gun/cannonfire1.ogg",
+			"/sfx/gun/cannonfire1.ogg",
+			"/sfx/gun/sgmotoshot.ogg"
+		],
+		"collisionNotification" : [
+			"/sfx/tech/hoverbike_bump1.ogg",
+			"/sfx/tech/hoverbike_bump2.ogg",
+			"/sfx/tech/hoverbike_bump3.ogg"
+		],
+		"collisionDamage" : [ "/sfx/melee/bite_robotic1.ogg" ],
+		"changeDamageState" : [
+			"/sfx/gun/grenadeblast_small_fire1.ogg",
+			"/sfx/gun/grenadeblast_small_fire2.ogg",
+			"/sfx/gun/grenadeblast_small_fire3.ogg"
+		],
+
+		"explode" : [
+			"/sfx/gun/grenadeblast_small_fire1.ogg",
+			"/sfx/gun/grenadeblast_small_fire2.ogg",
+			"/sfx/gun/grenadeblast_small_fire3.ogg"
+		],
+
+		"engineStart" : [ "/sfx/tools/teleport_up.ogg" ],
+		"engineLoop" : [ "/sfx/vehicles/gunship engine.ogg" ],
+		"engineStartDamaged" : [ "/sfx/tools/teleport_up.ogg" ],
+		"engineLoopDamaged" : [ "/sfx/vehicles/gunship enginealarm.ogg" ],
+		"damageIntermittent" : [
+			"/sfx/gun/grenadeblast_small_fire1.ogg",
+			"/sfx/gun/grenadeblast_small_fire2.ogg",
+			"/sfx/gun/grenadeblast_small_fire3.ogg"
+		],
+
+		"returnvehicle" : [ "/sfx/tech/vehicle_disappear1.ogg" ]
+
+	}
+}
