@@ -38,7 +38,7 @@
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.8,
         "enterPhase" : "sgsurvivorjump",
-        "skills" : [ "sgbreakershot", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack" ]
+        "skills" : [ "sgbreakershot", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack", "sghologram1" ]
       },
       {
         "trigger" : "healthPercentage",

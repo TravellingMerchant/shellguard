@@ -123,7 +123,7 @@ function sgspeartoss.fire(aimVector)
   sourceOffset = vec2.rotate(sourceOffset, currentRotationAngle)
   sourcePosition = vec2.add(sourcePosition, sourceOffset)
 
-  animator.playSound("fireSound")
+  animator.playSound("fireSound3")
   
   for i = 1, (projectileCount or stateData.projectileCount) do
     world.spawnProjectile(
