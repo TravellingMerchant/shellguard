@@ -8,16 +8,12 @@
   "damageKindImage" : "icon.png",
   "pointLight" : true,
   "physics" : "laser",
-  "bounces" : 0,
+  "bounces" : 2,
   "lightColor" : [225, 100, 0],
   "actionOnReap" : [
     {
       "action" : "config",
       "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
-    },
-    {
-      "action" : "config",
-      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
     },
     {
       "action" : "sound",
@@ -49,7 +45,7 @@
       }
     },
     {
-      "time" : 0.035,
+      "time" : 0.07,
       "repeat" : true,
 
       "action" : "loop",
@@ -65,6 +61,6 @@
   ],
   "emitters" : [ "largefireswoosh" ],
   "power" : 5.0,
-  "speed" : 80,
+  "speed" : 70,
   "damageKind" : "default"
 }
