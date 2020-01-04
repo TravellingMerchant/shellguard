@@ -32,7 +32,7 @@
 
     "phases" : [
       {
-        "skills" : [ "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sghologram1", "sgsurvivorendgameDashAttack", "sgbreakershot", "sghologram1" ]
+        "skills" : [ "sgsurvivorendgamePunchAttack", "sghologram1", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sghologram1", "sgsurvivorendgameDashAttack", "sghologram1" ]
       },
       {
         "trigger" : "healthPercentage",
@@ -44,7 +44,7 @@
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.5,
         "enterPhase" : "sgsurvivorjump",
-        "skills" : [ "sghologramburst", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgspeartoss",  "sgbreakershot" ]
+        "skills" : [ "sghologramburst", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgspeartoss", "sgsurvivorjump", "sgbreakershot" ]
       },
       {
         "trigger" : "healthPercentage",
