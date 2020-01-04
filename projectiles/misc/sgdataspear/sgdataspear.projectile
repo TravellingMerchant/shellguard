@@ -2,8 +2,8 @@
   "projectileName" : "sgdataspear",
   "physics" : "arrow",
   "image" : "sgdataspear.png",
-  "animationCycle" : 0.25,
-  "frameNumber" : 1,
+  "animationCycle" : 0.5,
+  "frameNumber" : 4,
   "movementSettings" : {
     "gravityMultiplier" : 0,
     "collisionPoly" : [ [1, -0.625], [-3.5, 0], [1, 0.625], [3, 0] ]
@@ -37,7 +37,8 @@
   "lightColor" : [225, 100, 60],
   "power" : 0,
   "speed" : 80,
-  "emitters" : [ "rocketsmoke" ],
+  "emitters" : [ "javelinred" ],
+  "fullbright" : true,
   "persistentAudio" : "/sfx/objects/mechbeacon_pulse2.ogg",
   "orientationLocked" : false,
   "onlyHitTerrain" : false,

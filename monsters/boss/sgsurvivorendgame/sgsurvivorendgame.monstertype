@@ -32,7 +32,7 @@
 
     "phases" : [
       {
-        "skills" : [ "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sgspeartoss", "sghologram1", "sgsurvivorendgameDashAttack", "sgbreakershot", "sghologram1" ]
+        "skills" : [ "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sghologram1", "sgsurvivorendgameDashAttack", "sgbreakershot", "sghologram1" ]
       },
       {
         "trigger" : "healthPercentage",

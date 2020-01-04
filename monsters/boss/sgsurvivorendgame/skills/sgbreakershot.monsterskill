@@ -15,7 +15,7 @@
       "windupTime" : 0.01,
       "winddownTime" : 0.1,
       "fireInterval" : 0.2,
-	  "inaccuracy" : 0.11,
+	  "inaccuracy" : 0,
 	  "projectileCount" : 1,
 
 	  //Movement Parameters
