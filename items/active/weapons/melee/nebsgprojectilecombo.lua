@@ -151,8 +151,8 @@ function NebSGProjectileCombo:fire()
 				animator.setLightActive("muzzleFlash", true)
 			
 				--Aim Vector--
-				local aimVector = vec2.rotate({1, 0}, (stance.gunShotConfig.aimAtCursor and activeItem.aimAngle(0, activeItem.ownerAimPosition()) or self.weapon.aimAngle) + sb.nrand(stance.gunShotConfig.projectileInaccuracy or 0, 0) + (stance.gunShotConfig.projectileAimAngleOffset or 0))
-				aimVector[1] = aimVector[1] * mcontroller.facingDirection()
+				--local aimVector = vec2.rotate({1, 0}, (stance.gunShotConfig.aimAtCursor and activeItem.aimAngle(0, activeItem.ownerAimPosition()) or self.weapon.aimAngle) + sb.nrand(stance.gunShotConfig.projectileInaccuracy or 0, 0) + (stance.gunShotConfig.projectileAimAngleOffset or 0))
+				--aimVector[1] = aimVector[1] * mcontroller.facingDirection()
 			
 				--Recoil--
 				if stance.gunShotConfig.recoilKnockbackVelocity then
@@ -180,7 +180,7 @@ function NebSGProjectileCombo:fire()
 						stance.gunShotConfig.projectile,
 						firePosition,
 						activeItem.ownerEntityId(),
-						aimVector,
+						self:aimVector(),
 						false,
 						params
 					)
