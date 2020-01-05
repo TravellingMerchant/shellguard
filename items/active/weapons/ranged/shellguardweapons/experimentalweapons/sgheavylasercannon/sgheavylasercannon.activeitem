@@ -1,0 +1,160 @@
+{
+  "itemName" : "sgheavylasercannon",
+  "price" : 1500,
+  "inventoryIcon" : "sgheavylasercannon.png",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A powerful laser. Overcharge for a mining laser. This reduces durability.",
+  "shortdescription" : "Focus Laser",
+  "level" : 6,
+  "category" : "Tool",
+  "itemTags" : ["weapon","ranged","rocketlauncher"],
+  "twoHanded" : true,
+
+  "animation" : "sgheavylasercannon.animation",
+  "animationParts" : {
+    "middle" : "sgheavylasercannon.png",
+    "middleFullbright" : "sgheavylasercannonfullbright.png",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fireStart" : [ "/sfx/gun/aegisaltpistol_start.ogg" ],
+      "fireLoop" : [ "/sfx/gun/sgbeamlaser.ogg" ],
+      "fireEnd" : [],
+      "beamImpact" : []
+    }
+  },
+  "animationScripts" : ["/items/active/effects/chain.lua"],
+
+  "baseOffset" : [1.5, -0.75],
+  "muzzleOffset" : [2.875, -0.125],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "fire",
+
+  "durability" : 15000.0,
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/beamfire.lua"],
+    "class" : "BeamFire",
+
+    "fireTime" : 0.2,
+    "baseDps" : 10.0,
+    "energyUsage" : 30,
+
+    "damageConfig" : {
+      "statusEffects" : [ ],
+      "damageSourceKind" : "plasma",
+      "knockback" : 2
+    },
+
+    "beamLength" : 50,
+
+    "chain" : {
+      "startOffset" : [0, 0],
+      "segmentImage" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgheavylasercannon/beam.png",
+      "endSegmentImage" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgheavylasercannon/beamend.png",
+      "segmentSize" : 1.0,
+      "overdrawLength" : 0.0,
+      "taper" : 0.6,
+      "jitter" : 0.125,
+      "waveform" : {
+        "frequency" : 1.0,
+        "amplitude" : 0.25,
+        "movement" : 0.0
+      },
+      "fullbright" : true,
+      "light" : [249, 21, 27]
+    },
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation",
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation",
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation",
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    }
+  },
+
+  "altAbility" : {
+    "scripts" : ["/items/active/unsorted/laserminer/beammine.lua"],
+    "class" : "BeamMine",
+
+    "beamLength" : 20,
+    "cooldownTime" : 0.5,
+
+    "energyUsage" : 20.0,
+    "damageInterval" : 0.025,
+    "tileDamage" : 100.0,
+    "harvestLevel" : 99,
+
+    "chain" : {
+      "startOffset" : [0, 0],
+      "segmentImage" : "/items/active/unsorted/laserminer/beam/beam.png",
+      "endSegmentImage" : "/items/active/unsorted/laserminer/beam/beamend.png",
+      "segmentSize" : 0.48,
+      "overdrawLength" : 0.2,
+      "taper" : -1,
+      "waveform" : {
+        "frequency" : 1.0,
+        "amplitude" : 0.125,
+        "movement" : 80.0
+      },
+      "fullbright" : true,
+      "light" : [135, 91, 84]
+    },
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

@@ -22,6 +22,7 @@
     "items" : [
 	  { "item" : "sgcannon" },
 	  { "item" : "sgcannonshotgun" },
+	  { "item" : "sgheavylasercannon" },
 	  { "item" : "sggoblinsmg" },
 	  { "item" : "sgbulldogshotgun" },
 	  { "item" : "sgassaultsmg" },

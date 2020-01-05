@@ -26,7 +26,7 @@
   "inventoryIcon" : "sgelevatorsurvivalteleicon.png",
   "orientations" : [
     {
-      "imageLayers" : [ { "image" : "sgelevatorsurvivaltele.png:<color>", "fullbright" : true }, { "image" : "sgelevatorsurvivallit.png:<color>" } ],
+      "imageLayers" : [ { "image" : "sgelevatorsurvivaltele.png:<color>", "fullbright" : true }, { "image" : "sgelevatorsurvivaltelelit.png:<color>" } ],
 
       "imagePosition" : [-16, 0],
       "frames" : 1,

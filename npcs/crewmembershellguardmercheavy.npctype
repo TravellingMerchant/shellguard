@@ -24,11 +24,12 @@
             "primary" : [
               "sgtyphoonminigun",
               "sggrenademachinegun",
-			  "sgcannon",
+			  "sgbayonetpistol",
 			  "neb-shellguardrail"
             ],
             "sheathedprimary" : [
               "heavyhatchet",
+			  "sgbayonetpistol",
               "sgofficersword"
             ],
             "alt" : [
@@ -47,11 +48,12 @@
             "primary" : [
               "sgtyphoonminigun",
               "sggrenademachinegun",
-			  "sgcannon",
+			  "sgbayonetpistol",
 			  "neb-shellguardrail"
             ],
             "sheathedprimary" : [
               "heavyhatchet",
+			  "sgbayonetpistol",
               "sgofficersword"
             ],
             "alt" : [
@@ -68,11 +70,12 @@
             "primary" : [
               "sgtyphoonminigun",
               "sggrenademachinegun",
-			  "sgcannon",
+			  "sgbayonetpistol",
 			  "neb-shellguardrail"
             ],
             "sheathedprimary" : [
               "heavyhatchet",
+			  "sgbayonetpistol",
               "sgofficersword"
             ],
             "alt" : [
