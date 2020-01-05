@@ -123,7 +123,7 @@ function sghologramburst.fire(aimVector)
   sourceOffset = vec2.rotate(sourceOffset, currentRotationAngle)
   sourcePosition = vec2.add(sourcePosition, sourceOffset)
 
-  animator.playSound("fireSound")
+  animator.playSound("fireSound6")
   
   for i = 1, (projectileCount or stateData.projectileCount) do
     world.spawnProjectile(

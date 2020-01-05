@@ -37,7 +37,7 @@
 
   "animationParameters" : {
     "sounds" : {
-      "fireSound3" : [ "/sfx/gun/rocket2.ogg" ]
+      "fireSound3" : [ "/sfx/monsters/boss/sgdronerailgun.ogg" ]
     }
   }
 }

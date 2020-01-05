@@ -1,0 +1,107 @@
+{
+  "animationParts" : { },
+  "animationCustom" : { },
+  "animationScripts" : [
+    "/items/active/effects/chain.lua"
+  ],
+
+  "ability" : {
+    "name" : "Chained Launch",
+    "type" : "whipsnagspike",
+    "scripts" : ["/items/active/weapons/whip/abilities/whipsnag.lua"],
+    "class" : "WhipSnag",
+
+    "cutoffRange": 18, //set to zero or false to disable
+    "minSwingDistance": 2.5,
+    "onlyPullWhenAboveAnchor": true,
+
+    "fireTime" : 1.1,
+    "chainDps" : 1.0, //only for the "normal" whipping
+    "crackDps" : 7.2,
+
+    "damageConfig" : {
+      "statusEffects" : [ ],
+      "damageSourceKind" : "lash",
+      "timeoutGroup" : "primary",
+      "timeout" : 0.3
+    },
+
+    "projectileType" : "whipcrackphysical",
+    "projectileConfig" : {},
+
+    "DoTTickSpeed" : 1,
+    "dotProjectileType" : "whipcrackphysical",
+    "dotProjectileConfig" : {
+      "statusEffects" : [ "staffslow" ]
+    },
+
+    "doSpawnRandomRopeProjectiles": true,
+    "ropeRandomProjectileSpeed": 0.111,
+    "ropeRandomProjectileType" : "electro",
+    "ropeRandomProjectileConfig" : {
+      "statusEffects" : [ "electrified" ],
+      "piercing" : false,
+      "power" : 0.5
+    },
+    "minChainSegmentLengthToSpawnOn": 40, //in pixels, check your projectile's .frames
+    "spawnRopeProjectileWhileMoving": true,
+    "killRopeProjectileWhenMoving": true,
+
+    //possible values: "player", "npc", "monster", "object", "vehicle", "itemDrop", "projectile", "creature"
+    "targetTypes": [ ],
+    "canSnagTerrain" : true,
+    "onlyPullWhileAirborne" : true,
+    "maxControlForce": 1000, //max pull strength
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : -30,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.875],
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "swing" : {
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.875],
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "windup" : {
+        "duration" : 0.1,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.875],
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "extend" : {
+        "duration" : 0.1,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.875],
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "fire" : {
+        "duration" : 0.1,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.875],
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  }
+}

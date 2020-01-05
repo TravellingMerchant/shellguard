@@ -1,0 +1,39 @@
+{
+  "projectileName" : "sgplasmiteblastphysical",
+  "physics" : "grenade",
+  "bounces" : -1,
+  "timeToLive" : 0,
+  "damageKindImage" : "icon.png",
+  "image" : "sgplasmitegrenade.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 4,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/plasmiteexplode.ogg" ]
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgsmokecloud",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 5,
+      "backgroundRadius" : 5,
+      "explosiveDamageAmount" : 1.0,
+      "delaySteps" : 2
+    }
+
+  ],
+  "power" : 50,
+  "emitters" : [ "rocketsmoke" ],
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}
