@@ -150,12 +150,13 @@ function NebSGProjectileCombo:fire()
 
 				animator.setLightActive("muzzleFlash", true)
 			
-				--Aim Vector--
-				--local aimVector = vec2.rotate({1, 0}, (stance.gunShotConfig.aimAtCursor and activeItem.aimAngle(0, activeItem.ownerAimPosition()) or self.weapon.aimAngle) + sb.nrand(stance.gunShotConfig.projectileInaccuracy or 0, 0) + (stance.gunShotConfig.projectileAimAngleOffset or 0))
-				--aimVector[1] = aimVector[1] * mcontroller.facingDirection()
+				
 			
 				--Recoil--
 				if stance.gunShotConfig.recoilKnockbackVelocity then
+					--Aim Vector--
+					local aimVector = vec2.rotate({1, 0}, (stance.gunShotConfig.aimAtCursor and activeItem.aimAngle(0, activeItem.ownerAimPosition()) or self.weapon.aimAngle) + sb.nrand(stance.gunShotConfig.projectileInaccuracy or 0, 0) + (stance.gunShotConfig.projectileAimAngleOffset or 0))
+					aimVector[1] = aimVector[1] * mcontroller.facingDirection()
 					--If not crouching or if crouch does not impact recoil
 					if not (stance.gunShotConfig.crouchStopsRecoil and mcontroller.crouching()) then
 						local recoilVelocity = vec2.mul(vec2.norm(vec2.mul(aimVector, -1)), stance.gunShotConfig.recoilKnockbackVelocity)
@@ -180,7 +181,7 @@ function NebSGProjectileCombo:fire()
 						stance.gunShotConfig.projectile,
 						firePosition,
 						activeItem.ownerEntityId(),
-						self:aimVector(),
+						self:aimVector(stance),
 						false,
 						params
 					)
@@ -253,8 +254,8 @@ function NebSGProjectileCombo:computeDamageAndCooldowns()
 end
 
 --Aim vector for firing projectiles
-function NebSGProjectileCombo:aimVector(inaccuracy)
-  local aimVector = vec2.rotate({1, 0}, self.weapon.aimAngle + sb.nrand(inaccuracy, 0))
+function NebSGProjectileCombo:aimVector(stance)
+  local aimVector = vec2.rotate({1, 0}, (stance.gunShotConfig.aimAtCursor and activeItem.aimAngle(0, activeItem.ownerAimPosition()) or self.weapon.aimAngle) + sb.nrand(stance.gunShotConfig.projectileInaccuracy or 0, 0) + (stance.gunShotConfig.projectileAimAngleOffset or 0))
   aimVector[1] = aimVector[1] * mcontroller.facingDirection()
   return aimVector
 end
