@@ -23,6 +23,7 @@
 	  { "item" : "sgcannon" },
 	  { "item" : "sgcannonshotgun" },
 	  { "item" : "sgheavylasercannon" },
+	  { "item" : "sghandheldrailgun" },
 	  { "item" : "sggoblinsmg" },
 	  { "item" : "sgbulldogshotgun" },
 	  { "item" : "sgassaultsmg" },
