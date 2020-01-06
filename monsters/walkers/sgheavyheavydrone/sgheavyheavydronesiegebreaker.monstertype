@@ -21,9 +21,9 @@
     ],
 
     "chains" :  {
-      "startSegmentImage" : "/monsters/boss/guardianboss/beams/<element>beamstart.png:<beamFrame>",
-      "segmentImage" : "/monsters/boss/guardianboss/beams/<element>beam.png:<beamFrame>",
-      "endSegmentImage" : "/monsters/boss/guardianboss/beams/<element>beamend.png:<beamFrame>",
+      "startSegmentImage" : "/monsters/walkers/sgheavyheavydrone/beams/beamstart.png",
+      "segmentImage" : "/monsters/walkers/sgheavyheavydrone/beams/beam.png",
+      "endSegmentImage" : "/monsters/walkers/sgheavyheavydrone/beams/beamend.png",
       "segmentSize" : 1,
       "fullbright" : true,
       "sourcePart" : "beam",

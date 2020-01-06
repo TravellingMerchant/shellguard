@@ -22,7 +22,7 @@ function update()
       end
     end
     if chain.endPart then
-      local beamEnd = animationConfig.partPoint(chain.endPart, "beamEnd")
+      local beamEnd = chain.endPart
       if beamEnd then
         chain.endPosition = vec2.add(entity.position(), beamEnd)
       else

@@ -200,10 +200,10 @@ function spikeFistChain(active, part, angle, frame, chainType, bounces, maxLengt
 
   local chain = config.getParameter("chains") or copy(self.chainTypes[chainType])
   chain.sourcePart = "frontgun"
-  chain.endPart = "frontgun"
+  chain.endPart = targetPosition
   --chain.startPosition = startPos
   --chain.endPosition = targetPosition
-  --chain.maxLength = maxLength
+  chain.maxLength = maxLength
   --chain.targetEntityId = targetId
 
   local currentFrame = frame or 4
