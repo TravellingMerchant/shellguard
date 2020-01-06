@@ -1,8 +1,8 @@
 {
   "itemName" : "sgshieldback",
-  "price" : 100,
+  "price" : 7000,
   "inventoryIcon" : "icon.png",
-  "rarity" : "Rare",
+  "rarity" : "legendary",
   "category" : "enviroProtectionPack",
   "description" : "This backpack will create shield drones that circle around you and block shots.",
   "shortdescription" : "Shield Drone Pack",

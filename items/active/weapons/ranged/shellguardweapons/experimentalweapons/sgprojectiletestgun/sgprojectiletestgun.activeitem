@@ -39,7 +39,7 @@
     "fireTime" : 0.1,
     "baseDps" : 10.5,
     "energyUsage" : 30.0,
-    "projectileCount" : 2,
+    "projectileCount" : 1,
     "inaccuracy" : 0.04,
       "stances" : {
       "idle" : {
@@ -72,7 +72,7 @@
 
     "fireType" : "auto",
 
-    "projectileType" : "sentinelshard",
+    "projectileType" : "sgcutterblast",
     "projectileParameters" : { 
       "knockback" : 6
     }

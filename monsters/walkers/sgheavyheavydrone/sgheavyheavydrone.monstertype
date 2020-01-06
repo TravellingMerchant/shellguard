@@ -356,7 +356,7 @@
       }
     },
 
-    "mouthOffset" : [0, 50],
+    "mouthOffset" : [0, 70],
     "feetOffset" : [0, -8],
     "capturable" : false,
     "nametagColor" : [64, 200, 255]

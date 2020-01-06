@@ -1,0 +1,25 @@
+{
+  "projectileName" : "sgelectriclance",
+  "image" : "electriclance.png",
+  "animationCycle" : 0.12,
+  "frameNumber" : 4,
+  "damageKindImage" : "/interface/statuses/fire.png",
+  "speed" : 3,
+  "orientationLocked" : true,
+  "damagePoly" : [ [-24, 0], [-16, 4], [20, 0], [-16, -4] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "damageKind" : "electric",
+  "statusEffects" : [ ],
+  "lightColor" : [100, 40, 140],
+  "pointLight" : false,
+  "knockback" : 1,
+  "knockbackDirectional" : true,
+  
+  "renderLayer" : "Monster+1",
+  
+  "persistentStatusEffects" : ["staffslow"],
+  "statusEffectArea" : [ [-1, 0], [-1, -1], [0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1] ]
+}
