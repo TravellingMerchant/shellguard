@@ -1,0 +1,98 @@
+{
+  "itemName" : "sgpraxissniper",
+  "price" : 2800,
+  "inventoryIcon" : "sgbreakerrifle.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Triple tap with this high velocity, high fire rate scout sniper rifle.",
+  "shortdescription" : "Praxis Triplex",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgbreakerrifle.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgbreakerrifle.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/railshots/heavyturretgun4.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.75, 0.5],
+  "muzzleOffset" : [2.625, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.5,
+    "baseDps" : 10,
+    "energyUsage" : 30.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.02,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.5,
+        "armRotation" : -75,
+        "weaponRotation" : 60,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "burst",
+    "burstCount" : 3,
+    "burstTime" : 0.1,
+
+    "projectileType" : "sgsuperheated",
+    "projectileParameters" : { 
+      "knockback" : 6,
+	  "speed" : 250
+    }
+  },
+
+  "altAbilityType" : "sglasersightgreen",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgbreakerrifleelite.png:idle",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgbreakerrifle/sgbreakerrifleelite.png"
+    },
+    "shortdescription" : "Breaker Rifle ^yellow;^reset;"
+  }
+}
