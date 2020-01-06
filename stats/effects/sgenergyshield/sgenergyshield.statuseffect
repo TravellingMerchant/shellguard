@@ -2,7 +2,7 @@
   "name" : "sgenergyshield",
   "effectConfig" : {
 		//Drone Spawning
-		"droneRespawnTime" : 5,
+		"droneRespawnTime" : 10,
 		"droneCount" : 5,
 
 		//Drone Orbiting
@@ -18,7 +18,7 @@
 
 			"statusSettings" : {
 				"stats" : {
-					"flatMaxHealth" : { "baseValue" : 100 }
+					"flatMaxHealth" : { "baseValue" : 125 }
 				}
 			}
 		}

@@ -20,7 +20,7 @@
             "head" : [ { "name" : "sgflathelmet" }, { "name" : "sgtitanhelmet" } ],
             "chest" : [ { "name" : "sgcompositechest" } ],
             "legs" : [ { "name" : "shellarmourlegsnpc" } ],
-			"back" : [ { "name" : "sgheavyback" } ],
+			"back" : [ { "name" : "sgheavyback" }, { "name" : "sgshieldback" }  ],
             "primary" : [
               "sgtyphoonminigun",
               "sggrenademachinegun",
@@ -44,7 +44,7 @@
             "head" : [ { "name" : "sgflathelmet" }, { "name" : "sgtitanhelmet" } ],
             "chest" : [ { "name" : "sgcompositechest" } ],
             "legs" : [ { "name" : "shellarmourlegsnpc" } ],
-			"back" : [ { "name" : "sgheavyback" } ],
+			"back" : [ { "name" : "sgheavyback" }, { "name" : "sgshieldback" } ],
             "primary" : [
               "sgtyphoonminigun",
               "sggrenademachinegun",
@@ -66,7 +66,7 @@
             "head" : [ { "name" : "sgflathelmet" }, { "name" : "sgtitanhelmet" } ],
             "chest" : [ { "name" : "sgcompositechest" } ],
             "legs" : [ { "name" : "shellarmourlegsnpc" } ],
-			"back" : [ { "name" : "sgheavyback" } ],
+			"back" : [ { "name" : "sgheavyback" }, { "name" : "sgshieldback" } ],
             "primary" : [
               "sgtyphoonminigun",
               "sggrenademachinegun",

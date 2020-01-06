@@ -19,7 +19,7 @@
             "cycle" : 0.4,
             "mode" : "loop",
             "properties" : {
-              "persistentSound" : "/sfx/melee/elemental_aura_ice.ogg",
+              "persistentSound" : "/sfx/npc/monsters/kluexsentry_fly_loop.ogg",
               "persistentSoundRangeMultiplier" : 0.5
             }
           }
@@ -80,24 +80,24 @@
   "particleEmitters" : {
      "deathPoof" : {
       "particles" : [
-        { "particle" : "iceshard" },
-        { "particle" : "iceshard" },
-        { "particle" : "iceshard" },
-        { "particle" : "iceshard" },
-        { "particle" : "iceshard" },
-        { "particle" : "iceshard" },
-        { "particle" : "iceshard" },
-        { "particle" : "iceshard" },
-        { "particle" : "iceshard" },
-        { "particle" : "iceshard" },
-        { "particle" : "iceshard" },
-        { "particle" : "iceshard" }
+        { "particle" : "electricswoosh1" },
+        { "particle" : "electricswoosh2" },
+        { "particle" : "electricswoosh1" },
+        { "particle" : "electricswoosh2" },
+        { "particle" : "deathfizz1left" },
+        { "particle" : "deathfizz1right" },
+        { "particle" : "deathfizz2left" },
+        { "particle" : "deathfizz2right" },
+        { "particle" : "deathfizz3left" },
+        { "particle" : "deathfizz3right" },
+        { "particle" : "deathfizz4left" },
+        { "particle" : "deathfizz4right" }
       ]
     }
   },
 
   "sounds" : {
     "turnHostile" : [ ],
-    "deathPuff" : [ "/sfx/projectiles/ice_barrier_break1.ogg", "/sfx/projectiles/ice_barrier_break2.ogg", "/sfx/projectiles/ice_barrier_break3.ogg", "/sfx/projectiles/ice_barrier_break4.ogg","/sfx/projectiles/ice_barrier_break5.ogg", "/sfx/projectiles/ice_barrier_break6.ogg", "/sfx/projectiles/ice_barrier_break7.ogg", "/sfx/projectiles/ice_barrier_break8.ogg", "/sfx/projectiles/ice_barrier_break9.ogg", "/sfx/projectiles/ice_barrier_break10.ogg" ]
+    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ]
   }
 }

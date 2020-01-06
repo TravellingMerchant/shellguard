@@ -48,7 +48,7 @@
 
     "damageTeamType" : "friendly",
 			
-	"perfectTracking" : true,
+	"perfectTracking" : false,
 
     "touchDamage" : {
       "poly" : [ [-0.75, -2.125], [-0.75, 2.125], [0.5, 2], [1, 0], [0.5, -2] ],

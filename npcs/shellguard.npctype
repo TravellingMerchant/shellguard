@@ -64,7 +64,7 @@
             "head" : [ { "name" : "shellarmourheadnpc" }, { "name" : "sgflatcap" }, { "name" : "sgquartermaster" }, { "name" : "sgmedichelmet" }, { "name" : "sgbasicspacehelmet" }, { "name" : "sgspacehelmet" } ],
             "chest" : [ { "name" : "shellarmourchestnpc" } ],
             "legs" : [ { "name" : "shellarmourlegsnpc" } ],
-			"back" : [ { "name" : "sgbackpack" } ],
+			"back" : [ { "name" : "sgbackpack" }, { "name" : "sgshieldback" } ],
             "primary" : [
               "npcbroadsword",
               "npcassaultrifle"
@@ -78,7 +78,7 @@
             "head" : [ { "name" : "shellarmourheadnpc" }, { "name" : "sgflatcap" }, { "name" : "sgquartermaster" }, { "name" : "sgmedichelmet" }, { "name" : "sgbasicspacehelmet" }, { "name" : "sgspacehelmet" } ],
             "chest" : [ { "name" : "shellarmourchestnpc" } ],
             "legs" : [ { "name" : "shellarmourlegsnpc" } ],
-			"back" : [ { "name" : "sgbackpack" } ],
+			"back" : [ { "name" : "sgbackpack" }, { "name" : "sgshieldback" } ],
             "primary" : [
               "shellguardrifle",
 			  "shellguardrifle",
@@ -106,7 +106,7 @@
             "head" : [ { "name" : "shellarmourheadnpc" }, { "name" : "sgflatcap" }, { "name" : "sgquartermaster" }, { "name" : "sgmedichelmet" }, { "name" : "sgbasicspacehelmet" }, { "name" : "sgspacehelmet" } ],
             "chest" : [ { "name" : "shellarmourchestnpc" } ],
             "legs" : [ { "name" : "shellarmourlegsnpc" } ],
-			"back" : [ { "name" : "sgbackpack" } ],
+			"back" : [ { "name" : "sgbackpack" }, { "name" : "sgshieldback" } ],
             "primary" : [
               "shellguardrifle",
 			  "shellguardrifle",
@@ -134,7 +134,7 @@
             "head" : [ { "name" : "shellarmourheadnpc" }, { "name" : "sgflatcap" }, { "name" : "sgquartermaster" }, { "name" : "sgmedichelmet" }, { "name" : "sgbasicspacehelmet" }, { "name" : "sgspacehelmet" }, { "name" : "sgmechpilothelmet" } ],
             "chest" : [ { "name" : "shellarmourchestnpc" } ],
             "legs" : [ { "name" : "shellarmourlegsnpc" } ],
-			"back" : [ { "name" : "sgbackpack" } ],
+			"back" : [ { "name" : "sgbackpack" }, { "name" : "sgshieldback" } ],
             "primary" : [
               "shellguardrifle",
 			  "shellguardrifle",
