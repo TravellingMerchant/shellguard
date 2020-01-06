@@ -4,7 +4,7 @@
   "description" : "The ultimate in automated destruction, the Siegebreaker Drone will shatter any defense.",
 
   "categories" : [ "sgheavyheavydrone" ],
-  "parts" : [ "body", "frontgun", "backgun" ],
+  "parts" : [ "body", "frontSpikeFist", "backgun" ],
   "partParameters" : "sgheavyheavydrone.partparams",
 
   "animation" : "sgheavyheavydrone.animation",
@@ -13,8 +13,30 @@
 
   "baseParameters" : {
     "scripts" : [
-      "/monsters/monster.lua"
+      "/monsters/walkers/sgheavyheavydrone/spikefistdrone.lua"
     ],
+	
+    "animationScripts" : [
+      "/items/active/effects/notFuckedChain.lua"
+    ],
+
+    "chains" :  {
+      "startSegmentImage" : "/monsters/boss/guardianboss/beams/<element>beamstart.png:<beamFrame>",
+      "segmentImage" : "/monsters/boss/guardianboss/beams/<element>beam.png:<beamFrame>",
+      "endSegmentImage" : "/monsters/boss/guardianboss/beams/<element>beamend.png:<beamFrame>",
+      "segmentSize" : 1,
+      "fullbright" : true,
+      "sourcePart" : "beam",
+      "endPart" : "beam",
+      "jitter" : 0.0625,
+      "waveform" : {
+        "movement" : 5.0,
+        "amplitude" : 0.55,
+        "frequency" : 1.0
+      }
+    },
+	
+	"damageBar" : "Special",
 
   	"damageTeamType" : "enemy",
     "damageTeam" : 0,
@@ -78,13 +100,13 @@
             "windupStopForce" : 50,
             "windupState" : "idle",
 
-            "projectileType" : "sawchakram",
-			"projectileCount": 1,
+            "projectileType" : "sgvehicleshot",
+			"projectileCount": 5,
 			"projectileInterval": 0.2,
-			"inaccuracy": 0.1,
+			"inaccuracy": 0,
 			"transGroup" : "aim2",
 			"rotationCenter"  : [2, 7],
-            "fireOffset" : [6.25, -3.0],
+            "fireOffsets" : [ [6.25, -3.0], [6.25, -2.375] ],
             "fireSound" : "fire",
 			"fireStateType": "body",
             "fireState" : "firingBack",
@@ -97,7 +119,7 @@
         },
 		// front gun
 		{
-          "name" : "action-fire-trans",
+          "name" : "action-fire-trans-male",
 		  "cooldown": 1,
           "parameters" : {
             "requireLineOfSight" : true,
@@ -107,7 +129,17 @@
             "windupStopForce" : 50,
             "windupState" : "idle",
 
-            "projectileType" : "sawchakram",
+            "projectileType" : "chakram",
+			"projectileParameters" : {
+			  "knockback" : 10,
+		      "power" : 4.0,
+			  "damageRepeatTimeout" : 0.5,
+
+			  "returnOnHit" : false,
+			  "pickupDistance" : 1.0,
+
+			  "maxDistance" : 25
+			},
 			"projectileCount": 1,
 			"projectileInterval": 0.2,
 			"inaccuracy": 0.1,
@@ -126,7 +158,7 @@
 		//rockets
 		{
           "name" : "action-sgdroidshoot",
-		  "cooldown": 5,
+		  "cooldown": 3.0,
           "parameters" : {
             "requireLineOfSight" : false,
             "maximumRange" : 40,
@@ -135,11 +167,11 @@
             "windupStopForce" : 50,
             "windupState" : "idle",
 
-            "projectileType" : "shellnovarocket",
-			"projectileCount": 1,
+            "projectileType" : "sentinelshardrocket",
+			"projectileCount": 3,
             "fireOffsets" : [[6.0, 3.5], [6.5, 3.25], [6.0, 3.5]],
 			
-			"inaccuracy": 0.3,
+			"inaccuracy": 0.1,
             "fireSound" : "fireRocket",
 			"fireStateType": "body",
             "fireState" : "fireRockets",

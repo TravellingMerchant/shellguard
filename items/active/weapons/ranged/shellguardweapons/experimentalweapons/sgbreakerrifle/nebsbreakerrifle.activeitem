@@ -1,0 +1,95 @@
+{
+  "itemName" : "nebsbreakerrifle",
+  "price" : 2300,
+  "inventoryIcon" : "sgbreakerrifle.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A heavy rifle that fires rounds that shatter on impact.",
+  "shortdescription" : "Breaker Rifle",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgbreakerrifle.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgbreakerrifle.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/sgpushshot.ogg" ]
+    }
+  },
+
+  "baseOffset" : [2.25, 0.1],
+  "muzzleOffset" : [1.125, 0.3],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.01,
+    "baseDps" : 15,
+    "energyUsage" : 0.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.02,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -15,
+        "weaponRotation" : 20,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "nebsgfortresslaser",
+    "projectileParameters" : { 
+      "knockback" : 6
+    }
+  },
+
+  "altAbilityType" : "sgrocketburst",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgbreakerrifleelite.png:idle",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgbreakerrifle/sgbreakerrifleelite.png"
+    },
+    "shortdescription" : "Breaker Rifle ^yellow;^reset;"
+  }
+}

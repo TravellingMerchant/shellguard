@@ -272,7 +272,9 @@
           "zLevel" : 6,
           "offset" : [-1, 5.825],
           "transformationGroups" : [ "frontgun", "aim" ],
-		  "image" : "<partImage>:idle.1"
+		  "image" : "<partImage>:idle.1",
+          "beamSource" : [0.0, -0.5],
+          "beamEnd" : [0.0, -250.0]
         },
         "partStates" : {
           "body" : {
