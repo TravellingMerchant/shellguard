@@ -255,14 +255,14 @@
     "type" : "mission",
     "senderName" : "Merchant",
     "portraitImage" : "/interface/chatbubbles/merchant.png",
-    "text" : "To you the player, it's a short, fun experience. To us? It represents very literal thousands of hours of hard work and I for one, think it was time well spent! Now with Development at an end, it's onwards to bigger things!"
+    "text" : "To you the player, it's a short, fun experience. To us? It represents very literal thousands of hours of hard work and I for one, think it was time well spent!"
   },
   
   "sgdev4" : {
     "type" : "mission",
     "senderName" : "Merchant",
     "portraitImage" : "/interface/chatbubbles/merchant.png",
-    "text" : "Everyone in this arena is based on a Dev that worked on the mod. Good luck!"
+    "text" : "Everyone in this arena is based on a Dev that worked on the mod. Good luck and Thank you!"
   }
   
 }
