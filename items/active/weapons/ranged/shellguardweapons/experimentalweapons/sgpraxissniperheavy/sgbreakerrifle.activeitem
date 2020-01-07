@@ -22,7 +22,7 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/railshots/heavyturretgun4.ogg" ]
+      "fire" : [ "/sfx/gun/railshots/heavyturretgun5.ogg" ]
     }
   },
 
@@ -78,7 +78,7 @@
     "burstCount" : 2,
     "burstTime" : 0.15,
 
-    "projectileType" : "sgmagnumround",
+    "projectileType" : "sgmotoround",
     "projectileParameters" : { 
       "knockback" : 6,
 	  "speed" : 250
