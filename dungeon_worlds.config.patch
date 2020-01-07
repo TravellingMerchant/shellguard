@@ -680,6 +680,40 @@
 
   {
     "op" : "add",
+    "path" : "/sgarenatoy1",
+    "value" : {
+      "primaryDungeon" : "sgarenatoy1",
+      "weatherPool" : [],
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 1200,
+      "dungeonSurfaceHeight" : 1115,
+      "ambientLightLevel" : [125, 125, 125],
+      "musicTrack" : "/music/Entry Of The Gladiators - Julius Fucik.ogg",
+      "biome": "forest"
+    }
+  },
+  
+  {
+    "op" : "add",
+    "path" : "/sgarenatoy2",
+    "value" : {
+      "primaryDungeon" : "sgarenatoy2",
+      "weatherPool" : [],
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 1200,
+      "dungeonSurfaceHeight" : 1115,
+      "ambientLightLevel" : [125, 125, 125],
+      "musicTrack" : "/music/Entry Of The Gladiators - Julius Fucik.ogg",
+      "biome": "forest"
+    }
+  },
+
+  {
+    "op" : "add",
     "path" : "/shellguardspiderfactory",
     "value" : {
       "primaryDungeon" : "shellguardspiderfactory",

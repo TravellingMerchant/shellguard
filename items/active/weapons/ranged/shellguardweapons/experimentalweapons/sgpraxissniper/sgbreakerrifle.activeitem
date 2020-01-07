@@ -22,7 +22,7 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/railshots/heavyturretgun4.ogg" ]
+      "fire" : [ "/sfx/gun/railshots/heavyturretgun3.ogg" ]
     }
   },
 
@@ -91,8 +91,8 @@
   "upgradeParameters" : {
     "inventoryIcon" : "sgbreakerrifleelite.png:idle",
     "animationParts" : {
-      "middle" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgbreakerrifle/sgbreakerrifleelite.png"
+      "middle" : "sgbreakerrifleelite.png"
     },
-    "shortdescription" : "Breaker Rifle ^yellow;^reset;"
+    "shortdescription" : "Praxis Triplex ^yellow;^reset;"
   }
 }

@@ -1,33 +1,33 @@
 {
-  "itemName" : "sgbreakersniper",
-  "price" : 3000,
-  "inventoryIcon" : "sgbreakerrifle.png:idle",
+  "itemName" : "sgtoyrocket",
+  "price" : 1000,
+  "inventoryIcon" : "ShellGuardRocketLauncher.png",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "A mix between a Breaker and a Moto Sniper enhanced with Praxis technology.",
-  "shortdescription" : "Praxis Moto",
-  "level" : 6,
+  "description" : "This is absurd, did you put gunpowder in that thing?",
+  "shortdescription" : "Toy Rocket",
+  "level" : 1,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
-  "weaponType" : "Assault Rifle",
+  "weaponType" : "Rocket Launcher",
   "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
   "twoHanded" : true,
   
-  "animation" : "sgbreakerrifle.animation",
+  "animation" : "/items/active/weapons/ranged/gun.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "sgbreakerrifle.png",
+    "middle" : "ShellGuardRocketLauncher.png",
     "barrel" : "",
-    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+    "muzzleFlash" : ""
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/sgpushshotheavy.ogg" ]
+      "fire" : [ "/sfx/gun/Shellrocketfire.ogg" ]
     }
   },
 
-  "baseOffset" : [1.75, 0.5],
-  "muzzleOffset" : [2.625, 0],
+  "baseOffset" : [-0.3, 0.5],
+  "muzzleOffset" : [1.2, 0],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -36,11 +36,11 @@
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 1.5,
-    "baseDps" : 11,
-    "energyUsage" : 100.0,
+    "fireTime" : 2.0,
+    "baseDps" : 0,
+    "energyUsage" : 70.0,
     "projectileCount" : 1,
-    "inaccuracy" : 0.02,
+    "inaccuracy" : 0.01,
       "stances" : {
       "idle" : {
         "armRotation" : 0,
@@ -57,16 +57,12 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false,
-		
-		"animationStates": {
-			"weaponFire": "fire"
-		}
+        "allowFlip" : false
       },
       "cooldown" : {
-        "duration" : 0.5,
-        "armRotation" : -45,
-        "weaponRotation" : 60,
+        "duration" : 0.1,
+        "armRotation" : -20,
+        "weaponRotation" : 30,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -76,21 +72,18 @@
 
     "fireType" : "auto",
 
-    "projectileType" : "sgbreakerroundblast",
+    "projectileType" : "sgtoyrocket",
     "projectileParameters" : { 
-      "knockback" : 6,
-	  "speed" : 250
+      "knockback" : 70
     }
   },
 
-  "altAbilityType" : "sgspiderburst",
-
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
-    "inventoryIcon" : "sgbreakerrifleelite.png:idle",
+    "inventoryIcon" : "eliteGuardRocketLauncher.png",
     "animationParts" : {
-      "middle" : "sgbreakerrifleelite.png"
+      "middle" : "eliteGuardRocketLauncher.png"
     },
-    "shortdescription" : "Praxis Moto ^yellow;^reset;"
+    "shortdescription" : "Toy Rocket ^yellow;^reset;"
   }
 }

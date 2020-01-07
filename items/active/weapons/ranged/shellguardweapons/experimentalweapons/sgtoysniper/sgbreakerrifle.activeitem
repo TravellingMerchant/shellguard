@@ -1,11 +1,11 @@
 {
-  "itemName" : "sgbreakersniper",
-  "price" : 3000,
+  "itemName" : "sgtoysniper",
+  "price" : 600,
   "inventoryIcon" : "sgbreakerrifle.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "A mix between a Breaker and a Moto Sniper enhanced with Praxis technology.",
-  "shortdescription" : "Praxis Moto",
+  "description" : "Ouch! Don't you think that fires a little too hard?",
+  "shortdescription" : "Toy Sniper",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
@@ -18,16 +18,16 @@
     "butt" : "",
     "middle" : "sgbreakerrifle.png",
     "barrel" : "",
-    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+    "muzzleFlash" : ""
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/sgpushshotheavy.ogg" ]
+      "fire" : [ "/sfx/gun/railshots/sgtoydart.ogg" ]
     }
   },
 
   "baseOffset" : [1.75, 0.5],
-  "muzzleOffset" : [2.625, 0],
+  "muzzleOffset" : [3.375, -0.25],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -36,11 +36,11 @@
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 1.5,
-    "baseDps" : 11,
-    "energyUsage" : 100.0,
+    "fireTime" : 1.2,
+    "baseDps" : 0,
+    "energyUsage" : 50.0,
     "projectileCount" : 1,
-    "inaccuracy" : 0.02,
+    "inaccuracy" : 0,
       "stances" : {
       "idle" : {
         "armRotation" : 0,
@@ -65,8 +65,8 @@
       },
       "cooldown" : {
         "duration" : 0.5,
-        "armRotation" : -45,
-        "weaponRotation" : 60,
+        "armRotation" : -35,
+        "weaponRotation" : 50,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -75,15 +75,15 @@
     },
 
     "fireType" : "auto",
+    //"burstCount" : 6,
+    //"burstTime" : 0.05,
 
-    "projectileType" : "sgbreakerroundblast",
+    "projectileType" : "sgtoydart",
     "projectileParameters" : { 
-      "knockback" : 6,
+      "knockback" : 55,
 	  "speed" : 250
     }
   },
-
-  "altAbilityType" : "sgspiderburst",
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
@@ -91,6 +91,6 @@
     "animationParts" : {
       "middle" : "sgbreakerrifleelite.png"
     },
-    "shortdescription" : "Praxis Moto ^yellow;^reset;"
+    "shortdescription" : "Toy Sniper ^yellow;^reset;"
   }
 }

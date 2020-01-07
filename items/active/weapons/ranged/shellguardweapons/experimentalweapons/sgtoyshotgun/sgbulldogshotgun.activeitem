@@ -1,11 +1,11 @@
 {
-  "itemName" : "sgbreakersniper",
-  "price" : 3000,
-  "inventoryIcon" : "sgbreakerrifle.png:idle",
+  "itemName" : "sgtoyshotgun",
+  "price" : 300,
+  "inventoryIcon" : "sgbulldogshotgun.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "A mix between a Breaker and a Moto Sniper enhanced with Praxis technology.",
-  "shortdescription" : "Praxis Moto",
+  "description" : "Someones going to have to pick all these darts up, you know that right?",
+  "shortdescription" : "Toy Shotgun",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
@@ -13,21 +13,21 @@
   "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
   "twoHanded" : true,
   
-  "animation" : "sgbreakerrifle.animation",
+  "animation" : "sgbulldogshotgun.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "sgbreakerrifle.png",
+    "middle" : "sgbulldogshotgun.png",
     "barrel" : "",
-    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+    "muzzleFlash" : ""
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/sgpushshotheavy.ogg" ]
+      "fire" : [ "/sfx/gun/railshots/sgtoydar2.ogg" ]
     }
   },
 
-  "baseOffset" : [1.75, 0.5],
-  "muzzleOffset" : [2.625, 0],
+  "baseOffset" : [2.125, 0.1],
+  "muzzleOffset" : [0.25, 0.35],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -36,11 +36,11 @@
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 1.5,
-    "baseDps" : 11,
-    "energyUsage" : 100.0,
-    "projectileCount" : 1,
-    "inaccuracy" : 0.02,
+    "fireTime" : 1,
+    "baseDps" : 0,
+    "energyUsage" : 25.0,
+    "projectileCount" : 6,
+    "inaccuracy" : 0.09,
       "stances" : {
       "idle" : {
         "armRotation" : 0,
@@ -64,9 +64,9 @@
 		}
       },
       "cooldown" : {
-        "duration" : 0.5,
-        "armRotation" : -45,
-        "weaponRotation" : 60,
+        "duration" : 0.1,
+        "armRotation" : -15,
+        "weaponRotation" : 25,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -76,21 +76,19 @@
 
     "fireType" : "auto",
 
-    "projectileType" : "sgbreakerroundblast",
+    "projectileType" : "sgtoydart",
     "projectileParameters" : { 
-      "knockback" : 6,
-	  "speed" : 250
+      "knockback" : 20,
+	  "speed" : 150
     }
   },
 
-  "altAbilityType" : "sgspiderburst",
-
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
-    "inventoryIcon" : "sgbreakerrifleelite.png:idle",
+    "inventoryIcon" : "sgbulldogshotgunelite.png:idle",
     "animationParts" : {
-      "middle" : "sgbreakerrifleelite.png"
+      "middle" : "sgbulldogshotgunelite.png"
     },
-    "shortdescription" : "Praxis Moto ^yellow;^reset;"
+    "shortdescription" : "HE Hobgoblin Shotgun ^yellow;^reset;"
   }
 }

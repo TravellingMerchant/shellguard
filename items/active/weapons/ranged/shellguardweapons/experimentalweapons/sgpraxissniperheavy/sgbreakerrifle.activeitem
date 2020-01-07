@@ -4,8 +4,8 @@
   "inventoryIcon" : "sgbreakerrifle.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "Split your own shot down the middle with this pinpoint accurate twin-shooter.",
-  "shortdescription" : "Praxis Archer",
+  "description" : "Fires high velocity flak rounds with pinpoint accuracy.",
+  "shortdescription" : "Praxis AM-Pike",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
@@ -27,7 +27,7 @@
   },
 
   "baseOffset" : [1.75, 0.5],
-  "muzzleOffset" : [2.625, 0],
+  "muzzleOffset" : [3.375, -0.25],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -39,7 +39,7 @@
     "fireTime" : 1,
     "baseDps" : 10,
     "energyUsage" : 30.0,
-    "projectileCount" : 1,
+    "projectileCount" : 5,
     "inaccuracy" : 0,
       "stances" : {
       "idle" : {
@@ -65,8 +65,8 @@
       },
       "cooldown" : {
         "duration" : 0.5,
-        "armRotation" : -75,
-        "weaponRotation" : 60,
+        "armRotation" : -35,
+        "weaponRotation" : 50,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -74,13 +74,13 @@
       }
     },
 
-    "fireType" : "burst",
-    "burstCount" : 2,
-    "burstTime" : 0.15,
+    "fireType" : "auto",
+    //"burstCount" : 6,
+    //"burstTime" : 0.05,
 
-    "projectileType" : "sgmotoround",
+    "projectileType" : "flakbullet",
     "projectileParameters" : { 
-      "knockback" : 6,
+      "knockback" : 25,
 	  "speed" : 250
     }
   },
@@ -91,8 +91,8 @@
   "upgradeParameters" : {
     "inventoryIcon" : "sgbreakerrifleelite.png:idle",
     "animationParts" : {
-      "middle" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgbreakerrifle/sgbreakerrifleelite.png"
+      "middle" : "sgbreakerrifleelite.png"
     },
-    "shortdescription" : "Breaker Rifle ^yellow;^reset;"
+    "shortdescription" : "Praxis AM-Pike ^yellow;^reset;"
   }
 }

@@ -1,11 +1,11 @@
 {
-  "itemName" : "sgbreakersniper",
-  "price" : 3000,
-  "inventoryIcon" : "sgbreakerrifle.png:idle",
+  "itemName" : "sgtoyminigun",
+  "price" : 500,
+  "inventoryIcon" : "sgtyphoonminigun.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "A mix between a Breaker and a Moto Sniper enhanced with Praxis technology.",
-  "shortdescription" : "Praxis Moto",
+  "description" : "Did anyone ever once stop and ask why when creating such a thing? Of course not!",
+  "shortdescription" : "Toy Minigun",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
@@ -13,21 +13,21 @@
   "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
   "twoHanded" : true,
   
-  "animation" : "sgbreakerrifle.animation",
+  "animation" : "sgtyphoonminigun.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "sgbreakerrifle.png",
+    "middle" : "sgtyphoonminigun.png",
     "barrel" : "",
-    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+    "muzzleFlash" : ""
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/sgpushshotheavy.ogg" ]
+      "fire" : [ "/sfx/gun/railshots/sgtoydart.ogg" ]
     }
   },
 
-  "baseOffset" : [1.75, 0.5],
-  "muzzleOffset" : [2.625, 0],
+  "baseOffset" : [1.75, -0.625],
+  "muzzleOffset" : [2.125, -0.25],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -36,11 +36,11 @@
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 1.5,
-    "baseDps" : 11,
-    "energyUsage" : 100.0,
+    "fireTime" : 0.1,
+    "baseDps" : 0,
+    "energyUsage" : 80.0,
     "projectileCount" : 1,
-    "inaccuracy" : 0.02,
+    "inaccuracy" : 0.07,
       "stances" : {
       "idle" : {
         "armRotation" : 0,
@@ -48,7 +48,10 @@
         "twoHanded" : true,
 
         "allowRotate" : true,
-        "allowFlip" : true
+        "allowFlip" : true,
+		
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation"
       },
       "fire" : {
         "duration" : 0,
@@ -58,16 +61,22 @@
 
         "allowRotate" : false,
         "allowFlip" : false,
+
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation",
 		
 		"animationStates": {
 			"weaponFire": "fire"
 		}
       },
       "cooldown" : {
-        "duration" : 0.5,
+        "duration" : 0.02,
         "armRotation" : -45,
-        "weaponRotation" : 60,
+        "weaponRotation" : 55,
         "twoHanded" : true,
+
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation",
 
         "allowRotate" : false,
         "allowFlip" : false
@@ -76,21 +85,19 @@
 
     "fireType" : "auto",
 
-    "projectileType" : "sgbreakerroundblast",
+    "projectileType" : "sgtoydart",
     "projectileParameters" : { 
-      "knockback" : 6,
-	  "speed" : 250
+      "knockback" : 10,
+	  "speed" : 70
     }
   },
 
-  "altAbilityType" : "sgspiderburst",
-
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
-    "inventoryIcon" : "sgbreakerrifleelite.png:idle",
+    "inventoryIcon" : "sgtyphoonminigunelite.png:idle",
     "animationParts" : {
-      "middle" : "sgbreakerrifleelite.png"
+      "middle" : "sgtyphoonminigunelite.png"
     },
-    "shortdescription" : "Praxis Moto ^yellow;^reset;"
+    "shortdescription" : "Typhoon Minigun ^yellow;^reset;"
   }
 }
