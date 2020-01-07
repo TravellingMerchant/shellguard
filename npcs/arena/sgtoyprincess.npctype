@@ -1,0 +1,291 @@
+{
+//Don't ask why it's so damn long okay
+  "type" : "sgtoyprincess",
+  "baseType" : "hostile",
+
+  "levelVariance" : [1, 1],
+
+  "persistent" : true,
+
+  "identity" : {
+      "name" : "Revwing",
+      "gender" : "female",
+      "species" : "avian",
+      "color" : [51, 117, 237],
+      
+      "personalityArmOffset" : [0, 0],
+      "personalityHeadOffset" : [-1, 0],
+      "personalityArmIdle" : "idle.4",
+      "personalityIdle" : "idle.4",
+      
+      "hairGroup" : "hair",
+      "hairType" : "7",
+      
+      "facialHairType" : "9",
+      "facialHairGroup" : "fluff",
+      
+      "facialMaskType" : "4",
+      "facialMaskGroup" : "beaks",
+      
+      "bodyDirectives" : "?replace;735e3a=977841;dc1f00=d7e8e8;6f2919=3f566e;ffca8a=7fdadd;be1b00=8fa7a3;951500=5d6d69;a38d59=c1a24e;e0975c=61aebf;d9c189=eacf60;a85636=4e7a90;f32200=f6fbfb",
+      "facialMaskDirectives" : "?replace;735e3a=977841;dc1f00=d7e8e8;6f2919=3f566e;ffca8a=7fdadd;be1b00=8fa7a3;951500=5d6d69;a38d59=c1a24e;e0975c=61aebf;d9c189=eacf60;a85636=4e7a90;f32200=f6fbfb",
+      "facialHairDirectives" : "?replace;735e3a=977841;dc1f00=d7e8e8;6f2919=3f566e;ffca8a=7fdadd;be1b00=8fa7a3;951500=5d6d69;a38d59=c1a24e;e0975c=61aebf;d9c189=eacf60;a85636=4e7a90;f32200=f6fbfb",
+      "emoteDirectives" : "?replace;735e3a=977841;dc1f00=d7e8e8;6f2919=3f566e;ffca8a=7fdadd;be1b00=8fa7a3;951500=5d6d69;a38d59=c1a24e;e0975c=61aebf;d9c189=eacf60;a85636=4e7a90;f32200=f6fbfb",
+      "hairDirectives" : "?replace;735e3a=977841;dc1f00=d7e8e8;6f2919=3f566e;ffca8a=7fdadd;be1b00=8fa7a3;951500=5d6d69;a38d59=c1a24e;e0975c=61aebf;d9c189=eacf60;a85636=4e7a90;f32200=f6fbfb"
+
+  },
+
+  "damageTeam" : 2,
+
+  "dropPools" : [ "money" ],
+
+  "scriptConfig" : {
+    "behavior" : "hostileguard",
+
+    "behaviorConfig" : {
+      "leapWindup" : 0.75,
+      "rangedAimTime" : 0.5,
+      "rangedWindupTime" : 0.2
+    },
+
+    "aggressive" : true,
+
+    "personalities" : [
+      [1.0, {
+        "personality" : "cheerful",
+        "additiveReactions" : [ "spontaneous" ],
+        "reactions" : {
+          "emo" : [
+            [1.0, "comfort"]
+          ],
+          "flee" : [
+            [1.0, "wave"]
+          ],
+          "gohome" : [
+            [1.0, "wave"]
+          ],
+          "chase" : [
+            [1.0, "smile"]
+          ],
+          "cry" : [
+            [1.0, "comfort"],
+            [1.0, "oh"],
+            [0.3, "follow"]
+          ],
+          "panic" : [
+            [1.0, "comfort"],
+            [1.0, "oh"],
+            [0.3, "follow"]
+          ],
+          "wink" : [
+            [1.0, "love"],
+            [1.0, "wink"],
+            [1.0, "follow"]
+          ],
+          "nosebleed" : [
+            [1.0, "comfort"],
+            [0.3, "follow"]
+          ],
+          "vomit" : [
+            [1.0, "comfort"],
+            [0.3, "follow"]
+          ],
+          "bored" : [
+            [1.0, "laugh"],
+            [1.0, "smile"]
+          ],
+          "spontaneous" : [
+            [1.0, "smile"]
+          ],
+          "hasquest" : [
+            [1.0, "smile"]
+          ],
+          "default" : [
+            [1.0, "smile"],
+            [1.0, "jumpforjoy"],
+            [1.0, "laugh"],
+            [1.0, "oh"],
+            [1.0, "wink"],
+            [1.0, "love"],
+            [1.0, "quit"],
+            [1.0, "follow"]
+          ]
+        }
+      }]
+    ],
+
+    "reactions" : {
+      "spontaneous" : [
+        [5.0, "sleep", { "timeRange" : [0.7, 0.9] }],
+        [1.0, "patrol"]
+      ]
+    },
+
+    "dialog" : {  
+
+      "attack" : {
+        "default" : {
+          "default" : [
+            "Chachalacaaa!"
+          ]
+        }
+      },
+      "reattack" : {
+        "default" : {
+          "default" : [
+            "Welcome back!"
+          ]
+        }
+      },
+      "killedTarget" : {
+        "default" : {
+          "default" : [
+            "Didn't even lose a feather.",
+            "That was fun!",
+            "Aw, over already?",
+            "Did I win?"
+          ]
+        }
+      },
+      "lostTarget" : {
+        "default" : {
+          "default" : [
+            "Trying to sneak around?"
+          ]
+        }
+      },
+      "outOfSight" : {
+        "default" : {
+          "default" : [
+            "Where are you~?"
+          ]
+        }
+      },
+      "cheerOn" : {
+        "default" : {
+          "default" : [
+            "We can do this!"
+          ]
+        }
+      },
+      "cantReach" : {
+        "default" : {
+          "default" : [
+            "Come over here and fight me, coward!"
+          ]
+        }
+      }
+    },
+	
+    "chatSounds" : {
+      "default" : {
+        "male" : [
+          "/sfx/humanoid/avian_chatter_female1.ogg",
+          "/sfx/humanoid/avian_chatter_female2.ogg",
+          "/sfx/humanoid/avian_chatter_female3.ogg",
+          "/sfx/humanoid/avian_chatter_female4.ogg"
+        ],
+        "female" : [
+          "/sfx/humanoid/avian_chatter_female1.ogg",
+          "/sfx/humanoid/avian_chatter_female2.ogg",
+          "/sfx/humanoid/avian_chatter_female3.ogg",
+          "/sfx/humanoid/avian_chatter_female4.ogg"
+        ]
+      }
+    },
+
+    "combat" : {
+      "meleeWeaponWindups" : {
+        "default" : 0.45,
+        "broadsword" : 0.45,
+        "dagger" : 0.3,
+        "axe" : 0.45,
+        "hammer" : 0.6,
+        "shortsword" : 0.35,
+        "spear" : 0.55
+      },
+      "meleeWeaponCooldowns" : {
+        "default" : 1.0,
+        "broadsword" : 1.7,
+        "dagger" : 0.7,
+        "axe" : 1.4,
+        "hammer" : 2.0,
+        "shortsword" : 1.0,
+        "spear" : 1.4
+      }
+    }
+  },
+
+  "items" : {
+    "default" : [
+      [0, [
+          {
+            "chest" : [ { "name" : "protectoratevestchest", "parameters" : { "colorIndex" : 8 } } ],
+            "legs" : [ { "name" : "pixelherodemolegs", "parameters" : { "colorIndex" : 8 } } ],
+            "primary" : [
+              "sgtoysmg"
+			      ],
+            "sheathedprimary" : [ "sgtoysniper" ],
+            "alt" : [
+              { "name" : "sgtoysmg" }
+            ]
+          }
+        ] ]
+    ]
+  },
+
+  "touchDamage" : {
+    "damage" : 0,
+    "teamType" : "enemy",
+    "damageType" : "knockback",
+    "damageSourceKind" : "nodamage",
+    "damageRepeatGroup" : "npcTouchKnockback",
+    "damageRepeatTimeout" : 0.5,
+    "knockback" : 20,
+    "statusEffects" : [ ]
+  },
+
+  "statusControllerSettings" : {
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 200.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 1
+      },
+      "protection" : {
+        "baseValue" : 1000.0
+      },
+      "healthRegen" : {
+        "baseValue" : 500.0
+      },
+        "physicalResistance" : {
+          "baseValue" : 10000.0
+        },
+        "fireResistance" : {
+          "baseValue" : 10000.0
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 10000.0
+        },
+        "iceResistance" : {
+          "baseValue" : 10000.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 10000.0
+        },
+        "electricResistance" : {
+          "baseValue" : 10000.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 10000.0
+        },
+        "poisonResistance" : {
+          "baseValue" : 10000.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 10000.0
+        }
+    }
+  }
+}

@@ -2520,11 +2520,11 @@
                 {
                  "height":8,
                  "id":1089,
-                 "name":"toy 2",
+                 "name":"princess",
                  "properties":
                     {
                      "npc":"human",
-                     "typeName":"shellbottoy2"
+                     "typeName":"sgtoyprincess"
                     },
                  "propertytypes":
                     {
@@ -2535,13 +2535,13 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":2880,
-                 "y":832
+                 "x":2208,
+                 "y":848
                 }, 
                 {
                  "height":8,
                  "id":1096,
-                 "name":"toy 1",
+                 "name":"merchant",
                  "properties":
                     {
                      "npc":"human",

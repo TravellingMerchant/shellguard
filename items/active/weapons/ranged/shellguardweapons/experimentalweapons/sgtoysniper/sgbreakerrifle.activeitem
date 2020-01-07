@@ -1,6 +1,6 @@
 {
   "itemName" : "sgtoysniper",
-  "price" : 600,
+  "price" : 350,
   "inventoryIcon" : "sgbreakerrifle.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
