@@ -233,5 +233,36 @@
     "senderName" : "Engineer Peter Atmos",
     "portraitImage" : "/interface/chatbubbles/atmos.png",
     "text" : "Good job with the test! Come back and talk to me again, I'd be happy to sell you some more advanced and even weaponized lockjaws."
+  },
+  
+//---------- misc ------------
+
+  "sgdev1" : {
+    "type" : "mission",
+    "senderName" : "Merchant",
+    "portraitImage" : "/interface/chatbubbles/merchant.png",
+    "text" : "Hello! I'm Merchant, designer of Shellguard. I just wanted to take a moment and say something, both for myself and on behalf of the Shellguard Dev Team!"
+  },
+  
+  "sgdev2" : {
+    "type" : "mission",
+    "senderName" : "Merchant",
+    "portraitImage" : "/interface/chatbubbles/merchant.png",
+    "text" : "Thank you for playing this mod, myself and many other talented individuals sunk a lot of time into developing this and it means a lot to us that you're here enjoying it! Developing this was quite a journy."
+  },
+  
+  "sgdev3" : {
+    "type" : "mission",
+    "senderName" : "Merchant",
+    "portraitImage" : "/interface/chatbubbles/merchant.png",
+    "text" : "To you the player, it's a short, fun experience. To us? It represents very literal thousands of hours of hard work and I for one, think it was time well spent! Now with Development at an end, it's onwards to bigger things!"
+  },
+  
+  "sgdev4" : {
+    "type" : "mission",
+    "senderName" : "Merchant",
+    "portraitImage" : "/interface/chatbubbles/merchant.png",
+    "text" : "Everyone in this arena is based on a Dev that worked on the mod. Good luck!"
   }
+  
 }
