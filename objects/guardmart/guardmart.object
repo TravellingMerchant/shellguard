@@ -25,6 +25,7 @@
 	  { "item" : "sgvendingguard" },
 	  { "item" : "sgvendingturret" },
 	  { "item" : "sgdonatorshop" },
+	  { "item" : "sgtoyshop" },
 	  { "item" : "shellarmourhead" },
 	  { "item" : "shellarmourchest" },
 	  { "item" : "shellarmourlegs" },

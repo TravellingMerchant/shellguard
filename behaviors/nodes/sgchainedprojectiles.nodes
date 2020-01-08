@@ -77,8 +77,7 @@
     "name": "waitForBoomerangReturn",
     "title": "waitForBoomerangReturn",
     "properties": {
-	  "projectileId": {"type": "number", "key": null},
-	  "gunPart": {"type": "string", "value": "frontgun"}
+	  "projectileId": {"type": "number", "key": null}
 	},
     "category": "projectiles",
     "script": "/scripts/actions/neb-spikefisting.lua",

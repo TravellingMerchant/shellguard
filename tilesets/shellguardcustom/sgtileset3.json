@@ -16,7 +16,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":33,
+ "tilecount":32,
  "tiledversion":"1.3.1",
  "tileheight":400,
  "tileproperties":
@@ -279,16 +279,6 @@
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"sgsurvivorrematchtele",
-         "tilesetDirection":"right"
-        },
-     "32":
-        {
-         "\/\/description":"sgtoyshop",
-         "\/\/name":"sgtoyshop",
-         "\/\/shortdescription":"sgtoyshop",
-         "imagePositionX":"-16",
-         "imagePositionY":"0",
-         "object":"sgtoyshop",
          "tilesetDirection":"right"
         },
      "4":
@@ -614,16 +604,6 @@
          "object":"string",
          "tilesetDirection":"string"
         },
-     "32":
-        {
-         "\/\/description":"string",
-         "\/\/name":"string",
-         "\/\/shortdescription":"string",
-         "imagePositionX":"string",
-         "imagePositionY":"string",
-         "object":"string",
-         "tilesetDirection":"string"
-        },
      "4":
         {
          "\/\/description":"string",
@@ -841,12 +821,6 @@
         {
          "image":"..\/..\/objects\/rematch teleporters\/sgsurvivorrematch\/sgsurvivorrematchicon.png",
          "imageheight":67,
-         "imagewidth":40
-        },
-     "32":
-        {
-         "image":"..\/..\/objects\/sgtoyshop\/icon.png",
-         "imageheight":51,
          "imagewidth":40
         },
      "4":

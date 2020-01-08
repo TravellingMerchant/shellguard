@@ -90,6 +90,46 @@ function spawnTargetedChainedProjectile(args, board)
 	return true
 end
 
+-- param fromPosition
+-- param toPosition
+-- param speed
+-- param gravityMultiplier
+-- param collisionCheck
+-- param useHighArc
+-- output aimVector
+-- output aimAngle
+function projectileAimVector(args, board)
+	if args.fromPosition == nil or args.speed == nil or args.toPosition == nil then return false end
+	local gravityMultiplier = args.gravityMultiplier or mcontroller.baseParameters().gravityMultiplier
+
+	local toTarget = world.distance(args.toPosition, args.fromPosition)
+	local aimVector, foundVector = util.aimVector(toTarget, args.speed, gravityMultiplier, args.useHighArc)
+	if not foundVector then return false end
+	aimVector = vec2.norm(aimVector)
+
+	-- Simulate the arc and do basic line and poly collision checks
+	if args.collisionCheck then
+		local velocity = vec2.mul(aimVector, args.speed)
+		local startArc = mcontroller.position()
+		local x = 0
+		while x < math.abs(toTarget[1]) do
+			local time = x / math.abs(velocity[1])
+			local yVel = velocity[2] - (gravityMultiplier * world.gravity(mcontroller.position()) * time)
+			local step = vec2.add({util.toDirection(aimVector[1]) * x, ((velocity[2] + yVel) / 2) * time}, mcontroller.position())
+
+			if world.lineTileCollision(startArc, step) or world.polyCollision(poly.translate(mcontroller.collisionPoly(), step)) then
+				return false
+			end
+
+			startArc = step
+			local arcVector = vec2.norm({velocity[1], yVel})
+			x = x + math.abs(arcVector[1])
+		end
+	end
+
+	return true, {aimVector = aimVector, aimAngle = vec2.angle(aimVector)}
+end
+
 -- param projectileName
 -- output gravityMultiplier
 function projectileGravityMultiplier(args, board)
@@ -98,15 +138,12 @@ function projectileGravityMultiplier(args, board)
 end
 
 -- param projectileId
--- param gunPart
 function waitForBoomerangReturn(args, board)
 	if not args.projectileId then
 		return false
 	end
-	self.trackedBoomerangs = self.trackedBoomerangs or {}
-	self.trackedBoomerangs[args.gunPart] = args.projectileId
-	while world.entityExists(self.trackedBoomerangs[args.gunPart]) do
-		coroutine.yield(nil)
+	while world.entityExists(args.projectileId) do
+		dt = coroutine.yield(nil)
 	end
 	return true
 end
