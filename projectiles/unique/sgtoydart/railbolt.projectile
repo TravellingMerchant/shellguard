@@ -11,7 +11,7 @@
   "speed" : 90,
   "knockback" : 25,
   "knockbackDirectional" : true,
-  "timeToLive" : 30,
+  "timeToLive" : 20,
   "supportsProcessing" : true,
   "actionOnReap" : [
     {
