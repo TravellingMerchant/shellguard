@@ -73,7 +73,22 @@
                 "name": "selector",
                 "parameters": {},
                 "children": [
-				  
+				  {
+					  "title": "optional",
+					  "type": "decorator",
+					  "name": "optional",
+					  "parameters": {
+						"shouldRun": {"key": "<holdAim>"}
+					  },
+					  "child": {
+						  "title": "hasFlag",
+						  "type": "action",
+						  "name": "hasFlag",
+						  "parameters": {
+							"name": {"key": "holdAim"}
+						  }
+						}
+					},
                   {
                     "title": "sequence",
                     "type": "composite",
