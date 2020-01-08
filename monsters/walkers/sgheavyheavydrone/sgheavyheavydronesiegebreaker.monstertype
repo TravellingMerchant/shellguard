@@ -37,7 +37,7 @@
 	"damageBar" : "Special",
 
   	"damageTeamType" : "enemy",
-    "damageTeam" : 0,
+    "damageTeam" : 5,
     "behavior" : "monster",
 	"deathBehavior" : "monster-death",
 	"renderLayer" : "Projectile-1",
@@ -46,12 +46,12 @@
       "converse" : {
         "default" : {
           "default" : [
-            "Do not fear, this unit will protect you.",
-			"Systems operating at optimal levels",
-			"You are small.",
-			"This unit will try not to step on you.",
-			"This unit probably needs to lose some weight.",
-			"Equipment locked and loaded."
+            "ENGINES OVERHEATED.",
+			"IRRATIONAL HATRED OF ORGANIC LIFE: CHECK.",
+			"YOU ARE PATHETIC.",
+			"ANGER UNIT OPERATING AT 112%.",
+			"CRUSHING PROTOCOLS ENGAGED.",
+			"SIEGEBREAKER ONLINE."
           ]
         }
       }
@@ -61,7 +61,7 @@
 	  
       "targetQueryRange" : 70,
       "targetOnDamage" : true,
-	  "targetEntityTypes": ["monster", "npc"],
+	  "targetEntityTypes": ["player", "monster", "npc"],
 	  
 	  
       "keepTargetInSight" : true,
@@ -123,7 +123,7 @@
 			"rotationCenter"  : [2, 7],
             "windupState" : "idle",
 			"windupStateType" : "backgun",
-            "projectileType" : "chakram",
+            "projectileType" : "sgwreckingball",
 			"projectileParameters" : {
 			  "knockback" : 10,
 		      "power" : 15.0,
@@ -165,7 +165,7 @@
 			"rotationCenter"  : [-5, 7],
             "windupState" : "idle",
 			"windupStateType" : "frontgun",
-            "projectileType" : "chakram",
+            "projectileType" : "sgwreckingball",
 			"projectileParameters" : {
 			  "knockback" : 10,
 		      "power" : 15.0,
@@ -204,13 +204,13 @@
             "jumpXControlForce" : 50,
             "minXRange" : 10
           }
-        }	
-      ],
-
-      "periodicActions" : [
+        },
 		{
 		  "name": "converseseq"
 		}
+      ],
+
+      "periodicActions" : [
 	  ],
 
       "approachActions" : [

@@ -1,0 +1,27 @@
+{
+  "projectileName" : "sgwreckingball",
+  "actionOnCollide" : [
+    {
+      "action" : "projectile",
+      "type" : "sgplasmiteblastphysical",
+	  "config" : {"inheritDamageFactor" : 1}
+    }
+  ],
+  "image" : "sgwreckingball.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 0.0
+  },
+  "animationCycle" : 0.25,
+  "actionOnReap" : [],
+  "emitters" : [],
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "power" : 20,
+  "speed" : 35,
+  "damageKind" : "hammer",
+  "physics" : "laser",
+  "bounces" : -1,
+  "piercing" : true,
+  "timeToLive" : 5,
+  "scripts" : [ "/projectiles/activeitems/chakram/chakramprojectile.lua" ]
+}
