@@ -133,6 +133,7 @@
 			  "pickupDistance" : 1.0,
 
 			  "maxDistance" : 40,
+			  "stickTime" : 5,
 			  "speed" : 70
 			},
 			"projectileCount": 1,

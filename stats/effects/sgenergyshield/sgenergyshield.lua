@@ -13,13 +13,16 @@ function init()
 	self.droneOrbitDistance = config.getParameter("droneOrbitDistance", 5)
 	self.droneOrbitRate = config.getParameter("droneOrbitRate", 0.5)
   self.droneIds = {}
-	self.respawnTimer = self.respawnTime
+	self.respawnTimer = 0.125
 	
   if self.droneOrbitRate then
     self.droneOrbitAngle = 0
   end
 	
 	--Animations
+  animator.setParticleEmitterOffsetRegion("sparkles", mcontroller.boundBox())
+  animator.setParticleEmitterActive("sparkles", config.getParameter("particles", true))
+  effect.setParentDirectives("fade=FFFFCC;0.03?border=2;FFFFCC20;00000000")
 end
 
 function update(dt)

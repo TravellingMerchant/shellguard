@@ -76,20 +76,21 @@ function moveOrbit()
   local baseParameters = mcontroller.baseParameters()
   local flyForce = baseParameters.airForce
   local maxFlySpeed = baseParameters.flySpeed
+  
+  local parentPosition = world.entityPosition(self.parentEntity)
+  local targetPosition = vec2.add(parentPosition, self.targetOffset)
 
   while not self.despawning do
-    local pos = mcontroller.position()
-    local parentPosition = world.entityPosition(self.parentEntity)
-		local trackingVec = parentPosition
-		local trackingVel = world.entityVelocity(self.parentEntity)
-		
-		if not self.perfectTracking then
-			local targetPosition = vec2.add(parentPosition, self.targetOffset)
-			mcontroller.setPosition(targetPosition)
-		else
-			local targetPosition = vec2.add(parentPosition, self.targetOffset)
-			mcontroller.setPosition(targetPosition)
-		end
+	if not self.perfectTracking then
+      local toTarget = world.distance(targetPosition, mcontroller.position())
+      local targetDist = vec2.mag(toTarget)
+
+      local approachSpeed = math.min(targetDist ^ 0.75 * 15, maxFlySpeed)
+      local approachVec = vec2.mul(vec2.div(toTarget, targetDist), approachSpeed)
+	  mcontroller.controlApproachVelocity(approachVec, flyForce)
+	else
+	  mcontroller.setPosition(targetPosition)
+	end
 
     updateAttack()
 

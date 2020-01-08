@@ -16,6 +16,7 @@
   "emitters" : [],
   "frameNumber" : 1,
   "damageKindImage" : "icon.png",
+  "flippable" : false,
   "power" : 20,
   "speed" : 35,
   "damageKind" : "hammer",
@@ -23,5 +24,5 @@
   "bounces" : -1,
   "piercing" : true,
   "timeToLive" : 5,
-  "scripts" : [ "/projectiles/activeitems/chakram/chakramprojectile.lua" ]
+  "scripts" : [ "sgwreckingball.lua" ]
 }
