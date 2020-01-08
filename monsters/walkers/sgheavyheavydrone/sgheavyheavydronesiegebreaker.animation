@@ -252,33 +252,33 @@
           }
         }
       },
-      "frontgunbase" : {
+      "frontgun" : {
         "properties" : {
           "zLevel" : 6,
-		  "offset" : [-2.5, 5.825],
+          "offset" : [-3, 4.825],
           "transformationGroups" : [ "frontgun", "aim" ],
-		  "image" : "<partImage>:idle.1"
+		  "image" : "<partImage>:firing.1",
+          "beamSource" : [0.0, -0.5],
+          "beamEnd" : [5.0, 0.0]
         },
         "partStates" : {
           "body" : {
 		    "walk": {
 			  "frameProperties": {
-			    "offset": [[-2.5, 6.7], [-2.5, 6.45],[-2.5, 6.325],[-2.5, 6.45],[-2.5, 6.575],[-2.5, 6.7],[-2.5, 6.45],[-2.5, 6.325],[-2.5, 6.45],[-2.5, 6.575]]
+			    "offset": [[-3, 5.7], [-3, 5.45],[-3, 5.325],[-3, 5.45],[-3, 5.575],[-3, 5.7],[-3, 5.45],[-3, 5.325],[-3, 5.45],[-3, 5.575]]
 			  }
 			}
-		  }
+          }
         }
       },
-	  "frontgun" : {
+      "frontgunball" : {
         "properties" : {
-          "zLevel" : 6,
-          "anchorPart": "frontgunbase",
-          "transformationGroups" : [ "frontgun", "aim" ],
-		  "image" : "<partImage>:idle.1",
-          "beamSource" : [0.0, -0.5]
+          "zLevel" : 7,
+          "anchorPart" : "frontgun",
+		  "image" : "<partImage>:idle.1"
         },
         "partStates" : {
-		  "frontgun": {
+          "frontgun" : {
             "firing" : {
               "properties" : {
                 "image" : "<partImage>:firing.<frame>"
@@ -287,32 +287,31 @@
           }
         }
       },
-	  "backgunbase" : {
+      "backgun" : {
         "properties" : {
           "zLevel" : 1,
-          "offset" : [5.7, 4.825],
+          "offset" : [5.7, 5.825],
           "transformationGroups" : [ "backgun", "aim2" ],
-		  "image" : "<partImage>:idle.1"
+		  "image" : "<partImage>:firing.1"
         },
         "partStates" : {
           "body" : {
 		    "walk": {
 			  "frameProperties": {
-			    "offset": [[5.7, 5.7], [5.7, 5.45],[5.7, 5.325],[5.7, 5.45],[5.7, 5.575],[5.7, 5.7],[5.7, 5.45],[5.7, 5.325],[5.7, 5.45],[5.7, 5.575]]
+			    "offset": [[5.7, 6.7], [5.7, 6.45],[5.7, 6.325],[5.7, 6.45],[5.7, 6.575],[5.7, 6.7],[5.7, 6.45],[5.7, 6.325],[5.7, 6.45],[5.7, 6.575]]
 			  }
 			}
-		  }
-		}
-	  },
-      "backgun" : {
+          }
+        }
+      },
+      "backgunball" : {
         "properties" : {
-          "zLevel" : 1,
-          "anchorPart" : "backgunbase",
-		  "image" : "<partImage>:idle.1",
-		  "beamSource" : [0.0, -0.5]
+          "zLevel" : 2,
+          "anchorPart" : "backgun",
+		  "image" : "<partImage>:idle.1"
         },
         "partStates" : {
-		  "backgun": {
+          "backgun" : {
             "firingBack" : {
               "properties" : {
                 "image" : "<partImage>:firing.<frame>"

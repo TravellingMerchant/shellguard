@@ -7,6 +7,6 @@
 
   "frames" : {
     "backgun" : "spikeFist1.png",
-	"backgunbase" : "spikeFistInvis.png"
+	"backgunball" : "spikeFist1.png"
   }
 }
