@@ -3,11 +3,7 @@
   "category" : "sgheavyheavydrone",
   "type" : "frontSpikeFist",
 
-  "parameters" : {
-    "frontgun" : {
-	  "offset" : [2.75, 0.0]
-	}
-  },
+  "parameters" : {},
 
   "frames" : {
     "frontgun" : "spikeFist1.png",

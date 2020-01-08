@@ -258,8 +258,7 @@
           "offset" : [-3, 4.825],
           "transformationGroups" : [ "frontgun", "aim" ],
 		  "image" : "<partImage>:firing.1",
-          "beamSource" : [0.0, -0.5],
-          "beamEnd" : [5.0, 0.0]
+          "beamSource" : [0.0, -0.5]
         },
         "partStates" : {
           "body" : {
@@ -292,7 +291,8 @@
           "zLevel" : 1,
           "offset" : [5.7, 5.825],
           "transformationGroups" : [ "backgun", "aim2" ],
-		  "image" : "<partImage>:firing.1"
+		  "image" : "<partImage>:firing.1",
+		  "beamSource" : [0.0, -0.5]
         },
         "partStates" : {
           "body" : {

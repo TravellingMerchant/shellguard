@@ -87,7 +87,47 @@
 	  
 	  "concurrentHostileActions" : [
 	    //back gun
-        
+        {
+          "name" : "action-fire-trans-male",
+		  "cooldown": 0.3,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 40,
+            "minimumRange" : 0,
+            "windupTime" : 1.0,
+            "windupStopForce" : 50,
+			"rotationCenter"  : [2, 7],
+            "windupState" : "idle",
+			"windupStateType" : "backgun",
+            "projectileType" : "chakram",
+			"projectileParameters" : {
+			  "knockback" : 10,
+		      "power" : 4.0,
+			  "damageRepeatTimeout" : 0.5,
+
+			  "returnOnHit" : false,
+			  "pickupDistance" : 1.0,
+
+			  "maxDistance" : 40,
+			  "speed" : 70
+			},
+			"projectileCount": 1,
+			"projectileInterval": 0,
+			"inaccuracy": 0,
+			"transGroup" : "aim2",
+            "fireOffset" : [6.25, -3.0],
+            "fireSound" : "fire",
+			"fireStateType": "backgun",
+            "fireState" : "firingBack",
+            "fireDelay" : 0.1,
+            "rotateAim" : true,
+			"holdAim" : true,
+			"gunPart" : "backgun",
+            "winddownState" : "idle",
+			"winddownStateType" : "backgun",
+            "winddownTime" : 0.0
+          }
+        },
 		// front gun
 		{
           "name" : "action-fire-trans-male",
