@@ -80,12 +80,36 @@
 	  ],
 
       "fleeActions" : [],
-
-      "hostileActions" : [
-		
-	  ],
 	  
 	  "concurrentHostileActions" : [
+	    //rockets
+		{
+          "name" : "action-sgdroidshoot",
+		  "cooldown": 3.0,
+          "parameters" : {
+            "requireLineOfSight" : false,
+            "maximumRange" : 40,
+            "minimumRange" : 0,
+            "windupTime" : 0.0,
+            "windupStopForce" : 50,
+            "windupState" : "idle",
+			"winddownStateType": "rockets",
+			"windupStateType": "rockets",
+            "projectileType" : "sentinelshardrocket",
+			"projectileCount": 3,
+            "fireOffsets" : [[5, 11.25], [4.5, 11], [5, 11.25]],
+			
+			"inaccuracy": 0.1,
+            "fireSound" : "fireRocket",
+			"fireStateType": "rockets",
+            "fireState" : "fireRockets",
+            "fireDelay" : 0.1,
+            "rotateAim" : false,
+
+            "winddownState" : "",
+            "winddownTime" : 0.6
+          }
+        },
 	    //back gun
         {
           "name" : "action-fire-trans-male",
@@ -102,7 +126,7 @@
             "projectileType" : "chakram",
 			"projectileParameters" : {
 			  "knockback" : 10,
-		      "power" : 4.0,
+		      "power" : 15.0,
 			  "damageRepeatTimeout" : 0.5,
 
 			  "returnOnHit" : false,
@@ -144,7 +168,7 @@
             "projectileType" : "chakram",
 			"projectileParameters" : {
 			  "knockback" : 10,
-		      "power" : 4.0,
+		      "power" : 15.0,
 			  "damageRepeatTimeout" : 0.5,
 
 			  "returnOnHit" : false,
@@ -168,34 +192,6 @@
             "winddownState" : "idle",
 			"winddownStateType" : "frontgun",
             "winddownTime" : 0.0
-          }
-        },
-		//rockets
-		{
-          "name" : "action-sgdroidshoot",
-		  "cooldown": 3.0,
-          "parameters" : {
-            "requireLineOfSight" : false,
-            "maximumRange" : 40,
-            "minimumRange" : 0,
-            "windupTime" : 0.0,
-            "windupStopForce" : 50,
-            "windupState" : "idle",
-			"winddownStateType": "rockets",
-			"windupStateType": "rockets",
-            "projectileType" : "sentinelshardrocket",
-			"projectileCount": 3,
-            "fireOffsets" : [[6.0, 3.5], [6.5, 3.25], [6.0, 3.5]],
-			
-			"inaccuracy": 0.1,
-            "fireSound" : "fireRocket",
-			"fireStateType": "rockets",
-            "fireState" : "fireRockets",
-            "fireDelay" : 0.1,
-            "rotateAim" : false,
-
-            "winddownState" : "",
-            "winddownTime" : 0.6
           }
         },
 		{
@@ -318,7 +314,7 @@
       "collisionPoly" : [ [1.75, 7.55], [2.25, 4.05],  [2.75, -3.55], [2.25, -4.85],  [-2.25, -4.85], [-2.75, -3.55],  [-2.25, 4.05], [-1.75, 7.55] ],
 
       "mass" : 2.5,
-      "walkSpeed" : 0,
+      "walkSpeed" : 6,
       "runSpeed" : 8,
 
       "airFriction" : 0,
