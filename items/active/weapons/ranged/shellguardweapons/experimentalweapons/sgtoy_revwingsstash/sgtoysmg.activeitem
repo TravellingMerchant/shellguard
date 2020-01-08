@@ -1,0 +1,92 @@
+{
+  "itemName" : "sgtoysmg",
+  "price" : 300,
+  "inventoryIcon" : "rapid.png",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Probes sold separately.",
+  "shortdescription" : "Shellguard Uranus",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "itemTags" : ["weapon","ranged","machinepistol","upgradeableWeapon"],
+  "twoHanded" : false,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "rapid.png",
+    "barrel" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/railshots/sgtoydartr.ogg" ]
+    }
+  },
+
+  "baseOffset" : [-1.25, 0.25],
+  "muzzleOffset" : [2, 0.25],
+
+  "scripts" : ["/items/active/weapons/ranged/sg_built/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    
+    "fireTime" : 0.166,
+    "baseDps" : 0,
+    "energyUsage" : 35.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.04,
+    
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -5,
+        "weaponRotation" : 10,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "sgtoyball",
+    "projectileParameters" : { 
+      "knockback" : 15
+    }
+  },
+  
+  "build" : [],
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "rapidt6.png",
+    "animationParts" : {
+      "middle" : "rapidt6.png"
+    },
+    "shortdescription" : "SG Uranus Elite ^yellow;^reset;"
+  }
+}
