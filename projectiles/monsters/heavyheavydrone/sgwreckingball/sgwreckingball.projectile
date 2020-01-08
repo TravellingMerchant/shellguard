@@ -2,9 +2,26 @@
   "projectileName" : "sgwreckingball",
   "actionOnCollide" : [
     {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/plasmiteexplode.ogg" ]
+    },
+    {
       "action" : "projectile",
-      "type" : "sgplasmiteblastphysical",
-	  "config" : {"inheritDamageFactor" : 1}
+      "type" : "sgsmokecloud",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 7,
+      "backgroundRadius" : 7,
+      "explosiveDamageAmount" : 3.0,
+      "delaySteps" : 2
     }
   ],
   "image" : "sgwreckingball.png",
@@ -17,12 +34,17 @@
   "frameNumber" : 1,
   "damageKindImage" : "icon.png",
   "orientationLocked" : true,
-  "power" : 20,
-  "speed" : 35,
   "damageKind" : "hammer",
   "physics" : "laser",
   "bounces" : -1,
   "piercing" : true,
   "timeToLive" : 5,
-  "scripts" : [ "sgwreckingball.lua" ]
+  "scripts" : [ "sgwreckingball.lua" ],
+  "knockback" : 10,
+  "speed" : 50,
+  "power" : 15.0,
+  "damageRepeatTimeout" : 0.5,
+  "returnOnHit" : false,
+  "pickupDistance" : 1.0,
+  "maxDistance" : 40
 }

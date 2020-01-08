@@ -20,7 +20,7 @@
     "category": "projectiles",
     "script": "/scripts/actions/neb-spikefisting.lua",
     "output": {
-	  "targetProjectile": {"type": "number", "key": null}
+	  "targetProjectile": {"type": "entity", "key": null}
 	}
   },
   "spawnTargetedChainedProjectile": {
@@ -40,44 +40,12 @@
     "script": "/scripts/actions/neb-spikefisting.lua",
     "output": {}
   },
-  "projectileGravityMultiplier": {
-    "type": "action",
-    "name": "projectileGravityMultiplier",
-    "title": "",
-    "properties": {
-      "projectileName": {"type": "string", "value": null}
-    },
-    "category": "projectiles",
-    "script": "/scripts/actions/neb-spikefisting.lua",
-    "output": {
-      "gravityMultiplier": {"type": "number", "key": null}
-    }
-  },
-  "projectileAimVector": {
-    "type": "action",
-    "name": "projectileAimVector",
-    "title": "",
-    "properties": {
-      "collisionCheck": {"type": "bool", "value": true},
-      "fromPosition": {"type": "position", "key": "self"},
-      "gravityMultiplier": {"type": "number", "value": null},
-      "speed": {"type": "number", "value": 0},
-      "toPosition": {"type": "position", "value": null},
-      "useHighArc": {"type": "bool", "value": true}
-    },
-    "category": "projectiles",
-    "script": "/scripts/actions/neb-spikefisting.lua",
-    "output": {
-      "aimVector": {"type": "vec2", "key": null},
-      "aimAngle": {"type": "number", "key": null}
-    }
-  },
   "waitForBoomerangReturn": {
     "type": "action",
     "name": "waitForBoomerangReturn",
     "title": "waitForBoomerangReturn",
     "properties": {
-	  "projectileId": {"type": "number", "key": null},
+	  "projectileId": {"type": "entity", "key": null},
 	  "gunPart": {"type": "string", "value": "frontgun"}
 	},
     "category": "projectiles",
