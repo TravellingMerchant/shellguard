@@ -1,6 +1,6 @@
 {
   "projectileName" : "sgwreckingball",
-  "actionOnCollide" : [
+  "actionOnHold" : [
     {
       "action" : "projectile",
       "type" : "sgplasmiteblastphysical",
@@ -18,7 +18,7 @@
   "damageKindImage" : "icon.png",
   "orientationLocked" : true,
   "power" : 20,
-  "speed" : 35,
+  "speed" : 15,
   "damageKind" : "hammer",
   "physics" : "laser",
   "bounces" : -1,

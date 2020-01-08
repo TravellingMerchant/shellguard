@@ -25,7 +25,7 @@
       "segmentImage" : "/monsters/walkers/sgheavyheavydrone/beams/chain.png",
       "endSegmentImage" : "/monsters/walkers/sgheavyheavydrone/beams/chainend.png",
       "segmentSize" : 1,
-      "fullbright" : true,
+      "fullbright" : false,
       "jitter" : 0,
       "waveform" : {
         "movement" : 0,
@@ -118,7 +118,7 @@
             "requireLineOfSight" : true,
             "maximumRange" : 40,
             "minimumRange" : 0,
-            "windupTime" : 1.0,
+            "windupTime" : 1.5,
             "windupStopForce" : 50,
 			"rotationCenter"  : [1.5, 7.5],
             "windupState" : "idle",
@@ -133,7 +133,7 @@
 			  "pickupDistance" : 1.0,
 
 			  "maxDistance" : 40,
-			  "stickTime" : 5,
+			  "stickTime" : 0.7,
 			  "speed" : 70
 			},
 			"projectileCount": 1,
@@ -176,6 +176,7 @@
 			  "pickupDistance" : 1.0,
 
 			  "maxDistance" : 40,
+			  "stickTime" : 0.7,
 			  "speed" : 70
 			},
 			"projectileCount": 1,
@@ -352,6 +353,9 @@
       "primaryScriptDelta" : 5,
 
       "stats" : {
+        "grit" : {
+          "baseValue" : 1.0
+        },
         "knockbackStunTime" : {
           "baseValue" : 0.25
         },
@@ -359,13 +363,13 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 500
+          "baseValue" : 2000
         },
         "protection" : {
           "baseValue" : 75.0
         },
         "healthRegen" : {
-          "baseValue" : 0.0
+          "baseValue" : 0.1
         },
         "powerMultiplier" : {
           "baseValue" : 1.0
