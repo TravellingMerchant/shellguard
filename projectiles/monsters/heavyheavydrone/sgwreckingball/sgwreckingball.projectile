@@ -16,7 +16,7 @@
   "emitters" : [],
   "frameNumber" : 1,
   "damageKindImage" : "icon.png",
-  "flippable" : false,
+  "orientationLocked" : true,
   "power" : 20,
   "speed" : 35,
   "damageKind" : "hammer",
