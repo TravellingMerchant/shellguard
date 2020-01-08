@@ -120,7 +120,7 @@
             "minimumRange" : 0,
             "windupTime" : 1.0,
             "windupStopForce" : 50,
-			"rotationCenter"  : [2, 7.5],
+			"rotationCenter"  : [1.5, 7.5],
             "windupState" : "idle",
 			"windupStateType" : "backgun",
             "projectileType" : "sgwreckingball",
