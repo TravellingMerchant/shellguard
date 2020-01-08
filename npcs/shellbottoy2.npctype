@@ -130,9 +130,9 @@
     "default" : [
       [0, [
           {
-            "head" : [ { "name" : "ironwatchdronehead" } ],
-            "chest" : [ { "name" : "ironwatchdronechest" } ],
-            "legs" : [ { "name" : "ironwatchdronelegs" } ],
+            "head" : [ { "name" : "sgtoydronehead" } ],
+            "chest" : [ { "name" : "sgtoydronechest" } ],
+            "legs" : [ { "name" : "sgtoydronelegs" } ],
             "primary" : [
               "sgdartpistol",
 			  "sgtoyshotgun",

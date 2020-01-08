@@ -21,6 +21,7 @@
     "buyFactor" : 1.0,
     "sellFactor" : 0.2,
     "items" : [
+	  { "item" : "sgtoydisplay" },
 	  { "item" : "sgtoybluedye" },
 	  { "item" : "sgdartpistol" },
 	  { "item" : "sgtoyshotgun" },
