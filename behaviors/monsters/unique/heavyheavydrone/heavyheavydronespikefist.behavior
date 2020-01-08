@@ -41,7 +41,7 @@
     "gunPart": "frontgun",
     "transGroup": "aim",
     "windupStateType": "frontgun",
-	"winddownStateType": "frontgun"
+    "winddownStateType": "frontgun"
   },
   "root": {
     "title": "sequence",
@@ -73,22 +73,7 @@
                 "name": "selector",
                 "parameters": {},
                 "children": [
-                  {
-                    "title": "optional",
-                    "type": "decorator",
-                    "name": "optional",
-                    "parameters": {
-                      "shouldRun": {"key": "<holdAim>"}
-                    },
-                    "child": {
-                      "title": "hasFlag",
-                      "type": "action",
-                      "name": "hasFlag",
-                      "parameters": {
-                        "name": {"key": "holdAim"}
-                      }
-                    }
-                  },
+				  
                   {
                     "title": "sequence",
                     "type": "composite",
@@ -210,511 +195,533 @@
                       "number": "shots"
                     }
                   },
-                  {
-                    "title": "repeater",
-                    "type": "decorator",
-                    "name": "repeater",
-                    "parameters": {
-                      "maxLoops": {"key": "<projectileCount>"},
-                      "untilSuccess": {"value": false}
-                    },
-                    "child": {
-                      "title": "sequence",
-                      "type": "composite",
-                      "name": "sequence",
-                      "parameters": {},
-                      "children": [
-                        {
-                          "title": "succeeder",
-                          "type": "decorator",
-                          "name": "succeeder",
-                          "parameters": {},
-                          "child": {
-                            "title": "playSound",
-                            "type": "action",
-                            "name": "playSound",
-                            "parameters": {
-                              "sound": {"value": "<fireSound>"},
-                              "loops": {"value": 0}
-                            }
-                          }
-                        },
-                        {
-                          "title": "succeeder",
-                          "type": "decorator",
-                          "name": "succeeder",
-                          "parameters": {},
-                          "child": {
-                            "title": "burstParticleEmitter",
-                            "type": "action",
-                            "name": "burstParticleEmitter",
-                            "parameters": {
-                              "emitter": {"value": "<fireParticleBurst>"}
-                            }
-                          }
-                        },
-                        {
-                          "title": "listClear",
-                          "type": "action",
-                          "name": "listClear",
-                          "parameters": {},
-						  "output": {
-						    "list": "fireOffsets"
-						  }
-                        },
-                        {
-                          "title": "selector",
-                          "type": "composite",
-                          "name": "selector",
-                          "parameters": {},
-                          "children": [
-                            {
-                              "title": "sequence",
-                              "type": "composite",
-                              "name": "sequence",
-                              "parameters": {},
-                              "children": [
-                                {
-                                  "title": "listGet",
-                                  "type": "action",
-                                  "name": "listGet",
-                                  "parameters": {
-                                    "list": {"key": "<fireOffsets>"}
-                                  }
-                                },
-                                {
-                                  "title": "each",
-                                  "type": "decorator",
-                                  "name": "each",
-                                  "parameters": {
-                                    "list": {"key": "<fireOffsets>"},
-                                    "type": {"value": "vec2"}
-                                  },
-                                  "child": {
-                                    "title": "listPush",
-                                    "type": "action",
-                                    "name": "listPush",
-                                    "parameters": {
-                                      "list": {"key": "fireOffsets"},
-                                      "vec2": {"key": "eachItem"}
-                                    }
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "title": "listPush",
-                              "type": "action",
-                              "name": "listPush",
-                              "parameters": {
-							    "list": {"key": "fireOffsets"},
-                                "vec2": {"key": "<fireOffset>"}
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "title": "each",
-                          "type": "decorator",
-                          "name": "each",
-                          "parameters": {
-                            "list": {"key": "fireOffsets"},
-                            "type": {"value": "vec2"}
-                          },
-                          "child": {
-                            "title": "sequence",
-                            "type": "composite",
-                            "name": "sequence",
-                            "parameters": {},
-                            "children": [
-                              {
-                                "title": "sequence",
-                                "type": "composite",
-                                "name": "sequence",
-                                "parameters": {},
-                                "children": [
-                                  {
-                                    "title": "vecMultiply",
-                                    "type": "action",
-                                    "name": "vecMultiply",
-                                    "parameters": {
-                                      "first": {"key": "<aimDirection>"},
-                                      "second": {"value": ["facingDirection", 1]}
-                                    },
-                                    "output": {
-                                      "vector": "aimVector"
-                                    }
-                                  },
-                                  {
-                                    "title": "selector",
-                                    "type": "composite",
-                                    "name": "selector",
-                                    "parameters": {},
-                                    "children": [
-                                      {
-                                        "title": "optional",
-                                        "type": "decorator",
-                                        "name": "optional",
-                                        "parameters": {
-                                          "shouldRun": {"key": "<rotateAim>"}
-                                        },
-                                        "child": {
-                                          "title": "sequence",
-                                          "type": "composite",
-                                          "name": "sequence",
-                                          "parameters": {},
-                                          "children": [
-                                            {
-                                              "title": "distance",
-                                              "type": "action",
-                                              "name": "distance",
-                                              "parameters": {
-                                                "from": {"key": "origin"},
-                                                "to": {"key": "targetPosition"}
-                                              },
-                                              "output": {
-                                                "vector": "toTarget"
-                                              }
-                                            },
-                                            {
-                                              "title": "vecMultiply",
-                                              "type": "action",
-                                              "name": "vecMultiply",
-                                              "parameters": {
-                                                "first": {"key": "toTarget"},
-                                                "second": {"value": ["facingDirection", 1]}
-                                              },
-                                              "output": {
-                                                "vector": "toTarget"
-                                              }
-                                            },
-                                            {
-                                              "title": "vecAngle",
-                                              "type": "action",
-                                              "name": "vecAngle",
-                                              "parameters": {
-                                                "vector": {"key": "toTarget"}
-                                              },
-                                              "output": {
-                                                "angle": "targetAngle"
-                                              }
-                                            },
-                                            {
-                                              "title": "vecRotate",
-                                              "type": "action",
-                                              "name": "vecRotate",
-                                              "parameters": {
-                                                "vector": {"key": "eachItem"},
-                                                "angle": {"key": "targetAngle"}
-                                              },
-                                              "output": {
-                                                "vector": "fireOffset"
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      },
-                                      {
-                                        "title": "setVector",
-                                        "type": "action",
-                                        "name": "setVector",
-                                        "parameters": {
-                                          "vector": {"key": "eachItem"}
-                                        },
-                                        "output": {
-                                          "vector": "fireOffset"
-                                        }
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    "title": "vecMultiply",
-                                    "type": "action",
-                                    "name": "vecMultiply",
-                                    "parameters": {
-                                      "first": {"key": "fireOffset"},
-                                      "second": {"value": ["facingDirection", 1]}
-                                    },
-                                    "output": {
-                                      "vector": "fireOffset"
-                                    }
-                                  },
-                                  {
-                                    "title": "vecAdd",
-                                    "type": "action",
-                                    "name": "vecAdd",
-                                    "parameters": {
-                                      "first": {"key": "fireOffset"},
-                                      "second": {"key": "rotationCenter"}
-                                    },
-                                    "output": {
-                                      "vector": "fireOffset"
-                                    }
-                                  },
-                                  {
-                                    "title": "offsetPosition",
-                                    "type": "action",
-                                    "name": "offsetPosition",
-                                    "parameters": {
-                                      "offset": {"key": "fireOffset"},
-                                      "position": {"key": "self"}
-                                    },
-                                    "output": {
-                                      "position": "sourcePosition"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "title": "selector",
-                                "type": "composite",
-                                "name": "selector",
-                                "parameters": {},
-                                "children": [
-                                  {
-                                    "title": "optional",
-                                    "type": "decorator",
-                                    "name": "optional",
-                                    "parameters": {
-                                      "shouldRun": {"key": "<aimAtTarget>"}
-                                    },
-                                    "child": {
-                                      "title": "sequence",
-                                      "type": "composite",
-                                      "name": "sequence",
-                                      "parameters": {},
-                                      "children": [
-                                        {
-                                          "title": "distance",
-                                          "type": "action",
-                                          "name": "distance",
-                                          "parameters": {
-                                            "from": {"key": "origin"},
-                                            "to": {"key": "targetPosition"}
-                                          },
-                                          "output": {
-                                            "vector": "aimVector"
-                                          }
-                                        },
-                                        {
-                                          "title": "succeeder",
-                                          "type": "decorator",
-                                          "name": "succeeder",
-                                          "parameters": {},
-                                          "child": {
-                                            "title": "optional",
-                                            "type": "decorator",
-                                            "name": "optional",
-                                            "parameters": {
-                                              "shouldRun": {"key": "<fireArc>"}
-                                            },
-                                            "child": {
-                                              "title": "sequence",
-                                              "type": "composite",
-                                              "name": "sequence",
-                                              "parameters": {},
-                                              "children": [
-                                                {
-                                                  "title": "projectileGravityMultiplier",
-                                                  "type": "action",
-                                                  "name": "projectileGravityMultiplier",
-                                                  "parameters": {
-                                                    "projectileName": {"value": "<projectileType>"}
-                                                  },
-                                                  "output": {
-                                                    "gravityMultiplier": "gravityMultiplier"
-                                                  }
-                                                },
-                                                {
-                                                  "title": "projectileAimVector",
-                                                  "type": "action",
-                                                  "name": "projectileAimVector",
-                                                  "parameters": {
-                                                    "collisionCheck": {"value": false},
-                                                    "fromPosition": {"key": "origin"},
-                                                    "gravityMultiplier": {"key": "gravityMultiplier"},
-                                                    "speed": {"key": "<projectileSpeed>"},
-                                                    "toPosition": {"key": "targetPosition"},
-                                                    "useHighArc": {"key": "<highArc>"}
-                                                  },
-                                                  "output": {
-                                                    "aimVector": "aimVector"
-                                                  }
-                                                }
-                                              ]
-                                            }
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  },
-                                  {
-                                    "title": "sequence",
-                                    "type": "composite",
-                                    "name": "sequence",
-                                    "parameters": {},
-                                    "children": [
-                                      {
-                                        "title": "vecMultiply",
-                                        "type": "action",
-                                        "name": "vecMultiply",
-                                        "parameters": {
-                                          "first": {"key": "<aimDirection>"},
-                                          "second": {"value": ["facingDirection", 1]}
-                                        },
-                                        "output": {
-                                          "vector": "aimVector"
-                                        }
-                                      },
-                                      {
-                                        "title": "vecRotate",
-                                        "type": "action",
-                                        "name": "vecRotate",
-                                        "parameters": {
-                                          "vector": {"key": "aimVector"},
-                                          "angle": {"key": "heading"}
-                                        },
-                                        "output": {
-                                          "vector": "aimVector"
-                                        }
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              {
-                                "title": "sequence",
-                                "type": "composite",
-                                "name": "sequence",
-                                "parameters": {},
-                                "children": [
-                                  {
-                                    "title": "multiply",
-                                    "type": "action",
-                                    "name": "multiply",
-                                    "parameters": {
-                                      "number": {"key": "<inaccuracy>"},
-                                      "factor": {"value": -1}
-                                    },
-                                    "output": {
-                                      "result": "minInaccuracy"
-                                    }
-                                  },
-                                  {
-                                    "title": "random",
-                                    "type": "action",
-                                    "name": "random",
-                                    "parameters": {
-                                      "max": {"key": "<inaccuracy>"},
-                                      "min": {"key": "minInaccuracy"}
-                                    },
-                                    "output": {
-                                      "number": "angleOffset"
-                                    }
-                                  },
-                                  {
-                                    "title": "vecRotate",
-                                    "type": "action",
-                                    "name": "vecRotate",
-                                    "parameters": {
-                                      "vector": {"key": "aimVector"},
-                                      "angle": {"key": "angleOffset"}
-                                    },
-                                    "output": {
-                                      "vector": "aimVector"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "title": "spawnChainedProjectile",
-                                "type": "action",
-                                "name": "spawnChainedProjectile",
-                                "parameters": {
-                                  "aimVector": {"key": "aimVector"},
-                                  "angle": {"value": 0},
-                                  "damageRepeatGroup": {"key": "<damageRepeatGroup>"},
-                                  "offset": {"key": "fireOffset"},
-                                  "position": {"key": "self"},
-                                  "projectileConfig": {"value": "<projectileParameters>"},
-                                  "projectileType": {"value": "<projectileType>"},
-                                  "scalePower": {"value": true},
-                                  "sourceEntity": {"key": "self"},
-                                  "trackSource": {"value": false},
-                                  "uniqueRepeatGroup": {"value": true},
-                                  "gunPart": {"value": "<gunPart>"}
-                                },
-                                "output": {
-                                  "targetProjectile": "projectileId"
-                                }
-                              },
-                              {
-                                "title": "waitForBoomerangReturn",
-                                "type": "action",
-                                "name": "waitForBoomerangReturn",
-                                "parameters": {
-                                  "projectileId": {"key": "projectileId"}
-                                }
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "title": "add",
-                          "type": "action",
-                          "name": "add",
-                          "parameters": {
-                            "addend": {"value": 1},
-                            "number": {"key": "shots"}
-                          },
-                          "output": {
-                            "result": "shots"
-                          }
-                        },
-                        {
-                          "title": "selector",
-                          "type": "composite",
-                          "name": "selector",
-                          "parameters": {},
-                          "children": [
-                            {
-                              "title": "greaterThan",
-                              "type": "action",
-                              "name": "greaterThan",
-                              "parameters": {
-                                "first": {"key": "shots"},
-                                "second": {"key": "<projectileCount>"}
-                              }
-                            },
-                            {
-                              "title": "sequence",
-                              "type": "composite",
-                              "name": "sequence",
-                              "parameters": {},
-                              "children": [
-                                {
-                                  "title": "greaterThan",
-                                  "type": "action",
-                                  "name": "greaterThan",
-                                  "parameters": {
-                                    "first": {"key": "<projectileCount>"},
-                                    "second": {"value": 1}
-                                  }
-                                },
-                                {
-                                  "title": "timer",
-                                  "type": "action",
-                                  "name": "timer",
-                                  "parameters": {
-                                    "time": {"value": "<projectileInterval>"}
-                                  }
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
+				  {
+					"title": "parallel",
+					"type": "composite",
+					"name": "parallel",
+					"parameters": {
+					  "success": {"value": -1},
+					  "fail": {"value": -1}
+					},
+					"children" : [
+					  {
+						"title": "controlFlag",
+						"type": "action",
+						"name": "controlFlag",
+						"parameters": {
+						  "bool": {"value": true}
+						},
+						"output": {
+						  "bool": "holdAim"
+						}
+					  },
+					  {
+						"title": "repeater",
+						"type": "decorator",
+						"name": "repeater",
+						"parameters": {
+						  "maxLoops": {"key": "<projectileCount>"},
+						  "untilSuccess": {"value": false}
+						},
+						"child": {
+						  "title": "sequence",
+						  "type": "composite",
+						  "name": "sequence",
+						  "parameters": {},
+						  "children": [
+							{
+							  "title": "succeeder",
+							  "type": "decorator",
+							  "name": "succeeder",
+							  "parameters": {},
+							  "child": {
+								"title": "playSound",
+								"type": "action",
+								"name": "playSound",
+								"parameters": {
+								  "sound": {"value": "<fireSound>"},
+								  "loops": {"value": 0}
+								}
+							  }
+							},
+							{
+							  "title": "succeeder",
+							  "type": "decorator",
+							  "name": "succeeder",
+							  "parameters": {},
+							  "child": {
+								"title": "burstParticleEmitter",
+								"type": "action",
+								"name": "burstParticleEmitter",
+								"parameters": {
+								  "emitter": {"value": "<fireParticleBurst>"}
+								}
+							  }
+							},
+							{
+							  "title": "listClear",
+							  "type": "action",
+							  "name": "listClear",
+							  "output": {
+								"list": "fireOffsets"
+							  }
+							},
+							{
+							  "title": "selector",
+							  "type": "composite",
+							  "name": "selector",
+							  "parameters": {},
+							  "children": [
+								{
+								  "title": "sequence",
+								  "type": "composite",
+								  "name": "sequence",
+								  "parameters": {},
+								  "children": [
+									{
+									  "title": "listGet",
+									  "type": "action",
+									  "name": "listGet",
+									  "parameters": {
+										"list": {"key": "<fireOffsets>"}
+									  }
+									},
+									{
+									  "title": "each",
+									  "type": "decorator",
+									  "name": "each",
+									  "parameters": {
+										"list": {"key": "<fireOffsets>"},
+										"type": {"value": "vec2"}
+									  },
+									  "child": {
+										"title": "listPush",
+										"type": "action",
+										"name": "listPush",
+										"parameters": {
+										  "list": {"key": "fireOffsets"},
+										  "vec2": {"key": "eachItem"}
+										}
+									  }
+									}
+								  ]
+								},
+								{
+								  "title": "listPush",
+								  "type": "action",
+								  "name": "listPush",
+								  "parameters": {
+									"list": {"key": "fireOffsets"},
+									"vec2": {"key": "<fireOffset>"}
+								  }
+								}
+							  ]
+							},
+							{
+							  "title": "each",
+							  "type": "decorator",
+							  "name": "each",
+							  "parameters": {
+								"list": {"key": "fireOffsets"},
+								"type": {"value": "vec2"}
+							  },
+							  "child": {
+								"title": "sequence",
+								"type": "composite",
+								"name": "sequence",
+								"parameters": {},
+								"children": [
+								  {
+									"title": "sequence",
+									"type": "composite",
+									"name": "sequence",
+									"parameters": {},
+									"children": [
+									  {
+										"title": "vecMultiply",
+										"type": "action",
+										"name": "vecMultiply",
+										"parameters": {
+										  "first": {"key": "<aimDirection>"},
+										  "second": {"value": ["facingDirection", 1]}
+										},
+										"output": {
+										  "vector": "aimVector"
+										}
+									  },
+									  {
+										"title": "selector",
+										"type": "composite",
+										"name": "selector",
+										"parameters": {},
+										"children": [
+										  {
+											"title": "optional",
+											"type": "decorator",
+											"name": "optional",
+											"parameters": {
+											  "shouldRun": {"key": "<rotateAim>"}
+											},
+											"child": {
+											  "title": "sequence",
+											  "type": "composite",
+											  "name": "sequence",
+											  "parameters": {},
+											  "children": [
+												{
+												  "title": "distance",
+												  "type": "action",
+												  "name": "distance",
+												  "parameters": {
+													"from": {"key": "origin"},
+													"to": {"key": "targetPosition"}
+												  },
+												  "output": {
+													"vector": "toTarget"
+												  }
+												},
+												{
+												  "title": "vecMultiply",
+												  "type": "action",
+												  "name": "vecMultiply",
+												  "parameters": {
+													"first": {"key": "toTarget"},
+													"second": {"value": ["facingDirection", 1]}
+												  },
+												  "output": {
+													"vector": "toTarget"
+												  }
+												},
+												{
+												  "title": "vecAngle",
+												  "type": "action",
+												  "name": "vecAngle",
+												  "parameters": {
+													"vector": {"key": "toTarget"}
+												  },
+												  "output": {
+													"angle": "targetAngle"
+												  }
+												},
+												{
+												  "title": "vecRotate",
+												  "type": "action",
+												  "name": "vecRotate",
+												  "parameters": {
+													"vector": {"key": "eachItem"},
+													"angle": {"key": "targetAngle"}
+												  },
+												  "output": {
+													"vector": "fireOffset"
+												  }
+												}
+											  ]
+											}
+										  },
+										  {
+											"title": "setVector",
+											"type": "action",
+											"name": "setVector",
+											"parameters": {
+											  "vector": {"key": "eachItem"}
+											},
+											"output": {
+											  "vector": "fireOffset"
+											}
+										  }
+										]
+									  },
+									  {
+										"title": "vecMultiply",
+										"type": "action",
+										"name": "vecMultiply",
+										"parameters": {
+										  "first": {"key": "fireOffset"},
+										  "second": {"value": ["facingDirection", 1]}
+										},
+										"output": {
+										  "vector": "fireOffset"
+										}
+									  },
+									  {
+										"title": "vecAdd",
+										"type": "action",
+										"name": "vecAdd",
+										"parameters": {
+										  "first": {"key": "fireOffset"},
+										  "second": {"key": "rotationCenter"}
+										},
+										"output": {
+										  "vector": "fireOffset"
+										}
+									  },
+									  {
+										"title": "offsetPosition",
+										"type": "action",
+										"name": "offsetPosition",
+										"parameters": {
+										  "offset": {"key": "fireOffset"},
+										  "position": {"key": "self"}
+										},
+										"output": {
+										  "position": "sourcePosition"
+										}
+									  }
+									]
+								  },
+								  {
+									"title": "selector",
+									"type": "composite",
+									"name": "selector",
+									"parameters": {},
+									"children": [
+									  {
+										"title": "optional",
+										"type": "decorator",
+										"name": "optional",
+										"parameters": {
+										  "shouldRun": {"key": "<aimAtTarget>"}
+										},
+										"child": {
+										  "title": "sequence",
+										  "type": "composite",
+										  "name": "sequence",
+										  "parameters": {},
+										  "children": [
+											{
+											  "title": "distance",
+											  "type": "action",
+											  "name": "distance",
+											  "parameters": {
+												"from": {"key": "origin"},
+												"to": {"key": "targetPosition"}
+											  },
+											  "output": {
+												"vector": "aimVector"
+											  }
+											},
+											{
+											  "title": "succeeder",
+											  "type": "decorator",
+											  "name": "succeeder",
+											  "parameters": {},
+											  "child": {
+												"title": "optional",
+												"type": "decorator",
+												"name": "optional",
+												"parameters": {
+												  "shouldRun": {"key": "<fireArc>"}
+												},
+												"child": {
+												  "title": "sequence",
+												  "type": "composite",
+												  "name": "sequence",
+												  "parameters": {},
+												  "children": [
+													{
+													  "title": "projectileGravityMultiplier",
+													  "type": "action",
+													  "name": "projectileGravityMultiplier",
+													  "parameters": {
+														"projectileName": {"value": "<projectileType>"}
+													  },
+													  "output": {
+														"gravityMultiplier": "gravityMultiplier"
+													  }
+													},
+													{
+													  "title": "projectileAimVector",
+													  "type": "action",
+													  "name": "projectileAimVector",
+													  "parameters": {
+														"collisionCheck": {"value": false},
+														"fromPosition": {"key": "origin"},
+														"gravityMultiplier": {"key": "gravityMultiplier"},
+														"speed": {"key": "<projectileSpeed>"},
+														"toPosition": {"key": "targetPosition"},
+														"useHighArc": {"key": "<highArc>"}
+													  },
+													  "output": {
+														"aimVector": "aimVector"
+													  }
+													}
+												  ]
+												}
+											  }
+											}
+										  ]
+										}
+									  },
+									  {
+										"title": "sequence",
+										"type": "composite",
+										"name": "sequence",
+										"parameters": {},
+										"children": [
+										  {
+											"title": "vecMultiply",
+											"type": "action",
+											"name": "vecMultiply",
+											"parameters": {
+											  "first": {"key": "<aimDirection>"},
+											  "second": {"value": ["facingDirection", 1]}
+											},
+											"output": {
+											  "vector": "aimVector"
+											}
+										  },
+										  {
+											"title": "vecRotate",
+											"type": "action",
+											"name": "vecRotate",
+											"parameters": {
+											  "vector": {"key": "aimVector"},
+											  "angle": {"key": "heading"}
+											},
+											"output": {
+											  "vector": "aimVector"
+											}
+										  }
+										]
+									  }
+									]
+								  },
+								  {
+									"title": "sequence",
+									"type": "composite",
+									"name": "sequence",
+									"parameters": {},
+									"children": [
+									  {
+										"title": "multiply",
+										"type": "action",
+										"name": "multiply",
+										"parameters": {
+										  "number": {"key": "<inaccuracy>"},
+										  "factor": {"value": -1}
+										},
+										"output": {
+										  "result": "minInaccuracy"
+										}
+									  },
+									  {
+										"title": "random",
+										"type": "action",
+										"name": "random",
+										"parameters": {
+										  "max": {"key": "<inaccuracy>"},
+										  "min": {"key": "minInaccuracy"}
+										},
+										"output": {
+										  "number": "angleOffset"
+										}
+									  },
+									  {
+										"title": "vecRotate",
+										"type": "action",
+										"name": "vecRotate",
+										"parameters": {
+										  "vector": {"key": "aimVector"},
+										  "angle": {"key": "angleOffset"}
+										},
+										"output": {
+										  "vector": "aimVector"
+										}
+									  }
+									]
+								  },
+								  {
+									"title": "spawnChainedProjectile",
+									"type": "action",
+									"name": "spawnChainedProjectile",
+									"parameters": {
+									  "aimVector": {"key": "aimVector"},
+									  "angle": {"value": 0},
+									  "damageRepeatGroup": {"key": "<damageRepeatGroup>"},
+									  "offset": {"key": "fireOffset"},
+									  "position": {"key": "self"},
+									  "projectileConfig": {"value": "<projectileParameters>"},
+									  "projectileType": {"value": "<projectileType>"},
+									  "scalePower": {"value": true},
+									  "sourceEntity": {"key": "self"},
+									  "trackSource": {"value": false},
+									  "uniqueRepeatGroup": {"value": true},
+									  "gunPart": {"value": "<gunPart>"}
+									},
+									"output": {
+									  "targetProjectile": "projectileId"
+									}
+								  },
+								  {
+									"title": "waitForBoomerangReturn",
+									"type": "action",
+									"name": "waitForBoomerangReturn",
+									"parameters": {
+									  "projectileId": {"key": "projectileId"},
+									  "gunPart": {"value": "<gunPart>"}
+									}
+								  }
+								]
+							  }
+							},
+							{
+							  "title": "add",
+							  "type": "action",
+							  "name": "add",
+							  "parameters": {
+								"addend": {"value": 1},
+								"number": {"key": "shots"}
+							  },
+							  "output": {
+								"result": "shots"
+							  }
+							},
+							{
+							  "title": "selector",
+							  "type": "composite",
+							  "name": "selector",
+							  "parameters": {},
+							  "children": [
+								{
+								  "title": "gte",
+								  "type": "action",
+								  "name": "gte",
+								  "parameters": {
+									"first": {"key": "shots"},
+									"second": {"key": "<projectileCount>"}
+								  }
+								},
+								{
+								  "title": "sequence",
+								  "type": "composite",
+								  "name": "sequence",
+								  "parameters": {},
+								  "children": [
+									{
+									  "title": "greaterThan",
+									  "type": "action",
+									  "name": "greaterThan",
+									  "parameters": {
+										"first": {"key": "<projectileCount>"},
+										"second": {"value": 1}
+									  }
+									},
+									{
+									  "title": "timer",
+									  "type": "action",
+									  "name": "timer",
+									  "parameters": {
+										"time": {"value": "<projectileInterval>"}
+									  }
+									}
+								  ]
+								}
+							  ]
+							}
+						  ]
+						}
+					  }
+					]
                   }
                 ]
               },
@@ -800,7 +807,7 @@
         "name": "action-winddown",
         "parameters": {
           "winddownState": {"value": "<winddownState>"},
-		  "winddownStateType": {"value": "<winddownStateType>"}
+          "winddownStateType": {"value": "<winddownStateType>"}
         }
       },
       {

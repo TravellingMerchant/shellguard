@@ -9,7 +9,7 @@
   ],
   "image" : "sgwreckingball.png",
   "movementSettings" : {
-    "gravityMultiplier" : 0.0
+    "gravityMultiplier" : 0
   },
   "animationCycle" : 0.25,
   "actionOnReap" : [],
@@ -17,11 +17,12 @@
   "frameNumber" : 1,
   "damageKindImage" : "icon.png",
   "power" : 20,
-  "speed" : 35,
+  "speed" : 60,
   "damageKind" : "hammer",
-  "physics" : "laser",
+  "physics" : "grenade",
   "bounces" : -1,
+  "wreckingBounces" : 2,
   "piercing" : true,
-  "timeToLive" : 5,
-  "scripts" : [ "/projectiles/activeitems/chakram/chakramprojectile.lua" ]
+  "scripts" : [ "sgwreckingball.lua" ],
+  "timeToLive" : 5
 }

@@ -25,7 +25,6 @@
       "segmentImage" : "/monsters/walkers/sgheavyheavydrone/beams/chain.png",
       "endSegmentImage" : "/monsters/walkers/sgheavyheavydrone/beams/chainend.png",
       "segmentSize" : 1,
-      "fullbright" : true,
       "jitter" : 0,
       "waveform" : {
         "movement" : 0,
@@ -64,7 +63,7 @@
 	  "targetEntityTypes": ["player", "monster", "npc"],
 	  
 	  
-      "keepTargetInSight" : true,
+      "keepTargetInSight" : false,
       "keepTargetInRange" : 150,
       "targetOutOfSightTime" : 15.5,
 	  
@@ -115,7 +114,7 @@
           "name" : "action-fire-trans-male",
 		  "cooldown": 0.3,
           "parameters" : {
-            "requireLineOfSight" : true,
+            "requireLineOfSight" : false,
             "maximumRange" : 40,
             "minimumRange" : 0,
             "windupTime" : 1.0,
@@ -132,14 +131,14 @@
 			  "returnOnHit" : false,
 			  "pickupDistance" : 1.0,
 
-			  "maxDistance" : 40,
-			  "speed" : 70
+			  "maxDistance" : 40
 			},
 			"projectileCount": 1,
 			"projectileInterval": 0,
 			"inaccuracy": 0,
 			"transGroup" : "aim2",
             "fireOffset" : [6.25, -3.0],
+			"skillName" : "backSpikeBall",
             "fireSound" : "fire",
 			"fireStateType": "backgun",
             "fireState" : "firingBack",
@@ -157,7 +156,7 @@
           "name" : "action-fire-trans-male",
 		  "cooldown": 0.27,
           "parameters" : {
-            "requireLineOfSight" : true,
+            "requireLineOfSight" : false,
             "maximumRange" : 40,
             "minimumRange" : 0,
             "windupTime" : 1.0,
@@ -174,14 +173,14 @@
 			  "returnOnHit" : false,
 			  "pickupDistance" : 1.0,
 
-			  "maxDistance" : 40,
-			  "speed" : 70
+			  "maxDistance" : 40
 			},
 			"projectileCount": 1,
 			"projectileInterval": 0,
 			"inaccuracy": 0,
 			"transGroup" : "aim",
             "fireOffset" : [6.25, -3.0],
+			"skillName" : "frontSpikeBall",
             "fireSound" : "fire",
 			"fireStateType": "frontgun",
             "fireState" : "firing",
