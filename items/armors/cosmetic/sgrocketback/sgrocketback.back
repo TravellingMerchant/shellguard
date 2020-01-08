@@ -1,11 +1,11 @@
 {
   "itemName" : "sgrocketback",
-  "price" : 7000,
+  "price" : 13000,
   "inventoryIcon" : "icon.png",
   "rarity" : "legendary",
   "category" : "enviroProtectionPack",
-  "description" : "This backpack will create shield drones that circle around you and block shots.",
-  "shortdescription" : "Shield Drone Pack",
+  "description" : "Crouch to fire a burst of missiles at enemies from this back mounted launcher.",
+  "shortdescription" : "Missile Backpack",
   "tooltipKind" : "baseaugment",
 
   "maleFrames" : "back.png",
@@ -28,9 +28,7 @@
     {
       "stat" : "breathProtection",
       "amount" : 1.0
-    },
-    "sgbackglow",
-	"sgenergyshield"
+    }
   ],
   
   "acceptsAugmentType" : "back",
