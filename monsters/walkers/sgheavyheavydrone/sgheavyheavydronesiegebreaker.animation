@@ -52,7 +52,7 @@
           },
           "firing" : {
             "frames" : 1,
-            "cycle" : 1.5,
+            "cycle" : 15,
             "mode" : "transition",
             "transition" : "idle"
           }
@@ -68,7 +68,7 @@
           },
           "firingBack" : {
             "frames" : 1,
-            "cycle" : 1.5,
+            "cycle" : 15,
             "mode" : "transition",
             "transition" : "idle"
           }
