@@ -10,6 +10,9 @@ function init()
 
   self.maxDistance = config.getParameter("maxDistance")
   self.stickTime = config.getParameter("stickTime", 0)
+  self.hasStuck = false
+  
+  self.actionOnHold = config.getParameter("actionOnHold")
 
   self.initialPosition = mcontroller.position()
   self.gunPosition = vec2.sub(self.initialPosition, world.entityPosition(self.ownerId))
@@ -17,9 +20,7 @@ end
 
 function update(dt)
   if self.ownerId and world.entityExists(self.ownerId) then	
-    local projectileLengthVector = vec2.norm(mcontroller.velocity())
-	self.stuckToGround = world.lineTileCollision(mcontroller.position(), vec2.add(mcontroller.position(), projectileLengthVector))
-	
+	--Actions during inital being shot
     if not self.returning then
       if self.stickTimer then
 		mcontroller.setVelocity({0,0})
@@ -30,7 +31,14 @@ function update(dt)
       elseif mcontroller.stickingDirection() then
         self.stickTimer = self.stickTime
       elseif mcontroller.isColliding() then
-        self.returning = true
+		--Manually stick on collide
+        self.stickTimer = self.stickTime
+		--Manually cause actions rather than on collision because it repeats with this method
+		if self.actionOnHold then
+		  for _, action in pairs(self.actionOnHold) do
+		    projectile.processAction(action)
+		  end
+	    end
       else
         local distanceTraveled = world.magnitude(mcontroller.position(), self.initialPosition)
         if distanceTraveled > self.maxDistance then
@@ -38,8 +46,8 @@ function update(dt)
 		  self.returning = true
         end
       end
+	--Returning actions
     else
-
       mcontroller.applyParameters({collisionEnabled=false})
       local toTarget = world.distance(vec2.add(self.gunPosition, world.entityPosition(self.ownerId)), mcontroller.position())
       if vec2.mag(toTarget) < self.pickupDistance then

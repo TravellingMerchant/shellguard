@@ -1,6 +1,6 @@
 {
   "projectileName" : "sgwreckingball",
-  "actionOnCollide" : [
+  "actionOnHold" : [
     {
       "action" : "config",
       "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"

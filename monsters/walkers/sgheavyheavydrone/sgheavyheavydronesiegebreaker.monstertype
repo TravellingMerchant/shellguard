@@ -117,7 +117,7 @@
             "requireLineOfSight" : false,
             "maximumRange" : 40,
             "minimumRange" : 0,
-            "windupTime" : 1.0,
+            "windupTime" : 1.5,
             "windupStopForce" : 50,
 			"rotationCenter"  : [1.5, 7.5],
             "windupState" : "idle",
@@ -330,6 +330,9 @@
       "primaryScriptDelta" : 5,
 
       "stats" : {
+        "grit" : {
+          "baseValue" : 1.0
+        },
         "knockbackStunTime" : {
           "baseValue" : 0.25
         },
@@ -337,13 +340,13 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 500
+          "baseValue" : 2000
         },
         "protection" : {
           "baseValue" : 75.0
         },
         "healthRegen" : {
-          "baseValue" : 0.0
+          "baseValue" : 0.1
         },
         "powerMultiplier" : {
           "baseValue" : 1.0
