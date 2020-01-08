@@ -32,10 +32,10 @@
   },
 
   "offeredQuests" : [
-    "sgtoyarena1"
+    "sgtoyarena1", "sgtoyarena2"
   ],
   "turnInQuests" : [
-    "sgtoyarena1"
+    "sgtoyarena1", "sgtoyarena2"
   ],
   
   "uniqueId" : "sgtoydisplay",

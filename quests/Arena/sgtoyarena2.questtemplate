@@ -1,8 +1,8 @@
 {
-  "id" : "sgtoyarena1",
-  "prerequisites" : [],
-  "title" : "^green;Dart Quest Arena 1",
-  "text" : "Sponsers say voilent blood sports aren't good for ratings! So we designed this family friendly sport instead. The aim is to push your opponent into boiling hot lava with perfectly safe toy guns!",
+  "id" : "sgtoyarena2",
+  "prerequisites" : [ "sgtoyarena1" ],
+  "title" : "^green;Dart Quest Arena 2",
+  "text" : "Ready for round 2? You'll be going up against some very special people!",
   "completionText" : "That looked fun! Here's your price. Come back again for another round!",
   "moneyRange" : [2000, 2000],
   "rewards" : [
@@ -30,13 +30,13 @@
     },
 
     "warpEntityUid" : "sgtoydisplay",
-    "warpAction" : "instanceworld:sgarenatoy1",
+    "warpAction" : "instanceworld:sgarenatoy2",
     "warpDialog" : "/interface/confirmation/sgarenateleportconfirmation.config:sgarenaquesttoy",
 
     "goalTrigger" : "proximity",
     "proximityRange" : 10,
 
-    "goalEntityUid" : "sgarenatoy1",
+    "goalEntityUid" : "sgarenatoy2",
     "indicateGoal" : false,
     "trackGoalEntity" : false,
 
