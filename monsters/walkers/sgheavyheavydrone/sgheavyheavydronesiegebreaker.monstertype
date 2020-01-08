@@ -4,10 +4,10 @@
   "description" : "The ultimate in automated destruction, the Siegebreaker Drone will shatter any defense.",
 
   "categories" : [ "sgheavyheavydrone" ],
-  "parts" : [ "body", "frontSpikeFist", "backgun" ],
+  "parts" : [ "body", "frontSpikeFist", "backSpikeFist" ],
   "partParameters" : "sgheavyheavydrone.partparams",
 
-  "animation" : "sgheavyheavydrone.animation",
+  "animation" : "sgheavyheavydronesiegebreaker.animation",
 
   "dropPools" : [],
 
@@ -17,21 +17,19 @@
     ],
 	
     "animationScripts" : [
-      "/items/active/effects/notFuckedChain.lua"
+      "/items/active/effects/chain.lua"
     ],
 
     "chains" :  {
-      "startSegmentImage" : "/monsters/walkers/sgheavyheavydrone/beams/beamstart.png",
-      "segmentImage" : "/monsters/walkers/sgheavyheavydrone/beams/beam.png",
-      "endSegmentImage" : "/monsters/walkers/sgheavyheavydrone/beams/beamend.png",
+      "startSegmentImage" : "/monsters/walkers/sgheavyheavydrone/beams/chainstart.png",
+      "segmentImage" : "/monsters/walkers/sgheavyheavydrone/beams/chain.png",
+      "endSegmentImage" : "/monsters/walkers/sgheavyheavydrone/beams/chainend.png",
       "segmentSize" : 1,
       "fullbright" : true,
-      "sourcePart" : "beam",
-      "endPart" : "beam",
-      "jitter" : 0.0625,
+      "jitter" : 0,
       "waveform" : {
-        "movement" : 5.0,
-        "amplitude" : 0.55,
+        "movement" : 0,
+        "amplitude" : 0,
         "frequency" : 1.0
       }
     },
@@ -69,10 +67,6 @@
       "keepTargetInSight" : true,
       "keepTargetInRange" : 150,
       "targetOutOfSightTime" : 15.5,
-
-	  "rotationCenter"  : [-5, 7],
-      "rotationCenter2"  : [2, 7],
-      "rotationCenter3"  : [0, 0],
 	  
       "foundTargetActions" : [ 
 		{
@@ -88,47 +82,25 @@
       "fleeActions" : [],
 
       "hostileActions" : [
-		//back gun
-        {
-          "name" : "action-fire-trans",
-		  "cooldown": 1,
-          "parameters" : {
-            "requireLineOfSight" : true,
-            "maximumRange" : 30,
-            "minimumRange" : 2,
-            "windupTime" : 1.0,
-            "windupStopForce" : 50,
-            "windupState" : "idle",
-
-            "projectileType" : "sgvehicleshot",
-			"projectileCount": 5,
-			"projectileInterval": 0.2,
-			"inaccuracy": 0,
-			"transGroup" : "aim2",
-			"rotationCenter"  : [2, 7],
-            "fireOffsets" : [ [6.25, -3.0], [6.25, -2.375] ],
-            "fireSound" : "fire",
-			"fireStateType": "body",
-            "fireState" : "firingBack",
-            "fireDelay" : 0.1,
-            "rotateAim" : true,
-
-            "winddownState" : "idle",
-            "winddownTime" : 0.0
-          }
-        },
+		
+	  ],
+	  
+	  "concurrentHostileActions" : [
+	    //back gun
+        
 		// front gun
 		{
           "name" : "action-fire-trans-male",
-		  "cooldown": 1,
+		  "cooldown": 0.27,
           "parameters" : {
             "requireLineOfSight" : true,
-            "maximumRange" : 30,
-            "minimumRange" : 2,
+            "maximumRange" : 40,
+            "minimumRange" : 0,
             "windupTime" : 1.0,
             "windupStopForce" : 50,
+			"rotationCenter"  : [-5, 7],
             "windupState" : "idle",
-
+			"windupStateType" : "frontgun",
             "projectileType" : "chakram",
 			"projectileParameters" : {
 			  "knockback" : 10,
@@ -138,20 +110,23 @@
 			  "returnOnHit" : false,
 			  "pickupDistance" : 1.0,
 
-			  "maxDistance" : 25
+			  "maxDistance" : 40,
+			  "speed" : 70
 			},
 			"projectileCount": 1,
-			"projectileInterval": 0.2,
-			"inaccuracy": 0.1,
+			"projectileInterval": 0,
+			"inaccuracy": 0,
 			"transGroup" : "aim",
             "fireOffset" : [6.25, -3.0],
             "fireSound" : "fire",
-			"fireStateType": "body",
+			"fireStateType": "frontgun",
             "fireState" : "firing",
             "fireDelay" : 0.1,
             "rotateAim" : true,
-
+			"holdAim" : true,
+			"gunPart" : "frontgun",
             "winddownState" : "idle",
+			"winddownStateType" : "frontgun",
             "winddownTime" : 0.0
           }
         },
@@ -162,18 +137,19 @@
           "parameters" : {
             "requireLineOfSight" : false,
             "maximumRange" : 40,
-            "minimumRange" : 5,
+            "minimumRange" : 0,
             "windupTime" : 0.0,
             "windupStopForce" : 50,
             "windupState" : "idle",
-
+			"winddownStateType": "rockets",
+			"windupStateType": "rockets",
             "projectileType" : "sentinelshardrocket",
 			"projectileCount": 3,
             "fireOffsets" : [[6.0, 3.5], [6.5, 3.25], [6.0, 3.5]],
 			
 			"inaccuracy": 0.1,
             "fireSound" : "fireRocket",
-			"fireStateType": "body",
+			"fireStateType": "rockets",
             "fireState" : "fireRockets",
             "fireDelay" : 0.1,
             "rotateAim" : false,
@@ -181,7 +157,18 @@
             "winddownState" : "",
             "winddownTime" : 0.6
           }
-        }
+        },
+		{
+          "name" : "approach-walk",
+          "parameters" : {
+            "canJump" : true,
+            "maxJumps" : 5,
+            "jumpXVelocity" : 12,
+            "jumpYVelocity" : 30,
+            "jumpXControlForce" : 50,
+            "minXRange" : 10
+          }
+        }	
       ],
 
       "periodicActions" : [
@@ -275,11 +262,11 @@
     "scale" : 1.0,
 
     "movementSettings" : {
-      "collisionPoly" : [ [1.75, 4.55], [2.25, 4.05],  [2.75, -3.55], [2.25, -3.95],  [-2.25, -3.95], [-2.75, -3.55],  [-2.25, 4.05], [-1.75, 4.55] ],
+      "collisionPoly" : [ [1.75, 7.55], [2.25, 4.05],  [2.75, -3.55], [2.25, -4.85],  [-2.25, -4.85], [-2.75, -3.55],  [-2.25, 4.05], [-1.75, 7.55] ],
 
       "mass" : 2.5,
-      "walkSpeed" : 4,
-      "runSpeed" : 5,
+      "walkSpeed" : 0,
+      "runSpeed" : 8,
 
       "airFriction" : 0,
 
@@ -325,7 +312,7 @@
           "baseValue" : 500
         },
         "protection" : {
-          "baseValue" : 0.0
+          "baseValue" : 75.0
         },
         "healthRegen" : {
           "baseValue" : 0.0
@@ -375,7 +362,7 @@
       }
     },
 
-    "mouthOffset" : [0, 50],
+    "mouthOffset" : [0, 70],
     "feetOffset" : [0, -8],
     "capturable" : false,
     "nametagColor" : [64, 200, 255]
