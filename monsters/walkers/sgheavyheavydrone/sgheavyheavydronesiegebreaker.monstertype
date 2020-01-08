@@ -262,16 +262,29 @@
 	  
 	  "deathActions" : [
         {
-          "name" : "action-spawnmonster",
+          "name" : "action-projectile",
           "parameters" : {
-		    "offset": [0, 6],
-		    "monsterType": "heavydrone",
-			"monsterParameters": {
-			  "selectedParts": {
-			    "body": "body7",
-				"face": "face6"
-			  }
-			}
+            "projectileCount" : 1,
+            "projectileType" : "sgartilleryboom",
+            "projectileParameters" : {
+              "damageTeam" : { "type" : "enemy", "team" : 0 }
+            },
+            "aimDirection" : [0, 0],
+            "inaccuracy" : 0,
+            "fireOffset" : [0, 0]
+          }
+        },
+        {
+          "name" : "action-projectile",
+          "parameters" : {
+            "projectileCount" : 1,
+            "projectileType" : "sgfirecloud",
+            "projectileParameters" : {
+              "damageTeam" : { "type" : "enemy", "team" : 0 }
+            },
+            "aimDirection" : [0, 0],
+            "inaccuracy" : 0,
+            "fireOffset" : [0, 0]
           }
         }
 	  ]
