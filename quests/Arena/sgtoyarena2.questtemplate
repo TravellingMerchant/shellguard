@@ -1,0 +1,45 @@
+{
+  "id" : "sgtoyarena2",
+  "prerequisites" : [ "sgtoyarena1" ],
+  "title" : "^green;Dart Quest Arena 2",
+  "text" : "Ready for round 2? You'll be going up against some very special people!",
+  "completionText" : "That looked fun! Here's your price. Come back again for another round!",
+  "moneyRange" : [2000, 2000],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], ["money", 1000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/sgtoyshop/questicon.png"} ],
+        "title" : "Dart Quest"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/sgtoyshop/questicon.png"} ],
+        "title" : "Dart Quest"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Enter ^orange;Dart Quest Arena^reset;",
+      "findGoal" : "Win in the Arena!",
+      "turnIn" : "Return to ^orange;the toy shop. ^reset;"
+    },
+
+    "warpEntityUid" : "sgtoydisplay",
+    "warpAction" : "instanceworld:sgarenatoy2",
+    "warpDialog" : "/interface/confirmation/sgarenateleportconfirmation.config:sgarenaquesttoy",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgarenatoy2",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgtoydisplay"
+  }
+}

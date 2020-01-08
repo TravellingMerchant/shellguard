@@ -2,7 +2,7 @@
   "objectName" : "sgtoydisplay",
   "colonyTags" : ["commerce","industrial"],
   "rarity" : "Common",
-  "description" : "Sign up for Dart Quest today! This beacon will help you reach the Dart Quest arena!",
+  "description" : "Sign up for Dart Quest today! This beacon will help you reach the Dart Quest arena after you're done with the quests!",
   "shortdescription" : "Dart Quest Beacon.",
   "race" : "generic",
   "category" : "teleporter",
@@ -20,7 +20,6 @@
   "interactAction" : "OpenTeleportDialog",
   "interactData" : "/interface/warping/sgoutpostteleport.config",
   "teleporterFootPosition" : [-1, 1],
-
 
   "inventoryIcon" : "sgtableicon.png",
   "orientations" : [

@@ -1,0 +1,45 @@
+{
+  "id" : "sgtoyarena1",
+  "prerequisites" : [],
+  "title" : "^green;Dart Quest Arena 1",
+  "text" : "Sponsers say voilent blood sports aren't good for ratings! So we designed this family friendly sport instead. The aim is to push your opponent into boiling hot lava with perfectly safe toy guns!",
+  "completionText" : "That looked fun! Here's your price. Come back again for another round!",
+  "moneyRange" : [2000, 2000],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], ["money", 1000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/sgtoyshop/questicon.png"} ],
+        "title" : "Dart Quest"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/sgtoyshop/questicon.png"} ],
+        "title" : "Dart Quest"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Enter ^orange;Dart Quest Arena^reset;",
+      "findGoal" : "Win in the Arena!",
+      "turnIn" : "Return to ^orange;the toy shop. ^reset;"
+    },
+
+    "warpEntityUid" : "sgtoydisplay",
+    "warpAction" : "instanceworld:sgarenatoy1",
+    "warpDialog" : "/interface/confirmation/sgarenateleportconfirmation.config:sgarenaquesttoy",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgarenatoy1",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgtoydisplay"
+  }
+}

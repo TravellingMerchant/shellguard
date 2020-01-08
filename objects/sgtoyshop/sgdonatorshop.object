@@ -31,6 +31,15 @@
     ]
   },
 
+  "offeredQuests" : [
+    "sgtoyarena1", "sgtoyarena2"
+  ],
+  "turnInQuests" : [
+    "sgtoyarena1", "sgtoyarena2"
+  ],
+  
+  "uniqueId" : "sgtoydisplay",
+
   "apexDescription" : "Thank's to all those who funded these!",
   "avianDescription" : "Thank's to all those who funded these!",
   "floranDescription" : "Thank'sssss to all thosssse who funded these!",
