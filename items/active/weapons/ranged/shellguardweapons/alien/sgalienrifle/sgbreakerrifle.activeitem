@@ -30,6 +30,7 @@
   "muzzleOffset" : [-0.25, 0.125],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+  "scriptDelta" : 2,
 
   "elementalType" : "physical",
 

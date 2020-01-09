@@ -166,6 +166,9 @@
       "powerMultiplier" : {
         "baseValue" : 1
       },
+       "maxEnergy" : {
+        "baseValue" : 100
+      },
       "protection" : {
         "baseValue" : 1.0
       },
