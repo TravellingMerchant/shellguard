@@ -1,17 +1,17 @@
 {
-  "itemName" : "sgalienrifle",
+  "itemName" : "sgalienshotgun",
   "price" : 2300,
   "inventoryIcon" : "sgbreakerrifle.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "A strange alien rifle that does not exist.",
-  "shortdescription" : "Alien Rifle",
+  "description" : "A shotgun like rifle that does not exist.",
+  "shortdescription" : "Alien Spread Rifle",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
   "weaponType" : "Assault Rifle",
   "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
-  "twoHanded" : false,
+  "twoHanded" : true,
   
   "animation" : "sgbreakerrifle.animation",
   "animationParts" : {
@@ -22,12 +22,12 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/alien/sgalienrifle2.ogg" ]
+      "fire" : [ "/sfx/gun/alien/sgalienshotgun2.ogg" ]
     }
   },
 
   "baseOffset" : [2.25, 0.1],
-  "muzzleOffset" : [-0.25, 0.125],
+  "muzzleOffset" : [0.375, 0.25],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
   "scriptDelta" : 2,
@@ -37,16 +37,16 @@
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 0.1,
-    "baseDps" : 8,
-    "energyUsage" : 25.0,
-    "projectileCount" : 1,
-    "inaccuracy" : 0.02,
+    "fireTime" : 1,
+    "baseDps" : 10,
+    "energyUsage" : 20.0,
+    "projectileCount" : 7,
+    "inaccuracy" : 0.05,
       "stances" : {
       "idle" : {
         "armRotation" : 0,
         "weaponRotation" : 0,
-        "twoHanded" : false,
+        "twoHanded" : true,
 
         "allowRotate" : true,
         "allowFlip" : true
@@ -55,7 +55,7 @@
         "duration" : 0,
         "armRotation" : 1,
         "weaponRotation" : 1,
-        "twoHanded" : false,
+        "twoHanded" : true,
 
         "allowRotate" : false,
         "allowFlip" : false,
@@ -65,25 +65,27 @@
 		}
       },
       "cooldown" : {
-        "duration" : 0.75,
+        "duration" : 0.2,
         "armRotation" : -15,
-        "weaponRotation" : 20,
-        "twoHanded" : false,
+        "weaponRotation" : 30,
+        "twoHanded" : true,
 
         "allowRotate" : false,
         "allowFlip" : false
       }
     },
 
-    "fireType" : "burst",
-    "burstCount" : 8,
-    "burstTime" : 0.02,
+    "fireType" : "auto",
+    //"burstCount" : 8,
+    //"burstTime" : 0.02,
 
     "projectileType" : "sgthorns",
     "projectileParameters" : { 
       "knockback" : 10
     }
   },
+  
+  "altAbilityType" : "bayonetstab",
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
@@ -91,6 +93,6 @@
     "animationParts" : {
       "middle" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgbreakerauto/sgbreakerrifleelite.png"
     },
-    "shortdescription" : "Mercenary Breaker ^yellow;^reset;"
+    "shortdescription" : "Alien Spread Rifle ^yellow;^reset;"
   }
 }

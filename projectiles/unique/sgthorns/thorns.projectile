@@ -20,6 +20,7 @@
 
   "power" : 5.0,
   "speed" : 60,
+  "fullbright" : true,
   "emitters" : [ "defaultbrown" ],
   "damageKind" : "default"
 }

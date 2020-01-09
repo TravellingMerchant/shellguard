@@ -1,17 +1,17 @@
 {
-  "itemName" : "sgalienrifle",
+  "itemName" : "sgalienlmg",
   "price" : 2300,
   "inventoryIcon" : "sgbreakerrifle.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "A strange alien rifle that does not exist.",
-  "shortdescription" : "Alien Rifle",
+  "description" : "A large alien rifle that does not exist.",
+  "shortdescription" : "Alien Heavy Rifle",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
   "weaponType" : "Assault Rifle",
   "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
-  "twoHanded" : false,
+  "twoHanded" : true,
   
   "animation" : "sgbreakerrifle.animation",
   "animationParts" : {
@@ -27,7 +27,7 @@
   },
 
   "baseOffset" : [2.25, 0.1],
-  "muzzleOffset" : [-0.25, 0.125],
+  "muzzleOffset" : [1, 0.25],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
   "scriptDelta" : 2,
@@ -37,16 +37,16 @@
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 0.1,
-    "baseDps" : 8,
-    "energyUsage" : 25.0,
+    "fireTime" : 0.03,
+    "baseDps" : 10,
+    "energyUsage" : 20.0,
     "projectileCount" : 1,
     "inaccuracy" : 0.02,
       "stances" : {
       "idle" : {
         "armRotation" : 0,
         "weaponRotation" : 0,
-        "twoHanded" : false,
+        "twoHanded" : true,
 
         "allowRotate" : true,
         "allowFlip" : true
@@ -55,7 +55,7 @@
         "duration" : 0,
         "armRotation" : 1,
         "weaponRotation" : 1,
-        "twoHanded" : false,
+        "twoHanded" : true,
 
         "allowRotate" : false,
         "allowFlip" : false,
@@ -65,25 +65,27 @@
 		}
       },
       "cooldown" : {
-        "duration" : 0.75,
-        "armRotation" : -15,
-        "weaponRotation" : 20,
-        "twoHanded" : false,
+        "duration" : 0.01,
+        "armRotation" : -5,
+        "weaponRotation" : 10,
+        "twoHanded" : true,
 
         "allowRotate" : false,
         "allowFlip" : false
       }
     },
 
-    "fireType" : "burst",
-    "burstCount" : 8,
-    "burstTime" : 0.02,
+    "fireType" : "auto",
+    //"burstCount" : 8,
+    //"burstTime" : 0.02,
 
     "projectileType" : "sgthorns",
     "projectileParameters" : { 
       "knockback" : 10
     }
   },
+  
+  "altAbilityType" : "bayonetstab",
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {

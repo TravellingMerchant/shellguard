@@ -337,7 +337,7 @@
           "baseValue" : 0.1
         },
         "powerMultiplier" : {
-          "baseValue" : 1.0
+          "baseValue" : 1.5
         },
         "physicalResistance" : {
           "baseValue" : 0.0
