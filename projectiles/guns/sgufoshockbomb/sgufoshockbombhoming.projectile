@@ -1,0 +1,56 @@
+{
+  "projectileName" : "sgufoshockbombhomingalien",
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/gun/shellbulletimpact.ogg"
+      ]
+    }
+  ],
+  "image" : "sgufoshockbomb.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 1
+  },
+  "animationCycle" : 0.5,
+  "pointLight" : true,
+  "lightColor" : [255, 0, 0],
+  "actionOnReap" : [
+	{
+      "action" : "spark"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "sgheatexplosionknockback"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/fire_out.ogg" ]
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 3,
+      "backgroundRadius" : 0,
+      "explosiveDamageAmount" : 300.0,
+      "delaySteps" : 2
+    }
+
+  ],
+  "emitters" : [ "rocketsmoke" ],
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 7,
+  "power" : 20,
+  "damageKind" : "bow",
+  "scripts" : [ "sgufoshockbomb.lua" ],
+  "baseHomingControlForce" : 30
+}

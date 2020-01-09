@@ -13,6 +13,15 @@
     }
   },
 
+   // "behaviorConfig" : {
+   //   "leapWindup" : 0.75,
+    //  "rangedAimTime" : 0.5,
+   //   "rangedWindupTime" : 0.01,
+   //   "rangedMinFireTime": 5,
+   //   "rangedMaxFireTime": 10
+   // },
+
+
   "items" : {
     "default" : [
       [0, [

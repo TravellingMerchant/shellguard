@@ -12,7 +12,7 @@
   ],
   "power" : 5.0,
   "speed" : 60,
-  "knockback" : 35,
+  "knockback" : 55,
   "knockbackDirectional" : true,
   "timeToLive" : 30,
   "damageKind" : "shotgunbullet",

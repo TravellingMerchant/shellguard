@@ -1,0 +1,9 @@
+{
+  "name" : "shottop-hand",
+  "category" : "sgtoytop",
+  "type" : "hand",
+
+  "frames" : {
+    "hand" : "shottop-hand.png"
+  }
+}

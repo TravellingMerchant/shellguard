@@ -1,0 +1,9 @@
+{
+  "name" : "shottop-body",
+  "category" : "sgtoytop",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "shottop-body.png"
+  }
+}

@@ -1084,7 +1084,7 @@
 
       "skyParameters" : {
         "spaceLevel" : 3000,
-        "ambientLightLevel" : [200, 50, 200],
+        "ambientLightLevel" : [100, 50, 100],
         "skyColoring" : {
         "mainColor" : [200, 200, 255],
 

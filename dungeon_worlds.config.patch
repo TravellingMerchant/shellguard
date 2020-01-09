@@ -471,8 +471,8 @@
       "gravity" : 80,
       "worldSize" : [2500, 2000],
       "dungeonBaseHeight" : 1000,
-      "dungeonSurfaceHeight" : 810,
-      "ambientLightLevel" : [200, 50, 200],
+      "dungeonSurfaceHeight" : 2000,
+      "ambientLightLevel" : [50, 30, 50],
       "musicTrack" : "/music/sgtheguardsmarch2.ogg",
       "biome": "garden"
     }
