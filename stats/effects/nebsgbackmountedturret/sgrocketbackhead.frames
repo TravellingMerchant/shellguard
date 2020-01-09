@@ -1,0 +1,9 @@
+{
+  "frameGrid" : {
+    "size" : [13, 10],
+    "dimensions" : [7, 1],
+    "names" : [
+	  [ "active.1", null, "fired", null, "reloading.1", "reloading.2", "reloading.3" ]
+	]
+  }
+}
