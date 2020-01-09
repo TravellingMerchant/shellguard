@@ -46,5 +46,6 @@
   "damageRepeatTimeout" : 0.5,
   "returnOnHit" : false,
   "pickupDistance" : 1.0,
-  "maxDistance" : 40
+  "maxDistance" : 40,
+  "stickTime" : 0.7
 }
