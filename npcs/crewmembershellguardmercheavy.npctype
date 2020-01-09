@@ -21,6 +21,14 @@
    //   "rangedMaxFireTime": 10
    // },
 
+  "statusControllerSettings" : {
+    "stats" : {
+       "maxEnergy" : {
+        "baseValue" : 40
+      }
+    }
+  },
+
 
   "items" : {
     "default" : [
