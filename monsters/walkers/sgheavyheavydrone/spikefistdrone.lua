@@ -201,7 +201,7 @@ function damageContactedWalls()
 	for i,v in ipairs(self.damageTilesList) do
 		table.insert(damageTilesTemp,vec2.add(mcontroller.position(),vec2.mul(v,{self.facingDirection or mcontroller.facingDirection(),1})))
 	end
-	world.damageTiles(damageTilesTemp,"foreground",mcontroller.position(),"explosive",self.damageTilesAmount)
+	world.damageTiles(damageTilesTemp,"foreground",mcontroller.position(),"explosive",self.damageTilesAmount,0)
 end
 
 function spikeFistChain(active, part, angle, frame, chainType, bounces, maxLength, targetPosition, targetId, startPos)
