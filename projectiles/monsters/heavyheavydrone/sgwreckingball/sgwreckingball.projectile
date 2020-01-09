@@ -18,9 +18,9 @@
     },
     {
       "action" : "explosion",
-      "foregroundRadius" : 7,
-      "backgroundRadius" : 7,
-      "explosiveDamageAmount" : 3.0,
+      "foregroundRadius" : 6,
+      "backgroundRadius" : 5,
+      "explosiveDamageAmount" : 700.0,
       "delaySteps" : 2
     }
   ],

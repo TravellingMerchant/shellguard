@@ -1,5 +1,5 @@
 {
-  "projectileName" : "sgufoshockbomb",
+  "projectileName" : "sgufoshockbombhomingalien",
   "actionOnCollide" : [
     {
       "action" : "sound",
@@ -10,7 +10,7 @@
   ],
   "image" : "sgufoshockbomb.png",
   "movementSettings" : {
-    "gravityMultiplier" : 1
+    "gravityMultiplier" : 0.5
   },
   "animationCycle" : 0.15,
   "frameNumber" : 4,
@@ -42,7 +42,7 @@
       "action" : "explosion",
       "foregroundRadius" : 3,
       "backgroundRadius" : 0,
-      "explosiveDamageAmount" : 300.0,
+      "explosiveDamageAmount" : 10.0,
       "delaySteps" : 2
     }
 
@@ -53,5 +53,5 @@
   "power" : 20,
   "damageKind" : "bow",
   "scripts" : [ "sgufoshockbomb.lua" ],
-  "baseHomingControlForce" : 0
+  "baseHomingControlForce" : 1
 }

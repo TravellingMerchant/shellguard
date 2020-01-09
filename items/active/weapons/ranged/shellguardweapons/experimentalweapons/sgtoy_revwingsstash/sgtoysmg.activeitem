@@ -75,7 +75,7 @@
 
     "projectileType" : "sgtoyball",
     "projectileParameters" : { 
-      "knockback" : 15
+      "knockback" : 45
     }
   },
   
