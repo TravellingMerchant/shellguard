@@ -463,6 +463,23 @@
 
   {
     "op" : "add",
+    "path" : "/sgbossmine",
+    "value" : {
+      "primaryDungeon" : "sgbossmine",
+      "weatherPool" : [],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [2500, 2000],
+      "dungeonBaseHeight" : 1000,
+      "dungeonSurfaceHeight" : 810,
+      "ambientLightLevel" : [200, 50, 200],
+      "musicTrack" : "/music/sgtheguardsmarch2.ogg",
+      "biome": "garden"
+    }
+  },  
+
+  {
+    "op" : "add",
     "path" : "/sgweaponsfacility",
     "value" : {
       "primaryDungeon" : "sgweaponsfacility",
