@@ -474,7 +474,7 @@
       "dungeonSurfaceHeight" : 2000,
       "ambientLightLevel" : [50, 30, 50],
       "musicTrack" : "/music/sgtheguardsmarch2.ogg",
-      "biome": "garden"
+      "biome": "underground3b"
     }
   },  
 

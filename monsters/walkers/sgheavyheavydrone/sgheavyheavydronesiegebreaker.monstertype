@@ -91,18 +91,18 @@
 		  "cooldown": 3.0,
           "parameters" : {
             "requireLineOfSight" : false,
-            "maximumRange" : 40,
+            "maximumRange" : 80,
             "minimumRange" : 0,
             "windupTime" : 0.0,
             "windupStopForce" : 50,
             "windupState" : "idle",
 			"winddownStateType": "rockets",
 			"windupStateType": "rockets",
-            "projectileType" : "sentinelshardrocket",
-			"projectileCount": 3,
+            "projectileType" : "sgbreakerroundsiege",
+			"projectileCount": 1,
             "fireOffsets" : [[5, 11.25], [4.5, 11], [5, 11.25]],
 			
-			"inaccuracy": 0.1,
+			"inaccuracy": 0.15,
             "fireSound" : "fireRocket",
 			"fireStateType": "rockets",
             "fireState" : "fireRockets",
@@ -119,7 +119,7 @@
 		  "cooldown": 0.3,
           "parameters" : {
             "requireLineOfSight" : false,
-            "maximumRange" : 40,
+            "maximumRange" : 70,
             "minimumRange" : 0,
             "windupTime" : 1.5,
             "windupStopForce" : 50,
@@ -151,7 +151,7 @@
 		  "cooldown": 0.27,
           "parameters" : {
             "requireLineOfSight" : false,
-            "maximumRange" : 40,
+            "maximumRange" : 70,
             "minimumRange" : 0,
             "windupTime" : 1.0,
             "windupStopForce" : 50,
@@ -230,13 +230,6 @@
       ],
 
       "wanderActions" : [
-        {
-          "name" : "wander-walk",
-          "cooldown" : 6.0,
-          "parameters" : {
-            "wanderTime" : [0, 0]
-          }
-        }
       ],
 	  
 	  "deathActions" : [
@@ -288,7 +281,7 @@
       "collisionPoly" : [[2, 9.55], [2.25, 4.05],  [2.75, -3.55], [2.25, -4.85],  [-2.25, -4.85], [-2.75, -3.55],  [-2.25, 4.05], [-2, 9.55] ],
 
       "mass" : 2.5,
-      "walkSpeed" : 6,
+      "walkSpeed" : 7,
       "runSpeed" : 8,
 
       "airFriction" : 0,

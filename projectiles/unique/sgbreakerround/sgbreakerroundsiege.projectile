@@ -1,0 +1,73 @@
+{
+  "projectileName" : "sgbreakerroundsiege",
+  "image" : "sgbreakerround.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  "piercing" : false,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "physics" : "laser",
+  "timeToLive" : 2,
+  "bounces" : 0,
+  "lightColor" : [170, 100, 0],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+    },
+    {
+      "action" : "light",
+      "color" : "orange"
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 3,
+      "backgroundRadius" : 2,
+      "explosiveDamageAmount" : 500,
+      "delaySteps" : 2
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgreboundshard",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.4,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgreboundshard",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.4,
+      "angleAdjust" : 20
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgreboundshard",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.4,
+      "angleAdjust" : -20
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.05,
+      "repeat" : true,
+
+      "action" : "loop",
+      "count" : 1,
+      "body" : [
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.0,
+      "type" : "fireguardianexplosion",
+      "fuzzAngle" : 360
+    }
+      ]
+    }
+  ],
+
+  "power" : 5.0,
+  "speed" : 40,
+  "damageKind" : "default"
+}
