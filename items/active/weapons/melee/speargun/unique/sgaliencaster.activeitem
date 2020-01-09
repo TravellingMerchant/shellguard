@@ -26,7 +26,7 @@
       "fire2" : [ "/sfx/melee/swing_broadsword.ogg" ],
       "fire3" : [ "/sfx/melee/swing_shortsword.ogg" ],
       "fire4" : [ "/sfx/melee/swing_spear.ogg" ],
-      "gunfire" : [ "/sfx/monsters/boss/sghologramstart.ogg" ],
+      "gunfire" : [ "/sfx/gun/alien/sgalienflame2.ogg" ],
       "gunfire2" : [ "/sfx/monsters/boss/sgdronerailgun.ogg" ]
     }
   },
@@ -78,7 +78,7 @@
 					//Projectile
 					"projectile" : "sgufoshockbombhomingalien",
 					"projectileCount" : 1,
-					"projectileDamage" : 0,
+					"projectileDamage" : 5,
 					"projectileParameters" : {
 						"knockback" : 0,
 						"power" : 0
@@ -127,7 +127,7 @@
 					//Projectile
 					"projectile" : "sgufoshockbombhomingalien",
 					"projectileCount" : 1,
-					"projectileDamage" : 0,
+					"projectileDamage" : 5,
 					"projectileParameters" : {
 						"knockback" : 0,
 						"power" : 0
@@ -153,13 +153,13 @@
 					"aimAtCursor" : false,	//If true, will fire toward the cursor instead of the rotation of the weapon
 					"fireTime" : 0.6, 			//If this exists it loops during the stance duration firing in intervals of this number
 					"energyUsage" : 25,
-					"fireSound" : "gunfire2",
+					"fireSound" : "gunfire",
 					
 					//Recoil
 					"recoilKnockbackVelocity" : false,
 					
 					//Projectile
-					"projectile" : "sgdataspear",
+					"projectile" : "sgufoshockbombhomingalien",
 					"projectileCount" : 1,
 					"projectileDamage" : 5,
 					"projectileParameters" : {

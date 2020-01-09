@@ -10,11 +10,13 @@
   ],
   "image" : "sgufoshockbomb.png",
   "movementSettings" : {
-    "gravityMultiplier" : 1
+    "gravityMultiplier" : 0.5
   },
-  "animationCycle" : 0.5,
+  "animationCycle" : 0.15,
+  "frameNumber" : 4,
   "pointLight" : true,
-  "lightColor" : [255, 0, 0],
+  "fullbright" : true,
+  "lightColor" : [200, 50, 50],
   "actionOnReap" : [
 	{
       "action" : "spark"
@@ -40,17 +42,16 @@
       "action" : "explosion",
       "foregroundRadius" : 3,
       "backgroundRadius" : 0,
-      "explosiveDamageAmount" : 300.0,
+      "explosiveDamageAmount" : 10.0,
       "delaySteps" : 2
     }
 
   ],
   "emitters" : [ "rocketsmoke" ],
-  "frameNumber" : 1,
   "damageKindImage" : "icon.png",
   "timeToLive" : 7,
   "power" : 20,
   "damageKind" : "bow",
   "scripts" : [ "sgufoshockbomb.lua" ],
-  "baseHomingControlForce" : 30
+  "baseHomingControlForce" : 1
 }
