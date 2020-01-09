@@ -38,7 +38,8 @@ function init()
 	if config.getParameter("deathParticles") then
 		monster.setDeathParticleBurst(config.getParameter("deathParticles"))
 	end
-
+	self.damageTilesList = config.getParameter("damageTilesList",nil)
+	self.damageTilesAmount = config.getParameter("damageTilesAmount",0)
 	script.setUpdateDelta(config.getParameter("initialScriptDelta", 5))
 	mcontroller.setAutoClearControls(false)
 	self.behaviorTickRate = config.getParameter("behaviorUpdateDelta", 2)
@@ -129,6 +130,9 @@ function update(dt)
 		animator.setAnimationState("damage", "none")
 	end
 
+	if self.damageTilesList then
+		damageContactedWalls()
+	end
 	-- Suppressing touch damage
 	if self.suppressDamageTimer then
 		monster.setDamageOnTouch(false)
@@ -190,6 +194,14 @@ function update(dt)
 	if config.getParameter("facingMode", "control") == "transformation" then
 		mcontroller.controlFace(1)
 	end
+end
+
+function damageContactedWalls()
+	local damageTilesTemp = {}
+	for i,v in ipairs(self.damageTilesList) do
+		table.insert(damageTilesTemp,vec2.add(mcontroller.position(),vec2.mul(v,{self.facingDirection or mcontroller.facingDirection(),1})))
+	end
+	world.damageTiles(damageTilesTemp,"foreground",mcontroller.position(),"explosive",self.damageTilesAmount)
 end
 
 function spikeFistChain(active, part, angle, frame, chainType, bounces, maxLength, targetPosition, targetId, startPos)
