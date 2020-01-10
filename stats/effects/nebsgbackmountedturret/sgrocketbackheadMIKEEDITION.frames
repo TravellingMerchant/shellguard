@@ -8,8 +8,8 @@
   },
   "aliases" : {
     "fired" : "active.1",
-    "reloading.1" : "active.1",
-    "reloading.2" : "active.1",
-    "reloading.3" : "active.1"
+    "reload.1" : "active.1",
+    "reload.2" : "active.1",
+    "reload.3" : "active.1"
   }
 }

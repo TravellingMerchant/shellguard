@@ -20,7 +20,7 @@
             "mode" : "transition",
             "transition" : "reloading"
           },
-          "reloading" : {
+          "reload" : {
             "frames" : 3,
             "cycle" : 0.5,
             "mode" : "transition",
