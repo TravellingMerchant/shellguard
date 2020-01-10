@@ -1,4 +1,8 @@
 {
+  "globalTagDefaults" : {
+    "facingDirection" : ""
+  },
+
   "animatedParts" : {
     "stateTypes" : {
       "turretHead" : {
@@ -53,17 +57,17 @@
             },
             "active" : {
               "properties" : {
-                "image" : "sgrocketbackhead.png:active.<frame>"
+                "image" : "sgrocketbackhead.png:active.<frame>?<facingDirection>"
               }
             },
             "fired" : {
               "properties" : {
-                "image" : "sgrocketbackhead.png:fired"
+                "image" : "sgrocketbackhead.png:fired?<facingDirection>"
               }
             },
             "reload" : {
               "properties" : {
-                "image" : "sgrocketbackhead.png:reload.<frame>"
+                "image" : "sgrocketbackhead.png:reload.<frame>?<facingDirection>"
               }
             }
           }
@@ -73,7 +77,7 @@
         "properties" : {
           "zLevel" : 0,
 		  "fullbright" : true,
-          "transformationGroups" : ["turret"]
+          "transformationGroups" : ["turret", "muzzle"]
         },
         "partStates" : {
           "firing" : {
@@ -84,7 +88,7 @@
             },
             "fire" : {
               "properties" : {
-                "image" : "muzzleflash.png:fire.<frame>"
+                "image" : "muzzleflash.png:fire.<frame>?<facingDirection>"
               }
             }
           }

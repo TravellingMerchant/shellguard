@@ -32,6 +32,7 @@ function init()
 end
 
 function update(dt)
+  --Reset group so rotation and movement doesnt stack
   animator.resetTransformationGroup("turret")
   --Crouch Correction
   if mcontroller.crouching() and not self.crouchCorrected then
@@ -45,7 +46,7 @@ function update(dt)
   self.muzzleOffset[1] = -(math.abs(self.muzzleOffset[1]) * mcontroller.facingDirection())
   
   --Flip sprite when play flips
-  --animator.scaleTransformationGroup("turret", {mcontroller.facingDirection(), 1})
+  if mcontroller.facingDirection() < 0 then animator.setGlobalTag("facingDirection", "flipx") else animator.setGlobalTag("facingDirection", "") end
   animator.translateTransformationGroup("turret", self.muzzleOffset)
   
   --Code for crouch only mechanics
@@ -90,7 +91,8 @@ function update(dt)
   
   if (self.currentTarget and world.entityExists(self.currentTarget) or false) then
     world.debugLine(firePosition(), vec2.add(firePosition(), vec2.mul(vec2.norm(aimVector()), 3)), "green")
-    animator.rotateTransformationGroup("turret", vec2.angle(vec2.sub(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.muzzleOffset))), self.muzzleOffset)
+    animator.rotateTransformationGroup("turret", vec2.angle(world.distance(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.muzzleOffset))), self.muzzleOffset)
+    world.debugText("Target is at this angle: " .. vec2.angle(world.distance(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.muzzleOffset))), vec2.add(mcontroller.position(), {0,3}), "red")
   else
     animator.rotateTransformationGroup("turret", 0, self.muzzleOffset)
   end
