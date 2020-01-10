@@ -76,15 +76,17 @@ function update(dt)
   end
   
   self.currentTarget = findTarget() 
-  if self.currentTarget
-    and self.cooldownTimer == 0 
-	and self.active
-	and self.canFire
-	and not self.firing
-    and not world.lineTileCollision(mcontroller.position(), firePosition()) then
+  if self.cooldownTimer == 0 
+	and not self.firing then
 	
 	self.shots = self.burstCount
-    self.firing = true
+    if self.currentTarget
+	  and self.active
+	  and self.canFire
+      and not world.lineTileCollision(mcontroller.position(), firePosition()) then
+	
+      self.firing = true
+	end
   end  
   
   if (self.currentTarget and world.entityExists(self.currentTarget) or false) then
