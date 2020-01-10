@@ -9,7 +9,7 @@
   "level" : 6,
   "tooltipKind" : "base",
   "category" : "uniqueWeapon",
-  "itemTags" : ["weapon","ranged","spear","speargun","gunspear", "upgradeableWeapon"],
+  "itemTags" : ["weapon","ranged", "spear","speargun","gunspear", "upgradeableWeapon"],
   "twoHanded" : false,
 
   "animation" : "/items/active/weapons/melee/speargun/sgaxegun.animation",
