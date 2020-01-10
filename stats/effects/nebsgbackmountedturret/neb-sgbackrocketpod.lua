@@ -2,14 +2,12 @@ require "/scripts/util.lua"
 require "/scripts/status.lua"
 require "/scripts/vec2.lua"
 
---Written by Nebulox, for use in multiple scripts, not exclusively shellguard, and may use similarly named variables to other mods (by chance)
---In short this is NOT stolen code
-
 function init()
   --Initial checks
   self.crouchOnly = config.getParameter("crouchOnly", false)
   self.crouchCorrected = false
   self.active = true
+  self.canFire = false
   self.firing = false
   animator.resetTransformationGroup("turret")
   
@@ -81,7 +79,7 @@ function update(dt)
   if self.currentTarget
     and self.cooldownTimer == 0 
 	and self.active
-	and self.shots == 0
+	and self.canFire
 	and not self.firing
     and not world.lineTileCollision(mcontroller.position(), firePosition()) then
 	
@@ -90,8 +88,18 @@ function update(dt)
   end  
   
   if (self.currentTarget and world.entityExists(self.currentTarget) or false) then
+    self.targetAngle = vec2.angle(world.distance(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.muzzleOffset)))
+    if (mcontroller.facingDirection() > 0 and self.targetAngle <= (math.pi/2) and self.targetAngle >= (-math.pi/2)) or (mcontroller.facingDirection() < 0 and (self.targetAngle <= (-math.pi/2) or self.targetAngle >= (math.pi/2))) then
+	  if (mcontroller.facingDirection() < 0 and (self.targetAngle <= (-math.pi/2) or self.targetAngle >= (math.pi/2))) then
+	    animator.setGlobalTag("facingDirection", "flipy")
+	  end
+      animator.rotateTransformationGroup("turret", vec2.angle(world.distance(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.muzzleOffset))), self.muzzleOffset)
+      self.canFire = true
+    else
+      self.canFire = false
+    end
+  
     world.debugLine(firePosition(), vec2.add(firePosition(), vec2.mul(vec2.norm(aimVector()), 3)), "green")
-    animator.rotateTransformationGroup("turret", vec2.angle(world.distance(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.muzzleOffset))), self.muzzleOffset)
     world.debugText("Target is at this angle: " .. vec2.angle(world.distance(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.muzzleOffset))), vec2.add(mcontroller.position(), {0,3}), "red")
   else
     animator.rotateTransformationGroup("turret", 0, self.muzzleOffset)
