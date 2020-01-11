@@ -399,7 +399,7 @@
   "sounds" : {
     "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
     "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
-	"fire": [ "/sfx/gun/tankshot.ogg" ],
+	"fire": [ "/sfx/gun/lockjawshotheavy.ogg" ],
 	"fireRocket": [ "/sfx/gun/mech_flakcannon1.ogg", "/sfx/gun/mech_flakcannon2.ogg","/sfx/gun/mech_flakcannon3.ogg" ]
   }
 }

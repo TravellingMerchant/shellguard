@@ -3,7 +3,7 @@
   "prerequisites" : [ "sgtoyarena1" ],
   "title" : "^green;Dart Quest Arena 2",
   "text" : "Ready for round 2? You'll be going up against some very special people!",
-  "completionText" : "That looked fun! Here's your price. Come back again for another round!",
+  "completionText" : "That looked fun! Here's your prize.",
   "moneyRange" : [2000, 2000],
   "rewards" : [
     [ [ "rewardbag", 1 ], ["money", 1000 ] ]

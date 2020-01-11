@@ -16,7 +16,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":33,
+ "tilecount":36,
  "tiledversion":"1.3.1",
  "tileheight":400,
  "tileproperties":
@@ -289,6 +289,36 @@
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"sgtoyshop",
+         "tilesetDirection":"right"
+        },
+     "33":
+        {
+         "\/\/description":"sgcryovent",
+         "\/\/name":"sgcryovent",
+         "\/\/shortdescription":"breakable",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgancientflametrap",
+         "tilesetDirection":"right"
+        },
+     "34":
+        {
+         "\/\/description":"alien ",
+         "\/\/name":"alien",
+         "\/\/shortdescription":"alien",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgalienweeds",
+         "tilesetDirection":"right"
+        },
+     "35":
+        {
+         "\/\/description":"alien ",
+         "\/\/name":"alien",
+         "\/\/shortdescription":"alien",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgalienweedssmall",
          "tilesetDirection":"right"
         },
      "4":
@@ -624,6 +654,36 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "33":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "34":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "35":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "4":
         {
          "\/\/description":"string",
@@ -848,6 +908,24 @@
          "image":"..\/..\/objects\/sgtoyshop\/icon.png",
          "imageheight":51,
          "imagewidth":40
+        },
+     "33":
+        {
+         "image":"..\/..\/objects\/trap\/sgancientflametrap\/icon.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "34":
+        {
+         "image":"..\/..\/objects\/alien\/sgalienweeds\/hivelampicon.png",
+         "imageheight":32,
+         "imagewidth":16
+        },
+     "35":
+        {
+         "image":"..\/..\/objects\/alien\/sgalienweedssmall\/hivelampicon.png",
+         "imageheight":32,
+         "imagewidth":16
         },
      "4":
         {

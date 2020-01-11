@@ -263,6 +263,86 @@
     "senderName" : "Merchant",
     "portraitImage" : "/interface/chatbubbles/merchant.png",
     "text" : "Everyone in this arena is based on a Dev that worked on the mod. Good luck and Thank you!"
+  },
+  
+/// --------------- aliens ------------
+
+  "sgbossmine1" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "The Siegebreaker unit is a powerful wrecking machine designed for carving holes in enemy defenses. It's hard armour makes it physically resistant to damage."
+  },
+  
+  "sgbossmine2" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "This unit suggests getting its attention and using the local enviroment to eliminate it. This unit gives you a moderate survival estimate. Your previous experience murde- decommissioning  sentient machines is quite vast."
+  },
+  
+  "sgbossmine3" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "This unit asks you not do die. This will fail the mission parameters and require a high power teleportation beam to this area to recover you, as there are no respawn beacons nearby."
+  },
+  
+  "sgbossmine4" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Mission success. You have decomissioned another of my childre- correction, malfunctioning prototype products."
+  },
+  
+  "sgbossmine5" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "This unit does propose a query. Why was this unit attacking indescriminately in the first place?"
+  },
+  
+  "sgalien1" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Error. You have just passed through physical matter. Sensors indicate you are inside of the rock itself."
+  },
+  
+  "sgalien2" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Duplicate signal detected. Deep scans show that you are currently underground in the planets outer crust. Biometric data indicates that you are 2500km above sea level in a low orbit around the planet."
+  },
+  
+  "sgalien3" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "There is something here that does not exist."
+  },
+  
+  "sgalien4a" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "This unit urges you to return. Error. Why have you been standing still in the mine for so long? Error. Mission failed, operator has perished to the siegebreaker.",
+    "persistTime" : 1
+  },
+  
+  "sgalien4b" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Error. Mission success. Operator is to return to this unit as soon as possible. Error. Operator is. Error. Operator was. Error. Operator."
+  },
+  
+  "sgalien5" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Logic loop closed. Paradox detected. Conscious observation has occured."
   }
   
 }

@@ -1,0 +1,62 @@
+{
+  "objectName" : "sgalienlamp",
+  "colonyTags" : ["hive","light","odd"],
+  "printable" : false,
+  "rarity" : "Common",
+  "category" : "light",
+  "price" : 100,
+  "description" : "A crystal that gives off a light that has no warmth.",
+  "shortdescription" : "Alien Lamp",
+  "race" : "generic",
+
+  
+  "apexDescription" : "I wonder if the source of the light in this lamp is biological, or electronic.",
+  "avianDescription" : "How is this crystal glowing?",
+  "floranDescription" : "Isss glowing like fire. Floran confused.",
+  "glitchDescription" : "Bewildered. What is causing this lamp to glow?",
+  "humanDescription" : "I'm not sure I can see any wires... So what is making this lamp light up?",
+  "hylotlDescription" : "The natural glow of this light feels unsettling.",
+  "novakidDescription":  "I'm at a loss as to how this ol' lamp is lightin' up...",
+
+  "lightColor" : [179, 60, 40],
+
+  "inventoryIcon" : "hivelampicon.png",
+  "orientations" : [
+    {
+      "image" : "hivelamp.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "animationPosition" : [0, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "lightPosition" : [1, 2],
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "hivelamp.png:<color>.<frame>",
+      "imagePosition" : [-8, 0],
+      "animationPosition" : [-8, 0],
+
+      "direction" : "right",
+
+      "lightPosition" : [-2, 1],
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "animation" : "/objects/wired/light/lighttogglebgfullbright.animation",
+  "animationParts" : {
+    "bg" : "hivelamp.png",
+    "fg" : "hivelamplit.png"
+  },
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+
+  "interactive" : true,
+
+  "inputNodes" : [ [0, 2] ]
+}

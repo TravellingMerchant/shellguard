@@ -68,7 +68,7 @@
 	  
 	  
       "keepTargetInSight" : false,
-      "keepTargetInRange" : 300,
+      "keepTargetInRange" : 7000,
       "targetOutOfSightTime" : 60,
 	  
       "foundTargetActions" : [ 
@@ -113,6 +113,35 @@
             "winddownTime" : 0.6
           }
         },
+
+		{
+          "name" : "action-sgdroidshoot",
+		  "cooldown": 5.0,
+          "parameters" : {
+            "requireLineOfSight" : false,
+            "maximumRange" : 80,
+            "minimumRange" : 0,
+            "windupTime" : 0.0,
+            "windupStopForce" : 50,
+            "windupState" : "idle",
+			"winddownStateType": "rockets",
+			"windupStateType": "rockets",
+            "projectileType" : "sgbouncesuperheavy",
+			"projectileCount": 1,
+            "fireOffsets" : [[5, 11.25], [4.5, 11], [5, 11.25]],
+			
+			"inaccuracy": 0.1,
+            "fireSound" : "fireRocket",
+			"fireStateType": "rockets",
+            "fireState" : "fireRockets",
+            "fireDelay" : 0.1,
+            "rotateAim" : false,
+
+            "winddownState" : "",
+            "winddownTime" : 0.6
+          }
+        },		
+
 	    //back gun
         {
           "name" : "action-fire-trans-male",
@@ -380,6 +409,8 @@
         }
       }
     },
+
+	"uniqueId" : "sgsiegebreaker",
 
     "mouthOffset" : [0, 70],
     "feetOffset" : [0, -8],

@@ -1,0 +1,16 @@
+{
+  "itemName" : "sgalienplate",
+  "price" : 10,
+  "category" : "block",
+  "rarity" : "Common",
+  "inventoryIcon" : "sgalienplate.png",
+  "shortdescription" : "Alien Plate",
+  "description" : "A metallic, yet organic plate.",
+  "glitchDescription" : "Observant. A metallic, yet organic plate.",
+  "floranDescription" : "A metallic, yet organic plate. Tasstessss bad!",
+  "novakidDescription" : "A metallic, organic lookin plate.",
+
+
+  "materialId" : 26206,
+  "learnBlueprintsOnPickup" : [ "sgalienplate" ]
+}

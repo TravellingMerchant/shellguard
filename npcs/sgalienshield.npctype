@@ -164,9 +164,15 @@
         "baseValue" : 125.0
       },
       "powerMultiplier" : {
-        "baseValue" : 1
+        "baseValue" : 1.5
       },
       "protection" : {
+        "baseValue" : 1.0
+      },
+      "poisonResistance" : {
+        "baseValue" : 1
+      },
+      "poisonStatusImmunity" : {
         "baseValue" : 1.0
       },
       "healthRegen" : {

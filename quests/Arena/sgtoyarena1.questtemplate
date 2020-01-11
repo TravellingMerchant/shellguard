@@ -3,7 +3,7 @@
   "prerequisites" : [],
   "title" : "^green;Dart Quest Arena 1",
   "text" : "Sponsers say voilent blood sports aren't good for ratings! So we designed this family friendly sport instead. The aim is to push your opponent into boiling hot lava with perfectly safe toy guns!",
-  "completionText" : "That looked fun! Here's your price. Come back again for another round!",
+  "completionText" : "That looked fun! Here's your prize. Come back again for another round!",
   "moneyRange" : [2000, 2000],
   "rewards" : [
     [ [ "rewardbag", 1 ], ["money", 1000 ] ]

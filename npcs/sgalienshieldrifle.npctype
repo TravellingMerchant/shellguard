@@ -169,6 +169,12 @@
        "maxEnergy" : {
         "baseValue" : 100
       },
+      "poisonResistance" : {
+        "baseValue" : 1
+      },
+      "poisonStatusImmunity" : {
+        "baseValue" : 1.0
+      },
       "protection" : {
         "baseValue" : 1.0
       },
