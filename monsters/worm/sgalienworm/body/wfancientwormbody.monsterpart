@@ -1,0 +1,10 @@
+{
+  "name" : "sgalienwormbody",
+  "category" : "sgalienwormbody",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgalienwormbody.png",
+    "bodyfullbright" : "sgalienwormbodyfullbright.png"
+  }
+}

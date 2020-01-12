@@ -1,0 +1,170 @@
+{
+  "type" : "sgalienwormcore",
+  "shortdescription" : "Quantum Elder: Skrymartha",
+  "description" : "Feral Elder Queen Skrymartha.",
+
+  "categories" : [ "sgalienwormcore" ],
+  "parts" : [ "body" ],
+
+  "animation" : "sgalienwormcore.animation",
+
+  // "dropPools" : [ { "default" : "batongTreasure", "bow" : "batongHunting" } ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua",
+      "/scripts/wfsystem/monster/worm/wfwormcoresg.lua"
+    ],
+
+	"damageTeamType" : "enemy",
+    "damageTeam" : 0,
+    "behavior" : "monster",
+	"deathBehavior" : "monster-death",
+	"renderLayer" : "Monster+1",
+
+    "chainOffset" : 0,
+	"childCount" : 7,
+	"segmentOffset" : 4.25,
+	"orbitDistance" : 3,
+	"requireTerrain" : false,
+  "wormHeadName" : "sgalienwormhead",
+  "wormBodyName" : "sgalienwormbody",
+  "wormTailName" : "sgalienwormtail",
+
+	"damageBar" : "Special",
+
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+      "targetQueryRange" : 50,
+      "targetEntityTypes": ["player"],
+
+      //"keepTargetInRange" : 50,
+
+      "foundTargetActions" : [],
+
+      "fleeActions" : [ ],
+
+      "hostileActions" : [],
+
+      "periodicActions" : [ ],
+
+      "approachActions" : [ ],
+
+      "followActions" : [ ],
+
+      "wanderActions" : [ ],
+
+      "concurrentActions" : [ ],
+
+      "concurrentHostileActions" : [ ]
+    },
+
+    "metaBoundBox" : [0,0,0,0],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionEnabled" : true,
+      "collisionPoly" : [ [0.26, 0.625],  [0.625, 0.26], [0.625, -0.26], [0.26, -0.625], [-0.26, -0.625], [-0.625, -0.26], [-0.625, 0.26], [-0.26, 0.625] ],
+
+      "mass" : 1.0,
+      "walkSpeed" : 4,
+      "runSpeed" : 12,
+      "gravityEnabled" : false,
+	  "gravityMultiplier" : 0.5,
+	  "liquidFriction" : 0,
+      "airFriction" : 0,
+      "airForce" : 80,
+      "flySpeed" : 100
+    },
+
+    "bodyMaterialKind" : "organic",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "organic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.2
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 10000
+        },
+        "maxHealth" : {
+          "baseValue" : 1000
+        },
+        "protection" : {
+          "baseValue" : 25
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        },
+        "physicalResistance" : {
+          "baseValue" : 0.5
+        },
+        "fireResistance" : {
+          "baseValue" : -0.1
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+        "iceResistance" : {
+          "baseValue" : -0.1
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+        "electricResistance" : {
+          "baseValue" : -0.1
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+        "poisonResistance" : {
+          "baseValue" : -0.1
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 0.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : false,
+    "captureHealthFraction" : 0.5,
+    "nametagColor" : [64, 200, 255]
+  }
+}

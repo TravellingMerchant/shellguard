@@ -1,0 +1,9 @@
+{
+  "name" : "sgeviscerator",
+  "category" : "sgalienbiter",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgeviscerator.png"
+  }
+}

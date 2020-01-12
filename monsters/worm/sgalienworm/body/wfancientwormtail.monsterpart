@@ -1,0 +1,10 @@
+{
+  "name" : "sgalienwormtail",
+  "category" : "sgalienwormtail",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgalienwormtail.png",
+    "bodyfullbright" : "sgalienwormtailfullbright.png"
+  }
+}
