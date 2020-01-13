@@ -1,7 +1,7 @@
 {
   "itemName" : "sgmerchantrevolver",
   "price" : 10000,
-  "inventoryIcon" : "sgbayonetpistol.png:closed.1",
+  "inventoryIcon" : "sgmerchantrevolver.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Legendary",
   "description" : "A break action three shot explosive flak revolver with a five step combo.",
@@ -54,8 +54,8 @@
       },
       "fire1" : {
         "duration" : 0.2,
-        "armRotation" : -10,
-        "weaponRotation" : 20,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
         "twoHanded" : false,
         "weaponOffset" : [2.0, -2],
 
@@ -65,7 +65,7 @@
 				//If this exists it will try to shoot based on the variables within
 				"gunShotConfig" : {
 					//General
-					"aimAtCursor" : true,
+					"aimAtCursor" : false,
 					"energyUsage" : 17,
 					"fireSound" : "gunfire",
 				
