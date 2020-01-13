@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgbreakerrifle.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "A large alien rifle that does not exist.",
+  "description" : "A large alien rifle made of some sort of organic metal. Consumes very little energy.",
   "shortdescription" : "Alien Heavy Rifle",
   "level" : 6,
   "tooltipKind" : "sgweapon",
@@ -91,8 +91,8 @@
   "upgradeParameters" : {
     "inventoryIcon" : "sgbreakerrifleelite.png:idle",
     "animationParts" : {
-      "middle" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgbreakerauto/sgbreakerrifleelite.png"
+      "middle" : "sgbreakerrifleelite.png"
     },
-    "shortdescription" : "Mercenary Breaker ^yellow;^reset;"
+    "shortdescription" : "Alien Heavy Rifle ^yellow;^reset;"
   }
 }

@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgbreakerrifle.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "A shotgun like rifle that does not exist.",
+  "description" : "An alien shotgun made of a crystalline metallic growth.",
   "shortdescription" : "Alien Spread Rifle",
   "level" : 6,
   "tooltipKind" : "sgweapon",
@@ -84,14 +84,12 @@
       "knockback" : 10
     }
   },
-  
-  "altAbilityType" : "bayonetstab",
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
     "inventoryIcon" : "sgbreakerrifleelite.png:idle",
     "animationParts" : {
-      "middle" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgbreakerauto/sgbreakerrifleelite.png"
+      "middle" : "sgbreakerrifleelite.png"
     },
     "shortdescription" : "Alien Spread Rifle ^yellow;^reset;"
   }

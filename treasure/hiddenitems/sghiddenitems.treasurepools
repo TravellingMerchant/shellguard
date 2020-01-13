@@ -379,8 +379,49 @@
     }]
   ],
   
-//-----------misc---------------------
+//--------- alien --------------------
 
+  "sgaliencaster" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgaliencaster", 1]}
+      ]
+    }]
+  ],
+  
+  "sgalienrifle" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgalienrifle", 1]}
+      ]
+    }]
+  ],
+  
+  "sgalienshotgun" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgalienshotgun", 1]}
+      ]
+    }]
+  ],
+
+  "sgalienlmg" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgalienlmg", 1]}
+      ]
+    }]
+  ],
+  
+  "sgheavyenergyshield" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgheavyenergyshield", 1]}
+      ]
+    }]
+  ],
+
+//-----------misc---------------------
 
   "sgmerchanthead" : [
     [1, {

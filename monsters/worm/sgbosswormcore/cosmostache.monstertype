@@ -39,8 +39,8 @@
       "targetQueryRange" : 50,
       "targetOnDamage" : true,
       "keepTargetInSight" : true,
-      "keepTargetInRange" : 100,
-      "targetOutOfSightTime" : 10.0,
+      "keepTargetInRange" : 200,
+      "targetOutOfSightTime" : 40.0,
 
       "hurtWaitForGround" : false,
 
@@ -353,6 +353,8 @@
         }
       }
     },
+
+    "uniqueId" : "sgalienwormboss",
 
     "mouthOffset" : [0, 0],
     "feetOffset" : [0, -8],

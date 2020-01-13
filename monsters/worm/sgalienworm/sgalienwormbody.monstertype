@@ -144,7 +144,7 @@
           "baseValue" : 1.0
         },
         "physicalResistance" : {
-          "baseValue" : 0.5
+          "baseValue" : 0.8
         },
         "fireResistance" : {
           "baseValue" : -0.1
@@ -153,10 +153,10 @@
           "baseValue" : 0.0
         },
         "iceResistance" : {
-          "baseValue" : -0.1
+          "baseValue" : 0.6
         },
         "iceStatusImmunity" : {
-          "baseValue" : 0.0
+          "baseValue" : 0.8
         },
         "electricResistance" : {
           "baseValue" : -0.1
@@ -165,10 +165,10 @@
           "baseValue" : 0.0
         },
         "poisonResistance" : {
-          "baseValue" : -0.1
+          "baseValue" : 1
         },
         "poisonStatusImmunity" : {
-          "baseValue" : 0.0
+          "baseValue" : 1
         }
       },
 

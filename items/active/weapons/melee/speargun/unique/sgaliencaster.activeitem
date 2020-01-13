@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgaliencaster.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A strange alien weapon that does not exist.",
+  "description" : "An organic axe made of some metallic crystalline material. Hurls plasma with every swing.",
   "shortdescription" : "Alien Caster",
   "level" : 6,
   "tooltipKind" : "base",
@@ -180,6 +180,6 @@
     "animationParts" : {
     "blade" : "sgaliencasterelite.png"
     },
-    "shortdescription" : "Praxis Salvos ^yellow;^reset;"
+    "shortdescription" : "Alien Caster ^yellow;^reset;"
   }
 }

@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgbreakerrifle.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "A strange alien rifle that does not exist.",
+  "description" : "A strange alien rifle that fires sharp crystal thorns in a burst.",
   "shortdescription" : "Alien Rifle",
   "level" : 6,
   "tooltipKind" : "sgweapon",
@@ -89,8 +89,8 @@
   "upgradeParameters" : {
     "inventoryIcon" : "sgbreakerrifleelite.png:idle",
     "animationParts" : {
-      "middle" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgbreakerauto/sgbreakerrifleelite.png"
+      "middle" : "sgbreakerrifleelite.png"
     },
-    "shortdescription" : "Mercenary Breaker ^yellow;^reset;"
+    "shortdescription" : "Alien Rifle ^yellow;^reset;"
   }
 }
