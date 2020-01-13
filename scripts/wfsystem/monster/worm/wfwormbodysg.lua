@@ -243,7 +243,7 @@ function controlGun(part, offset, projectileType, params, count, power, interval
 				-- update target position during cooldown
 				util.wait(cooldownOffset, updateTargetPos)
 				if self.targetPosition == nil then break end
-				if requireLineOfSight and not entity.entityInSight(self.target) then break end
+				if requireLineOfSight and self.target and not entity.entityInSight(self.target) then break end
 
 				local shots = 0
 				while shots < count do

@@ -7,14 +7,15 @@
   "categories" : [ "sgbosswormcore" ],
   "parts" : [ "body" ],
 
-  "animation" : "cosmostache.animation",
+  "animation" : "sgbosswormcore.animation",
 
   "dropPools" : ["spaceRobot"],
 
   "baseParameters" : {
     "scripts" : [
       "/monsters/monster.lua",
-      "/scripts/wfsystem/monster/worm/wfwormcoresg.lua"
+      "/scripts/wfsystem/monster/worm/wfwormcoresg.lua",
+	  "/monsters/worm/sgbosswormcore/bossHandler.lua"
     ],
 	
     "chainOffset" : 0,
@@ -25,8 +26,6 @@
   "wormHeadName" : "sgalienwormhead",
   "wormBodyName" : "sgalienwormbody",
   "wormTailName" : "sgalienwormtail",
-
-	"damageBar" : "Special",
 
     "behavior" : "monster",
     "deathBehavior" : "monster-death",
@@ -39,9 +38,8 @@
 
       "targetQueryRange" : 50,
       "targetOnDamage" : true,
-      "keepTargetInSight" : true,
+      "keepTargetInSight" : false,
       "keepTargetInRange" : 200,
-      "targetOutOfSightTime" : 40.0,
 
       "hurtWaitForGround" : false,
 
@@ -247,16 +245,6 @@
       ]
     },
 
-    "touchDamage" : {
-      "poly" : [ [0.625, 0.9375], [1.125, 0.4375], [1.125, -0.4375], [0.625, -0.9375], [-0.625, -0.9375], [-1.125, -0.4375], [-1.125, 0.4375], [-0.625, 0.9375] ],
-      "damage" : 15,
-
-      "teamType" : "enemy",
-      "damageSourceKind" : "impact",
-      "knockback" : 20,
-      "statusEffects" : [ ]
-    },
-
     "metaBoundBox" : [-4, -4, 4, 4],
     "scale" : 1.0,
 
@@ -317,7 +305,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 110
+          "baseValue" : 600
         },
         "protection" : {
           "baseValue" : 0.0

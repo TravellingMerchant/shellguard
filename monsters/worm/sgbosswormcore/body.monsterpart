@@ -1,10 +1,10 @@
 {
-  "name" : "cosmostache",
+  "name" : "sgbosswormcore",
   "category" : "sgbosswormcore",
   "type" : "body",
 
   "frames" : {
-    "body" : "cosmostache.png",
-    "bodyfullbright" : "cosmostachefullbright.png"
+    "body" : "sgbosswormcore.png",
+    "bodyfullbright" : "sgbosswormcorefullbright.png"
   }
 }
