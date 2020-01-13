@@ -2,6 +2,7 @@
   "type" : "sgalienwormcore",
   "shortdescription" : "Quantum Elder: Skrymartha",
   "description" : "Feral Elder Queen Skrymartha.",
+  "Persistent" : true,
 
   "categories" : [ "sgalienwormcore" ],
   "parts" : [ "body" ],

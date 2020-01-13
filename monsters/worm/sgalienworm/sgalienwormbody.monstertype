@@ -2,6 +2,7 @@
   "type" : "sgalienwormbody",
   "shortdescription" : "Ancient Devourer",
   "description" : "Beware the worm, it eats all.",
+  "Persistent" : true,
 
   "categories" : [ "sgalienwormbody" ],
   "parts" : [ "body" ],

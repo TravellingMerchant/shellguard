@@ -421,6 +421,15 @@
     }]
   ],
 
+  "siegebreakerdrop" : [
+    [1, {
+      "pool" : [
+        {"weight" : 1, "item" : "sgspikeballlockjaw"}
+      ]
+    }]
+  ],
+
+
 //-----------misc---------------------
 
   "sgmerchanthead" : [

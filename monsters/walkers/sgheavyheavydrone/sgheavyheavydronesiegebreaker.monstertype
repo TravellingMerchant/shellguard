@@ -9,7 +9,7 @@
 
   "animation" : "sgheavyheavydronesiegebreaker.animation",
 
-  "dropPools" : [],
+  "dropPools" : [ "siegebreakerdrop" ],
 
   "baseParameters" : {
     "scripts" : [
@@ -366,7 +366,7 @@
           "baseValue" : 0.1
         },
         "powerMultiplier" : {
-          "baseValue" : 1.5
+          "baseValue" : 1.7
         },
         "physicalResistance" : {
           "baseValue" : 0.0

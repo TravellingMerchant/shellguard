@@ -13,11 +13,7 @@
 			"frames": 1,
 			"cycle": 0.6,
 			"mode": "transition",
-			"transition": "idle",
-			"properties" : {
-              "persistentSound" : "/sfx/monsters/mgsalert.ogg",
-              "persistentSoundStopTime" : 1.25
-            }
+			"transition": "idle"
 		  },
           "walk" : {
             "frames" : 10,
