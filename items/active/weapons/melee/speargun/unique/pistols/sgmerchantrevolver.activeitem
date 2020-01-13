@@ -80,7 +80,7 @@
 					"projectileDamage" : 5,
 					"projectileParameters" : {
 						"knockback" : 30,
-						"speed" : 100
+						"speed" : 150
 					},
 					"projectileInaccuracy" : 0.01,
 					"projectileAimAngleOffset" : 0,
@@ -116,7 +116,7 @@
 					"projectileDamage" : 5,
 					"projectileParameters" : {
 						"knockback" : 30,
-						"speed" : 100
+						"speed" : 150
 					},
 					"projectileInaccuracy" : 0.01,
 					"projectileAimAngleOffset" : 0,
@@ -152,7 +152,7 @@
 					"projectileDamage" : 5,
 					"projectileParameters" : {
 						"knockback" : 30,
-						"speed" : 100
+						"speed" : 150
 					},
 					"projectileInaccuracy" : 0.01,
 					"projectileAimAngleOffset" : 0,
@@ -189,7 +189,7 @@
 					"projectileDamage" : 5,
 					"projectileParameters" : {
 						"knockback" : 30,
-						"speed" : 100
+						"speed" : 150
 					},
 					"projectileInaccuracy" : 0.04,
 					"projectileAimAngleOffset" : 0,
