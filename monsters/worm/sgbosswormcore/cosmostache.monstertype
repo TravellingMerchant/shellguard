@@ -61,7 +61,7 @@
             "projectileType" : "sgdelayedbeam",
             "projectileParameters" : {
               "speed" : 0,
-              "power" : 20
+              "power" : 40
             },
             "fireOffset" : [0, 0],
             "onGround" : false,

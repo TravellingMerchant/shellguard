@@ -467,7 +467,7 @@
     "value" : {
       "primaryDungeon" : "sgbossmine",
       "weatherPool" : [],
-      "threatLevel" : 6,
+      "threatLevel" : 8,
       "gravity" : 80,
       "worldSize" : [2500, 2000],
       "dungeonBaseHeight" : 1000,
