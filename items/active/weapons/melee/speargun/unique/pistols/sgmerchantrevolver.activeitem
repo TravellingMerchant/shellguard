@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgbayonetpistol.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A break action six shooter with a five step combo.",
+  "description" : "A break action three shot explosive flak revolver with a five step combo.",
   "shortdescription" : "Merchant Custom",
   "level" : 6,
   "tooltipKind" : "base",
@@ -26,8 +26,8 @@
       "fire2" : [ "/sfx/monsters/boss/survivorpainblank.ogg" ],
       "fire3" : [ "/sfx/monsters/boss/survivorpainblank.ogg" ],
       "fire4" : [ "/sfx/gun/sgpistolreload.ogg" ],
-      "gunfire" : [ "/sfx/gun/railshots/sgheavyrevolvershot1.ogg" ],
-      "gunfire2" : [ "/sfx/gun/railshots/sgheavyrevolvershot2.ogg" ]
+      "gunfire" : [ "/sfx/gun/railshots/sharpshot11.ogg" ],
+      "gunfire2" : [ "/sfx/gun/railshots/sharpshot10.ogg" ]
     }
   },
 
@@ -54,8 +54,8 @@
       },
       "fire1" : {
         "duration" : 0.2,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
+        "armRotation" : -10,
+        "weaponRotation" : 20,
         "twoHanded" : false,
         "weaponOffset" : [2.0, -2],
 
@@ -65,8 +65,8 @@
 				//If this exists it will try to shoot based on the variables within
 				"gunShotConfig" : {
 					//General
-					"aimAtCursor" : false,
-					"energyUsage" : 25,
+					"aimAtCursor" : true,
+					"energyUsage" : 17,
 					"fireSound" : "gunfire",
 				
 					//Recoil
@@ -102,7 +102,7 @@
 				"gunShotConfig" : {
 					//General
 					"aimAtCursor" : false,
-					"energyUsage" : 25,
+					"energyUsage" : 17,
 					"fireSound" : "gunfire",
 				
 					//Recoil
@@ -138,7 +138,7 @@
 				"gunShotConfig" : {
 					//General
 					"aimAtCursor" : false,
-					"energyUsage" : 25,
+					"energyUsage" : 17,
 					"fireSound" : "gunfire",
 				
 					//Recoil
@@ -175,7 +175,7 @@
 					//General
 					"aimAtCursor" : false,
 					"fireTime" : 0.08, 			//If this exists it loops during the stance duration firing in intervals of this number
-					"energyUsage" : 25,
+					"energyUsage" : 10,
 					"fireSound" : "gunfire2",
 				
 					//Recoil
