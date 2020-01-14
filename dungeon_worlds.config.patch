@@ -473,7 +473,7 @@
       "dungeonBaseHeight" : 1000,
       "dungeonSurfaceHeight" : 2000,
       "ambientLightLevel" : [50, 30, 50],
-      "musicTrack" : "/music/sgtheguardsmarch2.ogg",
+      "musicTrack" : "/music/lava-exploration1.ogg",
       "biome": "underground3b"
     }
   },  

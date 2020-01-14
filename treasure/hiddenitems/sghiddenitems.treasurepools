@@ -464,6 +464,14 @@
     }]
   ],  
 
+  "sgmerchantrevolver" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgmerchantrevolver", 1]}
+      ]
+    }]
+  ],  
+
   "sg_modulecreator" : [
     [1, {
       "fill" : [
