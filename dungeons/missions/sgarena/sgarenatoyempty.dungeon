@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "sgarenatoyempty",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "sgarenatoyempty" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "sgarenatoyempty",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "sgarenatoyempty.json" ]
+    }
+  ]
+}
