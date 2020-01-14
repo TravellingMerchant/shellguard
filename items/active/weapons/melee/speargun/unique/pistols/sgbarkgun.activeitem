@@ -1,11 +1,11 @@
 {
-  "itemName" : "sgbayonetpistol",
+  "itemName" : "sgbarkgun",
   "price" : 10000,
-  "inventoryIcon" : "sgbayonetpistol.png:closed.1",
+  "inventoryIcon" : "sgbarkgun.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "Pull the trigger five times for a devastating combo, or hold for continued fire. ",
-  "shortdescription" : "Survivors Guilt",
+  "description" : "This guns bark will freeze your enemies with fear. Watch out, it frost-bites!",
+  "shortdescription" : "Frost Hound",
   "level" : 6,
   "tooltipKind" : "base",
   "category" : "Combo Pistol",
@@ -14,8 +14,8 @@
 
   "animation" : "/items/active/weapons/melee/speargun/sgbayonetpistol.animation",
   "animationParts" : {
-    "blade" : "sgbayonetpistol.png",
-    "bladefullbright" : "sgbayonetpistolfullbright.png",
+    "blade" : "sgbarkgun.png",
+    "bladefullbright" : "sgbarkgunfullbright.png",
     "handle" : "",
     "handlefullbright" : "",
     "muzzleFlash" : ""
@@ -26,8 +26,8 @@
       "fire2" : [ "/sfx/monsters/boss/survivorpainblank.ogg" ],
       "fire3" : [ "/sfx/monsters/boss/survivorpainblank.ogg" ],
       "fire4" : [ "/sfx/gun/sgpistolreload.ogg" ],
-      "gunfire" : [ "/sfx/gun/sgpushshot.ogg" ],
-      "gunfire2" : [ "/sfx/gun/sgpushshotheavy.ogg" ]
+      "gunfire" : [ "/sfx/gun/railshots/sgheavyrevolvershot3.ogg" ],
+      "gunfire2" : [ "/sfx/gun/railshots/sgheavyrevolvershot5.ogg" ]
     }
   },
 
@@ -66,7 +66,7 @@
 				"gunShotConfig" : {
 					//General
 					"aimAtCursor" : false,
-					"energyUsage" : 25,
+					"energyUsage" : 17,
 					"fireSound" : "gunfire",
 				
 					//Recoil
@@ -75,15 +75,16 @@
 					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
-					"projectile" : "sgbreakerround",
+					"projectile" : "sgsupercooled",
 					"projectileCount" : 1,
-					"projectileDamage" : 5,
+					"projectileDamage" : 6,
 					"projectileParameters" : {
-						"knockback" : 22
+						"knockback" : 10,
+						"speed" : 90
 					},
-					"projectileInaccuracy" : 0.01,
+					"projectileInaccuracy" : 0,
 					"projectileAimAngleOffset" : 0,
-          "projectileFirePoint" : [2.125, 0.5]
+          "projectileFirePoint" : [2.375, 0.375]
 				}
       },
 
@@ -101,7 +102,7 @@
 				"gunShotConfig" : {
 					//General
 					"aimAtCursor" : false,
-					"energyUsage" : 25,
+					"energyUsage" : 17,
 					"fireSound" : "gunfire",
 				
 					//Recoil
@@ -110,15 +111,16 @@
 					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
-					"projectile" : "sgbreakerround",
+					"projectile" : "sgsupercooled",
 					"projectileCount" : 1,
-					"projectileDamage" : 5,
+					"projectileDamage" : 6,
 					"projectileParameters" : {
-						"knockback" : 22
+						"knockback" : 10,
+						"speed" : 90
 					},
 					"projectileInaccuracy" : 0.01,
 					"projectileAimAngleOffset" : 0,
-          "projectileFirePoint" : [2.125, 0.5]
+          "projectileFirePoint" : [2.375, 0.375]
 				}
       },
 
@@ -136,7 +138,7 @@
 				"gunShotConfig" : {
 					//General
 					"aimAtCursor" : false,
-					"energyUsage" : 25,
+					"energyUsage" : 17,
 					"fireSound" : "gunfire",
 				
 					//Recoil
@@ -145,15 +147,16 @@
 					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
-					"projectile" : "sgbreakerround",
+					"projectile" : "sgsupercooled",
 					"projectileCount" : 1,
-					"projectileDamage" : 5,
+					"projectileDamage" : 6,
 					"projectileParameters" : {
-						"knockback" : 22
+						"knockback" : 10,
+						"speed" : 90
 					},
 					"projectileInaccuracy" : 0.01,
 					"projectileAimAngleOffset" : 0,
-          "projectileFirePoint" : [2.125, 0.5]
+          "projectileFirePoint" : [2.375, 0.375]
 				}
       },
 
@@ -171,7 +174,8 @@
 				"gunShotConfig" : {
 					//General
 					"aimAtCursor" : false,
-					"energyUsage" : 25,
+					"fireTime" : 0.3, 			//If this exists it loops during the stance duration firing in intervals of this number
+					"energyUsage" : 10,
 					"fireSound" : "gunfire2",
 				
 					//Recoil
@@ -180,15 +184,16 @@
 					"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
-					"projectile" : "sgbreakerroundblast",
-					"projectileCount" : 1,
-					"projectileDamage" : 5,
+					"projectile" : "sgsupercooled",
+					"projectileCount" : 5,
+					"projectileDamage" : 7,
 					"projectileParameters" : {
-						"knockback" : 30
+						"knockback" : 10,
+						"speed" : 90
 					},
-					"projectileInaccuracy" : 0.01,
+					"projectileInaccuracy" : 0.1,
 					"projectileAimAngleOffset" : 0,
-          "projectileFirePoint" : [2.125, 0.5]
+          "projectileFirePoint" : [2.375, 0.375]
 				}
       }
 

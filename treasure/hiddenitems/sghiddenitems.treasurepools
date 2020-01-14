@@ -362,6 +362,14 @@
       ]
     }]
   ],
+
+  "sgbarkgun" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgbarkgun", 1]}
+      ]
+    }]
+  ],
   
   "sgtitanhelmet" : [
     [1, {

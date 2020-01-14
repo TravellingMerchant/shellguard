@@ -184,7 +184,7 @@
           "baseValue" : 70.0
         },
         "healthRegen" : {
-          "baseValue" : 50.0
+          "baseValue" : 20.0
         },
         "powerMultiplier" : {
           "baseValue" : 0

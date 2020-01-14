@@ -129,6 +129,7 @@
           "offset" : [0, 1.875],
           "transformationGroups" : ["weapon"],
           "rotationCenter" : [0, 0],
+          "fullbright" : true,
           "damageArea" : [ [-0.7, -1.0], [-0.7, 2.5], [0.5, 2.5], [0.5, -1.0] ],
           "projectileFirePoint" : [0.0, 3.0]
         },
@@ -172,6 +173,7 @@
         "properties" : {
           "zLevel" : 3,
           "centered" : true,
+          "fullbright" : true,
           "image" : "<partImage><paletteSwaps>?<directives>",
           "offset" : [0, 1.875],
           "transformationGroups" : ["weapon"],

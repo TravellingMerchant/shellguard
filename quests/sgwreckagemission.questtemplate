@@ -24,8 +24,8 @@
     },
 
     "descriptions" : {
-      "enterInstance" : "Assault the ^orange; massive spaceship.^reset;",
-      "findGoal" : "Finish the Fortress!",
+      "enterInstance" : "Look for the ^orange; Survivor.^reset;",
+      "findGoal" : "Finish the fight.",
       "turnIn" : "Return to ^orange;Commander Andros Galvanek^reset;"
     },
 

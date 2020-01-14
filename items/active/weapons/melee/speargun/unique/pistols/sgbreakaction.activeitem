@@ -8,7 +8,7 @@
   "shortdescription" : "Gyro-Swarm Pistol",
   "level" : 6,
   "tooltipKind" : "base",
-  "category" : "uniqueWeapon",
+  "category" : "Combo Pistol",
   "itemTags" : ["weapon","ranged","spear","speargun","gunspear", "upgradeableWeapon"],
   "twoHanded" : false,
 
@@ -27,7 +27,7 @@
       "fire3" : [ "/sfx/monsters/boss/survivorpainblank.ogg" ],
       "fire4" : [ "/sfx/gun/sgpistolreload.ogg" ],
       "gunfire" : [ "/sfx/monsters/boss/sgdronerocketlaunch.ogg" ],
-      "gunfire2" : [ "/sfx/monsters/boss/sgdronerocketlaunch.ogg" ]
+      "gunfire2" : [ "/sfx/monsters/boss/sgdronerocketlaunch2.ogg" ]
     }
   },
 

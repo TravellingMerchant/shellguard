@@ -1,5 +1,5 @@
 {
-  "type" : "sgsurvivorendgamerematch",
+  "type" : "sgsurvivorendgamerematchold",
   "shortdescription" : "The Survivor",
 
   "categories" : [ "sgsurvivorendgame" ],
@@ -32,25 +32,25 @@
 
     "phases" : [
       {
-        "skills" : [ "sgsurvivorendgamePunchAttack", "sghologram4", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sghologram4", "sgsurvivorendgameDashAttack", "sghologram4" ]
+        "skills" : [ "sgsurvivorendgamePunchAttack", "sgspeartoss", "sghologram1", "sghologram1", "sghologram1", "sgsurvivorendgameDashAttack", "sgbreakershot", "sgbreakershot", "sghologram1" ]
       },
       {
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.8,
         "enterPhase" : "sgsurvivorjump",
-        "skills" : [ "sghologramburst", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack", "sghologram4" ]
+        "skills" : [ "sghologramburst", "sgbreakershot", "sgsurvivorendgameDashAttack", "sghologram4", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sghologram4", "sgsurvivorendgamePunchAttack" ]
       },
       {
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.5,
         "enterPhase" : "sgsurvivorjump",
-        "skills" : [ "sghologramburst", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sghologram4", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgspeartoss", "sgsurvivorjump", "sgbreakershot" ]
+        "skills" : [ "sghologramburst", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sghologram4", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgspeartoss", "sgsurvivorjump", "sgspeartoss", "sgsurvivorjump", "sgspeartoss",  "sgbreakershot" ]
       },
       {
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.2,
         "enterPhase" : "sgsurvivorjump",
-        "skills" : [ "sghologramburst", "sgsurvivorendgamePunchAttack", "sghologram4", "sghologram4", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgspeartoss", "sghologram4" ]
+        "skills" : [ "sghologramburst", "sgsurvivorendgamePunchAttack", "sghologram4", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgspeartoss", "sghologram4" ]
       }
     ],
 
@@ -115,10 +115,10 @@
           "baseValue" : 0
         },
         "grit" : {
-          "baseValue" : 1
+          "baseValue" : 0.999
         },
         "maxHealth" : {
-          "baseValue" : 2000
+          "baseValue" : 1950
         },
         "protection" : {
           "baseValue" : 50

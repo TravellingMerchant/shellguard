@@ -1950,7 +1950,7 @@
                  "y":928
                 }, 
                 {
-                 "gid":4933,
+                 "gid":4936,
                  "height":51,
                  "id":1156,
                  "name":"",
@@ -2596,6 +2596,27 @@
                  "width":8,
                  "x":2688,
                  "y":760
+                }, 
+                {
+                 "height":8,
+                 "id":1160,
+                 "name":"dawn",
+                 "properties":
+                    {
+                     "npc":"human",
+                     "typeName":"sgtoydawn"
+                    },
+                 "propertytypes":
+                    {
+                     "npc":"string",
+                     "typeName":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":2392,
+                 "y":760
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -3036,7 +3057,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":1160,
+ "nextobjectid":1161,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.1",
@@ -3147,7 +3168,7 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgmaterials.json"
         }, 
         {
-         "firstgid":4901,
+         "firstgid":4904,
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }],
  "tilewidth":8,

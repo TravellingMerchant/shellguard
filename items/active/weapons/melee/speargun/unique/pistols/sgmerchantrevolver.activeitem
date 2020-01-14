@@ -4,11 +4,11 @@
   "inventoryIcon" : "sgmerchantrevolver.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A break action three shot explosive flak revolver with a five step combo.",
+  "description" : "A Big Iron modified into a break action three shot explosive flak revolver with a five step combo.",
   "shortdescription" : "Merchant Custom",
   "level" : 6,
   "tooltipKind" : "base",
-  "category" : "uniqueWeapon",
+  "category" : "Combo Pistol",
   "itemTags" : ["weapon","ranged","spear","speargun","gunspear", "upgradeableWeapon"],
   "twoHanded" : false,
 
