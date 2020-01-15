@@ -7,7 +7,6 @@ function update()
   localAnimator.clearLightSources()
   
   self.sgchains = animationConfig.animationParameter("chains") or {}
-  sb.logInfo("%s",self.sgchains)
   for _, chain in pairs(self.sgchains) do
     local continue = false
     if chain.targetEntityId then
