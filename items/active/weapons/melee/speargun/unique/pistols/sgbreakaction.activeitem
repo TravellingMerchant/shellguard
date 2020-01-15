@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "description" : "A wildly innacurate pistol that fires high velocity homing swarm rockets.",
-  "shortdescription" : "Gyro-Swarm Pistol",
+  "shortdescription" : "Volcano Pistol",
   "level" : 6,
   "tooltipKind" : "base",
   "category" : "Combo Pistol",
@@ -53,7 +53,7 @@
         "allowFlip" : true
       },
       "fire1" : {
-        "duration" : 0.2,
+        "duration" : 0.4,
         "armRotation" : 0,
         "weaponRotation" : 0,
         "twoHanded" : false,
@@ -75,12 +75,12 @@
 					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
-					"projectile" : "sgswarmrocket",
-					"projectileCount" : 2,
+					"projectile" : "crabcanoball",
+					"projectileCount" : 1,
 					"projectileDamage" : 7,
 					"projectileParameters" : {
 						"knockback" : 10,
-						"speed" : 90
+						"speed" : 70
 					},
 					"projectileInaccuracy" : 0,
 					"projectileAimAngleOffset" : 0,
@@ -89,7 +89,7 @@
       },
 
       "fire2" : {
-        "duration" : 0.2,
+        "duration" : 0.4,
         "armRotation" : 0,
         "weaponRotation" : 0,
         "twoHanded" : false,
@@ -111,12 +111,12 @@
 					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
-					"projectile" : "sgswarmrocket",
-					"projectileCount" : 2,
+					"projectile" : "crabcanoball",
+					"projectileCount" : 1,
 					"projectileDamage" : 7,
 					"projectileParameters" : {
 						"knockback" : 10,
-						"speed" : 90
+						"speed" : 70
 					},
 					"projectileInaccuracy" : 0.01,
 					"projectileAimAngleOffset" : 0,
@@ -125,7 +125,7 @@
       },
 
       "fire3" : {
-        "duration" : 0.2,
+        "duration" : 0.4,
         "armRotation" : 0,
         "weaponRotation" : 0,
         "twoHanded" : false,
@@ -147,12 +147,12 @@
 					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
-					"projectile" : "sgswarmrocket",
-					"projectileCount" : 2,
+					"projectile" : "crabcanoball",
+					"projectileCount" : 1,
 					"projectileDamage" : 7,
 					"projectileParameters" : {
 						"knockback" : 10,
-						"speed" : 90
+						"speed" : 70
 					},
 					"projectileInaccuracy" : 0.01,
 					"projectileAimAngleOffset" : 0,
@@ -161,7 +161,7 @@
       },
 
       "fire5" : {
-        "duration" : 0.2,
+        "duration" : 1,
         "armRotation" : 0,
         "weaponRotation" : 0,
         "twoHanded" : false,
@@ -184,14 +184,14 @@
 					"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
-					"projectile" : "sgswarmrocket",
-					"projectileCount" : 6,
-					"projectileDamage" : 7,
+					"projectile" : "crabcanoball",
+					"projectileCount" : 4,
+					"projectileDamage" : 4,
 					"projectileParameters" : {
 						"knockback" : 10,
-						"speed" : 90
+						"speed" : 50
 					},
-					"projectileInaccuracy" : 0.04,
+					"projectileInaccuracy" : 0.2,
 					"projectileAimAngleOffset" : 0,
           "projectileFirePoint" : [2.375, 0.375]
 				}

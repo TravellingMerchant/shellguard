@@ -16,7 +16,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":36,
+ "tilecount":39,
  "tiledversion":"1.3.1",
  "tileheight":400,
  "tileproperties":
@@ -319,6 +319,36 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"sgalienweedssmall",
+         "tilesetDirection":"right"
+        },
+     "36":
+        {
+         "\/\/description":"sgshellguardbanner",
+         "\/\/name":"sgshellguardbanner",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-17",
+         "imagePositionY":"-40",
+         "object":"sgshellguardbanner",
+         "tilesetDirection":"right"
+        },
+     "37":
+        {
+         "\/\/description":"sgshellguardbanner",
+         "\/\/name":"sgshellguardbanner",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-17",
+         "imagePositionY":"-40",
+         "object":"sgshellguardbanner2",
+         "tilesetDirection":"right"
+        },
+     "38":
+        {
+         "\/\/description":"sgshellguardbanner",
+         "\/\/name":"sgshellguardbanner",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-17",
+         "imagePositionY":"-40",
+         "object":"sgshellguardbanner3",
          "tilesetDirection":"right"
         },
      "4":
@@ -684,6 +714,36 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "36":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "37":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "38":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "4":
         {
          "\/\/description":"string",
@@ -926,6 +986,24 @@
          "image":"..\/..\/objects\/alien\/sgalienweedssmall\/hivelampicon.png",
          "imageheight":32,
          "imagewidth":16
+        },
+     "36":
+        {
+         "image":"..\/..\/objects\/decorations\/decorative\/sgshellguardbanner\/sgshellguardbanner.png",
+         "imageheight":80,
+         "imagewidth":34
+        },
+     "37":
+        {
+         "image":"..\/..\/objects\/decorations\/decorative\/sgshellguardbanner2\/sgshellguardbanner.png",
+         "imageheight":80,
+         "imagewidth":34
+        },
+     "38":
+        {
+         "image":"..\/..\/objects\/decorations\/decorative\/sgshellguardbanner3\/sgshellguardbanner.png",
+         "imageheight":80,
+         "imagewidth":34
         },
      "4":
         {

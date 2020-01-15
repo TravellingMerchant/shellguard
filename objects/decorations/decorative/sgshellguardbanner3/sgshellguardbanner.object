@@ -1,12 +1,12 @@
 {
-  "objectName" : "sgshellguardbanner",
+  "objectName" : "sgshellguardbanner3",
   "rarity" : "Legendary",
   "category" : "decorative",
-  "price" : 50,
+  "price" : 80,
   "printable" : false,
 
-  "description" : "A Shellguard wall banner.",
-  "shortdescription" : "Shellguard Wall Banner",
+  "description" : "A regal Shellguard wall banner.",
+  "shortdescription" : "Shellguard Regal Banner",
   "race" : "",
 
   "apexDescription" : "A red Shellguard banner. Wonderful.",

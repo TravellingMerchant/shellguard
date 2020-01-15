@@ -1,7 +1,7 @@
 {
   "type" : "sgbosswormcore",
-  "shortdescription" : "Vor'Kalis, Quantum Elder",
-  "description" : "Feral Elder Queen Skrymartha.",
+  "shortdescription" : "Quantum Elder: Vor'Kalis",
+  "description" : "Quantum Elder: Vor'Kalis",
   "Persistent" : true, 
 
   "categories" : [ "sgbosswormcore" ],
