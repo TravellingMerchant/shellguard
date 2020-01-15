@@ -24,6 +24,7 @@ function init(...)
 	monsterParams.damageTeamType = entity.damageTeam().type
 	monsterParams.damageTeam = entity.damageTeam().team
 	self.delaySpawn = config.getParameter("delaySegmentSpawnUntilAggro",false)
+	self.wormAggroLOS = config.getParameter("wormAggroLineOfSight",false)
 
     if not status.statusProperty("tailSpawned", false) and not self.delaySpawn then
 		for i = 1,config.getParameter("tailCount",1) do
@@ -111,7 +112,9 @@ function update(dt,...)
             return world.magnitude(world.entityPosition(a), mcontroller.position()) < world.magnitude(world.entityPosition(b), mcontroller.position())
         end)
         for _,entityId in pairs(newTargets) do
-                table.insert(self.targets, entityId)
+            if not self.wormAggroLOS or entity.entityInSight(entityId) then
+				table.insert(self.targets, entityId)
+			end
         end
     end
 

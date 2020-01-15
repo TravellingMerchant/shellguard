@@ -18,7 +18,7 @@
     ],
 
 	"animationScripts" : [
-      "/items/active/effects/chain.lua"
+      "/items/active/effects/sglocalanimator.lua"
     ],
     "chainOffset" : -1,
     "chains" :  {
