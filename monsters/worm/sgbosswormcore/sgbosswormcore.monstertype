@@ -19,7 +19,7 @@
     ],
 	
     "chainOffset" : 0,
-	"childCount" : 10,
+	"childCount" : 6,
 	"segmentOffset" : 4.25,
 	"orbitDistance" : 3,
 	"requireTerrain" : false,
@@ -79,7 +79,7 @@
             "requireLineOfSight" : true,
             "maximumRange" : 25,
             "minimumRange" : 10,
-            "windupStopForce" : 0,
+            "windupStopForce" : 100,
             "faceTarget" : true,
             "rotateToTarget" : true,
 			"holdAim" : false,
@@ -111,7 +111,7 @@
             "requireLineOfSight" : true,
             "maximumRange" : 25,
             "minimumRange" : 10,
-            "windupStopForce" : 0,
+            "windupStopForce" : 100,
             "faceTarget" : true,
             "rotateToTarget" : true,
 			"holdAim" : false,
@@ -143,7 +143,7 @@
             "requireLineOfSight" : false,
             "maximumRange" : 25,
             "minimumRange" : 10,
-            "windupStopForce" : 0,
+            "windupStopForce" : 100,
             "faceTarget" : false,
             "rotateToTarget" : true,
             "windupState" : "idle",
@@ -171,7 +171,7 @@
             "requireLineOfSight" : true,
             "maximumRange" : 25,
             "minimumRange" : 10,
-            "windupStopForce" : 0,
+            "windupStopForce" : 100,
             "faceTarget" : false,
             "rotateToTarget" : true,
             "windupState" : "idle",
@@ -305,7 +305,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 2000
+          "baseValue" : 700
         },
         "protection" : {
           "baseValue" : 0.0
