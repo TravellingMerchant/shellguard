@@ -41,7 +41,7 @@
 	
 	"mainGun" : {
       "offset" : [0.0, 0.0],
-      "projectileType" : "delayedplasmaball",
+      "projectileType" : "sgdelayedplasma",
 	  "power" : 10,
       "count" : 3,
       "fireCooldown" : 5,
