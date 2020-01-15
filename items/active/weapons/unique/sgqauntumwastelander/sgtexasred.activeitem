@@ -7,7 +7,7 @@
 	"description" : "A very old SG rifle adorned with alien technology. Shift + Mouse2 to swap modes.",
 	"shortdescription" : "Qauntum Wastelander",
 	//"tooltipKind" : "sword",
-	"category" : "SG SPEC-OPS",
+	"category" : "Unique Weapon",
 	"twoHanded" : true,
 	"itemTags" : ["weapon","melee","gunblade","upgradeableWeapon"],
 
@@ -386,7 +386,7 @@
 			"blade" : "sgtexasredt8.png",
 			"bladeFullbright" : "sgtexasredt8fullbright.png"
 		},
-		"shortdescription" : "Texas Red Custom ^yellow;^reset;",
-		"description" : "Amped up by a vicious SPEC-OPS member, this gunblade invites death to dance."
+		"shortdescription" : "Qauntum Wastelander ^yellow;^reset;",
+		"description" : "A very old SG rifle adorned with alien technology. Shift + Mouse2 to swap modes."
 	}
 }
