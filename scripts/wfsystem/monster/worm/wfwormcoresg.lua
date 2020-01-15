@@ -23,8 +23,9 @@ function init(...)
     monsterParams.level = monster.level()
 	monsterParams.damageTeamType = entity.damageTeam().type
 	monsterParams.damageTeam = entity.damageTeam().team
+	self.delaySpawn = config.getParameter("delaySegmentSpawnUntilAggro",false)
 
-    if not status.statusProperty("tailSpawned", false) then
+    if not status.statusProperty("tailSpawned", false) and not self.delaySpawn then
 		for i = 1,config.getParameter("tailCount",1) do
 			monsterParams.spawnOffset = {math.random()-0.5,math.random()-0.5}
 			self.childID = world.spawnMonster(monsterParams.wormHeadName, vec2.add(mcontroller.position(), monsterParams.spawnOffset), monsterParams)
@@ -65,6 +66,13 @@ end
 
 local wfancientwormhead_update = update
 function update(dt,...)
+	if self.delaySpawn and (self.target or self.board:getEntity("target")) not status.statusProperty("tailSpawned", false) then
+		for i = 1,config.getParameter("tailCount",1) do
+			monsterParams.spawnOffset = {math.random()-0.5,math.random()-0.5}
+			self.childID = world.spawnMonster(monsterParams.wormHeadName, vec2.add(mcontroller.position(), monsterParams.spawnOffset), monsterParams)
+		end
+		status.setStatusProperty("tailSpawned", true)
+    end
     if self.requireTerrain then
 		if world.pointTileCollision(mcontroller.position(),{"Block","Slippery"}) then
 			self.inGround = true
@@ -79,7 +87,7 @@ function update(dt,...)
 		end
 	end
     -- query for new targets if there are none
-    if #self.targets == 0 then
+    if #self.targets == 0 and not self.ignoreApproach then
         self.approachAngle = math.random() * math.pi * 2
         local newTargets = world.entityQuery(mcontroller.position(), self.queryRange, {includedTypes = self.queryTypes})
         table.sort(newTargets, function(a, b)
