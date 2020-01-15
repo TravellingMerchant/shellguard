@@ -27,6 +27,7 @@
   "wormBodyName" : "sgalienwormbody",
   "wormTailName" : "sgalienwormtail",
 	"ignoreApproach" : true,
+	"delaySegmentSpawnUntilAggro" : true,
     "behavior" : "monster",
     "deathBehavior" : "monster-death",
 
