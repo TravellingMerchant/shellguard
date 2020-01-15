@@ -4,8 +4,8 @@
   "inventoryIcon" : "icon.png",
   "rarity" : "legendary",
   "category" : "enviroProtectionPack",
-  "description" : "Crouch to fire a burst of missiles at enemies from this back mounted launcher.",
-  "shortdescription" : "Missile Backpack",
+  "description" : "How did you get this?",
+  "shortdescription" : "Cleaver Backpack",
   "tooltipKind" : "baseaugment",
 
   "maleFrames" : "back.png",

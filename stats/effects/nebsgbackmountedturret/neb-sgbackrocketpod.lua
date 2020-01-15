@@ -41,11 +41,11 @@ function update(dt)
 	self.crouchCorrected = false
   end
   --Flip offset correction
-  self.muzzleOffset[1] = -(math.abs(self.muzzleOffset[1]) * mcontroller.facingDirection())
+  self.usedMuzzleOffset = {((self.muzzleOffset[1]) * mcontroller.facingDirection()),self.muzzleOffset[2]}
   
   --Flip sprite when play flips
   if mcontroller.facingDirection() < 0 then animator.setGlobalTag("facingDirection", "flipx") else animator.setGlobalTag("facingDirection", "") end
-  animator.translateTransformationGroup("turret", self.muzzleOffset)
+  animator.translateTransformationGroup("turret", self.usedMuzzleOffset)
   
   --Code for crouch only mechanics
   if not mcontroller.crouching() and self.crouchOnly then
@@ -89,30 +89,30 @@ function update(dt)
 	end
   end  
   if (self.currentTarget and world.entityExists(self.currentTarget) or false) then
-    self.targetAngle = vec2.angle(world.distance(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.muzzleOffset)))
-	if (mcontroller.facingDirection() > 0 and (self.targetAngle >= (math.pi/2)) and not (self.targetAngle <= (math.pi/2)) or (self.targetAngle >= (math.pi/2)) and not (self.targetAngle <= (math.pi/2)))
-	  or (mcontroller.facingDirection() > 0 and (self.targetAngle >= (math.pi*1.5)) and not (self.targetAngle <= (math.pi*1.5)) or (self.targetAngle <= (math.pi*1.5)) and not (self.targetAngle >= (math.pi*1.5))) then
+    self.targetAngle = vec2.angle(world.distance(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.usedMuzzleOffset)))
+	if (mcontroller.facingDirection() < 0 and self.targetAngle >= (math.pi/2) and self.targetAngle < (math.pi*1.5))
+	  or (mcontroller.facingDirection() > 0 and (self.targetAngle >= (math.pi*1.5) or self.targetAngle < (math.pi/2))) then
 
 	  if (mcontroller.facingDirection() < 0 and (self.targetAngle <= (-math.pi/2) or self.targetAngle >= (math.pi/2))) then
 	    animator.setGlobalTag("facingDirection", "flipy")
 	  end
-      animator.rotateTransformationGroup("turret", vec2.angle(world.distance(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.muzzleOffset))), self.muzzleOffset)
+      animator.rotateTransformationGroup("turret", vec2.angle(world.distance(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.usedMuzzleOffset))), self.usedMuzzleOffset)
       self.canFire = true
     else
       self.canFire = false
     end
   
     world.debugLine(firePosition(), vec2.add(firePosition(), vec2.mul(vec2.norm(aimVector()), 3)), "green")
-    world.debugText("Target is at this angle: " .. vec2.angle(world.distance(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.muzzleOffset))), vec2.add(mcontroller.position(), {0,3}), "red")
+    world.debugText("Target is at this angle: " .. vec2.angle(world.distance(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.usedMuzzleOffset))), vec2.add(mcontroller.position(), {0,3}), "red")
   else
-    animator.rotateTransformationGroup("turret", 0, self.muzzleOffset)
+    animator.rotateTransformationGroup("turret", 0, self.usedMuzzleOffset)
   end
   
   --Debug stuffs
   debugQuery()
   world.debugText("Cooldown ready in " .. self.cooldownTimer, mcontroller.position(), "red")
   world.debugText("Active: " .. sb.printJson(self.active), vec2.add(mcontroller.position(), {0,1}), "red")
-  world.debugText("Enemy is a " .. (self.currentTarget and world.entityTypeName(self.currentTarget) or "currently unknown, searching..."), vec2.add(mcontroller.position(), {0,2}), "red")
+  world.debugText("Target: " .. (self.currentTarget and world.entityTypeName(self.currentTarget) or "currently unknown, searching..."), vec2.add(mcontroller.position(), {0,2}), "red")
   world.debugText("Shots remaining: " .. self.shots, vec2.add(mcontroller.position(), {0,4}), "red")
   world.debugPoint(firePosition(), "red")
 end
@@ -137,7 +137,7 @@ function fireProjectile(projectileType, projectileParams, inaccuracy, firePositi
 
     projectileId = world.spawnProjectile(
       projectileType,
-      vec2.add(mcontroller.position(), self.muzzleOffset) or firePosition(),
+      vec2.add(mcontroller.position(), self.usedMuzzleOffset) or firePosition(),
       entity.id(),
       aimVector(inaccuracy or self.inaccuracy),
       false,
@@ -157,11 +157,11 @@ function debugQuery()
 end
 
 function firePosition()
-  return vec2.add(mcontroller.position(), self.muzzleOffset)
+  return vec2.add(mcontroller.position(), self.usedMuzzleOffset)
 end
 
 function aimVector(inaccuracy)
-  local aimVector = vec2.rotate({1, 0}, vec2.angle(vec2.sub(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.muzzleOffset))) + sb.nrand(inaccuracy, 0))
+  local aimVector = vec2.rotate({1, 0}, vec2.angle(vec2.sub(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.usedMuzzleOffset))) + sb.nrand(inaccuracy, 0))
   aimVector[1] = aimVector[1] * util.toDirection(self.currentTarget)
   return aimVector
 end

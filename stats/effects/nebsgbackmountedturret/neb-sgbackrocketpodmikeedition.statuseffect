@@ -1,10 +1,10 @@
 {
-  "name" : "neb-sgbackrocketpodmikeedition.",
+  "name" : "neb-sgbackrocketpodmikeedition",
   "effectConfig" : {
     //General Config
     "crouchOnly" : true,						//Activates the drone only when crouching
-    "searchRadius" : 20,						//Radius to search around the player
-	"muzzleOffset" : [-1.5,0],
+    "searchRadius" : 80,						//Radius to search around the player
+	"muzzleOffset" : [4,0],
 	
     //Firing Config
     "burstTime" : 0.0,							//Time between shots in a burst but is ignored if burstCount is 1
@@ -14,6 +14,7 @@
 	"inaccuracy" : 0.3,
 	"projectileType" : "sgruincleavershotship",
     "projectileParameters" : {
+		"speed" : 50
     }
   },
   "defaultDuration" : 0.5,
