@@ -88,10 +88,11 @@ function update(dt)
       self.firing = true
 	end
   end  
-  
   if (self.currentTarget and world.entityExists(self.currentTarget) or false) then
     self.targetAngle = vec2.angle(world.distance(world.entityPosition(self.currentTarget), vec2.add(mcontroller.position(), self.muzzleOffset)))
-    if (mcontroller.facingDirection() > 0 and self.targetAngle <= (math.pi/2) and self.targetAngle >= (-math.pi/2)) or (mcontroller.facingDirection() < 0 and (self.targetAngle <= (-math.pi/2) or self.targetAngle >= (math.pi/2))) then
+	if (mcontroller.facingDirection() > 0 and (self.targetAngle >= (math.pi/2)) and not (self.targetAngle <= (math.pi/2)) or (self.targetAngle >= (math.pi/2)) and not (self.targetAngle <= (math.pi/2)))
+	  or (mcontroller.facingDirection() > 0 and (self.targetAngle >= (math.pi*1.5)) and not (self.targetAngle <= (math.pi*1.5)) or (self.targetAngle <= (math.pi*1.5)) and not (self.targetAngle >= (math.pi*1.5))) then
+
 	  if (mcontroller.facingDirection() < 0 and (self.targetAngle <= (-math.pi/2) or self.targetAngle >= (math.pi/2))) then
 	    animator.setGlobalTag("facingDirection", "flipy")
 	  end
