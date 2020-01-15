@@ -451,7 +451,8 @@
   "sgmerchantjacket" : [
     [1, {
       "fill" : [
-        {"item" : [ "sgmerchantjacket", 1]}
+        {"item" : [ "sgmerchantjacket", 1]},
+        {"item" : [ "sgtea", 1]}
       ]
     }]
   ],

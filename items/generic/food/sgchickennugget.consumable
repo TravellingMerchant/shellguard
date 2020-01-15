@@ -1,0 +1,32 @@
+{
+  "itemName" : "sgchickennugget",
+  "rarity" : "Common",
+  "price" : 350,
+  "category" : "preparedFood",
+  "inventoryIcon" : "sgchickennugget.png",
+  "description" : "A suspiciously large chicken nugget. This must be from a much larger bird..",
+  "shortdescription" : "Suspicious Chicken Nugget",
+  "effects" : [ [
+    {
+        "effect" : "maxenergyscalingboostfood",
+        "duration" : 360
+    },
+    {
+        "effect" : "maxhealthscalingboostfood",
+        "duration" : 200
+    },
+    {
+        "effect" : "maxhealthscalingboostfood",
+        "duration" : 200
+    }
+  ] ],
+  "foodValue" : 40,
+  "tooltipKind" : "food",
+  "builder" : "/items/buildscripts/buildfood.lua",
+  "maxStack" : 100,
+  "itemAgingScripts" : ["/scripts/items/rotting.lua"],
+  "rottingMultiplier" : 0.5,
+  "blockingEffects" : [
+    "wellfed"
+  ]
+}

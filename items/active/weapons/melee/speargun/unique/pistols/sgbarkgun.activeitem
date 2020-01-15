@@ -161,7 +161,7 @@
       },
 
       "fire5" : {
-        "duration" : 0.2,
+        "duration" : 1,
         "armRotation" : 0,
         "weaponRotation" : 0,
         "twoHanded" : false,
@@ -174,22 +174,21 @@
 				"gunShotConfig" : {
 					//General
 					"aimAtCursor" : false,
-					"fireTime" : 0.3, 			//If this exists it loops during the stance duration firing in intervals of this number
-					"energyUsage" : 10,
+					"fireTime" : 0.05, 			//If this exists it loops during the stance duration firing in intervals of this number
+					"energyUsage" : 3,
 					"fireSound" : "gunfire2",
 				
 					//Recoil
-					"recoilKnockbackVelocity" : 15,
-					"crouchStopsRecoil" : true,
-					"crouchRecoilKnockbackVelocity" : 1,
+					//"recoilKnockbackVelocity" : 15,
+					//"crouchStopsRecoil" : true,
+					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
-					"projectile" : "sgsupercooled",
-					"projectileCount" : 5,
+					"projectile" : "icethrower",
+					"projectileCount" : 1,
 					"projectileDamage" : 7,
 					"projectileParameters" : {
-						"knockback" : 10,
-						"speed" : 90
+						"knockback" : 3
 					},
 					"projectileInaccuracy" : 0.1,
 					"projectileAimAngleOffset" : 0,
