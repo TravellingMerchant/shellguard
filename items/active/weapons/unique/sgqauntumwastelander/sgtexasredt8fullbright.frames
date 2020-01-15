@@ -1,0 +1,24 @@
+{
+  "frameGrid" : {
+    "size" : [18,64],
+    "dimensions" : [17,1],
+    "names" : [
+      ["idleblade","active.1","active.2","active.3","active.4","transitiong.2","transitiong.3","transitiong.4","transitiong.5","transitiong.6","idlegun","charge.1","charge.2","charge.3", "fullcharge.1", "fullcharge.2", "gunfire.1"]
+    ]
+  },
+  "aliases" : {
+    "transitiong.1" : "idleblade",
+	"transitiong.7" : "idlegun",
+	"transitionb.1" : "transitiong.7",
+	"transitionb.2" : "transitiong.6",
+	"transitionb.3" : "transitiong.5",
+	"transitionb.4" : "transitiong.4",
+	"transitionb.5" : "transitiong.3",
+	"transitionb.6" : "transitiong.2",
+	"transitionb.7" : "transitiong.1",
+	"retract.1" : "active.4",
+	"retract.2" : "active.3",
+	"retract.3" : "active.2",
+	"retract.4" : "active.1"
+  }
+}

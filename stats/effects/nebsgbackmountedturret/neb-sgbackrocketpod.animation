@@ -16,7 +16,7 @@
           },
           "fired" : {
             "frames" : 1,
-            "cycle" : 0.1,
+            "cycle" : 1,
             "mode" : "transition",
             "transition" : "reloading"
           },
@@ -33,8 +33,8 @@
         "states" : {
           "off" : {},
           "fire" : {
-            "frames" : 2,
-            "cycle" : 0.07,
+            "frames" : 1,
+            "cycle" : 1,
             "mode" : "transition",
             "transition" : "off"
           }
