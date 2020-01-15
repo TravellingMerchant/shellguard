@@ -24,8 +24,5 @@
   ],
   "scriptDelta" : 1,
 
-  "animationConfig" : "neb-sgbackrocketpodmikeedition.animation",
-  
-  "label" : "Back-mounted Missile Pod",
-  "icon" : "/interface/statuses/idfk.png"
+  "animationConfig" : "neb-sgbackrocketpodmikeedition.animation"
 }
