@@ -11,7 +11,7 @@
     "burstCount" : 1,							//The amount of shots in a burst
 	"fireTime" : 1,								//Time between bursts
 	"baseDps" : 7.2,
-	"inaccuracy" : 0.3,
+	"inaccuracy" : 0,
 	"projectileType" : "sgruincleavershotship",
     "projectileParameters" : {
 		"speed" : 50
