@@ -27,7 +27,7 @@
       "fire3" : [ "/sfx/monsters/boss/survivorpainblank.ogg" ],
       "fire4" : [ "/sfx/gun/sgpistolreload.ogg" ],
       "gunfire" : [ "/sfx/gun/railshots/sgheavyrevolvershot3.ogg" ],
-      "gunfire2" : [ "/sfx/gun/railshots/sgheavyrevolvershot5.ogg" ]
+      "gunfire2" : [ "/sfx/gun/fireblast.ogg" ]
     }
   },
 
@@ -186,7 +186,7 @@
 					//Projectile
 					"projectile" : "icethrower",
 					"projectileCount" : 1,
-					"projectileDamage" : 7,
+					"projectileDamage" : 2,
 					"projectileParameters" : {
 						"knockback" : 3
 					},
