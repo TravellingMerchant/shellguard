@@ -479,7 +479,7 @@
 			"fire9" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
 			"fire10" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
 			"gunfire" : [ "/sfx/gun/ShellRifleFire.ogg" ],
-			"gunfire2" : [ "/sfx/gun/ShellRifleFire.ogg" ],
+			"gunfire2" : [ "/sfx/gun/alien/sgalienflame2.ogg" ],
 			"swap" : [ "/sfx/melee/sgtexasredswap.ogg" ],
 			"flipSlash" : [ "/sfx/melee/laser_flip_slash.ogg" ]
 		}

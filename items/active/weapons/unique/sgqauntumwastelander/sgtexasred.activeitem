@@ -1,11 +1,11 @@
 {
-	"itemName" : "sgqauntumwastelander",
+	"itemName" : "sgquantumwastelander",
 	"price" : 15000,
 	"level" : 6,
 	"maxStack" : 1,
 	"rarity" : "legendary",
 	"description" : "A very old SG rifle adorned with alien technology. Shift + Mouse2 to swap modes.",
-	"shortdescription" : "Qauntum Wastelander",
+	"shortdescription" : "Quantum Wastelander",
 	//"tooltipKind" : "sword",
 	"category" : "Unique Weapon",
 	"twoHanded" : true,
@@ -109,9 +109,11 @@
 			{
 				"time" : 0,
 				"energyCost" : 15,
-				"cooldown" : 0.1,
+				"cooldown" : 0.2,
 				"projectileType" : "tempbullet",
-				"projectileParameters" : {},
+				"projectileParameters" : {
+				"speed": 120
+				},
 				"projectileCount" : 1,
 				"inaccuracy" : 0.02,
 				"baseDamage" : 4,
@@ -122,22 +124,22 @@
 				"time" : 0.33,
 				"energyCost" : 17.5,
 				"cooldown" : 0.3,
-				"projectileType" : "tempbullet",
+				"projectileType" : "sgdelayedplasma",
 				"projectileParameters" : {},
 				"projectileCount" : 1,
-				"inaccuracy" : 0.02,
-				"baseDamage" : 4,
+				"inaccuracy" : 0.1,
+				"baseDamage" : 3,
 				"fireType" : "burst",
-				"burstTime" : 0.15,
-				"burstCount" : 5,
+				"burstTime" : 0.08,
+				"burstCount" : 10,
 				"fireSound" : "gunfire"
 			},
 			{
 				"time" : 1.1,
 				"energyCost" : 90,
 				"cooldown" : 0.5,
-				"projectileType" : "sgchargebounce",
-				"projectileParameters" : {"speed":250,"bounces":7},
+				"projectileType" : "sgufoshockbombhomingalien",
+				"projectileParameters" : {"speed":50,"bounces":7},
 				"projectileCount" : 1,
 				"inaccuracy" : 0,
 				"baseDamage" : 9,
@@ -152,8 +154,8 @@
 				"time" : 3.5,
 				"energyCost" : 300,
 				"cooldown" : 0.5,
-				"projectileType" : "sgchargebounce",
-				"projectileParameters" : {"speed":250,"bounces":4},
+				"projectileType" : "sgufoshockbombhomingalien",
+				"projectileParameters" : {"speed":50,"bounces":7},
 				"projectileCount" : 4,
 				"inaccuracy" : 0.05,
 				"baseDamage" : 13,
@@ -386,7 +388,7 @@
 			"blade" : "sgtexasredt8.png",
 			"bladeFullbright" : "sgtexasredt8fullbright.png"
 		},
-		"shortdescription" : "Qauntum Wastelander ^yellow;^reset;",
+		"shortdescription" : "Quantum Wastelander ^yellow;^reset;",
 		"description" : "A very old SG rifle adorned with alien technology. Shift + Mouse2 to swap modes."
 	}
 }
