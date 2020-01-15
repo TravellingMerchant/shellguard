@@ -67,6 +67,23 @@ end
 local wfancientwormhead_update = update
 function update(dt,...)
 	if self.delaySpawn and (self.target or self.board:getEntity("target")) and not status.statusProperty("tailSpawned", false) then
+		local monsterParams = {}
+		monsterParams.childCount = config.getParameter("childCount",10)
+		monsterParams.parentID = entity.id()
+		monsterParams.coreID = entity.id()
+		monsterParams.offset = config.getParameter("segmentOffset",4)
+		monsterParams.wormHeadName = config.getParameter("wormHeadName","wfancientwormhead")
+		monsterParams.wormBodyName = config.getParameter("wormBodyName","wfancientwormbody")
+		monsterParams.wormTailName = config.getParameter("wormTailName","wfancientwormtail")
+		monsterParams.forceChildrenLua = config.getParameter("forceChildrenLua",false)
+		if monsterParams.forceChildrenLua then
+			monsterParams.scripts = {"/monsters/monster.lua","/scripts/wfsystem/monster/worm/wfwormbody.lua"}
+			monsterParams.movementSettings = {collisionEnabled=false,gravityEnabled=false}
+			monsterParams.statusSettings = {stats={maxHealth={baseValue=10000},healthRegen={baseValue=10000}}}
+		end
+		monsterParams.level = monster.level()
+		monsterParams.damageTeamType = entity.damageTeam().type
+		monsterParams.damageTeam = entity.damageTeam().team
 		for i = 1,config.getParameter("tailCount",1) do
 			monsterParams.spawnOffset = {math.random()-0.5,math.random()-0.5}
 			self.childID = world.spawnMonster(monsterParams.wormHeadName, vec2.add(mcontroller.position(), monsterParams.spawnOffset), monsterParams)
