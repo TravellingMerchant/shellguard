@@ -66,7 +66,7 @@ end
 
 local wfancientwormhead_update = update
 function update(dt,...)
-	if self.delaySpawn and (self.target or self.board:getEntity("target")) not status.statusProperty("tailSpawned", false) then
+	if self.delaySpawn and (self.target or self.board:getEntity("target")) and not status.statusProperty("tailSpawned", false) then
 		for i = 1,config.getParameter("tailCount",1) do
 			monsterParams.spawnOffset = {math.random()-0.5,math.random()-0.5}
 			self.childID = world.spawnMonster(monsterParams.wormHeadName, vec2.add(mcontroller.position(), monsterParams.spawnOffset), monsterParams)
