@@ -278,6 +278,13 @@
   
 //-------- elevator --------  
 
+  "elevatorsurvivalnugget" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "This room was built by a new sponser. The number one bird-based fast food chain in the immediate area."
+  },
+
   "elevatorsurvival1" : {
     "type" : "mission",
     "senderName" : "SG-F0RTR355",

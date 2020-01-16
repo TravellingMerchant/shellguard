@@ -3,7 +3,7 @@
   "fixedLevel" : false,
   "price" : 8000,
   "maxStack" : 1,
-  "rarity" : "Uncommon",
+  "rarity" : "Legendary",
   "category" : "shield",
   "description" : "An alien shield that shares a striking resembalance to Shellguards energy.",
   "shortdescription" : "Energy Barrier",

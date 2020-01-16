@@ -511,6 +511,14 @@
       ]
     }]
   ],
+
+  "sgchickennugget" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgchickennugget", 1]}
+      ]
+    }]
+  ],
   
   "shellbehat" : [
     [1, {
