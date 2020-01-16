@@ -1,11 +1,11 @@
 {
-  "itemName" : "sgdartpistol",
-  "price" : 150,
-  "inventoryIcon" : "sgdartpistol.png:closed.1",
+  "itemName" : "sgmerchantrevolvertoy",
+  "price" : 400,
+  "inventoryIcon" : "sgmerchantrevolvertoy.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "Careful, don't shoot at peoples eyes!",
-  "shortdescription" : "Toy Dart Gun",
+  "description" : "A break action toy revolver with a five step combo. Love and Peace!",
+  "shortdescription" : "Toy Revolver",
   "level" : 6,
   "tooltipKind" : "base",
   "category" : "Combo Pistol",
@@ -14,8 +14,8 @@
 
   "animation" : "/items/active/weapons/melee/speargun/sgbayonetpistol.animation",
   "animationParts" : {
-    "blade" : "sgdartpistol.png",
-    "bladefullbright" : "sgdartpistolfullbright.png",
+    "blade" : "sgmerchantrevolvertoy.png",
+    "bladefullbright" : "sgmerchantrevolvertoyfullbright.png",
     "handle" : "",
     "handlefullbright" : "",
     "muzzleFlash" : ""
@@ -26,8 +26,8 @@
       "fire2" : [ "/sfx/monsters/boss/survivorpainblank.ogg" ],
       "fire3" : [ "/sfx/monsters/boss/survivorpainblank.ogg" ],
       "fire4" : [ "/sfx/gun/sgtoygunreload.ogg" ],
-      "gunfire" : [ "/sfx/gun/railshots/sgtoydart.ogg" ],
-      "gunfire2" : [ "/sfx/gun/railshots/sgtoydar2.ogg"  ]
+      "gunfire" : [ "/sfx/gun/railshots/sgtoydar2.ogg" ],
+      "gunfire2" : [ "/sfx/gun/railshots/sgtoydart.ogg" ]
     }
   },
 
@@ -42,9 +42,6 @@
 
   "primaryAbilityType" : "sgbayonetpistolcombo",
   "primaryAbility" : {
-  
-    "baseDps" : 0,
-
 	"stances" : {
       "idle" : {
         "aimAngle" : 0,
@@ -69,24 +66,25 @@
 				"gunShotConfig" : {
 					//General
 					"aimAtCursor" : false,
-					"energyUsage" : 25,
+					"energyUsage" : 17,
 					"fireSound" : "gunfire",
 				
 					//Recoil
-					//"recoilKnockbackVelocity" : 0,
+					//"recoilKnockbackVelocity" : 3,
 					//"crouchStopsRecoil" : true,
-					//"crouchRecoilKnockbackVelocity" : 0,
+					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
 					"projectile" : "sgtoydart",
 					"projectileCount" : 1,
 					"projectileDamage" : 0,
 					"projectileParameters" : {
-						"knockback" : 22
+						"knockback" : 35,
+						"speed" : 100
 					},
 					"projectileInaccuracy" : 0.01,
 					"projectileAimAngleOffset" : 0,
-          "projectileFirePoint" : [2.125, 0.5]
+          "projectileFirePoint" : [2.375, 0.375]
 				}
       },
 
@@ -104,24 +102,25 @@
 				"gunShotConfig" : {
 					//General
 					"aimAtCursor" : false,
-					"energyUsage" : 25,
+					"energyUsage" : 17,
 					"fireSound" : "gunfire",
 				
 					//Recoil
-					//"recoilKnockbackVelocity" : 0,
+					//"recoilKnockbackVelocity" : 3,
 					//"crouchStopsRecoil" : true,
-					//"crouchRecoilKnockbackVelocity" : 0,
+					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
 					"projectile" : "sgtoydart",
 					"projectileCount" : 1,
 					"projectileDamage" : 0,
 					"projectileParameters" : {
-						"knockback" : 22
+						"knockback" : 25,
+						"speed" : 100
 					},
 					"projectileInaccuracy" : 0.01,
 					"projectileAimAngleOffset" : 0,
-          "projectileFirePoint" : [2.125, 0.5]
+          "projectileFirePoint" : [2.375, 0.375]
 				}
       },
 
@@ -139,24 +138,25 @@
 				"gunShotConfig" : {
 					//General
 					"aimAtCursor" : false,
-					"energyUsage" : 25,
+					"energyUsage" : 17,
 					"fireSound" : "gunfire",
 				
 					//Recoil
-					//"recoilKnockbackVelocity" : 0,
+					//"recoilKnockbackVelocity" : 3,
 					//"crouchStopsRecoil" : true,
-					//"crouchRecoilKnockbackVelocity" : 0,
+					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
 					"projectile" : "sgtoydart",
 					"projectileCount" : 1,
 					"projectileDamage" : 0,
 					"projectileParameters" : {
-						"knockback" : 22
+						"knockback" : 25,
+						"speed" : 100
 					},
 					"projectileInaccuracy" : 0.01,
 					"projectileAimAngleOffset" : 0,
-          "projectileFirePoint" : [2.125, 0.5]
+          "projectileFirePoint" : [2.375, 0.375]
 				}
       },
 
@@ -174,24 +174,26 @@
 				"gunShotConfig" : {
 					//General
 					"aimAtCursor" : false,
-					"energyUsage" : 25,
+					"fireTime" : 0.08, 			//If this exists it loops during the stance duration firing in intervals of this number
+					"energyUsage" : 10,
 					"fireSound" : "gunfire2",
 				
 					//Recoil
-					//"recoilKnockbackVelocity" : 0,
-					//"crouchStopsRecoil" : true,
-					//"crouchRecoilKnockbackVelocity" : 0,
+					"recoilKnockbackVelocity" : 15,
+					"crouchStopsRecoil" : true,
+					"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
 					"projectile" : "sgtoydart",
-					"projectileCount" : 3,
+					"projectileCount" : 1,
 					"projectileDamage" : 0,
 					"projectileParameters" : {
-						"knockback" : 30
+						"knockback" : 25,
+						"speed" : 100
 					},
-					"projectileInaccuracy" : 0.1,
+					"projectileInaccuracy" : 0.04,
 					"projectileAimAngleOffset" : 0,
-          "projectileFirePoint" : [2.125, 0.5]
+          "projectileFirePoint" : [2.375, 0.375]
 				}
       }
 
@@ -200,6 +202,6 @@
 
   "builder" : "/items/buildscripts/buildweapon.lua",
   "upgradeParameters" : {
-    "shortdescription" : "Toy Dart Gun ^yellow;^reset;"
+    "shortdescription" : "Merchant Custom ^yellow;^reset;"
   }
 }

@@ -437,6 +437,13 @@
     }]
   ],
 
+  "sgquantumwastelander" : [
+    [1, {
+      "pool" : [
+        {"weight" : 1, "item" : "sgquantumwastelander"}
+      ]
+    }]
+  ],
 
 //-----------misc---------------------
 

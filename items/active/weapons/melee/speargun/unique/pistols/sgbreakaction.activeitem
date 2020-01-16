@@ -202,6 +202,6 @@
 
   "builder" : "/items/buildscripts/buildweapon.lua",
   "upgradeParameters" : {
-    "shortdescription" : "Survivors Guilt ^yellow;^reset;"
+    "shortdescription" : "Volcano Pistol ^yellow;^reset;"
   }
 }

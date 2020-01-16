@@ -18,7 +18,7 @@
 
 
   "interactAction" : "OpenTeleportDialog",
-  "interactData" : "/interface/warping/sgoutpostteleport.config",
+  "interactData" : "/interface/warping/sgtoyteleport.config",
   "teleporterFootPosition" : [-1, 1],
 
   "inventoryIcon" : "sgtableicon.png",

@@ -15,13 +15,13 @@
             "mode" : "loop"
           },
           "fired" : {
-            "frames" : 1,
+            "frames" : 4,
             "cycle" : 1,
             "mode" : "transition",
             "transition" : "reloading"
           },
           "reload" : {
-            "frames" : 3,
+            "frames" : 4,
             "cycle" : 0.5,
             "mode" : "transition",
             "transition" : "active"
@@ -33,7 +33,7 @@
         "states" : {
           "off" : {},
           "fire" : {
-            "frames" : 1,
+            "frames" : 4,
             "cycle" : 1,
             "mode" : "transition",
             "transition" : "off"

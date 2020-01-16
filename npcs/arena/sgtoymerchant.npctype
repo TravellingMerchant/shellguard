@@ -137,11 +137,11 @@
             "chest" : [ { "name" : "sgmerchantjacket" } ],
             "legs" : [ { "name" : "sgmerchantlegs" } ],
             "primary" : [
-              "sgtoysniper"
+              "sgmerchantrevolvertoy"
 			  ],
-            "sheathedprimary" : [ "sgdartpistol" ],
+            "sheathedprimary" : [ "sgmerchantrevolvertoy" ],
             "alt" : [
-              { "name" : "sgdartpistol" }
+              { "name" : "sgmerchantrevolvertoy" }
             ]
           }
         ] ]

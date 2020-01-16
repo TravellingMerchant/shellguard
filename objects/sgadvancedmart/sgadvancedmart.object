@@ -21,6 +21,7 @@
     "sellFactor" : 0.2,
     "items" : [
 	  { "item" : "sgshieldback" },
+	  { "item" : "sgrocketback" },
 	  { "item" : "sgstuncannon" },
 	  { "item" : "sgslashcannon" },
 	  { "item" : "sgcannon" },
