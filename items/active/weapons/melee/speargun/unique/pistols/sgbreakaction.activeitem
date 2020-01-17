@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgbreakaction.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A wildly innacurate pistol that fires high velocity homing swarm rockets.",
+  "description" : "Fires hot balls of hardened magma.",
   "shortdescription" : "Volcano Pistol",
   "level" : 6,
   "tooltipKind" : "base",

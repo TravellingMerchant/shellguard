@@ -232,17 +232,6 @@
       ],
 
       "deathActions" : [
-        {
-          "name" : "action-projectile",
-          "parameters" : {
-            "projectileCount" : 1,
-            "projectileType" : "mechenergypickup",
-            "projectileParameters" : {},
-            "aimDirection" : [1, 0],
-            "inaccuracy" : 0,
-            "fireOffset" : [0, 0]
-          }
-        }
       ]
     },
 
@@ -306,7 +295,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 700
+          "baseValue" : 2000
         },
         "protection" : {
           "baseValue" : 0.0
