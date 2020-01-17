@@ -18,7 +18,7 @@
     "bladefullbright" : "sgmerchantrevolverfullbright.png",
     "handle" : "",
     "handlefullbright" : "",
-    "muzzleFlash" : ""
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
   },
   "animationCustom" : {
     "sounds" : {
@@ -54,8 +54,9 @@
       },
       "fire1" : {
         "duration" : 0.2,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 15,
+		"weaponAngularVelocity" : -40,
         "twoHanded" : false,
         "weaponOffset" : [2.0, -2],
 
@@ -65,7 +66,7 @@
 				//If this exists it will try to shoot based on the variables within
 				"gunShotConfig" : {
 					//General
-					"aimAtCursor" : false,
+					"aimAtCursor" : true,
 					"energyUsage" : 17,
 					"fireSound" : "gunfire",
 				
