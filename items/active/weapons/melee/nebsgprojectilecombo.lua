@@ -127,6 +127,7 @@ function NebSGProjectileCombo:fire()
   animator.setParticleEmitterOffsetRegion(swooshKey, self.swooshOffsetRegions[self.comboStep])
   animator.burstParticleEmitter(swooshKey)
 
+  local progress = 0
   util.wait(stance.duration, function(dt)
     local damageArea = partDamageArea("swoosh")
     self.weapon:setDamage(self.stepDamageConfig[self.comboStep], damageArea)
@@ -201,6 +202,16 @@ function NebSGProjectileCombo:fire()
 				end
 			end
 		end
+	if stance.endWeaponRotation then
+      local from = stance.weaponOffset or {0,0}
+      local to = stance.endWeaponOffset or {0,0}
+      self.weapon.weaponOffset = {util.interpolateHalfSigmoid(progress, from[1], to[1]), util.interpolateHalfSigmoid(progress, from[2], to[2])}
+
+      self.weapon.relativeWeaponRotation = util.toRadians(util.interpolateHalfSigmoid(progress, stance.weaponRotation, stance.endWeaponRotation))
+      self.weapon.relativeArmRotation = util.toRadians(util.interpolateHalfSigmoid(progress, stance.armRotation, stance.endArmRotation))
+
+      progress = math.min(1.0, progress + (self.dt / stance.duration))
+	end
   end)
 
   if self.comboStep < self.comboSteps then
