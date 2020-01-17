@@ -42,10 +42,12 @@
               "sgtyphoonminigun",
               "sggrenademachinegun",
               "sgstuncannon",
+              "sgsever",
 			  "neb-shellguardrail"
             ],
             "sheathedprimary" : [
               "heavyhatchet",
+              "sgcarve",
               "sgofficersword"
             ],
             "alt" : [
@@ -65,10 +67,12 @@
               "sgtyphoonminigun",
               "sggrenademachinegun",
               "sgstuncannon",
+              "sgsever",
 			  "neb-shellguardrail"
             ],
             "sheathedprimary" : [
               "heavyhatchet",
+              "sgcarve",
               "sgofficersword"
             ],
             "alt" : [
@@ -86,10 +90,12 @@
               "sgtyphoonminigun",
               "sggrenademachinegun",
               "sgstuncannon",
+              "sgsever",
 			  "neb-shellguardrail"
             ],
             "sheathedprimary" : [
               "heavyhatchet",
+              "sgcarve",
               "sgofficersword"
             ],
             "alt" : [

@@ -46,7 +46,7 @@
     "animationParts" : {
       "blade" : "sgseverelite.png"
     },
-    "shortdescription" : "Sever-MK2 ^yellow;^reset;",
-    "description" : "An upgraded Sever sword."
+    "shortdescription" : "MK2-Sever ^yellow;^reset;",
+    "description" : "A large but light sword, built to replace older Shellguard swords."
   }
 }

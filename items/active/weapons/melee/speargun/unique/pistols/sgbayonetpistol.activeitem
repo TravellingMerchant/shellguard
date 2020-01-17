@@ -18,9 +18,18 @@
     "bladefullbright" : "sgbayonetpistolfullbright.png",
     "handle" : "",
     "handlefullbright" : "",
-    "muzzleFlash" : ""
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
   },
   "animationCustom" : {
+    "animatedParts" : {
+      "parts" : { 
+        "muzzleFlash" : {
+          "properties" : {
+            "offset" : [0.625, 2.125]
+          }
+        }
+      }
+    },
     "sounds" : {
       "fire" : [ "/sfx/monsters/boss/survivorpainblank.ogg" ],
       "fire2" : [ "/sfx/monsters/boss/survivorpainblank.ogg" ],
@@ -54,8 +63,12 @@
       },
       "fire1" : {
         "duration" : 0.2,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 15,
+
+        "endWeaponRotation" : 0,
+        "endArmRotation" : 0,
+        "endWeaponOffset" : [2.0, -2],
         "twoHanded" : false,
         "weaponOffset" : [2.0, -2],
 
@@ -89,8 +102,12 @@
 
       "fire2" : {
         "duration" : 0.2,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 15,
+
+        "endWeaponRotation" : 0,
+        "endArmRotation" : 0,
+        "endWeaponOffset" : [2.0, -2],
         "twoHanded" : false,
         "weaponOffset" : [2.0, -2],
 
@@ -124,8 +141,12 @@
 
       "fire3" : {
         "duration" : 0.2,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 15,
+
+        "endWeaponRotation" : 0,
+        "endArmRotation" : 0,
+        "endWeaponOffset" : [2.0, -2],
         "twoHanded" : false,
         "weaponOffset" : [2.0, -2],
 
@@ -159,8 +180,12 @@
 
       "fire5" : {
         "duration" : 0.2,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
+        "armRotation" : 5,
+        "weaponRotation" : 15,
+
+        "endWeaponRotation" : 0,
+        "endArmRotation" : 0,
+        "endWeaponOffset" : [2.0, -2],
         "twoHanded" : false,
         "weaponOffset" : [2.0, -2],
 
