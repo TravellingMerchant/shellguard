@@ -67,6 +67,14 @@
     }]
   ],
   
+  "sgaliencannon" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "sgaliencannon"}
+      ]
+    }]
+  ],
+  
   "fortressdroprematch" : [
     [1, {
       "pool" : [

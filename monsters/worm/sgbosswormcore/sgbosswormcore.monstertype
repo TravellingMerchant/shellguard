@@ -9,7 +9,7 @@
 
   "animation" : "sgbosswormcore.animation",
 
-  "dropPools" : ["spaceRobot"],
+  "dropPools" : ["sgaliencannon"],
 
   "baseParameters" : {
     "scripts" : [
