@@ -39,7 +39,7 @@
     "animationParts" : {
       "blade" : "sgcarveelite.png"
     },
-    "shortdescription" : "Sever-MK2 ^yellow;^reset;",
-    "description" : "An upgraded Sever sword."
+    "shortdescription" : "MK2-Carve ^yellow;^reset;",
+    "description" : "Smaller sister of the Sever series blade. Just as deadly."
   }
 }
