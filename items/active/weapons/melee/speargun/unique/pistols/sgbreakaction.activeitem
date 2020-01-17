@@ -65,7 +65,7 @@
 				//If this exists it will try to shoot based on the variables within
 				"gunShotConfig" : {
 					//General
-					"aimAtCursor" : false,
+					"aimAtCursor" : true,
 					"energyUsage" : 17,
 					"fireSound" : "gunfire",
 				

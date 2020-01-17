@@ -155,7 +155,10 @@ function NebSGProjectileCombo:fire()
 				--Recoil--
 				if stance.gunShotConfig.recoilKnockbackVelocity then
 					--Aim Vector--
-					local aimVector = vec2.rotate({1, 0}, (stance.gunShotConfig.aimAtCursor and activeItem.aimAngle(0, activeItem.ownerAimPosition()) or self.weapon.aimAngle) + sb.nrand(stance.gunShotConfig.projectileInaccuracy or 0, 0) + (stance.gunShotConfig.projectileAimAngleOffset or 0))
+					local aimVector = vec2.rotate({1, 0}, (stance.gunShotConfig.aimAtCursor and (activeItem.aimAngle(0, activeItem.ownerAimPosition())) or self.weapon.aimAngle) + sb.nrand(stance.gunShotConfig.projectileInaccuracy or 0, 0) + (stance.gunShotConfig.projectileAimAngleOffset or 0))
+					if stance.gunShotConfig.aimAtCursor then
+					  aimVector = vec2.mul(aimVector,{mcontroller.facingDirection(),1})
+					end
 					aimVector[1] = aimVector[1] * mcontroller.facingDirection()
 					--If not crouching or if crouch does not impact recoil
 					if not (stance.gunShotConfig.crouchStopsRecoil and mcontroller.crouching()) then
@@ -255,7 +258,10 @@ end
 
 --Aim vector for firing projectiles
 function NebSGProjectileCombo:aimVector(stance)
-  local aimVector = vec2.rotate({1, 0}, (stance.gunShotConfig.aimAtCursor and activeItem.aimAngle(0, activeItem.ownerAimPosition()) or self.weapon.aimAngle) + sb.nrand(stance.gunShotConfig.projectileInaccuracy or 0, 0) + (stance.gunShotConfig.projectileAimAngleOffset or 0))
+  local aimVector = vec2.rotate({1, 0}, (stance.gunShotConfig.aimAtCursor and (activeItem.aimAngle(0, activeItem.ownerAimPosition())) or self.weapon.aimAngle) + sb.nrand(stance.gunShotConfig.projectileInaccuracy or 0, 0) + (stance.gunShotConfig.projectileAimAngleOffset or 0))
+  if stance.gunShotConfig.aimAtCursor then
+    aimVector = vec2.mul(aimVector,{mcontroller.facingDirection(),1})
+  end
   aimVector[1] = aimVector[1] * mcontroller.facingDirection()
   return aimVector
 end
