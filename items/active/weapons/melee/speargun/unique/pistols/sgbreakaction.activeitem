@@ -54,8 +54,8 @@
       },
       "fire1" : {
         "duration" : 0.4,
-        "armRotation" : 0,
-        "weaponRotation" : 0,
+        "armRotation" : -10,
+        "weaponRotation" : 15,
         "twoHanded" : false,
         "weaponOffset" : [2.0, -2],
 
@@ -65,7 +65,7 @@
 				//If this exists it will try to shoot based on the variables within
 				"gunShotConfig" : {
 					//General
-					"aimAtCursor" : false,
+					"aimAtCursor" : true,
 					"energyUsage" : 17,
 					"fireSound" : "gunfire",
 				

@@ -127,6 +127,7 @@ function NebSGProjectileCombo:fire()
   animator.setParticleEmitterOffsetRegion(swooshKey, self.swooshOffsetRegions[self.comboStep])
   animator.burstParticleEmitter(swooshKey)
 
+  local progress = 0
   util.wait(stance.duration, function(dt)
     local damageArea = partDamageArea("swoosh")
     self.weapon:setDamage(self.stepDamageConfig[self.comboStep], damageArea)
@@ -155,7 +156,10 @@ function NebSGProjectileCombo:fire()
 				--Recoil--
 				if stance.gunShotConfig.recoilKnockbackVelocity then
 					--Aim Vector--
-					local aimVector = vec2.rotate({1, 0}, (stance.gunShotConfig.aimAtCursor and activeItem.aimAngle(0, activeItem.ownerAimPosition()) or self.weapon.aimAngle) + sb.nrand(stance.gunShotConfig.projectileInaccuracy or 0, 0) + (stance.gunShotConfig.projectileAimAngleOffset or 0))
+					local aimVector = vec2.rotate({1, 0}, (stance.gunShotConfig.aimAtCursor and (activeItem.aimAngle(0, activeItem.ownerAimPosition())) or self.weapon.aimAngle) + sb.nrand(stance.gunShotConfig.projectileInaccuracy or 0, 0) + (stance.gunShotConfig.projectileAimAngleOffset or 0))
+					if stance.gunShotConfig.aimAtCursor then
+					  aimVector = vec2.mul(aimVector,{mcontroller.facingDirection(),1})
+					end
 					aimVector[1] = aimVector[1] * mcontroller.facingDirection()
 					--If not crouching or if crouch does not impact recoil
 					if not (stance.gunShotConfig.crouchStopsRecoil and mcontroller.crouching()) then
@@ -198,6 +202,16 @@ function NebSGProjectileCombo:fire()
 				end
 			end
 		end
+	if stance.endWeaponRotation then
+      local from = stance.weaponOffset or {0,0}
+      local to = stance.endWeaponOffset or {0,0}
+      self.weapon.weaponOffset = {util.interpolateHalfSigmoid(progress, from[1], to[1]), util.interpolateHalfSigmoid(progress, from[2], to[2])}
+
+      self.weapon.relativeWeaponRotation = util.toRadians(util.interpolateHalfSigmoid(progress, stance.weaponRotation, stance.endWeaponRotation))
+      self.weapon.relativeArmRotation = util.toRadians(util.interpolateHalfSigmoid(progress, stance.armRotation, stance.endArmRotation))
+
+      progress = math.min(1.0, progress + (self.dt / stance.duration))
+	end
   end)
 
   if self.comboStep < self.comboSteps then
@@ -255,7 +269,10 @@ end
 
 --Aim vector for firing projectiles
 function NebSGProjectileCombo:aimVector(stance)
-  local aimVector = vec2.rotate({1, 0}, (stance.gunShotConfig.aimAtCursor and activeItem.aimAngle(0, activeItem.ownerAimPosition()) or self.weapon.aimAngle) + sb.nrand(stance.gunShotConfig.projectileInaccuracy or 0, 0) + (stance.gunShotConfig.projectileAimAngleOffset or 0))
+  local aimVector = vec2.rotate({1, 0}, (stance.gunShotConfig.aimAtCursor and (activeItem.aimAngle(0, activeItem.ownerAimPosition())) or self.weapon.aimAngle) + sb.nrand(stance.gunShotConfig.projectileInaccuracy or 0, 0) + (stance.gunShotConfig.projectileAimAngleOffset or 0))
+  if stance.gunShotConfig.aimAtCursor then
+    aimVector = vec2.mul(aimVector,{mcontroller.facingDirection(),1})
+  end
   aimVector[1] = aimVector[1] * mcontroller.facingDirection()
   return aimVector
 end
