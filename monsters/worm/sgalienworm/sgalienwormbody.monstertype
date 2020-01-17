@@ -136,7 +136,7 @@
           "baseValue" : 10000
         },
         "protection" : {
-          "baseValue" : 25
+          "baseValue" : 50
         },
         "healthRegen" : {
           "baseValue" : 10000
@@ -145,7 +145,7 @@
           "baseValue" : 1.0
         },
         "physicalResistance" : {
-          "baseValue" : 0.8
+          "baseValue" : 0.2
         },
         "fireResistance" : {
           "baseValue" : -0.1
@@ -157,7 +157,7 @@
           "baseValue" : 0.6
         },
         "iceStatusImmunity" : {
-          "baseValue" : 0.8
+          "baseValue" : 1
         },
         "electricResistance" : {
           "baseValue" : -0.1

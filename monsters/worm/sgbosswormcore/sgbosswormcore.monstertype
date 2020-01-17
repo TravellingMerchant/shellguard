@@ -246,7 +246,7 @@
       ]
     },
 
-    "metaBoundBox" : [-4, -4, 4, 4],
+    "metaBoundBox" : [0,0,0,0],
     "scale" : 1.0,
 
     "movementSettings" : {
