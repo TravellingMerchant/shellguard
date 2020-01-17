@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgaliencannon.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "The head of an ancient alien, ripped apart and used as a beam cannon.",
+  "description" : "The head of an ancient alien, ripped apart and used as a beam cannon. Press into enemy for more damage.",
   "shortdescription" : "Kalis Cannon",
   "level" : 6,
   "tooltipKind" : "sgweapon",
@@ -26,7 +26,7 @@
     }
   },
 
-  "baseOffset" : [2.25, 0.1],
+  "baseOffset" : [1, 1],
   "muzzleOffset" : [0.375, 0.25],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
@@ -129,9 +129,8 @@
     //"burstCount" : 8,
     //"burstTime" : 0.02,
 
-    "projectileType" : ["sgdelayedbeam","sgdelayedbeam"],
+    "projectileType" : ["nebsgfortresslaserblastplayer","nebsgfortresslaserblastplayer"],
     "projectileParameters" : { 
-      "timeToLive" : 0.05
     }
   },
 
