@@ -35,7 +35,7 @@
   "primaryAbilityType" : "sgsevercombo",
   "primaryAbility" : {
     "fireTime" : 0.83,
-    "baseDps" : 11.5,
+    "baseDps" : 12.5,
 
     "stances" : {
       "fire1" : {

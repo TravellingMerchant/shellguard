@@ -379,6 +379,14 @@
     }]
   ],
   
+  "sgcauterizer" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgcauterizer", 1]}
+      ]
+    }]
+  ],
+  
   "sgtitanhelmet" : [
     [1, {
       "fill" : [
