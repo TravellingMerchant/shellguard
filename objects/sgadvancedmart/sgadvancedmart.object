@@ -23,6 +23,8 @@
 	  { "item" : "sgshieldback" },
 	  { "item" : "sgrocketback" },
 	  { "item" : "sgstuncannon" },
+	  { "item" : "sgcarve" },
+	  { "item" : "sgsever" },	  
 	  { "item" : "sgslashcannon" },
 	  { "item" : "sgcannon" },
 	  { "item" : "sgcannonshotgun" },

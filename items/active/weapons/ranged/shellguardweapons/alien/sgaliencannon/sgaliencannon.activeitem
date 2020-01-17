@@ -22,7 +22,8 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/alien/sgalienshotgun2.ogg" ]
+      "fire" : [ "/sfx/gun/alien/sgalienshotgun2.ogg" ],
+      "fire2" : [ "/sfx/monsters/boss/alienwormboss/sgaliencannon.ogg" ]
     }
   },
 
@@ -79,9 +80,9 @@
     //"burstCount" : 8,
     //"burstTime" : 0.02,
 
-    "projectileType" : ["sgdelayedplasma","sgdelayedbeam"],
-    "projectileParameters" : { 
-      "timeToLive" : 0.05
+    "projectileType" : ["sgenergycrystal","nebsgfortresslaserblastplayer"],
+    "projectileParameters" : {
+	"speed" : 80
     }
   },
   "altAbility" : {
@@ -110,6 +111,7 @@
         "allowRotate" : false,
         "allowFlip" : false,
 		
+		"playSounds" : [ "fire2" ],
 		"animationStates": {
 			"weaponFire": "fire"
 		}

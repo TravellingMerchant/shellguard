@@ -1,6 +1,6 @@
 {
   "itemName" : "sgbreakersniper",
-  "price" : 3000,
+  "price" : 4500,
   "inventoryIcon" : "sgbreakerrifle.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
@@ -37,8 +37,8 @@
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
     "fireTime" : 1.5,
-    "baseDps" : 11,
-    "energyUsage" : 100.0,
+    "baseDps" : 9,
+    "energyUsage" : 200.0,
     "projectileCount" : 1,
     "inaccuracy" : 0.02,
       "stances" : {
