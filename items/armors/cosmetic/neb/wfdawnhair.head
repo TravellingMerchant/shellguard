@@ -1,0 +1,30 @@
+{
+  "itemName" : "nebhead",
+  "price" : 5000,
+  "inventoryIcon" : "icons.png:head",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "category" : "headwear",
+  "description" : "Soft hair and fluffy ears, perfect for petting.",
+  "shortdescription" : "Dawn's Hair",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png",
+
+  "colorOptions" : [
+		{ "D9C189" : "E6E6E6", "A38D59" : "B5B5B5", "897343" : "808080", "735E3A" : "555555" }, //default
+		{ "D9C189" : "838383", "A38D59" : "555555", "897343" : "383838", "735E3A" : "151515" }, //black
+		{ "D9C189" : "b5b5b5", "A38D59" : "808080", "897343" : "555555", "735E3A" : "303030" }, //gray
+		{ "D9C189" : "E6E6E6", "A38D59" : "B5B5B5", "897343" : "808080", "735E3A" : "555555" }, //white
+		{ "D9C189" : "f4988c", "A38D59" : "d93a3a", "897343" : "932625", "735E3A" : "601119" }, //red
+		{ "D9C189" : "ffd495", "A38D59" : "ea9931", "897343" : "af4e00", "735E3A" : "6e2900" }, //orange
+		{ "D9C189" : "D9C189", "A38D59" : "A38D59", "897343" : "897343", "735E3A" : "735E3A" }, //blonde
+		{ "D9C189" : "b2e89d", "A38D59" : "51bd3b", "897343" : "247824", "735E3A" : "144216" }, //green
+		{ "D9C189" : "96cbe7", "A38D59" : "5588d4", "897343" : "344495", "735E3A" : "1a1c51" }, //blue
+		{ "D9C189" : "d29ce7", "A38D59" : "a451c4", "897343" : "6a2284", "735E3A" : "320c40" }, //purple
+		{ "D9C189" : "eab3db", "A38D59" : "d35eae", "897343" : "97276d", "735E3A" : "59163f" }, //pink
+		{ "D9C189" : "ccae7c", "A38D59" : "a47844", "897343" : "754c23", "735E3A" : "472b13" }	//brown
+  ]
+}
