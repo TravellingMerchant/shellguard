@@ -7,7 +7,7 @@
   "persistent" : true,
 
   "identity" : {
-    "name" : "Merchant",
+    "name" : "Sangure",
     "gender" : "female",
     "hairGroup" : "hair",
     "hairType" : "male54",
@@ -47,51 +47,51 @@
       "attack" : {
         "default" : {
           "default" : [
-           "Lets have fun okay? now, lets get to it!"
+           "For blood, glory, and gunships!"
           ]
         }
       },
       "reattack" : {
         "default" : {
           "default" : [
-            "FOUND YOU, now you're mine!"
+            "Time to tango!"
           ]
         }
       },
       "killedTarget" : {
         "default" : {
           "default" : [
-            "Ahahaha, That was fun!",
-            "It's over? no fun...?",
-            "VICTORY!"
+            "Where's the next one!?",
+            "HAHAHA!",
+            "Time to feast!"
           ]
         }
       },
       "lostTarget" : {
         "default" : {
           "default" : [
-            "Where'd they go..."
+            "Optics lost..."
           ]
         }
       },
       "outOfSight" : {
         "default" : {
           "default" : [
-            "Oi get back here so I can hit you."
+            "Bloody coward!"
           ]
         }
       },
       "cheerOn" : {
         "default" : {
           "default" : [
-            "We can do this!"
+            "Let's do this!"
           ]
         }
       },
       "cantReach" : {
         "default" : {
           "default" : [
-            "I need to get closer to you to attack you... get down here please?"
+            "You're lucky I ain't got a gunship!"
           ]
         }
       }
