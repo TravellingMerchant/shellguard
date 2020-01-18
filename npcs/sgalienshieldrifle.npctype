@@ -19,10 +19,10 @@
 
     "behaviorConfig" : {
       "leapWindup" : 0.75,
-      "rangedAimTime" : 3.5,
+      "rangedAimTime" : 1.5,
       "rangedWindupTime" : 0.01,
       "rangedMinFireTime": 0.5,
-      "rangedMaxFireTime": 3
+      "rangedMaxFireTime": 1.5
     },
 
     "aggressive" : true,
@@ -161,7 +161,7 @@
   "statusControllerSettings" : {
     "stats" : {
       "maxHealth" : {
-        "baseValue" : 125.0
+        "baseValue" : 70.0
       },
       "powerMultiplier" : {
         "baseValue" : 1
