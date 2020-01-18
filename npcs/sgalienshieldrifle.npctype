@@ -22,7 +22,7 @@
       "rangedAimTime" : 1.5,
       "rangedWindupTime" : 0.01,
       "rangedMinFireTime": 0.5,
-      "rangedMaxFireTime": 1.5
+      "rangedMaxFireTime": 1
     },
 
     "aggressive" : true,
