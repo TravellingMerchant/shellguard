@@ -64,7 +64,7 @@
 		}
       },
       "cooldown" : {
-        "duration" : 0.5,
+        "duration" : 1,
         "armRotation" : -45,
         "weaponRotation" : 60,
         "twoHanded" : true,

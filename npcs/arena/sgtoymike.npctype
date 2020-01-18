@@ -1,0 +1,205 @@
+{
+  "type" : "sgtoymike",
+  "baseType" : "hostile",
+
+  "levelVariance" : [1, 1],
+
+  "persistent" : true,
+
+  "identity" : {
+    "name" : "Merchant",
+    "gender" : "female",
+    "hairGroup" : "hair",
+    "hairType" : "male54",
+    "bodyDirectives" : "?replace=ffe2c5FF=fff7ecFF?replace=ffc181FF=f9d3a9FF?replace=d39c6cFF=d3a57cFF?replace=c7815bFF=b37c5dFF",
+    "emoteDirectives" : "?replace=ffe2c5FF=fff7ecFF?replace=ffc181FF=f9d3a9FF?replace=d39c6cFF=d3a57cFF?replace=c7815bFF=b37c5dFF",
+    "hairDirectives" : "?replace=d9c189FF=7f5a39FF?replace=a38d59FF=5b3523FF?replace=735e3aFF=3b1f15FF"
+  },
+
+  "damageTeam" : 2,
+
+  "dropPools" : [ "money" ],
+
+  "scriptConfig" : {
+    "behavior" : "hostileguard",
+
+    "behaviorConfig" : {
+      "leapWindup" : 0.75,
+      "rangedAimTime" : 0.5,
+      "rangedWindupTime" : 0.2
+    },
+
+    "aggressive" : true,
+
+    "personalities" : [
+        [1.0, { "personality" : "normal", "reactions" : {} }]
+    ],
+
+    "reactions" : {
+      "spontaneous" : [
+        [5.0, "sleep", { "timeRange" : [0.7, 0.9] }],
+        [1.0, "patrol"]
+      ]
+    },
+
+    "dialog" : {
+
+      "attack" : {
+        "default" : {
+          "default" : [
+           "Lets have fun okay? now, lets get to it!"
+          ]
+        }
+      },
+      "reattack" : {
+        "default" : {
+          "default" : [
+            "FOUND YOU, now you're mine!"
+          ]
+        }
+      },
+      "killedTarget" : {
+        "default" : {
+          "default" : [
+            "Ahahaha, That was fun!",
+            "It's over? no fun...?",
+            "VICTORY!"
+          ]
+        }
+      },
+      "lostTarget" : {
+        "default" : {
+          "default" : [
+            "Where'd they go..."
+          ]
+        }
+      },
+      "outOfSight" : {
+        "default" : {
+          "default" : [
+            "Oi get back here so I can hit you."
+          ]
+        }
+      },
+      "cheerOn" : {
+        "default" : {
+          "default" : [
+            "We can do this!"
+          ]
+        }
+      },
+      "cantReach" : {
+        "default" : {
+          "default" : [
+            "I need to get closer to you to attack you... get down here please?"
+          ]
+        }
+      }
+    },
+
+    "chatSounds" : {
+      "default" : {
+        "male" : [
+          "/sfx/humanoid/human_chatter_male1.ogg",
+          "/sfx/humanoid/human_chatter_male2.ogg",
+          "/sfx/humanoid/human_chatter_male3.ogg"
+        ]
+      }
+    },
+
+    "combat" : {
+      "meleeWeaponWindups" : {
+        "default" : 0.45,
+        "broadsword" : 0.45,
+        "dagger" : 0.3,
+        "axe" : 0.45,
+        "hammer" : 0.6,
+        "shortsword" : 0.35,
+        "spear" : 0.55
+      },
+      "meleeWeaponCooldowns" : {
+        "default" : 1.0,
+        "broadsword" : 1.7,
+        "dagger" : 0.7,
+        "axe" : 1.4,
+        "hammer" : 2.0,
+        "shortsword" : 1.0,
+        "spear" : 1.4
+      }
+    }
+  },
+
+  "items" : {
+    "default" : [
+      [0, [
+          {
+            "head" : [ { "name" : "sgwfmikehead" } ],
+            "chest" : [ { "name" : "sgwfmikechest" } ],
+            "legs" : [ { "name" : "shellengineerlegs" } ],
+            "primary" : [
+              "sgtoysniper"
+			  ],
+            "sheathedprimary" : [ "sgdartpistol" ],
+            "alt" : [
+              { "name" : "sgdartpistol" }
+            ]
+          }
+        ] ]
+    ]
+  },
+
+  "touchDamage" : {
+    "damage" : 0,
+    "teamType" : "enemy",
+    "damageType" : "knockback",
+    "damageSourceKind" : "nodamage",
+    "damageRepeatGroup" : "npcTouchKnockback",
+    "damageRepeatTimeout" : 0.5,
+    "knockback" : 20,
+    "statusEffects" : [ ]
+  },
+
+  "statusControllerSettings" : {
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 200.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 1
+      },
+      "protection" : {
+        "baseValue" : 1000.0
+      },
+      "healthRegen" : {
+        "baseValue" : 500.0
+      },
+        "physicalResistance" : {
+          "baseValue" : 10000.0
+        },
+        "fireResistance" : {
+          "baseValue" : 10000.0
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 10000.0
+        },
+        "iceResistance" : {
+          "baseValue" : 10000.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 10000.0
+        },
+        "electricResistance" : {
+          "baseValue" : 10000.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 10000.0
+        },
+        "poisonResistance" : {
+          "baseValue" : 10000.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 10000.0
+        }
+    }
+  }
+}
