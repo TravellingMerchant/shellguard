@@ -24,7 +24,7 @@
     "behavior" : "hostileguard",
 
     "behaviorConfig" : {
-      "leapWindup" : 0.75,
+      "leapWindup" : 0.2,
       "rangedAimTime" : 0.5,
       "rangedWindupTime" : 0.2
     },
@@ -110,7 +110,7 @@
     "combat" : {
       "meleeWeaponWindups" : {
         "default" : 0.45,
-        "broadsword" : 0.45,
+        "broadsword" : 0.3,
         "dagger" : 0.3,
         "axe" : 0.45,
         "hammer" : 0.6,
@@ -119,7 +119,7 @@
       },
       "meleeWeaponCooldowns" : {
         "default" : 1.0,
-        "broadsword" : 1.7,
+        "broadsword" : 1.2,
         "dagger" : 0.7,
         "axe" : 1.4,
         "hammer" : 2.0,
@@ -137,9 +137,9 @@
             "chest" : [ { "name" : "sgwfmikechest" } ],
             "legs" : [ { "name" : "shellengineerlegs" } ],
             "primary" : [
-              "sgtoysniper"
+              "sgsanguresmacker"
 			  ],
-            "sheathedprimary" : [ "sgdartpistol" ],
+            "sheathedprimary" : [ "sgtexasred" ],
             "alt" : [
               { "name" : "sgdartpistol" }
             ]
@@ -155,7 +155,7 @@
     "damageSourceKind" : "nodamage",
     "damageRepeatGroup" : "npcTouchKnockback",
     "damageRepeatTimeout" : 0.5,
-    "knockback" : 20,
+    "knockback" : 100,
     "statusEffects" : [ ]
   },
 
