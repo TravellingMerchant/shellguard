@@ -87,6 +87,7 @@
   },
   "altAbility" : {
     "scripts" : ["/items/active/scripts/sgaliencannonfire.lua"],
+	"name" : "Elder Howl",
     "class" : "SGACFire",
     "fireTime" : 0.8,
     "baseDps" : 15,
