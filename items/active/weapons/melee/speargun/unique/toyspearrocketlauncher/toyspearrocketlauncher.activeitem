@@ -1,0 +1,186 @@
+{
+  "itemName" : "toyspearrocketlauncher",
+  "price" : 9500,
+  "inventoryIcon" : "toyspearrocketlauncher.png",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A dismembered limb of a tree with a toy dart rocket launcher taped to the end of it",
+  "shortdescription" : "Neb's Stick",
+  "level" : 6,
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : false,
+
+  "animation" : "/items/active/weapons/melee/speargun/sgaxegun.animation",
+  "animationParts" : {
+    "blade" : "toyspearrocketlauncher.png",
+    "bladefullbright" : "toyspearrocketlauncher.png",
+    "handle" : "",
+    "handlefullbright" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/swing_spear.ogg" ],
+      "fire2" : [ "/sfx/melee/swing_broadsword.ogg" ],
+      "fire3" : [ "/sfx/melee/swing_shortsword.ogg" ],
+      "fire4" : [ "/sfx/melee/swing_spear.ogg" ],
+      "gunfire" : [ "/sfx/gun/Shellrocketfire.ogg" ],
+      "gunfire2" : [ "/sfx/gun/Shellrocketfire.ogg" ]
+    }
+  },
+
+  "baseOffset" : [0.0, 0.0],
+	
+	//Not required but gives it a nice aiming feel
+  "aimOffset" : 0,
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "sgaxeguncombo",
+  "primaryAbility" : {
+		"stances" : {
+      "idle" : {
+        "aimAngle" : 0,
+        "armRotation" : -90,
+        "weaponRotation" : -20,
+        "twoHanded" : false,
+        "allowRotate" : true,
+        "weaponOffset" : [0, -0.5],
+        "allowFlip" : true,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "closed"
+				}
+      },
+      "fire1" : {
+        "aimAngle" : 0.275,
+        "duration" : 0.15,
+        "armRotation" : -45,
+        "weaponRotation" : -55,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+				//If this exists it will try to shoot based on the variables within
+				"gunShotConfig" : {
+					//General
+					"aimAtCursor" : false,	//If true, will fire toward the cursor instead of the rotation of the weapon
+					"fireTime" : 0.16, 			//If this exists it loops during the stance duration firing in intervals of this number
+					"energyUsage" : 5,
+					"fireSound" : "gunfire",
+					
+					//Recoil
+					"recoilKnockbackVelocity" : false,
+					
+					//Projectile
+					"projectile" : "sgtoyrocket",
+					"projectileCount" : 1,
+					"projectileDamage" : 0,
+					"projectileParameters" : {
+						"knockback" : 70,
+						"power" : 0
+					},
+					"projectileInaccuracy" : 0,
+					"projectileAimAngleOffset" : 0.35,
+					"projectileFirePoint" : [6.375, 5.25]
+				}
+      },
+      "preslash2" : {
+        "duration" : 0.025,
+        "armRotation" : 55,
+        "weaponRotation" : -45,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : false
+      },
+      "wait2" : {
+        "duration" : 0.2,
+        "armRotation" : -45,
+        "weaponRotation" : -55,
+        "allowRotate" : false,
+        "allowFlip" : true,
+        "twoHanded" : false
+      },
+      "fire2" : {
+        "duration" : 0.2,
+        "armRotation" : -150,
+        "weaponRotation" : 55,
+        "weaponOffset" : [0, 0],
+        "twoHanded" : false,
+        "allowFlip" : true,
+        "allowRotate" : false,
+				//If this exists it will try to shoot based on the variables within
+				"gunShotConfig" : {
+					//General
+					"aimAtCursor" : false,	//If true, will fire toward the cursor instead of the rotation of the weapon
+					"fireTime" : 0.3, 			//If this exists it loops during the stance duration firing in intervals of this number
+					"energyUsage" : 5,
+					"fireSound" : "gunfire",
+					
+					//Recoil
+					"recoilKnockbackVelocity" : false,
+					
+					//Projectile
+					"projectile" : "sgtoyrocket",
+					"projectileCount" : 1,
+					"projectileDamage" : 0,
+					"projectileParameters" : {
+						"knockback" : 70,
+						"power" : 0
+					},
+					"projectileInaccuracy" : 0,
+					"projectileAimAngleOffset" : 0.35,
+					"projectileFirePoint" : [6.375, 5.25]
+				}
+      },
+      "fire4" : {
+        "duration" : 0.5,
+        "armRotation" : -20,
+        "weaponRotation" : -70,
+        "twoHanded" : false,
+        "weaponOffset" : [0, 0.5],
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+
+				//If this exists it will try to shoot based on the variables within
+				"gunShotConfig" : {
+					//General
+					"aimAtCursor" : false,	//If true, will fire toward the cursor instead of the rotation of the weapon
+					"fireTime" : 0.6, 			//If this exists it loops during the stance duration firing in intervals of this number
+					"energyUsage" : 15,
+					"fireSound" : "gunfire",
+					
+					//Recoil
+					"recoilKnockbackVelocity" : false,
+					
+					//Projectile
+					"projectile" : "sgtoyrocket",
+					"projectileCount" : 1,
+					"projectileDamage" : 0,
+					"projectileParameters" : {
+						"knockback" : 70,
+						"power" : 0
+					},
+					"projectileInaccuracy" : 0.01,
+					"projectileAimAngleOffset" : 0.35,
+					"projectileFirePoint" : [6.375, 5.75]
+				}
+			}
+		}
+	},
+
+  "builder" : "/items/buildscripts/buildweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "toyspearrocketlauncher.png",
+    "animationParts" : {
+    "blade" : "toyspearrocketlauncher.png"
+    },
+    "shortdescription" : "Neb's Stick ^yellow;^reset;"
+  }
+}

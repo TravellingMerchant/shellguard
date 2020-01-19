@@ -27,8 +27,8 @@
 
     "behaviorConfig" : {
       "leapWindup" : 0.75,
-      "rangedAimTime" : 0.5,
-      "rangedWindupTime" : 0.2
+      "rangedAimTime" : 0.1,
+      "rangedWindupTime" : 0.1
     },
 
     "aggressive" : true,
@@ -45,55 +45,60 @@
     },
 
     "dialog" : {
-
       "attack" : {
         "default" : {
           "default" : [
-           "Lets have fun okay? now, lets get to it!"
+           "It's punishment time!"
           ]
         }
       },
       "reattack" : {
         "default" : {
           "default" : [
-            "FOUND YOU, now you're mine!"
+            "I seeeee yoouuuu...",
+            "Tick tock... Time is up!"
           ]
         }
       },
       "killedTarget" : {
         "default" : {
           "default" : [
-            "Ahahaha, That was fun!",
-            "It's over? no fun...?",
-            "VICTORY!"
+            "AHAHAHA, Again! Again!",
+            "THRILLS! CHILLS! KILLS!",
+            "No more friends..?",
+            "Don't sleep now! We are playing!"
           ]
         }
       },
       "lostTarget" : {
         "default" : {
           "default" : [
-            "Where'd they go..."
+            "I miss yoouuuu... ;-;",
+            "It only takes time..."
           ]
         }
       },
       "outOfSight" : {
         "default" : {
           "default" : [
-            "Oi get back here so I can hit you."
+            "But I just want a hug! ;-;",
+            "Maybe not in this universe, but I will find you."
           ]
         }
       },
       "cheerOn" : {
         "default" : {
           "default" : [
-            "We can do this!"
+            "You might succeed, just keep trying.",
+            "Time is ticking!"
           ]
         }
       },
       "cantReach" : {
         "default" : {
           "default" : [
-            "I need to get closer to you to attack you... get down here please?"
+            "You. Will. Fall.",
+            "I'm only using 0.0037% percent of my power!"
           ]
         }
       }
@@ -121,7 +126,7 @@
       },
       "meleeWeaponCooldowns" : {
         "default" : 1.0,
-        "broadsword" : 1.7,
+        "broadsword" : 0.5,
         "dagger" : 0.7,
         "axe" : 1.4,
         "hammer" : 2.0,
@@ -139,11 +144,11 @@
             "chest" : [ { "name" : "nebchest" } ],
             "legs" : [ { "name" : "neblegs" } ],
             "primary" : [
-              "sgtoyrocket"
+              "sgtoybabyrail"
 			  ],
-            "sheathedprimary" : [ "sgtoyrocket" ],
+            //"sheathedprimary" : [ "sgtoybabyrail" ],
             "alt" : [
-              { "name" : "sgtoyrocket" }
+              { "name" : "toyspearrocketlauncher" }
             ]
           }
         ] ]
@@ -157,7 +162,7 @@
     "damageSourceKind" : "nodamage",
     "damageRepeatGroup" : "npcTouchKnockback",
     "damageRepeatTimeout" : 0.5,
-    "knockback" : 20,
+    "knockback" : 35,
     "statusEffects" : [ ]
   },
 
@@ -167,7 +172,7 @@
         "baseValue" : 200.0
       },
       "grit" : {
-        "baseValue" : 0.5
+        "baseValue" : 0.075
       },
       "powerMultiplier" : {
         "baseValue" : 1
