@@ -15,13 +15,13 @@
             "mode" : "loop"
           },
           "fired" : {
-            "frames" : 4,
+            "frames" : 5,
             "cycle" : 1,
             "mode" : "transition",
             "transition" : "reloading"
           },
-          "reload" : {
-            "frames" : 4,
+          "reloading" : {
+            "frames" : 3,
             "cycle" : 0.5,
             "mode" : "transition",
             "transition" : "active"
@@ -33,7 +33,7 @@
         "states" : {
           "off" : {},
           "fire" : {
-            "frames" : 4,
+            "frames" : 5,
             "cycle" : 1,
             "mode" : "transition",
             "transition" : "off"
@@ -44,7 +44,7 @@
     "parts" : {
       "turretHead" : {
         "properties" : {
-          "zLevel" : 5,
+          "zLevel" : -5,
 		  "fullbright" : false,
           "transformationGroups" : ["turret"]
         },
@@ -60,12 +60,12 @@
                 "image" : "sgrocketbackhead.png:active.<frame>?<facingDirection>"
               }
             },
-            "fired" : {
+            "fire" : {
               "properties" : {
                 "image" : "sgrocketbackhead.png:fired?<facingDirection>"
               }
             },
-            "reload" : {
+            "reloading" : {
               "properties" : {
                 "image" : "sgrocketbackhead.png:reload.<frame>?<facingDirection>"
               }
@@ -81,14 +81,9 @@
         },
         "partStates" : {
           "firing" : {
-            "off" : {
-              "properties" : {
-                "image" : ""
-              }
-            },
             "fire" : {
               "properties" : {
-                "image" : "muzzleflash.png:fire.<frame>?<facingDirection>"
+                "image" : "sgrocketbackhead.png:fired.<frame>?<facingDirection>"
               }
             }
           }
@@ -119,6 +114,6 @@
   },
 
   "sounds" : {
-    "fire" : [ ]
+    "fire" : [ "/sfx/monsters/boss/sgdronerocketlaunch.ogg" ]
   }
 }

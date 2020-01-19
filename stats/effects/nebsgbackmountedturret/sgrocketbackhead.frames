@@ -3,7 +3,7 @@
     "size" : [22, 13],
     "dimensions" : [11, 1],
     "names" : [
-	  [ "active.1", null, "fired.1", "fired.2", "fired.3", "fired.4", null, "reload.1", "reload.2", "reload.3", "reload.4" ]
+	  [ "active.1", null, "fired.1", "fired.2", "fired.3", "fired.4", "fired.5", null, "reload.1", "reload.2", "reload.3" ]
 	]
   }
 }

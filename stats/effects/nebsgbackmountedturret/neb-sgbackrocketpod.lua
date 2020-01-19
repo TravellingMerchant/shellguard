@@ -51,7 +51,7 @@ function update(dt)
   if not mcontroller.crouching() and self.crouchOnly then
     self.active = false
     animator.setAnimationState("turretHead", "hidden")
-  elseif mcontroller.crouching() and self.crouchOnly then
+  elseif mcontroller.crouching() and self.crouchOnly and not self.active then
     self.active = true
     animator.setAnimationState("turretHead", "active")
   end
