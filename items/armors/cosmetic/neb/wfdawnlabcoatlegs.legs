@@ -9,6 +9,8 @@
   "shortdescription" : "Dawn's Labcoat Skirt",
   "tooltipKind" : "armor",
 
+  "hideBody" : true,
+
   "maleFrames" : "pants.png",
   "femaleFrames" : "pants.png",
 

@@ -8,6 +8,7 @@
   "description" : "Keeps the potions off the skin.",
   "shortdescription" : "Dawn's Labcoat",
   "tooltipKind" : "armor",
+  "hideBody" : true,
 
   "maleFrames" : {
     "body" : "chestm.png",

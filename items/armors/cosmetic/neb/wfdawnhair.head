@@ -8,6 +8,7 @@
   "description" : "Soft hair and fluffy ears, perfect for petting.",
   "shortdescription" : "Dawn's Hair",
   "tooltipKind" : "armor",
+  "hideBody" : true,
 
   "maleFrames" : "head.png",
   "femaleFrames" : "head.png",

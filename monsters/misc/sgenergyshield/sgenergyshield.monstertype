@@ -32,8 +32,8 @@
       "gravityEnabled" : false,
 
       "mass" : 0.5,
-      "flySpeed" : 8000,
-      "airForce" : 3000,
+      "flySpeed" : 80,
+      "airForce" : 300,
 
       "airFriction" : 0,
 
