@@ -27,6 +27,15 @@
       ]
     }]
   ],
+  
+  "sgbossminecodex1" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgbossmine1-codex", 1]}
+      ]
+    }]
+  ],
+
   "sgufoclaw" : [
     [1, {
       "pool" : [
