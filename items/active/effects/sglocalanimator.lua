@@ -8,6 +8,7 @@ function update()
   
   self.sgchains = animationConfig.animationParameter("chains") or {}
   for _, chain in pairs(self.sgchains) do
+	if type(chain) ~= "table" then break end
     local continue = false
     if chain.targetEntityId then
       if world.entityExists(chain.targetEntityId) then
