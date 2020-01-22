@@ -1,0 +1,57 @@
+{
+  "objectName" : "sgbombergunshipspawner",
+  "colonyTags" : ["shellguard"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "printable" : false,
+  "price" : 50000,
+  "description" : "A platform devised to warp in bomber gunships from the Shellguard Base.",
+  "shortdescription" : "Bomber Warpgate",
+  "race" : "human",
+  
+  "health" : 1,
+
+  "apexDescription" : "This can warp in a Shellguard Gunship!",
+  "avianDescription" : "This can warp in a Shellguard Gunship!",
+  "floranDescription" : "Thissss can warp in a Sssshellguard Gunssship!",
+  "glitchDescription" : "Enthused. This can warp in a Shellguard Gunship.",
+  "humanDescription" : "This can warp in a Shellguard Gunship!",
+  "hylotlDescription" : "This can warp in a Shellguard Gunship!",
+  "novakidDescription" : "This 'ere can warp in a Shellguard Gunship!",
+
+  "inventoryIcon" : "bombergunshipspawnericon.png",
+  "orientations" : [
+    {
+	  "dualImage" : "bombergunshipspawnericon.png",
+      "imagePosition" : [-96, -48],
+
+      "spaceScan" : 0.0,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "animation" : "/objects/gunshipspawnerplatforms/gunshipspawnerplatform.animation",
+  "animationParts" : {
+    "platform" : "platform.png",
+    "shiphologram" : "shiphologram.png"
+  },
+  "animationPosition" : [-96, -48],
+  
+  "scripts" : [
+    "/objects/scripts/neb-interactvehicle.lua"
+  ],
+  "scriptDelta" : 1,
+  
+	//Vehicle
+	"vehicleType" : "sggunshipbomber",
+	//"vehicleOverrideParameters" : {}, don't use this if you dont know how to
+	"vehicleSpawnOffset" : [0, -1],
+	
+	//Cooldown
+	"cooldown" : 15,
+	
+	//Floating
+  "useFloatingObject" : true,			//If true, the item will smoothly float up and down
+  "floatingObjectCycle" : 2.0,			//Time for the item to move a full cycle
+  "floatingObjectMaxTransform" : 0.5	//Maximum up and down movement from origin
+}

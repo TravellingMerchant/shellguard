@@ -1,0 +1,95 @@
+{
+  "itemName" : "sgplasmapistol",
+  "price" : 1800,
+  "inventoryIcon" : "sgplasmapistol.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Fire hybrid ballistic plasma rounds out of a cute tiny pistol.",
+  "shortdescription" : "HBP Pocket Pistol",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : false,
+  
+  "animation" : "sgplasmapistol.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgplasmapistol.png",
+    "barrel" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/railshots/magshot.ogg" ]
+    }
+  },
+
+  "baseOffset" : [2.0, 0.25],
+  "muzzleOffset" : [0.25, 0.25],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.4,
+    "baseDps" : 6.5,
+    "energyUsage" : 15.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.02,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -15,
+        "weaponRotation" : 25,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "burst",
+    "burstCount" : 5,
+    "burstTime" : 0.1,
+
+    "projectileType" : "sgplasmaball",
+    "projectileParameters" : { 
+      "knockback" : 10
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgplasmapistolelite.png:idle",
+    "animationParts" : {
+      "middle" : "sgplasmapistolelite.png"
+    },
+    "shortdescription" : "HBP Pocket Pistol ^yellow;^reset;"
+  }
+}

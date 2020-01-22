@@ -1,0 +1,34 @@
+{
+  "objectName" : "sgshellguardbanner3",
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 80,
+  "printable" : false,
+
+  "description" : "A regal Shellguard wall banner.",
+  "shortdescription" : "Shellguard Regal Banner",
+  "race" : "",
+
+  "apexDescription" : "A red Shellguard banner. Wonderful.",
+  "avianDescription" : "Bright like the beaming sun. This colour represents Shellguard well.",
+  "floranDescription" : "Red SSSShellguard banner makesss Floran feel happy.",
+  "glitchDescription" : "Impressed. The iconic Shellguard banner.",
+  "humanDescription" : "A big bright Shellguard banner! I wish I could fit one in my dorm.",
+  "hylotlDescription" : "The Shellguard banner.",
+  "novakidDescription" : "I love the bright colour of the Shellguard banner.",
+
+
+  "inventoryIcon" : "sgshellguardbannericon.png",
+  "orientations" : [
+    {
+      "image" : "sgshellguardbanner.png:<color>",
+      "imagePosition" : [-17, -40],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : []
+
+    }
+  ]
+}

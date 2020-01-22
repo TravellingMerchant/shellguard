@@ -1,0 +1,175 @@
+{
+  "type" : "sgsurvivorendgame",
+  "shortdescription" : "The Survivor",
+
+  "categories" : [ "sgsurvivorendgame" ],
+  "parts" : [ "body", "arm" ],
+
+  "animation" : "sgsurvivorendgame.animation",
+  "reversed" : true,
+  "dropPools" : [
+    {
+      "default" : "endgamedrop"
+    }
+  ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/boss/bossMonster.lua",
+      "/scripts/stateMachine.lua",
+      "/scripts/util.lua",
+      "/scripts/vec2.lua",
+
+      "/monsters/boss/sgsurvivorendgame/dieState.lua",
+      "/monsters/boss/sgsurvivorendgame/idleState.lua",
+      "/monsters/boss/sgsurvivorendgame/hurtState.lua"
+    ],
+
+    "renderLayer" : "Projectile-10",
+
+    "skillCount" : 9,
+    "skills" : ["sgsurvivorendgameDashAttack", "sgspeartoss", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sghologram1", "sghologram4", "sghologramburst", "sgbreakershot" ],
+
+    "phases" : [
+      {
+        "skills" : [ "sgsurvivorendgamePunchAttack", "sghologram1", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sghologram1", "sgsurvivorendgameDashAttack", "sghologram1" ]
+      },
+      {
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.8,
+        "enterPhase" : "sgsurvivorjump",
+        "skills" : [ "sgbreakershot", "sgsurvivorendgameDashAttack", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack", "sghologram1" ]
+      },
+      {
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.5,
+        "enterPhase" : "sgsurvivorjump",
+        "skills" : [ "sghologramburst", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgspeartoss", "sgsurvivorjump", "sgbreakershot" ]
+      },
+      {
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.2,
+        "enterPhase" : "sgsurvivorjump",
+        "skills" : [ "sghologramburst", "sgsurvivorendgamePunchAttack", "sghologram4", "sgsurvivorjump", "sgSurvivorDeadAim", "sgsurvivorendgamePunchAttack", "sgsurvivorjump", "sgspeartoss", "sghologram4" ]
+      }
+    ],
+
+    "projectileSourcePosition" : [-2.5, -1.25],
+    "projectileSourceOffset" : [7, 0],
+
+    "queryTargetDistance" : 100.0,
+    "trackTargetDistance" : 200.0,
+    "switchTargetDistance" : 0,
+
+    "knockoutTime" : 0.5,
+    "knockoutEffect" : "blink",
+    "deathParticles" : "deathPoof",
+
+    "alwaysAggressive" : true,
+
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionPoly" : [ [-2, -4.5], [2, -4.5], [2, 1], [-2, 1] ],
+
+      "airForce" : 350,
+
+      "mass" : 2.0,
+      "walkSpeed" : 100,
+      "runSpeed" : 120,
+      "physicsEffectCategories" : ["boss"]
+    },
+    "jumpTargetDistance" : 4,
+    "jumpTime" : [0.4, 0.7],
+
+    "metaBoundBox" : [-1, -5.6, 1, 3],
+
+    "blockedSensors" : [ [1.5, -4.5], [1.5, -3.5], [1.5, -2.5], [1.5, -1.5], [1.5, -0.5], [1.5, 0.5] ],
+    "fallSensors" : [ [2, -3.5], [2, -5.5], [2, -6.5], [4, -4.5], [4, -5.5], [4, -6.5] ],
+
+    "touchDamage" : {
+      "poly" : [ [-4, -3], [0, -3], [0, 0], [-4, 0] ],
+      "damage" : 20,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "hammer",
+      "statusEffects" : [ ]
+    },
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : false,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0
+        },
+        "grit" : {
+          "baseValue" : 1
+        },
+        "maxHealth" : {
+          "baseValue" : 1950
+        },
+        "protection" : {
+          "baseValue" : 50
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "specialStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "healingStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "stunImmunity" : {
+          "baseValue" : 1.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.2
+        },
+        "fallDamageMultiplier" : {
+          "baseValue" : 0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0,
+          "maxValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [1.0, -1.5],
+    "feetOffset" : [0, -21]
+  }
+}

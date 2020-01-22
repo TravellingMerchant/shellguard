@@ -1,0 +1,33 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 10000 }
+  ],
+  "output" : {
+    "item" : "filledcapturepod",
+    "count" : 1,
+    "parameters" : {
+      "shortdescription" : "Goliath Drone",
+      "description" : "A massive drone built for war.",
+      "tooltipFields" : {
+        "subtitle" : "Shellguard Robot",
+        "objectImage" : "/monsters/walkers/sgheavyheavydrone/icon.png"
+      },
+      "pets" : [
+        {
+          "name" : "Drone",
+          "portrait" : [
+            {"image" : "/monsters/walkers/sgheavyheavydrone/icon.png"}
+          ],
+          "config" : {
+            "type" : "sgheavyheavydrone",
+            "parameters" : {
+              "level" : 6,
+              "aggressive" : true
+            }
+          }
+        }
+      ]
+    }
+  },
+  "groups" : [ "sgrobotcraftingboss" ]
+}

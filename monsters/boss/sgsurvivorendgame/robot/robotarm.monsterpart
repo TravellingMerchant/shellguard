@@ -1,0 +1,9 @@
+{
+  "name" : "sgarenabossarms",
+  "category" : "sgsurvivorendgame",
+  "type" : "arm",
+
+  "frames" : {
+    "arm" : "sgarenabossarm.png"
+  }
+}

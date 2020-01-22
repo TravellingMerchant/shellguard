@@ -1,0 +1,108 @@
+{
+  "type" : "crewmembershellguardmercheavy",
+  "baseType" : "crewmemberpenguin",
+
+  "scriptConfig" : {
+    "crew" : {
+      "recruitInteractAction" : {
+        "messageType" : "recruits.offerMercenary",
+        "messageArgs" : [
+          [ { "name" : "dubloon", "count" : 1 } ]
+        ]
+      }
+    }
+  },
+
+   // "behaviorConfig" : {
+   //   "leapWindup" : 0.75,
+    //  "rangedAimTime" : 0.5,
+   //   "rangedWindupTime" : 0.01,
+   //   "rangedMinFireTime": 5,
+   //   "rangedMaxFireTime": 10
+   // },
+
+  "statusControllerSettings" : {
+    "stats" : {
+       "maxEnergy" : {
+        "baseValue" : 40
+      }
+    }
+  },
+
+
+  "items" : {
+    "default" : [
+      [0, [
+          {
+            "head" : [ { "name" : "sgflathelmet" }, { "name" : "sgtitanhelmet" } ],
+            "chest" : [ { "name" : "sgcompositechest" } ],
+            "legs" : [ { "name" : "shellarmourlegsnpc" } ],
+			"back" : [ { "name" : "sgheavyback" }, { "name" : "sgshieldback" } ],
+            "primary" : [
+              "sgtyphoonminigun",
+              "sggrenademachinegun",
+              "sgstuncannon",
+              "sgsever",
+			  "neb-shellguardrail"
+            ],
+            "sheathedprimary" : [
+              "heavyhatchet",
+              "sgcarve",
+              "sgofficersword"
+            ],
+            "alt" : [
+              { "name" : "sgheavyshield" }
+            ]
+          }
+        ] ]
+    ],
+    "human" : [
+      [0, [
+          {
+            "head" : [ { "name" : "sgflathelmet" }, { "name" : "sgtitanhelmet" } ],
+            "chest" : [ { "name" : "sgcompositechest" } ],
+            "legs" : [ { "name" : "shellarmourlegsnpc" } ],
+			"back" : [ { "name" : "sgheavyback" }, { "name" : "sgshieldback" } ],
+            "primary" : [
+              "sgtyphoonminigun",
+              "sggrenademachinegun",
+              "sgstuncannon",
+              "sgsever",
+			  "neb-shellguardrail"
+            ],
+            "sheathedprimary" : [
+              "heavyhatchet",
+              "sgcarve",
+              "sgofficersword"
+            ],
+            "alt" : [
+              { "name" : "sgheavyshield" }
+            ]
+          }
+        ] ],
+      [1, [
+          {
+            "head" : [ { "name" : "sgflathelmet" }, { "name" : "sgtitanhelmet" } ],
+            "chest" : [ { "name" : "sgcompositechest" } ],
+            "legs" : [ { "name" : "shellarmourlegsnpc" } ],
+			"back" : [ { "name" : "sgheavyback" }, { "name" : "sgshieldback" } ],
+            "primary" : [
+              "sgtyphoonminigun",
+              "sggrenademachinegun",
+              "sgstuncannon",
+              "sgsever",
+			  "neb-shellguardrail"
+            ],
+            "sheathedprimary" : [
+              "heavyhatchet",
+              "sgcarve",
+              "sgofficersword"
+            ],
+            "alt" : [
+              { "name" : "sgheavyshield" }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

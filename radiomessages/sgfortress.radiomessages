@@ -274,6 +274,180 @@
     "senderName" : "Commander Andros Galvanek",
     "portraitImage" : "/interface/chatbubbles/Andros.png",
     "text" : "Oh... NOW there's elevator music. Of course there is..."
+  },
+  
+//-------- elevator --------  
+
+  "elevatorsurvivalnugget" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "This room was built by a new sponser. The number one bird-based fast food chain in the immediate area."
+  },
+
+  "elevatorsurvival1" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Welcome to the new torture - correction - transport test."
+  },
+  
+  "elevatorsurvival2" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Intro segment complete. This unit hopes you remembered to bring resources to sustain your organic body."
+  },
+
+  "elevatorwarning" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "You may wish to avoid the spikes. Organic bodies are not compatible with spike technology."
+  },
+  
+  "elevatorsurvival3" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "This is your mandatory rest area. Elevators are machines and do not have to rest. Do not be left behind."
+  },
+
+  "elevatorsurvival4" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Tests indicate that \"art\" has a revitalising effect on organics mental fortitude. Please admire this \"art\"."
+  },
+  
+  "elevatorsurvival5" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "You are roughly half way through the test."
+  },
+
+  "elevatorsurvival6" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "The test is almost complete."
+  },
+  
+  "elevatorsurvival7" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Congratulations, you have completed the test without destroying your orangic body. Your mental health status is still pending."
+  },
+
+//---------WRECKAGE-----------
+
+  "sgwreckage1" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "This is the wreckage of the ship you destroyed, be careful. There are still signs of movement."
+  }, 
+
+  "sgwreckage2" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Search parties have been dispatched in other areas of the wreckage. If he's alive, we'll find him."
+  }, 
+
+  "sgwreckage3" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Look out! Large robotic signature detected!"
+  }, 
+
+  "sgwreckage4" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "I'm glad you're alive, but other search parties are going silent further ahead. I need you to check it out."
+  }, 
+
+  "sgwreckage5" : {
+    "type" : "mission",
+    "senderName" : "Commander Andros Galvanek",
+    "portraitImage" : "/interface/chatbubbles/Andros.png",
+    "text" : "Scans show this pipe will take you to another area of the wreckage."
+  },
+  
+//-----------FINAL------------
+
+   "sgfinal1" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgame.png",
+    "text" : "You.. "
+  },
+  
+   "sgfinal2" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgameangry.png",
+    "text" : "You did all of this.. You ruined EVERYTHING."
+  },
+
+   "sgfinal3" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgame.png",
+    "text" : "It's gone.. All gone.. Everything I worked so hard to accomplish.. and you destroyed it."
+  },
+  
+   "sgfinal4" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgame.png",
+    "text" : "Everything was taken from me.. My home, my planet.. my family. I should have been with them by now.."
+  },
+
+   "sgfinal5" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgameangry.png",
+    "text" : "^red;YET WHY AM I STILL HERE?!^white;"
+  },
+  
+   "sgfinal6" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgameready.png",
+    "text" : "Why am I always left here alone?"
+  },
+  
+   "sgfinal7" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgameready.png",
+    "text" : "Though.. now that I think of it it.. I'm not alone now, am I?"
+  },
+
+   "sgfinal8" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgame.png",
+    "text" : "You're here."
+  },
+  
+   "sgfinal9" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgame.png",
+    "text" : "Just you and me in this cold, cursed place."
+  },
+
+   "sgfinal10" : {
+    "type" : "mission",
+    "senderName" : "!@#!$!#%",
+    "portraitImage" : "/interface/chatbubbles/survivorendgameangry.png",
+    "text" : "^red;And only one of us will be leaving. Completely. Alone.^white;"
   }
 
 }

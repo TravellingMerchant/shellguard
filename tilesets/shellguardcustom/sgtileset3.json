@@ -1,4 +1,12 @@
 { "columns":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"",
+         "target":"."
+        }
+    },
  "grid":
     {
      "height":1,
@@ -8,8 +16,8 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":21,
- "tiledversion":"1.2.4",
+ "tilecount":39,
+ "tiledversion":"1.3.1",
  "tileheight":400,
  "tileproperties":
     {
@@ -153,6 +161,96 @@
          "object":"sgcorerematchtele",
          "tilesetDirection":"right"
         },
+     "21":
+        {
+         "\/\/description":"sglandingpad",
+         "\/\/name":"sglandingpad",
+         "\/\/shortdescription":"sglandingpad",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sglandingpad",
+         "tilesetDirection":"right"
+        },
+     "22":
+        {
+         "\/\/description":"sgdreadnautobject",
+         "\/\/name":"sgdreadnautobject",
+         "\/\/shortdescription":"sgdreadnautobject",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgdreadnautobject",
+         "tilesetDirection":"right"
+        },
+     "23":
+        {
+         "\/\/description":"body",
+         "\/\/name":"body",
+         "\/\/shortdescription":"body",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgbody1",
+         "tilesetDirection":"right"
+        },
+     "24":
+        {
+         "\/\/description":"body",
+         "\/\/name":"body",
+         "\/\/shortdescription":"body",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgbody1snow",
+         "tilesetDirection":"right"
+        },
+     "25":
+        {
+         "\/\/description":"body",
+         "\/\/name":"body",
+         "\/\/shortdescription":"body",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgbody2",
+         "tilesetDirection":"right"
+        },
+     "26":
+        {
+         "\/\/description":"body",
+         "\/\/name":"body",
+         "\/\/shortdescription":"body",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgbody2snow",
+         "tilesetDirection":"right"
+        },
+     "27":
+        {
+         "\/\/description":"sgwreckageteleporter1",
+         "\/\/name":"sgwreckageteleporter1",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgwreckageteleporter1",
+         "tilesetDirection":"right"
+        },
+     "28":
+        {
+         "\/\/description":"sgdoubletroubletele",
+         "\/\/name":"sgdoubletroubletele",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sgdoubletroubletele",
+         "tilesetDirection":"right"
+        },
+     "29":
+        {
+         "\/\/description":"sgheavyspawner",
+         "\/\/name":"sgheavyspawner",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-48",
+         "imagePositionY":"0",
+         "object":"sgheavyspawner",
+         "tilesetDirection":"right"
+        },
      "3":
         {
          "\/\/description":"sgcryovent",
@@ -161,6 +259,96 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"sgheatvent",
+         "tilesetDirection":"right"
+        },
+     "30":
+        {
+         "\/\/description":"sgdoubletroubletele",
+         "\/\/name":"sgdoubletroubletele",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sgelevatorsurvivaltele",
+         "tilesetDirection":"right"
+        },
+     "31":
+        {
+         "\/\/description":"sgdoubletroubletele",
+         "\/\/name":"sgdoubletroubletele",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sgsurvivorrematchtele",
+         "tilesetDirection":"right"
+        },
+     "32":
+        {
+         "\/\/description":"sgtoyshop",
+         "\/\/name":"sgtoyshop",
+         "\/\/shortdescription":"sgtoyshop",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sgtoyshop",
+         "tilesetDirection":"right"
+        },
+     "33":
+        {
+         "\/\/description":"sgcryovent",
+         "\/\/name":"sgcryovent",
+         "\/\/shortdescription":"breakable",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgancientflametrap",
+         "tilesetDirection":"right"
+        },
+     "34":
+        {
+         "\/\/description":"alien ",
+         "\/\/name":"alien",
+         "\/\/shortdescription":"alien",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgalienweeds",
+         "tilesetDirection":"right"
+        },
+     "35":
+        {
+         "\/\/description":"alien ",
+         "\/\/name":"alien",
+         "\/\/shortdescription":"alien",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgalienweedssmall",
+         "tilesetDirection":"right"
+        },
+     "36":
+        {
+         "\/\/description":"sgshellguardbanner",
+         "\/\/name":"sgshellguardbanner",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-17",
+         "imagePositionY":"-40",
+         "object":"sgshellguardbanner",
+         "tilesetDirection":"right"
+        },
+     "37":
+        {
+         "\/\/description":"sgshellguardbanner",
+         "\/\/name":"sgshellguardbanner",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-17",
+         "imagePositionY":"-40",
+         "object":"sgshellguardbanner2",
+         "tilesetDirection":"right"
+        },
+     "38":
+        {
+         "\/\/description":"sgshellguardbanner",
+         "\/\/name":"sgshellguardbanner",
+         "\/\/shortdescription":"Guard-Mart",
+         "imagePositionX":"-17",
+         "imagePositionY":"-40",
+         "object":"sgshellguardbanner3",
          "tilesetDirection":"right"
         },
      "4":
@@ -366,7 +554,187 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "21":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "22":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "23":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "24":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "25":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "26":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "27":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "28":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "29":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "3":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "30":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "31":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "32":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "33":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "34":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "35":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "36":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "37":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "38":
         {
          "\/\/description":"string",
          "\/\/name":"string",
@@ -523,11 +891,119 @@
          "imageheight":67,
          "imagewidth":40
         },
+     "21":
+        {
+         "image":"..\/..\/objects\/decorations\/sglandingpad\/sglandingpadicon.png",
+         "imageheight":64,
+         "imagewidth":655
+        },
+     "22":
+        {
+         "image":"..\/..\/objects\/decorations\/sgdreadnautobject\/sgdreadnautobjecticon.png",
+         "imageheight":165,
+         "imagewidth":558
+        },
+     "23":
+        {
+         "image":"..\/..\/objects\/decorations\/sgbody1\/sgbody1.png",
+         "imageheight":11,
+         "imagewidth":35
+        },
+     "24":
+        {
+         "image":"..\/..\/objects\/decorations\/sgbody1snow\/sgbody1icon.png",
+         "imageheight":11,
+         "imagewidth":35
+        },
+     "25":
+        {
+         "image":"..\/..\/objects\/decorations\/sgbody2\/sgbody1icon.png",
+         "imageheight":11,
+         "imagewidth":35
+        },
+     "26":
+        {
+         "image":"..\/..\/objects\/decorations\/sgbody2snow\/sgbody1icon.png",
+         "imageheight":11,
+         "imagewidth":35
+        },
+     "27":
+        {
+         "image":"..\/..\/objects\/sgwreckageteleporter1\/sgfortressteleporter1icon.png",
+         "imageheight":96,
+         "imagewidth":48
+        },
+     "28":
+        {
+         "image":"..\/..\/objects\/rematch teleporters\/sgdoubletroubletele\/sgdoubletroubleteleicon.png",
+         "imageheight":67,
+         "imagewidth":40
+        },
+     "29":
+        {
+         "image":"..\/..\/objects\/questgivers\/sgheavyspawner\/sgheavyspawnericon.png",
+         "imageheight":24,
+         "imagewidth":56
+        },
      "3":
         {
          "image":"..\/..\/objects\/breakables\/sgheatvent\/sgheatventicon.png",
          "imageheight":38,
          "imagewidth":31
+        },
+     "30":
+        {
+         "image":"..\/..\/objects\/rematch teleporters\/sgelevatorsurvivaltele\/sgelevatorsurvivalteleicon.png",
+         "imageheight":67,
+         "imagewidth":40
+        },
+     "31":
+        {
+         "image":"..\/..\/objects\/rematch teleporters\/sgsurvivorrematch\/sgsurvivorrematchicon.png",
+         "imageheight":67,
+         "imagewidth":40
+        },
+     "32":
+        {
+         "image":"..\/..\/objects\/sgtoyshop\/icon.png",
+         "imageheight":51,
+         "imagewidth":40
+        },
+     "33":
+        {
+         "image":"..\/..\/objects\/trap\/sgancientflametrap\/icon.png",
+         "imageheight":8,
+         "imagewidth":16
+        },
+     "34":
+        {
+         "image":"..\/..\/objects\/alien\/sgalienweeds\/hivelampicon.png",
+         "imageheight":32,
+         "imagewidth":16
+        },
+     "35":
+        {
+         "image":"..\/..\/objects\/alien\/sgalienweedssmall\/hivelampicon.png",
+         "imageheight":32,
+         "imagewidth":16
+        },
+     "36":
+        {
+         "image":"..\/..\/objects\/decorations\/decorative\/sgshellguardbanner\/sgshellguardbanner.png",
+         "imageheight":80,
+         "imagewidth":34
+        },
+     "37":
+        {
+         "image":"..\/..\/objects\/decorations\/decorative\/sgshellguardbanner2\/sgshellguardbanner.png",
+         "imageheight":80,
+         "imagewidth":34
+        },
+     "38":
+        {
+         "image":"..\/..\/objects\/decorations\/decorative\/sgshellguardbanner3\/sgshellguardbanner.png",
+         "imageheight":80,
+         "imagewidth":34
         },
      "4":
         {
@@ -566,7 +1042,7 @@
          "imagewidth":40
         }
     },
- "tilewidth":464,
+ "tilewidth":655,
  "type":"tileset",
  "version":1.1
 }

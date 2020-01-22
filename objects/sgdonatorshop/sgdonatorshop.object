@@ -27,10 +27,14 @@
 	  { "item" : "sgquartermaster" },
 	  { "item" : "sgspacehelmet" },
 	  { "item" : "sgbasicspacehelmet" },
-	  { "item" : "sgsniperhelmet" },	  
+	  { "item" : "sgsniperhelmet" },
+	  { "item" : "sgspecophelmet" },		  
 	  { "item" : "shelldronehead" },
 	  { "item" : "shelldronechest" },
 	  { "item" : "shelldronelegs" },
+	  { "item" : "sgchristmaschest" },
+	  { "item" : "sgchristmasengineer" },
+	  { "item" : "sgchristmashelmet" },
 	  { "item" : "sgbangcorn" }
     ]
   },

@@ -1,4 +1,12 @@
 { "columns":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"",
+         "target":"."
+        }
+    },
  "grid":
     {
      "height":16,
@@ -8,8 +16,8 @@
  "margin":0,
  "name":"sgmaterials",
  "spacing":0,
- "tilecount":6,
- "tiledversion":"1.2.4",
+ "tilecount":9,
+ "tiledversion":"1.3.1",
  "tileheight":8,
  "tileproperties":
     {
@@ -54,6 +62,27 @@
          "\/\/name":"sgheatspiketile",
          "\/\/shortdescription":"sgheatspiketile",
          "material":"sgheatspiketile"
+        },
+     "6":
+        {
+         "\/\/description":"sg alien tile",
+         "\/\/name":"sg alien tile",
+         "\/\/shortdescription":"sg alien tile",
+         "material":"sgalienblock"
+        },
+     "7":
+        {
+         "\/\/description":"sg alien tile",
+         "\/\/name":"sg alien tile",
+         "\/\/shortdescription":"sg alien tile",
+         "material":"sgalienplate"
+        },
+     "8":
+        {
+         "\/\/description":"sg alien tile",
+         "\/\/name":"sg alien tile",
+         "\/\/shortdescription":"sg alien tile",
+         "material":"sgalienspikeblock"
         }
     },
  "tilepropertytypes":
@@ -99,6 +128,27 @@
          "\/\/name":"string",
          "\/\/shortdescription":"string",
          "material":"string"
+        },
+     "6":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "material":"string"
+        },
+     "7":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "material":"string"
+        },
+     "8":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "material":"string"
         }
     },
  "tiles":
@@ -136,6 +186,24 @@
      "5":
         {
          "image":"materials\/sgheatspiketile.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "6":
+        {
+         "image":"materials\/sgalienblock.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "7":
+        {
+         "image":"materials\/sgalienplate.png",
+         "imageheight":8,
+         "imagewidth":8
+        },
+     "8":
+        {
+         "image":"materials\/sgalienspikeblock.png",
          "imageheight":8,
          "imagewidth":8
         }

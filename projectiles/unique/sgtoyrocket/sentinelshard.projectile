@@ -1,0 +1,27 @@
+{
+  "projectileName" : "sgtoyrocket",
+  "actionOnCollide" : [
+  ],
+  "image" : "sentinelshard.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 0.7
+  },
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "sgtoyblast",
+      "fuzzAngle" : 5,
+      "inheritDamageFactor" : 0.625,
+      "angleAdjust" : 0
+    }
+  ],
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "damageTeam" : { "type" : "indiscriminate" },
+  "physics" : "grenade",
+  "bounces" : 3,
+  "timeToLive" : 10,
+  "power" : 20,
+  "speed" : 60,
+  "damageKind" : "bow"
+}

@@ -1,0 +1,36 @@
+{
+  "name" : "sgsurvivorshield",
+  "effectConfig" : {
+		//Drone Spawning
+		"droneRespawnTime" : 15,
+		"droneCount" : 3,
+
+		//Drone Orbiting
+		"droneOrbitDistance" : 3,
+		"droneOrbitRate" : 0.8,
+
+		//Drone Config
+		"droneType" : "sgsurvivorshield",
+		"droneParameters" : {
+			"movementMode" : "Orbit",
+
+			"attackMode" : "none",
+
+			"statusSettings" : {
+				"stats" : {
+					"flatMaxHealth" : { "baseValue" : 400 }
+				}
+			}
+		}
+	},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "sgsurvivorshield.lua"
+  ],
+
+  "animationConfig" : "sgsurvivorshield.animation",
+
+  "label" : "Energy Shield",
+  "icon" : "/items/armors/wfsystem/elemental/sgsurvivorshieldeffect.png"
+}

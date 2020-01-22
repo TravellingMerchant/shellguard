@@ -1,0 +1,23 @@
+{
+  "projectileName" : "sgplayerhologramspawner",
+    "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "sgplayerhologramdash",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    }
+  ],
+  "image" : "sgplayerhologramdash.png",
+  "animationCycle" : 0.25,
+  "pointLight" : true,
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 0.01,
+  "fullbright" : true,
+  "power" : 0,
+  "speed" : 10,
+  "piercing" : true,
+  "physics" : "sgruincleaverphysics",
+  "damageKind" : "bow"
+}

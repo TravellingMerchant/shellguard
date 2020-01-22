@@ -1,0 +1,51 @@
+{
+  "itemName" : "sgsanguresmacker",
+  "price" : 3000,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Would probably be dangerous- if it wasn't made of foam.",
+  "shortdescription" : "Sangure's Smacker",
+  //"tooltipKind" : "sword",
+  "category" : "broadsword",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","melee","broadsword"],
+
+  "inventoryIcon" : "sgsanguresmacker.png",
+
+  "animation" : "/items/active/weapons/melee/broadsword/sgcarvecombo.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "sgsanguresmacker.png"
+  },
+  "animationCustom" : { },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "sgcarvecombo",
+  "primaryAbility" : {
+    "fireTime" : 0.5,
+    "baseDps" : 0,
+    "damageConfig" : {
+      "damageSourceKind" : "hammer"
+    },
+	"stepDamageConfig" : [
+      {
+        "baseDamageFactor" : 1.0,
+        "knockback" : 250
+      },
+      {
+        "baseDamageFactor" : 1.0,
+        "knockback" : 250
+      },
+      {
+        "baseDamageFactor" : 1.0,
+        "knockback" : 250
+      }
+    ]
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

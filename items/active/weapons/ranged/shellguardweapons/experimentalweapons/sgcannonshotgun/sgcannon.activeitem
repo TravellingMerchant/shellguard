@@ -1,0 +1,103 @@
+{
+  "itemName" : "sgcannonshotgun",
+  "price" : 2400,
+  "inventoryIcon" : "sggrenademachinegun.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Launch a spread of cannonballs at foes!",
+  "shortdescription" : "Scatter Cannon",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sggrenademachinegun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sggrenademachinegun.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/plasmiteheavy4.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.75, -0.625],
+  "muzzleOffset" : [1.375, -0.25],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 1.5,
+    "baseDps" : 9.5,
+    "energyUsage" : 40.0,
+    "projectileCount" : 5,
+    "inaccuracy" : 0.07,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation"
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation",
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.5,
+        "armRotation" : -30,
+        "weaponRotation" : 40,
+        "twoHanded" : true,
+
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation",
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "sgcannonballsmall",
+    "projectileParameters" : { 
+      "knockback" : 15,
+	  "speed" : 100
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sggrenademachinegunelite.png:idle",
+    "animationParts" : {
+      "middle" : "sggrenademachinegunelite.png"
+    },
+    "shortdescription" : "Scatter Cannon ^yellow;^reset;"
+  }
+}

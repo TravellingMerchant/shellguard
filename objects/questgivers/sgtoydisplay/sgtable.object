@@ -1,0 +1,36 @@
+{
+  "objectName" : "sgtoydisplay",
+  "colonyTags" : ["commerce","industrial"],
+  "rarity" : "Common",
+  "description" : "Sign up for Dart Quest today! This beacon will help you reach the Dart Quest arena after you're done with the quests!",
+  "shortdescription" : "Dart Quest Beacon.",
+  "race" : "generic",
+  "category" : "teleporter",
+  "price" : 85,
+
+  "apexDescription" : "This beacon will help me reach the Dart Quest arena!",
+  "avianDescription" : "This beacon will help me reach the Dart Quest arena!",
+  "floranDescription" : "Thissss beacon will help me reach the Dart Quesssst arena!",
+  "glitchDescription" : "Happy. This beacon will help me reach the Dart Quest arena!",
+  "humanDescription" : "This beacon will help me reach the Dart Quest arena!",
+  "hylotlDescription" : "This beacon will help me reach the Dart Quest arena!",
+  "novakidDescription" : "This beacon will be takin' me to the Dart Quest arena!",
+
+
+  "interactAction" : "OpenTeleportDialog",
+  "interactData" : "/interface/warping/sgtoyteleport.config",
+  "teleporterFootPosition" : [-1, 1],
+
+  "inventoryIcon" : "sgtableicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgtable.png:<color>",
+      "imagePosition" : [-16, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+
+    }
+  ]
+}

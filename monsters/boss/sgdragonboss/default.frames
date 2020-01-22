@@ -1,0 +1,19 @@
+{
+  "frameGrid" : {
+    "size" : [182, 140],
+    "dimensions" : [6, 4],
+
+    "names" : [
+      [ null, "stage1.idle.1", null, "stage1.attack.1", "stage1.attack.2", "stage1.attack.3" ],
+      [ null, "stage2.idle.1", null, "stage2.attack.1", "stage2.attack.2", "stage2.attack.3" ],
+      [ null, "stage3.idle.1", null, "stage3.attack.1", "stage3.attack.2", "stage3.attack.3" ],
+      [ null, "dead.idle.1", null, "dead.attack.1", "dead.attack.2", "dead.attack.3" ]
+    ]
+  },
+  "aliases" : {
+    "stage1.winddown.1" : "stage1.attack.2",
+    "stage2.winddown.1" : "stage2.attack.2",
+    "stage3.winddown.1" : "stage3.attack.2",
+    "dead.winddown.1" : "dead.attack.2"
+  }
+}

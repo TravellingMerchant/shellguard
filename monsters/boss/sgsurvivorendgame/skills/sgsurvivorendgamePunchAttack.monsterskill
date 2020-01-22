@@ -1,0 +1,32 @@
+{
+  "name" : "sgsurvivorendgamePunchAttack",
+  "label" : "FIST PUNCH new",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sgsurvivorendgamePunchAttack.lua" ],
+    "sgsurvivorendgamePunchAttack" : {
+      "skillTime" : 2.0,
+
+      "distanceRange" : [4, 8],
+      "windupTime" : 0.7,
+      "winddownTime" : 0.5,
+
+      "projectile" : {
+        "type" : "swipe",
+        "config" : {
+          "power" : 25,
+          "speed" : 10,
+          "damageKind" : "hammer"
+        },
+        "offset" : [3.5, -1]
+      }
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "punch" : [ "/sfx/monsters/boss/survivorgrunt1.ogg" ]
+    }
+  }
+}

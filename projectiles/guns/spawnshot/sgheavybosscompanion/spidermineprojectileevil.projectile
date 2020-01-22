@@ -1,0 +1,29 @@
+{
+  "projectileName" : "sgheavybosscompanion",
+  "physics" : "grenade",
+  "image" : "spidermineprojectileevil.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 3,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [150, 0, 150],
+  "actionOnReap" : [
+    {
+      "action" : "spawnmonster",
+      "type" : "sgevisceratorevil",
+      "level" : 6,
+      "offset" : [0, 2],
+      "arguments" : {
+        "aggressive" : true
+      }
+    },
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/tech/tramplatform_close.ogg"
+      ]
+    }
+  ],
+  "power" : 0,
+  "speed" : 20,
+  "damageKind" : "default"
+}

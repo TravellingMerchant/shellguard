@@ -1,0 +1,103 @@
+{
+  "itemName" : "sgtyphoonminigun",
+  "price" : 2700,
+  "inventoryIcon" : "sgtyphoonminigun.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A heavy minigun with a frankly insane fire rate.",
+  "shortdescription" : "Typhoon Minigun",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgtyphoonminigun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgtyphoonminigun.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/railshots/turretshot.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.75, -0.625],
+  "muzzleOffset" : [2.125, -0.25],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.02,
+    "baseDps" : 25.5,
+    "energyUsage" : 80.0,
+    "projectileCount" : 5,
+    "inaccuracy" : 0.07,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation"
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation",
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.02,
+        "armRotation" : -45,
+        "weaponRotation" : 55,
+        "twoHanded" : true,
+
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation",
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "bullet-4",
+    "projectileParameters" : { 
+      "knockback" : 2,
+	  "speed" : 150
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgtyphoonminigunelite.png:idle",
+    "animationParts" : {
+      "middle" : "sgtyphoonminigunelite.png"
+    },
+    "shortdescription" : "Typhoon Minigun ^yellow;^reset;"
+  }
+}

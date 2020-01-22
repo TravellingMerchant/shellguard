@@ -1,0 +1,33 @@
+{
+  "objectName" : "sgbody1",
+  "colonyTags" : ["valuable"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 100,
+
+  "apexDescription" : "A dead Shellguard Soldier!",
+  "avianDescription" : "A dead Shellguard Soldier!",
+  "floranDescription" : "A dead Ssssshellguard Ssssoldier! Shame that meats going to wassste.",
+  "glitchDescription" : "Shocked. A dead Shellguard Soldier.",
+  "humanDescription" : "A dead Shellguard Soldier!",
+  "hylotlDescription" : "A dead Shellguard Soldier!",
+  "novakidDescription" : "That there is a Shellguard Soldier who met their match.",
+
+  "description" : "A dead member of Shellguard",
+  "shortdescription" : "Dead Shellguard Soldier",
+  "race" : "human",
+
+  "inventoryIcon" : "sgbody1.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgbody1.png:<color>",
+      "imagePosition" : [-8, -0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

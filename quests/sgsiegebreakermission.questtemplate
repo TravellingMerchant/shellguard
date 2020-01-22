@@ -1,0 +1,46 @@
+{
+  "id" : "sgsiegebreakermission",
+  "prerequisites" : ["sgwreckagemission"],
+  "title" : "^green;Destroy the Siegebreaker.",
+  "text" : "This unit has issued a recall of its built units. You are required to terminate a powerful robot that is not returning upon this units recall command.",
+  "completionText" : "What a strange location. This unit will have to recalibrate its sensors.",
+  "moneyRange" : [5000, 5000],
+  "rewards" : [
+    [ [ "sgbreakaction", 1 ], ["money", 5000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/sgfortressbase/sgfortressbasequesticon.png"} ],
+        "title" : "Fortress"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/sgfortressbase/sgfortressbasequesticon.png"} ],
+        "title" : "Fortress"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Destroy ^orange; Siegebreaker. ^reset;",
+      "findGoal" : "Destroy Siegebreaker.",
+      "turnIn" : "Return to ^orange;Fortress.^reset;"
+    },
+
+    "warpEntityUid" : "sgfortressbase",
+    "warpAction" : "instanceworld:sgbossmine",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgfortressmissionteleport",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgbossminetele",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgfortressbase",
+    "setUniverseFlags" : ["sgoutpost_survivorbeat"]
+  }
+}

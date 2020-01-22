@@ -1,0 +1,39 @@
+{
+  "frameGrid" : {
+    "size" : [350, 300],
+    "dimensions" : [7, 3],
+
+    "names" : [
+      [ null, "stage1.fly.1", "stage1.fly.2", "stage1.fly.3", "stage1.fly.4", null, "stage1.slam.1" ],
+      [ null, "stage2.fly.1", "stage2.fly.2", "stage2.fly.3", "stage2.fly.4", null, "stage2.slam.1" ],
+      [ null, "stage3.fly.1", "stage3.fly.2", "stage3.fly.3", "stage3.fly.4", null, "stage3.slam.1" ]
+    ]
+  },
+  "aliases" : {
+    "stage1.fly.5" : "stage1.fly.1",
+    "stage1.fly.6" : "stage1.fly.2",
+    "stage1.fly.7" : "stage1.fly.3",
+    "stage1.fly.8" : "stage1.fly.4",
+
+    "stage2.fly.5" : "stage2.fly.1",
+    "stage2.fly.6" : "stage2.fly.2",
+    "stage2.fly.7" : "stage2.fly.3",
+    "stage2.fly.8" : "stage2.fly.4",
+
+    "stage3.fly.5" : "stage3.fly.1",
+    "stage3.fly.6" : "stage3.fly.2",
+    "stage3.fly.7" : "stage3.fly.3",
+    "stage3.fly.8" : "stage3.fly.4",
+
+    "dead.fly.1" : "stage3.fly.1",
+    "dead.fly.2" : "stage3.fly.2",
+    "dead.fly.3" : "stage3.fly.3",
+    "dead.fly.4" : "stage3.fly.4",
+    "dead.fly.5" : "stage3.fly.1",
+    "dead.fly.6" : "stage3.fly.2",
+    "dead.fly.7" : "stage3.fly.3",
+    "dead.fly.8" : "stage3.fly.4",
+
+    "dead.slam.1" : "stage3.slam.1"
+  }
+}

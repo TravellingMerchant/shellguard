@@ -1,0 +1,96 @@
+{
+  "itemName" : "sgtoysniper",
+  "price" : 350,
+  "inventoryIcon" : "sgbreakerrifle.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Ouch! Don't you think that fires a little too hard?",
+  "shortdescription" : "Toy Sniper",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgbreakerrifle.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgbreakerrifle.png",
+    "barrel" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/railshots/sgtoydart.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.75, 0.5],
+  "muzzleOffset" : [3.375, -0.25],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 1.2,
+    "baseDps" : 0,
+    "energyUsage" : 50.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.5,
+        "armRotation" : -35,
+        "weaponRotation" : 50,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+    //"burstCount" : 6,
+    //"burstTime" : 0.05,
+
+    "projectileType" : "sgtoydart",
+    "projectileParameters" : { 
+      "knockback" : 55,
+	  "speed" : 250
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgbreakerrifleelite.png:idle",
+    "animationParts" : {
+      "middle" : "sgbreakerrifleelite.png"
+    },
+    "shortdescription" : "Toy Sniper ^yellow;^reset;"
+  }
+}

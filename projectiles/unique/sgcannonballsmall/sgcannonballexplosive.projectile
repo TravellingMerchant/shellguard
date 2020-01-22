@@ -1,0 +1,45 @@
+{
+  "projectileName" : "sgcannonballexplosive",
+  "image" : "sgcannonball.png",
+  "animationCycle" : 0.35,
+  "physics" : "sgcannonballsmall",
+  "bounces" : -1,
+  "frameNumber" : 4,
+  "pointLight" : false,
+  "speed" : 100,
+  "piercing" : true,
+  "damagePoly" : [ [-3, 0], [-1.5, -1.5], [0, -3], [1.5, -1.5], [3, 0], [1.5, 1.5], [0, 3], [-1.5, 1.5] ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/burstexplosion/fireburstexplosion.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/plasmiteexplode.ogg" ]
+    }
+  ],
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/melee/fist_hit_metal1_quiet.ogg",
+        "/sfx/melee/fist_hit_metal2_quiet.ogg",
+        "/sfx/melee/fist_hit_metal3_quiet.ogg",
+        "/sfx/melee/fist_hit_metal4_quiet.ogg",
+        "/sfx/melee/fist_hit_metal5_quiet.ogg",
+        "/sfx/melee/fist_hit_metal6_quiet.ogg"
+      ]
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
+    }
+  ],
+  "emitters" : [ "daggerblue" ],
+  "power" : 40.0,
+  "damageKind" : "hammer",
+  "damageType" : "IgnoresDef"
+}
+
+

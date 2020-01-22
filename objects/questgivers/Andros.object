@@ -23,7 +23,7 @@
         "title" : "Commander Andros Galvanek",
         "subtitle" : "Hire Shellguard Mercenaries!",
         "icon" : {
-          "file" : "/interface/bounty/Androsicon.png"
+          "file" : "/objects/questgivers/sgheavyspawner/dublooniicon.png"
         }
       },
       "imgPlayerMoneyIcon" : {
@@ -50,10 +50,10 @@
   ],
 
   "offeredQuests" : [
-    "sgmercmission1", "sgmercmission2", "shellufoquest", "sgmercmission3", "sgsurvivormission", "sgcolonyattack1", "sgspiderfactorymission", "sgweaponfacilitymission", "sgfortressassault"
+    "sgmercmission1", "sgmercmission2", "shellufoquest", "sgmercmission3", "sgsurvivormission", "sgcolonyattack1", "sgspiderfactorymission", "sgweaponfacilitymission", "sgfortressassault", "sgwreckagemission"
   ],
   "turnInQuests" : [
-    "sgmercmission1", "sgmercmission2", "shellufoquest", "sgmercmission3", "sgsurvivormission", "sgcolonyattack1", "sgspiderfactorymission", "sgweaponfacilitymission", "sgfortressassault"
+    "sgmercmission1", "sgmercmission2", "shellufoquest", "sgmercmission3", "sgsurvivormission", "sgcolonyattack1", "sgspiderfactorymission", "sgweaponfacilitymission", "sgfortressassault", "sgwreckagemission"
   ],
   
   "uniqueId" : "Andros",

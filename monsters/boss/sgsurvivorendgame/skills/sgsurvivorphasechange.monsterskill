@@ -1,0 +1,50 @@
+{
+  "name" : "sgsurvivorphasechange",
+  "label" : "survivor jump change",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sgsurvivorphasechange.lua" ],
+    "sgsurvivorphasechange" : {
+      "riseHeight" : 6,
+      "riseSpeed" : 1000,
+
+      "skillDuration" : 3,
+      "winddownTime" : 2,
+      "angleCycle" : 6,
+      "maxFireAngle" : 0,
+
+      "fireInterval" : 4,
+      "projectileCount" : 1,
+      "projectile" : {
+        "type" : "shellnovablast",
+        "config" : {
+        },
+        "innerRadius" : 0,
+		"centerOffset" : [ 3.5, 3.75 ]
+      }
+    }
+  },
+
+  "animationParameters" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "electricBurst" : {
+          "default" : "off",
+          "states" : {
+            "off" : {
+            },
+            "on" : {
+              "properties" : {
+                "persistentSound" : "/sfx/objects/plasmadisc.ogg"
+              }
+            }
+          }
+        }
+      }
+    },
+    "sounds" : {
+      "electricBurst" : [ "/sfx/gun/lightningcoil1.ogg" ]
+    }
+  }
+}

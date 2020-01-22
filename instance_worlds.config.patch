@@ -346,6 +346,41 @@
   
   {
     "op" : "add",
+    "path" : "/sgelevatorsurvival",
+    "value" : {
+    "type" : "FloatingDungeon",
+    "dungeonWorld" : "sgelevatorsurvival",
+    "seed" : 1234,
+    "spawningEnabled" : false,
+    "beamUpRule" : "AnywhereWithWarning",
+    "disableDeathDrops" : true,
+
+    "skyParameters" : {
+      "dayLength" : 10000,
+      "surfaceLevel" : 1000,
+      "spaceLevel" : 3000,
+      "seed" : -5288806180628666923,
+
+      "skyType" : "barren",
+      "skyColoring" : {
+        "mainColor" : [200, 200, 255],
+
+        "morningColors" : [[200, 200, 255], [200, 200, 255]],
+        "dayColors" : [[200, 200, 255], [200, 200, 255]],
+        "eveningColors" : [[200, 200, 255], [200, 200, 255]],
+        "nightColors" : [[200, 200, 255], [200, 200, 255]],
+
+        "morningLightColor" : [120, 120, 120],
+        "dayLightColor" : [120, 120, 120],
+        "eveningLightColor" : [120, 120, 120],
+        "nightLightColor" : [120, 120, 120]
+      }
+     }
+    }
+  },
+  
+  {
+    "op" : "add",
     "path" : "/sgfortressbossroom",
     "value" : {
     "type" : "FloatingDungeon",
@@ -1036,6 +1071,77 @@
       }
     }
   },  
+  
+  {
+    "op" : "add",
+    "path" : "/sgbossmine",
+    "value" : {
+      "type" : "FloatingDungeon",
+      "dungeonWorld" : "sgbossmine",
+      "seed" : 1234,
+      "beamUpRule" : "Anywherewithwarning",
+      "disableDeathDrops" : true,
+
+      "skyParameters" : {
+        "spaceLevel" : 3000,
+        "ambientLightLevel" : [70, 40, 70],
+        "skyColoring" : {
+        "mainColor" : [100, 100, 155],
+
+        "morningColors" : [[200, 200, 255], [200, 200, 255]],
+        "dayColors" : [[200, 200, 255], [200, 200, 255]],
+        "eveningColors" : [[200, 200, 255], [200, 200, 255]],
+        "nightColors" : [[200, 200, 255], [200, 200, 255]],
+
+        "morningLightColor" : [200, 200, 200],
+        "dayLightColor" : [200, 200, 200],
+        "eveningLightColor" : [200, 200, 200],
+        "nightLightColor" : [200, 200, 200]
+      },
+        "satellites" : [ {
+          "pos" : [ 0.310561, 0.35497 ],
+          "layers" : [ {
+            "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/liquids/water.png"
+          }, {
+            "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/biomes/forest/maskie3.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/2.png"
+          }, {
+            "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/biomes/forest/maskie2.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/20.png"
+          }, {
+            "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/biomes/forest/maskie1.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/5.png"
+          }, {
+            "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/shadows/9.png"
+          } ]
+        } ],
+        "planet" : {
+          "pos" : [ 0.00538729, 0.46961 ],
+          "layers" : [ {
+            "scale" : 0.15,
+            "image" : "/celestial/system/gas_giant/gas_giant_base.png?hueshift=-80"
+          }, {
+            "scale" : 0.15,
+            "image" : "/celestial/system/gas_giant/gas_giant_clouds_0.png?hueshift=-70?addmask=/celestial/system/gas_giant/gas_giant_dynamics/3.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+          }, {
+            "scale" : 0.15,
+            "image" : "/celestial/system/gas_giant/gas_giant_clouds_1.png?hueshift=-77?addmask=/celestial/system/gas_giant/gas_giant_dynamics/28.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+          }, {
+            "scale" : 0.15,
+            "image" : "/celestial/system/gas_giant/shadows/9.png"
+          } ]
+        },
+        "skyType" : "atmospheric",
+        "horizonImages" : [ ],
+        "dayLength" : 1153.36,
+        "surfaceLevel" : 500,
+        "seed" : -5288806180628666923
+      }
+    }
+  },    
+
 
   {
     "op" : "add",
@@ -2012,6 +2118,216 @@
 
     {
     "op" : "add",
+    "path" : "/sgarenatoyempty",
+    "value" : {
+      "type" : "FloatingDungeon",
+      "dungeonWorld" : "sgarenatoyempty",
+      "seed" : 1234,
+      "beamUpRule" : "Anywherewithwarning",
+      "disableDeathDrops" : true,
+
+    "skyParameters" : {
+      "spaceLevel" : 3000,
+      "ambientLightLevel" : [ 14, 22, 24 ],
+      "satellites" : [ {
+        "pos" : [ 0.310561, 0.35497 ],
+        "layers" : [ {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/liquids/water.png"
+        }, {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/biomes/forest/maskie3.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/2.png"
+        }, {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/biomes/forest/maskie2.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/20.png"
+        }, {
+          "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/biomes/forest/maskie1.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/5.png"
+        }, {
+          "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/shadows/9.png"
+        } ]
+      } ],
+      "planet" : {
+        "pos" : [ 0.00538729, 0.46961 ],
+        "layers" : [ {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_base.png?hueshift=-80"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_clouds_0.png?hueshift=-70?addmask=/celestial/system/gas_giant/gas_giant_dynamics/3.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_clouds_1.png?hueshift=-77?addmask=/celestial/system/gas_giant/gas_giant_dynamics/28.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/shadows/9.png"
+        } ]
+      },
+      "skyType" : "barren",
+     
+      "horizonImages" : [ {
+        "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/textures/forest_r.png?hueshift=-30?addmask=/celestial/system/terrestrial/horizon/masks/32_r.png;0;0",
+        "left" : "/celestial/system/terrestrial/horizon/textures/forest_l.png?hueshift=-30?addmask=/celestial/system/terrestrial/horizon/masks/32_l.png;0;0"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/atmosphere/atmosphere_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/atmosphere/atmosphere_l.png"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/shadow/shadow_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/shadow/shadow_l.png"
+      } ],
+      "dayLength" : 1153.36,
+      "surfaceLevel" : 1200,
+      "seed" : -5288806180628666923
+      }
+     }
+    },
+
+    {
+    "op" : "add",
+    "path" : "/sgarenatoy1",
+    "value" : {
+      "type" : "FloatingDungeon",
+      "dungeonWorld" : "sgarenatoy1",
+      "seed" : 1234,
+      "beamUpRule" : "Anywherewithwarning",
+      "disableDeathDrops" : true,
+
+    "skyParameters" : {
+      "spaceLevel" : 3000,
+      "ambientLightLevel" : [ 14, 22, 24 ],
+      "satellites" : [ {
+        "pos" : [ 0.310561, 0.35497 ],
+        "layers" : [ {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/liquids/water.png"
+        }, {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/biomes/forest/maskie3.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/2.png"
+        }, {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/biomes/forest/maskie2.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/20.png"
+        }, {
+          "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/biomes/forest/maskie1.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/5.png"
+        }, {
+          "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/shadows/9.png"
+        } ]
+      } ],
+      "planet" : {
+        "pos" : [ 0.00538729, 0.46961 ],
+        "layers" : [ {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_base.png?hueshift=-80"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_clouds_0.png?hueshift=-70?addmask=/celestial/system/gas_giant/gas_giant_dynamics/3.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_clouds_1.png?hueshift=-77?addmask=/celestial/system/gas_giant/gas_giant_dynamics/28.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/shadows/9.png"
+        } ]
+      },
+      "skyType" : "barren",
+     
+      "horizonImages" : [ {
+        "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/textures/forest_r.png?hueshift=-30?addmask=/celestial/system/terrestrial/horizon/masks/32_r.png;0;0",
+        "left" : "/celestial/system/terrestrial/horizon/textures/forest_l.png?hueshift=-30?addmask=/celestial/system/terrestrial/horizon/masks/32_l.png;0;0"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/atmosphere/atmosphere_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/atmosphere/atmosphere_l.png"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/shadow/shadow_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/shadow/shadow_l.png"
+      } ],
+      "dayLength" : 1153.36,
+      "surfaceLevel" : 1200,
+      "seed" : -5288806180628666923
+      }
+     }
+    },
+
+    {
+    "op" : "add",
+    "path" : "/sgarenatoy2",
+    "value" : {
+      "type" : "FloatingDungeon",
+      "dungeonWorld" : "sgarenatoy2",
+      "seed" : 1234,
+      "beamUpRule" : "Anywherewithwarning",
+      "disableDeathDrops" : true,
+
+    "skyParameters" : {
+      "spaceLevel" : 3000,
+      "ambientLightLevel" : [ 14, 22, 24 ],
+      "satellites" : [ {
+        "pos" : [ 0.310561, 0.35497 ],
+        "layers" : [ {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/liquids/water.png"
+        }, {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/biomes/forest/maskie3.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/2.png"
+        }, {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/biomes/forest/maskie2.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/20.png"
+        }, {
+          "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/biomes/forest/maskie1.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/5.png"
+        }, {
+          "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/shadows/9.png"
+        } ]
+      } ],
+      "planet" : {
+        "pos" : [ 0.00538729, 0.46961 ],
+        "layers" : [ {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_base.png?hueshift=-80"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_clouds_0.png?hueshift=-70?addmask=/celestial/system/gas_giant/gas_giant_dynamics/3.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_clouds_1.png?hueshift=-77?addmask=/celestial/system/gas_giant/gas_giant_dynamics/28.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/shadows/9.png"
+        } ]
+      },
+      "skyType" : "barren",
+     
+      "horizonImages" : [ {
+        "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/textures/forest_r.png?hueshift=-30?addmask=/celestial/system/terrestrial/horizon/masks/32_r.png;0;0",
+        "left" : "/celestial/system/terrestrial/horizon/textures/forest_l.png?hueshift=-30?addmask=/celestial/system/terrestrial/horizon/masks/32_l.png;0;0"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/atmosphere/atmosphere_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/atmosphere/atmosphere_l.png"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/shadow/shadow_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/shadow/shadow_l.png"
+      } ],
+      "dayLength" : 1153.36,
+      "surfaceLevel" : 1200,
+      "seed" : -5288806180628666923
+      }
+     }
+    },
+
+    {
+    "op" : "add",
     "path" : "/sgweaponsfacility",
     "value" : {
       "type" : "FloatingDungeon",
@@ -2217,7 +2533,217 @@
       }
      }
     },
-	
+
+    {
+    "op" : "add",
+    "path" : "/sgwreckagedronerematch",
+    "value" : {
+      "type" : "FloatingDungeon",
+      "dungeonWorld" : "sgwreckagedronerematch",
+      "seed" : 1234,
+      "beamUpRule" : "Anywherewithwarning",
+      "disableDeathDrops" : true,
+
+    "skyParameters" : {
+      "spaceLevel" : 3000,
+      "ambientLightLevel" : [ 34, 42, 44 ],
+      "satellites" : [ {
+        "pos" : [ 0.310561, 0.35497 ],
+        "layers" : [ {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/liquids/water.png"
+        }, {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/biomes/forest/maskie3.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/2.png"
+        }, {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/biomes/forest/maskie2.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/20.png"
+        }, {
+          "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/biomes/forest/maskie1.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/5.png"
+        }, {
+          "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/shadows/9.png"
+        } ]
+      } ],
+      "planet" : {
+        "pos" : [ 0.00538729, 0.46961 ],
+        "layers" : [ {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_base.png?hueshift=-80"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_clouds_0.png?hueshift=-70?addmask=/celestial/system/gas_giant/gas_giant_dynamics/3.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_clouds_1.png?hueshift=-77?addmask=/celestial/system/gas_giant/gas_giant_dynamics/28.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/shadows/9.png"
+        } ]
+      },
+      "skyType" : "barren",
+     
+      "horizonImages" : [ {
+        "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/textures/forest_r.png?hueshift=-30?addmask=/celestial/system/terrestrial/horizon/masks/32_r.png;0;0",
+        "left" : "/celestial/system/terrestrial/horizon/textures/forest_l.png?hueshift=-30?addmask=/celestial/system/terrestrial/horizon/masks/32_l.png;0;0"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/atmosphere/atmosphere_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/atmosphere/atmosphere_l.png"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/shadow/shadow_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/shadow/shadow_l.png"
+      } ],
+      "dayLength" : 1153.36,
+      "surfaceLevel" : 1200,
+      "seed" : -5288806180628666923
+      }
+     }
+    },
+
+    {
+    "op" : "add",
+    "path" : "/sgwreckagebossroom",
+    "value" : {
+      "type" : "FloatingDungeon",
+      "dungeonWorld" : "sgwreckagebossroom",
+      "seed" : 1234,
+      "beamUpRule" : "Anywherewithwarning",
+      "disableDeathDrops" : true,
+
+    "skyParameters" : {
+      "spaceLevel" : 3000,
+      "ambientLightLevel" : [ 34, 42, 44 ],
+      "satellites" : [ {
+        "pos" : [ 0.310561, 0.35497 ],
+        "layers" : [ {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/liquids/water.png"
+        }, {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/biomes/forest/maskie3.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/2.png"
+        }, {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/biomes/forest/maskie2.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/20.png"
+        }, {
+          "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/biomes/forest/maskie1.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/5.png"
+        }, {
+          "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/shadows/9.png"
+        } ]
+      } ],
+      "planet" : {
+        "pos" : [ 0.00538729, 0.46961 ],
+        "layers" : [ {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_base.png?hueshift=-80"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_clouds_0.png?hueshift=-70?addmask=/celestial/system/gas_giant/gas_giant_dynamics/3.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_clouds_1.png?hueshift=-77?addmask=/celestial/system/gas_giant/gas_giant_dynamics/28.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/shadows/9.png"
+        } ]
+      },
+      "skyType" : "barren",
+     
+      "horizonImages" : [ {
+        "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/textures/forest_r.png?hueshift=-30?addmask=/celestial/system/terrestrial/horizon/masks/32_r.png;0;0",
+        "left" : "/celestial/system/terrestrial/horizon/textures/forest_l.png?hueshift=-30?addmask=/celestial/system/terrestrial/horizon/masks/32_l.png;0;0"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/atmosphere/atmosphere_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/atmosphere/atmosphere_l.png"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/shadow/shadow_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/shadow/shadow_l.png"
+      } ],
+      "dayLength" : 1153.36,
+      "surfaceLevel" : 1200,
+      "seed" : -5288806180628666923
+      }
+     }
+    },
+
+    {
+    "op" : "add",
+    "path" : "/sgwreckagebossroomrematch",
+    "value" : {
+      "type" : "FloatingDungeon",
+      "dungeonWorld" : "sgwreckagebossroomrematch",
+      "seed" : 1234,
+      "beamUpRule" : "Anywherewithwarning",
+      "disableDeathDrops" : true,
+
+    "skyParameters" : {
+      "spaceLevel" : 3000,
+      "ambientLightLevel" : [ 34, 42, 44 ],
+      "satellites" : [ {
+        "pos" : [ 0.310561, 0.35497 ],
+        "layers" : [ {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/liquids/water.png"
+        }, {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/biomes/forest/maskie3.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/2.png"
+        }, {
+          "scale" : 0.055,
+          "image" : "/celestial/system/terrestrial/biomes/forest/maskie2.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/20.png"
+        }, {
+          "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/biomes/forest/maskie1.png?hueshift=-45?addmask=/celestial/system/terrestrial/dynamics/temperate/5.png"
+        }, {
+          "scale" : 0.055,
+            "image" : "/celestial/system/terrestrial/shadows/9.png"
+        } ]
+      } ],
+      "planet" : {
+        "pos" : [ 0.00538729, 0.46961 ],
+        "layers" : [ {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_base.png?hueshift=-80"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_clouds_0.png?hueshift=-70?addmask=/celestial/system/gas_giant/gas_giant_dynamics/3.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/gas_giant_clouds_1.png?hueshift=-77?addmask=/celestial/system/gas_giant/gas_giant_dynamics/28.png+/celestial/system/gas_giant/gas_giant_dynamics/29.png"
+        }, {
+          "scale" : 0.15,
+          "image" : "/celestial/system/gas_giant/shadows/9.png"
+        } ]
+      },
+      "skyType" : "barren",
+     
+      "horizonImages" : [ {
+        "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/textures/forest_r.png?hueshift=-30?addmask=/celestial/system/terrestrial/horizon/masks/32_r.png;0;0",
+        "left" : "/celestial/system/terrestrial/horizon/textures/forest_l.png?hueshift=-30?addmask=/celestial/system/terrestrial/horizon/masks/32_l.png;0;0"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/atmosphere/atmosphere_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/atmosphere/atmosphere_l.png"
+      }, {
+        "right" : "/celestial/system/terrestrial/horizon/shadow/shadow_r.png",
+        "left" : "/celestial/system/terrestrial/horizon/shadow/shadow_l.png"
+      } ],
+      "dayLength" : 1153.36,
+      "surfaceLevel" : 1200,
+      "seed" : -5288806180628666923
+      }
+     }
+    },
+
     {
     "op" : "add",
     "path" : "/sgcolonyattack1",

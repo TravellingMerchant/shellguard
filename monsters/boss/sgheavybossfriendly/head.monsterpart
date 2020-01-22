@@ -1,0 +1,9 @@
+{
+  "name" : "shelldroidheavy-head",
+  "category" : "sgheavybossfriendly",
+  "type" : "head",
+
+  "frames" : {
+    "head" : "shelldroidheavy-head.png"
+  }
+}

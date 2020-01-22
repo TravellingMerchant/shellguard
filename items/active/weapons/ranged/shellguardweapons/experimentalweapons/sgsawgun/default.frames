@@ -1,0 +1,12 @@
+{
+  "frameGrid" : {
+    "size" : [60, 20],
+    "dimensions" : [6, 1],
+    "names" : [
+      [ "idle", null, "fire.1", "fire.2", "fire.3", "fire.4" ]
+    ]
+  },
+  "aliases" : {
+	"default": "idle"
+  }
+}

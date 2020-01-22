@@ -1,0 +1,46 @@
+{
+  "id" : "sgwreckagemission",
+  "prerequisites" : ["sgfortressassault"],
+  "title" : "^green;Find The Survivor.",
+  "text" : "I'm sending you as well as some of my most trusted teams to go down to the wreckage of that ship and find out if that traitor is still alive.",
+  "completionText" : "After all that fighting, you captured him alive? I'm impressed and even a little afraid. Thank you. He'll be locked away for a very, very long time. Oh! Right. The fortress upgraded the simulation room. Why not check it out?",
+  "moneyRange" : [10000, 10000],
+  "rewards" : [
+    [ [ "rewardbag", 5 ], ["money", 50000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/Androsicon.png"} ],
+        "title" : "Andros"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Look for the ^orange; Survivor.^reset;",
+      "findGoal" : "Finish the fight.",
+      "turnIn" : "Return to ^orange;Commander Andros Galvanek^reset;"
+    },
+
+    "warpEntityUid" : "Andros",
+    "warpAction" : "instanceworld:sgwreckage",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgsurvivorfightteleport",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgwreckagetele",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "Andros",
+    "setUniverseFlags" : ["sgoutpost_survivorbeat"]
+  }
+}

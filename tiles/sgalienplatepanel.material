@@ -1,0 +1,26 @@
+{
+  "materialId" : 26206,
+  "materialName" : "sgalienplate",
+  "particleColor" : [182, 182, 182, 255],
+  "itemDrop" : "sgalienplate",
+
+  "description" : "A metallic, yet organic plate.",
+  "glitchDescription" : "Observant. A metallic, yet organic plate.",
+  "floranDescription" : "A metallic, yet organic plate. Tasstessss bad!",
+  "novakidDescription" : "A metallic, organic lookin plate.",
+
+  "shortdescription" : "Shellguard Hull Panel",
+  "footstepSound" : "/sfx/blocks/footstep_lightmetal.ogg",
+  "health" : 20,
+  "category" : "materials",
+
+  "renderTemplate" : "/tiles/slopedmaterialtemplate.config",
+  "renderParameters" : {
+    "texture" : "sgalienplatepanel.png",
+    "variants" : 1,
+    "lightTransparent" : false,
+    "occludesBelow" : true,
+    "multiColored" : true,
+    "zLevel" : 4999
+  }
+}

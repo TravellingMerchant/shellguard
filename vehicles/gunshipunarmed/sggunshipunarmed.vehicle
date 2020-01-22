@@ -48,6 +48,8 @@
   "targetDownwardVelocity" : -40,
   "downwardControlForce" : 200,
   "spinFriction" : 0.1,
+    "hoverToggle" : true,
+  "hoverToggleControlForce" : 60,
 	"mainStates" : {"opening":true,"closing":true},
 	
 	"thrusters" : {"sideThrusterFront":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[-3,1.75]},"sideThrusterBack":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[9,2]}},

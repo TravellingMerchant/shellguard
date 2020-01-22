@@ -1,0 +1,57 @@
+{
+  "projectileName" : "sgsawblade",
+  "physics" : "laser",
+  "timeToLive" : 10,
+  "image" : "sgsawblade.png",
+  "animationCycle" : 0.1,
+  "frameNumber" : 4,
+  "windupFrames" : 3,
+  "winddownFrames" : 0,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/melee/astraltear2.ogg" ]
+    },
+    {
+      "time" : 5.65,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/astraltear_stop3.ogg" ]
+    }
+  ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
+    }
+  ],
+  
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/melee/sawblade_hit_wooden.ogg"
+      ]
+    }
+  ],
+
+  "speed" : 70,
+  "power" : 20,
+  "damagePoly" : [],
+
+  "fullbright" : false,
+  "persistentAudio" : "/sfx/objects/sawblade.ogg",
+  "damageKind" : "sawblade",
+  "emitters" : [ "daggerblue" ],
+  "flippable" : true,
+  "piercing" : true,
+
+  "renderLayer" : "Projectile-1",
+  "orientationLocked" : true,
+
+  "bounces" : 5,
+  "onlyHitTerrain" : false
+
+}

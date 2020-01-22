@@ -27,6 +27,15 @@
       ]
     }]
   ],
+  
+  "sgbossminecodex1" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgbossmine1-codex", 1]}
+      ]
+    }]
+  ],
+
   "sgufoclaw" : [
     [1, {
       "pool" : [
@@ -47,6 +56,30 @@
     [1, {
       "pool" : [
         {"weight" : 0.20, "item" : "neb-shellguardrail"}
+      ]
+    }]
+  ],
+
+  "endgamedrop" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "sgsurvivoraxe"}
+      ]
+    }]
+  ],
+  
+  "endgamedroprematch" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "sgbayonetpistol"}
+      ]
+    }]
+  ],
+  
+  "sgaliencannon" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.20, "item" : "sgaliencannon"}
       ]
     }]
   ],
@@ -321,8 +354,196 @@
     }]
   ],
   
+//-------- wreckage -----------
+
+  "sggrenademachinegun" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sggrenademachinegun", 1]}
+      ]
+    }]
+  ],
   
+  "sgfireblastgun" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgfireblastgun", 1]}
+      ]
+    }]
+  ],
+
+  "sgbreakerrifle" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgbreakerrifle", 1]}
+      ]
+    }]
+  ],
+
+  "sgbarkgun" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgbarkgun", 1]}
+      ]
+    }]
+  ],
+  
+  "sgcauterizer" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgcauterizer", 1]}
+      ]
+    }]
+  ],
+  
+  "sgtitanhelmet" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgtitanhelmet", 1]}
+      ]
+    }]
+  ],
+  
+  "sgheavyback" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgheavyback", 1]}
+      ]
+    }]
+  ],
+  
+//--------- alien --------------------
+
+  "sgaliencaster" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgaliencaster", 1]}
+      ]
+    }]
+  ],
+  
+  "sgalienrifle" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgalienrifle", 1]}
+      ]
+    }]
+  ],
+  
+  "sgalienshotgun" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgalienshotgun", 1]}
+      ]
+    }]
+  ],
+
+  "sgalienlmg" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgalienlmg", 1]}
+      ]
+    }]
+  ],
+  
+  "sgheavyenergyshield" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgheavyenergyshield", 1]}
+      ]
+    }]
+  ],
+
+  "siegebreakerdrop" : [
+    [1, {
+      "pool" : [
+        {"weight" : 1, "item" : "sgspikeballlockjaw"}
+      ]
+    }]
+  ],
+
+  "sgquantumwastelander" : [
+    [1, {
+      "pool" : [
+        {"weight" : 1, "item" : "sgquantumwastelander"}
+      ]
+    }]
+  ],
+
 //-----------misc---------------------
+
+  "sgmerchanthead" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgmerchanthead", 1]}
+      ]
+    }]
+  ],
+  
+  "sgmerchantjacket" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgmerchantjacket", 1]},
+        {"item" : [ "sgtea", 1]}
+      ]
+    }]
+  ],
+  
+  "sgmerchantlegs" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgmerchantlegs", 1]}
+      ]
+    }]
+  ],
+
+  "sgbreakerauto" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgbreakerauto", 1]}
+      ]
+    }]
+  ],  
+
+  "sgmerchantrevolver" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgmerchantrevolver", 1]}
+      ]
+    }]
+  ],  
+
+  "sg_modulecreator" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sg_modulecreator", 1]}
+      ]
+    }]
+  ],
+  
+  "sgtyphoonminigun" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgtyphoonminigun", 1]}
+      ]
+    }]
+  ],
+  
+  "sgrobotshopboss" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgrobotshopboss", 1]}
+      ]
+    }]
+  ],
+
+  "sgchickennugget" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgchickennugget", 1]}
+      ]
+    }]
+  ],
   
   "shellbehat" : [
     [1, {

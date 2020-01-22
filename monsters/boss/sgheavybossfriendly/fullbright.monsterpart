@@ -1,0 +1,9 @@
+{
+  "name" : "shelldroidheavy-fullbright",
+  "category" : "sgheavybossfriendly",
+  "type" : "fullbright",
+
+  "frames" : {
+    "fullbright" : "shelldroidheavy-fullbright.png"
+  }
+}

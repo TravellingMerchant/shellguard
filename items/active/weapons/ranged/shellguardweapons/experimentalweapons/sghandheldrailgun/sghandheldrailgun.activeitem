@@ -1,0 +1,104 @@
+{
+  "itemName" : "sghandheldrailgun",
+  "price" : 2800,
+  "inventoryIcon" : "sghandheldrailgun.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A heavy handheld railgun that cuts through terrain and enemies alike.",
+  "shortdescription" : "Magnarail Cannon",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sghandheldrailgun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sghandheldrailgun.png",
+    "barrel" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/monsters/boss/sgdronerailgun2.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.75, -0.625],
+  "muzzleOffset" : [2.125, 0.0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 2,
+    "baseDps" : 10.5,
+    "energyUsage" : 150,
+    "projectileCount" : 1,
+    "inaccuracy" : 0,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation"
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation",
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.4,
+        "armRotation" : -45,
+        "weaponRotation" : 50,
+        "twoHanded" : true,
+
+        "frontArmFrame" : "swim.2",
+        "backArmFrame" : "rotation",
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "sgrailgunshotboss",
+    "projectileParameters" : { 
+      "knockback" : 6,
+	  "speed" : 60,
+	  "timeToLive" : 0.5
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sghandheldrailgunelite.png:idle",
+    "animationParts" : {
+      "middle" : "sghandheldrailgunelite.png"
+    },
+    "shortdescription" : "Magnarail Cannon ^yellow;^reset;"
+  }
+}

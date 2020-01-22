@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "sgwreckagedronerematch",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "sgwreckagedronerematch" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "sgwreckagedronerematch",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "sgwreckagedronerematch.json" ]
+    }
+  ]
+}

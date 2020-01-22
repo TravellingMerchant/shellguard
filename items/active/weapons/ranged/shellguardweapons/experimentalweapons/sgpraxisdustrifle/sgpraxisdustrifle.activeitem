@@ -1,0 +1,91 @@
+{
+  "itemName" : "sgpraxisdustrifle",
+  "price" : 3000,
+  "inventoryIcon" : "sgpraxisdustrifle.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Fires a stream of razor sharp energy shards that home in on targets.",
+  "shortdescription" : "Praxis Dust Rifle",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgpraxisdustrifle.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgpraxisdustrifle.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/railshots/magshotlong.ogg" ]
+    }
+  },
+
+  "baseOffset" : [2.25, 0.25],
+  "muzzleOffset" : [1.25, 0.1],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.1,
+    "baseDps" : 10.5,
+    "energyUsage" : 30.0,
+    "projectileCount" : 3,
+    "inaccuracy" : 0.02,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -15,
+        "weaponRotation" : 20,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "sentinelshard",
+    "projectileParameters" : { 
+      "knockback" : 6
+    }
+  },
+
+  "altAbilityType" : "sgpushshot",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Praxis Dust Rifle ^yellow;^reset;"
+  }
+}

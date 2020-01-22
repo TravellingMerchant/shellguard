@@ -1,0 +1,148 @@
+{
+  "itemName" : "sgaliencannon",
+  "price" : 2300,
+  "inventoryIcon" : "sgaliencannon.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "The head of an ancient alien, ripped apart and used as a beam cannon. Press into enemy for more damage.",
+  "shortdescription" : "Kalis Cannon",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Rocket Launcher",
+  "itemTags" : ["weapon","ranged","rocketLauncher","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgaliencannon.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgaliencannon.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/alien/sgalienshotgun2.ogg" ],
+      "fire2" : [ "/sfx/monsters/boss/alienwormboss/sgaliencannon.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1, 1],
+  "muzzleOffset" : [0.375, 0.25],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+  "scriptDelta" : 2,
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/scripts/sgaliencannonfire.lua"],
+    "class" : "SGACFire",
+    "fireTime" : 0.5,
+    "baseDps" : 15,
+    "energyUsage" : 35.0,
+    "projectileCount" : 2,
+    "inaccuracy" : 0.15,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.2,
+        "armRotation" : -15,
+        "weaponRotation" : 30,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+    //"burstCount" : 8,
+    //"burstTime" : 0.02,
+
+    "projectileType" : ["sgenergycrystal","nebsgfortresslaserblastplayer"],
+    "projectileParameters" : {
+	"speed" : 80
+    }
+  },
+  "altAbility" : {
+    "scripts" : ["/items/active/scripts/sgaliencannonfire.lua"],
+	"name" : "Elder Howl",
+    "class" : "SGACFire",
+    "fireTime" : 0.8,
+    "baseDps" : 15,
+    "energyUsage" : 80.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.25,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"playSounds" : [ "fire2" ],
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.2,
+        "armRotation" : -15,
+        "weaponRotation" : 30,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+    //"burstCount" : 8,
+    //"burstTime" : 0.02,
+
+    "projectileType" : ["nebsgfortresslaserblastplayer","nebsgfortresslaserblastplayer"],
+    "projectileParameters" : { 
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgaliencannonelite.png:idle",
+    "animationParts" : {
+      "middle" : "sgaliencannonelite.png"
+    },
+    "shortdescription" : "Kalis's Maw ^yellow;^reset;"
+  }
+}

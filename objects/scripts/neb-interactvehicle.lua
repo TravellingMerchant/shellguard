@@ -72,7 +72,7 @@ function onInteraction(args)
 end
 
 function die()
-	if world.entityExists(storage.vehicleId) then
+	if storage and storage.vehicleId and world.entityExists(storage.vehicleId) then
 		world.sendEntityMessage(storage.vehicleId, "terminateSelf")
 	end
 end

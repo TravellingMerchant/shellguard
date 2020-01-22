@@ -1,0 +1,55 @@
+{
+  "spawnChainedProjectile": {
+    "type": "action",
+    "name": "spawnChainedProjectile",
+    "title": "spawnChainedProjectile",
+    "properties": {
+      "aimVector": {"type": "vec2", "value": null},
+      "angle": {"type": "number", "value": 0},
+      "damageRepeatGroup": {"type": "string", "value": null},
+      "offset": {"type": "vec2", "value": [0, 0]},
+      "position": {"type": "position", "key": "self"},
+      "projectileConfig": {"type": "json", "value": {}},
+      "projectileType": {"type": "string", "value": "\"bullet-4\""},
+      "scalePower": {"type": "bool", "value": true},
+      "sourceEntity": {"type": "entity", "key": "self"},
+      "trackSource": {"type": "bool", "value": false},
+      "uniqueRepeatGroup": {"type": "bool", "value": true},
+	  "gunPart": {"type": "string", "value": "frontgun"}
+    },
+    "category": "projectiles",
+    "script": "/scripts/actions/neb-spikefisting.lua",
+    "output": {
+	  "targetProjectile": {"type": "entity", "key": null}
+	}
+  },
+  "spawnTargetedChainedProjectile": {
+    "type": "action",
+    "name": "spawnTargetedChainedProjectile",
+    "title": "",
+    "properties": {
+      "aimVector": {"type": "vec2", "value": [0, 0]},
+      "parameters": {"type": "json", "value": {}},
+      "position": {"type": "position", "key": "self"},
+      "projectileType": {"type": "string", "value": null},
+      "target": {"type": "entity", "value": null},
+      "trackSource": {"type": "bool", "value": false},
+	  "gunPart": {"type": "string", "value": "frontgun"}
+    },
+    "category": "projectiles",
+    "script": "/scripts/actions/neb-spikefisting.lua",
+    "output": {}
+  },
+  "waitForBoomerangReturn": {
+    "type": "action",
+    "name": "waitForBoomerangReturn",
+    "title": "waitForBoomerangReturn",
+    "properties": {
+	  "projectileId": {"type": "entity", "key": null},
+	  "gunPart": {"type": "string", "value": "frontgun"}
+	},
+    "category": "projectiles",
+    "script": "/scripts/actions/neb-spikefisting.lua",
+    "output": {}
+  }
+}

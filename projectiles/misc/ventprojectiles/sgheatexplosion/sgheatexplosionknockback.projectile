@@ -5,8 +5,6 @@
   "frameNumber" : 6,
   "speed" : 0,
   "power" : 100,
-  
-  "damageTeam" : { "type" : "indiscriminate" },
 
  
   "lightColor" : [160, 30, 30],

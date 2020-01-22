@@ -1,0 +1,186 @@
+{
+  "type" : "sgalienshieldrifle",
+  "baseType" : "hostile",
+
+  "levelVariance" : [1, 1],
+
+  "persistent" : true,
+
+  "identity" : {
+    "bodyDirectives": "?multiply=00000000"
+  },
+
+  "damageTeam" : 2,
+
+  "dropPools" : [ "money" ],
+
+  "scriptConfig" : {
+    "behavior" : "hostileguard",
+
+    "behaviorConfig" : {
+      "leapWindup" : 0.75,
+      "rangedAimTime" : 1.5,
+      "rangedWindupTime" : 0.01,
+      "rangedMinFireTime": 0.5,
+      "rangedMaxFireTime": 1
+    },
+
+    "aggressive" : true,
+
+    "personalities" : [
+        [1.0, { "personality" : "normal", "reactions" : {} }]
+    ],
+
+    "reactions" : {
+      "spontaneous" : [
+        [5.0, "sleep", { "timeRange" : [0.7, 0.9] }],
+        [1.0, "patrol"]
+      ]
+    },
+
+    "dialog" : {  
+
+      "attack" : {
+        "default" : {
+          "default" : [
+           "Shaw!",
+           "Kethali!",
+           "Shaw Kryran!",
+           "Rakthali!"
+          ]
+        }
+      },
+      "reattack" : {
+        "default" : {
+          "default" : [
+            "Shaw Kyrai!"
+          ]
+        }
+      },
+      "killedTarget" : {
+        "default" : {
+          "default" : [
+            "Shawn!",
+            "Shawn kathalen!",
+            "Rak Shawn!"
+          ]
+        }
+      },
+      "lostTarget" : {
+        "default" : {
+          "default" : [
+            "Rak kythare!"
+          ]
+        }
+      },
+      "outOfSight" : {
+        "default" : {
+          "default" : [
+            "Krythsci?"
+          ]
+        }
+      },
+      "cheerOn" : {
+        "default" : {
+          "default" : [
+            "Rak-thkawnraki!"
+          ]
+        }
+      },
+      "cantReach" : {
+        "default" : {
+          "default" : [
+            "Sciraklah!"
+          ]
+        }
+      }
+    },
+	
+    "chatSounds" : {
+      "default" : {
+        "male" : [
+          "/sfx/humanoid/human_chatter_male1.ogg",
+          "/sfx/humanoid/human_chatter_male2.ogg",
+          "/sfx/humanoid/human_chatter_male3.ogg"
+        ]
+      }
+    },
+
+    "combat" : {
+      "meleeWeaponWindups" : {
+        "default" : 0.45,
+        "broadsword" : 0.45,
+        "dagger" : 0.3,
+        "axe" : 0.45,
+        "hammer" : 0.6,
+        "shortsword" : 0.35,
+        "spear" : 0.55
+      },
+      "meleeWeaponCooldowns" : {
+        "default" : 0.5,
+        "broadsword" : 0.7,
+        "dagger" : 0.7,
+        "axe" : 0.6,
+        "hammer" : 1.0,
+        "shortsword" : 0.5,
+        "spear" : 0.5
+      }
+    }
+  },
+
+  "items" : {
+    "default" : [
+      [0, [
+          {
+            "head" : [ { "name" : "sgalienhead" } ],
+            "chest" : [ { "name" : "sgalienchest" } ],
+            "legs" : [ { "name" : "sgalienlegs" } ],
+            "primary" : [
+              "sgalienrifle"
+			  ],
+            "sheathedprimary" : [ "sgalienrifle" ],
+            "alt" : [
+              { "name" : "sgheavyenergyshield" }
+            ]
+          }
+        ] ]
+    ]
+  },
+
+  "touchDamage" : {
+    "damage" : 0,
+    "teamType" : "enemy",
+    "damageType" : "knockback",
+    "damageSourceKind" : "nodamage",
+    "damageRepeatGroup" : "npcTouchKnockback",
+    "damageRepeatTimeout" : 0.5,
+    "knockback" : 20,
+    "statusEffects" : [ ]
+  },
+
+  "statusControllerSettings" : {
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 70.0
+      },
+      "powerMultiplier" : {
+        "baseValue" : 1
+      },
+       "maxEnergy" : {
+        "baseValue" : 100
+      },
+      "poisonResistance" : {
+        "baseValue" : 1
+      },
+      "poisonStatusImmunity" : {
+        "baseValue" : 1.0
+      },
+      "protection" : {
+        "baseValue" : 1.0
+      },
+      "healthRegen" : {
+        "baseValue" : 0
+      }
+    }
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "movement" : {
+        "priority" : 1,
+        "default" : "fly",
+
+        "states" : {
+          "fly" : {
+            "frames" : 8,
+            "cycle" : 0.8,
+            "mode" : "loop",
+            "properties" : {
+              "immediateSoundRangeMultiplier" : 2.0
+            },
+            "frameProperties" : {
+              "immediateSound" : [ "", "/sfx/npc/boss/dragonboss_flap3.ogg", "", "", "", "/sfx/npc/boss/dragonboss_flap4.ogg", "", "" ]
+            }
+          },
+          "slam" : {
+            "frames" : 1
+          }
+        }
+      },
+      "attack" : {
+        "priority" : 2,
+        "default" : "idle",
+
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "attack" : {
+            "frames" : 3,
+            "cycle" : 0.6
+          },
+          "winddown" : {
+            "frames" : 1,
+            "cycle" : 0.2,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "dying" : {
+            "frames" : 1,
+            "cycle" : 1,
+            "properties" : {
+              "persistentSound" : "/sfx/npc/boss/boss_dying.ogg",
+              "persistentSoundRangeMultiplier" : 2.0
+            }
+          },
+          "dyingcry" : {
+            "frames" : 3,
+            "cycle" : 0.6,
+            "properties" : {
+              "persistentSound" : "/sfx/npc/boss/boss_dying.ogg",
+              "persistentSoundRangeMultiplier" : 2.0
+            }
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 3,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 1
+          }
+        }
+      },
+      "teleport" : {
+        "default" : "none",
+        "states" : {
+          "none" : { },
+          "beamOut" : {
+            "frames" : 12,
+            "cycle" : 0.75,
+            "mode" : "transition",
+            "transition" : "none",
+            "properties" : {
+              "immediateSound" : "/sfx/tools/teleport_up.ogg",
+              "immediateSoundRangeMultiplier" : 2.0
+            }
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true
+        },
+
+        "partStates" : {
+          "movement" : {
+            "fly" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.fly.<frame>"
+              }
+            },
+            "slam" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.slam.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "head" : {
+        "properties" : {
+          "zLevel" : 2,
+          "centered" : true,
+          "offset" : [5.625, 3.5],
+          "transformationGroups" : [ "head" ]
+        },
+
+        "partStates" : {
+          "attack" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.idle.<frame>"
+              }
+            },
+            "attack" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.attack.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.winddown.<frame>"
+              }
+            },
+            "dying" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.idle.<frame>"
+              }
+            },
+            "dyingcry" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.attack.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "headlit" : {
+        "properties" : {
+          "zLevel" : 3,
+          "centered" : true,
+          "offset" : [5.625, 3.5],
+          "transformationGroups" : [ "head" ],
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "attack" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.idle.<frame>"
+              }
+            },
+            "attack" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.attack.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.winddown.<frame>"
+              }
+            },
+            "dying" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.idle.<frame>"
+              }
+            },
+            "dyingcry" : {
+              "properties" : {
+                "image" : "<partImage>:<stage>.attack.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "beamoutBase" : {
+        "properties" : {
+          "fullbright" : true,
+          "centered" : true,
+          "zLevel" : 3,
+          "offset": [5.875, 9.75]
+        },
+        "partStates" : {
+          "teleport" : {
+            "none" : { },
+            "beamOut" : {
+              "properties" : {
+                "image" : "/animations/teleport/playerwarpout.png:<frame>?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=ffea63FF?replace=31a6ffFF=f5bc00FF"
+              }
+            }
+          }
+        }
+      },
+      "beamoutBeam" : {
+        "properties" : {
+          "fullbright" : true,
+          "centered" : true,
+          "zLevel" : 3,
+          "offset" : [5.875, 39.75]
+        },
+        "partStates" : {
+          "teleport" : {
+            "beamOut" : {
+              "properties" : {
+                "image" : "/animations/teleport/playerwarpoutbeam.png:<frame>?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=ffea63FF?replace=31a6ffFF=f5bc00FF?scalenearest=1;60;"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "globalTagDefaults" : {
+    "stage" : "stage1"
+  },
+
+  "transformationGroups" : {
+    "head" : { "interpolated" : true}
+  },
+
+  "particleEmitters" : {
+    "predeath" : {
+      "active" : false,
+      "emissionRate" : 6,
+      "offsetRegion" : [-8, -8, 8, 8],
+      "particles" : [
+        { "particle" : "dust4" },
+        { "particle" : "dust2" },
+        { "particle" : "firesmoke" }
+      ]
+    },
+    "deathPoof" : {
+      "emissionRate" : 1.0,
+      "offsetRegion" : [-5, -9, 5, 5],
+      "burstCount" : 1,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust2/dust2.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+            "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust2/dust2.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+            "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust2/dust2.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+            "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust2/dust2.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+            "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust2/dust2.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+            "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust4/dust4.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+            "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust4/dust4.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+            "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust4/dust4.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+            "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust4/dust4.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+            "position" : [5, 5]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/dust4/dust4.animation",
+            "destructionTime" : 0,
+            "fade" : 1,
+            "size" : 1,
+            "layer" : "front",
+            "timeToLive" : 0.6,
+            "variance" : {
+            "position" : [5, 5]
+            }
+          }
+        }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "turnHostile" : [  ],
+    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
+    "flameBreath" : {
+      "pool" : [ "/sfx/npc/boss/dragonboss_fireball1.ogg", "/sfx/npc/boss/dragonboss_fireball3.ogg", "/sfx/npc/boss/dragonboss_fireball4.ogg", "/sfx/npc/boss/dragonboss_fireball5.ogg" ],
+      "rangeMultiplier" : 2.0
+    },
+    "blockBuster1" : {
+      "pool" : [ "/sfx/npc/boss/dragonboss_blockbuster_start.ogg" ],
+      "rangeMultiplier" : 2.0
+    },
+    "blockBuster2" : {
+      "pool" : [ "/sfx/npc/boss/dragonboss_fireball2.ogg" ],
+      "rangeMultiplier" : 2.0
+    },
+    "dragonArrival" : {
+      "pool" : [ "/sfx/npc/boss/dragonboss_roar_reverb.ogg" ],
+      "rangeMultiplier" : 2.0
+    },
+    "dragonDeath" : {
+      "pool" : [ "/sfx/npc/boss/dragonboss_death.ogg" ],
+      "rangeMultiplier" : 2.0
+    },
+    "dragonDeathExplosion" : {
+      "pool" : [ "/sfx/npc/boss/dragonboss_explosion.ogg" ],
+      "rangeMultiplier" : 2.0
+    }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  }
+}

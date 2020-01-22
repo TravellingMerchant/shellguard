@@ -1,0 +1,47 @@
+{
+  "projectileName" : "sgbossgravity",
+  "image" : "gravitysphere.png",
+  "animationCycle" : 0.3,
+  "physics" : "illusion",
+  "frameNumber" : 3,
+  "windupFrames" : 2,
+  "winddownFrames" : 2,
+  "pointLight" : false,
+  "speed" : 0,
+  "power" : 0.0,
+
+  "bounces" : -1,
+  "piercing" : true,
+
+  "timeToLive" : 10,
+
+  "orientationLocked" : true,
+
+  "damagePoly" : [ [-48, 0], [-32, -32], [0, -48], [32, -32], [48, 0], [32, 32], [0, 48], [-32, 32] ],
+  "damageRepeatTimeout" : 0.1,
+
+  "boundBox" : [-15, -15, 15, 15],
+  "physicsForces" : {
+    "vacuum" : {
+      "type" : "RadialForceRegion",
+      "outerRadius" : 10,
+      "innerRadius" : 15,
+      "targetRadialVelocity" : 100,
+      "controlForce" : 500,
+      "categoryWhitelist" : ["player", "npc", "itemdrop", "projectile"]
+    }
+  },
+
+  "clientEntityMode" : "ClientSlaveOnly",
+
+  "scripts" : ["gravitysphere.lua"],
+
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/tech/vehicle_disappear1.ogg" ]
+    }
+  ],
+
+  "persistentAudio" : "/sfx/projectiles/gravitymine_loop.ogg"
+}

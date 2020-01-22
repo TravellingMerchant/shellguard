@@ -1,0 +1,9 @@
+{
+  "name" : "sgheavybossdualgun",
+  "category" : "sgheavybossfriendly",
+  "type" : "head3",
+
+  "frames" : {
+    "head3" : "sgheavybossdualgun.png"
+  }
+}

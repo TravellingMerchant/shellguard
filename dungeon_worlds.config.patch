@@ -28,7 +28,7 @@
       "dungeonSurfaceHeight" : 100,
       "ambientLightLevel" : [200, 200, 200],
       "ambientNoises" : "/sfx/environmental/garden_day.ogg",
-      "musicTrack" : "/music/arctic-constellation2.ogg",
+      "musicTrack" : "/music/Red_Steel_WIP_4.ogg",
       "biome": "sgalpine"
     }
   },
@@ -48,7 +48,7 @@
       "dungeonSurfaceHeight" : 20,
       "ambientLightLevel" : [200, 200, 200],
       "ambientNoises" : "/sfx/environmental/garden_day.ogg",
-      "musicTrack" : "/music/arctic-constellation2.ogg",
+      "musicTrack" : "/music/Red_Steel_WIP_4.ogg",
       "biome": "sgalpine"
     }
   },  
@@ -126,6 +126,63 @@
       "biome": "snow"
     }
   },
+  
+  {
+    "op" : "add",
+    "path" : "/sgwreckagedronerematch",
+    "value" : {
+      "primaryDungeon" : "sgwreckagedronerematch",
+      "weatherPool" : [
+        [1.0, "snowstorm"]
+      ],
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [500, 500],
+      "dungeonBaseHeight" : 450,
+      "dungeonSurfaceHeight" : 100,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/sgtheguardsmarch2.ogg",
+      "biome": "snow"
+    }
+  },
+  
+  {
+    "op" : "add",
+    "path" : "/sgwreckagebossroom",
+    "value" : {
+      "primaryDungeon" : "sgwreckagebossroom",
+      "weatherPool" : [
+        [1.0, "snow"]
+      ],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [3299, 900],
+      "dungeonBaseHeight" : 450,
+      "dungeonSurfaceHeight" : 100,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/survivorfightintro.ogg",
+      "biome": "snow"
+    }
+  },
+ 
+  {
+    "op" : "add",
+    "path" : "/sgwreckagebossroomrematch",
+    "value" : {
+      "primaryDungeon" : "sgwreckagebossroomrematch",
+      "weatherPool" : [
+        [1.0, "snowstorm"]
+      ],
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [3299, 900],
+      "dungeonBaseHeight" : 450,
+      "dungeonSurfaceHeight" : 100,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/survivorfightintro.ogg",
+      "biome": "snow"
+    }
+  },
  
   {
     "op" : "add",
@@ -189,6 +246,24 @@
     "value" : {
     "primaryDungeon" : "sgfortressbossroom",
     "threatLevel" : 6,
+    "gravity" : 80,
+    "worldSize" : [2500, 2000],
+    "dungeonBaseHeight" : 1000,
+    "dungeonSurfaceHeight" : 810,
+    "ambientLightLevel" : [32, 32, 32],
+    "musicTrack" : "",
+    "environmentStatusEffects" : ["dontstarve"],
+    "worldEdgeForceRegions" : "TopAndBottom",
+    "biome" : "space"
+    }
+  },
+  
+  {
+    "op" : "add",
+    "path" : "/sgelevatorsurvival",
+    "value" : {
+    "primaryDungeon" : "sgelevatorsurvival",
+    "threatLevel" : 10,
     "gravity" : 80,
     "worldSize" : [2500, 2000],
     "dungeonBaseHeight" : 1000,
@@ -383,6 +458,23 @@
       "ambientLightLevel" : [200, 50, 200],
       "musicTrack" : "/music/sgtheguardsmarch2.ogg",
       "biome": "scorched"
+    }
+  },  
+
+  {
+    "op" : "add",
+    "path" : "/sgbossmine",
+    "value" : {
+      "primaryDungeon" : "sgbossmine",
+      "weatherPool" : [],
+      "threatLevel" : 8,
+      "gravity" : 80,
+      "worldSize" : [2500, 2000],
+      "dungeonBaseHeight" : 1000,
+      "dungeonSurfaceHeight" : 2000,
+      "ambientLightLevel" : [50, 30, 50],
+      "musicTrack" : "/music/lava-exploration1.ogg",
+      "biome": "underground3b"
     }
   },  
 
@@ -600,6 +692,57 @@
       "ambientLightLevel" : [125, 125, 125],
       "musicTrack" : "/music/psyche.ogg",
       "biome": "scorchedcity"
+    }
+  },
+
+  {
+    "op" : "add",
+    "path" : "/sgarenatoyempty",
+    "value" : {
+      "primaryDungeon" : "sgarenatoyempty",
+      "weatherPool" : [],
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 1200,
+      "dungeonSurfaceHeight" : 1115,
+      "ambientLightLevel" : [125, 125, 125],
+      "musicTrack" : "/music/Entry Of The Gladiators - Julius Fucik.ogg",
+      "biome": "forest"
+    }
+  },
+
+  {
+    "op" : "add",
+    "path" : "/sgarenatoy1",
+    "value" : {
+      "primaryDungeon" : "sgarenatoy1",
+      "weatherPool" : [],
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 1200,
+      "dungeonSurfaceHeight" : 1115,
+      "ambientLightLevel" : [125, 125, 125],
+      "musicTrack" : "/music/Entry Of The Gladiators - Julius Fucik.ogg",
+      "biome": "forest"
+    }
+  },
+  
+  {
+    "op" : "add",
+    "path" : "/sgarenatoy2",
+    "value" : {
+      "primaryDungeon" : "sgarenatoy2",
+      "weatherPool" : [],
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2000, 2000],
+      "dungeonBaseHeight" : 1200,
+      "dungeonSurfaceHeight" : 1115,
+      "ambientLightLevel" : [125, 125, 125],
+      "musicTrack" : "/music/Entry Of The Gladiators - Julius Fucik.ogg",
+      "biome": "forest"
     }
   },
 

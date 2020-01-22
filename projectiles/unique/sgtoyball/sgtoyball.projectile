@@ -1,0 +1,20 @@
+{
+  "projectileName" : "sgtoyball",
+  "image" : "sgtoyball.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 1,
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
+    }
+  ],
+  "power" : 5.0,
+  "speed" : 60,
+  "knockback" : 55,
+  "knockbackDirectional" : true,
+  "timeToLive" : 30,
+  "damageKind" : "shotgunbullet",
+  "damageTeam" : { "type" : "indiscriminate" }
+}

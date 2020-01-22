@@ -1,0 +1,140 @@
+{
+  "itemName" : "sgsawgun",
+  "price" : 1900,
+  "inventoryIcon" : "sgsawgun.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Launch  razor sharp high RPM sawblades with a deadly  bite.",
+  "shortdescription" : "SG Eviscerator",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgsawgun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgsawgun.png",
+    "barrel" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/railshots/sgsawbladelaunch2.ogg" ]
+    }
+  },
+
+  "baseOffset" : [2.25, 0.25],
+  "muzzleOffset" : [1.75, 0.1],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.6,
+    "baseDps" : 10.5,
+    "energyUsage" : 25.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.02,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -15,
+        "weaponRotation" : 20,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "sgsawblade",
+    "projectileParameters" : { 
+      "knockback" : 10
+    }
+  },
+
+  "altAbility" : {
+    "name" : "Saw Barrage",
+    "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
+    "class" : "AltFireAttack",
+
+    "fireTime" : 1,
+    "energyUsage" : 35,
+    "projectileCount" : 3,
+    "inaccuracy" : 0.15,
+    "fireType" : "auto",
+
+    "useParticleEmitter" : false,
+    "usePrimaryFireSound" : true,
+
+    "projectileType" : "sgsawblade",
+    "projectileParameters" : {},
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 8,
+        "weaponRotation" : 8,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.2,
+        "armRotation" : 8,
+        "weaponRotation" : 8,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgsawgunelite.png:idle",
+    "animationParts" : {
+      "middle" : "sgsawgunelite.png"
+    },
+    "shortdescription" : "SG Eviscerator ^yellow;^reset;"
+  }
+}

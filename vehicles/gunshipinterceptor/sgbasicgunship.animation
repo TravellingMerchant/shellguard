@@ -416,29 +416,7 @@
 					"image" : "sgbasicgunshipbackfin.png"
 		}
 			},
-		"ventralAutocannon" : {
-				"properties" : {
-					"centered" : true,
-					"zLevel" : 1,
-					"offset" : [6.25, -3.75],
-					"transformationGroups" : ["ventralAutocannon"],
-					"anchorPart" : "foreground"
-				},
-		"partStates" : {
-					"ventralAutocannon" : {
-						"off" : {
-							"properties" : {
-								"image" : "sgbasicgunshipautocannon.png:idle.<frame>"
-							}
-						},
-						"fire" : {
-							"properties" : {
-								"image" : "sgbasicgunshipautocannon.png:fire.<frame>"
-							}
-						}
-					}
-				}
-			},
+			"bombingBay" : {},
 			"forwardDoubleCannonBack" : {
 				"properties" : {
 					"centered" : true,

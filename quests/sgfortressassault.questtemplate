@@ -3,10 +3,10 @@
   "prerequisites" : ["sgweaponfacilitymission"],
   "title" : "^green;Assault the Fortress!",
   "text" : "Now that you have the Ruin Cleaver, it's time to take that ship down. We've got an ambush set up in it's flight path. Are you ready?",
-  "completionText" : "That was quite the explosion! Half the wreckage has crashed down on a nearby planet, I need you to go look for survivors. We also managed to recover the Fortress AI. You can visit it using the teleporter to the right.",
-  "moneyRange" : [1200, 1200],
+  "completionText" : "That was quite the explosion! Half the wreckage has crashed down on a nearby planet, I'll need you to go look for survivors. We also managed to recover the Fortress AI. You can visit it using the teleporter to the right.",
+  "moneyRange" : [1000, 1000],
   "rewards" : [
-    [ [ "sgsupernovalauncher", 1 ], ["money", 4000 ] ]
+    [ [ "sgtexasred", 1 ], ["money", 5000 ] ]
   ],
 
   "updateDelta" : 10,

@@ -1,0 +1,428 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "body" : {
+        "priority" : 0,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 13,
+            "cycle" : 1.5
+          },
+		  "alert": {
+			"frames": 1,
+			"cycle": 0.6,
+			"mode": "transition",
+			"transition": "idle"
+		  },
+          "walk" : {
+            "frames" : 10,
+            "cycle" : 0.6,
+            "mode" : "loop",
+            "properties" : {
+				"particleEmittersOff" : [ "spindust" ]
+            },
+            "frameProperties" : {
+              "immediateSound" : [ "/sfx/gun/railshots/mechsteporgun.ogg", "", "", "", "", "/sfx/gun/railshots/mechsteporgun.ogg", "", "", "", "" ]
+            }
+          },
+          "jump" : {
+            "frames" : 4,
+            "cycle" : 0.5,
+            "mode" : "loop"
+          },
+          "fall" : {
+            "frames" : 4,
+            "cycle" : 0.5,
+            "mode" : "loop"
+          },
+          "firing" : {
+            "frames" : 15,
+            "cycle" : 1.5,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "firingBack" : {
+            "frames" : 15,
+            "cycle" : 1.5,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "fireRockets" : {
+            "frames" : 1,
+            "cycle" : 1.5,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      },
+      "damage" : {
+        "priority" : 3,
+        "default" : "none",
+        "states" : {
+          "none" : {
+            "frames" : 1
+          },
+          "stunned" : {
+            "frames" : 1
+          }
+        }
+      },
+      "releaseParticles" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+            "frames" : 1,
+            "properties" : {
+              "particleEmittersOff" : [ "releaseParticles" ]
+            }
+          },
+          "on" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "off",
+            "properties" : {
+              "particleEmittersOn" : [ "releaseParticles" ]
+            }
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+		  "zLevel" : 3,
+          "offset" : [0, 3.95]
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "alert" : {
+              "properties" : {
+                "image" : "<partImage>:alert.<frame>"
+              }
+            },
+            "walk" : {
+              "properties" : {
+                "image" : "<partImage>:walk.<frame>"
+              }
+            },
+            "jump" : {
+              "properties" : {
+                "image" : "<partImage>:jump.<frame>"
+              }
+            },
+            "fall" : {
+              "properties" : {
+                "image" : "<partImage>:fall.<frame>"
+              }
+            },
+			"firing": {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            },
+			"fireRockets": {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            },
+            "firingBack" : {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:hurt.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "bodyfront" : {
+        "properties" : {
+		  "zLevel" : 8,
+          "anchorPart": "body"
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "alert" : {
+              "properties" : {
+                "image" : "<partImage>:alert.<frame>"
+              }
+            },
+            "walk" : {
+              "properties" : {
+                "image" : "<partImage>:walk.<frame>"
+              }
+            },
+            "jump" : {
+              "properties" : {
+                "image" : "<partImage>:jump.<frame>"
+              }
+            },
+            "fall" : {
+              "properties" : {
+                "image" : "<partImage>:fall.<frame>"
+              }
+            },
+			"firing": {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            },
+			"fireRockets": {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            },
+            "firingBack" : {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:hurt.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "bodyfullbright" : {
+        "properties" : {
+		  "fullbright": true,
+		  "zLevel" : 4,
+          "anchorPart": "body"
+        },
+        "partStates" : {
+          "body" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+            "alert" : {
+              "properties" : {
+                "image" : "<partImage>:alert.<frame>"
+              }
+            },
+            "walk" : {
+              "properties" : {
+                "image" : "<partImage>:walk.<frame>"
+              }
+            },
+            "jump" : {
+              "properties" : {
+                "image" : "<partImage>:jump.<frame>"
+              }
+            },
+            "fall" : {
+              "properties" : {
+                "image" : "<partImage>:fall.<frame>"
+              }
+            },
+			"firing": {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            },
+			"fireRockets": {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            },
+            "firingBack" : {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            }
+          },
+          "damage" : {
+            "stunned" : {
+              "properties" : {
+                "image" : "<partImage>:hurt.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "frontgun" : {
+        "properties" : {
+          "zLevel" : 6,
+          "offset" : [-1, 5.825],
+          "transformationGroups" : [ "frontgun", "aim" ],
+		  "image" : "<partImage>:idle.1",
+          "beamSource" : [0.0, -0.5],
+          "beamEnd" : [5.0, 0.0]
+        },
+        "partStates" : {
+          "body" : {
+		    "walk": {
+			  "frameProperties": {
+			    "offset": [[-1, 6.7], [-1, 6.45],[-1, 6.325],[-1, 6.45],[-1, 6.575],[-1, 6.7],[-1, 6.45],[-1, 6.325],[-1, 6.45],[-1, 6.575]]
+			  }
+			},
+            "firing" : {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "frontgunfullbright" : {
+        "properties" : {
+          "zLevel" : 7,
+          "anchorPart" : "frontgun",
+          "fullbright" : true,
+		  "image" : "<partImage>:idle.1"
+        },
+        "partStates" : {
+          "body" : {
+            "firing" : {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "backgun" : {
+        "properties" : {
+          "zLevel" : 1,
+          "offset" : [5.7, 5.825],
+          "transformationGroups" : [ "backgun", "aim2" ],
+		  "image" : "<partImage>:idle.1"
+        },
+        "partStates" : {
+          "body" : {
+		    "walk": {
+			  "frameProperties": {
+			    "offset": [[5.7, 6.7], [5.7, 6.45],[5.7, 6.325],[5.7, 6.45],[5.7, 6.575],[5.7, 6.7],[5.7, 6.45],[5.7, 6.325],[5.7, 6.45],[5.7, 6.575]]
+			  }
+			},
+            "firingBack" : {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "backgunfullbright" : {
+        "properties" : {
+          "zLevel" : 2,
+          "anchorPart" : "backgun",
+          "fullbright" : true,
+		  "image" : "<partImage>:idle.1"
+        },
+        "partStates" : {
+          "body" : {
+            "firingBack" : {
+              "properties" : {
+                "image" : "<partImage>:firing.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "body" : { "interpolated" : true },
+	"frontgun" : { "interpolated" : true },
+	"backgun" : { "interpolated" : true },
+	"aim" : { "interpolated" : true },
+	"aim2" : { "interpolated" : true },
+	"aim3" : { "interpolated" : true }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0,
+      "directives" : "fade=ffffff;0.5"
+    }
+  },
+
+  "particleEmitters" : {
+    "spindust" : {
+      "emissionRate" : 15,
+      "offsetRegion" : [ 1.0, -1.0, 2.0, -0.0 ],
+      "particles" : [
+        { "particle" : "mandrafloradust" }
+      ]
+    },
+    "deathPoof" : {
+      "particles" : [
+        { "particle" : "monstersplosion" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathember" },
+        { "particle" : "deathfizz1left" },
+        { "particle" : "deathfizz1right" },
+        { "particle" : "deathfizz2left" },
+        { "particle" : "deathfizz2right" },
+        { "particle" : "deathfizz3left" },
+        { "particle" : "deathfizz3right" },
+        { "particle" : "deathfizz4left" },
+        { "particle" : "deathfizz4right" }
+      ]
+    },
+    "captureParticles" : {
+      "particles" : [
+        { "particle" : "monstercapture" }
+      ]
+    },
+    "releaseParticles" : {
+      "particles" : [
+        { "particle" : "monsterrelease" }
+      ]
+    },
+    "teleportOut" : {
+      "particles" : [
+        { "particle" : "monstercapture" }
+      ]
+    },
+    "teleportIn" : {
+      "particles" : [
+        { "particle" : "monsterrelease" }
+      ]
+    },
+    "levelUp" : {
+      "particles" : [
+        { "particle" : "monsterlevelup" }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "aggroHop" : [ "/sfx/npc/monsters/monster_surprise.ogg" ],
+    "deathPuff" : [ "/sfx/npc/enemydeathpuff.ogg" ],
+	"fire": [ "/sfx/gun/tankshot.ogg" ],
+	"fireRocket": [ "/sfx/gun/mech_flakcannon1.ogg", "/sfx/gun/mech_flakcannon2.ogg","/sfx/gun/mech_flakcannon3.ogg" ]
+  }
+}

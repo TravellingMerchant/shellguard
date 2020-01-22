@@ -1,0 +1,31 @@
+{
+  "objectName" : "sglandingpad",
+  "colonyTags" : ["commerce","industrial"],
+  "rarity" : "Common",
+  "description" : "A massive steel landing pads for large ships.",
+  "shortdescription" : "Shellguard Landing Pad",
+  "race" : "generic",
+  "category" : "furniture",
+  "price" : 85,
+
+  "apexDescription" : "A massive steel landing pads for large ships.",
+  "avianDescription" : "A massive steel landing pads for large ships.",
+  "floranDescription" : "A masssssssive sssteel landing padss for large ssssships.",
+  "glitchDescription" : "Awed. A massive steel landing pads for large ships.",
+  "humanDescription" : "A massive steel landing pads for large ships.",
+  "hylotlDescription" : "A massive steel landing pads for large ships.",
+  "novakidDescription" : "A massive steel landing pads for large ships.",
+
+  "inventoryIcon" : "sglandingpadicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "sglandingpad.png:<color>",
+      "imagePosition" : [-16, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "itemName" : "sgtoyshotgun",
+  "price" : 300,
+  "inventoryIcon" : "sgbulldogshotgun.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "Someones going to have to pick all these darts up, you know that right?",
+  "shortdescription" : "Toy Shotgun",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgbulldogshotgun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgbulldogshotgun.png",
+    "barrel" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/railshots/sgtoydar2.ogg" ]
+    }
+  },
+
+  "baseOffset" : [2.125, 0.1],
+  "muzzleOffset" : [0.25, 0.35],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 1,
+    "baseDps" : 0,
+    "energyUsage" : 25.0,
+    "projectileCount" : 6,
+    "inaccuracy" : 0.09,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -15,
+        "weaponRotation" : 25,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "sgtoydart",
+    "projectileParameters" : { 
+      "knockback" : 20,
+	  "speed" : 150
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgbulldogshotgunelite.png:idle",
+    "animationParts" : {
+      "middle" : "sgbulldogshotgunelite.png"
+    },
+    "shortdescription" : "Toy Shotgun ^yellow;^reset;"
+  }
+}

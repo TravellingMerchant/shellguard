@@ -1,0 +1,309 @@
+{
+  "type" : "sgheavybossfriendlytiny",
+  "shortdescription" : "Model Drone",
+  "description" : "A small display model of an escort drone, but still plenty deadly.",
+
+  "categories" : [ "sgheavybossfriendly" ],
+  "parts" : [ "bodyback", "bodyfront", "head", "head3", "fullbright", "spotlight" ],
+
+  "animation" : "sgheavybossfriendlyescort.animation",
+
+  "dropPools" : [],
+
+  
+  "baseParameters" : {
+  	"damageTeamType" : "friendly",
+    "damageTeam" : 0,
+    "level" : 6,
+	"renderLayer" : "Projectile-1",
+    "scripts" : [
+      "/monsters/monster.lua",
+	  "/monsters/boss/sgheavybossfriendly/bossHandler.lua"
+    ],
+
+    "behavior" : "monster",
+
+    "seeThroughLiquid" : false,
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+      "rotationCenter"  : [2, -2],
+      "rotationCenter2"  : [6, 0],
+
+      "targetQueryRange" : 50,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 70,
+      "targetOutOfSightTime" : 5.0,
+
+      "hurtWaitForGround" : false,
+
+      "foundTargetActions" : [
+        {
+          "name" : "action-animate",
+          "parameters" : {
+            "stateType" : "body",
+            "state" : "idle",
+            "animationTime" : 0.6
+          }
+        }
+      ],
+
+      "fleeActions" : [ ],
+
+      "hostileActions" : [ 
+       {
+          "name" : "action-fire-trans",
+          "cooldown" : 2.5,
+          "parameters" : {
+            "requireLineOfSight" : false,
+            "maximumRange" : 40,
+            "minimumRange" : 3,
+            "windupStopForce" : 0,
+            "windupState" : "idle",
+            "windupTime" : 0.1,
+
+            "projectileType" : "sgmicroshot",
+            "projectileParameters" : {
+              "speed" : 40
+            },
+            "power" : 10,
+            "fireOffset" : [1.5, -1],
+			"rotationCenter"  : [2, -2],
+			"transGroup" : "aim",
+            "aimAtTarget" : true,
+            "rotateAim" : true,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire",
+			"projectileCount" : 5,
+			"projectileInterval" : 0.05,
+			"inaccuracy" : 0.1,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.3
+          }
+       },
+       {
+          "name" : "action-fire-trans",
+          "cooldown" : 2.4,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 40,
+            "minimumRange" : 3,
+            "windupStopForce" : 0,
+            "windupState" : "idle",
+            "windupTime" : 0.5,
+
+            "projectileType" : "sgswarmrocket",
+            "projectileParameters" : {
+              "speed" : 30
+            },
+            "power" : 10,
+            "fireOffset" : [0.25, 1.5],
+			"angleOffset" : -90,
+			"rotationCenter"  : [5, -3],
+			"transGroup" : "aim2",
+            "aimAtTarget" : true,
+            "rotateAim" : true,
+            "holdAim" : false,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire2",
+			"projectileCount" : 3,
+			"projectileInterval" : 0.1,
+			"inaccuracy" : 0.1,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.3
+          }
+       },
+       {
+          "name" : "action-fire-trans",
+          "cooldown" : 5,
+          "parameters" : {
+            "requireLineOfSight" : false,
+            "maximumRange" : 45,
+            "minimumRange" : 3,
+            "windupStopForce" : 0,
+            "windupState" : "idle",
+            "windupTime" : 1,
+
+            "projectileType" : "sgsuperheated",
+            "projectileParameters" : {
+              "speed" : 40
+            },
+            "power" : 70,
+            "fireOffset" : [0.25, 1.5],
+			"angleOffset" : -90,
+			"rotationCenter"  : [5, -3],
+			"transGroup" : "aim2",
+            "aimAtTarget" : true,
+            "rotateAim" : true,
+            "holdAim" : true,
+            "onGround" : false,
+            "fireState" : "",
+            "fireSound" : "fire3",
+			"projectileCount" : 2,
+			"projectileInterval" : 0.1,
+			"inaccuracy" : 0.2,
+
+            "winddownState" : "idle",
+            "winddownTime" : 0.3
+          }
+        }
+      ],
+
+      "periodicActions" : [
+       ],
+
+      "approachActions" : [
+        {
+          "name" : "approach-fly",
+          "parameters" : {
+            "usePathfinding" : false,
+            "minRange" : 1,
+            "maxRange" : 2
+          }
+        }
+      ],
+
+      "followActions" : [
+        {
+          "name" : "approach-teleport",
+          "parameters" : {
+          }
+        },
+        {
+          "name" : "approach-fly",
+          "parameters" : {
+            "usePathfinding" : false,
+            "maxRange" : 10
+          }
+        }
+      ],
+
+      "wanderActions" : [
+        {
+          "name" : "wander-fly",
+          "parameters" : {
+            "wanderTime" : [1,2],
+            "groundDistance" : 30,
+            "ceilingDistance" : 30,
+            "xVelocity" : 100,
+            "yVelocity" : 100
+          }
+        }
+      ],
+
+      "concurrentActions" : [
+        {
+          "name" : "action-globaltag",
+          "parameters" : {
+            "tagName" : "aggro",
+            "tag" : ""
+          }
+        }
+      ],
+
+      "concurrentHostileActions" : [
+        {
+          "name" : "action-globaltag",
+          "parameters" : {
+            "tagName" : "aggro",
+            "tag" : "aggro"
+          }
+        }
+      ]
+    },
+
+    "touchDamage" : {
+      "poly" : [ [-1.5, 1], [-1, 1.5], [1, 1.5], [1.5, 1], [1.5, -1], [1, -1.5], [-1, -1.5], [-1.5, -1] ],
+      "damage" : 9,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "lash",
+      "knockback" : 20,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+    "scale" : 0.3,
+
+    "movementSettings" : {
+      "collisionPoly" : [ [-4.5, 4], [-4, 4.5], [4, 4.5], [4.5, 4], [4.5, -4], [4, -4.5], [-4, -4.5], [-4.5, -4] ],
+
+      "mass" : 0.5,
+      "walkSpeed" : 100,
+      "runSpeed" : 100,
+      "gravityEnabled" : false,
+
+      "airFriction" : 1,
+      "airForce" : 20,
+      "flySpeed" : 20
+    },
+
+    "bodyMaterialKind" : "robotic",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "robotic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+	  "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.5
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 40
+        },
+        "maxHealth" : {
+          "baseValue" : 1000
+        },
+        "protection" : {
+          "baseValue" : 0.1
+        },
+        "healthRegen" : {
+          "baseValue" : 0.1
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.3
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : false
+  }
+}

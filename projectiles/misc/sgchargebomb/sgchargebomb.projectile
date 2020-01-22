@@ -1,0 +1,45 @@
+{
+  "projectileName" : "sgchargebomb",
+  "physics" : "stickybomb",
+  "bounces" : -1,
+  "timeToLive" : 10,
+  "persistentAudio" : "/sfx/objects/mechbeacon_pulse2.ogg",
+  "image" : "sgchargebomb.png",
+  "animationCycle" : 0.4,
+  "lightColor" : [105, 64, 0],
+  "windupFrames" : 4,
+  "frameNumber" : 3,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/bombblockexplosion/bombblockexplosion.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgminingblast",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.1,
+      "angleAdjust" : 0
+    }
+  ],
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/melee/fist_hit_metal1.ogg",
+        "/sfx/melee/fist_hit_metal2.ogg",
+        "/sfx/melee/fist_hit_metal3.ogg",
+        "/sfx/melee/fist_hit_metal4.ogg",
+        "/sfx/melee/fist_hit_metal5.ogg",
+        "/sfx/melee/fist_hit_metal6.ogg"
+      ]
+    }
+  ],
+  "power" : 60,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "damagePoly" : [ [-6, 0], [-4, -4], [0, -6], [4, -4], [6, 0], [4, 4], [0, 6], [-4, 4] ],
+  "movementSettings" : {
+    "collisionPoly" : [ [-0.625, 0.625], [-0.625, -0.625], [0.625, -0.625], [0.625, 0.625] ]
+  }
+}

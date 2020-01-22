@@ -1,0 +1,52 @@
+{
+  "itemName" : "sgsever",
+  "price" : 3500,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A large but light sword, built to replace older Shellguard swords.",
+  "shortdescription" : "MK1-Sever",
+  //"tooltipKind" : "sword",
+  "category" : "broadsword",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","broadsword","upgradeableWeapon"],
+
+  "inventoryIcon" : "sgsever.png",
+
+  "animation" : "/items/active/weapons/melee/broadsword/sgsevercombo.animation",
+  "animationParts" : {
+    "handle" : "",
+    "blade" : "sgsever.png"
+  },
+  "animationCustom" : { },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "sgsevercombo",
+  "primaryAbility" : {
+    "fireTime" : 0.7,
+    "baseDps" : 11.0,
+    "damageConfig" : {
+      "damageSourceKind" : "hammer"
+    }
+  },
+
+  "altAbilityType" : "risingslash",
+  "altAbility" : {
+    "damageConfig" : {
+      "damageSourceKind" : "hammer"
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgseverelite.png",
+    "animationParts" : {
+      "blade" : "sgseverelite.png"
+    },
+    "shortdescription" : "MK2-Sever ^yellow;^reset;",
+    "description" : "A large but light sword, built to replace older Shellguard swords."
+  }
+}

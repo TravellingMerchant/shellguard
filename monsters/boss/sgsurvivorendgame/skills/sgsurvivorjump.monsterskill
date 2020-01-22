@@ -1,0 +1,50 @@
+{
+  "name" : "sgsurvivorjump",
+  "label" : "survivor jump",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sgsurvivorjump.lua" ],
+    "sgsurvivorjump" : {
+      "riseHeight" : 6,
+      "riseSpeed" : 1500,
+
+      "skillDuration" : 1,
+      "winddownTime" : 0.1,
+      "angleCycle" : 6,
+      "maxFireAngle" : 0,
+
+      "fireInterval" : 1.1,
+      "projectileCount" : 1,
+      "projectile" : {
+        "type" : "sghologramspawner",
+        "config" : {
+        },
+        "innerRadius" : 6,
+		"centerOffset" : [ 0.5, -0.75 ]
+      }
+    }
+  },
+
+  "animationParameters" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "electricBurst" : {
+          "default" : "off",
+          "states" : {
+            "off" : {
+            },
+            "on" : {
+              "properties" : {
+                "persistentSound" : "/sfx/objects/plasmadisc.ogg"
+              }
+            }
+          }
+        }
+      }
+    },
+    "sounds" : {
+      "electricBurst" : [ "/sfx/gun/lightningcoil1.ogg" ]
+    }
+  }
+}

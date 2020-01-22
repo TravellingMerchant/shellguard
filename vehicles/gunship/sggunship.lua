@@ -34,6 +34,8 @@ function init()
 	self.zeroGMovementSettings = config.getParameter("zeroGMovementSettings")
 	self.protection = config.getParameter("protection")
 	self.maxHealth = config.getParameter("maxHealth")
+	self.hoverToggle = config.getParameter("hoverToggle")
+	self.hoverToggleControlForce = config.getParameter("hoverToggleControlForce")
 
 	self.smokeThreshold =	config.getParameter("smokeParticleHealthThreshold")
 	self.fireThreshold =	config.getParameter("fireParticleHealthThreshold")
@@ -86,6 +88,7 @@ function init()
 	self.driver = nil;
 	self.facingDirection = config.getParameter("spawnFacingDirection",1)
 	self.angle = 0
+	self.spaceToggled = false
 	animate()
 	
 	self.jumpTimer = 0
@@ -154,9 +157,14 @@ function init()
 	if self.gunnery then
 		for seat,arsenal in pairs(self.gunnery) do
 			for arsenalTrigger,subarsenal in pairs(arsenal) do
-				for i,gun in ipairs(subarsenal) do
+				for gunName,gun in pairs(subarsenal) do
 					gun.cooldown = gun.fireTime
+					gun.activeCooldown = 0
+					gun.weakActiveCooldown = 0
 					gun.aimAngle = 0
+					if gun.chain ~= nil then
+						gun.chain.sourcePart = gunName
+					end
 				end
 			end
 		end
@@ -214,12 +222,32 @@ function update()
 				self.Special1Held = vehicle.controlHeld(seat,"Special1")
 				self[seat.."Entity"] = vehicle.entityLoungingIn(seat)
 				for arsenalTrigger,subarsenal in pairs(arsenal) do
-					for i,gun in pairs(subarsenal) do
+					for gunName,gun in pairs(subarsenal) do
 						gun.cooldown = math.max(gun.cooldown - script.updateDt(),0)
+						if gun.firingType == "laser" then	
+							gun.activeCooldown = math.max(gun.activeCooldown - script.updateDt(),0)
+							if gun.activeCooldown == 0 then
+								gun.weakActiveCooldown = math.max(gun.weakActiveCooldown - script.updateDt(),0)
+								for i,damageSource in ipairs(gun.damageSourceList) do
+									vehicle.setDamageSourceEnabled(damageSource,false)
+								end
+								if not gun.weakChain or gun.weakActiveCooldown == 0 then
+									vehicle.setAnimationParameter("chains", {})
+								else
+									local chains = {}
+									table.insert(chains, gun.weakChain)
+									vehicle.setAnimationParameter("chains", chains)
+								end
+							elseif self[seat.."Entity"] then
+								local chains = {}
+								table.insert(chains, gun.chain)
+								vehicle.setAnimationParameter("chains", chains)
+							end
+						end
 						if not (self.Special1Held and gun.special1AimLock) then
 							if self[seat.."Entity"] then
 								aimOffset = world.distance(vehicle.aimPosition(seat),vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)))
-								gun.aimAngle = math.atan(aimOffset[2],aimOffset[1])
+								gun.aimAngle = math.atan(aimOffset[2],aimOffset[1]) - self.angle
 							elseif gun.emptyAim then
 								gun.aimAngle = self.facingDirection > 0 and gun.emptyAim/180*math.pi or util.wrapAngle(-gun.emptyAim/180*math.pi-math.pi)
 							else
@@ -230,9 +258,9 @@ function update()
 							gun.aimAngle = subarsenal[gun.slavedTo].aimAngle or gun.aimAngle or 0
 						elseif gun.aimMinMax then
 							if self.facingDirection > 0 then
-								gun.aimAngle = util.clamp(gun.aimAngle,gun.aimMinMax[1]/180*math.pi,gun.aimMinMax[2]/180*math.pi)
+								gun.aimAngle = util.clamp(gun.aimAngle,(gun.aimMinMax[1]-self.angle)/180*math.pi,(gun.aimMinMax[2]-self.angle)/180*math.pi)
 							else
-								gun.aimAngle = util.clamp(util.wrapAngle(gun.aimAngle),util.wrapAngle(-math.pi-gun.aimMinMax[2]/180*math.pi),util.wrapAngle(-math.pi-gun.aimMinMax[1]/180*math.pi))
+								gun.aimAngle = util.clamp(util.wrapAngle(gun.aimAngle),util.wrapAngle(-math.pi-(gun.aimMinMax[2]-self.angle)/180*math.pi),util.wrapAngle(-math.pi-(gun.aimMinMax[1]-self.angle)/180*math.pi))
 							end
 						end
 						if gun.slaves then
@@ -240,15 +268,19 @@ function update()
 								subarsenal[slave].aimAngle = gun.aimAngle
 							end
 						end
-						if not gun.noGroup then
-							animator.resetTransformationGroup(gun.gunName)
-							animator.rotateTransformationGroup(gun.gunName,(gun.aimAngle-0.5*math.pi)*self.facingDirection+0.5*math.pi,gun.gunCenter)
+						if not gun.noGroup and not (gun.laserRotationLock and (gun.activeCooldown > 0 or gun.weakActiveCooldown > 0)) then
+							animator.resetTransformationGroup(gun.gunName or gunName)
+							animator.rotateTransformationGroup(gun.gunName or gunName,(gun.aimAngle-0.5*math.pi)*self.facingDirection+0.5*math.pi,gun.gunCenter)
 						end
 					end
 				end
 			end
 		end
-		if ((vehicle.controlHeld("drivingSeat","left") and self.facingDirection == -1) or (vehicle.controlHeld("drivingSeat","right") and self.facingDirection == 1)) and vehicle.controlHeld("drivingSeat","up") then
+		if self.hoverToggled then
+			for thruster,thrusterStats in pairs(self.thrusters) do
+				thrusterStats.thrusterTargetAngle = thrusterStats.thrusterTargets[1]*math.pi/180
+			end
+		elseif ((vehicle.controlHeld("drivingSeat","left") and self.facingDirection == -1) or (vehicle.controlHeld("drivingSeat","right") and self.facingDirection == 1)) and vehicle.controlHeld("drivingSeat","up") then
 			for thruster,thrusterStats in pairs(self.thrusters) do
 				thrusterStats.thrusterTargetAngle = thrusterStats.thrusterTargets[2]*math.pi/180
 			end
@@ -273,6 +305,26 @@ function update()
 			thrusterStats.angle = (thrusterStats.angle or 0) + (thrusterStats.thrusterTargetAngle - (thrusterStats.angle or 0)) * thrusterStats.approach
 			animator.resetTransformationGroup(thruster)
 			animator.rotateTransformationGroup(thruster,thrusterStats.angle,thrusterStats.thrusterCenter)
+		end
+	end
+	
+	--debug
+	if self.gunnery then
+		for seat,arsenal in pairs(self.gunnery) do
+			for arsenalTrigger,subarsenal in pairs(arsenal) do
+				for gunName,gun in pairs(subarsenal) do
+					local gunCenter = vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle))
+					local gunTip = vec2.add(gunCenter,vec2.rotate({gun.gunLength,0},gun.aimAngle+self.angle))
+					world.debugLine(gunCenter,vec2.add(gunCenter,vec2.rotate({world.magnitude(gunCenter,vehicle.aimPosition(seat)),0},gun.aimAngle+self.angle)),{0,255,0})
+					if gun.barrels then
+						for barrel,barrelOffset in ipairs(gun.barrels) do
+							world.debugPoint(vec2.add(gunTip,vec2.rotate(vec2.mul(barrelOffset,{1,self.facingDirection}),gun.aimAngle+self.angle)), "blue")
+						end
+					else
+						world.debugPoint(gunTip, "blue")
+					end
+				end
+			end
 		end
 	end
 end
@@ -336,9 +388,11 @@ function updateDriveEffects(healthFactor, driverThisFrame)
 		end
 	else
 		--no driver, stop the engine
-		if (self.loopPlaying ~= nil) then
-			animator.stopAllSounds(self.loopPlaying, 0.5)
-			self.loopPlaying = nil
+		if not self.hoverToggled then
+			if (self.loopPlaying ~= nil) then
+				animator.stopAllSounds(self.loopPlaying, 0.5)
+				self.loopPlaying = nil
+			end
 		end
 		-- driver last frame, open the cockpit
 		if self.mainStates.opening and self.driver then
@@ -391,8 +445,8 @@ function updateDriveEffects(healthFactor, driverThisFrame)
 		end
 
 		for thruster,thrusterStats in pairs(self.thrusters) do
-		animator.setAnimationState(thruster, "on")
-	end
+			animator.setAnimationState(thruster, "on")
+		end
 	else
 		if self.rearThrusterParticles then
 			animator.setParticleEmitterActive("rearThrusterIdle", false)
@@ -584,49 +638,70 @@ function move()
 		if groundDistance <= self.hoverTargetDistance then
 			mcontroller.approachVelocityAlongAngle(math.pi/2,(self.hoverTargetDistance - groundDistance) * self.hoverVelocityFactor, self.hoverControlForce,true)
 		end
-	targetAngle = 0
-	else
-	if self.velocityRotation then
 		targetAngle = 0
-	end
+	else
+		if self.velocityRotation then
+			targetAngle = 0
+		end
+		if self.hoverToggled then
+			mcontroller.applyParameters(self.occupiedMovementSettings)
+			if groundDistance <= self.hoverTargetDistance then
+				mcontroller.approachVelocityAlongAngle(math.pi/2,(self.hoverTargetDistance - groundDistance) * self.hoverVelocityFactor, self.hoverControlForce,true)
+			end
+		end
 	end
 	
-	if vehicle.controlHeld("drivingSeat", "left") then
+	if vehicle.controlHeld("drivingSeat", "jump") then
+		if not self.holdingJumpLastFrame then
+			self.spaceToggled = not self.spaceToggled
+		end
+		self.holdingJumpLastFrame = true
+	else
+		self.holdingJumpLastFrame = false
+	end
+	
+	if self.hoverToggle then
+		self.hoverToggled = self.spaceToggled
+	end
+	if self.hoverToggled and self.hoverToggleControlForce then
+		mcontroller.approachYVelocity(0, self.hoverToggleControlForce)
+		mcontroller.approachXVelocity(0, self.hoverToggleControlForce)
+	end
+	if vehicle.controlHeld("drivingSeat", "left") and not self.hoverToggled then
 		mcontroller.approachXVelocity(-self.targetHorizontalVelocity, self.horizontalControlForce)
-	if self.velocityRotation then
-		targetAngle = math.atan(mcontroller.yVelocity(),math.max(math.abs(mcontroller.xVelocity()),10))
-		targetAngle = (self.facingDirection < 0) and -targetAngle or targetAngle
-	end
+		if self.velocityRotation then
+			targetAngle = math.atan(mcontroller.yVelocity(),math.max(math.abs(mcontroller.xVelocity()),10))
+			targetAngle = (self.facingDirection < 0) and -targetAngle or targetAngle
+		end
 		self.enginePitch = self.engineRevPitch;
 		self.engineVolume = self.engineRevVolume;
-	elseif vehicle.controlHeld("drivingSeat", "right") then
+	elseif vehicle.controlHeld("drivingSeat", "right") and not self.hoverToggled then
 		mcontroller.approachXVelocity(self.targetHorizontalVelocity, self.horizontalControlForce)
-	if self.velocityRotation then
-		targetAngle = math.atan(mcontroller.yVelocity(),math.max(math.abs(mcontroller.xVelocity()),10))
-		targetAngle = (self.facingDirection < 0) and -targetAngle or targetAngle
-	end
+		if self.velocityRotation then
+			targetAngle = math.atan(mcontroller.yVelocity(),math.max(math.abs(mcontroller.xVelocity()),10))
+			targetAngle = (self.facingDirection < 0) and -targetAngle or targetAngle
+		end
 		self.enginePitch = self.engineRevPitch;
 		self.engineVolume = self.engineRevVolume;
 	end
-	if vehicle.controlHeld("drivingSeat", "up") then
-	if not self.velocityRotation then
-		local targetAngle = (self.facingDirection < 0) and -self.maxAngle or self.maxAngle
-		self.angle = self.angle + (targetAngle - self.angle) * self.angleApproachFactor
-	end
-		self.enginePitch = self.engineRevPitch;
-		self.engineVolume = self.engineRevVolume;
-	
-	if self.canFly then
-		mcontroller.approachYVelocity(self.targetUpwardVelocity, self.upwardControlForce)
-	end
-	elseif vehicle.controlHeld("drivingSeat", "down") then
+	if vehicle.controlHeld("drivingSeat", "up") and not self.hoverToggled then
 		if not self.velocityRotation then
-		local targetAngle = (self.facingDirection < 0) and self.maxAngle or -self.maxAngle
-		self.angle = self.angle + (targetAngle - self.angle) * self.angleApproachFactor
-	end
-	if self.canFly then
-		mcontroller.approachYVelocity(self.targetDownwardVelocity, self.downwardControlForce)
-	end
+			local targetAngle = (self.facingDirection < 0) and -self.maxAngle or self.maxAngle
+			self.angle = self.angle + (targetAngle - self.angle) * self.angleApproachFactor
+		end
+		self.enginePitch = self.engineRevPitch
+		self.engineVolume = self.engineRevVolume
+		if self.canFly then
+			mcontroller.approachYVelocity(self.targetUpwardVelocity, self.upwardControlForce)
+		end
+	elseif vehicle.controlHeld("drivingSeat", "down") and not self.hoverToggled then
+		if not self.velocityRotation then
+			local targetAngle = (self.facingDirection < 0) and self.maxAngle or -self.maxAngle
+			self.angle = self.angle + (targetAngle - self.angle) * self.angleApproachFactor
+		end
+		if self.canFly then
+			mcontroller.approachYVelocity(self.targetDownwardVelocity, self.downwardControlForce)
+		end
 	else
 		local frontSpringDistance = minimumSpringDistance(self.frontSpringPositions)
 		local backSpringDistance = minimumSpringDistance(self.backSpringPositions)
@@ -679,36 +754,17 @@ function controls()
 		for seat,arsenal in pairs(self.gunnery) do
 			for arsenalTrigger,subarsenal in pairs(arsenal) do
 				if (vehicle.controlHeld(seat, arsenalTrigger)) then
-					for i,gun in ipairs(subarsenal) do
-						if gun.cooldown == 0 then
-							if gun.barrels then
-								for barrel,barrelOffset in ipairs(gun.barrels) do
-									fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(vec2.add(vec2.add(mcontroller.position(),vec2.rotate(barrelOffset,gun.aimAngle+self.angle)),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)),vec2.rotate({gun.gunLength,0},gun.aimAngle)),gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
-								end
-							else
-								fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle)),vec2.rotate({gun.gunLength,0},gun.aimAngle)),gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
-							end
-							gun.cooldown = gun.fireTime
-							if gun.punishSlaves then
-								for slave,punishment in pairs(gun.punishSlaves) do
-									for i,gun in ipairs(subarsenal) do
-										if gun.gunName == slave then
-											gun.cooldown = punishment
-										end
-									end
-								end
-							end
-							if gun.playSounds then
-								for i,sound in ipairs(gun.playSounds) do
-									animator.playSound(sound)
-								end
-							end
-							if gun.setAnimationStates then
-								for animation,state in pairs(gun.setAnimationStates) do
-									animator.setAnimationState(animation,type(state) == "table" and state[1] or state,type(state) == "table" and state[2] or false)
-								end
-							end
-						end
+					for gunName,gun in pairs(subarsenal) do
+						fireSubarsenal(seat,subarsenal,gunName,gun,gun.punishSlaves)
+					end
+				end
+			end
+		end
+		for seat,arsenal in pairs(self.gunnery) do
+			for arsenalTrigger,subarsenal in pairs(arsenal) do
+				if (vehicle.controlHeld(seat, arsenalTrigger)) then
+					for gunName,gun in pairs(subarsenal) do
+						fireSubarsenal(seat,subarsenal,gunName,gun,not gun.punishSlaves)
 					end
 				end
 			end
@@ -724,6 +780,57 @@ function controls()
 		if self.hornPlaying then
 			animator.stopAllSounds("hornLoop")
 			self.hornPlaying = false;
+		end
+	end
+end
+
+function fireSubarsenal(seat,subarsenal,gunName,gun,condition)
+	if gun.cooldown == 0 and condition then
+		local gunCenter = vec2.add(mcontroller.position(),vec2.rotate(vec2.mul(gun.gunCenter,{self.facingDirection,1}),self.angle))
+		local gunTip = vec2.add(gunCenter,vec2.rotate({gun.gunLength,0},gun.aimAngle+self.angle))
+		if gun.firingType == "flak" then
+			local speed = gun.projectileParams.speed or root.projectileConfig(gun.projectileType).speed
+			gun.projectileParams.timeToLive = world.magnitude(gunTip,vehicle.aimPosition(seat)) / speed
+		end
+		if gun.firingType == "laser" and gun.activeCooldown == 0 then
+			gun.activeCooldown = gun.activeTime
+			gun.cooldown = gun.fireTime
+			gun.weakActiveCooldown = gun.weakActiveTime or 0
+			for i,damageSource in ipairs(gun.damageSourceList) do
+				vehicle.setDamageSourceEnabled(damageSource,true)
+			end
+		elseif gun.firingType ~= "laser" then
+			if gun.barrels then
+				for barrelI,barrelOffset in ipairs(gun.barrels) do
+					fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,vec2.add(gunTip,vec2.rotate(vec2.mul(barrelOffset,{1,self.facingDirection}),gun.aimAngle+self.angle)),gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
+				end
+			else
+				fireProjectile(gun.projectileType,gun.projectileParams,gun.inaccuracy,gunTip,gun.projectileCount,gun.fireTime,util.wrapAngle(gun.aimAngle+self.angle))
+			end
+			gun.cooldown = gun.fireTime
+		end
+		if gun.punishSlaves then
+			for slave,punishment in pairs(gun.punishSlaves) do
+				if subarsenal[slave] then
+					subarsenal[slave].cooldown = punishment
+				else
+					for slaveName,slaveGun in pairs(subarsenal) do
+						if slaveGun.gunName == slave then
+							slaveGun.cooldown = punishment
+						end
+					end
+				end
+			end
+		end
+		if gun.playSounds then
+			for i,sound in ipairs(gun.playSounds) do
+				animator.playSound(sound)
+			end
+		end
+		if gun.setAnimationStates then
+			for animation,state in pairs(gun.setAnimationStates) do
+				animator.setAnimationState(animation,type(state) == "table" and state[1] or state,type(state) == "table" and state[2] or false)
+			end
 		end
 	end
 end

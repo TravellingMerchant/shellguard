@@ -6,7 +6,7 @@
   "price" : 500,
   "rarity" : "Common",
   "description" : "This teleporter should get you to a Shellguard outpost!",
-  "shortdescription" : "Shellguard Outpost Teleporter",
+  "shortdescription" : "SG Hub Teleporter",
   "race" : "ancient",
 
   "apexDescription" : "This will take me to a Shellguard outpost!",

@@ -21,6 +21,7 @@
     "sellFactor" : 0.2,
     "items" : [
 	  { "item" : "sgbaseteleporter" },
+	  { "item" : "sgbaseteleporteralt" },
 	  { "item" : "sgvendingguard" },
 	  { "item" : "sgvendingturret" },
 	  { "item" : "sgdonatorshop" },
@@ -79,6 +80,7 @@
 	  { "item" : "shellshield" },
 	  { "item" : "sgheavyshield" },
       { "item" : "shellguarddroner" },
+      { "item" : "sgminingcharge" },
       { "item" : "sgsentrybasethrow" },
       { "item" : "sgflamesentrythrow" },
       { "item" : "tankthrow" }

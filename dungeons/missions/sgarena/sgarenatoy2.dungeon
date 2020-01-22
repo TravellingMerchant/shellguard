@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "sgarenatoy2",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "sgarenatoy2" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "sgarenatoy2",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "sgarenatoy2.json" ]
+    }
+  ]
+}

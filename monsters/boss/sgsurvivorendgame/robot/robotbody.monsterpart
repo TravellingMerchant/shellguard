@@ -1,0 +1,9 @@
+{
+  "name" : "sgarenabossbody",
+  "category" : "sgsurvivorendgame",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgarenabossbody.png"
+  }
+}

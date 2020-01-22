@@ -1,0 +1,233 @@
+{
+  "animationParts" : { },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/swing_spear.ogg" ],
+      "fire2" : [ "/sfx/melee/swing_broadsword.ogg" ],
+      "fire3" : [ "/sfx/melee/swing_shortsword.ogg" ],
+      "fire4" : [ "/sfx/melee/swing_spear.ogg" ],
+      "gunfire" : [ "/sfx/gun/ar4.ogg" ]
+    }
+  },
+
+  "ability" : {
+    "name" : "pistol Combo",
+    "type" : "sgbayonetpistolcombo",
+    "scripts" : ["/items/active/weapons/melee/nebsgprojectilecombo.lua"],
+    "class" : "NebSGProjectileCombo",
+
+    "comboSteps" : 5,
+
+    "flashTime" : 0.15,
+    "flashDirectives" : "fade=FFFFFFFF=0.15",
+
+    "swooshOffsetRegions" : [
+      [0, 0, 0, 0],
+	  [0, 0, 0, 0],
+      [0, 0, 0, 0],
+	  [0, 0, 0, 0],
+	  [0, 0, 0, 0]
+    ],
+
+    // cooldown time multiplier for steps after the first, compounded per combo step
+    "comboSpeedFactor" : 0.9,
+
+    "edgeTriggerGrace" : 0.25,
+
+    "fireTime" : 0.8,
+    "baseDps" : 10.75,
+
+    "damageConfig" : {
+      "damageSourceKind" : "spear",
+      "statusEffects" : [ ],
+      "knockbackMode" : "facing",
+      "timeout" : 0.5
+    },
+    "stepDamageConfig" : [
+      {
+        "baseDamageFactor" : 1.0,
+        "knockback" : 0
+      },
+      {
+        "baseDamageFactor" : 1.0,
+        "knockback" : 0
+      },
+      {
+        "baseDamageFactor" : 1.0,
+        "knockback" : 0
+      },
+      {
+        "baseDamageFactor" : 1.0,
+        "knockback" : 25
+      },
+      {
+        "baseDamageFactor" : 1.0,
+        "knockback" : 0
+      }
+    ],
+
+    "stances" : {
+      "idle" : {
+        "aimAngle" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+        "allowRotate" : true,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : true,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "closed"
+				}
+      },
+      "windup1" : {
+        "duration" : 0.001,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : true
+      },
+      "fire1" : {
+        "duration" : 0.2,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : false
+      },
+      "wait1" : {
+        "duration" : 0.001,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "allowRotate" : false,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : true,
+        "twoHanded" : false
+      },
+	  
+      "windup2" : {
+        "duration" : 0.001,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : true
+      },
+      "fire2" : {
+        "duration" : 0.2,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : false
+      },
+      "wait2" : {
+        "duration" : 0.001,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "allowRotate" : false,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : true,
+        "twoHanded" : false
+      },
+	  
+      "windup3" : {
+        "duration" : 0.001,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : true
+      },
+      "fire3" : {
+        "duration" : 0.2,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : false
+      },
+      "wait3" : {
+        "duration" : 0.001,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "allowRotate" : false,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : true,
+        "twoHanded" : false
+      },
+
+      "windup4" : {
+        "duration" : 0.4,
+        "armRotation" : -50,
+        "weaponRotation" : 10,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : true,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "open"
+				}
+      },
+      "fire4" : {
+        "duration" : 0.3,
+        "armRotation" : -20,
+        "weaponRotation" : 90,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : false
+      },
+      "wait4" : {
+        "duration" : 0.4,
+        "armRotation" : -10,
+        "weaponRotation" : 90,
+        "allowRotate" : false,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : true,
+        "twoHanded" : false,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "closed"
+				}
+      },
+
+      "windup5" : {
+        "duration" : 0.2,
+        "armRotation" : 0,
+        "weaponRotation" : 30,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : true
+      },
+      "fire5" : {
+        "duration" : 0.3,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : false
+      }
+    }
+  }
+}

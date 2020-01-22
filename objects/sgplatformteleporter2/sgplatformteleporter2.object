@@ -5,8 +5,8 @@
   "printable" : false,
   "price" : 500,
   "rarity" : "Common",
-  "description" : "This teleporter should get you to a Shellguard outpost!",
-  "shortdescription" : "Shellguard Outpost Teleporter",
+  "description" : "A strange sword in a stone.",
+  "shortdescription" : "Sword in a stone.",
   "race" : "ancient",
 
   "apexDescription" : "...",

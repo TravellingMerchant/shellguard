@@ -1,0 +1,96 @@
+{
+  "itemName" : "sgbreakersniper",
+  "price" : 4500,
+  "inventoryIcon" : "sgbreakerrifle.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A mix between a Breaker and a Moto Sniper enhanced with Praxis technology.",
+  "shortdescription" : "Praxis Motobreaker",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgbreakerrifle.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgbreakerrifle.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/sgpushshotheavy.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.75, 0.5],
+  "muzzleOffset" : [2.625, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 1.5,
+    "baseDps" : 9,
+    "energyUsage" : 200.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.02,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 1,
+        "armRotation" : -45,
+        "weaponRotation" : 60,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "sgbreakerroundblast",
+    "projectileParameters" : { 
+      "knockback" : 6,
+	  "speed" : 250
+    }
+  },
+
+  "altAbilityType" : "sgspiderburst",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgbreakerrifleelite.png:idle",
+    "animationParts" : {
+      "middle" : "sgbreakerrifleelite.png"
+    },
+    "shortdescription" : "Praxis Moto ^yellow;^reset;"
+  }
+}

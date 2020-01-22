@@ -1,0 +1,11 @@
+{
+  "name" : "sgbackglow",
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "sgbackglow.lua"
+  ],
+
+  "animationConfig" : "sgbackglow.animation"
+}

@@ -47,17 +47,18 @@
   "upwardControlForce" : 70,
   "targetDownwardVelocity" : -40,
   "downwardControlForce" : 120,
+  "hoverToggle" : true,
+  "hoverToggleControlForce" : 60,
   "spinFriction" : 0.1,
 	"mainStates" : {"opening":true,"closing":true},
 	"gunnery" : {
 		"drivingSeat" : {
-			"PrimaryFire" : [
-				{
-					"gunName" : "forwardDoubleCannonFront",
+			"PrimaryFire" : {
+				"forwardDoubleCannonFront" : {
 					"aimMinMax" : [-75,60],
 					"emptyAim" : 0,
 					"projectileType" : "swarmadvancedrockethoming",
-					"slaves" : [2],
+					"slaves" : ["forwardDoubleCannonBack"],
 					"punishSlaves" : {"forwardDoubleCannonBack":0.7},
 					"projectileParams" : {
 						"power" : 50,
@@ -72,11 +73,10 @@
 					"playSounds" : ["forwardDoubleCannons"],
 					"setAnimationStates" : {"forwardDoubleCannonFront":"fire"}
 				},
-				{
-					"gunName" : "forwardDoubleCannonBack",
+				"forwardDoubleCannonBack" : {
 					"aimMinMax" : [-75,60],
 					"emptyAim" : 0,
-					"slavedTo" : 1,
+					"slavedTo" : "forwardDoubleCannonFront",
 					"projectileType" : "swarmadvancedrockethoming",
 					"projectileParams" : {
 						"power" : 50,
@@ -91,10 +91,9 @@
 					"playSounds" : ["forwardDoubleCannons"],
 					"setAnimationStates" : {"forwardDoubleCannonBack":"fire"}
 				}
-			],
-			"AltFire" : [
-				{
-					"gunName" : "ventralAutocannon",
+			},
+			"AltFire" : {
+				"ventralAutocannon" : {
 					"aimMinMax" : [-179,0],
 					"emptyAim" : 0,
 					"projectileType" : "sgsuperheated",
@@ -109,10 +108,9 @@
 					"playSounds" : ["ventralAutocannon"],
 					"setAnimationStates" : {"ventralAutocannon":"fire"}
 				}
-			],
-			"Special1" : [
-				{
-					"gunName" : "bombingBay",
+			},
+			"Special1" : {
+				"bombingBay" : {
 					"noGroup" : true,
 					"aimMinMax" : [-90,-90],
 					"projectileType" : "bouncyclustergrenade",
@@ -128,7 +126,7 @@
 					"barrels" : [[0,-1.5],[0,0],[0,1.5]],
 					"playSounds" : ["bombbay"]
 				}
-			]
+			}
 		}
 	},
 	"thrusters" : {"sideThrusterFront":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[-3,1.75]},"sideThrusterBack":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[9,2]}},

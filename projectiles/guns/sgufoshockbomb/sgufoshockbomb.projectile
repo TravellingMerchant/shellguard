@@ -12,9 +12,11 @@
   "movementSettings" : {
     "gravityMultiplier" : 1
   },
-  "animationCycle" : 0.5,
+  "animationCycle" : 0.15,
+  "frameNumber" : 4,
   "pointLight" : true,
-  "lightColor" : [255, 0, 0],
+  "fullbright" : true,
+  "lightColor" : [200, 50, 50],
   "actionOnReap" : [
 	{
       "action" : "spark"
@@ -46,7 +48,6 @@
 
   ],
   "emitters" : [ "rocketsmoke" ],
-  "frameNumber" : 1,
   "damageKindImage" : "icon.png",
   "timeToLive" : 7,
   "power" : 20,

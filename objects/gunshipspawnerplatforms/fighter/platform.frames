@@ -1,0 +1,13 @@
+{
+  "frameGrid" : {
+    "size" : [104, 40],
+    "dimensions" : [3, 1],
+    "names" : [
+      [ "default.ready", "default.buttonpress", "default.charging" ]
+    ]
+  },
+  
+  "aliases" : {
+    "default" : "default.ready"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name" : "sgbosswormcore",
+  "category" : "sgbosswormcore",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "sgbosswormcore.png",
+    "bodyfullbright" : "sgbosswormcorefullbright.png"
+  }
+}

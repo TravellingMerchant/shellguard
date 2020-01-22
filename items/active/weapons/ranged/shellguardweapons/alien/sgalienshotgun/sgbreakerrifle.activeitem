@@ -1,0 +1,96 @@
+{
+  "itemName" : "sgalienshotgun",
+  "price" : 2300,
+  "inventoryIcon" : "sgbreakerrifle.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "An alien shotgun made of a crystalline metallic growth.",
+  "shortdescription" : "Alien Spread Rifle",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgbreakerrifle.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgbreakerrifle.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/alien/sgalienshotgun2.ogg" ]
+    }
+  },
+
+  "baseOffset" : [2.25, 0.1],
+  "muzzleOffset" : [0.375, 0.25],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+  "scriptDelta" : 2,
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 1,
+    "baseDps" : 11,
+    "energyUsage" : 20.0,
+    "projectileCount" : 7,
+    "inaccuracy" : 0.05,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.2,
+        "armRotation" : -15,
+        "weaponRotation" : 30,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+    //"burstCount" : 8,
+    //"burstTime" : 0.02,
+
+    "projectileType" : "sgthorns",
+    "projectileParameters" : { 
+      "knockback" : 10
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgbreakerrifleelite.png:idle",
+    "animationParts" : {
+      "middle" : "sgbreakerrifleelite.png"
+    },
+    "shortdescription" : "Alien Spread Rifle ^yellow;^reset;"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name" : "sgheavybossrailgun",
+  "category" : "sgheavyboss",
+  "type" : "head2",
+
+  "frames" : {
+    "head2" : "sgheavybossrailgun.png"
+  }
+}

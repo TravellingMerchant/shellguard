@@ -1,0 +1,195 @@
+{
+  "type" : "sgalienwormbody",
+  "shortdescription" : "Ancient Devourer",
+  "description" : "Beware the worm, it eats all.",
+  "Persistent" : true,
+
+  "categories" : [ "sgalienwormbody" ],
+  "parts" : [ "body" ],
+
+  "animation" : "sgalienworm.animation",
+
+  // "dropPools" : [ { "default" : "batongTreasure", "bow" : "batongHunting" } ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua",
+      "/scripts/wfsystem/monster/worm/wfwormbodysg.lua"
+    ],
+
+	"animationScripts" : [
+      "/items/active/effects/sglocalanimator.lua"
+    ],
+    "chainOffset" : -1,
+    "chains" :  {
+      "startSegmentImage" : "/monsters/worm/sgalienworm/body/sgalienwormchain.png",
+      "segmentImage" : "/monsters/worm/sgalienworm/body/sgalienwormchain.png",
+      "endSegmentImage" : "/monsters/worm/sgalienworm/body/sgalienwormchain.png",
+      "segmentSize" : 0.125,
+	  "renderLayer" : "Monster-10",
+	  "fullbright" : true
+    },
+
+    "damageTeamType" : "enemy",
+    "damageTeam" : 0,
+    "behavior" : "monster",
+	"renderLayer" : "Monster+1",
+
+    "seeThroughLiquid" : true,
+	
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+
+      "targetQueryRange" : 0,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 50,
+      "targetOutOfSightTime" : 5.0,
+
+      "foundTargetActions" : [ ],
+
+      "fleeActions" : [ ],
+
+      "hostileActions" : [ ],
+
+      "periodicActions" : [ ],
+
+      "approachActions" : [ ],
+
+      "followActions" : [ ],
+
+      "wanderActions" : [ ],
+
+      "concurrentActions" : [ ],
+
+      "deathActions" : [
+        {
+          "name" : "action-projectile",
+          "parameters" : {
+            "projectileCount" : 1,
+            "projectileType" : "fireplasmaexplosion",
+            "projectileParameters" : {
+              "damageTeam" : { "type" : "enemy", "team" : 0 }
+            },
+            "aimDirection" : [0, 0],
+            "inaccuracy" : 0,
+            "fireOffset" : [0, 0]
+          }
+        }
+      ],
+
+      "concurrentHostileActions" : [ ]
+    },
+
+    "touchDamage" : {
+      "poly" : [[1, 4], [-1, 4], [-1, 0], [0, -1] , [1, 0]],
+      "damage" : 4,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "slash",
+      "knockback" : 20,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionEnabled" : false,
+      "collisionPoly" : [[1, 4], [-1, 4], [-1, 0], [0, -1] , [1, 0]],
+
+      "mass" : 1.0,
+      "gravityEnabled" : false
+    },
+
+    "bodyMaterialKind" : "organic",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "organic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.5
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 10000
+        },
+        "maxHealth" : {
+          "baseValue" : 10000
+        },
+        "protection" : {
+          "baseValue" : 50
+        },
+        "healthRegen" : {
+          "baseValue" : 10000
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        },
+        "physicalResistance" : {
+          "baseValue" : 0.2
+        },
+        "fireResistance" : {
+          "baseValue" : -0.1
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+        "iceResistance" : {
+          "baseValue" : 0.6
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 1
+        },
+        "electricResistance" : {
+          "baseValue" : -0.1
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+        "poisonResistance" : {
+          "baseValue" : 1
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 1
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : false,
+    "captureHealthFraction" : 0.5,
+    "nametagColor" : [64, 200, 255]
+  }
+}

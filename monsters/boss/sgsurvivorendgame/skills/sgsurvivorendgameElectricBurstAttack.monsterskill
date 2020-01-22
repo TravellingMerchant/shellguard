@@ -1,0 +1,53 @@
+{
+  "name" : "sgsurvivorendgameElectricBurstAttack",
+  "label" : "OVERLOAD hologram",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgsurvivorendgame/skills/sgsurvivorendgameElectricBurstAttack.lua" ],
+    "sgsurvivorendgameElectricBurstAttack" : {
+      "riseHeight" : 8,
+      "riseSpeed" : 1500,
+
+      "skillDuration" : 1,
+      "winddownTime" : 0.1,
+      "angleCycle" : 6,
+      "maxFireAngle" : 0,
+
+      "fireInterval" : 1.1,
+      "projectileCount" : 4,
+      "projectile" : {
+        "type" : "sgsurvivordash",
+        "config" : {
+          "power" : 10,
+          "speed" : 0,
+          "bounces" : 0
+        },
+        "innerRadius" : 6,
+		"centerOffset" : [ 0.5, -0.75 ]
+      }
+    }
+  },
+
+  "animationParameters" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "electricBurst" : {
+          "default" : "off",
+          "states" : {
+            "off" : {
+            },
+            "on" : {
+              "properties" : {
+                "persistentSound" : "/sfx/objects/plasmadisc.ogg"
+              }
+            }
+          }
+        }
+      }
+    },
+    "sounds" : {
+      "electricBurst" : [ "/sfx/gun/lightningcoil1.ogg" ]
+    }
+  }
+}

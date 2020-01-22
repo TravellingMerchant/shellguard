@@ -25,10 +25,6 @@ function HeavyBeam:update(dt, fireMode, shiftHeld)
   WeaponAbility.update(self, dt, fireMode, shiftHeld)
   
   --world.debugText("%s", self.cooldownTimer, vec2.add(mcontroller.position(), {0, 3}),"red")
-
-  self.cooldownTimer = math.max(0, self.cooldownTimer - self.dt)
-  self.beamTimer = math.max(0, self.beamTimer - self.dt)
-  
   --world.debugText("%s", self.cooldownTimer, vec2.add(mcontroller.position(), {0, 2}),"red")
 
   if animator.animationState("firing") ~= "fire" then
@@ -86,6 +82,9 @@ function HeavyBeam:update(dt, fireMode, shiftHeld)
       activeItem.setScriptedAnimationParameter("chains", chains)
     end
   end
+
+  self.cooldownTimer = math.max(0, self.cooldownTimer - self.dt)
+  self.beamTimer = math.max(0, self.beamTimer - self.dt)
   
   if self.fireMode == (self.activatingFireMode or self.abilitySlot)
     and not self.weapon.currentAbility

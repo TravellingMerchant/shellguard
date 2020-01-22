@@ -1,0 +1,9 @@
+{
+  "name" : "dragonbossheadlit",
+  "category" : "sgdragonboss",
+  "type" : "headlit",
+
+  "frames" : {
+    "headlit" : "headlit.png"
+  }
+}

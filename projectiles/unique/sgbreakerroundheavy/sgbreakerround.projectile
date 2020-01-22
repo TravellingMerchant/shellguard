@@ -1,0 +1,72 @@
+{
+  "projectileName" : "sgbreakerroundheavy",
+  "image" : "sgbreakerround.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 1,
+  "piercing" : false,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "physics" : "laser",
+  "timeToLive" : 2,
+  "bounces" : 0,
+  "lightColor" : [170, 100, 0],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
+    },
+    {
+      "action" : "light",
+      "color" : "orange"
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.15,
+      "type" : "sgshrapnelblastbreaker"
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgreboundshard",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgreboundshard",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : 20
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgreboundshard",
+      "fuzzAngle" : 0,
+      "inheritDamageFactor" : 0.2,
+      "angleAdjust" : -20
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.05,
+      "repeat" : true,
+
+      "action" : "loop",
+      "count" : 1,
+      "body" : [
+        {
+          "action" : "projectile",
+          "type" : "sgbulletring",
+          "fuzzAngle" : 360,
+          "inheritDamageFactor" : 0.1,
+          "angleAdjust" : 0
+        }
+      ]
+    }
+  ],
+
+  "power" : 5.0,
+  "speed" : 150,
+  "damageKind" : "default"
+}

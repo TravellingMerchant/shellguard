@@ -1,0 +1,23 @@
+{
+  "projectileName" : "sgshrapnel",
+  "image" : "sgshrapnel.png",
+  "frameNumber" : 1,
+  "physics" : "shrapnel",
+  "fullbright" : true,
+  "bounces" : 2,
+  "piercing" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
+    }
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [ "rocketsmoke" ],
+  "power" : 5.0,
+  "speed" : 30,
+  "knockback" : 10,
+  "damageKind" : "shotgunbullet"
+}

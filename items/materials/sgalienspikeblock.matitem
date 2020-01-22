@@ -1,0 +1,16 @@
+{
+  "itemName" : "sgalienspikeblock",
+  "price" : 10,
+  "category" : "block",
+  "rarity" : "Common",
+  "inventoryIcon" : "sgalienspikeblock.png",
+  "shortdescription" : "Alien Spike Block",
+  "description" : "A metallic, yet organic plate.",
+  "glitchDescription" : "Observant. A metallic, yet organic plate.",
+  "floranDescription" : "A metallic, yet organic plate. Tasstessss bad!",
+  "novakidDescription" : "A metallic, organic lookin plate.",
+
+
+  "materialId" : 26208,
+  "learnBlueprintsOnPickup" : [ "sgalienspikeblock" ]
+}

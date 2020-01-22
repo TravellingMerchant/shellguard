@@ -1,0 +1,59 @@
+{
+  "projectileName" : "sgcutterblaststicking",
+  "physics" : "stickybomb",
+  "bounces" : 0,
+  "image" : "sgspikemortarsticking.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 6,
+  "emitters" : [],
+  "piercing" : true,
+  "power" : 0,
+  "timeToLive" : 7.5,
+  "supportsProcessing" : true,
+  "damageType" : "NoDamage",
+  "damageKind" : "hidden",
+  "damagePoly" : [ [-5, 2.5], [12, 0], [-5, -2.5], [-8, 0] ],
+  "hydrophobic" : false,
+  "statusEffects" : [],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/burstexplosion/fireburstexplosion.config"
+    }
+  ],
+
+  "periodicActions" : [
+	{
+     "time" : 0.5,
+     "repeat" : true,
+          "action" : "projectile",
+          "type" : "sgthorns",
+          "fuzzAngle" : 20,
+          "inheritDamageFactor" : 1,
+          "angleAdjust" : 0
+    }
+  ],
+  
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/melee/fist_hit_metal1.ogg",
+        "/sfx/melee/fist_hit_metal2.ogg",
+        "/sfx/melee/fist_hit_metal3.ogg",
+        "/sfx/melee/fist_hit_metal4.ogg",
+        "/sfx/melee/fist_hit_metal5.ogg",
+        "/sfx/melee/fist_hit_metal6.ogg"
+      ]
+    }
+  ],
+  
+  "renderLayer" : "Monster+1",
+  
+  "scripts" : [ "/projectiles/scripts/nebsgprojectilesticking.lua" ],
+  "searchDistance" : 0.09,						
+  "stickToTargetTime" : 3,						
+  "proximitySearchRadius" : false,				
+  "validEntityTypes" : ["monster", "npc"],	    
+  "enemyAllyDistinguishing" : false		    
+}
