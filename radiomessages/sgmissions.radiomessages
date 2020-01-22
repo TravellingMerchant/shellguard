@@ -271,14 +271,14 @@
     "type" : "mission",
     "senderName" : "SG-F0RTR355",
     "portraitImage" : "/interface/chatbubbles/SGUFO.png",
-    "text" : "The Siegebreaker unit is a powerful wrecking machine designed for carving holes in enemy defenses. It's hard armour makes it physically resistant to damage."
+    "text" : "The Siegebreaker unit is a powerful wrecking machine designed for carving holes in enemy defenses. Its hard armor makes it physically resistant to damage."
   },
   
   "sgbossmine2" : {
     "type" : "mission",
     "senderName" : "SG-F0RTR355",
     "portraitImage" : "/interface/chatbubbles/SGUFO.png",
-    "text" : "This unit suggests getting its attention and using the local enviroment to eliminate it. This unit gives you a moderate survival estimate. Your previous experience murde- decommissioning  sentient machines is quite vast."
+    "text" : "This unit suggests getting its attention and using the local environment to eliminate it. This unit gives you a moderate survival estimate. Your previous experience murde- decommissioning sentient machines is quite vast."
   },
   
   "sgbossmine3" : {
@@ -292,14 +292,14 @@
     "type" : "mission",
     "senderName" : "SG-F0RTR355",
     "portraitImage" : "/interface/chatbubbles/SGUFO.png",
-    "text" : "Mission success. You have decomissioned another of my childre- correction, malfunctioning prototype products."
+    "text" : "Mission success. You have decommissioned another of my childre- correction, malfunctioning prototype products."
   },
   
   "sgbossmine5" : {
     "type" : "mission",
     "senderName" : "SG-F0RTR355",
     "portraitImage" : "/interface/chatbubbles/SGUFO.png",
-    "text" : "This unit does propose a query. Why was this unit attacking indescriminately in the first place?"
+    "text" : "This unit does propose a query. Why was this unit attacking indiscriminately in the first place?"
   },
   
   "sgalien1" : {
@@ -327,7 +327,7 @@
     "type" : "mission",
     "senderName" : "SG-F0RTR355",
     "portraitImage" : "/interface/chatbubbles/SGUFO.png",
-    "text" : "This unit urges you to return. Error. Why have you been standing still in the mine for so long? Error. Mission failed, operator has perished to the siegebreaker.",
+    "text" : "This unit urges you to return. Error. Why have you been standing still in the mine for so long? Error. Mission failed, operator has perished to the Siegebreaker.",
     "persistTime" : 1
   },
   
@@ -342,7 +342,7 @@
     "type" : "mission",
     "senderName" : "SG-F0RTR355",
     "portraitImage" : "/interface/chatbubbles/SGUFO.png",
-    "text" : "Logic loop closed. Paradox detected. Conscious observation has occured."
+    "text" : "Logic loop closed. Paradox detected. Conscious observation has occurred."
   }
   
 }

@@ -384,28 +384,28 @@
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivorendgame.png",
-    "text" : "You.. "
+    "text" : "You... "
   },
   
    "sgfinal2" : {
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivorendgameangry.png",
-    "text" : "You did all of this.. You ruined EVERYTHING."
+    "text" : "You did all of this... You ruined EVERYTHING."
   },
 
    "sgfinal3" : {
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivorendgame.png",
-    "text" : "It's gone.. All gone.. Everything I worked so hard to accomplish.. and you destroyed it."
+    "text" : "It's gone... All gone... Everything I worked so hard to accomplish... And you destroyed it."
   },
   
    "sgfinal4" : {
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivorendgame.png",
-    "text" : "Everything was taken from me.. My home, my planet.. my family. I should have been with them by now.."
+    "text" : "Everything was taken from me... My home, my planet... My family. I should have been with them by now..."
   },
 
    "sgfinal5" : {
@@ -426,7 +426,7 @@
     "type" : "mission",
     "senderName" : "!@#!$!#%",
     "portraitImage" : "/interface/chatbubbles/survivorendgameready.png",
-    "text" : "Though.. now that I think of it it.. I'm not alone now, am I?"
+    "text" : "Though... Now that I think of it... I'm not alone now, am I?"
   },
 
    "sgfinal8" : {
