@@ -1,0 +1,15 @@
+{
+  "itemName" : "sggolddye",
+  "price" : 1000,
+  "rarity" : "Common",
+  "category" : "clothingDye",
+  "inventoryIcon" : "sggolddye.png",
+  "description" : "This coloured dye can be applied to a piece of armour or clothing with a right-click.",
+  "shortdescription" : "Shellguard Gold Dye",
+
+  "dyeDirectives" : {"ffca8a":"fad574","e0975c":"dea82b","a85636":"b37d1e","6f2919":"714f12"},
+
+  "radioMessagesOnPickup" : [ "pickupdye" ],
+
+  "scripts" : [ "/scripts/augments/dye.lua" ]
+}
