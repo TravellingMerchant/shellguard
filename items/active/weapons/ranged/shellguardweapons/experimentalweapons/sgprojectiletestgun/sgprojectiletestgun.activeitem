@@ -72,7 +72,7 @@
 
     "fireType" : "auto",
 
-    "projectileType" : "sgcutterblast",
+    "projectileType" : "shellnovarocketsiege",
     "projectileParameters" : { 
       "knockback" : 6
     }

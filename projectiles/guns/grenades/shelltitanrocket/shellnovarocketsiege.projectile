@@ -1,0 +1,141 @@
+{
+  "projectileName" : "shellnovarocketsiege",
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/gun/shellbulletimpact.ogg"
+      ]
+    }
+  ],
+  "image" : "shellnovarocket.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 0.01
+  },
+  "animationCycle" : 0.25,
+  "pointLight" : true,
+  "lightColor" : [150, 0, 0],
+  "actionOnReap" : [
+	{
+      "action" : "spark"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/titanboom.ogg" ]
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/fireexplosionknockbackstatus.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgwreckingballbounce",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgwreckingballbounce",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgwreckingballbounce",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgwreckingballbounce",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgwreckingballbounce",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgwreckingballbounce",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgwreckingballbounce",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgwreckingballbounce",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgwreckingballbounce",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgwreckingballbounce",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgwreckingballbounce",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgwreckingballbounce",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgwreckingballbounce",
+      "fuzzAngle" : 360,
+      "inheritDamageFactor" : 0.5,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 40,
+      "backgroundRadius" : 40,
+      "explosiveDamageAmount" : 1000.0,
+      "delaySteps" : 2
+    }
+
+  ],
+  "emitters" : [ "rocketsmoke" ],
+  "frameNumber" : 3,
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 100,
+  "speed" : 20,
+  "power" : 40,
+  "damageKind" : "default"
+}
