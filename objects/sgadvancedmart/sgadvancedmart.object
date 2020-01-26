@@ -53,7 +53,8 @@
 	  { "item" : "sgheavyboomer" },
 	  { "item" : "sgtoobiggun" },
 	  { "item" : "sgpraxispistol" },
-	  { "item" : "sgpraxisdustrifle" }
+	  { "item" : "sgpraxisdustrifle" },
+	  { "item" : "sggoldrevolver" }
     ]
   },
 

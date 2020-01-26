@@ -4,7 +4,7 @@
   "inventoryIcon" : "sggoldrevolver.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "Engravings offer no tactical advantage what so ever. Fire your pixels away!",
+  "description" : "Engravings offer no tactical advantage what so ever.",
   "shortdescription" : "Golden Bounty",
   "level" : 6,
   "tooltipKind" : "base",

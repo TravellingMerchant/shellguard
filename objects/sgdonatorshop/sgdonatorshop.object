@@ -23,6 +23,7 @@
     "items" : [
 	  { "item" : "sgreddye" },
 	  { "item" : "sgorangedye" },
+	  { "item" : "sggolddye" },
 	  { "item" : "sgflatcap" },
 	  { "item" : "sgquartermaster" },
 	  { "item" : "sgspacehelmet" },
@@ -35,6 +36,7 @@
 	  { "item" : "sgchristmaschest" },
 	  { "item" : "sgchristmasengineer" },
 	  { "item" : "sgchristmashelmet" },
+	  { "item" : "sgchristmasengineer" },
 	  { "item" : "sgbangcorn" }
     ]
   },
