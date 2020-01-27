@@ -1,0 +1,8 @@
+{
+  "type" : "instantkillzone",
+
+  "scripts" : ["/stagehands/instantkillzone.lua"],
+  "scriptDelta" : 10,
+  
+  "broadcastArea" : [-5, -5, 5, 5]
+}
