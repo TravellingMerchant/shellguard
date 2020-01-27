@@ -1,0 +1,10 @@
+{
+  "name" : "sgkilleffect",
+  "effectConfig" : {
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "sgkilleffect.lua"
+  ]
+}

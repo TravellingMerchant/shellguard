@@ -10,8 +10,8 @@ function update(dt)
     includedTypes = self.validEntityTypes
   })
   for _, entity in pairs(livingEntities) do
-	world.sendEntityMessage(entity, "applyStatusEffect", "monsterdespawn")
+	world.sendEntityMessage(entity, "applyStatusEffect", "sgmaxhealthreduction")
 	world.sendEntityMessage(entity, "despawn")
-	world.sendEntityMessage(entity, "applyStatusEffect", "beamoutanddie")
+	world.sendEntityMessage(entity, "applyStatusEffect", "sgkilleffect")
   end
 end

@@ -1,0 +1,16 @@
+{
+  "name" : "sgmelting",
+  "blockingStat" : "",
+
+  "effectConfig" : {},
+  "defaultDuration" : 0.5,
+
+  "scripts" : [
+    "sgmelting.lua"
+  ],
+
+  "animationConfig" : "sgmelting.animation",
+
+  "label" : "Melting",
+  "icon" : "/interface/statuses/fire.png"
+}

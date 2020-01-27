@@ -1,0 +1,11 @@
+{
+  "name" : "sgmaxhealthreduction",
+  "effectConfig" : {
+  	"healthEffectiveMultiplier" : 0.0
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "sgmaxhealthboost.lua"
+  ]
+}

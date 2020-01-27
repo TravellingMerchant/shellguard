@@ -2913,8 +2913,8 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"neb-instantkillzone\" }",
-                     "stagehand":"radiomessage"
+                     "parameters":"{ \"validEntityTypes\"  : [\"npc\", \"monster\"] }",
+                     "stagehand":"neb-instantkillzone"
                     },
                  "propertytypes":
                     {
