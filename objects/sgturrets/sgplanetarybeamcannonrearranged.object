@@ -38,7 +38,8 @@
       "animationParts" : {
         "gun" : "planetarybeamcannonrearranged.png",
         "base" : "ministand.png",
-        "energy" : "energy.png"
+        "energy" : "energy.png",
+        "stand" : "/assetmissing.png" 
       },
       "animationPosition" : [4, 20],
       "animationCenterLine" : 0,
@@ -62,7 +63,8 @@
       "animationParts" : {
         "gun" : "planetarybeamcannonrearranged.png",
         "base" : "ministand.png",
-        "energy" : "energy.png"
+        "energy" : "energy.png",
+        "stand" : "/assetmissing.png" 
       },
       "animationPosition" : [4, 20],
       "animationCenterLine" : 0,
