@@ -40,7 +40,8 @@
       "animationParts" : {
         "gun" : "planetarybeamcannon.png",
         "base" : "ministand.png",
-        "energy" : "energy.png"
+        "energy" : "energy.png",
+        "stand" : "/assetmissing.png" //don't ask. Vanilla bugs.
       },
       "animationPosition" : [4, 20],
       "animationCenterLine" : 0,
@@ -66,7 +67,8 @@
       "animationParts" : {
         "gun" : "planetarybeamcannon.png",
         "base" : "ministand.png",
-        "energy" : "energy.png"
+        "energy" : "energy.png",
+        "stand" : "/assetmissing.png" 
       },
       "animationPosition" : [4, 20],
       "animationCenterLine" : 0,
