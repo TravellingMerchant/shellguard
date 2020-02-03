@@ -54,7 +54,9 @@
 	  { "item" : "sgtoobiggun" },
 	  { "item" : "sgpraxispistol" },
 	  { "item" : "sgpraxisdustrifle" },
-	  { "item" : "sggoldrevolver" }
+	  { "item" : "sggoldrevolver" },
+	  { "item" : "sgbluerifle" },
+	  { "item" : "sgwubgun" }
     ]
   },
 

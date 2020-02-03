@@ -1,0 +1,55 @@
+{
+  "itemName" : "sgwubgun",
+  "level" : 6,
+  "price" : 3500,
+  "inventoryIcon" : "erchiuseye.png",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "Melt people with the beat of the fortress.",
+  "shortdescription" : "Wub Gun",
+  "category" : "uniqueWeapon",
+  "itemTags" : ["weapon","ranged","upgradeableWeapon"],
+  "twoHanded" : true,
+
+  "animation" : "sgwubgun.animation",
+  "animationParts" : {
+    "beamorigin" : "erchiusbeammuzzle.png",
+    "erchiuseye" : "eye.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fireStart" : [ "/sfx/gun/erchiuseyebeam_start.ogg" ],
+      "fireLoop" : [ "/music/sgfortresscoremusicgun.ogg" ],
+      "fireEnd" : [ "/sfx/gun/erchiuseyebeam_stop.ogg" ],
+      "beamImpact" : [ "/sfx/projectiles/flame_burn.ogg" ]
+    }
+  },
+  "animationScripts" : ["/items/active/effects/chain.lua"],
+
+  "baseOffset" : [2.75, 1.0],
+  "muzzleOffset" : [4.125, 0.125],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "erchiusbeam",
+  "primaryAbility" : {
+    "beamLength" : 50
+  },
+
+  "altAbilityType" : "erchiuslauncher",
+  "altAbility" : {
+
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+
+  "upgradeParameters" : {
+    "inventoryIcon" : "erchiuseye_l6.png",
+    "animationParts" : {
+      "erchiuseye" : "eye_l6.png"
+    },
+    "shortdescription" : "Wub Gun ^yellow;^reset;"
+  }
+}
