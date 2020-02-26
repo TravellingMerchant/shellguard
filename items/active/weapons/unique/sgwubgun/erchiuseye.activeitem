@@ -32,15 +32,12 @@
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
   "elementalType" : "physical",
+  //COMPATABILITY FOR WFCORE NPCS
+  "wfNpcWeaponData" : {"minRange" : 20, "maxRange" : 50, "forceMoveRange" : 55, "primaryCharge" : 60},
 
   "primaryAbilityType" : "erchiusbeam",
   "primaryAbility" : {
     "beamLength" : 50
-  },
-
-  "altAbilityType" : "erchiuslauncher",
-  "altAbility" : {
-
   },
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",

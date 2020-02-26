@@ -5,8 +5,8 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "category" : "headwear",
-  "description" : "Soft hair and fluffy ears, perfect for petting.",
-  "shortdescription" : "Dawn's Hair",
+  "description" : "This can't be a regulation haircut.",
+  "shortdescription" : "Sangure's Foliage",
   "tooltipKind" : "armor",
 
   "maleFrames" : "head.png",

@@ -23,6 +23,8 @@
   "aimOffset" : -0.5,
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+  //COMPATABILITY FOR WFCORE NPCS
+  "wfNpcWeaponData" : {"minRange" : 30, "maxRange" : 70, "forceMoveRange" : 75, "primaryCharge" : 0.2},
 
   "elementalType" : "ice",
 

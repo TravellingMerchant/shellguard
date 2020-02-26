@@ -32,6 +32,8 @@
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
   "elementalType" : "physical",
+  //COMPATABILITY FOR WFCORE NPCS
+  "wfNpcWeaponData" : {"minRange" : 20, "maxRange" : 70, "forceMoveRange" : 75, "altChance" : 0.1, "minAltRange" : 0, "maxAltRange" : 40, "altCharge" : 1.75},
 
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],

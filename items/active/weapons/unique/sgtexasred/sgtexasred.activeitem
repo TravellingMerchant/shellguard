@@ -24,6 +24,7 @@
 	"activeTime" : 5,
 
 	"elementalType" : "fire",
+	"wfNpcWeaponData" : {"maxRange" : 6,"minRange" : 3, "altRange" : 40, "altChance" : 0.1},
 	"muzzleOffset" : [5.25,0.9],
 
 	"primaryAbility" : {

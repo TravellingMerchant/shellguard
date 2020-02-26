@@ -116,6 +116,13 @@
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
   "elementalType" : "physical",
+  "wfNpcWeaponData" : {
+    "minRange" : 20,
+    "maxRange" : 40,
+    "forceMoveRange" : 45,
+    "altChance" : 1,
+    "maxAltRange" : 8
+  },
 
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],

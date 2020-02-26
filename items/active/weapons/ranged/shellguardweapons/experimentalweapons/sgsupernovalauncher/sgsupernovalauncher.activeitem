@@ -25,6 +25,8 @@
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
   "elementalType" : "fire",
+  //COMPATABILITY FOR WFCORE NPCS
+  "wfNpcWeaponData" : {"minRange" : 25, "maxRange" : 90, "forceMoveRange" : 95, "primaryCharge" : 4.5},
 
   "primaryAbilityType" : "chargefire",
   "primaryAbility" : {

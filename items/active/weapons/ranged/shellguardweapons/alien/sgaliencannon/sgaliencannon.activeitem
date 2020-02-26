@@ -34,6 +34,8 @@
   "scriptDelta" : 2,
 
   "elementalType" : "physical",
+  //COMPATABILITY FOR WFCORE NPCS
+  "wfNpcWeaponData" : {"minRange" : 15, "maxRange" : 45, "forceMoveRange" : 50, "altChance" : 0.175, "minAltRange" : 20, "maxAltRange" : 60},
 
   "primaryAbility" : {
     "scripts" : ["/items/active/scripts/sgaliencannonfire.lua"],

@@ -28,6 +28,8 @@
 
   "baseOffset" : [2.25, 0.1],
   "muzzleOffset" : [0.375, 0.25],
+  //COMPATABILITY FOR WFCORE NPCS
+  "wfNpcWeaponData" : {"minRange" : 5, "maxRange" : 20, "forceMoveRange" : 25},
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
   "scriptDelta" : 2,

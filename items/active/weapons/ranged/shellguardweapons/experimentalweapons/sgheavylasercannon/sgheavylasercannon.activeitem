@@ -33,6 +33,8 @@
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
   "elementalType" : "fire",
+  //COMPATABILITY FOR WFCORE NPCS
+  "wfNpcWeaponData" : {"minRange" : 20, "maxRange" : 35, "forceMoveRange" : 40, "primaryCharge" : 4},
 
   "durability" : 15000.0,
 

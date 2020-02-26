@@ -36,6 +36,9 @@
   "comboFinisherSource" : "/items/active/weapons/fist/combofinishers/dashslash.combofinisher",
 
   "freezeLimit" : 2,
+  
+  //COMPATABILITY FOR WFCORE NPCS
+  "wfNpcWeaponData" : {"minRange" : 0, "maxRange" : 10},
 
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/fist/punch.lua"],

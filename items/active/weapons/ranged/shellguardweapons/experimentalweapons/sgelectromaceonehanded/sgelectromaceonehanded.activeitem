@@ -32,6 +32,8 @@
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
   "elementalType" : "physical",
+  //COMPATABILITY FOR WFCORE NPCS
+  "wfNpcWeaponData" : {"minRange" : 11, "maxRange" : 25, "forceMoveRange" : 30, "primaryCharge" : 3},
 
   "primaryAbilityType" : "tentaclegun",
   "primaryAbility" : {

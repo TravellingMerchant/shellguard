@@ -25,6 +25,8 @@
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
   "elementalType" : "ice",
+  //COMPATABILITY FOR WFCORE NPCS
+  "wfNpcWeaponData" : {"minRange" : 25, "maxRange" : 60, "forceMoveRange" : 65, "primaryCharge" : 0.2, "altChance" : 0.3, "minAltRange" : 5, "maxAltRange" : 25},
 
   "primaryAbilityType" : "neb-enhancedchargefire",
   "primaryAbility" : {
