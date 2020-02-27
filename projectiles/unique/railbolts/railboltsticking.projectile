@@ -28,7 +28,7 @@
   "searchDistance" : 0.09,						//The search distance, should always be 0.125 or lower for clean sticking
   "stickToTargetTime" : 3,						//when stuck to an enemy sets time to live to this, so ones stuck in the ground can last longer
   "proximitySearchRadius" : false,				//When stuck in the ground, search around the projectile for enemies to stick into, if its the same as search distance, it will stick into enemies feet, if false it does nothing, if a number it sticks
-  "validEntityTypes" : ["monster", "npc"],	    //Determines what entities the projectile sticks to, valid types are "player", "npc", "monster" and a few other entity types, "creature" is all entities, "mobile" is for all mobile ones PLEASE NOTE: for sticking into allies and other enemies you need to add "damageTeam" : { "type" : "indiscriminate" } to this and the original projectile
+  "validEntityTypes" : ["monster", "npc", "player"],	    //Determines what entities the projectile sticks to, valid types are "player", "npc", "monster" and a few other entity types, "creature" is all entities, "mobile" is for all mobile ones PLEASE NOTE: for sticking into allies and other enemies you need to add "damageTeam" : { "type" : "indiscriminate" } to this and the original projectile
   "enemyAllyDistinguishing" : false,		    //If true, determines if the projectile is stuck inside an enemy or an ally, and forces an action, which must be formated like actionOnReap, it requires enemies being listed in validEntityTypes
   "allyActionOnStick" : {
     "action" : "config",

@@ -33,7 +33,7 @@
 
   "elementalType" : "fire",
   //COMPATABILITY FOR WFCORE NPCS
-  "wfNpcWeaponData" : {"minRange" : 30, "maxRange" : 75, "forceMoveRange" : 80, "altChance" : 1, "minAltRange" : 6, "maxAltRange" : 10},
+  "wfNpcWeaponData" : {"minRange" : 40, "maxRange" : 75, "forceMoveRange" : 80, "altChance" : 1, "minAltRange" : 6, "maxAltRange" : 10},
 
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],

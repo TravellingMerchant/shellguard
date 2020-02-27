@@ -54,6 +54,6 @@
   "searchDistance" : 0.09,						
   "stickToTargetTime" : 3,						
   "proximitySearchRadius" : false,				
-  "validEntityTypes" : ["monster", "npc"],	    
+  "validEntityTypes" : ["monster", "npc", "player"],	    
   "enemyAllyDistinguishing" : false		    
 }

@@ -10,6 +10,8 @@ function NebsEnhancedChargeFire:init()
 
   self.cooldownTimer = 0
   self.chargeTimer = 0
+  
+  self.npcUser = world.entityType(activeItem.ownerEntityId()) == "npc"
 
   self.useChargeMuzzleOffset = false
 
@@ -88,7 +90,9 @@ function NebsEnhancedChargeFire:single()
 		mcontroller.setYVelocity(0)
 	  end
 	  mcontroller.addMomentum(recoilVelocity)
-	  mcontroller.controlJump()
+	  if not self.npcUser then
+	    mcontroller.controlJump()
+	  end
 	--If crouching
 	elseif self.chargeLevel.crouchRecoilKnockbackVelocity then
 	  local recoilVelocity = vec2.mul(vec2.norm(vec2.mul(self:aimVector(0), -1)), self.chargeLevel.crouchRecoilKnockbackVelocity)
@@ -134,7 +138,9 @@ function NebsEnhancedChargeFire:burst()
 	  	  mcontroller.setYVelocity(0)
 	    end
 	    mcontroller.addMomentum(recoilVelocity)
-	    mcontroller.controlJump()
+		if not self.npcUser then
+		  mcontroller.controlJump()
+		end
 	  --If crouching
   	  elseif self.chargeLevel.crouchRecoilKnockbackVelocity then
 	    local recoilVelocity = vec2.mul(vec2.norm(vec2.mul(self:aimVector(0), -1)), self.chargeLevel.crouchRecoilKnockbackVelocity)

@@ -4,7 +4,7 @@ require "/scripts/vec2.lua"
 require "/scripts/util.lua"
 
 function init()
-  self.validEntityTypes = config.getParameter("validEntityTypes", {"npc", "monster"})
+  self.validEntityTypes = config.getParameter("validEntityTypes", {"npc", "monster", "player"})
   self.enemyAllyDistinguishing = config.getParameter("enemyAllyDistinguishing", false)
   self.allyActionOnStick = config.getParameter("allyActionOnStick")
   self.enemyActionOnStick = config.getParameter("enemyActionOnStick")
