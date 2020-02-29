@@ -3,7 +3,7 @@
   "colonyTags" : ["outpost","commerce"],
   "rarity" : "Common",
   "category" : "Shop",
-  "description" : "Items funded by the commuinity.",
+  "description" : "Items funded by the community.",
   "shortdescription" : "Custom-Catch-All",
   "race" : "generic",
   "price" : 500,
@@ -15,7 +15,7 @@
     "paneLayoutOverride" : {
       "windowtitle" : {
         "title" : "Custom-Catch-All",
-        "subtitle" : "^#b9b5b2;Items funded by the commuinity."
+        "subtitle" : "^#b9b5b2;Items funded by the community."
       }
     },
     "buyFactor" : 1.0,
