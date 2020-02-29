@@ -1,11 +1,11 @@
 {
-  "itemName" : "sgbasilisk",
-  "price" : 3000,
+  "itemName" : "sgbasiliskheavy",
+  "price" : 3300,
   "inventoryIcon" : "sgtyphoonminigun.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "A heavy machine gun that fires high velocity, high knockback shots.",
-  "shortdescription" : "HBL Basilisk",
+  "description" : "Launch a peircing wave of sunlight that sweeps foes away.",
+  "shortdescription" : "Sunwave Sweeper",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
@@ -36,10 +36,10 @@
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 0.1,
+    "fireTime" : 0.3,
     "baseDps" : 12,
-    "energyUsage" : 60.0,
-    "projectileCount" : 1,
+    "energyUsage" : 45.0,
+    "projectileCount" : 5,
     "inaccuracy" : 0.07,
       "stances" : {
       "idle" : {
@@ -70,7 +70,7 @@
 		}
       },
       "cooldown" : {
-        "duration" : 0.02,
+        "duration" : 0.05,
         "armRotation" : -45,
         "weaponRotation" : 55,
         "twoHanded" : true,
@@ -83,12 +83,14 @@
       }
     },
 
-    "fireType" : "auto",
+    "fireType" : "burst",
+    "burstCount" : 8,
+    "burstTime" : 0.05,
 
-    "projectileType" : "tempbulletshatter",
+    "projectileType" : "sgheatbeam",
     "projectileParameters" : { 
-      "knockback" : 30,
-	  "speed" : 200
+      "knockback" : 25,
+	  "speed" : 100
     }
   },
 
@@ -100,6 +102,6 @@
     "animationParts" : {
       "middle" : "sgtyphoonminigunelite.png"
     },
-    "shortdescription" : "HBL Basilisk ^yellow;^reset;"
+    "shortdescription" : "Sunwave Sweeper ^yellow;^reset;"
   }
 }

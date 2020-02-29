@@ -22,6 +22,8 @@
     "items" : [
 	  { "item" : "sgshieldback" },
 	  { "item" : "sgrocketback" },
+	  { "item" : "sgbasilisk" },
+	  { "item" : "sgbasiliskheavy" },
 	  { "item" : "sgstuncannon" },
 	  { "item" : "sgcarve" },
 	  { "item" : "sgsever" },	  

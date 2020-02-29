@@ -41,6 +41,7 @@
             "primary" : [
               "sgtyphoonminigun",
               "sggrenademachinegun",
+              "sgbasilisk",
               "sgstuncannon",
               "sgsever",
 			  "neb-shellguardrail"
@@ -67,6 +68,7 @@
               "sgtyphoonminigun",
               "sggrenademachinegun",
               "sgstuncannon",
+              "sgbasilisk",
               "sgsever",
 			  "neb-shellguardrail"
             ],
@@ -90,6 +92,7 @@
               "sgtyphoonminigun",
               "sggrenademachinegun",
               "sgstuncannon",
+              "sgbasilisk",
               "sgsever",
 			  "neb-shellguardrail"
             ],
