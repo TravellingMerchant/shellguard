@@ -1,12 +1,12 @@
 {
-  "type" : "sgchomper",
-  "shortdescription" : "Shellguard Chomper",
-  "description" : "A very deadly bipedal robot that likes to bite its foe.",
+  "type" : "sgchompermk2",
+  "shortdescription" : "Shellguard Landshark",
+  "description" : "Ugraded Chomper. More health but slower speed. It can fire stun clamps from it's mouth.",
 
-  "categories" : [ "sgchomper" ],
+  "categories" : [ "sgchompermk2" ],
   "parts" : [ "body" ],
 
-  "animation" : "sgchomper.animation",
+  "animation" : "sgchompermk2.animation",
 
   "dropPools" : [ ],
 
@@ -49,6 +49,31 @@
             "wallCrashSound" : "",
             "wallCrashEmitter" : "",
 
+            "winddownTime" : 0.1
+          }
+        },
+        {
+          "name" : "action-fire",
+		  "cooldown": 5,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 10,
+            "minimumRange" : 2,
+            "windupTime" : 0.1,
+            "windupState" : "jump",
+
+            "projectileType" : "sgstunclamp",
+            "fireOffset" : [0.875, 0.625],
+            "aimAtTarget" : true,
+            "fireState" : "",
+            "fireDelay" : 0,
+            "fireSound" : "fire",
+
+            "fireArc": true,
+            "projectileSpeed": 50,
+            "gravityMultiplier": 0.6,
+
+            "winddownState" : "",
             "winddownTime" : 0.1
           }
         }
@@ -130,8 +155,8 @@
       "collisionPoly" : [ [0.8125, 1.75], [1.75, 0.75],  [1.75, 0.10], [0.8125, -1.125],  [-0.8125, -1.125], [-1.75, 0.10],  [-1.75, 0.75], [-0.8125, 1.75] ],
 
       "mass" : 1.0,
-      "walkSpeed" : 5,
-      "runSpeed" : 15,
+      "walkSpeed" : 4,
+      "runSpeed" : 10,
 
       "airFriction" : 0,
 
@@ -173,10 +198,10 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 110
+          "baseValue" : 200
         },
         "protection" : {
-          "baseValue" : 0.0
+          "baseValue" : 0.2
         },
         "healthRegen" : {
           "baseValue" : 0.0
