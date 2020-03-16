@@ -202,6 +202,6 @@
 
   "builder" : "/items/buildscripts/buildweapon.lua",
   "upgradeParameters" : {
-    "shortdescription" : "Merchant Custom ^yellow;^reset;"
+    "shortdescription" : "Toy Revolver ^yellow;^reset;"
   }
 }

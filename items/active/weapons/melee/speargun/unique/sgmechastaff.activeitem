@@ -8,7 +8,7 @@
   "shortdescription" : "Fulcrum",
   "level" : 6,
   "tooltipKind" : "base",
-  "category" : "uniqueWeapon",
+  "category" : "sggunstaff",
   "itemTags" : ["weapon","ranged","spear","speargun","gunspear", "upgradeableWeapon"],
   "twoHanded" : true,
 
