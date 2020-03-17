@@ -34,10 +34,10 @@ function update(dt)
   animator.resetTransformationGroup("turret")
   --Crouch Correction
   if mcontroller.crouching() and not self.crouchCorrected then
-	vec2.sub(self.muzzleOffset, {0, 1})
+	self.muzzleOffset = vec2.add(self.muzzleOffset, {0, -1})
 	self.crouchCorrected = true
   elseif not mcontroller.crouching() and self.crouchCorrected then
-	vec2.add(self.muzzleOffset, {0, 1})
+	self.muzzleOffset = vec2.add(self.muzzleOffset, {0, 1})
 	self.crouchCorrected = false
   end
   --Flip offset correction
