@@ -32,5 +32,5 @@
   "animationConfig" : "sgenergyshield.animation",
 
   "label" : "Energy Shield",
-  "icon" : "/items/armors/wfsystem/elemental/sgenergyshieldeffect.png"
+  "icon" : "/interface/statuses/defense.png"
 }
