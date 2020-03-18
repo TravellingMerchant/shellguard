@@ -44,6 +44,7 @@
 	  { "item" : "sgpraxissniper" },
 	  { "item" : "sgpraxissniperheavy" },
 	  { "item" : "sgbreakersniper" },
+	  { "item" : "sgredjack" },
 	  { "item" : "sgspikeblaster" },
 	  { "item" : "sgdrumgun" },
 	  { "item" : "sgheavyshotgun" },
