@@ -2,7 +2,7 @@
   "itemName" : "sgchristmasengineer",
   "inventoryIcon" : "icons.png:head",
   "maxStack" : 1,
-  "price" : 6000,
+  "price" : 100,
   "rarity" : "legendary",
   "category" : "headwear",
   "description" : "[Cosmetic] An Engineer helmet with a festive hat.",

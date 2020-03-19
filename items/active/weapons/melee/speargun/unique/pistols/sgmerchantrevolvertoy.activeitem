@@ -42,6 +42,9 @@
 
   "primaryAbilityType" : "sgbayonetpistolcombo",
   "primaryAbility" : {
+  
+    "baseDps" : 0,
+
 	"stances" : {
       "idle" : {
         "aimAngle" : 0,

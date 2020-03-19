@@ -1,15 +1,15 @@
 {
-  "name" : "neb-sgbackgun",
+  "name" : "neb-sgbackrocketpod",
   "effectConfig" : {
     //General Config
     "crouchOnly" : true,						//Activates the drone only when crouching
-    "searchRadius" : 30,						//Radius to search around the player
-	"muzzleOffset" : [-1.125,0],
+    "searchRadius" : 20,						//Radius to search around the player
+	"muzzleOffset" : [-1.125,1],
 	
     //Firing Config
     "burstTime" : 0.25,							//Time between shots in a burst but is ignored if burstCount is 1
-    "burstCount" : 20,							//The amount of shots in a burst
-	"fireTime" : 0.1,								//Time between bursts
+    "burstCount" : 4,							//The amount of shots in a burst
+	"fireTime" : 1,								//Time between bursts
 	"baseDps" : 7.2,
 	"inaccuracy" : 0.3,
 	"projectileType" : "sentinelshardrocket",

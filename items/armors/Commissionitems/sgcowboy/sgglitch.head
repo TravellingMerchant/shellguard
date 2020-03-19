@@ -1,27 +1,18 @@
 {
-  "itemName" : "sgchristmaschest",
-  "price" : 100,
-  "inventoryIcon" : "icons.png:chest",
+  "itemName" : "sgcowboy",
+  "inventoryIcon" : "icons.png:head",
   "maxStack" : 1,
-  "rarity" : "legendary",
-  "category" : "chestarmour",
-  "description" : "[Cosmetic] Shellguard armour with a festive fur collar.",
-  "shortdescription" : "Festive Chest",
+  "price" : 1000,
+  "rarity" : "Legendary",
+  "category" : "headwear",
+  "description" : "Even with heavy armour, Novakid fashion shines through.",
+  "shortdescription" : "SG Cowboy",
   "tooltipKind" : "armor",
-  "hideBody": false,
 
-  "maleFrames" : {
-    "body" : "chest.png",
-    "backSleeve" : "bsleeve.png",
-    "frontSleeve" : "fsleeve.png"
-  },
-
-  "femaleFrames" : {
-    "body" : "chest.png",
-    "backSleeve" : "bsleeve.png",
-    "frontSleeve" : "fsleeve.png"
-  },
-
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png",
+    
   "colorOptions" : [
     /* DEFAULT */
     { "ffca8a" : "A3381C", "e0975c" : "7B1500", "a85636" : "5B0600", "6f2919" : "3C0000" },
@@ -32,7 +23,7 @@
     /* WHITE */
     { "ffca8a" : "e6e6e6", "e0975c" : "b6b6b6", "a85636" : "7b7b7b", "6f2919" : "373737" },
     /* RED */
-    { "ffca8a" : "A3381C", "e0975c" : "7B1500", "a85636" : "5B0600", "6f2919" : "3C0000" },
+    { "ffca8a" : "f4988c", "e0975c" : "d93a3a", "a85636" : "932625", "6f2919" : "601119" },
     /* ORANGE */
     { "ffca8a" : "ffd495", "e0975c" : "ea9931", "a85636" : "af4e00", "6f2919" : "6e2900" },
     /* YELLOW */
