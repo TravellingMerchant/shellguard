@@ -1,18 +1,18 @@
 {
-  "objectName" : "sgflakturret",
+  "objectName" : "sgrocketturret",
   "colonyTags" : ["wired","combat"],
   "printable" : false,
   "rarity" : "Common",
   "objectType" : "container",
-  "price" : 3500,
+  "price" : 2500,
 
   "slotCount" : 0,
-  "uiConfig" : "/interface/turret/sgflakturret.config",
+  "uiConfig" : "/interface/turret/sgrocketturret.config",
   "frameCooldown" : 5,
   "autoCloseCooldown" : 3600,
 
-  "description" : "Fires anti-air rounds that explode near hostiles. Can only be placed once and does not fire at close targets.",
-  "shortdescription" : "Shellguard Flak Turret",
+  "description" : "Medium range homing rocket turret. Can only be placed once.",
+  "shortdescription" : "Shellguard Rocket Turret",
   "subtitle" : "Automatic Base Defense",
   "race" : "generic",
   "category" : "wire",
@@ -32,19 +32,20 @@
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "dualImage" : "sgflakturretstand.png:bottom",
+      "dualImage" : "sgrocketturretstand.png:bottom",
 
       "imagePosition" : [-12, 0],
-      "imageLayers" : [ { "image" : "sgflakturretstand.png:bottom" }, { "image" : "sgflakturretgun.png:dead", "position": [4, 12] } ],
+      "imageLayers" : [ { "image" : "sgrocketturretstand.png:bottom" }, { "image" : "sgrocketturretgun.png:dead", "position": [2, 13] } ],
       "spaces" : [
-        [-2, 0], [-1, 0], [0, 0], [1, 0],
-        [-2, 1], [-1, 1], [0, 1], [1, 1]
+        [-1, 0], [0, 0], [1, 0],
+        [-1, 1], [0, 1], [1, 1],
+        [-1, 2], [0, 2], [1, 2]
       ],
       "anchors" : [ "bottom" ],
 
       "animationParts" : {
-        "gun" : "sgflakturretgun.png",
-        "stand" : "sgflakturretstand.png:bottom",
+        "gun" : "sgrocketturretgun.png",
+        "stand" : "sgrocketturretstand.png:bottom",
         "energy" : "energy.png"
       },
       "animationPosition" : [4, 16],
@@ -58,10 +59,12 @@
 
   "objectWidth" : 4,
 
-  "animation" : "sgflakturret.animation",
+  "animation" : "sgrocketturret.animation",
 
   "scripts" : [
-    "/objects/sgflakturret/gvturret.lua",
+    "/objects/sgturrets/gvturret.lua",
+    "/objects/sgturrets/gvburstfire.lua",
+    
     "/scripts/npcToyObject.lua",
     "/scripts/stateMachine.lua",
     "/scripts/util.lua",
@@ -82,29 +85,34 @@
   "tipOffset" : [2.5, 0],
   "offAngle" : -30,
 
-  "scanInterval" : 6,
+  "scanInterval" : 3,
   "scanAngle" : 25,
   "scanRange" : 35,
 
-  "targetQueryRange" : 180,
-  "targetMinRange" : 50.0,
-  "targetMaxRange" : 180,
+  "targetQueryRange" : 80,
+  "targetMinRange" : 2.5,
+  "targetMaxRange" : 80,
   "targetAngleRange" : 85,
 
   "maxFireAngle" : 5,
 
-  "energyUsage" : 4,
+  "energyUsage" : 16,
   "power" : 20,
-  "fireTime" : 0.1,
-  "inaccuracy" : 0.03,
+  "fireTime" : 0.5,
+  "inaccuracy" : 0.0,
+  "projectileType" : "sghomingturret",
+  
   "multiBarrel" : true,
-  "arraySize" : [1, 2],
-  "arrayOffset" : [0, 0.75],
+  "arraySize" : [2, 6],
+  "arrayOffset" : [0.25, 0.25],
 
-  "maxEnergy" : 100,
+  "maxEnergy" : 96, //not 100 so that full charge is a full volley, plus, looks better.
   "energyRegen" : 25,
   "energyRegenBlock" : 1.0,
 
+  "burstCount" : 3,
+  "burstTime" : 0.25,
+  
   "npcToy" : {
     "influence" : [
       "turret"

@@ -35,10 +35,11 @@
       "dualImage" : "sgbaseturretstand.png:bottom",
 
       "imagePosition" : [-12, 0],
-      "imageLayers" : [ { "image" : "sgbaseturretstand.png:bottom" }, { "image" : "sgbaseturretgun.png:dead", "position": [4, 12] } ],
+      "imageLayers" : [ { "image" : "sgbaseturretstand.png:bottom" }, { "image" : "sgbaseturretgun.png:dead", "position": [2, 13] } ],
       "spaces" : [
-        [-2, 0], [-1, 0], [0, 0], [1, 0],
-        [-2, 1], [-1, 1], [0, 1], [1, 1]
+        [-1, 0], [0, 0], [1, 0],
+        [-1, 1], [0, 1], [1, 1],
+        [-1, 2], [0, 2], [1, 2]
       ],
       "anchors" : [ "bottom" ],
 
@@ -61,7 +62,9 @@
   "animation" : "sgbaseturret.animation",
 
   "scripts" : [
-    "/objects/sgbaseturret/gvturret.lua",
+    "/objects/sgturrets/gvturret.lua",
+    "/objects/sgturrets/gvautofire.lua",
+    
     "/scripts/npcToyObject.lua",
     "/scripts/stateMachine.lua",
     "/scripts/util.lua",
@@ -82,7 +85,7 @@
   "tipOffset" : [2.5, 0],
   "offAngle" : -30,
 
-  "scanInterval" : 6,
+  "scanInterval" : 3,
   "scanAngle" : 25,
   "scanRange" : 35,
 
@@ -94,13 +97,15 @@
   "maxFireAngle" : 5,
 
   "energyUsage" : 4,
-  "power" : 25,
+  "power" : 10,
   "fireTime" : 0.2,
+  "inaccuracy" : 0.0,
+  "projectileType" : "turretshot",
+
   "multiBarrel" : true,
   "arraySize" : [2, 2],
-  "arrayOffset" : [1.5, 0.5],
-  "inaccuracy" : 0.0,
-
+  "arrayOffset" : [1.375, 0.5],
+  
   "maxEnergy" : 100,
   "energyRegen" : 25,
   "energyRegenBlock" : 1.0,

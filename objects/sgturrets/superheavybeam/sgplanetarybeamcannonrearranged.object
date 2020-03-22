@@ -136,11 +136,11 @@
   "targetMinRange" : 8,
   "targetMaxRange" : 128,
   "targetAngleRange" : 40,
-  "minHP" : 50,
+  "minHP" : 70,
 
   "maxFireAngle" : 0.25,
   "energyUsage" : 100,
-  "power" : 30,
+  "power" : 200,
   "fireTime" : 4,
   "inaccuracy" : 0.0,
   "chargeTime" : 0.5,
@@ -157,40 +157,40 @@
   "beamWidth" : 3,
   "beamWidthOffset" : 0.375,
   "beamImages" : {
-    "first" : "/objects/sgturrets/heavybeam.png:m.f",
-    "body" : "/objects/sgturrets/heavybeam.png:m.b",
-    "last" : "/objects/sgturrets/heavybeam.png:m.l"
+    "first" : "/objects/sgturrets/superheavybeam/heavybeam.png:m.f",
+    "body" : "/objects/sgturrets/superheavybeam/heavybeam.png:m.b",
+    "last" : "/objects/sgturrets/superheavybeam/heavybeam.png:m.l"
   },
   "beamStreamImages" : {
     "top" : {
-      "first" : "/objects/sgturrets/heavybeam.png:t.f",
-      "body" : "/objects/sgturrets/heavybeam.png:t.b",
-      "last" : "/objects/sgturrets/heavybeam.png:t.l"
+      "first" : "/objects/sgturrets/superheavybeam/heavybeam.png:t.f",
+      "body" : "/objects/sgturrets/superheavybeam/heavybeam.png:t.b",
+      "last" : "/objects/sgturrets/superheavybeam/heavybeam.png:t.l"
     },
     "middle" : {
-      "first" : "/objects/sgturrets/heavybeam.png:m.f",
-      "body" : "/objects/sgturrets/heavybeam.png:m.b",
-      "last" : "/objects/sgturrets/heavybeam.png:m.l"
+      "first" : "/objects/sgturrets/superheavybeam/heavybeam.png:m.f",
+      "body" : "/objects/sgturrets/superheavybeam/heavybeam.png:m.b",
+      "last" : "/objects/sgturrets/superheavybeam/heavybeam.png:m.l"
     },
     "bottom" : {
-      "first" : "/objects/sgturrets/heavybeam.png:b.f",
-      "body" : "/objects/sgturrets/heavybeam.png:b.b",
-      "last" : "/objects/sgturrets/heavybeam.png:b.l"
+      "first" : "/objects/sgturrets/superheavybeam/heavybeam.png:b.f",
+      "body" : "/objects/sgturrets/superheavybeam/heavybeam.png:b.b",
+      "last" : "/objects/sgturrets/superheavybeam/heavybeam.png:b.l"
     },
     "topWeak" : {
-      "first" : "/objects/sgturrets/heavybeamweak.png:t.f",
-      "body" : "/objects/sgturrets/heavybeamweak.png:t.b",
-      "last" : "/objects/sgturrets/heavybeamweak.png:t.l"
+      "first" : "/objects/sgturrets/superheavybeam/heavybeamweak.png:t.f",
+      "body" : "/objects/sgturrets/superheavybeam/heavybeamweak.png:t.b",
+      "last" : "/objects/sgturrets/superheavybeam/heavybeamweak.png:t.l"
     },
     "middleWeak" : {
-      "first" : "/objects/sgturrets/heavybeamweak.png:m.f",
-      "body" : "/objects/sgturrets/heavybeamweak.png:m.b",
-      "last" : "/objects/sgturrets/heavybeamweak.png:m.l"
+      "first" : "/objects/sgturrets/superheavybeam/heavybeamweak.png:m.f",
+      "body" : "/objects/sgturrets/superheavybeam/heavybeamweak.png:m.b",
+      "last" : "/objects/sgturrets/superheavybeam/heavybeamweak.png:m.l"
     },
     "bottomWeak" : {
-      "first" : "/objects/sgturrets/heavybeamweak.png:b.f",
-      "body" : "/objects/sgturrets/heavybeamweak.png:b.b",
-      "last" : "/objects/sgturrets/heavybeamweak.png:b.l"
+      "first" : "/objects/sgturrets/superheavybeam/heavybeamweak.png:b.f",
+      "body" : "/objects/sgturrets/superheavybeam/heavybeamweak.png:b.b",
+      "last" : "/objects/sgturrets/superheavybeam/heavybeamweak.png:b.l"
     }
   },
   "beamDirection" : [1, 0],

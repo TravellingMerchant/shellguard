@@ -43,8 +43,8 @@
     "parts" : {
       "gun" : {
         "properties" : {
-          "offset" : [0.2, 0.7],
-          "projectileSource" : [2.3, -0.6],
+          "offset" : [0.25, 0.6857],
+          "projectileSource" : [1.375, -0.875],
           "rotationGroup" : "gun",
           "centered" : true,
           "zLevel" : 3
@@ -112,7 +112,7 @@
 
   "rotationGroups" : {
     "gun" : {
-      "rotationCenter" : [0, 0.7],
+      "rotationCenter" : [0, 0.6875],
       "angularVelocity" : 1
     }
   },
@@ -126,6 +126,6 @@
     "powerDown" : ["/sfx/tech/mech_powerdown2.ogg"],
     "foundTarget" : ["/sfx/alertalarm.ogg"],
     "scan" : ["/sfx/interface/scan.ogg"],
-    "fire" : ["/sfx/gun/tankshot.ogg"]
+    "fire" : ["/sfx/gun/rocket1.ogg", "/sfx/gun/rocket2.ogg", "/sfx/gun/rocket3.ogg"]
   }
 }

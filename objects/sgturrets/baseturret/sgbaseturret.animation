@@ -43,7 +43,7 @@
     "parts" : {
       "gun" : {
         "properties" : {
-          "offset" : [0.2, 0.4],
+          "offset" : [0.25, 0.4125],
           "projectileSource" : [0.25, -0.25],
           "rotationGroup" : "gun",
           "centered" : true,
@@ -112,7 +112,7 @@
 
   "rotationGroups" : {
     "gun" : {
-      "rotationCenter" : [0, 0.4],
+      "rotationCenter" : [0, 0.4125],
       "angularVelocity" : 1
     }
   },

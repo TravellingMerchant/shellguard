@@ -40,11 +40,14 @@ function init()
   
   self.smartTracking = config.getParameter("smartTracking", false)
   
+  self.powerOnly = config.getParameter("powerOnly", false)
+  
   -- Energy
   self.regenBlockTimer = 0
   self.energyRegen = config.getParameter("energyRegen")
   self.maxEnergy = config.getParameter("maxEnergy")
   self.energyRegenBlock = config.getParameter("energyRegenBlock")
+  self.energyUsage = config.getParameter("energyUsage")
   
   storage.energy = storage.energy or self.maxEnergy
 
@@ -81,16 +84,17 @@ function update(dt)
 
   if self.multiBarrel then
     local firePos = firePosition(true)
-    for i = 1, #firePos do
+    world.debugPoint(firePos[1], "cyan")
+    for i = 2, #firePos do
       world.debugPoint(firePos[i], "green")
     end
   else
     world.debugPoint(firePosition(true), "green")
   end
 
-  if storage.energy == 0 then
+  if storage.energy < self.energyUsage then
     self.blockEnergyUsage = true
-  elseif storage.energy == self.maxEnergy then
+  elseif storage.energy >= self.maxEnergy then
     self.blockEnergyUsage = false
   end
 
@@ -315,7 +319,7 @@ end
 
 function active()
   if object.isInputNodeConnected(0) then
-    return object.getInputNodeLevel(0)
+    return object.getInputNodeLevel(0) ~= self.powerOnly
   end
 
   storage.active = storage.active ~= nil and storage.active or true
