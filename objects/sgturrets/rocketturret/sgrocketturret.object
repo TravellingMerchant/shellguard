@@ -96,7 +96,7 @@
 
   "maxFireAngle" : 5,
 
-  "energyUsage" : 16,
+  "energyUsage" : 8,
   "power" : 20,
   "fireTime" : 0.5,
   "inaccuracy" : 0.0,
