@@ -14,7 +14,7 @@
     "config" : "/interface/windowconfig/merchant.config",
     "paneLayoutOverride" : {
       "windowtitle" : {
-        "title" : "Turret-Mart",
+        "title" : "Mech-Mart",
         "subtitle" : "^#b9b5b2;Protection at a cost."
       }
     },
