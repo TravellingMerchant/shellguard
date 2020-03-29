@@ -35,10 +35,11 @@
       "dualImage" : "sgrocketturretstand.png:bottom",
 
       "imagePosition" : [-12, 0],
-      "imageLayers" : [ { "image" : "sgrocketturretstand.png:bottom" }, { "image" : "sgrocketturretgun.png:dead", "position": [4, 12] } ],
+      "imageLayers" : [ { "image" : "sgrocketturretstand.png:bottom" }, { "image" : "sgrocketturretgun.png:dead", "position": [2, 13] } ],
       "spaces" : [
-        [-2, 0], [-1, 0], [0, 0], [1, 0],
-        [-2, 1], [-1, 1], [0, 1], [1, 1]
+        [-1, 0], [0, 0], [1, 0],
+        [-1, 1], [0, 1], [1, 1],
+        [-1, 2], [0, 2], [1, 2]
       ],
       "anchors" : [ "bottom" ],
 
@@ -61,7 +62,9 @@
   "animation" : "sgrocketturret.animation",
 
   "scripts" : [
-    "/objects/sgrocketturret/sgrocketturret.lua",
+    "/objects/sgturrets/gvturret.lua",
+    "/objects/sgturrets/gvburstfire.lua",
+    
     "/scripts/npcToyObject.lua",
     "/scripts/stateMachine.lua",
     "/scripts/util.lua",
@@ -82,7 +85,7 @@
   "tipOffset" : [2.5, 0],
   "offAngle" : -30,
 
-  "scanInterval" : 6,
+  "scanInterval" : 3,
   "scanAngle" : 25,
   "scanRange" : 35,
 
@@ -93,14 +96,23 @@
 
   "maxFireAngle" : 5,
 
-  "energyUsage" : 20,
-  "power" : 50,
+  "energyUsage" : 8,
+  "power" : 20,
   "fireTime" : 0.5,
+  "inaccuracy" : 0.0,
+  "projectileType" : "sghomingturret",
+  
+  "multiBarrel" : true,
+  "arraySize" : [2, 6],
+  "arrayOffset" : [0.25, 0.25],
 
-  "maxEnergy" : 100,
-  "energyRegen" : 5,
+  "maxEnergy" : 96, //not 100 so that full charge is a full volley, plus, looks better.
+  "energyRegen" : 25,
   "energyRegenBlock" : 1.0,
 
+  "burstCount" : 3,
+  "burstTime" : 0.25,
+  
   "npcToy" : {
     "influence" : [
       "turret"

@@ -17,10 +17,6 @@
   "race" : "generic",
   "category" : "wire",
 
-  "breakDropOptions" : [
-    [ [ "SGPDD", 1, { } ] ]
-  ],
-
   "apexDescription" : "Who in the world would even build this?",
   "avianDescription" : "Who in the world would even build this?",
   "floranDescription" : "Effective againssst living thingsss.",
@@ -32,36 +28,52 @@
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "dualImage" : "SGPDDstand.png:bottom",
+      "image" : "SGPDDstand.png:bottom",
+      "direction" : "left",
+      "flipImages" : true,
 
       "imagePosition" : [-12, 0],
-      "imageLayers" : [ { "image" : "SGPDDstand.png:bottom" }, { "image" : "SGPDDgun.png:dead", "position": [4, 12] } ],
+      "imageLayers" : [ { "image" : "SGPDDstand.png:bottom" }, { "image" : "SGPDDgun.png:dead", "position": [24, 12] } ],
       "spaces" : [
-        [-2, 0], [-1, 0], [0, 0], [1, 0],
-        [-2, 1], [-1, 1], [0, 1], [1, 1]
+        [-1, 0], [0, 0], [1, 0],
+        [-1, 1], [0, 1], [1, 1]
       ],
-      "anchors" : [ "bottom" ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "SGPDDstand.png:bottom",
+      "direction" : "right",
 
-      "animationParts" : {
-        "gun" : "SGPDDgun.png",
-        "stand" : "SGPDDstand.png:bottom",
-        "energy" : "energy.png"
-      },
-      "animationPosition" : [4, 16],
-      "animationCenterLine" : 0,
-
-      "baseOffset" : [0, 2],
-      "energyBarOffset" : [0.375, -1.5],
-      "verticalScaling" : false
+      "imagePosition" : [-12, 0],
+      "imageLayers" : [ { "image" : "SGPDDstand.png:bottom" }, { "image" : "SGPDDgun.png:dead", "position": [-20, 12] } ],
+      "spaces" : [
+        [-1, 0], [0, 0], [1, 0],
+        [-1, 1], [0, 1], [1, 1]
+      ],
+      "anchors" : [ "bottom" ]
     }
   ],
 
+  "animationParts" : {
+    "gun" : "SGPDDgun.png",
+    "stand" : "SGPDDstand.png:bottom",
+    "energy" : "energy.png"
+  },
+  "animationPosition" : [4, 16],
+  "animationCenterLine" : 0,
+
+  "baseOffset" : [0, 2],
+  "energyBarOffset" : [0.375, -1.5],
+  "verticalScaling" : false,
+      
   "objectWidth" : 4,
 
   "animation" : "SGPDD.animation",
 
   "scripts" : [
-    "/objects/SGPDD/gvturret.lua",
+    "/objects/sgturrets/gvturret.lua",
+    "/objects/sgturrets/gvautofire.lua",
+    
     "/scripts/npcToyObject.lua",
     "/scripts/stateMachine.lua",
     "/scripts/util.lua",
@@ -80,9 +92,9 @@
   "rotationSpeed" : 25,
 
   "tipOffset" : [2.5, 0],
-  "offAngle" : -30,
+  "offAngle" : -90,
 
-  "scanInterval" : 6,
+  "scanInterval" : 3,
   "scanAngle" : 25,
   "scanRange" : 35,
 
@@ -91,15 +103,17 @@
   "targetMaxRange" : 1800,
   "targetAngleRange" : 360,
 
-  "maxFireAngle" : 5,
+  "maxFireAngle" : 90,
 
   "energyUsage" : 1,
-  "power" : 50,
+  "power" : 10,
   "fireTime" : 0.02,
-  "multiBarrel" : true,
-  "arraySize" : [8, 25],
-  "arrayOffset" : [0.25, 0.5],
   "inaccuracy" : 0.0,
+  "projectileType" : "SGPDDP",
+  
+  "multiBarrel" : true,
+  "arraySize" : [8, 55],
+  "arrayOffset" : [0.25, 0.25],
 
   "maxEnergy" : 1000,
   "energyRegen" : 50,

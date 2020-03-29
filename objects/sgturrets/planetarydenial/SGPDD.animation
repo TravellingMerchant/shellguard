@@ -43,8 +43,8 @@
     "parts" : {
       "gun" : {
         "properties" : {
-          "offset" : [0.2, 0.7],
-          "projectileSource" : [2.0, 0.0],
+          "offset" : [0.25, 7.0],
+          "projectileSource" : [2.3125, -6.8125],
           "rotationGroup" : "gun",
           "centered" : true,
           "zLevel" : 3
@@ -73,7 +73,7 @@
 
       "stand" : {
         "properties" : {
-          "offset" : [0, 0],
+          "offset" : [0, 2.5],
           "image" : "<partImage>",
           "centered" : true,
           "zLevel" : 1
@@ -112,8 +112,8 @@
 
   "rotationGroups" : {
     "gun" : {
-      "rotationCenter" : [0, 0.7],
-      "angularVelocity" : 1
+      "rotationCenter" : [0, 7.0],
+      "angularVelocity" : 0.25
     }
   },
 

@@ -189,7 +189,7 @@ function findTargetRoutine()
     local targetPosition = world.entityPosition(entityId)
     if not entity.isValidTarget(entityId) or world.lineTileCollision(self.basePosition, targetPosition) then return false end
     
-    if world.entityHealth(entityId)[2] < self.minHP then return false end
+    if world.entityHealth(entityId)[2] < self.minHP and (world.entityType(entityId) ~= "npc")  then return false end
 
     local toTarget = world.distance(targetPosition, self.basePosition)
     local targetAngle = math.atan(toTarget[2], object.direction() * toTarget[1])

@@ -1,18 +1,18 @@
 {
-  "objectName" : "sgbaseturret",
+  "objectName" : "sgflakturret",
   "colonyTags" : ["wired","combat"],
   "printable" : false,
   "rarity" : "Common",
   "objectType" : "container",
-  "price" : 1500,
+  "price" : 3500,
 
   "slotCount" : 0,
-  "uiConfig" : "/interface/turret/sgbaseturret.config",
+  "uiConfig" : "/interface/turret/sgflakturret.config",
   "frameCooldown" : 5,
   "autoCloseCooldown" : 3600,
 
-  "description" : "Turret for your protection! Can only be placed once.",
-  "shortdescription" : "Shellguard Turret",
+  "description" : "Fires anti-air rounds that explode near hostiles. Can only be placed once and does not fire at close targets.",
+  "shortdescription" : "Shellguard Flak Turret",
   "subtitle" : "Automatic Base Defense",
   "race" : "generic",
   "category" : "wire",
@@ -32,36 +32,52 @@
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
-      "dualImage" : "sgbaseturretstand.png:bottom",
+      "image" : "sgflakturretstand.png:bottom",
+      "direction" : "left",
+      "flipImages" : true,
 
       "imagePosition" : [-12, 0],
-      "imageLayers" : [ { "image" : "sgbaseturretstand.png:bottom" }, { "image" : "sgbaseturretgun.png:dead", "position": [4, 12] } ],
+      "imageLayers" : [ { "image" : "sgflakturretstand.png:bottom" }, { "image" : "sgflakturretgun.png:dead", "position": [6, 13] } ],
       "spaces" : [
-        [-2, 0], [-1, 0], [0, 0], [1, 0],
-        [-2, 1], [-1, 1], [0, 1], [1, 1]
+        [-1, 0], [0, 0], [1, 0],
+        [-1, 1], [0, 1], [1, 1]
       ],
-      "anchors" : [ "bottom" ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "sgflakturretstand.png:bottom",
+      "direction" : "right",
 
-      "animationParts" : {
-        "gun" : "sgbaseturretgun.png",
-        "stand" : "sgbaseturretstand.png:bottom",
-        "energy" : "energy.png"
-      },
-      "animationPosition" : [4, 16],
-      "animationCenterLine" : 0,
-
-      "baseOffset" : [0, 2],
-      "energyBarOffset" : [0.375, -1.5],
-      "verticalScaling" : false
+      "imagePosition" : [-12, 0],
+      "imageLayers" : [ { "image" : "sgflakturretstand.png:bottom" }, { "image" : "sgflakturretgun.png:dead", "position": [-3, 13] } ],
+      "spaces" : [
+        [-1, 0], [0, 0], [1, 0],
+        [-1, 1], [0, 1], [1, 1]
+      ],
+      "anchors" : [ "bottom" ]
     }
   ],
 
+  "animationParts" : {
+    "gun" : "sgflakturretgun.png",
+    "stand" : "sgflakturretstand.png:bottom",
+    "energy" : "energy.png"
+  },
+  "animationPosition" : [4, 16],
+  "animationCenterLine" : 0,
+  
+  "baseOffset" : [0, 2],
+  "energyBarOffset" : [0.375, -1.5],
+  "verticalScaling" : false,
+
   "objectWidth" : 4,
 
-  "animation" : "sgbaseturret.animation",
+  "animation" : "sgflakturret.animation",
 
   "scripts" : [
-    "/objects/sgbaseturret/gvturret.lua",
+    "/objects/sgturrets/gvturret.lua",
+    "/objects/sgturrets/gvautofire.lua",
+    
     "/scripts/npcToyObject.lua",
     "/scripts/stateMachine.lua",
     "/scripts/util.lua",
@@ -82,24 +98,26 @@
   "tipOffset" : [2.5, 0],
   "offAngle" : -30,
 
-  "scanInterval" : 6,
+  "scanInterval" : 3,
   "scanAngle" : 25,
   "scanRange" : 35,
 
-  "targetQueryRange" : 80,
-  "targetMinRange" : 2.5,
-  "targetMaxRange" : 80,
+  "targetQueryRange" : 180,
+  "targetMinRange" : 50.0,
+  "targetMaxRange" : 180,
   "targetAngleRange" : 85,
 
   "maxFireAngle" : 5,
 
-  "energyUsage" : 4,
-  "power" : 25,
-  "fireTime" : 0.2,
+  "energyUsage" : 2,
+  "power" : 5,
+  "fireTime" : 0.1,
+  "inaccuracy" : 0.03,
+  "projectileType" : "sgturretflak",
+  
   "multiBarrel" : true,
-  "arraySize" : [2, 2],
-  "arrayOffset" : [1.5, 0.5],
-  "inaccuracy" : 0.0,
+  "arraySize" : [1, 2],
+  "arrayOffset" : [0, 0.75],
 
   "maxEnergy" : 100,
   "energyRegen" : 25,
