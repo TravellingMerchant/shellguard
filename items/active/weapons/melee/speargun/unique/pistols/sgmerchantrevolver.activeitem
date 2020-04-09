@@ -88,9 +88,9 @@
 					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
-					"projectile" : "flakbullet",
+					"projectile" : "tempbulletdrillsmall",
 					"projectileCount" : 1,
-					"projectileDamage" : 5,
+					"projectileDamage" : 4,
 					"projectileParameters" : {
 						"knockback" : 30,
 						"speed" : 150
@@ -128,9 +128,9 @@
 					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
-					"projectile" : "flakbullet",
+					"projectile" : "tempbulletdrillsmall",
 					"projectileCount" : 1,
-					"projectileDamage" : 5,
+					"projectileDamage" : 4,
 					"projectileParameters" : {
 						"knockback" : 30,
 						"speed" : 150
@@ -168,9 +168,9 @@
 					//"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
-					"projectile" : "flakbullet",
+					"projectile" : "tempbulletdrillsmall",
 					"projectileCount" : 1,
-					"projectileDamage" : 5,
+					"projectileDamage" : 4,
 					"projectileParameters" : {
 						"knockback" : 30,
 						"speed" : 150
@@ -209,7 +209,7 @@
 					"crouchRecoilKnockbackVelocity" : 1,
 					
 					//Projectile
-					"projectile" : "flakbullet",
+					"projectile" : "tempbulletdrillsmall",
 					"projectileCount" : 1,
 					"projectileDamage" : 5,
 					"projectileParameters" : {
