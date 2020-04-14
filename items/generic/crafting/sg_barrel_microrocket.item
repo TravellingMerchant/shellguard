@@ -3,6 +3,7 @@
   "price" : 5000,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/microrocket.png",
   "description" : "Fires tiny rockets.",
   "shortdescription" : "Micro rocket Barrel",

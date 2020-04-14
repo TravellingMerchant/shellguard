@@ -3,6 +3,7 @@
   "price" : 5000,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/baseAddon/advancedscope.png",
   "description" : "An advanced scope which greatly improves accuracy, at the cost of energy.",
   "shortdescription" : "Advanced Scope",

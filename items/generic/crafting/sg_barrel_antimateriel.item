@@ -1,5 +1,6 @@
 {
   "itemName" : "sg_barrel_antimateriel",
+  "category" : "craftingMaterial",
   "price" : 5000,
   "maxStack" : 1,
   "rarity" : "Rare",

@@ -3,6 +3,7 @@
   "price" : 2500,
   "maxStack" : 1,
   "rarity" : "legendary",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/supercooledbarrel.png",
   "description" : "Fires supercooled rounds that create frozen cubes on impact.",
   "shortdescription" : "Supercooled Barrel",

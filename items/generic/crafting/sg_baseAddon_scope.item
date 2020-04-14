@@ -3,6 +3,7 @@
   "price" : 2500,
   "maxStack" : 1,
   "rarity" : "common",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/baseAddon/scope.png",
   "description" : "A standard scope which improves accuracy.",
   "shortdescription" : "Standard Scope",

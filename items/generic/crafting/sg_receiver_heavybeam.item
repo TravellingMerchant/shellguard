@@ -3,6 +3,7 @@
   "price" : 5000,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/receiver/heavybeam.png",
   "description" : "Heavy beam receiver. Fire rate increases at low energy. Two addon slots.",
   "shortdescription" : "Heavy Beam Receiver",

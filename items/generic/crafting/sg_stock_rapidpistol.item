@@ -3,6 +3,7 @@
   "price" : 2500,
   "maxStack" : 1,
   "rarity" : "Uncommon",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/rapidpistol.png",
   "description" : "A pistol grip made for rapid fire.",
   "shortdescription" : "Rapid Pistol Grip",

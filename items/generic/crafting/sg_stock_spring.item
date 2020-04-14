@@ -3,6 +3,7 @@
   "price" : 5000,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/spring.png",
   "description" : "A recoil-compensating stock. Allows for higher firerate, at the cost of energy.",
   "shortdescription" : "Spring Stock",

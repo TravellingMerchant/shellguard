@@ -3,6 +3,7 @@
   "price" : 5000,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/plasmitebarrel.png",
   "description" : "Incredibly powerful grenade barrel.",
   "shortdescription" : "Plasmite Grenade Barrel",

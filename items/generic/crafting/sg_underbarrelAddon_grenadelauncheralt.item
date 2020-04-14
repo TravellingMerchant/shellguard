@@ -3,6 +3,7 @@
   "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Common",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/underbarrelAddon/grenadelauncheralt.png",
   "description" : "A standard issue grenade launcher, with wood furniture.",
   "shortdescription" : "Grenade Launcher",

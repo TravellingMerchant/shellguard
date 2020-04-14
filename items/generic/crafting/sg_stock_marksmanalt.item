@@ -3,6 +3,7 @@
   "price" : 2500,
   "maxStack" : 1,
   "rarity" : "Uncommon",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/marksmanalt.png",
   "description" : "A marksman stock. Allows for higher accuracy, at the cost of firerate. Somehow.",
   "shortdescription" : "Marksman Stock",

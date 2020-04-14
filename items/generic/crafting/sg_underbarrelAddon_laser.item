@@ -3,6 +3,7 @@
   "price" : 2500,
   "maxStack" : 1,
   "rarity" : "Uncommon",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/underbarrelAddon/laser.png",
   "description" : "A basic laser sight. Incompatible with beam recievers.",
   "shortdescription" : "Laser Sight",

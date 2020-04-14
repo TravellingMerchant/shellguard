@@ -3,6 +3,7 @@
   "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Common",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/pistol.png",
   "description" : "A basic wooden pistol grip.",
   "shortdescription" : "Pistol Grip",

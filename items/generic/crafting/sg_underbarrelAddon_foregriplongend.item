@@ -3,6 +3,7 @@
   "price" : 2500,
   "maxStack" : 1,
   "rarity" : "Uncommon",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/underbarrelAddon/foregriplongend.png",
   "description" : "A foregrip with a long end, to prevent hand damage. Improves accuracy.",
   "shortdescription" : "Long End Grip",

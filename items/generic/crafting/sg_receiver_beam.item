@@ -3,6 +3,7 @@
   "price" : 5000,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/receiver/beam.png",
   "description" : "A plasma beam receiver.",
   "shortdescription" : "Beam Receiver",
