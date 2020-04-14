@@ -3,7 +3,7 @@
   "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "Heavy rifle. Semi auto supersonic shots. Charge for accurate scoped fire.",
+  "description" : "Heavy rifle. Semi-auto supersonic shots. Charge for accurate scoped fire.",
   "shortdescription" : "Shellguard DMR",
   "tooltipKind" : "base",
   "category" : "uniqueWeapon",

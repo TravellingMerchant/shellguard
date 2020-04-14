@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgbarkgun.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "This guns bark will freeze your enemies with fear. Watch out, it frost-bites!",
+  "description" : "This gun's bark will freeze your enemies with fear. Watch out, it frost-bites!",
   "shortdescription" : "Frost Hound",
   "level" : 6,
   "tooltipKind" : "base",

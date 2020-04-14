@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgsurvivoraxe.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "Channel the Survivors raw determination with this high tech axe.",
+  "description" : "Channel the Survivor's raw determination with this high tech axe.",
   "shortdescription" : "Praxis Salvos",
   "level" : 6,
   "tooltipKind" : "base",

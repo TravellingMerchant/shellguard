@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgvehiclecannon.png",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "A vehicles cannon twisted into an experimental infantry platform.",
+  "description" : "A vehicle cannon twisted into an experimental infantry platform.",
   "shortdescription" : "Vehicle Cannon",
   "level" : 1,
   "tooltipKind" : "sgweapon",
