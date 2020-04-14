@@ -4,7 +4,7 @@
   "inventoryIcon" : "icon.png",
   "rarity" : "Rare",
   "category" : "enviroProtectionPack",
-  "description" : "Equipment of a heavy Shellguard mercenary. Provides envriomental protection and a faint glow.",
+  "description" : "Equipment of a heavy Shellguard mercenary. Provides environmental protection and a faint glow.",
   "shortdescription" : "Heavy Equipment.",
   "tooltipKind" : "baseaugment",
 
