@@ -115,6 +115,7 @@
         "pusImmunity" : {"baseValue" : 1},
         "shadowImmunity" : {"baseValue" : 1},
         "insanityImmunity" : {"baseValue" : 1},
+        "radiationburnImmunity" : {"baseValue" : 1},
         "biooozeImmunity" : {"baseValue" : 1}
       },
 
