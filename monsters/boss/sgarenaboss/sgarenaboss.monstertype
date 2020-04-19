@@ -146,7 +146,17 @@
         },
         "powerMultiplier" : {
           "baseValue" : 1.0
-        }
+        },
+        "bleedingImmunity" : { "baseValue" : 1 },
+        "linerifleStatusImmunity" : { "baseValue" : 1 },
+        "centensianenergyStatusImmunity" : { "baseValue" : 1 },
+        "xanafianStatusImmunity" : { "baseValue" : 1 },
+        "akkimariacidStatusImmunity" : { "baseValue" : 1 },
+        "ucObliteratingBurnImmunity" : { "baseValue" : 1 },    
+        "pusImmunity" : {"baseValue" : 1},
+        "shadowImmunity" : {"baseValue" : 1},
+        "insanityImmunity" : {"baseValue" : 1},
+        "biooozeImmunity" : {"baseValue" : 1}
       },
 
       "resources" : {
