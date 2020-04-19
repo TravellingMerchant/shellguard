@@ -4,7 +4,7 @@
   "maxStack" : 1,
   "price" : 15000,
   "rarity" : "Common",
-  "category" : "headwear",
+  "category" : "headarmour",
   "description" : "Heavy Helmet worn by Shellguard Knights. Imposing and effective.",
   "shortdescription" : "Shellguard Heavy Helmet",
   "tooltipKind" : "armor",

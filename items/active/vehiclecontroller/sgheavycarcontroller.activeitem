@@ -4,7 +4,7 @@
   "price" : 20000,
   "rarity" : "Rare",
   "category" : "vehicleController",
-  "description" : "A heavy trasport vehicle with many seats and an explosive cannon.",
+  "description" : "A heavy transport vehicle with many seats and an explosive cannon.",
   "shortdescription" : "Heavy Transport",
   "twoHanded" : true,
   "maxStack" : 1,

@@ -4,7 +4,7 @@
   "inventoryIcon" : "icon.png",
   "rarity" : "Rare",
   "category" : "backwear",
-  "description" : "A standard backpack with all you could need for long missions.",
+  "description" : "[Cosmetic] A standard backpack with all you could need for long missions.",
   "shortdescription" : "Shellguard Backpack",
   "tooltipKind" : "back",
 

@@ -4,7 +4,7 @@
   "maxStack" : 1,
   "price" : 6000,
   "rarity" : "legendary",
-  "category" : "headwear",
+  "category" : "headarmour",
   "description" : "Helmet worn by Shellguard Engineers. Comes with a built in headlight.",
   "shortdescription" : "Shellguard Engineer Helmet",
   "tooltipKind" : "armor",

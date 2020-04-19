@@ -3,6 +3,7 @@
   "price" : 1500,
   "maxStack" : 1,
   "rarity" : "Common",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/base.png",
   "description" : "A basic rifle barrel.",
   "shortdescription" : "Rifle Barrel",

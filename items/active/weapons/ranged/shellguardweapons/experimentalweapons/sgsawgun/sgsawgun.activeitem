@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgsawgun.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "Launch  razor sharp high RPM sawblades with a deadly  bite.",
+  "description" : "Launch razor-sharp, high RPM sawblades with a deadly bite.",
   "shortdescription" : "SG Eviscerator",
   "level" : 6,
   "tooltipKind" : "sgweapon",

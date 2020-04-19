@@ -3,6 +3,7 @@
   "price" : 5000,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/heavystock.png",
   "description" : "A heavy wooden stock. Allows for higher accuracy, at the cost of energy.",
   "shortdescription" : "Heavy Stock",

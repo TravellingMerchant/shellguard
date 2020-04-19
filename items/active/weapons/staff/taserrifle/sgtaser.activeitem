@@ -4,7 +4,7 @@
   "price" : 2000,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "Made for frying robot's circuits.",
+  "description" : "Made for frying robots' circuits.",
   "shortdescription" : "SG Taser Rifle",
   "category" : "uniqueWeapon",
   "twoHanded" : true,

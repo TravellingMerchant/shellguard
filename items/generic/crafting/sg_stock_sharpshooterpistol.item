@@ -3,6 +3,7 @@
   "price" : 2500,
   "maxStack" : 1,
   "rarity" : "Uncommon",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/sharpshooterpistol.png",
   "description" : "A firm pistol grip for accurate shots.",
   "shortdescription" : "Sharpshooter Pistol Grip",

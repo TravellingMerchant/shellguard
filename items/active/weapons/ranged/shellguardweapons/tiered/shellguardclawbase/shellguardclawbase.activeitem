@@ -3,7 +3,7 @@
   "price" : 1000,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A specialized tool made to augment the users grip, retrofitted to fire miniature drone shots.",
+  "description" : "A specialized tool made to augment the user's grip, retrofitted to fire miniature drone shots.",
   "shortdescription" : "Shellguard Claw Gun",
   //"tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",

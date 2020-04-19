@@ -3,6 +3,7 @@
   "price" : 5000,
   "maxStack" : 1,
   "rarity" : "Rare",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/stock/mareslegpistol.png",
   "description" : "An angled pistol grip for faster shooting, at the cost of energy.",
   "shortdescription" : "Mares Leg Grip",

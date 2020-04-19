@@ -3,6 +3,7 @@
   "price" : 2500,
   "maxStack" : 1,
   "rarity" : "Uncommon",
+  "category" : "craftingMaterial",
   "inventoryIcon" : "/items/active/weapons/ranged/sg_built/parts/barrel/rapid.png",
   "description" : "A finned rapid-fire barrel.",
   "shortdescription" : "Rapid Rifle Barrel",

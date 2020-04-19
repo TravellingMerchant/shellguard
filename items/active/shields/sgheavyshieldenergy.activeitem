@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "category" : "shield",
-  "description" : "An alien shield that shares a striking resembalance to Shellguards energy.",
+  "description" : "An alien shield that shares a striking resembalance to Shellguard's energy.",
   "shortdescription" : "Energy Barrier",
   "tooltipKind" : "Shield",
   "twoHanded" : false,
