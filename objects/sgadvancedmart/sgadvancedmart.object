@@ -59,7 +59,13 @@
 	  { "item" : "sgpraxisdustrifle" },
 	  { "item" : "sggoldrevolver" },
 	  { "item" : "sgbluerifle" },
-	  { "item" : "sgwubgun" }
+	  { "item" : "sgwubgun" },
+	  { "item" : "sgchomperhelmet2" },
+	  { "item" : "sgemperorhammer" },
+	  { "item" : "sgmajestyrapier" },
+	  { "item" : "sgtyrantrapier" },
+	  { "item" : "sgconqueroraxe" },
+	  { "item" : "sgenforcerpistol" }
     ]
   },
 

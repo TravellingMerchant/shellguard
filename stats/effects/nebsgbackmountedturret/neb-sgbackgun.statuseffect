@@ -7,8 +7,8 @@
 	"muzzleOffset" : [-1.125,1],
 	
     //Firing Config
-    "burstTime" : 0.05,							//Time between shots in a burst but is ignored if burstCount is 1
-    "burstCount" : 1,							//The amount of shots in a burst
+    "burstTime" : 0.2,							//Time between shots in a burst but is ignored if burstCount is 1
+    "burstCount" : 5,							//The amount of shots in a burst
 	"fireTime" : 1,								//Time between bursts
 	"baseDps" : 7.2,
 	"inaccuracy" : 0.1,
