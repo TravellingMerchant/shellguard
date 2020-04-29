@@ -41,7 +41,7 @@ function update(dt)
 	self.crouchCorrected = false
   end
   --Flip offset correction
-  self.usedMuzzleOffset = {((self.muzzleOffset[1]) * mcontroller.facingDirection()),self.muzzleOffset[2]}
+  self.usedMuzzleOffset = {((self.muzzleOffset[1]) * mcontroller.facingDirection()), self.muzzleOffset[2]}
   
   --Flip sprite when play flips
   if mcontroller.facingDirection() < 0 then animator.setGlobalTag("facingDirection", "flipx") else animator.setGlobalTag("facingDirection", "") end
@@ -108,13 +108,12 @@ function update(dt)
     animator.rotateTransformationGroup("turret", 0, self.usedMuzzleOffset)
   end
   
-  --Debug stuffs
-  debugQuery()
+  --[[Debug stuffs
   world.debugText("Cooldown ready in " .. self.cooldownTimer, mcontroller.position(), "red")
   world.debugText("Active: " .. sb.printJson(self.active), vec2.add(mcontroller.position(), {0,1}), "red")
   world.debugText("Target: " .. (self.currentTarget and world.entityTypeName(self.currentTarget) or "currently unknown, searching..."), vec2.add(mcontroller.position(), {0,2}), "red")
   world.debugText("Shots remaining: " .. self.shots, vec2.add(mcontroller.position(), {0,4}), "red")
-  world.debugPoint(firePosition(), "red")
+  world.debugPoint(firePosition(), "red")]]
 end
 
 function fireProjectile(projectileType, projectileParams, inaccuracy, firePosition, projectileCount)
@@ -145,15 +144,6 @@ function fireProjectile(projectileType, projectileParams, inaccuracy, firePositi
     )
   end
   return projectileId
-end
-
-function debugQuery()
-  world.debugPoly({
-    vec2.add(firePosition(), {0,-self.searchRadius}),
-    vec2.add(firePosition(), {self.searchRadius,0}),
-    vec2.add(firePosition(), {0,self.searchRadius}),
-    vec2.add(firePosition(), {-self.searchRadius,0})
-  }, {255,0,0})
 end
 
 function firePosition()
