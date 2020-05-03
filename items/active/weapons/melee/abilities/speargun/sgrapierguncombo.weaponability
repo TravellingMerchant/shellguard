@@ -34,7 +34,7 @@
     "edgeTriggerGrace" : 0.25,
 
     "fireTime" : 0.8,
-    "baseDps" : 10.75,
+    "baseDps" : 8.5,
 
     "damageConfig" : {
       "damageSourceKind" : "spear",
