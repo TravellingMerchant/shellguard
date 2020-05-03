@@ -8,6 +8,7 @@
   "shortdescription" : "Old Guard Spear",
   //"tooltipKind" : "sword",
   "weaponType" : "uniqueweapon",
+  "category" : "uniqueWeapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","melee","spear","upgradeableWeapon"],
 
