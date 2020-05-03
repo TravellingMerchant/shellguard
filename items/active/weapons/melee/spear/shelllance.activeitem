@@ -8,6 +8,7 @@
   "shortdescription" : "Ironwatch Lance",
   //"tooltipKind" : "sword",
   "weaponType" : "uniqueweapon",
+  "category" : "uniqueWeapon",
   "twoHanded" : true,
   "itemTags" : ["weapon","melee","spear"],
 
