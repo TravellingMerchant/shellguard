@@ -1,0 +1,18 @@
+{
+  "projectileName" : "sggoldenshockwave",
+  "image" : "sgnovashockwave.png",
+  "animationCycle" : 0.5,
+  "power" : 12,
+  "frameNumber" : 4,
+  "speed" : 0.001,
+  "timeToLive" : 0.5,
+  "orientationLocked" : true,
+  "damagePoly" : [ [-60,-5], [60, -5], [60, 15], [-60, 15] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : false,
+  "fullbright" : true,
+  "statusEffects" : ["sggoldfreeze"],
+  "damageKind" : "slash"
+}
