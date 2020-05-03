@@ -7,7 +7,7 @@
 	"description" : "A very old SG rifle adorned with alien technology. Shift + Alt Fire to swap modes.",
 	"shortdescription" : "Quantum Wastelander",
 	//"tooltipKind" : "sword",
-	"category" : "Unique Weapon",
+	"category" : "uniqueWeapon",
 	"twoHanded" : true,
 	"itemTags" : ["weapon","melee","gunblade","upgradeableWeapon"],
 
