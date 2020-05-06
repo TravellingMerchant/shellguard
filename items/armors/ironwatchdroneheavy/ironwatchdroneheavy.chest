@@ -4,7 +4,7 @@
   "inventoryIcon" : "icons.png:chest",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "category" : "chestarmour",
+  "category" : "chestwear",
   "description" : "[Cosmetic] Become a heavy Shellguard robot.",
   "shortdescription" : "Shellguard Heavy Bot Torso",
   "tooltipKind" : "armor",
