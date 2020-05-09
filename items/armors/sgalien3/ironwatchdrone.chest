@@ -4,7 +4,7 @@
   "inventoryIcon" : "icons.png:chest",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "category" : "chestarmour",
+  "category" : "chestwear",
   "description" : "[Cosmetic] Become a Shellguard robot. Wearing this will make your body invisible.",
   "shortdescription" : "Shellguard Bot Torso",
   "tooltipKind" : "armor",
