@@ -1,0 +1,9 @@
+{
+  "name" : "sgcrabbo",
+  "category" : "sgcrabbo",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png"
+  }
+}

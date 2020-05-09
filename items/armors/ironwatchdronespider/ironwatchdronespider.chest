@@ -4,7 +4,7 @@
   "inventoryIcon" : "icons.png:chest",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "category" : "chestarmour",
+  "category" : "chestwear",
   "description" : "[Cosmetic] Become a Shellguard spider robot. Wearing this will make your body invisible.",
   "shortdescription" : "Shellguard Spider Torso",
   "tooltipKind" : "armor",

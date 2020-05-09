@@ -1,0 +1,40 @@
+{
+  "objectName" : "sgammochest",
+  "colonyTags" : ["storage","combat"],
+  "rarity" : "Common",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+
+  "category" : "storage",
+  "price" : 70,
+  "description" : "A heavy duty chest for storing ammunition.",
+  "shortdescription" : "Shellguard Ammo Chest",
+  "race" : "generic",
+  "health" : 1.5,
+
+  "apexDescription" : "An ammo chest. Maybe there'll be something good inside?",
+  "avianDescription" : "These ammo chests are built strong, to protect the contents.",
+  "floranDescription" : "Let'ss get chesst open! Maybe pointy bullets insside.",
+  "glitchDescription" : "Eager. No time to waste, open it up!",
+  "humanDescription" : "An ammo chest, now that's a welcome sight.",
+  "hylotlDescription" : "Presents are most exciting when they're still wrapped.",
+  "novakidDescription" : "A chest for the safe storin' of munitions of all kinds.",
+
+  "inventoryIcon" : "weaponchesticon.png",
+  "orientations" : [
+    {
+      "dualImage" : "weaponchest.png:<color>.<key>",
+      "imagePosition" : [-8, 0],
+
+      "spaces" : [ [-1, 0], [0, 0], [1, 0], [-1, 1], [0, 1], [1, 1], [-1, 2], [0, 2], [1, 2] ],
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/miningchest_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/miningchest_close.ogg" ],
+  "slotCount" : 24,
+  "uiConfig" : "/interface/chests/chest<slots>.config",
+  "frameCooldown" : 32,
+  "autoCloseCooldown" : 3600
+}
