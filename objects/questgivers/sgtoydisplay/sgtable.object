@@ -1,6 +1,6 @@
 {
   "objectName" : "sgtoydisplay",
-  "colonyTags" : ["commerce","industrial"],
+  "colonyTags" : ["shellguard","commerce","industrial"],
   "rarity" : "Common",
   "description" : "Sign up for Dart Quest today! This beacon will help you reach the Dart Quest arena after you're done with the quests!",
   "shortdescription" : "Dart Quest Beacon.",

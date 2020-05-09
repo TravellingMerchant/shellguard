@@ -1,7 +1,7 @@
 {
   "objectName" : "sgdockingfield",
   "objectType" : "physics",
-  "colonyTags" : ["station"],
+  "colonyTags" : ["shellguard","station"],
   "printable" : false,
   "rarity" : "Common",
 

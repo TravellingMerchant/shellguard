@@ -1,6 +1,6 @@
 {
   "objectName" : "sgflakturret",
-  "colonyTags" : ["wired","combat"],
+  "colonyTags" : ["shellguard","wired","combat"],
   "printable" : false,
   "rarity" : "Common",
   "objectType" : "container",
@@ -65,7 +65,7 @@
   },
   "animationPosition" : [4, 16],
   "animationCenterLine" : 0,
-  
+
   "baseOffset" : [0, 2],
   "energyBarOffset" : [0.375, -1.5],
   "verticalScaling" : false,
@@ -77,7 +77,7 @@
   "scripts" : [
     "/objects/sgturrets/gvturret.lua",
     "/objects/sgturrets/gvautofire.lua",
-    
+
     "/scripts/npcToyObject.lua",
     "/scripts/stateMachine.lua",
     "/scripts/util.lua",
@@ -114,7 +114,7 @@
   "fireTime" : 0.1,
   "inaccuracy" : 0.03,
   "projectileType" : "sgturretflak",
-  
+
   "multiBarrel" : true,
   "arraySize" : [1, 2],
   "arrayOffset" : [0, 0.75],

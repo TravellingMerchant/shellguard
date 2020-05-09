@@ -1,6 +1,6 @@
 {
   "objectName" : "sgdonatorshop",
-  "colonyTags" : ["outpost","commerce"],
+  "colonyTags" : ["shellguard","commerce"],
   "rarity" : "Common",
   "category" : "Shop",
   "description" : "Items funded by the community.",
@@ -32,7 +32,7 @@
 	  { "item" : "sgspacehelmet" },
 	  { "item" : "sgbasicspacehelmet" },
 	  { "item" : "sgsniperhelmet" },
-	  { "item" : "sgspecophelmet" },		  
+	  { "item" : "sgspecophelmet" },
 	  { "item" : "shelldronehead" },
 	  { "item" : "shelldronechest" },
 	  { "item" : "shelldronelegs" },
@@ -57,7 +57,7 @@
     {
       "imageLayers" : [ { "image" : "sgdonatorshop.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgdonatorshoplit.png:<color>.<frame>" } ],
       "direction" : "left",
-      
+
       "lightPosition" : [-1, 2],
 
       "imagePosition" : [-16, 0],

@@ -1,6 +1,6 @@
 {
   "objectName" : "sgcutter",
-  "colonyTags" : ["misc"],
+  "colonyTags" : ["shellguard","misc"],
   "rarity" : "Common",
   "description" : "A cutter.",
   "shortdescription" : "Shellguard Cutter",
@@ -15,7 +15,7 @@
     {
       "dualImage" : "sgcutter.png",
       "imageLayers" : [ { "image" : "sgcutter.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgcutterlit.png:<color>.<frame>" } ],
-      
+
       "imagePosition" : [-24, -48],
       "frames" : 39,
       "animationCycle" : 2.6,

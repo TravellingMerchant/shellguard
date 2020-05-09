@@ -1,6 +1,6 @@
 {
   "objectName" : "sgcryotank",
-  "colonyTags" : ["scorched"],
+  "colonyTags" : ["shellguard","scorched"],
   "rarity" : "Common",
   "category" : "breakable",
   "price" : 55,
@@ -34,7 +34,7 @@
   "smashOnBreak" : false,
   "smashSounds" : [ "/sfx/gun/grenadeblast1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg" ],
   "smashDropPool" : "empty",
-  
+
   "scripts" : [
     "/objects/scripts/explodingsmashable.lua"
   ],

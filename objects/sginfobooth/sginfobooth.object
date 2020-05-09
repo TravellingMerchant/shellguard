@@ -1,13 +1,13 @@
 {
   "objectName" : "sginfobooth",
-  "colonyTags" : ["protectorate", "commerce"],
+  "colonyTags" : ["shellguard","commerce"],
   "rarity" : "Common",
   "description" : "A good source of information.",
   "shortdescription" : "Info Booth",
   "race" : "protectorate",
   "printable" : false,
   "lightColor" : [46, 66, 77],
- 
+
   "apexDescription" : "A helpful info booth. The worker seems bored.",
   "avianDescription" : "A helpful info booth. The worker seems bored.",
   "floranDescription" : "A helpful info booth. The worker ssssseems bored.",

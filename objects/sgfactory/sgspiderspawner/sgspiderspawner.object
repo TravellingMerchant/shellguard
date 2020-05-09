@@ -1,6 +1,6 @@
 {
   "objectName" : "sgspiderspawner",
-  "colonyTags" : ["misc"],
+  "colonyTags" : ["shellguard","misc"],
   "rarity" : "Common",
   "description" : "A spider.",
   "shortdescription" : "Shellguard Inactive Spider",
@@ -14,7 +14,7 @@
   "orientations" : [
     {
       "dualImage" : "sgspiderspawner.png",
-      
+
       "imagePosition" : [-40, -24],
       "frames" : 1,
       "animationCycle" : 0.5,
@@ -23,7 +23,7 @@
       "anchors" : [ "bottom" ]
     }
   ],
-  
+
   "scripts" : [ "monsterspawner.lua" ],
 
   "inputNodes" : [ [-1, 0] ],

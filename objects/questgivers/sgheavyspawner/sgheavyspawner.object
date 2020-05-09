@@ -1,6 +1,6 @@
 {
   "objectName" : "sgheavyspawner",
-  "colonyTags" : ["commerce"],
+  "colonyTags" : ["shellguard","commerce"],
   "rarity" : "Common",
   "description" : "This machine sells dubloons.",
   "shortdescription" : "Dubloon Machine.",
@@ -48,7 +48,7 @@
       "anchors" : [ "bottom" ]
     }
   ],
-  
+
   "scripts" : [
     "/objects/questgivers/sgheavyspawner/sgheavyspawner.lua"
   ],

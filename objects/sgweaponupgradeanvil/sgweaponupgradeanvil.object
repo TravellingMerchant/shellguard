@@ -1,6 +1,6 @@
 {
   "objectName" : "sgweaponupgradeanvil",
-  "colonyTags" : ["ancient"],
+  "colonyTags" : ["shellguard","ancient"],
   "printable" : false,
   "rarity" : "Legendary",
   "description" : "This machine can upgrade Shellguard Weapons to tier 7. Does not work on modular guns.",

@@ -1,6 +1,6 @@
 {
   "objectName" : "sgspidertankspawner",
-  "colonyTags" : ["misc"],
+  "colonyTags" : ["shellguard","misc"],
   "rarity" : "Common",
   "description" : "Produces a Shellguard Spider Tank that respawns when killed, if wired and activated.",
   "shortdescription" : "Spider Tank Constructor",
@@ -10,7 +10,7 @@
   "price" : 3500,
 
   "inventoryIcon" : "sgspidertankspawnericon.png",
-  
+
   "animation" : "/objects/sgspawner/sgspidertankspawner/sgspidertankspawner.animation",
   "animationParts" : {
     "spawner" : "sgspidertankspawner.png"

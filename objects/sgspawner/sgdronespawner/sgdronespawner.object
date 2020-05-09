@@ -1,6 +1,6 @@
 {
   "objectName" : "sgdronespawner",
-  "colonyTags" : ["misc"],
+  "colonyTags" : ["shellguard","misc"],
   "rarity" : "Common",
   "description" : "Produces a Shellguard Drone that respawns when killed, if wired and activated.",
   "shortdescription" : "Drone Constructor",
@@ -10,7 +10,7 @@
   "price" : 2000,
 
   "inventoryIcon" : "sgdronespawnericon.png",
-  
+
   "animation" : "/objects/sgspawner/sgdronespawner/sgdronespawner.animation",
   "animationParts" : {
     "spawner" : "sgdronespawner.png"

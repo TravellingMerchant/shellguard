@@ -1,6 +1,6 @@
 {
   "objectName" : "sgroombaspawner",
-  "colonyTags" : ["misc"],
+  "colonyTags" : ["shellguard","misc"],
   "rarity" : "Common",
   "description" : "A SHELL-B Cleaning bot charging bay.",
   "shortdescription" : "SHELL-B Bay",
@@ -14,7 +14,7 @@
   "orientations" : [
     {
       "dualImage" : "sgroombaspawner.png",
-      
+
       "imagePosition" : [-8, -8],
       "frames" : 1,
       "animationCycle" : 0.5,
@@ -23,7 +23,7 @@
       "anchors" : [ "bottom" ]
     }
   ],
-  
+
   "scripts" : [ "monsterspawner.lua" ],
 
   "inputNodes" : [ [-1, 0] ],

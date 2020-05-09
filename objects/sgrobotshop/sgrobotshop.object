@@ -1,6 +1,6 @@
 {
   "objectName" : "sgrobotshop",
-  "colonyTags" : ["peacekeeper","commerce"],
+  "colonyTags" : ["shellguard","commerce"],
   "rarity" : "Uncommon",
   "category" : "other",
   "description" : "A store that sells Shellguard robots in capture pods.",

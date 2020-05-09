@@ -1,6 +1,6 @@
 {
   "objectName" : "sglandingpad",
-  "colonyTags" : ["commerce","industrial"],
+  "colonyTags" : ["shellguard","commerce","industrial"],
   "rarity" : "Common",
   "description" : "A massive steel landing pads for large ships.",
   "shortdescription" : "Shellguard Landing Pad",

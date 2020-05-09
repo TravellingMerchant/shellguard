@@ -1,6 +1,6 @@
 {
   "objectName" : "sgshippingcontainer",
-  "colonyTags" : ["hylotl","hylotloceancity","storage"],
+  "colonyTags" : ["shellguard","storage"],
   "rarity" : "Common",
   "objectType" : "container",
   "tooltipKind" : "container",

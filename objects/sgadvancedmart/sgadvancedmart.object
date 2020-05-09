@@ -1,6 +1,6 @@
 {
   "objectName" : "sgadvancedmart",
-  "colonyTags" : ["outpost","commerce"],
+  "colonyTags" : ["shellguard","commerce"],
   "rarity" : "Common",
   "category" : "Shop",
   "description" : "Create some advanced equipment.",
@@ -26,7 +26,7 @@
 	  { "item" : "sgbasiliskheavy" },
 	  { "item" : "sgstuncannon" },
 	  { "item" : "sgcarve" },
-	  { "item" : "sgsever" },	  
+	  { "item" : "sgsever" },
 	  { "item" : "sgslashcannon" },
 	  { "item" : "sgcannon" },
 	  { "item" : "sgcannonshotgun" },
@@ -83,7 +83,7 @@
     {
       "imageLayers" : [ { "image" : "sgadvancedmart.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgadvancedmartlit.png:<color>.<frame>" } ],
       "direction" : "left",
-      
+
       "lightPosition" : [-1, 2],
 
       "imagePosition" : [-64, 0],
@@ -91,7 +91,7 @@
       "animationCycle" : 3.2,
 
       "spaceScan" : 0.1,
-      "interactiveSpaces": [ 
+      "interactiveSpaces": [
         [-5, 1], [-4, 1], [-3, 1], [-2, 1], [-1, 1], [0, 1],
         [-5, 2], [-4, 2], [-3, 2], [-2, 2], [-1, 2],
         [-4, 3], [-3, 3], [-2, 3],
@@ -104,7 +104,7 @@
     {
       "imageLayers" : [ { "image" : "sgadvancedmartflip.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgadvancedmartfliplit.png:<color>.<frame>" } ],
       "direction" : "right",
-      
+
       "lightPosition" : [0, 2],
 
       "imagePosition" : [-64, 0],
@@ -112,7 +112,7 @@
       "animationCycle" : 3.2,
 
       "spaceScan" : 0.1,
-      "interactiveSpaces": [ 
+      "interactiveSpaces": [
         [6, 1], [5, 1], [4, 1], [3, 1], [2, 1], [1, 1], [0, 1], [-1, 1],
         [4, 2], [3, 2], [2, 2], [1, 2], [0, 2],
         [3, 3], [2, 3], [1, 3],

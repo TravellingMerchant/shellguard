@@ -1,6 +1,6 @@
 {
   "objectName" : "sgarenaman",
-  "colonyTags" : ["valuable","pretty"],
+  "colonyTags" : ["shellguard","valuable","pretty"],
   "rarity" : "Common",
   "category" : "decorative",
   "price" : 100,
@@ -16,7 +16,7 @@
   "description" : "How are you fitting an entire person in your inventory?",
   "shortdescription" : "Arena Fan",
   "race" : "human",
-  
+
   "offeredQuests" : [
     "sgarenaquest1", "sgarenaquest2", "sgarenaquest3", "sgarenaquest4", "sgarenaquest5", "sgarenaquest6"
   ],

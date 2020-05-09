@@ -1,6 +1,6 @@
 {
   "objectName" : "sg_modulecreator",
-  "colonyTags" : [],
+  "colonyTags" : ["shellguard"],
   "rarity" : "Legendary",
   "printable" : false,
   "description" : "Use this station to create shellguard gun mods.",
@@ -39,7 +39,7 @@
       "imageLayers" : [ { "image" : "sg_modulecreator.png:default.<frame>", "fullbright" : true }, { "image" : "sg_modulecreatorlit.png:default.<frame>" } ],
       "imagePosition" : [-8, 0],
       "frames" : 1,
-      
+
       "direction" : "left",
       "flipImages" : true,
 
@@ -50,7 +50,7 @@
       "imageLayers" : [ { "image" : "sg_modulecreator.png:default.<frame>", "fullbright" : true }, { "image" : "sg_modulecreatorlit.png:default.<frame>" } ],
       "imagePosition" : [-8, 0],
       "frames" : 1,
-      
+
       "direction" : "right",
 
       "spaceScan" : 0.1,

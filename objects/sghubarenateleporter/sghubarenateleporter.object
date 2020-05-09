@@ -1,6 +1,6 @@
 {
   "objectName" : "sghubarenateleporter",
-  "colonyTags" : ["outpost"],
+  "colonyTags" : ["shellguard"],
   "objectType" : "teleporter",
   "rarity" : "Legendary",
 
@@ -48,6 +48,6 @@
       "collisionSpaces" : [ [-3, 0], [-2, 0], [-1, 0], [0, 0] ]
     }
   ],
-  
+
   "teleporterFootPosition" : [-1, 1]
 }
