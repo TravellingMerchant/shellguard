@@ -10,7 +10,7 @@
   "actionOnReap" : [
     {
       "action" : "spawnmonster",
-      "type" : "shelldroid",
+      "type" : "sgmk1drone",
       "offset" : [0, 2],
       "arguments" : {
         "aggressive" : true

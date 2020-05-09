@@ -1,0 +1,9 @@
+{
+  "name" : "sgmk1drone",
+  "category" : "sgmk1drone",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "shelldroid.png"
+  }
+}
