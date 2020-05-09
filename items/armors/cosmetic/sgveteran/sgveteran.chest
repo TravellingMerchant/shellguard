@@ -4,7 +4,7 @@
   "inventoryIcon" : "icons.png:chest",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "category" : "chestarmour",
+  "category" : "chestwear",
   "description" : "[Cosmetic] Shellguard armour with a fur lining around the neck, who know's what it came from?",
   "shortdescription" : "Veteran Chest",
   "tooltipKind" : "armor",

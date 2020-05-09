@@ -1,10 +1,7 @@
 [
-  {
-    "op": "add",
-    "path": "/displayDungeons/surfaceshellguarddungeons",
-    "value": {
-      "description": "According to intercepted unencrypted radio signals, it's a Shellguard outpost.",
-      "icon": "/interface/cockpit/dungeons/shellguard.png"
-    }
-  }
+	[
+		{"op":"test","path":"/displayDungeons"},
+		{"op": "add","path": "/displayDungeons/surfaceshellguarddungeons","value": {"description": "According to intercepted unencrypted radio signals, it's a Shellguard outpost.","icon": "/interface/cockpit/dungeons/shellguard.png"}}
+  
+	]
 ]

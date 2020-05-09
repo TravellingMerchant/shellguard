@@ -384,13 +384,17 @@ end
 -- Coroutine
 function findTarget()
   local nearEntities = world.entityQuery(self.basePosition, self.targetQueryRange, { includedTypes = { "monster", "npc", "player" } })
+  
+  
   return util.find(nearEntities, function(entityId)
     local targetPosition = world.entityPosition(entityId)
-        
-    if not entity.isValidTarget(entityId) or world.lineTileCollision(self.basePosition, targetPosition) then return false end
-
     local toTarget = world.distance(targetPosition, self.basePosition)
-    local targetAngle = math.atan(toTarget[2], object.direction() * toTarget[1])
-    return world.magnitude(toTarget) > self.targetMinRange and math.abs(targetAngle) < self.targetAngleRange
+	local targetAngle = math.atan(toTarget[2], object.direction() * toTarget[1])
+	
+	if (not entity.isValidTarget(entityId)) or (math.abs(targetAngle) > self.targetAngleRange) or (world.magnitude(toTarget) < self.targetMinRange) or (world.lineTileCollision(self.basePosition, targetPosition)) then
+		return false
+	end
+
+    return true
   end)
 end
