@@ -11,11 +11,13 @@
   "dropPools" : [],
 
   "baseParameters" : {
+    "sgTimeToLive" : 60,
   	"damageTeamType" : "friendly",
     "damageTeam" : 0,
     "level" : 6,
     "scripts" : [
-      "/monsters/monster.lua"
+      "/monsters/monster.lua",
+	  "/monsters/sgtimedmonster.lua"
     ],
 
     "behavior" : "monster",
@@ -97,6 +99,13 @@
         },
         {
           "name" : "wander-fly"
+        },
+        {
+          "name" : "approach-fly",
+          "parameters" : {
+            "usePathfinding" : false,
+            "maxRange" : 30
+          }
         }
       ],
 
@@ -125,7 +134,7 @@
           "name" : "approach-fly",
           "parameters" : {
             "usePathfinding" : false,
-            "maxRange" : 15
+            "maxRange" : 30
           }
         }
       ],

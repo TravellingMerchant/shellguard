@@ -1,10 +1,18 @@
 { "backgroundcolor":"#000000",
+ "compressionlevel":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "target":"."
+        }
+    },
  "height":30,
  "infinite":false,
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJztmkEKgzAQAPcj\/VNPfUlv7ZvyxhpQkBKNQkKddAID4mVYxohgIlyE9ZxIgiC3et368Z7JrvtMvl7u6zpOqdUj2lGbSVedvVbU529Ul\/uK49pq1dKxnqs0k65zrVL07bTwPZOu863W+4o+06guW3FctuK4bMVx2YrjshXH5Tc7x2UrjstWHJetOC5bcVy24rhsxXHZiuOyFcdVauW\/xmu6tlr5D\/96rr1WLRn1vMovzsak6PseHPVZd1\/pqu2rnq1E\/pUPY\/wxtg==",
+         "data":"eAHtmV0KwkAMhHsR7+STJ\/FNz+QZbcAPdGm70E6DG0ZY0h\/INPNlsw9Ok38jOHCfP\/LlNYQHwepxOW8959yxoh+unxXXPFdqk7OaFh4tsbrNXqpWzz+VTuSpqrXFineK2PNPoUGOqlrU5321b4b0+kI5L9ZYKTXIFXUtnSG8V8aKWrAKD7lWetbmalm175X31bTg8z0DlX61uar5R30ZdZnVvnMKRkSzOuZjhn9mdYxRpn+ZWp6B4\/SFWY3HKmY73NjXZ8RqZwgeZdQFH7M6tr\/M6v\/98746xijTv0wtz8Bx+sKszIrZ0MaMMxjNalreV95X9HYbq\/U69WXUtbSv4hnfoIwV\/\/8Lf7LqWmOl5hX1rNUUz9U9UVFrixXvFLHHSqFBjqpa1BfzNhb3Ed3rfQ96faH0EDYtJ56rYq8mlU7kqaqFR2ezQsfxd3bZj\/p+vAFj\/DG2",
          "encoding":"base64",
          "height":30,
          "id":17,
@@ -18,7 +26,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt2rENgEAMBEE3QqXfx9dLDQTArzQjXexgU69rZllyb\/jihlucQqcOnTq06tCqQ6sOrTq06tCqQ6sOrTq06tCqQ6sOrTq06tCqQ6sOrTq0atGqQ6sOrTq06tCqQ6uOv3+y7dn2WGE3N0zkXQ==",
+         "data":"eAHtk0EKgDAQxPoRX+o\/fK\/2YBFPHaHEhRQWPAzOkrT71trulGTQFpz3XVhQMX5p10DhB0TgeQehFaydJHC7mowbAwnoCoQfVusqBAbGdQXCD6t1FQID47oC4YfVugqBgXFdgfDDal2FwMC4rkD4YbWuQmBgXFcg\/LBaVyEwMK4rEH5YrasQGBjXFQg\/rNZVCAyM6wqE\/6G6+\/LUIKCrGp76lrrSVR0CdTb1XemqDoE6m\/Z35dRhcFxXy\/k\/gxM3TORd",
          "encoding":"base64",
          "height":30,
          "id":18,
@@ -142,7 +150,7 @@
                  "y":240
                 }, 
                 {
-                 "gid":7614,
+                 "gid":7617,
                  "height":75,
                  "id":4817,
                  "name":"",
@@ -154,7 +162,7 @@
                  "y":224
                 }, 
                 {
-                 "gid":2147491263,
+                 "gid":2147491266,
                  "height":36,
                  "id":4818,
                  "name":"",
@@ -202,30 +210,6 @@
                  "y":176
                 }, 
                 {
-                 "gid":2147486914,
-                 "height":38,
-                 "id":4823,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":160,
-                 "y":176
-                }, 
-                {
-                 "gid":2147486914,
-                 "height":38,
-                 "id":4824,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":144,
-                 "y":176
-                }, 
-                {
                  "gid":3009,
                  "height":32,
                  "id":4826,
@@ -238,7 +222,7 @@
                  "y":176
                 }, 
                 {
-                 "gid":7710,
+                 "gid":7735,
                  "height":32,
                  "id":4827,
                  "name":"",
@@ -250,7 +234,7 @@
                  "y":224
                 }, 
                 {
-                 "gid":2147491358,
+                 "gid":2147491383,
                  "height":32,
                  "id":4828,
                  "name":"",
@@ -262,7 +246,7 @@
                  "y":224
                 }, 
                 {
-                 "gid":7617,
+                 "gid":7620,
                  "height":67,
                  "id":4830,
                  "name":"",
@@ -272,6 +256,30 @@
                  "width":40,
                  "x":320,
                  "y":224
+                }, 
+                {
+                 "gid":7641,
+                 "height":35,
+                 "id":4831,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":152,
+                 "y":176
+                }, 
+                {
+                 "gid":7641,
+                 "height":35,
+                 "id":4832,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":168,
+                 "y":176
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -370,10 +378,10 @@
          "y":0
         }],
  "nextlayerid":19,
- "nextobjectid":4831,
+ "nextobjectid":4833,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.2.4",
+ "tiledversion":"1.3.1",
  "tileheight":8,
  "tilesets":[
         {
@@ -517,19 +525,19 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgmaterials.json"
         }, 
         {
-         "firstgid":7553,
+         "firstgid":7556,
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset2.json"
         }, 
         {
-         "firstgid":7563,
+         "firstgid":7566,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/cooking.json"
         }, 
         {
-         "firstgid":7599,
+         "firstgid":7602,
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }, 
         {
-         "firstgid":7620,
+         "firstgid":7645,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/human.json"
         }],
  "tilewidth":8,
