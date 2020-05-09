@@ -1,6 +1,6 @@
 {
   "objectName" : "sgvendingturret",
-  "colonyTags" : ["outpost","commerce"],
+  "colonyTags" : ["shellguard","commerce"],
   "rarity" : "Common",
   "category" : "Shop",
   "description" : "Why not upgrade to our security plan? This shop sells many defensive objects.",
@@ -8,7 +8,7 @@
   "race" : "generic",
   "price" : 500,
   "printable" : false,
-  
+
   "iAction" : "OpenMerchantInterface",
   "iData" : {
     "config" : "/interface/windowconfig/vendingmachine.config",
@@ -25,12 +25,12 @@
   "humanDescription" : "These should keep me safe and others in danger.",
   "hylotlDescription" : "These should keep me safe and others in danger.",
   "novakidDescription" : "These should keep me safe and others in danger.",
-  
+
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {
       "imageLayers" : [ { "image" : "sgvendingturret.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgvendingturretlit.png:<color>.<frame>" } ],
-      
+
       "imagePosition" : [-16, 0],
       "frames" : 12,
       "animationCycle" : 2.2,
@@ -44,6 +44,6 @@
     "/objects/sgvending/sgvending.lua"
   ],
   "scriptDelta" : 60,
-  
+
   "parentVendor" : "turretmart"
 }

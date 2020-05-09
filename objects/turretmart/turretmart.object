@@ -1,6 +1,6 @@
 {
   "objectName" : "turretmart",
-  "colonyTags" : ["outpost","commerce"],
+  "colonyTags" : ["shellguard","commerce"],
   "rarity" : "Common",
   "category" : "Shop",
   "description" : "Why not upgrade to our security plan? This shop sells many defensive objects.",
@@ -64,7 +64,7 @@
     {
       "imageLayers" : [ { "image" : "turretmart.png:<color>.<frame>", "fullbright" : true }, { "image" : "turretmartlit.png:<color>.<frame>" } ],
       "direction" : "left",
-      
+
       "lightPosition" : [-1, 2],
 
       "imagePosition" : [-64, 0],
@@ -72,7 +72,7 @@
       "animationCycle" : 3.2,
 
       "spaceScan" : 0.1,
-      "interactiveSpaces": [ 
+      "interactiveSpaces": [
         [-5, 1], [-4, 1], [-3, 1], [-2, 1], [-1, 1], [0, 1],
         [-5, 2], [-4, 2], [-3, 2], [-2, 2], [-1, 2],
         [-4, 3], [-3, 3], [-2, 3],
@@ -85,7 +85,7 @@
     {
       "imageLayers" : [ { "image" : "turretmartflip.png:<color>.<frame>", "fullbright" : true }, { "image" : "turretmartfliplit.png:<color>.<frame>" } ],
       "direction" : "right",
-      
+
       "lightPosition" : [0, 2],
 
       "imagePosition" : [-64, 0],
@@ -93,7 +93,7 @@
       "animationCycle" : 3.2,
 
       "spaceScan" : 0.1,
-      "interactiveSpaces": [ 
+      "interactiveSpaces": [
         [6, 1], [5, 1], [4, 1], [3, 1], [2, 1], [1, 1], [0, 1], [-1, 1],
         [4, 2], [3, 2], [2, 2], [1, 2], [0, 2],
         [3, 3], [2, 3], [1, 3],

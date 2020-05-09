@@ -1,6 +1,6 @@
 {
   "objectName" : "sgshipshop",
-  "colonyTags" : ["outpost","commerce"],
+  "colonyTags" : ["shellguard","commerce"],
   "rarity" : "Common",
   "category" : "Shop",
   "description" : "This engineer's hair can't be regulation.",
@@ -22,21 +22,21 @@
     "sellFactor" : 0.2,
     "items" : [
       { "item" : "autochip" },
-      
+
   	  { "item" : "sgfightercontroller" },
   	  { "item" : "sgfightermgcontroller" },
-  	  
+
   	  { "item" : "sggunshipunarmedcontroller" },
-  	  
+
   	  { "item" : "sgassaultgunshipcontroller" },
   	  { "item" : "sggunshipbombercontroller" },
   	  { "item" : "sggunshipinterceptorcontroller" },
-  	  
+
   	  { "item" : "sggunshiptransportcontroller" },
-  	  
+
   	  { "item" : "sgfighterspawner" },
   	  { "item" : "sgfightermgspawner" },
-  	  
+
   	  { "item" : "sgassaultgunshipspawner" },
   	  { "item" : "sgbombergunshipspawner" },
   	  { "item" : "sginterceptorgunshipspawner" }
@@ -56,7 +56,7 @@
     {
       "imageLayers" : [ { "image" : "sgshipshop.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgshipshoplit.png:<color>.<frame>" } ],
       "direction" : "left",
-      
+
       "lightPosition" : [-1, 2],
 
       "imagePosition" : [-16, 0],

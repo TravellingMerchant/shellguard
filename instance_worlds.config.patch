@@ -77,6 +77,10 @@
       "beamUpRule" : "Anywhere",
       "disableDeathDrops" : true,
 
+      "worldProperties" : {
+        "nonCombat" : true
+      },
+
       "skyParameters" : {
         "spaceLevel" : 3000,
         "skyColoring" : {
@@ -135,7 +139,7 @@
       }
     }
   },
-  
+
   {
     "op" : "add",
     "path" : "/sgfortresscorebase",
@@ -146,6 +150,10 @@
       "beamUpRule" : "Anywhere",
       "disableDeathDrops" : true,
 
+      "worldProperties" : {
+        "nonCombat" : true
+      },
+
       "skyParameters" : {
         "spaceLevel" : 3000,
         "skyColoring" : {
@@ -204,7 +212,7 @@
       }
     }
   },
-  
+
   {
     "op" : "add",
     "path" : "/sgvehicletutorial",
@@ -308,7 +316,7 @@
      }
     }
   },
-  
+
   {
     "op" : "add",
     "path" : "/sgfortress",
@@ -343,7 +351,7 @@
      }
     }
   },
-  
+
   {
     "op" : "add",
     "path" : "/sgelevatorsurvival",
@@ -378,7 +386,7 @@
      }
     }
   },
-  
+
   {
     "op" : "add",
     "path" : "/sgfortressbossroom",
@@ -413,7 +421,7 @@
      }
     }
   },
-  
+
   {
     "op" : "add",
     "path" : "/sgfortressbossroomrematch",
@@ -931,7 +939,7 @@
       }
     }
   },
-  
+
   {
     "op" : "add",
     "path" : "/sgskyattack",
@@ -1000,8 +1008,8 @@
         "seed" : -5288806180628666923
       }
     }
-  },  
-  
+  },
+
   {
     "op" : "add",
     "path" : "/sgmine",
@@ -1070,8 +1078,8 @@
         "seed" : -5288806180628666923
       }
     }
-  },  
-  
+  },
+
   {
     "op" : "add",
     "path" : "/sgbossmine",
@@ -1140,7 +1148,7 @@
         "seed" : -5288806180628666923
       }
     }
-  },    
+  },
 
 
   {
@@ -1192,7 +1200,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -1261,7 +1269,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -1281,7 +1289,7 @@
       }
      }
     },
-	
+
   {
     "op" : "add",
     "path" : "/sguforematch",
@@ -1331,7 +1339,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -1351,7 +1359,7 @@
       }
      }
     },
-	
+
   {
     "op" : "add",
     "path" : "/sggarden",
@@ -1401,7 +1409,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -1421,7 +1429,7 @@
       }
      }
     },
-	
+
   {
     "op" : "add",
     "path" : "/sgscrapyard",
@@ -1471,7 +1479,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -1609,7 +1617,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -1678,7 +1686,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -1747,7 +1755,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -1816,7 +1824,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -1885,7 +1893,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -1955,7 +1963,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -2025,7 +2033,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -2045,7 +2053,7 @@
       }
      }
     },
-	
+
     {
     "op" : "add",
     "path" : "/sgarena7",
@@ -2095,7 +2103,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -2165,7 +2173,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -2235,7 +2243,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -2305,7 +2313,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -2443,7 +2451,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -2463,7 +2471,7 @@
       }
      }
     },
-	
+
     {
     "op" : "add",
     "path" : "/sgwreckage",
@@ -2513,7 +2521,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -2583,7 +2591,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -2653,7 +2661,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -2723,7 +2731,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"
@@ -2793,7 +2801,7 @@
         } ]
       },
       "skyType" : "barren",
-     
+
       "horizonImages" : [ {
         "right" : "/celestial/system/terrestrial/horizon/liquids/water_r.png",
         "left" : "/celestial/system/terrestrial/horizon/liquids/water_l.png"

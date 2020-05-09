@@ -1,6 +1,6 @@
 {
   "objectName" : "sgairlockdoor",
-  "colonyTags" : ["hylotl","hylotloceancity","door"],
+  "colonyTags" : ["shellguard"],
   "rarity" : "Common",
 
   "category" : "door",
@@ -54,7 +54,7 @@
   "scriptDelta" : 5,
 
   "animation" : "/objects/wired/door/lockingdoor.animation",
-  
+
   "animationCustom" : {
     "sounds" : {
       "open" : {

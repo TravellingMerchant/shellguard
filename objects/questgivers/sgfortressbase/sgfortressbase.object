@@ -1,6 +1,6 @@
 {
   "objectName" : "sgfortressbasechatty",
-  "colonyTags" : ["outpost"],
+  "colonyTags" : ["shellguard"],
   "rarity" : "Common",
   "category" : "other",
   "description" : "The Core of the Fortress AI",
@@ -46,11 +46,11 @@
 
   "scripts" : ["/scripts/sgAdvancedChattyObject.lua"],
   "scriptDelta" : 60,
-  
+
   "questIndicatorPosition" : [-0.375, -23],
 
   "uniqueId" : "sgfortressbase",
-  
+
   "soundEffect" : "/sfx/monsters/boss/fortresscore/fortressidle.ogg",
 
   "chatOptions" : [

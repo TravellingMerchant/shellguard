@@ -1,6 +1,6 @@
 {
   "objectName" : "sgtable",
-  "colonyTags" : ["commerce","industrial"],
+  "colonyTags" : ["shellguard","commerce","industrial"],
   "rarity" : "Common",
   "description" : "A cold metal table.",
   "shortdescription" : "Shellguard Table",

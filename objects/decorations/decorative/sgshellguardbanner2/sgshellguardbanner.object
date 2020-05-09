@@ -1,5 +1,6 @@
 {
   "objectName" : "sgshellguardbanner2",
+  "colonyTags" : ["shellguard"],
   "rarity" : "Legendary",
   "category" : "decorative",
   "price" : 75,

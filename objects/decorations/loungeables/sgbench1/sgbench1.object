@@ -1,6 +1,6 @@
 {
   "objectName" : "sgbench1",
-  "colonyTags" : ["misc"],
+  "colonyTags" : ["shellguard"],
   "rarity" : "Common",
   "description" : "A sleek metal bench.",
   "shortdescription" : "Shellguard Bench",

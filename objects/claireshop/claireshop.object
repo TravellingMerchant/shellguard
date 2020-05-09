@@ -1,6 +1,6 @@
 {
   "objectName" : "sgclaireshop",
-  "colonyTags" : ["outpost","commerce"],
+  "colonyTags" : ["shellguard","commerce"],
   "rarity" : "Common",
   "category" : "Shop",
   "description" : "Build your new best friend.",
@@ -35,16 +35,16 @@
 	  { "item" : "sg_underbarrelAddon_coolingjacket" }
     ]
   },
-  
+
   "offeredQuests" : [
     "sgtrainattack"
   ],
   "turnInQuests" : [
     "sgtrainattack"
   ],
-  
+
   "uniqueId" : "sgclaireshop",
-  
+
   "apexDescription" : "Claire Gough, weapon designer.",
   "avianDescription" : "Claire Gough, weapon designer.",
   "floranDescription" : "Claire Gough, weapon desssssigner.",
@@ -58,7 +58,7 @@
     {
       "imageLayers" : [ { "image" : "claireshop.png:<color>.<frame>", "fullbright" : true }, { "image" : "claireshoplit.png:<color>.<frame>" } ],
       "direction" : "left",
-      
+
       "lightPosition" : [-1, 2],
 
       "imagePosition" : [-64, 0],
@@ -71,7 +71,7 @@
     {
       "imageLayers" : [ { "image" : "claireshopflip.png:<color>.<frame>", "fullbright" : true }, { "image" : "claireshopfliplit.png:<color>.<frame>" } ],
       "direction" : "right",
-      
+
       "lightPosition" : [0, 2],
 
       "imagePosition" : [-64, 0],

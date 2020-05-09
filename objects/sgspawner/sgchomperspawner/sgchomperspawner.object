@@ -1,6 +1,6 @@
 {
   "objectName" : "sgchomperspawner",
-  "colonyTags" : ["misc"],
+  "colonyTags" : ["shellguard","misc"],
   "rarity" : "Common",
   "description" : "Produces a Shellguard Chomper that respawns when killed, if wired and activated.",
   "shortdescription" : "Chomper Constructor",
@@ -10,7 +10,7 @@
   "price" : 2500,
 
   "inventoryIcon" : "sgchomperspawnericon.png",
-  
+
   "animation" : "/objects/sgspawner/sgchomperspawner/sgchomperspawner.animation",
   "animationParts" : {
     "spawner" : "sgchomperspawner.png"

@@ -1,6 +1,6 @@
 {
   "objectName" : "shellguarddoor",
-  "colonyTags" : ["Shellguard","door"],
+  "colonyTags" : ["shellguard","door"],
   "rarity" : "Common",
 
   "category" : "door",

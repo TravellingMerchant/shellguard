@@ -1,11 +1,11 @@
 {
   "objectName" : "sgplanetarybeamcannon",
-  "colonyTags" : ["wired","combat"],
+  "colonyTags" : ["shellguard","wired","combat"],
   "printable" : false,
   "rarity" : "Common",
   "objectType" : "container",
   "price" : 150000,
-  
+
   "description" : "A superheavy turret designed to eliminate ships. Limited firing angle. Will only shoot powerful enemies. Reusable.",
   "shortdescription" : "Heavy Beam Cannon",
   "subtitle" : "Automatic Defense",
@@ -33,10 +33,10 @@
         [-1,  4], [0,  4], [1,  4]
       ],
       "anchors" : [ "bottom" ],
-      
+
       "direction" : "left",
       "flipImages" : true,
-      
+
       "animationParts" : {
         "gun" : "planetarybeamcannon.png",
         "base" : "ministand.png",
@@ -61,14 +61,14 @@
         [-1,  4], [0,  4], [1,  4]
       ],
       "anchors" : [ "bottom" ],
-      
+
       "direction" : "right",
-      
+
       "animationParts" : {
         "gun" : "planetarybeamcannon.png",
         "base" : "ministand.png",
         "energy" : "energy.png",
-        "stand" : "/assetmissing.png" 
+        "stand" : "/assetmissing.png"
       },
       "animationPosition" : [4, 20],
       "animationCenterLine" : 0,
@@ -110,7 +110,7 @@
   "scripts" : [
     "/objects/sgturrets/gvturret.lua",
     "/objects/sgturrets/gvsuperheavybeamfire.lua",
-    
+
     "/scripts/npcToyObject.lua",
     "/scripts/stateMachine.lua",
     "/scripts/util.lua",
@@ -126,7 +126,7 @@
 
   "outputNodes" : [ [0, 0] ],
   "inputNodes" : [ [0, 1] ],
-  
+
   "animateShutdown" : false,
   "offAngle" : -15,
 
@@ -150,14 +150,14 @@
   "chargeTime" : 0.5,
   "maxBeamLength" : 128,
   "smartTracking" : false,
-  
+
   "damageSource" : {
     "teamType" : "assistant",
     "damageSourceKind" : "electric",
     "damageType" : "ignoresDef",
     "knockback" : 0
   },
-  
+
   "beamWidth" : 3,
   "beamWidthOffset" : 0.375,
   "beamImages" : {
@@ -199,7 +199,7 @@
   },
   "beamDirection" : [1, 0],
   "beamZlevel" : "Object-1",
-  
+
   "maxEnergy" : 100,
   "energyRegen" : 25,
   "energyRegenBlock" : 0.0,

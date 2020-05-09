@@ -1,6 +1,6 @@
 {
   "objectName" : "sgruincleaver",
-  "colonyTags" : ["wired","combat"],
+  "colonyTags" : ["shellguard","wired","combat"],
   "printable" : false,
   "rarity" : "Common",
   "objectType" : "container",

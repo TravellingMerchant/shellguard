@@ -1,6 +1,6 @@
 {
   "objectName" : "sgfortressdoor",
-  "colonyTags" : ["door"],
+  "colonyTags" : ["shellguard","door"],
   "printable" : false,
   "rarity" : "Legendary",
   "objectType" : "physics",

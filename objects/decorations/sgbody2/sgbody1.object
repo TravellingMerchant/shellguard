@@ -1,6 +1,6 @@
 {
   "objectName" : "sgbody2",
-  "colonyTags" : ["valuable"],
+  "colonyTags" : ["shellguard","valuable"],
   "rarity" : "Common",
   "category" : "decorative",
   "price" : 100,

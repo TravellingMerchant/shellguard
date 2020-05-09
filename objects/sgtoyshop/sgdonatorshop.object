@@ -1,6 +1,6 @@
 {
   "objectName" : "sgtoyshop",
-  "colonyTags" : ["outpost","commerce"],
+  "colonyTags" : ["shellguard","commerce"],
   "rarity" : "Common",
   "category" : "Shop",
   "description" : "For when you want to be a little less lethal.",
@@ -39,7 +39,7 @@
   "turnInQuests" : [
     "sgtoyarena1", "sgtoyarena2"
   ],
-  
+
   "uniqueId" : "sgtoydisplay",
 
   "apexDescription" : "Thank's to all those who funded these!",
@@ -55,7 +55,7 @@
     {
       "imageLayers" : [ { "image" : "sgdonatorshop.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgdonatorshoplit.png:<color>.<frame>" } ],
       "direction" : "left",
-      
+
       "lightPosition" : [-1, 2],
 
       "imagePosition" : [-16, 0],

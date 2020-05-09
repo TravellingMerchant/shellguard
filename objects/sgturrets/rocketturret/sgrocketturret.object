@@ -1,6 +1,6 @@
 {
   "objectName" : "sgrocketturret",
-  "colonyTags" : ["wired","combat"],
+  "colonyTags" : ["shellguard","wired","combat"],
   "printable" : false,
   "rarity" : "Common",
   "objectType" : "container",
@@ -64,7 +64,7 @@
   "scripts" : [
     "/objects/sgturrets/gvturret.lua",
     "/objects/sgturrets/gvburstfire.lua",
-    
+
     "/scripts/npcToyObject.lua",
     "/scripts/stateMachine.lua",
     "/scripts/util.lua",
@@ -101,7 +101,7 @@
   "fireTime" : 0.5,
   "inaccuracy" : 0.0,
   "projectileType" : "sghomingturret",
-  
+
   "multiBarrel" : true,
   "arraySize" : [2, 6],
   "arrayOffset" : [0.25, 0.25],
@@ -112,7 +112,7 @@
 
   "burstCount" : 3,
   "burstTime" : 0.25,
-  
+
   "npcToy" : {
     "influence" : [
       "turret"

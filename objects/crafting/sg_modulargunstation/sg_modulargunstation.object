@@ -1,6 +1,6 @@
 {
   "objectName" : "sg_modulargunstation",
-  "colonyTags" : [],
+  "colonyTags" : ["shellguard"],
   "rarity" : "Legendary",
   "printable" : false,
   "description" : "Use this station to modify custom shellguard guns.",
@@ -28,7 +28,7 @@
       "imagePosition" : [-8, 0],
       "frames" : 16,
       "animationCycle" : 1.5,
-      
+
       "direction" : "left",
       "flipImages" : true,
 
@@ -40,7 +40,7 @@
       "imagePosition" : [-8, 0],
       "frames" : 16,
       "animationCycle" : 1.5,
-      
+
       "direction" : "right",
 
       "spaceScan" : 0.1,

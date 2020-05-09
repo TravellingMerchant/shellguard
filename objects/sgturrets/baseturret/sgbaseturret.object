@@ -1,6 +1,6 @@
 {
   "objectName" : "sgbaseturret",
-  "colonyTags" : ["wired","combat"],
+  "colonyTags" : ["shellguard","wired","combat"],
   "printable" : false,
   "rarity" : "Common",
   "objectType" : "container",
@@ -64,7 +64,7 @@
   "scripts" : [
     "/objects/sgturrets/gvturret.lua",
     "/objects/sgturrets/gvautofire.lua",
-    
+
     "/scripts/npcToyObject.lua",
     "/scripts/stateMachine.lua",
     "/scripts/util.lua",
@@ -105,7 +105,7 @@
   "multiBarrel" : true,
   "arraySize" : [2, 2],
   "arrayOffset" : [1.375, 0.5],
-  
+
   "maxEnergy" : 100,
   "energyRegen" : 25,
   "energyRegenBlock" : 1.0,

@@ -1,7 +1,7 @@
 {
   "objectName" : "sgfortressteleporter2",
   "objectType" : "teleporter",
-  "colonyTags" : ["misc"],
+  "colonyTags" : ["shellguard","misc"],
   "printable" : false,
   "price" : 500,
   "rarity" : "Common",
@@ -38,7 +38,7 @@
       "collisionSpaces" : [ [-2, 0], [-1, 0], [-0, 0], [1, 0] ]
     }
   ],
-  
+
   "teleporterFootPosition" : [0, 1]
 
 }

@@ -1,0 +1,70 @@
+{
+  "objectName" : "sgflag",
+  "colonyTags" : ["shellguard"],
+  "printable" : false,
+  "rarity" : "Common",
+  "objectType" : "teleporter",
+  "category" : "teleportMarker",
+  "price" : 70,
+  "radioMessagesOnPickup" : [ "pickupflag" ],
+
+  "description" : "A Shellguard bookmarker. Use ^green;[E]^white; to bookmark a teleportation location.",
+  "shortdescription" : "Shellguard Bookmark",
+  "race" : "human",
+
+  "apexDescription" : "A Shellguard bookmark. I can use this as a waypoint for teleportation.",
+  "avianDescription" : "This Shellguard bookmark can be bookmarked as a destination for my ship teleporter.",
+  "floranDescription" : "Shellguard bookmark makess good point to teleport back to ussing teleporter!",
+  "glitchDescription" : "Observant. A small locator module attached to this hologram allows it to be bookmarked for teleportation.",
+  "humanDescription" : "This Shellguard bookmark can be saved as a location for my teleporter. Then I can return to it at any time.",
+  "hylotlDescription" : "This Shellguard bookmark can act as a way point, enabling me to return to this point using a teleporter.",
+  "novakidDescription" : "I can bookmark this Shellguard bookmark for quick teleportin'.",
+
+  "interactAction" : "OpenTeleportDialog",
+  "interactData" : "/interface/warping/destinationonly.config",
+
+  "inventoryIcon" : "sgflagicon.png",
+  "orientations" : [
+    {
+      "image" : "sgflag.png:<color>.<frame>",
+      "flipImages" : true,
+      "direction" : "left",
+      "imagePosition" : [-17, 0],
+      "frames" : 4,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "sgflag.png:<color>.<frame>",
+      "direction" : "right",
+      "imagePosition" : [1, 0],
+      "frames" : 6,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+
+  //This script would be nice to have, except it doesn't work. It glitches the hologram when walked in front of. Switch to sgflag.png.old if working.
+
+  //"scripts" : [
+  //  "/objects/wired/proximitysensor/proximitysensor.lua"
+  //],
+  //"scriptDelta" : 5,
+
+  //"animation" : "sgflag.animation",
+  //"animationParts" : {
+  //  "bg" : "sgflag.png",
+  //  "fg" : "sgflaglit.png"
+  //},
+  //"animationPosition" : [-16, 0],
+
+  //"interactive" : true,
+
+  //"detectDuration" : 0.2,
+  //"detectEntityTypes" : [ "creature", "vehicle" ],
+  //"detectArea" : [ [-1.0, 0.5], [1.0, 3] ]
+}

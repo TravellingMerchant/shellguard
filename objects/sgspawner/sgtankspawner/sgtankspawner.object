@@ -1,6 +1,6 @@
 {
   "objectName" : "sgtankspawner",
-  "colonyTags" : ["misc"],
+  "colonyTags" : ["shellguard","misc"],
   "rarity" : "Common",
   "description" : "Produces a Shellguard Tank that respawns when killed, if wired and activated.",
   "shortdescription" : "Tank Constructor",
@@ -10,7 +10,7 @@
   "price" : 2500,
 
   "inventoryIcon" : "sgtankspawnericon.png",
-  
+
   "animation" : "/objects/sgspawner/sgtankspawner/sgtankspawner.animation",
   "animationParts" : {
     "spawner" : "sgtankspawner.png"

@@ -1,6 +1,6 @@
 {
   "objectName" : "sgvendingguard",
-  "colonyTags" : ["outpost","commerce"],
+  "colonyTags" : ["shellguard","commerce"],
   "rarity" : "Common",
   "category" : "Shop",
   "description" : "When you need more firepower on the go!",
@@ -8,7 +8,7 @@
   "race" : "generic",
   "price" : 500,
   "printable" : false,
-  
+
   "iAction" : "OpenMerchantInterface",
   "iData" : {
     "config" : "/interface/windowconfig/vendingmachine.config",
@@ -30,7 +30,7 @@
   "orientations" : [
     {
       "imageLayers" : [ { "image" : "sgvendingguard.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgvendingguardlit.png:<color>.<frame>" } ],
-      
+
       "imagePosition" : [-16, 0],
       "frames" : 12,
       "animationCycle" : 2.2,
@@ -44,6 +44,6 @@
     "/objects/sgvending/sgvending.lua"
   ],
   "scriptDelta" : 60,
-  
+
   "parentVendor" : "sgguardmart"
 }
