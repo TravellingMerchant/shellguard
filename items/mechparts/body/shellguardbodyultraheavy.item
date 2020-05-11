@@ -1,6 +1,6 @@
 {
   "itemName" : "shellguardbodyultraheavy",
-  "price" : 20000,
+  "price" : 15000,
   "maxStack" : 1,
   "rarity" : "Legendary",
   "category" : "mechPart",
@@ -8,7 +8,7 @@
   "builder" : "/items/buildscripts/buildmechpart.lua",
   "inventoryIcon" : "shellguardbodyultraheavy.png",
   "description" : "An incredibly heavy mech body.",
-  "shortdescription" : "SG Heavy Body",
+  "shortdescription" : "SG Phalanx Body",
   "itemTags" : [ ],
 
   "mechPart" : ["body", "shellguardbodyultraheavy"]
