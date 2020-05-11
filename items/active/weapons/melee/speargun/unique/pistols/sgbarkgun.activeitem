@@ -8,7 +8,7 @@
   "shortdescription" : "Frost Hound",
   "level" : 6,
   "tooltipKind" : "base",
-  "category" : "Combo Pistol",
+  "category" : "sgcombopistol",
   "itemTags" : ["weapon","ranged","spear","speargun","gunspear", "upgradeableWeapon"],
   "twoHanded" : false,
 

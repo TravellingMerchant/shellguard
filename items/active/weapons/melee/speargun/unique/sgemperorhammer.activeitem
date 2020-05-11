@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgemperorhammer.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A lightweight mace bristling with firey energy.",
+  "description" : "A lightweight mace bristling with fiery energy.",
   "shortdescription" : "Emperor Mace",
   "level" : 6,
   "tooltipKind" : "base",
