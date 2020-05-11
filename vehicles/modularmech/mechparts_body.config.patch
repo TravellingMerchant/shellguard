@@ -1,6 +1,41 @@
 [
   {
     "op": "add",
+    "path": "/shellguardbodyultraheavy",
+    "value": {
+      "stats": {
+        "energy": 5,
+        "protection": 7
+      },
+      "partParameters": {
+        "hazardImmunities": [
+          "biomeradiation",
+          "biomecold",
+          "biomeheat"
+        ]
+      },
+      "partImages": {
+        "bodyBack": "body/shellguardbodyheavy_back.png",
+        "bodyFront": "body/shellguardbodyultraheavy_front.png",
+        "bodyFullbright": "body/shellguardbodyultraheavy_fullbright.png"
+      },
+      "defaultPrimaryColors": [
+      "A3381C",
+      "7B1500",
+      "5B0600",
+      "3C0000"
+      ],
+      "defaultSecondaryColors": [
+      "555555",
+      "3d3d3d",
+      "2f2f2f",
+      "202020"
+      ],
+      "animationCustom": {}
+    }
+  },
+  {
+    "op": "add",
     "path": "/shellguardbodyheavy",
     "value": {
       "stats": {

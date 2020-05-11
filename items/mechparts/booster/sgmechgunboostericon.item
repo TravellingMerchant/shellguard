@@ -1,0 +1,15 @@
+{
+  "itemName" : "sgmechgunbooster",
+  "price" : 6840,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "category" : "mechPart",
+  "tooltipKind" : "mechbooster",
+  "builder" : "/items/buildscripts/buildmechpart.lua",
+  "inventoryIcon" : "sgmechgunboostericon.png",
+  "description" : "These boosters allow for fantastic control.",
+  "shortdescription" : "SG Armed Boosters",
+  "itemTags" : [ ],
+
+  "mechPart" : ["booster", "sgmechgunbooster"]
+}

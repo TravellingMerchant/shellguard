@@ -40,5 +40,47 @@
         }
       }
     }
+  },
+  {
+    "op": "add",
+    "path": "/sgmechgunbooster",
+    "value": {
+      "stats": {
+        "speed": 5,
+        "control": 7
+      },
+      "partParameters": {},
+      "partImages": {
+        "backBoosterBack": "booster/sgmechgunbooster_back_back.png",
+        "backBoosterFullbright": "boosterflame/simple_back.png",
+        "backBoosterFront": "booster/sgmechgunbooster_back_front.png",
+        "frontBoosterBack": "booster/sgmechgunbooster_front_back.png",
+        "frontBoosterFullbright": "boosterflame/simple_front.png",
+        "frontBoosterFront": "booster/sgmechgunbooster_front_front.png"
+      },
+      "defaultPrimaryColors": [
+      "A3381C",
+      "7B1500",
+      "5B0600",
+      "3C0000"
+      ],
+      "defaultSecondaryColors": [
+      "555555",
+      "3d3d3d",
+      "2f2f2f",
+      "202020"
+      ],
+      "animationCustom": {
+        "animatedParts": {
+          "parts": {
+            "frontBoosterFullbright": {
+              "properties": {
+                "zLevel": 10.5
+              }
+            }
+          }
+        }
+      }
+    }
   }
 ]
