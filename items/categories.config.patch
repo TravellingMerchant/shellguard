@@ -1,7 +1,4 @@
 [
-  {
-    "op": "add",
-    "path": "/labels/sggunstaff",
-    "value": "Gun Staff"
-  }
+  {"op": "add","path": "/labels/sggunstaff","value": "Gun Staff"},
+  {"op": "add","path": "/labels/sgcombopistol","value": "Combo Pistol"}
 ]

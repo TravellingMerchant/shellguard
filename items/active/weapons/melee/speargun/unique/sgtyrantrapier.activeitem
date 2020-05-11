@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgtyrantrapier.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "Extend this rapiers already long reach with shots on every thrust.",
+  "description" : "Extend this rapier's already long reach with shots on every thrust.",
   "shortdescription" : "Tyrant Rapier",
   "level" : 6,
   "tooltipKind" : "base",
