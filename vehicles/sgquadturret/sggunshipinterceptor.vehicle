@@ -56,13 +56,13 @@
 		"drivingSeat" : {
 			"PrimaryFire" : {
 				"forwardDoubleCannonFront" : {
-					"aimMinMax" : [-30,70],
+					"aimMinMax" : [-30,90],
 					"emptyAim" : -10,
 					"projectileType" : "tempbulletshatter",
 					"slaves" : ["forwardDoubleCannonBack"],
 					"punishSlaves" : {"forwardDoubleCannonBack":0.15},
 					"projectileParams" : {
-						"power" : 20,
+						"power" : 55,
 					    "speed" : 120
 					},
 					"inaccuracy" : 0.015,
@@ -75,12 +75,12 @@
 					"setAnimationStates" : {"forwardDoubleCannonFront":["fire",true]}
 				},
 				"forwardDoubleCannonBack" : {
-					"aimMinMax" : [-30,70],
+					"aimMinMax" : [-30,90],
 					"emptyAim" : -10,
 					"slavedTo" : "forwardDoubleCannonFront",
 					"projectileType" : "tempbulletshatter",
 					"projectileParams" : {
-						"power" : 20,
+						"power" : 55,
 					    "speed" : 120
 					},
 					"inaccuracy" : 0.015,
@@ -111,6 +111,25 @@
 					"playSounds" : ["bombbay"]
 				}
 			}
+		},
+		"passengerSeat" : {
+			"PrimaryFire" : {
+				"ventralAutocannon" : {
+					"aimMinMax" : [-30,160],
+					"emptyAim" : 0,
+					"projectileType" : "sgturretflak",
+					"projectileParams" : {
+						"power" : 40
+					},
+					"inaccuracy" : 0.2,
+					"projectileCount" : 7,
+					"gunCenter" : [0.625, 2.625],
+					"gunLength" : 2.5,
+					"fireTime" : 3,
+					"playSounds" : ["ventralAutocannon"],
+					"setAnimationStates" : {"ventralAutocannon":"fire"}
+				}
+			}
 		}
 	},
 	"thrusters" : {"sideThrusterFront":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[-3,1.75]},"sideThrusterBack":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[9,2]}},
@@ -124,7 +143,7 @@
 
   //Health and damage
   "protection" : 50,
-  "maxHealth" : 5000,
+  "maxHealth" : 10000,
 
   "damageStateNames" : ["undamaged"],
 
@@ -203,18 +222,24 @@
 	"rightCollisionPoly" : [[-3,-4], [3,-4], [3,1], [-3,1]],
     "mass" : 8,
     "airFriction" : 2,
-    "ignorePlatformCollision" : true,
+    "enableSurfaceSlopeCorrection" : true,
+    "slopeSlidingFactor" : 0.0,
+    "ignorePlatformCollision" : false,
     "gravityEnabled" : true
   },
 
   "occupiedMovementSettings" : {
     "mass" : 8,
+    "enableSurfaceSlopeCorrection" : true,
+    "slopeSlidingFactor" : 0.0,
     "gravityEnabled" : true
   },
 
   "zeroGMovementSettings" : {
     "mass" : 8,
-    "airFriction" : 0.1,
+    "airFriction" : 0,
+    "enableSurfaceSlopeCorrection" : true,
+    "slopeSlidingFactor" : 0.0,
 	"gravityEnabled" : true
   }
 

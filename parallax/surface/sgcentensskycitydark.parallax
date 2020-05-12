@@ -1,0 +1,258 @@
+{
+  "verticalOrigin" : 10,
+
+  "layers" : [
+	//Sky Parallax Front
+    {
+      "kind" : "spacedust2",
+      "nohueshift" : true,
+      "repeatY" : true,
+      "parallax" : 2.5,
+      "minSpeed" : 700000,
+      "maxSpeed" : 1000000,
+      "directives" : "fade=000000=0.2"
+    },
+    {
+      "kind" : "northern",
+      "offset" : [0, 375],
+      "parallax" : 30,
+      "minSpeed" : 700000,
+      "maxSpeed" : 1000000,
+      "fadePercent" : 0.8,
+      "directives" : "?brightness=-90?",
+      "unlit" : true
+    },
+    {
+      "kind" : "sgcentensskyclouds",
+      "offset" : [0, 700],
+      "parallax" : [6.5, 3.7],
+      "fadePercent" : 0.5,
+      "lightMapped" : true,
+      "minSpeed" : 100000,
+      "maxSpeed" : 500000,
+      "directives" : "?brightness=-73?saturation=-10"
+    },
+    {
+      "kind" : "sgcentensskyclouds",
+      "offset" : [0, 650],
+      "parallax" : [6.5, 3.75],
+      "fadePercent" : 0.5,
+      "minSpeed" : 200000,
+      "maxSpeed" : 700000,
+      "directives" : "?brightness=-70?saturation=-10",
+      "lightMapped" : true
+    },
+    {
+      "kind" : "sgcentensskyclouds",
+      "offset" : [0, 600],
+      "parallax" : [6.5, 3.8],
+      "fadePercent" : 0.5,
+      "minSpeed" : 50000,
+      "maxSpeed" : 200000,
+      "directives" : "?brightness=-70?saturation=-10",
+      "lightMapped" : true
+    },
+    {
+      "kind" : "sgcentensskyclouds2",
+      "offset" : [0, 515],
+      "parallax" : [7.0, 3.85],
+      "fadePercent" : 0.5,
+      "minSpeed" : 150000,
+      "maxSpeed" : 550000,
+      "directives" : "?brightness=-77?saturation=-10",
+      "lightMapped" : true
+    },
+    {
+      "kind" : "sgcentensskyclouds",
+      "offset" : [0, 450],
+      "parallax" : [7.5, 3.9],
+      "fadePercent" : 0.5,
+      "minSpeed" : 10000,
+      "maxSpeed" : 300000,
+      "directives" : "?brightness=-75?saturation=-10",
+      "lightMapped" : true
+    },
+    {
+      "kind" : "sgcentensskyclouds2",
+      "offset" : [0, 340],
+      "parallax" : [8.0, 4.5],
+      "fadePercent" : 0.5,
+      "minSpeed" : 100000,
+      "maxSpeed" : 600000,
+      "directives" : "?brightness=-78?saturation=-10",
+      "lightMapped" : true
+    },
+    {
+      "kind" : "sgcentensskyclouds",
+      "offset" : [0, 320],
+      "parallax" : [8.5, 5.25],
+      "fadePercent" : 0.5,
+      "minSpeed" : 60000,
+      "maxSpeed" : 400000,
+      "directives" : "?brightness=-70?saturation=-10",
+      "lightMapped" : true
+    },
+	//Foreground Structures
+
+	//Sky Parallax Back
+    {
+      "kind" : "sgcentensskyclouds2",
+      "offset" : [0, 280],
+      "parallax" : [9.5, 6.0],
+      "fadePercent" : 0.5,
+      "minSpeed" : 100000,
+      "maxSpeed" : 500000,
+      "directives" : "?brightness=-70?saturation=-10",
+      "lightMapped" : true
+    },
+	//Midground Structures
+
+	//Sky Parallax Back
+    {
+      "kind" : "sgcentensskyclouds",
+      "offset" : [0, 260],
+      "parallax" : [10.5, 6.5],
+      "fadePercent" : 0.5,
+      "minSpeed" : 100000,
+      "maxSpeed" : 500000,
+      "directives" : "?brightness=-70?saturation=-10",
+      "lightMapped" : true
+    },
+	//Background Structures
+
+	//Sky Parallax Back
+    {
+      "kind" : "sgcentensskyclouds2",
+      "offset" : [0, 245],
+      "parallax" : [11.5, 7.25],
+      "fadePercent" : 0.5,
+      "minSpeed" : 100000,
+      "maxSpeed" : 400000,
+      "directives" : "?brightness=-70?saturation=-10",
+      "lightMapped" : true
+    },
+	
+	// Day Clouds
+    {
+      "kind" : "clouds3",
+      "baseCount" : 2,
+      "offset" : [0, 440],
+      "parallax" : [7.5, 3.75],
+      "minSpeed" : 10000,
+      "maxSpeed" : 50000,
+      "fadePercent" : 0.5,
+      "directives" : "?brightness=-70?saturation=-10",
+      "lightMapped" : true
+    },
+    {
+      "kind" : "clouds2",
+      "baseCount" : 2,
+      "offset" : [0, 280],
+      "parallax" : [14, 7],
+      "minSpeed" : 5000,
+      "maxSpeed" : 25000,
+      "fadePercent" : 0.5,
+      "directives" : "?brightness=-70?saturation=-10",
+      "lightMapped" : true
+    },
+    {
+      "kind" : "clouds1",
+      "baseCount" : 2,
+      "offset" : [0, 300],
+      "parallax" : [6, 3],
+      "minSpeed" : 10000,
+      "maxSpeed" : 50000,
+      "fadePercent" : 0.5,
+      "directives" : "?brightness=-70?saturation=-10",
+      "lightMapped" : true
+    },
+    {
+      "kind" : "clouds3",
+      "baseCount" : 2,
+      "offset" : [0, 120],
+      "parallax" : [9, 4.5],
+      "minSpeed" : 10000,
+      "maxSpeed" : 50000,
+      "fadePercent" : 0.5,
+      "directives" : "?brightness=-73?saturation=-10",
+      "lightMapped" : true
+    },
+    {
+      "kind" : "clouds2",
+      "baseCount" : 2,
+      "offset" : [0, 160],
+      "parallax" : [14, 7],
+      "minSpeed" : 5000,
+      "maxSpeed" : 25000,
+      "fadePercent" : 0.5,
+      "directives" : "?brightness=-75?saturation=-10",
+      "lightMapped" : true
+    },
+    {
+      "kind" : "clouds1",
+      "baseCount" : 2,
+      "offset" : [0, 200],
+      "parallax" : [6, 3],
+      "minSpeed" : 10000,
+      "maxSpeed" : 50000,
+      "fadePercent" : 0.5,
+      "directives" : "?brightness=-74?saturation=-10",
+      "lightMapped" : true
+    },
+    {
+      "kind" : "clouds3",
+      "baseCount" : 2,
+      "offset" : [0, 0],
+      "parallax" : [9, 4.5],
+      "minSpeed" : 10000,
+      "maxSpeed" : 50000,
+      "fadePercent" : 0.5,
+      "directives" : "?brightness=-70?saturation=-10",
+      "lightMapped" : true
+    },
+    {
+      "kind" : "clouds2",
+      "baseCount" : 2,
+      "offset" : [0, 40],
+      "parallax" : [14, 7],
+      "minSpeed" : 5000,
+      "maxSpeed" : 25000,
+      "fadePercent" : 0.5,
+      "directives" : "?brightness=-70?saturation=-10",
+      "lightMapped" : true
+    },
+    {
+      "kind" : "clouds2",
+      "baseCount" : 2,
+      "offset" : [10, 70],
+      "parallax" : [13, 7],
+      "minSpeed" : 50000,
+      "maxSpeed" : 250000,
+      "fadePercent" : 0.5,
+      "directives" : "?brightness=-77?saturation=-10",
+      "lightMapped" : true
+    },
+    {
+      "kind" : "clouds2",
+      "baseCount" : 2,
+      "offset" : [15, 170],
+      "parallax" : [13, 7],
+      "minSpeed" : 50000,
+      "maxSpeed" : 250000,
+      "fadePercent" : 0.5,
+      "directives" : "?brightness=-78?saturation=-10",
+      "lightMapped" : true
+    },
+    {
+      "kind" : "clouds1",
+      "baseCount" : 2,
+      "offset" : [0, 80],
+      "parallax" : [6, 3],
+      "minSpeed" : 10000,
+      "maxSpeed" : 50000,
+      "fadePercent" : 0.5,
+      "directives" : "?brightness=-70?saturation=-10",
+      "lightMapped" : true
+    }
+  ]
+}

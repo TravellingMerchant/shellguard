@@ -39,7 +39,7 @@
 					"off" : {},
 					"fire" : {
 						"frames" : 3,
-						"cycle" : 0.05,
+						"cycle" : 0.2,
 						"mode" : "transition",
 			"transition" : "off"
 					}
@@ -415,6 +415,29 @@
 					"anchorPart" : "foreground",
 					"image" : "sgbasicgunshipbackfin.png"
 		}
+			},
+		"ventralAutocannon" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : -1,
+					"offset" : [2.8, 2.25],
+					"transformationGroups" : ["ventralAutocannon"],
+					"anchorPart" : "foreground"
+				},
+		"partStates" : {
+					"ventralAutocannon" : {
+						"off" : {
+							"properties" : {
+								"image" : "sgbasicgunshipautocannon.png:idle.<frame>"
+							}
+						},
+						"fire" : {
+							"properties" : {
+								"image" : "sgbasicgunshipautocannon.png:fire.<frame>"
+							}
+						}
+					}
+				}
 			},
 			"bombingBay" : {},
 			"forwardDoubleCannonBack" : {
