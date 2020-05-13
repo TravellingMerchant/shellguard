@@ -1,0 +1,42 @@
+{
+  "objectName" : "sgbreakableplatform",
+  "colonyTags" : ["shellguard","scorched"],
+  "rarity" : "Common",
+  "category" : "breakable",
+  "price" : 55,
+  "description" : "Watch out, this platform can break.",
+  "shortdescription" : "Unstable Platform",
+  "race" : "generic",
+  "breakDropOptions" : [],
+
+  "apexDescription" : "Watch out, this platform can break..",
+  "avianDescription" : "Watch out, this platform can break.",
+  "floranDescription" : "Watch out, thissss platform can break.",
+  "glitchDescription" : "Alerted. Watch out, this platform can break.",
+  "humanDescription" : "Watch out, this platform can break.",
+  "hylotlDescription" : "Watch out, this platform can break.",
+  "novakidDescription" : "Watch out, this platform can break.",
+
+  "inventoryIcon" : "sgheattankicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgheattank.png:<color>",
+      "imagePosition" : [-8, 0],
+
+      "spaceScan" : 0.1,
+      "collision" : "platform"
+    }
+  ],
+
+  "smashable" : true,
+  "health" : 700,
+  "smashOnBreak" : false,
+  "smashSounds" : [ "/sfx/gun/grenadeblast1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg" ],
+  "smashDropPool" : "empty",
+
+  "scripts" : [
+    "/objects/scripts/explodingsmashable.lua"
+  ],
+  "explosionProjectile" : "sgheatexplosionknockback",
+  "explosionOffset" : [1, 1]
+}

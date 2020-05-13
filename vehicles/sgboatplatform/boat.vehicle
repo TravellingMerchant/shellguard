@@ -25,30 +25,13 @@
     "airFriction" : 0.5,
     "liquidForce" : 350,
     "groundFriction" : 100,
-    "liquidBuoyancy" : 1,
+    "liquidBuoyancy" : 4,
     "liquidImpedance" : 0.2,
     "liquidFriction" : 2.5,
     "ignorePlatformCollision" : true
   },
 
-  "loungePositions" : {
-    "drivingSeat" : {
-      "part" : "seat",
-      "partAnchor" : "drivingSeatPosition",
-      "orientation" : "stand",
-      "exitBottomOffset" : [0, -0.5],
-      "cameraFocus" : true
-    },
-    "titanicPose" : {
-      "part" : "seat",
-      "partAnchor" : "titanicSeatPosition",
-      "orientation" : "stand",
-      "emote" : "happy",
-      "dance" : "titanic",
-      "exitBottomOffset" : [0, -0.5],
-      "cameraFocus" : true
-    }
-  },
+  
 
   "minWaterFactorToFloat" : 0.1,
 
@@ -70,7 +53,7 @@
 
   "maxHealth" : 100,
   "protection" : 50,
-  "materialKind" : "wooden",
+  "materialKind" : "robotic",
 
   "undamagedSettings" : {
     "frictionEnabled" : true,
