@@ -1,0 +1,114 @@
+{
+  "name" : "sgboatplatform",
+  "script" : "boat.lua",
+  "boundBox" : [-5, -5, 5, 5],
+  "slaveControlTimeout" : 2.0,
+  "slaveControlHeartbeat" : 1.0,
+  "canBeHit" : true,
+
+  "animation" : "boat.animation",
+  "animationCustom" : {
+    "particleEmitters" : {
+      "damageShards" : {
+        "transformationGroups" : ["rotation"],
+        "emissionRate" : 0.0,
+        "burstCount"  : 8,
+        "offsetRegion" : [-4, -2, 4, 1],
+        "particles" : [{ "particle" : "boatgreenshard"}]
+      }
+    }
+  },
+
+  "movementSettings" : {
+    "collisionPoly" : [[-2.5, -2], [-5.0, -1], [-4.5, 1.0], [5.0, 1.0], [5.0, -1], [2.5,-2]],
+    "mass" : 4,
+    "airFriction" : 0.5,
+    "liquidForce" : 350,
+    "groundFriction" : 100,
+    "liquidBuoyancy" : 1,
+    "liquidImpedance" : 0.2,
+    "liquidFriction" : 2.5,
+    "ignorePlatformCollision" : true
+  },
+
+  "loungePositions" : {
+    "drivingSeat" : {
+      "part" : "seat",
+      "partAnchor" : "drivingSeatPosition",
+      "orientation" : "stand",
+      "exitBottomOffset" : [0, -0.5],
+      "cameraFocus" : true
+    },
+    "titanicPose" : {
+      "part" : "seat",
+      "partAnchor" : "titanicSeatPosition",
+      "orientation" : "stand",
+      "emote" : "happy",
+      "dance" : "titanic",
+      "exitBottomOffset" : [0, -0.5],
+      "cameraFocus" : true
+    }
+  },
+
+  "minWaterFactorToFloat" : 0.1,
+
+  "targetMoveSpeed" : 35,
+
+  "moveControlForce" : 250,
+
+  "windLevelOffset" : [0, 4],
+  "rockingWindAngleMultiplier": -0.002,
+
+  "rockingInterval" : 3,
+  "maxRockingAngle": 0.02,
+
+  "speedRotationMultiplier": 0.006,
+
+  "angleApproachFactor" : 0.015,
+
+  "maxGroundSearchDistance" : 5,
+
+  "maxHealth" : 100,
+  "protection" : 50,
+  "materialKind" : "wooden",
+
+  "undamagedSettings" : {
+    "frictionEnabled" : true,
+    "liquidFriction" : 20,
+    "liquidBuoyancy" : 1.75
+  },
+  "slowSettings" : {
+    "frictionEnabled" : true,
+    "liquidFriction" : 25,
+    "liquidBuoyancy" : 1.5
+  },
+  "wreckedSettings" : {
+    "frictionEnabled" : true,
+    "liquidFriction" : 30,
+    "liquidBuoyancy" : 1.0
+  },
+
+  "sinkingBuoyancy" : 0.5,
+  "sinkingFriction" : 20,
+  "maxSinkTime" : 10,
+  "destroyParticleBurstCount" : 25,
+
+  "damageStateNames" : ["undamaged","scratched","broken","wrecked"],
+  "damageMovementSettingNames" : ["undamagedSettings","undamagedSettings","slowSettings","wreckedSettings"],
+  "damageStateDriverEmotes" : ["happy","happy","sad","annoyed"],
+  "damageTakenEmote" : "oooh",
+  "damageEmoteTime" : 2.0,
+
+  "physicsCollisions" : {
+    "deck" : {
+      "collision" : [ [-4.5, 0.0], [4.5, 0.0], [4.5, 1.0], [-4.5, 1.0] ],
+      "collisionKind" : "dynamic",
+      "attachToPart" : "seat"
+    }
+  },
+
+  "bowWaveParticles" : ["bowWaveWater","bowWaveLava","splashPoison"],
+  "bowWaveMaxEmissionRate" : 200,
+  "splashParticles" : ["splashWater","splashLava","splashPoison"],
+  "splashEpsilon" : 0.025
+}

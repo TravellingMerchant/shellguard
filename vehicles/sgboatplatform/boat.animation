@@ -1,0 +1,294 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "base" : {
+        "default" : "idle",
+        "states" : {
+          "warpInPart1" : {
+            "frames" : 4,
+            "cycle" : 0.33,
+            "mode" : "transition",
+            "transition" : "warpInPart2"
+          },
+          "warpInPart2" : {
+            "frames" : 4,
+            "cycle" : 0.33,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "idle" : {},
+          "warpOutPart1" : {
+            "frames" : 4,
+            "cycle" : 0.33,
+            "mode" : "transition",
+            "transition" : "warpOutPart2",
+            "properties" : {
+              "immediateSound" : "/sfx/tech/vehicle_disappear1.ogg",
+              "immediateSoundRangeMultiplier" : 1.0
+            }
+          },
+          "warpOutPart2" : {
+            "frames" : 4,
+            "cycle" : 0.33,
+            "mode" : "transition",
+            "transition" : "warpedOut"
+          },
+          "warpedOut" : {},
+          "sinking" : {}
+        }
+      },
+
+      "propeller" : {
+        "priority" : 0,
+        "default" : "still",
+        "states" : {
+          "still" : {
+            "frames" : 1
+          },
+          "turning" : {
+            "frames" : 3,
+            "cycle" : 0.2,
+            "mode" : "loop",
+            "properties" : {
+              "persistentSound" : "/sfx/objects/propeller.ogg",
+              "persistentSoundRangeMultiplier" : 1.0
+            }
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "seat" : {
+        "properties" : {
+          "zLevel" : -2,
+          "transformationGroups" : ["flip", "rotation"],
+          "drivingSeatPosition" : [-3.375, 3.125],
+          "titanicSeatPosition" : [3.75, 3.125]
+        }
+      },
+
+      "boatsail" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : -1,
+          "transformationGroups" : ["flip", "rotation"],
+          "offset" : [-0.5, 4.75 ]
+        },
+
+        "partStates" : {
+          "base" : {
+            "warpInPart1" : {
+              "properties" : {}
+            },
+            "warpInPart2" : {
+              "properties" : {
+                "image" : "/vehicles/sgboatplatform/boatforegroundtop.png:sail.<damageState>"
+              }
+            },
+            "idle" : {
+              "properties" : {
+                "image" : "/vehicles/sgboatplatform/boatforegroundtop.png:sail.<damageState>"
+              }
+            },
+            "warpOutPart1" : {
+              "properties" : {
+                "image" : "/vehicles/sgboatplatform/boatforegroundtop.png:sail.<damageState>"
+              }
+            },
+            "warpOutPart2" : {
+              "properties" : {}
+            },
+            "invisible" : {
+              "properties" : {}
+            },
+            "sinking" : {
+              "properties" : {
+                "image" : "/vehicles/sgboatplatform/boatforegroundtop.png:sail.<damageState>"
+              }
+            }
+          }
+        }
+      },
+
+      "boathull" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 2,
+          "transformationGroups" : ["flip", "rotation"]
+        },
+
+        "partStates" : {
+          "base" : {
+            "warpInPart1" : {
+              "properties" : {}
+            },
+            "warpInPart2" : {
+              "properties" : {
+                "image" : "/vehicles/sgboatplatform/boatforeground.png:hull.<damageState>"
+              }
+            },
+            "idle" : {
+              "properties" : {
+                "image" : "/vehicles/sgboatplatform/boatforeground.png:hull.<damageState>"
+              }
+            },
+            "warpOutPart1" : {
+              "properties" : {
+                "image" : "/vehicles/sgboatplatform/boatforeground.png:hull.<damageState>"
+              }
+            },
+            "warpOutPart2" : {
+              "properties" : {}
+            },
+            "invisible" : {
+              "properties" : {}
+
+            },
+            "sinking" : {
+              "properties" : {
+                "image" : "/vehicles/sgboatplatform/boatforeground.png:hull.<damageState>"
+              }
+            }
+          }
+        }
+      },
+
+      "warp" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 3,
+          "fullbright" : true,
+          "transformationGroups" : ["flip", "rotation"],
+          "offset" : [0, 3]
+        },
+
+        "partStates" : {
+          "base" : {
+            "warpInPart1" : {
+              "properties" : {
+                "image" : "boatwarp.png:warpInPart1.<frame>"
+              }
+            },
+            "warpInPart2" : {
+              "properties" : {
+                "image" : "boatwarp.png:warpInPart2.<frame>"
+              }
+            },
+            "idle" : {
+              "properties" : {}
+            },
+            "warpOutPart1" : {
+              "properties" : {
+                "image" : "boatwarp.png:warpOutPart1.<frame>"
+              }
+            },
+            "warpOutPart2" : {
+              "properties" : {
+                "image" : "boatwarp.png:warpOutPart2.<frame>"
+              }
+            },
+            "invisible" : {
+              "properties" : {}
+            }
+          }
+        }
+      },
+
+      "prop" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "transformationGroups" : ["flip", "rotation"],
+          "offset" : [-5.0, -1.5]
+        },
+        "partStates" : {
+          "propeller" : {
+            "still" : {
+              "properties" : {
+                "image" : "/vehicles/boat/propeller.png:idle"
+              }
+            },
+            "turning" : {
+              "properties" : {
+                "image" : "/vehicles/boat/propeller.png:on.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "rotation" : {
+      "interpolated" : true
+    },
+    "flip" : {}
+  },
+
+  "particleEmitters" : {
+    "bowWaveWater" : {
+       "emissionRate" : 25.0,
+       "active" : false,
+       "offsetRegion" : [ 5, -1.5, 5.1, 1.5],
+       "particles" : [{ "particle" : "splashwater"}]
+    },
+    "bowWaveLava" : {
+       "emissionRate" : 25.0,
+       "active" : false,
+       "offsetRegion" : [ 5, -1.5, 5.1, 1.5],
+       "particles" : [{ "particle" : "fireshard"}]
+    },
+    "bowWavePoison" : {
+       "emissionRate" : 25.0,
+       "active" : false,
+       "offsetRegion" : [ 5, -1.5, 5.1, 1.5],
+       "particles" : [{ "particle" : "splashpoison"}]
+    },
+
+    "splashWater" : {
+       "emissionRate" : 0,
+       "active" : false,
+       "burstCount" : 20,
+       "offsetRegion" : [ -5, -1.5, 5.0, -1.2],
+       "particles" : [{ "particle" : "splashwater"}]
+    },
+    "splashLava" : {
+       "emissionRate" : 0,
+       "active" : false,
+       "burstCount" : 20,
+       "offsetRegion" : [ -5, -1.5, 5.1, -1.2],
+       "particles" : [{ "particle" : "fireshard"}]
+    },
+    "splashPoison" : {
+       "emissionRate" : 0,
+       "active" : false,
+       "burstCount" : 20,
+       "offsetRegion" : [ -5, -1.5, 5.1, -1.2],
+       "particles" : [{ "particle" : "splashpoison"}]
+    },
+
+    "bubbles" : {
+       "enabled" : false,
+       "emissionRate" : 25.0,
+       "offsetRegion" : [ -3, -3, 3, 3],
+       "particles" : [{ "particle" : "bubbles"}]
+    }
+  },
+
+  "sounds" : {
+    "collisionNotification" : [
+      "/sfx/tech/hoverbike_bump1.ogg",
+      "/sfx/tech/hoverbike_bump2.ogg",
+      "/sfx/tech/hoverbike_bump3.ogg"
+    ],
+    "collisionDamage" : ["/sfx/melee/bite_robotic1.ogg"],
+    "changeDamageState" : [
+      "/sfx/gun/grenadeblast_small_fire1.ogg",
+      "/sfx/gun/grenadeblast_small_fire2.ogg",
+      "/sfx/gun/grenadeblast_small_fire3.ogg"
+    ],
+    "hornLoop" : ["/sfx/tech/honk.ogg"]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "frameGrid" : {
+    "size" : [88, 88],
+    "dimensions" : [4, 4],
+
+
+    "names" : [
+              [ null, "sail.undamaged", null, "sail.scratched"],
+              [ null, "sail.broken", null, "sail.wrecked" ]
+              ]
+  }
+}
