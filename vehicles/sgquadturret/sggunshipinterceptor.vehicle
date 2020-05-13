@@ -12,7 +12,7 @@
       "part" : "foreground",
       "partAnchor" : "drivingSeatPosition",
       "orientation" : "sit",
-      "statusEffects" : ["maxprotection"],
+      "statusEffects" : [ "maxprotection", "invulnerable" ],
       "emote" : "neutral",
       "dance" : "typing",
       "cameraFocus" : true,
@@ -22,7 +22,7 @@
       "part" : "foreground",
       "partAnchor" : "passengerSeatPosition",
       "orientation" : "sit",
-      "statusEffects" : ["maxprotection"],
+      "statusEffects" : [ "maxprotection", "invulnerable" ],
       "emote" : "neutral",
       "dance" : "typing",
       "cameraFocus" : true
@@ -56,7 +56,7 @@
 		"drivingSeat" : {
 			"PrimaryFire" : {
 				"forwardDoubleCannonFront" : {
-					"aimMinMax" : [-30,90],
+					"aimMinMax" : [-90,90],
 					"emptyAim" : -10,
 					"projectileType" : "tempbulletshatter",
 					"slaves" : ["forwardDoubleCannonBack"],
@@ -75,7 +75,7 @@
 					"setAnimationStates" : {"forwardDoubleCannonFront":["fire",true]}
 				},
 				"forwardDoubleCannonBack" : {
-					"aimMinMax" : [-30,90],
+					"aimMinMax" : [-90,90],
 					"emptyAim" : -10,
 					"slavedTo" : "forwardDoubleCannonFront",
 					"projectileType" : "tempbulletshatter",
@@ -143,7 +143,7 @@
 
   //Health and damage
   "protection" : 50,
-  "maxHealth" : 10000,
+  "maxHealth" : 13000,
 
   "damageStateNames" : ["undamaged"],
 
@@ -174,7 +174,7 @@
   "onFireHealthThreshold" : 0.125,
   "damagePerSecondWhenOnFire" : 1.0,
   "explosionConfig" : "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config",
-  "explosionDamage" : 300,
+  "explosionDamage" : 3000,
 
 
 

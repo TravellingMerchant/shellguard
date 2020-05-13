@@ -290,6 +290,7 @@
     "dungeonBaseHeight" : 1000,
     "dungeonSurfaceHeight" : 600,
     "ambientLightLevel" : [32, 32, 32],
+      "ambientNoises" : "/sfx/environmental/ocean_surface_stormy.ogg",
     "musicTrack" : "/music/arctic-battle1-loop.ogg",
     "environmentStatusEffects" : ["dontstarve"],
     "worldEdgeForceRegions" : "TopAndBottom",

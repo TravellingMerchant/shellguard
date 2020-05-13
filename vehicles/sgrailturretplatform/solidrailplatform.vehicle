@@ -31,7 +31,7 @@
   "physicsCollisions" : {
     "platform" : {
       "collision" : [ [-4.5, 1.0], [4.5, 1.0], [4.5, -1.0], [-4.5, -1.0] ],
-      "collisionKind" : "dynamic",
+      "collisionKind" : "platform",
       "attachToPart" : "platform"
     }
   },

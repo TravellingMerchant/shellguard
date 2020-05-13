@@ -3,6 +3,95 @@
 
   "layers" : [
 	//Sky Parallax Front
+	
+    {
+      "kind" : "tile/ocean",
+      "repeatY" : true,
+      "tileLimitTop" : 1288,
+      "parallax" : 1.0,
+      "directives" : "?brightness=-30?saturation=-10",
+      "nohueshift" : true
+    },
+    {
+      "kind" : "oceanbelow",
+      "offset" : [0, 1288],
+      "parallax" : 1.0,
+      "directives" : "?brightness=-30?saturation=-10",
+      "nohueshift" : true
+    },
+
+    {
+      "kind" : "ocean1",
+      "offset" : [0, 956],
+      "parallax" : [1.5, 1.05],
+      "directives" : "?brightness=-30?saturation=-10",
+      "nohueshift" : true
+    },
+    {
+      "kind" : "ocean2",
+      "offset" : [0, 961],
+      "parallax" : [2, 1.05],
+      "directives" : "?brightness=-30?saturation=-10",
+      "nohueshift" : true
+    },
+    {
+      "kind" : "ocean3",
+      "offset" : [0, 961],
+      "parallax" : [3, 1.08],
+      "directives" : "?brightness=-30?saturation=-10",
+      "nohueshift" : true
+    },
+    {
+      "kind" : "ocean4",
+      "offset" : [0, 962],
+      "parallax" : [4, 1.11],
+      "directives" : "?brightness=-30?saturation=-10",
+      "nohueshift" : true
+    },
+    {
+      "kind" : "ocean5",
+      "offset" : [0, 964],
+      "parallax" : [5, 1.14],
+      "directives" : "?brightness=-30?saturation=-10",
+      "nohueshift" : true
+    },
+    {
+      "kind" : "ocean6",
+      "offset" : [0, 966],
+      "parallax" : [6, 1.17],
+      "directives" : "?brightness=-30?saturation=-10",
+      "nohueshift" : true
+    },
+    {
+      "kind" : "ocean7",
+      "offset" : [0, 968],
+      "parallax" : [7, 1.20],
+      "directives" : "?brightness=-30?saturation=-10",
+      "nohueshift" : true
+    },
+    {
+      "kind" : "ocean8",
+      "offset" : [0, 970],
+      "parallax" : [8, 1.23],
+      "directives" : "?brightness=-30?saturation=-10",
+      "nohueshift" : true
+    },
+    {
+      "kind" : "oceanblue",
+      "offset" : [0, 970],
+      "parallax" : [8, 1.24],
+      "directives" : "?brightness=-30?saturation=-10",
+      "nohueshift" : true
+    },
+    {
+      "kind" : "oceanglow",
+      "offset" : [0, 908],
+      "parallax" : [8.01, 1.231],
+      "directives" : "?brightness=-30?saturation=-10",
+      "nohueshift" : true
+    },	
+
+	
     {
       "kind" : "spacedust2",
       "nohueshift" : true,
