@@ -412,6 +412,16 @@
     }]
   ],
   
+//-------- spider mech---------
+
+  "shellarmourheavyhead" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "shellarmourheavyhead", 1]}
+      ]
+    }]
+  ],
+
 //--------- alien --------------------
 
   "sgaliencaster" : [

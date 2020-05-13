@@ -5,41 +5,17 @@
   "price" : 15000,
   "rarity" : "Common",
   "category" : "headarmour",
-  "description" : "Heavy Helmet worn by Shellguard Knights. Imposing and effective.",
-  "shortdescription" : "Shellguard Heavy Helmet",
+  "description" : "An extremely old helmet design.",
+  "shortdescription" : "Old Guard Helmet",
   "tooltipKind" : "armor",
 
   "maleFrames" : "head.png",
   "femaleFrames" : "head.png",
   "mask" : "mask.png",
-  
-  "level" : 6,
-  "leveledStatusEffects" : [
-    {
-      "levelFunction" : "standardArmorLevelPowerMultiplierMultiplier",
-      "stat" : "powerMultiplier",
-      "baseMultiplier" : 1.35
-    },
-    {
-      "levelFunction" : "standardArmorLevelProtectionMultiplier",
-      "stat" : "protection",
-      "amount" : 0.5
-    },
-    {
-      "levelFunction" : "standardArmorLevelMaxEnergyMultiplier",
-      "stat" : "maxEnergy",
-      "amount" : 7
-    },
-    {
-      "levelFunction" : "standardArmorLevelMaxHealthMultiplier",
-      "stat" : "maxHealth",
-      "amount" : 8
-    }
-  ],
 
   "colorOptions" : [
     /* DEFAULT */
-    { "ffca8a" : "f4988c", "e0975c" : "d93a3a", "a85636" : "932625", "6f2919" : "601119" },
+    { "ffca8a" : "A3381C", "e0975c" : "7B1500", "a85636" : "5B0600", "6f2919" : "3C0000" },
     /* BLACK */
     { "ffca8a" : "838383", "e0975c" : "555555", "a85636" : "383838", "6f2919" : "151515" },
     /* GREY */
