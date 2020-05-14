@@ -19,6 +19,34 @@
       "directives" : "?brightness=-25?saturation=-5",
       "nohueshift" : true
     },
+    {
+      "kind" : "sgoceanbelow",
+      "offset" : [0, 810],
+      "parallax" : 1.1,
+      "directives" : "?brightness=-25?saturation=-5",
+      "nohueshift" : true
+    },	
+    {
+      "kind" : "sgoceanbelow",
+      "offset" : [0, 1110],
+      "parallax" : 1.1,
+      "directives" : "?brightness=-25?saturation=-5",
+      "nohueshift" : true
+    },
+    {
+      "kind" : "sgoceanbelow",
+      "offset" : [0, 1410],
+      "parallax" : 1.1,
+      "directives" : "?brightness=-25?saturation=-5",
+      "nohueshift" : true
+    },
+    {
+      "kind" : "sgoceanbelow",
+      "offset" : [0, 1610],
+      "parallax" : 1.1,
+      "directives" : "?brightness=-25?saturation=-5",
+      "nohueshift" : true
+    },
 
     {
       "kind" : "ocean1",

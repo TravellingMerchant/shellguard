@@ -422,6 +422,22 @@
     }]
   ],
 
+  "sghubthemeradio" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sghubthemeradio", 1]}
+      ]
+    }]
+  ],
+  
+  "sghubthemeradioold" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sghubthemeradioold", 1]}
+      ]
+    }]
+  ],
+
 //--------- alien --------------------
 
   "sgaliencaster" : [
