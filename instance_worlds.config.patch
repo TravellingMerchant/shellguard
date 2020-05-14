@@ -421,6 +421,41 @@
      }
     }
   },
+  
+  {
+    "op" : "add",
+    "path" : "/sgoceanattack1",
+    "value" : {
+    "type" : "FloatingDungeon",
+    "dungeonWorld" : "sgoceanattack1",
+    "seed" : 1234,
+    "spawningEnabled" : false,
+    "beamUpRule" : "AnywhereWithWarning",
+    "disableDeathDrops" : true,
+
+    "skyParameters" : {
+      "dayLength" : 10000,
+      "surfaceLevel" : 1000,
+      "spaceLevel" : 3000,
+      "seed" : -5288806180628666923,
+
+      "skyType" : "barren",
+      "skyColoring" : {
+        "mainColor" : [30, 30, 65],
+
+        "morningColors" : [[50, 50, 65], [50, 50, 65]],
+        "dayColors" : [[50, 50, 65], [50, 50, 65]],
+        "eveningColors" : [[50, 50, 65], [50, 50, 65]],
+        "nightColors" : [[50, 50, 65], [50, 50, 65]],
+
+        "morningLightColor" : [40, 40, 40],
+        "dayLightColor" : [40, 40, 40],
+        "eveningLightColor" : [20, 20, 20],
+        "nightLightColor" : [20, 20, 20]
+      }
+     }
+    }
+  },
 
   {
     "op" : "add",

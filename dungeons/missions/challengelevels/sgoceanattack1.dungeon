@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "sgoceanattack1",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "sgoceanattack1" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 100,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "sgoceanattack1",
+      "rules" : [
+        [ "maxSpawnCount", [1] ]
+      ],
+      "def" : [ "tmx", "sgoceanattack1.json" ]
+    }
+  ]
+}

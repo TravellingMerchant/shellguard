@@ -297,6 +297,25 @@
     "biome" : "sgcentensskycitydark"
     }
   },
+
+  {
+    "op" : "add",
+    "path" : "/sgoceanattack1",
+    "value" : {
+    "primaryDungeon" : "sgoceanattack1",
+    "threatLevel" : 10,
+    "gravity" : 80,
+    "worldSize" : [2500, 2000],
+    "dungeonBaseHeight" : 1000,
+    "dungeonSurfaceHeight" : 600,
+    "ambientLightLevel" : [75, 75, 75],
+      "ambientNoises" : "/sfx/environmental/ocean_surface_stormy.ogg",
+    "musicTrack" : "/music/ocean-battle1-loopslow.ogg",
+    "environmentStatusEffects" : ["dontstarve"],
+    "worldEdgeForceRegions" : "TopAndBottom",
+    "biome" : "sgoceanfloor"
+    }
+  },
   
   {
     "op" : "add",
