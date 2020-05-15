@@ -309,7 +309,7 @@
     "dungeonBaseHeight" : 1000,
     "dungeonSurfaceHeight" : 600,
     "ambientLightLevel" : [75, 75, 75],
-      "ambientNoises" : "/sfx/environmental/ocean_surface_stormy.ogg",
+      "ambientNoises" : "/sfx/environmental/ocean_underwater.ogg",
     "musicTrack" : "/music/ocean-battle1-loopslow.ogg",
     "environmentStatusEffects" : ["dontstarve"],
     "worldEdgeForceRegions" : "TopAndBottom",
