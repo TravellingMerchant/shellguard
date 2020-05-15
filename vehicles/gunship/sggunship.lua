@@ -184,7 +184,7 @@ function update()
 		mcontroller.setPosition(self.lastPosition)
 		mcontroller.setVelocity({0, 0})
 	else
-		local driverThisFrame = vehicle.entityLoungingIn("drivingSeat")
+		local driverThisFrame = vehicle.entityLoungingIn("drivingSeat") or vehicle.entityLoungingIn("passengerSeat")
 
 		if (driverThisFrame ~= nil) then
 			vehicle.setDamageTeam(world.entityDamageTeam(driverThisFrame))
