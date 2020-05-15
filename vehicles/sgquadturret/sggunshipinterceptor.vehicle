@@ -115,17 +115,17 @@
 		"passengerSeat" : {
 			"PrimaryFire" : {
 				"ventralAutocannon" : {
-					"aimMinMax" : [-30,160],
+					"aimMinMax" : [-179,179],
 					"emptyAim" : 0,
-					"projectileType" : "sgturretflak",
+					"projectileType" : "sgboomerroundflak",
 					"projectileParams" : {
-						"power" : 40
+						"power" : 120
 					},
-					"inaccuracy" : 0.2,
-					"projectileCount" : 7,
+					"inaccuracy" : 0,
+					"projectileCount" : 1,
 					"gunCenter" : [0.625, 2.625],
 					"gunLength" : 2.5,
-					"fireTime" : 3,
+					"fireTime" : 2,
 					"playSounds" : ["ventralAutocannon"],
 					"setAnimationStates" : {"ventralAutocannon":"fire"}
 				}

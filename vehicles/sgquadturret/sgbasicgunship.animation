@@ -563,7 +563,7 @@
 
 	"sounds" : {
 	"ventralAutocannon" : [
-		"/sfx/gun/tankshot.ogg"
+		"/sfx/gun/mech/sgmechartilleryfire.ogg"
 	],
 	"bombbay" : [
 		"/sfx/gun/grenadeblast_small_fire2.ogg"

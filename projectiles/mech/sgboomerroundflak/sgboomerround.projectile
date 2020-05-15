@@ -1,0 +1,61 @@
+{
+  "projectileName" : "sgboomerroundflak",
+  "image" : "sgboomerround.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 4,
+  "timeToLive" : 15,
+  "physics" : "grenade",
+  "damageKindImage" : "icon.png",
+  "pointLight" : false,
+  "movementSettings" : {
+    "gravityMultiplier" : 0.05
+  },
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/sgboomerboom/sgboomerboom.config"
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "sgfirecloud"
+    },
+    {
+      "action" : "sound",
+      "SoundRangeMultiplier" : 40.0,
+      "options" : [ "/sfx/gun/titanboom2.ogg" ]
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 2,
+      "backgroundRadius" : 2,
+      "explosiveDamageAmount" : 10.0,
+      "delaySteps" : 2
+    }
+  ],
+  
+  "periodicActions" : [
+    {
+      "time" : 0.07,
+      "repeat" : true,
+
+      "action" : "loop",
+      "count" : 1,
+      "body" : [
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.0,
+      "type" : "smokering"
+    }
+      ]
+    }
+  ],
+ 
+  "scripts" : [ "sgturretflak.lua" ],
+
+  "emitters" : [ "rocketsmoke" ],
+  "power" : 20,
+  "speed": 70,
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

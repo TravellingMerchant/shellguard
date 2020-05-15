@@ -1,0 +1,27 @@
+{
+  "projectileName" : "sgturretflak2",
+  "damageKindImage" : "fireicons.png",
+  "pointLight" : true,
+  "lightColor" : [255, 0, 0],
+  "image" : "sgturretflak.png",
+  "animationCycle" : 0.5,
+  "orientationLocked" : true,
+  "timeToLive" : 100,
+  "frameNumber" : 1,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/guns/grenades/sgflakexplosion/sgflakexplosion.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    }
+  ],
+  "power" : 20,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "onlyHitTerrain" : true,
+
+  "scripts" : [ "sgturretflak.lua" ]
+}
