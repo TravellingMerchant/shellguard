@@ -438,6 +438,30 @@
     }]
   ],
   
+  "sgsurvivorthemeradio" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgsurvivorthemeradio", 1]}
+      ]
+    }]
+  ],
+  
+  "sggunshipthemeradio" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sggunshipthemeradio", 1]}
+      ]
+    }]
+  ],
+  
+  "sgfortressthemeradio" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgfortressthemeradio", 1]}
+      ]
+    }]
+  ],
+  
   "sgpainting" : [
     [1, {
       "fill" : [

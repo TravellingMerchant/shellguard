@@ -1,0 +1,10 @@
+{
+  "name" : "sgspinemine",
+  "category" : "sgspinemine",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "spinemine.png",
+    "bodyfullbright" : "spineminefullbright.png"
+  }
+}

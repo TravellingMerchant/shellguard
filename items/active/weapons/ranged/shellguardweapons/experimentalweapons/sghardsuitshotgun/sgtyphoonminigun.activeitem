@@ -22,7 +22,8 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/sgheavyturretshotgun.ogg", "/sfx/gun/sgheavyturretshotgun2.ogg" ]
+      "fire" : [ "/sfx/gun/sgheavyturretshotgun.ogg", "/sfx/gun/sgheavyturretshotgun2.ogg" ],
+      "altFire" : [ "/sfx/gun/sgheavyturretshotgun.ogg", "/sfx/gun/sgheavyturretshotgun2.ogg" ]
     }
   },
 
@@ -99,7 +100,7 @@
     "class" : "AltFireAttack",
 
     "fireTime" : 1.2,
-    "baseDps" : 7,
+    "baseDps" : 6,
     "energyUsage" : 30,
     "projectileCount" : 3,
     "inaccuracy" : 0.08,

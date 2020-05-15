@@ -37,7 +37,7 @@
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
     "fireTime" : 0.1,
-    "baseDps" : 11,
+    "baseDps" : 10.5,
     "energyUsage" : 60.0,
     "projectileCount" : 1,
     "inaccuracy" : 0.07,
@@ -87,7 +87,7 @@
 
     "projectileType" : "tempbulletshatter",
     "projectileParameters" : { 
-      "knockback" : 30,
+      "knockback" : 20,
 	  "speed" : 200
     }
   },

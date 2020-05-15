@@ -1,0 +1,74 @@
+{
+  "objectName" : "sgfortressthemeradio",
+  "colonyTags" : ["apex","apexvillage","musical"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 105,
+  "lightColor" : [0, 0, 0],
+
+  "description" : "This record player plays the Fortress theme.",
+  "shortdescription" : "Fortress Theme Player",
+  "race" : "apex",
+
+  "apexDescription" : "This track is fantastic!",
+  "avianDescription" : "This track is fantastic!",
+  "floranDescription" : "Thissss track iss fantassstic!",
+  "glitchDescription" : "Entertained. This track is fantastic!",
+  "humanDescription" : "This track is fantastic!",
+  "hylotlDescription" : "This track is fantastic!",
+  "novakidDescription" : "This track is fantastic!",
+
+  "inventoryIcon" : "apexrecordplayericon.png",
+  "orientations" : [
+    {
+      "dualImage" : "apexrecordplayer.png:<color>.<frame>",
+      "imagePosition" : [-8, 0],
+      "animationPosition" : [-8, 0],
+      "animationParts" : {
+        "image" : "apexrecordplayer.png"
+      },
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+
+  "animation" : "apexrecordplayer.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/objects/recordscratch2.ogg" ],
+      "off" : [ "/sfx/objects/recordscratch1.ogg" ]
+    }
+  },
+
+  "scripts" : [
+    "/objects/wired/light/light.lua",
+    "/scripts/npcToyObject.lua",
+    "/objects/human/jukebox/jukebox.lua"
+  ],
+  "scriptDelta" : 60,
+
+  "inputNodes" : [ [0, 2] ],
+
+  "npcToy" : {
+    "influence" : [
+      "music",
+      "music",
+      "music",
+      "musicFinished"
+    ],
+    "defaultReactions" : {
+      "musicFinished" : [
+        [1.0, "smile"],
+        [1.0, "laugh"]
+      ]
+    },
+    "randomStandXRange" : [-8, 8]
+  },
+
+  "defaultLightState" : false,
+
+  "soundEffect" : "/music/sgfortresscoremusic.ogg",
+  "soundEffectRangeMultiplier" : 1.0
+}
