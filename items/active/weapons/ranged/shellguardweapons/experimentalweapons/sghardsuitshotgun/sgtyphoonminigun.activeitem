@@ -1,0 +1,170 @@
+{
+  "itemName" : "sghardsuitshotgun",
+  "price" : 3000,
+  "inventoryIcon" : "sgtyphoonminigun.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A large shotgun gun normally used by Shellguard Hardsuits.",
+  "shortdescription" : "Hardsuit Shotgun",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgtyphoonminigun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgtyphoonminigun.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/sgheavyturretshotgun.ogg", "/sfx/gun/sgheavyturretshotgun2.ogg" ]
+    }
+  },
+
+  "baseOffset" : [2.25, -0.625],
+  "muzzleOffset" : [2.625, -0.125],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 1,
+    "baseDps" : 9,
+    "energyUsage" : 45.0,
+    "projectileCount" : 3,
+    "inaccuracy" : 0.04,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation"
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation",
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -10,
+        "weaponRotation" : 20,
+        "twoHanded" : true,
+        "weaponOffset" : [-0.125, 0],
+
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation",
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "tempbulletshatter",
+    "projectileParameters" : { 
+      "knockback" : 30,
+	  "speed" : 230
+    }
+  },
+
+  "altAbility" : {
+    "name" : "Burst Fire",
+    "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
+    "class" : "AltFireAttack",
+
+    "fireTime" : 1.2,
+    "baseDps" : 7,
+    "energyUsage" : 30,
+    "projectileCount" : 3,
+    "inaccuracy" : 0.08,
+    "fireType" : "burst",
+    "burstCount" : 5,
+    "burstTime" : 0.1,
+
+    "useParticleEmitter" : false,
+
+    "projectileType" : "tempbulletshatter",
+    "projectileParameters" : {
+      "knockback" : 10,
+	  "speed" : 130
+	},
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation"
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation",
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -10,
+        "weaponRotation" : 20,
+        "twoHanded" : true,
+        "weaponOffset" : [-0.125, 0],
+
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation",
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgtyphoonminigunelite.png:idle",
+    "animationParts" : {
+      "middle" : "sgtyphoonminigunelite.png"
+    },
+    "shortdescription" : "HBL Basilisk ^yellow;^reset;"
+  }
+}

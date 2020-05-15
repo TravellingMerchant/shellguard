@@ -1,0 +1,31 @@
+{
+  "objectName" : "sgpainting",
+  "colonyTags" : ["human","pretty","valuable"],
+  "rarity" : "Rare",
+  "description" : "A rather stupid painting.",
+  "shortdescription" : "Birth Of Shellguard",
+  "race" : "human",
+  "category" : "decorative",
+  "price" : 1200,
+  "printable" : false,
+
+  "apexDescription" : "A rather stupid painting.",
+  "avianDescription" : "A rather stupid painting.",
+  "floranDescription" : "A ssssstupid painting.",
+  "glitchDescription" : "Confused. A rather stupid painting.",
+  "humanDescription" : "A kinda stupid painting.",
+  "hylotlDescription" : "A rather stupid painting.",
+  "novakidDescription" : "One stupid painting.",
+
+  "inventoryIcon" : "paintingcreationofapepixelicon.png",
+  "orientations" : [
+    {
+      "image" : "paintingcreationofapepixel.png:<color>",
+      "imagePosition" : [-32, -24],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

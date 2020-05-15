@@ -4,6 +4,7 @@
   { "op": "add", "path": "/sgrocketburst", "value": "/items/active/weapons/ranged/abilities/sgrocketburst/sgrocketburst.weaponability" },
   { "op": "add", "path": "/sgspiderburst", "value": "/items/active/weapons/ranged/abilities/sgspiderburst/sgspiderburst.weaponability" },
   { "op": "add", "path": "/bayonetstab", "value": "/items/active/weapons/ranged/abilities/sgbayonet/bayonetstab.weaponability" },
+  { "op": "add", "path": "/sgcleavehardsuit", "value": "/items/active/weapons/ranged/abilities/sgcleavehardsuit/sgcleavehardsuit.weaponability" },
   { "op": "add", "path": "/sgbutterbayonet", "value": "/items/active/weapons/ranged/abilities/sgbutterbayonet/sgbutterbayonet.weaponability" },
   { "op": "add", "path": "/bayonetcleave", "value": "/items/active/weapons/ranged/abilities/sgcleave/bayonetcleave.weaponability" },
   { "op": "add", "path": "/sgminugunbash", "value": "/items/active/weapons/ranged/abilities/sgminugunbash/sgminugunbash.weaponability" },

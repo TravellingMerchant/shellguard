@@ -1,11 +1,11 @@
 {
-  "itemName" : "sgbasilisk",
+  "itemName" : "sghardsuitcannon",
   "price" : 3000,
   "inventoryIcon" : "sgtyphoonminigun.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "A heavy machine gun that fires high velocity, high knockback shots.",
-  "shortdescription" : "HBL Basilisk",
+  "description" : "A large automatic gun normally used by Shellguard Hardsuits.",
+  "shortdescription" : "Hardsuit Cannon",
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
@@ -22,25 +22,25 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/sgbasiliskfire.ogg" ]
+      "fire" : [ "/sfx/gun/sgheavyturret3.ogg", "/sfx/gun/sgheavyturret4.ogg" ]
     }
   },
 
-  "baseOffset" : [1.75, -0.625],
-  "muzzleOffset" : [3.125, 0.2],
+  "baseOffset" : [2.25, -0.625],
+  "muzzleOffset" : [2.625, -0.125],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
-  "elementalType" : "fire",
+  "elementalType" : "physical",
 
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 0.1,
-    "baseDps" : 11,
+    "fireTime" : 0.3,
+    "baseDps" : 10,
     "energyUsage" : 60.0,
     "projectileCount" : 1,
-    "inaccuracy" : 0.07,
+    "inaccuracy" : 0.02,
       "stances" : {
       "idle" : {
         "armRotation" : 0,
@@ -70,10 +70,11 @@
 		}
       },
       "cooldown" : {
-        "duration" : 0.02,
-        "armRotation" : -45,
-        "weaponRotation" : 55,
+        "duration" : 0.1,
+        "armRotation" : -10,
+        "weaponRotation" : 20,
         "twoHanded" : true,
+        "weaponOffset" : [-0.125, 0],
 
         "frontArmFrame" : "run.3",
         "backArmFrame" : "rotation",
@@ -87,12 +88,12 @@
 
     "projectileType" : "tempbulletshatter",
     "projectileParameters" : { 
-      "knockback" : 30,
-	  "speed" : 200
+      "knockback" : 40,
+	  "speed" : 230
     }
   },
 
-  "altAbilityType" : "lance",
+  "altAbilityType" : "sgcleavehardsuit",
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
