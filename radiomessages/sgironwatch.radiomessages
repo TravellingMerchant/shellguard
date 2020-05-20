@@ -183,6 +183,16 @@
     "senderName" : "Capricorn 24",
     "portraitImage" : "/interface/chatbubbles/sg24.png",
     "text" : "You know, I don't think you're supposed to be in here.."
+  },
+  
+
+//-----------Railshooter--------
+
+  "sgtemplateketos" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "We've managed to warp you in to an underwater segment of the facility."
   }
 
 }
