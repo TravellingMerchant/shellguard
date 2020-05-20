@@ -1,0 +1,171 @@
+{
+  "itemName" : "sgsteamsnubnose",
+  "price" : 3000,
+  "inventoryIcon" : "sgtyphoonminigun.png:idle",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A large snubnose revolver.",
+  "shortdescription" : "Robust Snubnose",
+  "level" : 6,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgtyphoonminigun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgtyphoonminigun.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/railshots/sharpshot1.ogg" ],
+      "altFire" : [ "/sfx/gun/railshots/sharpshot1.ogg" ]
+    }
+  },
+
+  "baseOffset" : [2.25, -0.625],
+  "muzzleOffset" : [0.375, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.7,
+    "baseDps" : 10,
+    "energyUsage" : 60.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.1,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation"
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation",
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -20,
+        "weaponRotation" : 40,
+        "twoHanded" : true,
+        "weaponOffset" : [-0.125, 0],
+
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation",
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "heavybullet",
+    "projectileParameters" : { 
+      "knockback" : 2,
+	  "speed" : 230
+    }
+  },
+
+  "altAbility" : {
+    "name" : "Burst Fire",
+    "scripts" : ["/items/active/weapons/ranged/abilities/altfire.lua"],
+    "class" : "AltFireAttack",
+
+    "fireTime" : 1.2,
+    "baseDps" : 6,
+    "energyUsage" : 30,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.03,
+    "fireType" : "burst",
+    "burstCount" : 6,
+    "burstTime" : 0.1,
+
+    "useParticleEmitter" : false,
+
+    "projectileType" : "heavybullet",
+    "projectileParameters" : {
+      "knockback" : 10,
+	  "speed" : 130
+	},
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation"
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation",
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -10,
+        "weaponRotation" : 20,
+        "twoHanded" : true,
+        "weaponOffset" : [-0.125, 0],
+
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation",
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgtyphoonminigunelite.png:idle",
+    "animationParts" : {
+      "middle" : "sgtyphoonminigunelite.png"
+    },
+    "shortdescription" : "HBL Basilisk ^yellow;^reset;"
+  }
+}

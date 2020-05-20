@@ -1,0 +1,271 @@
+{
+  "itemName" : "sgharpoongun",
+  "price" : 750,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "Fire hooked harpoons and rope yourself in!",
+  "shortdescription" : "Harpoon Gun",
+  "tooltipKind" : "sgweapon",
+  "category" : "Lockjaw",
+  "twoHanded" : true,
+  "itemTags" : ["weapon"],
+
+  "inventoryIcon" : "sgpoptopclaw.png:idle",
+  "animation" : "sgwhip.animation",
+  "animationParts" : {
+    "weapon" : "sgpoptopclaw.png",
+    "weaponFullbright" : "",
+    "muzzleFlash" : "/items/active/weapons/ranged/muzzleflash.png"
+  },
+  
+  "animationCustom" : {
+    "animatedParts" : {
+      "stateTypes" : {
+        "firing" : {
+          "default" : "off",
+          "states" : {
+            "off" : {},
+            "fire" : {
+              "frames" : 2,
+              "cycle" : 0.07,
+              "mode" : "transition",
+              "transition" : "off"
+            }
+          }
+        }
+      },
+      "parts" : {
+        "muzzleFlash" : {
+          "properties" : {
+            "zLevel" : -1,
+            "centered" : true,
+            "offset" : [0.25, -1.4375],
+            "fullbright" : true,
+            "transformationGroups" : ["muzzle"]
+          },
+  
+          "partStates" : {
+            "firing" : {
+              "fire" : {
+                "properties" : {
+                  "image" : "<partImage>:<variant>.<frame>"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "particleEmitters" : {
+      "muzzleFlash" : {
+        "transformationGroups" : ["muzzle"],
+        "offsetRegion" : [0, 0, 0, 0],
+        "particles" : [ ]
+      }
+    },
+    "lights" : {
+      "muzzleFlash" : {
+        "active" : false,
+        "position" : [0, 0],
+        "color" : [90, 90, 0]
+      }
+    },
+    "sounds" : {
+      "fire" : [ "/sfx/gun/sgharpoonlaunch.ogg" ],
+      "swing" : [ "/sfx/gun/sgharpoonlaunch.ogg", "/sfx/gun/sgharpoonlaunch.ogg" ],
+      "crack" : [ "/sfx/projectile/ropehook_impact6.ogg", "/sfx/projectile/ropehook_impact5.ogg", "/sfx/projectile/ropehook_impact4.ogg" ],
+      "disconnect" : [ "/sfx/objects/metalbarrel_break3.ogg", "/sfx/objects/metalbarrel_break1.ogg", "/sfx/objects/metalbarrel_break2.ogg" ]
+    }
+  },
+
+  "chain" : {
+    "startOffset" : [2.375, -0.425],
+    "length" : [4, 24],
+    "segmentImage" : "/items/active/weapons/whip/sgharpoongun/sgpoptopclawchain.png",
+    "endSegmentImage" : "/items/active/weapons/whip/sgharpoongun/sgpoptopclawend.png",
+    "segmentSize" : 0.375
+  },
+
+  "scripts" : [ "sgwhip.lua" ],
+  
+  "elementalType" : "physicalgv",
+
+  "muzzleOffset" : [2.625, -0.125],
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/whip/abilities/mixedfire.lua"],
+    "class" : "MixedFire",
+
+    "fireTime" : 1.2,
+    "baseDps" : 9.5,
+    "energyUsage" : 31.5,
+    "inaccuracy" : 0.03,
+
+    "projectileCount" : 1,
+    "fireType" : "auto",
+
+    "projectileType" : "harpoon",
+    "projectileParameters" : {
+      "damageKind" : "shotgunbullet",
+      "knockback" : 30,
+      "speed" : 70
+    },
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "twoHanded" : true,
+        "weaponOffset" : [-0.75, 0.5],
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation"
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 8,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-0.75, 0.5],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : true,
+		
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation"
+      },
+      "cooldown" : {
+        "duration" : 0.15,
+        "armRotation" : 8,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-0.75, 0.5],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : true,
+		
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation"
+      }
+    }
+  },
+  
+  "altAbilityType" : "whipsnag",
+  "altAbility" : {
+    "name" : "Lockjaw Chomp",
+    "cutoffRange" : 25, //set to zero or false to disable
+    "minSwingDistance" : 4.5,
+    "onlyPullWhenAboveAnchor" : true,
+
+    "fireTime" : 0.5,
+    "chainDps" : 3.0, //only for the "normal" whipping
+    "crackDps" : 5.0,
+
+    "projectileType" : "bouldersmashexplosion",
+    "projectileConfig" : {},
+
+    "DoTTickSpeed" : 0,
+    "dotProjectileType" : "",
+    "dotProjectileConfig" : {},
+	
+    "doSpawnRandomRopeProjectiles" : false,	
+    "ropeRandomProjectileSpeed" : 0.111,
+    "ropeRandomProjectileType" : "",
+    "ropeRandomProjectileConfig" : {},
+    
+    "minChainSegmentLengthToSpawnOn" : 40, //in pixels, check your projectile's .frames
+    "spawnRopeProjectileWhileMoving" : false,
+    "killRopeProjectileWhenMoving" : false,
+
+    //possible values: "player", "npc", "monster", "object", "vehicle", "itemDrop", "projectile", "creature"
+    "targetTypes" : [ "player", "npc", "monster", "vehicle" ],
+    "canSnagTerrain" : true,
+    "onlyPullWhileAirborne" : true,
+    "maxControlForce" : 1000, //max pull strength
+      
+    "controllable" : true,
+    "reelSpeed" : 30,
+    "airForce" : 100,
+    
+    "triggerType" : "switch",
+    
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "twoHanded" : true,
+        "weaponOffset" : [-0.75, 0.5],
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation"
+      },
+      "swing" : {
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "twoHanded" : true,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-0.75, 0.5],
+
+        "allowRotate" : false,
+        "allowFlip" : true,
+		
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation"
+      },
+      "windup" : {
+        "duration" : 0.03,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-0.75, 0.5],
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation"
+
+      },
+      "extend" : {
+        "duration" : 0.03,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-0.75, 0.5],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation"
+      },
+      "fire" : {
+        "duration" : 0.2,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-0.75, 0.5],
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation"
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

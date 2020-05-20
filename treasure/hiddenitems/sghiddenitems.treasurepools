@@ -469,6 +469,30 @@
       ]
     }]
   ],
+  
+  "sgvolcanolauncher" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgvolcanolauncher", 1]}
+      ]
+    }]
+  ],
+  
+ "sghardsuitsnubnose" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sghardsuitsnubnose", 1]}
+      ]
+    }]
+  ],
+  
+ "sgharpoongun" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgharpoongun", 1]}
+      ]
+    }]
+  ],
 
 //--------- alien --------------------
 

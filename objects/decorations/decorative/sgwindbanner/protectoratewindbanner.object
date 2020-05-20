@@ -1,0 +1,45 @@
+{
+  "objectName" : "sgwindbanner",
+  "printable" : false,
+  "rarity" : "Common",
+  "price" : 70,
+  
+  "description" : "A Shellguard wallbanner that billows in the wind.",
+  "shortdescription" : "Shellguard Wall Banner",
+  "race" : "protectorate",
+
+  "apexDescription" : "Striking colours!",
+  "avianDescription" : "Striking colours!",
+  "floranDescription" : "Striking colours!",
+  "glitchDescription" : "Impressed. Striking colours!",
+  "humanDescription" : "Striking colours!",
+  "hylotlDescription" : "Striking colours!",
+  "novakidDescription" : "Striking colours!",
+
+  "inventoryIcon" : "protectoratewindbannericon.png",
+  "orientations" : [
+    {
+      "image" : "protectoratewindbanner.png:<color>.<frame>",
+      "flipImages" : true,
+      "direction" : "left",
+      "imagePosition" : [-17, 0],
+      "frames" : 18,
+      "animationCycle" : 3,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "protectoratewindbanner.png:<color>.<frame>",
+      "direction" : "right",
+      "imagePosition" : [-17, 0],
+      "frames" : 18,
+      "animationCycle" : 3,
+
+      "spaceScan" : 0.1,
+      "anchors" : []
+    }
+  ]
+
+  //"soundEffect" : "/sfx/objects/flag_flap_loop.ogg"
+}

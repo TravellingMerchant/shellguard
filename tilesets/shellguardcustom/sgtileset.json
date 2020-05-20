@@ -1,4 +1,12 @@
 { "columns":0,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"",
+         "target":"."
+        }
+    },
  "grid":
     {
      "height":1,
@@ -9,7 +17,7 @@
  "name":"sgtileset",
  "spacing":0,
  "tilecount":36,
- "tiledversion":"1.2.4",
+ "tiledversion":"1.3.1",
  "tileheight":216,
  "tileproperties":
     {
@@ -861,13 +869,13 @@
         },
      "27":
         {
-         "image":"..\/..\/objects\/sgturrets\/icon.png",
+         "image":"..\/..\/objects\/sgturrets\/superheavybeam\/icon.png",
          "imageheight":16,
          "imagewidth":16
         },
      "28":
         {
-         "image":"..\/..\/objects\/sgflakturret\/icon.png",
+         "image":"..\/..\/objects\/sgturrets\/flakturret\/icon.png",
          "imageheight":16,
          "imagewidth":16
         },
@@ -879,7 +887,7 @@
         },
      "3":
         {
-         "image":"..\/..\/objects\/sgbaseturret\/icon.png",
+         "image":"..\/..\/objects\/sgturrets\/baseturret\/icon.png",
          "imageheight":16,
          "imagewidth":16
         },
@@ -921,7 +929,7 @@
         },
      "4":
         {
-         "image":"..\/..\/objects\/sgrocketturret\/icon.png",
+         "image":"..\/..\/objects\/sgturrets\/rocketturret\/icon.png",
          "imageheight":16,
          "imagewidth":16
         },

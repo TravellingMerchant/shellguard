@@ -1,0 +1,15 @@
+{
+  "itemName" : "sgironwatchdye",
+  "price" : 1000,
+  "rarity" : "Common",
+  "category" : "clothingDye",
+  "inventoryIcon" : "sgironwatchdye.png",
+  "description" : "This coloured dye can be applied to a piece of armour or clothing with a right-click.",
+  "shortdescription" : "Ironwatch Dye",
+
+  "dyeDirectives" : { "ffca8a" : "646f75", "e0975c" : "515d64", "a85636" : "303a3f", "6f2919" : "1f262a" },
+
+  "radioMessagesOnPickup" : [ "pickupdye" ],
+
+  "scripts" : [ "/scripts/augments/dye.lua" ]
+}

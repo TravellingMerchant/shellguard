@@ -1,0 +1,34 @@
+{
+  "itemName" : "sgquadturretcontroller",
+  "level" : 1,
+  "price" : 25000,
+  "rarity" : "Legendary",
+  "category" : "vehicleController",
+  "description" : "Creates a powerful quad-barrel turret from stored nanites.",
+  "shortdescription" : "Quad-Turret Controller",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["vehiclecontroller.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "vehicle",
+  "largeImage" : "sgquadturret.png",
+
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "sgquadturretplayer",
+  "vehicleBoundingBox" : [-11, -4, 11, 4],
+  "vehicleImage" : "/items/active/vehiclecontroller/sgturretcontrollers/sgquadturretwarp.png",
+
+  "animationParts" : {
+    "casing" : "sgquadturretcontroller.png"
+  },
+
+  "inventoryIcon" : "/items/active/vehiclecontroller/sgturretcontrollers/sgquadturretcontroller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/sgturretcontrollers/sgquadturretcontroller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/sgturretcontrollers/sgquadturretcontroller.png:full"
+
+}

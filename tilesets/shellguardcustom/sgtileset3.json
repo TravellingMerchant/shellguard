@@ -16,7 +16,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":44,
+ "tilecount":46,
  "tiledversion":"1.3.1",
  "tileheight":400,
  "tileproperties":
@@ -409,6 +409,26 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"sgbreakableplatform",
+         "tilesetDirection":"right"
+        },
+     "44":
+        {
+         "\/\/description":"sgruinhologram",
+         "\/\/name":"sgruinhologram",
+         "\/\/shortdescription":"sgruinhologram",
+         "imagePositionX":"-32",
+         "imagePositionY":"0",
+         "object":"sgruinhologram",
+         "tilesetDirection":"right"
+        },
+     "45":
+        {
+         "\/\/description":"ironwatchmembers",
+         "\/\/name":"ironwatchmembers",
+         "\/\/shortdescription":"ironwatchmembers",
+         "imagePositionX":"-64",
+         "imagePositionY":"0",
+         "object":"ironwatchmembers",
          "tilesetDirection":"right"
         },
      "5":
@@ -854,6 +874,26 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "44":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "45":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "5":
         {
          "\/\/description":"string",
@@ -1140,6 +1180,18 @@
          "image":"..\/..\/objects\/breakables\/sgbreakableplatform\/sgheattankicon.png",
          "imageheight":24,
          "imagewidth":72
+        },
+     "44":
+        {
+         "image":"..\/..\/objects\/csobjects\/sghologram\/sgruinhologramtiledicon.png",
+         "imageheight":64,
+         "imagewidth":64
+        },
+     "45":
+        {
+         "image":"..\/..\/objects\/questgivers\/ironwatchmembers\/icon.png",
+         "imageheight":70,
+         "imagewidth":100
         },
      "5":
         {

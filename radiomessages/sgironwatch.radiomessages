@@ -1,0 +1,188 @@
+{
+//-----------templates--------
+  
+  "sgtemplateketos" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Hello world."
+  },
+  
+  "sgtemplate24" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Hello world."
+  },
+  
+  "sgtemplate25" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "Hello world."
+  },
+
+//-----------Railshooter--------
+  
+  "sgrail1" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Alright, you're in. In front of you is a heavy defense turret attached to a rail. You're going to have to use it to fend off the Miniknog attack."
+  },
+
+  "sgrail2" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "The bottom foward seat controls the main guns, the rear top seat controls the proximity flak cannon. It can take a lot of damage, but it's not invincible."
+  },
+  
+  "sgrail3" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "... And neither are you. I'm pretty sure that thing will explode if it breaks."
+  },
+  
+  "sgrail4" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "Capricorn 24 is completely right! It'll go boom! Yay, that's fun!"
+  },
+  
+  "sgrail5" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Look out, mines ahead! If they hit you, you're done for!"
+  },
+
+  "sgrail6" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "Bullets are great at disarming mines! Let's see some fireworks!"
+  },
+
+  "sgrail7" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "You know this is a life and death situation, right C25?"
+  },
+  
+  "sgrail8" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "That just makes things all the more exciting!"
+  },
+  
+  "sgrail9" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "You've made a big dent in their attacking forces, good job!"
+  },
+
+  "sgrail10" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "I wish I were there right now, that looks like fun!"
+  },
+  
+  "sgrail11" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "I hate to be the bearer of bad news - actually thats a lie, I live for this - but it seems the Miniknog has breached the facility and have taken control."
+  },
+
+  "sgrail12" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "Oh great! Does that mean we get to fight more?"
+  },
+
+  "sgrail13" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Great. I guess we are on cleanup duty once again.."
+  },
+  
+  "sgrail14" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Yep, quit your moaning, Capricorn 24."
+  },
+
+  "sgrail15" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "As for the newbie, use the teleporter in this building and we'll begin a plan to clean out the facility."
+  },
+  
+  "sgraillasergate" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "The rail turret will automatically disable the upcoming lasers. Don't worry."
+  },
+  
+  "sgrailleftbehind" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Careful, you do not want to be left behind. That turret is important."
+  },
+
+  "sgrailswim1" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "Oh! You're going swimming? That looks cold!"
+  },
+
+  "sgrailswim2" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Actually, even though it's stormy the readings say the water temperature would be pretty pleasent, if that's your sort of thing."
+  },
+  
+  "sgrailswim3" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "C24! C24! We should go swimming here sometime!"
+  },
+
+  "sgrailswim4" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Why would I want to go swimming in a stormy ocean planet? That doesn't sound fun at all."
+  },
+  
+  "sgrailswim5" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "We'll do some super insane wind surfing instead!"
+  },
+  
+  "sgrailoutofbounds" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "You know, I don't think you're supposed to be in here.."
+  }
+
+}

@@ -222,6 +222,10 @@
 
   "builder" : "/items/buildscripts/buildweapon.lua",
   "upgradeParameters" : {
-    "shortdescription" : "Survivors Guilt ^yellow;^reset;"
+    "shortdescription" : "Survivors Guilt ^yellow;^reset;",
+    "inventoryIcon" : "sgbayonetpistolelite.png:closed.1",
+    "animationParts" : {
+    "blade" : "sgbayonetpistolelite.png"
+    }
   }
 }

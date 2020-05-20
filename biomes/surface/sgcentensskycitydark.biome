@@ -64,13 +64,13 @@
         "mode" : "floor",
         "priority" : 2.0,
         "variants" : 1,
-        "distribution" : "/biomes/distributions.config:scatteredLarge",
+        "distribution" : "/biomes/distributions.config:denseMedium",
 
         "type" : "tree",
-        "treeFoliageHueShiftMax" : 40,
+        "treeFoliageHueShiftMax" : 15,
         "treeStemHueShiftMax" : 15,
-        "treeStemList" : [ "pineytree" ],
-        "treeFoliageList" : [ "pinefoliage" ]
+        "treeStemList" : [ "kelp", "seaweed" ],
+        "treeFoliageList" : [ "flowy", "kelpy", "leafy", "wavy" ]
       }
 	]
   },

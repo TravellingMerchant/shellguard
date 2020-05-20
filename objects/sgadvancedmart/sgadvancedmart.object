@@ -66,6 +66,8 @@
 	  { "item" : "sgmajestyrapier" },
 	  { "item" : "sgtyrantrapier" },
 	  { "item" : "sgconqueroraxe" },
+	  { "item" : "sghardsuitcannon" },
+	  { "item" : "sghardsuitshotgun" },
 	  { "item" : "sgenforcerpistol" }
     ]
   },

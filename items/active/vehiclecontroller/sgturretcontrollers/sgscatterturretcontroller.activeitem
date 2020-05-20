@@ -1,0 +1,34 @@
+{
+  "itemName" : "sgscatterturretcontroller",
+  "level" : 1,
+  "price" : 25000,
+  "rarity" : "Legendary",
+  "category" : "vehicleController",
+  "description" : "Creates a powerful scatter turret with energy mortar from stored nanites.",
+  "shortdescription" : "Scatter Turret Controller",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["vehiclecontroller.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "vehicle",
+  "largeImage" : "sgscatterturret.png",
+
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "sgscatterturret",
+  "vehicleBoundingBox" : [-11, -4, 11, 4],
+  "vehicleImage" : "/items/active/vehiclecontroller/sgturretcontrollers/sgscatterturretwarp.png",
+
+  "animationParts" : {
+    "casing" : "sgscatterturretcontroller.png"
+  },
+
+  "inventoryIcon" : "/items/active/vehiclecontroller/sgturretcontrollers/sgscatterturretcontroller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/sgturretcontrollers/sgscatterturretcontroller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/sgturretcontrollers/sgscatterturretcontroller.png:full"
+
+}

@@ -3,7 +3,7 @@
   "colonyTags" : ["shellguard","valuable","pretty"],
   "rarity" : "Common",
   "category" : "decorative",
-  "price" : 100,
+  "price" : 300,
 
   "apexDescription" : "Wow, this thing is huge!",
   "avianDescription" : "Wow, this thing is huge!",
@@ -13,8 +13,8 @@
   "hylotlDescription" : "Wow, this thing is huge!",
   "novakidDescription" : "Wow, this thing is huge!",
 
-  "description" : "A huge Shellguard dreadnaut.",
-  "shortdescription" : "SG Dreadnaut Decoration.",
+  "description" : "A huge Shellguard dreadnought.",
+  "shortdescription" : "Dreadnought Decoration.",
   "race" : "human",
 
   "inventoryIcon" : "sgdreadnautobject.png",

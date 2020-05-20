@@ -216,8 +216,8 @@
 					"centered" : true,
 					"zLevel" : 1,
 					"transformationGroups" : ["flip", "rotation"],
-					"drivingSeatPosition" : [0, 0.25],
-					"passengerSeatPosition" : [0, 0]
+					"drivingSeatPosition" : [1.25, -1.25],
+					"passengerSeatPosition" : [-1, -0.25]
 				},
 
 				"partStates" : {
@@ -591,9 +591,9 @@
 		],
 
 		"engineStart" : [ "/sfx/monsters/boss/fortresscore/silodooropen.ogg" ],
-		"engineLoop" : [ "/sfx/vehicles/gunship engine.ogg" ],
-		"engineStartDamaged" : [ "/sfx/tools/teleport_up.ogg" ],
-		"engineLoopDamaged" : [ "/sfx/vehicles/gunship enginealarm.ogg" ],
+		"engineLoop" : [],
+		"engineStartDamaged" : [ "/sfx/monsters/boss/fortresscore/silodooropen.ogg" ],
+		"engineLoopDamaged" : [ "/sfx/alertalarm.ogg" ],
 		"damageIntermittent" : [
 			"/sfx/gun/grenadeblast_small_fire1.ogg",
 			"/sfx/gun/grenadeblast_small_fire2.ogg",

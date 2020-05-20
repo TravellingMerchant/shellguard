@@ -278,6 +278,13 @@
   
 //-------- elevator --------  
 
+  "rematchintromessage" : {
+    "type" : "mission",
+    "senderName" : "SG-F0RTR355",
+    "portraitImage" : "/interface/chatbubbles/SGUFO.png",
+    "text" : "Welcome to the simulation room. These teleporters will take you to new simulations and challenges. All the encounters will bring new rewards, so be sure to complete them all."
+  },
+
   "elevatorsurvivalnugget" : {
     "type" : "mission",
     "senderName" : "SG-F0RTR355",

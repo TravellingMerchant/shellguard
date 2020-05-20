@@ -38,7 +38,7 @@
     "class" : "GunFire",
     "fireTime" : 0.3,
     "baseDps" : 10,
-    "energyUsage" : 60.0,
+    "energyUsage" : 50.0,
     "projectileCount" : 1,
     "inaccuracy" : 0.02,
       "stances" : {
@@ -97,10 +97,6 @@
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
-    "inventoryIcon" : "sgtyphoonminigunelite.png:idle",
-    "animationParts" : {
-      "middle" : "sgtyphoonminigunelite.png"
-    },
-    "shortdescription" : "HBL Basilisk ^yellow;^reset;"
+    "shortdescription" : "Hardsuit Cannon ^yellow;^reset;"
   }
 }

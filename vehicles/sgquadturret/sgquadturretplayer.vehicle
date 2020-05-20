@@ -1,0 +1,228 @@
+{
+  "name" : "sgquadturretplayer",
+  "script" : "/vehicles/gunship/sggunship.lua",
+  "boundBox" : [-10, -3, 10, 3],
+  "slaveControlTimeout" : 2.0,
+  "slaveControlHeartbeat" : 1.0,
+  "canBeHit" : true,
+  "animation" : "sgbasicgunship.animation",
+
+  "loungePositions" : {
+    "drivingSeat" : {
+      "part" : "foreground",
+      "partAnchor" : "drivingSeatPosition",
+      "orientation" : "sit",
+      "statusEffects" : [ "maxprotection", "invulnerable" ],
+      "emote" : "neutral",
+      "dance" : "typing",
+      "cameraFocus" : true,
+      "directives" : "?addmask=/vehicles/gunship/sgbasicgunshipplayermask.png"
+    },
+    "passengerSeat" : {
+      "part" : "foreground",
+      "partAnchor" : "passengerSeatPosition",
+      "orientation" : "sit",
+      "statusEffects" : [ "maxprotection", "invulnerable" ],
+      "emote" : "neutral",
+      "dance" : "typing",
+      "cameraFocus" : true
+    }
+  },
+
+  "warpInDelay" : 1.0,
+
+  "levelApproachFactor" : 0,
+  "angleApproachFactor" : 0,
+  "constantAngleCheck" : true,
+  "maxGroundSearchDistance" : 5,
+  "maxAngle" : 0,
+  "velocityRotation" : true,
+  "velocityRotationApproach" : 0.005,
+  "hoverTargetDistance" : 4,
+  "hoverVelocityFactor" : 0,
+  "hoverControlForce" : 100,
+  "targetHorizontalVelocity" : 0,
+  "horizontalControlForce" : 0,
+  "targetUpwardVelocity" : 0,
+  "upwardControlForce" : 0,
+  "targetDownwardVelocity" : 0,
+  "downwardControlForce" : 0,
+  "spinFriction" : 0.1,
+    "hoverToggle" : true,
+  "hoverToggleControlForce" : 60,
+  "visualRotationCenter" : [0,0],
+	"mainStates" : {"opening":true,"closing":true},
+	"gunnery" : {
+		"drivingSeat" : {
+			"PrimaryFire" : {
+				"forwardDoubleCannonFront" : {
+					"aimMinMax" : [-90,90],
+					"emptyAim" : -10,
+					"projectileType" : "tempbulletshatter",
+					"slaves" : ["forwardDoubleCannonBack"],
+					"punishSlaves" : {"forwardDoubleCannonBack":0.15},
+					"projectileParams" : {
+						"power" : 17,
+					    "speed" : 120
+					},
+					"inaccuracy" : 0.015,
+					"projectileCount" : 1,
+					"gunCenter" : [-2.375, -1.125],
+					"gunLength" : 6,
+					"fireTime" : 0.3,
+					"barrels" : [[0,-0.625],[0,0.375]],
+					"playSounds" : ["forwardDoubleCannons"],
+					"setAnimationStates" : {"forwardDoubleCannonFront":["fire",true]}
+				},
+				"forwardDoubleCannonBack" : {
+					"aimMinMax" : [-90,90],
+					"emptyAim" : -10,
+					"slavedTo" : "forwardDoubleCannonFront",
+					"projectileType" : "tempbulletshatter",
+					"projectileParams" : {
+						"power" : 17,
+					    "speed" : 120
+					},
+					"inaccuracy" : 0.015,
+					"projectileCount" : 1,
+					"gunCenter" : [2.5, -1.125],
+					"gunLength" : 6,
+					"fireTime" : 0.3,
+					"barrels" : [[0,-0.625],[0,0.375]],
+					"playSounds" : ["forwardDoubleCannons"],
+					"setAnimationStates" : {"forwardDoubleCannonBack":["fire",true]}
+				}
+			}
+		},
+		"passengerSeat" : {
+			"PrimaryFire" : {
+				"ventralAutocannon" : {
+					"aimMinMax" : [-179,179],
+					"emptyAim" : 0,
+					"projectileType" : "sgboomerroundflak",
+					"projectileParams" : {
+						"power" : 90
+					},
+					"inaccuracy" : 0,
+					"projectileCount" : 1,
+					"gunCenter" : [0.625, 2.625],
+					"gunLength" : 2.5,
+					"fireTime" : 2,
+					"playSounds" : ["ventralAutocannon"],
+					"setAnimationStates" : {"ventralAutocannon":"fire"}
+				}
+			}
+		}
+	},
+	"thrusters" : {"sideThrusterFront":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[-3,1.75]},"sideThrusterBack":{"thrusterTargets":[0,-40,-60,20,40],"approach":0.005,"thrusterCenter":[9,2]}},
+	"leveledGroups" : {"backFinFront":[-9, 2],"backFinBack":[-4.25, 2]},
+  "canFly" : false,
+  "canJump" : false,
+
+  "nearGroundDistance" : 6,
+  "jumpVelocity" : 40,
+  "jumpTimeout" : 0.25,
+
+  //Health and damage
+  "protection" : 50,
+  "maxHealth" : 4000,
+
+  "damageStateNames" : ["undamaged"],
+
+  "lightsInDamageState" : [[]],
+
+  "damageStatePassengerDances" : ["","","",""],
+
+  "damageStateDriverEmotes" : ["neutral"],
+  "damageStatePassengerEmotes" : ["neutral"],
+
+
+
+  "damageTakenEmote" : "oooh",
+  "damageEmoteTime" : 2.0,
+
+  "minNotificationCollisionAccel" : 20,
+  "minDamageCollisionAccel" : 60,
+  "terrainCollisionDamage" : 100,
+
+
+  //Damage visual effects
+  "smokeParticleHealthThreshold" : 0.5,
+  "smokeRateAtZeroHealth" : 500,
+
+  "fireParticleHealthThreshold" : 0.25,
+  "fireRateAtZeroHealth" : 120,
+
+  "onFireHealthThreshold" : 0.125,
+  "damagePerSecondWhenOnFire" : 1.0,
+  "explosionConfig" : "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config",
+  "explosionDamage" : 700,
+
+
+
+  //Sound effects
+  "engineDamageSoundThreshold" : 0.40,
+
+  "intermittentDamageSoundThreshold" : 0.33,
+  "maxDamageSoundInterval" : 10,
+  "minDamageSoundInterval" : 1,
+
+  "engineIdlePitch" : 0.75,
+  "engineRevPitch" : 1.5,
+  "engineIdleVolume" : 1.0,
+  "engineRevVolume" : 1.5,
+
+  "materialKind" : "robotic",
+  "terrainCollisionDamageSourceKind" : "falling",
+  "accelerationTrackingCount" : 2,
+
+  "backSpringPositions" : [
+      [-3.0, -2.0],
+      [-4.0, -2.0],
+      [-5.0, -2.0],
+      [-6.0, -2.0]
+  ],
+
+  "frontSpringPositions" : [
+      [3.0, -2.0],
+      [4.0, -2.0],
+      [5.0, -2.0],
+      [6.0, -2.0]
+  ],
+
+  "bodySpringPositions" : [
+      [-4.0, -3.0],
+      [-2.0, -3.0],
+      [0.0, -3.0],
+      [2.0, -3.0],
+      [4.0, -3.0]
+  ],
+
+  "movementSettings" : {
+	"collisionPoly" : [[-3,-4], [3,-4], [3,1], [-3,1]],
+	"leftCollisionPoly" : [[-3,-4], [3,-4], [3,1], [-3,1]],
+	"rightCollisionPoly" : [[-3,-4], [3,-4], [3,1], [-3,1]],
+    "mass" : 8,
+    "airFriction" : 2,
+    "enableSurfaceSlopeCorrection" : true,
+    "slopeSlidingFactor" : 0.0,
+    "ignorePlatformCollision" : false,
+    "gravityEnabled" : true
+  },
+
+  "occupiedMovementSettings" : {
+    "mass" : 8,
+    "enableSurfaceSlopeCorrection" : true,
+    "slopeSlidingFactor" : 0.0,
+    "gravityEnabled" : true
+  },
+
+  "zeroGMovementSettings" : {
+    "mass" : 8,
+    "airFriction" : 0,
+    "enableSurfaceSlopeCorrection" : true,
+    "slopeSlidingFactor" : 0.0,
+	"gravityEnabled" : true
+  }
+
+}

@@ -1,0 +1,11 @@
+{
+  "name" : "sgtwigun",
+  "category" : "sgapexturret",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+    "bodyfullbright" : "bodyfullbright.png",
+    "turret" : "turret.png"
+  }
+}
