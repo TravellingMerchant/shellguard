@@ -253,69 +253,6 @@
                  "width":176,
                  "x":3640,
                  "y":2720
-                }, 
-                {
-                 "height":136,
-                 "id":2262,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"radioMessage\" : \"sgtemplateketos\" }",
-                     "stagehand":"radiomessage"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string",
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":144,
-                 "x":2160,
-                 "y":2576
-                }, 
-                {
-                 "height":136,
-                 "id":2263,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"radioMessage\" : \"sgtemplate24\" }",
-                     "stagehand":"radiomessage"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string",
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":144,
-                 "x":2304,
-                 "y":2688
-                }, 
-                {
-                 "height":136,
-                 "id":2264,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"radioMessage\" : \"sgtemplate25\" }",
-                     "stagehand":"radiomessage"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string",
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":144,
-                 "x":2440,
-                 "y":2736
                 }],
          "opacity":1,
          "type":"objectgroup",

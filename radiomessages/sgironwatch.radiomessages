@@ -188,11 +188,47 @@
 
 //-----------Railshooter--------
 
-  "sgtemplateketos" : {
+  "sgoceanintro1" : {
     "type" : "mission",
     "senderName" : "Ketos",
     "portraitImage" : "/interface/chatbubbles/sgketos.png",
-    "text" : "We've managed to warp you in to an underwater segment of the facility."
-  }
+    "text" : "We've managed to warp you in to an isolated underwater segment of the facility."
+  },
+
+
+  "sgoceanintro2" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Unfortunetly for you, to access the rest you're going to have to swim. There should be lights set up to help you through the caves."
+  },
+  
+  "sgoceanintro3" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "Eek! Look at the size of that beast, C24, hold me! I can't watch."
+  },
+
+  "sgoceanintro4" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Really? I've seen you tear apart small armies and not once stop having fun, yet a fish is what freaks you out?"
+  },
+
+  "sgoceanintro5" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "It's the EYES! They are so weird! Eugh, I can't stand them."
+  },
+
+  "sgoceanintro6" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Huh, even I'm surpised at that."
+  }  
 
 }

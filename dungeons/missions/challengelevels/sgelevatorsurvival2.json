@@ -1218,7 +1218,7 @@
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":3448,
+                 "x":3440,
                  "y":1520
                 }, 
                 {
@@ -1242,7 +1242,7 @@
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":3448,
+                 "x":3440,
                  "y":2744
                 }, 
                 {
@@ -2613,26 +2613,6 @@
                  "y":3952
                 }, 
                 {
-                 "gid":9333,
-                 "height":67,
-                 "id":4787,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"uniqueId\" : \"sgweaponstele\" }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":12576,
-                 "y":3952
-                }, 
-                {
                  "gid":2147491088,
                  "height":20,
                  "id":4788,
@@ -3057,7 +3037,7 @@
                  "y":3952
                 }, 
                 {
-                 "gid":10300,
+                 "gid":10301,
                  "height":640,
                  "id":4848,
                  "name":"",
@@ -3069,7 +3049,7 @@
                  "y":4904
                 }, 
                 {
-                 "gid":10300,
+                 "gid":10301,
                  "height":640,
                  "id":4856,
                  "name":"",
@@ -3081,7 +3061,7 @@
                  "y":4960
                 }, 
                 {
-                 "gid":10300,
+                 "gid":10301,
                  "height":640,
                  "id":4857,
                  "name":"",
@@ -3093,7 +3073,7 @@
                  "y":4904
                 }, 
                 {
-                 "gid":2147493948,
+                 "gid":2147493949,
                  "height":640,
                  "id":4858,
                  "name":"",
@@ -3105,7 +3085,7 @@
                  "y":5040
                 }, 
                 {
-                 "gid":10300,
+                 "gid":10301,
                  "height":640,
                  "id":4859,
                  "name":"",
@@ -3117,7 +3097,7 @@
                  "y":4904
                 }, 
                 {
-                 "gid":10300,
+                 "gid":10301,
                  "height":640,
                  "id":4860,
                  "name":"",
@@ -3129,7 +3109,7 @@
                  "y":4960
                 }, 
                 {
-                 "gid":10300,
+                 "gid":10301,
                  "height":640,
                  "id":4861,
                  "name":"",
@@ -3141,7 +3121,7 @@
                  "y":4904
                 }, 
                 {
-                 "gid":2147493948,
+                 "gid":2147493949,
                  "height":640,
                  "id":4862,
                  "name":"",
@@ -3153,7 +3133,7 @@
                  "y":5040
                 }, 
                 {
-                 "gid":10300,
+                 "gid":10301,
                  "height":640,
                  "id":4863,
                  "name":"",
@@ -3165,7 +3145,7 @@
                  "y":4936
                 }, 
                 {
-                 "gid":10300,
+                 "gid":10301,
                  "height":640,
                  "id":4864,
                  "name":"",
@@ -3177,7 +3157,7 @@
                  "y":4976
                 }, 
                 {
-                 "gid":2147493948,
+                 "gid":2147493949,
                  "height":640,
                  "id":4865,
                  "name":"",
@@ -3189,7 +3169,7 @@
                  "y":4904
                 }, 
                 {
-                 "gid":2147493948,
+                 "gid":2147493949,
                  "height":640,
                  "id":4866,
                  "name":"",
@@ -3283,6 +3263,18 @@
                  "width":24,
                  "x":12520,
                  "y":3936
+                }, 
+                {
+                 "gid":10075,
+                 "height":67,
+                 "id":4892,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":12576,
+                 "y":3952
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4709,7 +4701,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":4891,
+ "nextobjectid":4893,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.1",
@@ -4936,15 +4928,15 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }, 
         {
-         "firstgid":10075,
+         "firstgid":10076,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/apex.json"
         }, 
         {
-         "firstgid":10261,
+         "firstgid":10262,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/foundry.json"
         }, 
         {
-         "firstgid":10300,
+         "firstgid":10301,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/huge-objects.json"
         }],
  "tilewidth":8,
