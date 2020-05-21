@@ -22,12 +22,12 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/ShellRifleFire.ogg" ]
+      "fire" : [ "/sfx/gun/testing/sgrifle.ogg", "/sfx/gun/testing/sgrifle2.ogg", "/sfx/gun/testing/sgrifle3.ogg" ]
     }
   },
 
-  "baseOffset" : [1.375, 0.1],
-  "muzzleOffset" : [1.7, 0.2],
+  "baseOffset" : [1.5, 0.1],
+  "muzzleOffset" : [1.375, 0.2],
 
   "scripts" : ["/items/active/weapons/ranged/gun.lua"],
 
@@ -36,7 +36,7 @@
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 1.0,
+    "fireTime" : 1,
     "baseDps" : 10.5,
     "energyUsage" : 30.0,
     "projectileCount" : 1,
@@ -60,9 +60,9 @@
         "allowFlip" : false
       },
       "cooldown" : {
-        "duration" : 0.1,
+        "duration" : 0.2,
         "armRotation" : -20,
-        "weaponRotation" : 30,
+        "weaponRotation" : 45,
         "twoHanded" : true,
 
         "allowRotate" : false,
@@ -74,7 +74,8 @@
 
     "projectileType" : "tempbullet",
     "projectileParameters" : { 
-      "knockback" : 6
+      "knockback" : 6,
+	  "speed" : 170
     }
   },
 

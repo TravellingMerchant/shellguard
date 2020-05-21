@@ -134,12 +134,7 @@
             "chest" : [ { "name" : "ironwatchdronechest" } ],
             "legs" : [ { "name" : "ironwatchdronelegs" } ],
             "primary" : [
-              "shellguardrifle",
-			  "sgstandardrifle",
-			  "sgstandardriflelong",
-              "shellguardmg",
-              "shellguardsmg",
-			  "shellguardreflek"
+              "sgironwatchrifle"
 			  ],
             "sheathedprimary" : [ "shellguardpistol" ],
             "alt" : [

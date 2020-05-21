@@ -229,6 +229,20 @@
     "senderName" : "Ketos",
     "portraitImage" : "/interface/chatbubbles/sgketos.png",
     "text" : "Huh, even I'm surpised at that."
-  }  
+  },
+
+  "sgoceanenter1" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Ok, you're approaching the entrance to the next part of the facility. Watch out for Miniknog."
+  },
+  
+  "sgoceanenter2" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Look out! The Miniknog have set up heavy turret emplacements up ahead. You'll have to abuse their sightlines to take them out."
+  }
 
 }
