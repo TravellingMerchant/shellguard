@@ -8,7 +8,7 @@
   //"tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
   "twoHanded" : false,
-  "itemTags" : ["weapon","ranged"],
+  "itemTags" : ["weapon","ranged","upgradeableWeapon","pistol"],
   "level" : 6,
 
   "inventoryIcon" : "shellguardclawbaseicon.png",

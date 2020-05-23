@@ -10,7 +10,7 @@
   "weaponType" : "uniqueweapon",
   "category" : "uniqueWeapon",
   "twoHanded" : true,
-  "itemTags" : ["weapon","melee","spear"],
+  "itemTags" : ["weapon","melee","spear","upgradeableWeapon"],
 
   "inventoryIcon" : "shelllance.png",
 

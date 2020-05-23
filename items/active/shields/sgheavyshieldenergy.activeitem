@@ -9,7 +9,7 @@
   "shortdescription" : "Energy Barrier",
   "tooltipKind" : "Shield",
   "twoHanded" : false,
-  "itemTags" : ["shield"],
+  "itemTags" : ["shield","upgradeableWeapon"],
 
   "inventoryIcon" : "images/sgheavyenergyshield.png:nearidle",
 

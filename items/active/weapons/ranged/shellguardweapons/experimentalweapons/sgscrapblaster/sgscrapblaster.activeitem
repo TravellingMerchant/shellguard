@@ -9,8 +9,8 @@
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
-  "weaponType" : "Assault Rifle",
-  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "weaponType" : "Shotgun",
+  "itemTags" : ["weapon","ranged","shotgun","upgradeableWeapon"],
   "twoHanded" : true,
   
   "animation" : "sgscrapblaster.animation",

@@ -9,7 +9,7 @@
   //"tooltipKind" : "sword",
   "category" : "Lockjaw",
   "twoHanded" : false,
-  "itemTags" : ["weapon"],
+  "itemTags" : ["weapon","whip","upgradeableWeapon","ranged"],
 
   "inventoryIcon" : "sgspikeballlockjaw.png:idle",
   "animation" : "sgwhipspike.animation",

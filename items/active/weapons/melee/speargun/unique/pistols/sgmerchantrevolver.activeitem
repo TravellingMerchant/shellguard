@@ -9,7 +9,7 @@
   "level" : 6,
   "tooltipKind" : "base",
   "category" : "sgcombopistol",
-  "itemTags" : ["weapon","ranged","spear","speargun","gunspear", "upgradeableWeapon"],
+  "itemTags" : ["weapon","melee","pistol","ranged", "upgradeableWeapon"],
   "twoHanded" : false,
 
   "animation" : "/items/active/weapons/melee/speargun/sgbayonetpistol.animation",

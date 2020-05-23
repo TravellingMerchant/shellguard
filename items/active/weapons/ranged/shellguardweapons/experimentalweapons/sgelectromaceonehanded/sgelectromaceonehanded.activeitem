@@ -9,7 +9,7 @@
   "tooltipKind" : "base",
   "category" : "uniqueWeapon",
   "twoHanded" : false,
-  "itemTags" : ["weapon","ranged","livingweapon","upgradeableWeapon"],
+  "itemTags" : ["weapon","ranged","melee","livingweapon","upgradeableWeapon"],
 
   "inventoryIcon" : "sgelectromaceonehanded.png",
 

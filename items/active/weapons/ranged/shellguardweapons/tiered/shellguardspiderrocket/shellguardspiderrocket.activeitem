@@ -10,7 +10,7 @@
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
   "weaponType" : "Rocket Launcher",
-  "itemTags" : ["weapon","ranged","assaultrifle"],
+  "itemTags" : ["weapon","ranged"],
   "twoHanded" : true,
   
   "animation" : "/items/active/weapons/ranged/gun.animation",
