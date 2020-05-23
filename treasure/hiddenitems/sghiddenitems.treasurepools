@@ -494,6 +494,14 @@
     }]
   ],
 
+ "sgironwatchimperium" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgironwatchimperium", 1]}
+      ]
+    }]
+  ],
+
 //--------- alien --------------------
 
   "sgaliencaster" : [

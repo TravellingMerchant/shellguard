@@ -1,0 +1,121 @@
+{
+  "projectileName" : "sgswarmrocketnew",
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/gun/shellbulletimpact.ogg"
+      ]
+    }
+  ],
+  "image" : "sgswarmrocket.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 0.1
+  },
+  "animationCycle" : 0.25,
+  "pointLight" : true,
+  "lightColor" : [255, 100, 0],
+  "actionOnReap" : [
+	{
+      "action" : "spark"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "shellsmoke"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/fire_out.ogg" ]
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 3,
+      "backgroundRadius" : 2,
+      "explosiveDamageAmount" : 0.0,
+      "delaySteps" : 2
+    },
+    {
+      "action" : "loop",
+      "count" : 15,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.0,
+            "color" : [255, 100, 0, 255],
+            "light" : [80, 80, 20],
+            "fullbright" : true,
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0.0, -50.0],
+            "approach" : [0, 30],
+            "timeToLive" : 1.4,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.3
+            }
+          }
+        }
+      ]
+    },
+        {
+          "action" : "loop",
+          "count" : 10,
+          "body" : [
+            {
+              "action" : "option",
+              "options" : [
+                {
+                  "action" : "particle",
+                  "specification" : {
+                    "type" : "animated",
+                    "animation" : "/animations/ember1/ember1.animation",
+                    "approach" : [0.5, 0.5],
+                    "fullbright" : true,
+                    "size" : 0.7,
+                    "timeToLive" : 0.6,
+                    "variance" : {
+                      "timeToLive" : 0.15,
+                      "position" : [2.5, 2.5],
+                      "initialVelocity" : [1, 1],
+                      "rotation" : 180
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+
+  ],
+  "emitters" : [ "rocketsmoke" ],
+  "frameNumber" : 1,
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 10,
+  "power" : 20,
+  "speed" : 25,
+  "damageKind" : "bow",
+  
+  "scripts" : [ "/projectiles/scripts/sgswarm.lua.lua" ],
+  "scriptDelta" : 1,
+  "speedEqualsPower" : false,
+  "minHomingControlForce" : 3,
+  "maxHomingControlForce" : 3,
+  "minWavePeriod" : 0.35,
+  "maxWavePeriod" : 0.35,
+  "minWaveAmplitude" : -0.75,
+  "maxWaveAmplitude" : 0.75,
+  
+  "persistentAudio" : "/sfx/tech/tech_rocketboots.ogg"
+}

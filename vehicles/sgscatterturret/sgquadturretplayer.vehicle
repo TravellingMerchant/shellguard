@@ -99,7 +99,7 @@
 				"ventralAutocannon" : {
 					"aimMinMax" : [-179,179],
 					"emptyAim" : 0,
-					"projectileType" : "sgufoshockbomb",
+					"projectileType" : "sgufoshockbombbig",
 					"projectileParams" : {
 						"power" : 80,
 					    "speed" : 100

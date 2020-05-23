@@ -1,0 +1,93 @@
+{
+  "itemName" : "sgironwatchcannon",
+  "price" : 10000,
+  "inventoryIcon" : "sgvehiclecannon.png",
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A launcher that fires a scatter of high powered penetrating rounds.",
+  "shortdescription" : "Scatterjack",
+  "level" : 10,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Rocket Launcher",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgvehiclecannon.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/railshots/sgcannonjack.ogg" ]
+    }
+  },
+
+  "baseOffset" : [0.375, 0.75],
+  "muzzleOffset" : [2.375, 0.25],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+  //COMPATABILITY FOR WFCORE NPCS
+  "wfNpcWeaponData" : {"minRange" : 10, "maxRange" : 30, "forceMoveRange" : 35, "primaryCharge" : 10},
+
+  "elementalType" : "fire",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.7,
+    "baseDps" : 11.0,
+    "energyUsage" : 90.0,
+    "projectileCount" : 3,
+    "inaccuracy" : 0.07,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -20,
+        "weaponRotation" : 35,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "tempbulletdrill",
+    "projectileParameters" : { 
+      "knockback" : 10
+    }
+  },
+
+  "altAbilityType" : "explosiveburst",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "elitevehiclecannon.png",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/experimentalweapons/sgvehiclecannon/elitevehiclecannon.png"
+    },
+    "shortdescription" : "Scatterjack ^yellow;^reset;"
+  }
+}

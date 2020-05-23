@@ -221,7 +221,7 @@
     "type" : "mission",
     "senderName" : "Capricorn 25",
     "portraitImage" : "/interface/chatbubbles/sg25.png",
-    "text" : "It's the EYES! They are so weird! Eugh, I can't stand them."
+    "text" : "It's the EYES! They are so weird! I'm fine with normal fish, but these deep sea monsters... Eugh, I can't stand them."
   },
 
   "sgoceanintro6" : {
@@ -243,6 +243,126 @@
     "senderName" : "Ketos",
     "portraitImage" : "/interface/chatbubbles/sgketos.png",
     "text" : "Look out! The Miniknog have set up heavy turret emplacements up ahead. You'll have to abuse their sightlines to take them out."
+  },
+  
+  "sgocean1" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Looks like they've already started ransacking this place... Hopefully we weren't working on anything too dangerous here."
+  },
+
+  "sgocean2" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Huh, our spider bots were being worked on here... Interesting. I'm going to do some digging on exactly what this place is.. Or was, I suppose."
+  },
+
+
+  "sgocean3" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Heads up, there's a rupture in the segment ahead. You're going to have to swim again."
+  },
+
+  "sgocean4" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "Swimming is fun, but hopefully there aren't any more of those deep sea fish."
+  },
+  
+  "sgocean5" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Hey Ketos, I think you're going to want to come look at this data."
+  },
+
+  "sgocean6" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Woah, alright. This certainly changes some things."
+  },
+  
+  "sgocean7" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Alright newbie, continue clearing this part of the facility for now. We've got a new plan for the next part of the mission that I think you'll enjoy."
+  },
+  
+  "sgocean8" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "You're on the final stretch now. Looks like you've scared them enough that they've set up a final large defense here."
+  },
+
+  "sgocean9" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "Put on a good show yeah? I want to see some action!"
+  },
+
+  "sgoceanend" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Good job clearing out the Miniknog! There's still some back above the surface, so use the teleporter and we'll begin the next phase of the plan."
+  },
+  
+  "sgoceancafe1" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "Awww this place is nice! Don't you think so, C24?"
+  },
+
+  "sgoceancafe2" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "It's ok I guess? A little bit damp."
+  },
+
+  "sgoceancafe3" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "You know... I'd love to get dinner at a small place like this sometime. Having some company might be nice?"
+  },
+
+  "sgoceancafe4" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Sure, I'll ask Ketos."
+  },
+
+  "sgoceancafe5" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "C24, I was more thinking just me and you?"
+  },
+  
+  "sgoceancafe6" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Oh! I... Well... As long as it's not deep under the ocean..."
+  },
+
+  "sgoceancafe7" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "I can't make any promises about where it'll be, but it's a date."
   }
 
 }

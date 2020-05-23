@@ -72,7 +72,7 @@
 
     "fireType" : "auto",
 
-    "projectileType" : "tempbullet",
+    "projectileType" : "sgnewstandardbullet",
     "projectileParameters" : { 
       "knockback" : 6
     }

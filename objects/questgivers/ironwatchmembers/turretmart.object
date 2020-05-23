@@ -21,11 +21,18 @@
     "buyFactor" : 1.0,
     "sellFactor" : 0.2,
     "items" : [
+	  { "item" : "sgquadturretcontroller" },
+	  { "item" : "sgscatterturretcontroller" },
 	  { "item" : "sgironwatchrifle" },
 	  { "item" : "sgironwatchpistol" },
-	  { "item" : "sghubteleporterplayer" },
-	  { "item" : "sghubteleporterplayer" },
-	  { "item" : "sghubteleporterplayer" }
+	  { "item" : "sgbluejack" },
+	  { "item" : "sgsnaggletooth" },
+	  { "item" : "sgironwatchbuzzer" },
+	  { "item" : "sgbluerifle" },
+	  { "item" : "sgironwatchswarmer" },
+	  { "item" : "sgironwatchgoblinsmg" },
+	  { "item" : "sgironwatchcannon" },
+	  { "item" : "sgironwatchmg" }
     ]
   },
 

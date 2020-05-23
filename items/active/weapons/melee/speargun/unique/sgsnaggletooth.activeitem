@@ -1,0 +1,162 @@
+{
+  "itemName" : "sgsnaggletooth",
+  "price" : 9000,
+  "inventoryIcon" : "sgsnaggletooth.png:closed.1",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "C25's favourite tool for pacifying foes thanks to its stun clamp blasts.",
+  "shortdescription" : "Snaggletooth",
+  "level" : 10,
+  "tooltipKind" : "base",
+  "category" : "sggunstaff",
+  "itemTags" : ["weapon","ranged","spear","speargun","gunspear", "upgradeableWeapon"],
+  "twoHanded" : true,
+
+  "animation" : "/items/active/weapons/melee/speargun/sgsnaggletooth.animation",
+  "animationParts" : {
+    "blade" : "sgsnaggletooth.png",
+    "bladefullbright" : "sgsnaggletoothfullbright.png",
+    "handle" : "",
+    "handlefullbright" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/swing_spear_electric1.ogg", "/sfx/melee/swing_spear_electric2.ogg", "/sfx/melee/swing_spear_electric3.ogg"  ],
+      "fire2" : [ "/sfx/melee/swing_spear_electric1.ogg", "/sfx/melee/swing_spear_electric2.ogg", "/sfx/melee/swing_spear_electric3.ogg"  ],
+      "fire3" : [ "/sfx/melee/swing_spear_electric1.ogg", "/sfx/melee/swing_spear_electric2.ogg", "/sfx/melee/swing_spear_electric3.ogg"  ],
+      "fire4" : [ "/sfx/melee/swing_spear_electric1.ogg", "/sfx/melee/swing_spear_electric2.ogg", "/sfx/melee/swing_spear_electric3.ogg"  ],
+      "gunfire" : [ "/sfx/monsters/boss/sghologramstart.ogg" ],
+      "gunfire2" : [ "/sfx/gun/plasmiteheavy3.ogg"  ]
+    }
+  },
+
+  "baseOffset" : [0.0, 0.0],
+	
+	//Not required but gives it a nice aiming feel
+  "aimOffset" : 0,
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "electric",
+
+  "primaryAbilityType" : "sgrapierguncombo",
+  "primaryAbility" : {
+		"stances" : {
+      "idle" : {
+        "aimAngle" : 0,
+        "armRotation" : -30,
+        "weaponRotation" : 70,
+        "twoHanded" : false,
+        "allowRotate" : true,
+        "weaponOffset" : [0, 1],
+        "allowFlip" : true,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "closed"
+				}
+      },
+      "fire1" : {
+        "duration" : 0.3,
+        "armRotation" : -20,
+        "weaponRotation" : -70,
+        "twoHanded" : true,
+        "weaponOffset" : [0, 0.5],
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "closed"
+				}
+      },
+      "preslash2" : {
+        "duration" : 0.025,
+        "armRotation" : 55,
+        "weaponRotation" : -45,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : false
+      },
+      "wait2" : {
+        "duration" : 0.2,
+        "armRotation" : -45,
+        "weaponRotation" : -55,
+        "allowRotate" : false,
+        "allowFlip" : true,
+        "twoHanded" : true
+      },
+      "fire2" : {
+        "duration" : 0.5,
+        "armRotation" : 0,
+        "weaponRotation" : 90,
+        "twoHanded" : true,
+        "weaponOffset" : [0, -1.5],
+
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "closed"
+				}
+      },
+      "windup4" : {
+        "duration" : 0.25,
+        "armRotation" : -110,
+        "weaponRotation" : 20,
+        "twoHanded" : false,
+        "weaponOffset" : [0, -2.5],
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "open"
+				}
+
+      },
+      "fire4" : {
+        "duration" : 0.5,
+        "armRotation" : -20,
+        "weaponRotation" : -70,
+        "twoHanded" : true,
+        "weaponOffset" : [0, 0.5],
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+
+				//If this exists it will try to shoot based on the variables within
+				"gunShotConfig" : {
+					//General
+					"aimAtCursor" : false,	//If true, will fire toward the cursor instead of the rotation of the weapon
+					"fireTime" : 0.6, 			//If this exists it loops during the stance duration firing in intervals of this number
+					"energyUsage" : 10,
+					"fireSound" : "gunfire2",
+					
+					//Recoil
+					"recoilKnockbackVelocity" : false,
+					
+					//Projectile
+					"projectile" : "sgstunclamp",
+					"projectileCount" : 3,
+					"projectileDamage" : 8,
+					"projectileParameters" : {
+						"knockback" : 22
+					},
+					"projectileInaccuracy" : 0.02,
+					"projectileAimAngleOffset" : 0,
+					"projectileFirePoint" : [3.375, 1.5]
+				}
+			}
+		}
+	},
+	
+  "altAbilityType" : "blinkexplosion",
+
+  "builder" : "/items/buildscripts/buildweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Snaggletooth ^yellow;^reset;"
+  }
+}
