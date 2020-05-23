@@ -80,5 +80,8 @@
     }
   },
   
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Shellguard Binary Fusion ^yellow;^reset;"
+  }
 }

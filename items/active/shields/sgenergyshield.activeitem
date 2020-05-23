@@ -57,5 +57,8 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandshield.lua"
+  "builder" : "/items/buildscripts/buildunrandshield.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Shellguard Energy Shield ^yellow;^reset;"
+  }
 }

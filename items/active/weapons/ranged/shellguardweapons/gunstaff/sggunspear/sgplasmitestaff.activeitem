@@ -80,5 +80,8 @@
 
   "altAbilityType" : "bayonetblade",
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Shellguard Plasmite Staff ^yellow;^reset;"
+  }
 }

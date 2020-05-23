@@ -132,5 +132,8 @@
     //"maxSnagTimeEntities": false
   },
 
-  "builder" : "/items/buildscripts/buildwhip.lua"
+  "builder" : "/items/buildscripts/buildwhip.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Siegebreaker ^yellow;^reset;"
+  }
 }

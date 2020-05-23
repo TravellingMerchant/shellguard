@@ -29,5 +29,8 @@
     "baseDps" : 8
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Shellguard Combat Knife ^yellow;^reset;"
+  }
 }

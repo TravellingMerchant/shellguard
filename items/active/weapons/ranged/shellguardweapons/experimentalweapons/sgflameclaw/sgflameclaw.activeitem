@@ -83,5 +83,8 @@
 
   "altAbilityType" : "",
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Ironwatch Flame Claw ^yellow;^reset;"
+  }
 }

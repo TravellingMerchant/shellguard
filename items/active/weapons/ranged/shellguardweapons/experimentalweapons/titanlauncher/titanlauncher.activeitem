@@ -62,5 +62,8 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Titanlauncher MK2 ^yellow;^reset;"
+  }
 }

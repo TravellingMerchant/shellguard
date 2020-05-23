@@ -82,5 +82,8 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Shellguard Claw Gun ^yellow;^reset;"
+  }
 }
