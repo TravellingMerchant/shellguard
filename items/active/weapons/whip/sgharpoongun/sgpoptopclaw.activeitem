@@ -9,7 +9,7 @@
   "tooltipKind" : "sgweapon",
   "category" : "Lockjaw",
   "twoHanded" : true,
-  "itemTags" : ["weapon"],
+  "itemTags" : ["weapon","upgradeableWeapon","ranged","assaultrifle"],
 
   "inventoryIcon" : "sgpoptopclaw.png:idle",
   "animation" : "sgwhip.animation",

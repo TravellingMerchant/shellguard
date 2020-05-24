@@ -10,7 +10,7 @@
   "weaponType" : "uniqueweapon",
   "category" : "uniqueWeapon",
   "twoHanded" : true,
-  "itemTags" : ["weapon","melee","spear"],
+  "itemTags" : ["weapon","melee","spear","upgradeableWeapon"],
 
   "inventoryIcon" : "shelllance.png",
 
@@ -93,5 +93,8 @@
 
   "altAbilityType" : "sgshockwave",
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Ironwatch Lance ^yellow;^reset;"
+  }
 }

@@ -10,7 +10,7 @@
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
   "weaponType" : "Assault Rifle",
-  "itemTags" : ["weapon","ranged","assaultrifle"],
+  "itemTags" : ["weapon","ranged","grenadelauncher","quarterstaff","melee","upgradeableWeapon"],
   "twoHanded" : true,
   
   "animation" : "/items/active/weapons/ranged/gun.animation",
@@ -80,5 +80,8 @@
 
   "altAbilityType" : "bayonetblade",
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Shellguard Plasmite Staff ^yellow;^reset;"
+  }
 }

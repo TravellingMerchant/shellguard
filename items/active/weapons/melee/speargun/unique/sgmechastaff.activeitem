@@ -9,7 +9,7 @@
   "level" : 6,
   "tooltipKind" : "base",
   "category" : "sggunstaff",
-  "itemTags" : ["weapon","ranged","spear","speargun","gunspear", "upgradeableWeapon"],
+  "itemTags" : ["weapon","ranged","spear","melee", "upgradeableWeapon"],
   "twoHanded" : true,
 
   "animation" : "/items/active/weapons/melee/speargun/nebsgspeargun.animation",

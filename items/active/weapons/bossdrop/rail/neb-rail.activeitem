@@ -9,7 +9,7 @@
   "level" : 6,
   "tooltipKind" : "base",
   "category" : "Rail Cannon",
-  "itemTags" : ["weapon","ranged","nebulox","upgradeableWeapon"],
+  "itemTags" : ["weapon","ranged","nebulox","upgradeableWeapon","assaultrifle"],
   "twoHanded" : true,
 
   "animation" : "neb-rail.animation",

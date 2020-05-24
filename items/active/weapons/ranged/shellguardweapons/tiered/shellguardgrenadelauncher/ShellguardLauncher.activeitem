@@ -10,7 +10,7 @@
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
   "weaponType" : "Grenade Launcher",
-  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "itemTags" : ["weapon","ranged","grenadelauncher","upgradeableWeapon"],
   "twoHanded" : false,
   
   "animation" : "/items/active/weapons/ranged/gun.animation",
