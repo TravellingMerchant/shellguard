@@ -32,7 +32,9 @@
 	  { "item" : "sgironwatchswarmer" },
 	  { "item" : "sgironwatchgoblinsmg" },
 	  { "item" : "sgironwatchcannon" },
-	  { "item" : "sgironwatchmg" }
+	  { "item" : "sgironwatchsmg" },
+	  { "item" : "sgironwatchmg" },
+	  { "item" : "sgironwatchstrike" }
     ]
   },
 

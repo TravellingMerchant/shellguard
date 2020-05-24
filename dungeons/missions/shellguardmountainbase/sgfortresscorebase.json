@@ -2019,14 +2019,6 @@
                  "height":16,
                  "id":2265,
                  "name":"",
-                 "properties":
-                    {
-                     "parameters":"{\"treasurePools\":[\"basicTreasure\"]}"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2039,14 +2031,6 @@
                  "height":16,
                  "id":2266,
                  "name":"",
-                 "properties":
-                    {
-                     "parameters":"{\"treasurePools\":[\"basicTreasure\"]}"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -2059,14 +2043,6 @@
                  "height":16,
                  "id":2267,
                  "name":"",
-                 "properties":
-                    {
-                     "parameters":"{\"treasurePools\":[\"basicTreasure\"]}"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
                  "rotation":0,
                  "type":"",
                  "visible":true,
