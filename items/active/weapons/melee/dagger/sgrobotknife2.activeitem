@@ -9,7 +9,7 @@
   //"tooltipKind" : "sword",
   "category" : "shortsword",
   "twoHanded" : false,
-  "itemTags" : ["weapon","melee","shortsword"],
+  "itemTags" : ["weapon","melee","shortsword","upgradeableWeapon"],
 
   "inventoryIcon" : "sgrobotknife2.png",
 
@@ -29,5 +29,8 @@
     "baseDps" : 8
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Ironwatch Combat Wrench ^yellow;^reset;"
+  }
 }

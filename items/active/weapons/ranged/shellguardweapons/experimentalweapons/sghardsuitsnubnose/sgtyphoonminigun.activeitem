@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgtyphoonminigun.png:idle",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "Fast fire rate, wildly inacurate. This thing is dangerous.",
+  "description" : "Fast fire rate, wildly inaccurate. This thing is dangerous.",
   "shortdescription" : "Hardsuit Snubnose",
   "level" : 6,
   "tooltipKind" : "sgweapon",

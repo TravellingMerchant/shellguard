@@ -10,7 +10,7 @@
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
   "weaponType" : "Assault Rifle",
-  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "itemTags" : ["weapon","ranged","melee","quarterstaff","assaultrifle","upgradeableWeapon"],
   "twoHanded" : true,
   
   "animation" : "/items/active/weapons/ranged/gun.animation",

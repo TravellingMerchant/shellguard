@@ -9,7 +9,7 @@
   //"tooltipKind" : "sword",
   "category" : "Lockjaw",
   "twoHanded" : false,
-  "itemTags" : ["weapon"],
+  "itemTags" : ["weapon","whip","upgradeableWeapon","ranged"],
 
   "inventoryIcon" : "sgspikeballlockjaw.png:idle",
   "animation" : "sgwhipspike.animation",
@@ -132,5 +132,8 @@
     //"maxSnagTimeEntities": false
   },
 
-  "builder" : "/items/buildscripts/buildwhip.lua"
+  "builder" : "/items/buildscripts/buildwhip.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Siegebreaker ^yellow;^reset;"
+  }
 }

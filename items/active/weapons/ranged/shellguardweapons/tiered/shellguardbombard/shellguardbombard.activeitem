@@ -9,8 +9,8 @@
   "level" : 1,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
-  "weaponType" : "Rocket Launcher",
-  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "weaponType" : "Grenade Launcher",
+  "itemTags" : ["weapon","ranged","grenadelauncher","upgradeableWeapon"],
   "twoHanded" : true,
   
   "animation" : "/items/active/weapons/ranged/gun.animation",

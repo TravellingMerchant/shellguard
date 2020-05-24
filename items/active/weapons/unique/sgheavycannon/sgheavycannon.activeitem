@@ -8,7 +8,7 @@
   "tooltipKind" : "base",
   "category" : "uniqueWeapon",
   "twoHanded" : true,
-  "itemTags" : ["weapon","ranged","upgradeableWeapon"],
+  "itemTags" : ["weapon","ranged","upgradeableWeapon","assaultrifle","grenadelauncher"],
   "level" : 6,
 
   "inventoryIcon" : "sgheavycannonicon.png",

@@ -4,12 +4,12 @@
   "inventoryIcon" : "sgbayonetpistol.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "Pull the trigger five times for a devastating combo, or hold for continued fire. ",
-  "shortdescription" : "Survivors Guilt",
+  "description" : "Pull the trigger five times for a devastating combo, or hold for continued fire.",
+  "shortdescription" : "Survivor's Guilt",
   "level" : 6,
   "tooltipKind" : "base",
   "category" : "sgcombopistol",
-  "itemTags" : ["weapon","ranged","spear","speargun","gunspear", "upgradeableWeapon"],
+  "itemTags" : ["weapon","ranged","pistol","melee", "upgradeableWeapon"],
   "twoHanded" : false,
 
   "animation" : "/items/active/weapons/melee/speargun/sgbayonetpistol.animation",
@@ -222,7 +222,7 @@
 
   "builder" : "/items/buildscripts/buildweapon.lua",
   "upgradeParameters" : {
-    "shortdescription" : "Survivors Guilt ^yellow;^reset;",
+    "shortdescription" : "Survivor's Guilt ^yellow;^reset;",
     "inventoryIcon" : "sgbayonetpistolelite.png:closed.1",
     "animationParts" : {
     "blade" : "sgbayonetpistolelite.png"

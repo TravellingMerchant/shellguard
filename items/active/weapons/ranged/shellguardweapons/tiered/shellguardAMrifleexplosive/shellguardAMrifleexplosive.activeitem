@@ -9,8 +9,8 @@
   "level" : 6,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
-  "weaponType" : "Assault Rifle",
-  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "weaponType" : "Sniper Rifle",
+  "itemTags" : ["weapon","ranged","sniperrifle","upgradeableWeapon"],
   "twoHanded" : true,
   
   "animation" : "/items/active/weapons/ranged/gun.animation",

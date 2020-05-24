@@ -9,7 +9,7 @@
   "level" : 6,
   "tooltipKind" : "base",
   "category" : "sggunstaff",
-  "itemTags" : ["weapon","ranged","spear","speargun","gunspear", "upgradeableWeapon"],
+  "itemTags" : ["weapon","ranged","melee","spear", "upgradeableWeapon","gold"],
   "twoHanded" : false,
 
   "animation" : "/items/active/weapons/melee/speargun/sgrapiergun.animation",

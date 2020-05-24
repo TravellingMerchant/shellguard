@@ -7,9 +7,9 @@
   "description" : "A huge hunk of metal, made to be swung by powerful robots.",
   "shortdescription" : "Ironwatch Mace",
   //"tooltipKind" : "sword",
-  "category" : "broadsword",
+  "category" : "hammer",
   "twoHanded" : true,
-  "itemTags" : ["weapon","melee","broadsword"],
+  "itemTags" : ["weapon","melee","hammer","upgradeableWeapon"],
 
   "inventoryIcon" : "sgrobotcleaver.png",
 
@@ -40,5 +40,8 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Ironwatch Mace ^yellow;^reset;"
+  }
 }

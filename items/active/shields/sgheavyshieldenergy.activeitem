@@ -5,11 +5,11 @@
   "maxStack" : 1,
   "rarity" : "Legendary",
   "category" : "shield",
-  "description" : "An alien shield that shares a striking resembalance to Shellguard's energy.",
+  "description" : "An alien shield that shares a striking resembalance to Shellguard's energy shield.",
   "shortdescription" : "Energy Barrier",
   "tooltipKind" : "Shield",
   "twoHanded" : false,
-  "itemTags" : ["shield"],
+  "itemTags" : ["shield","upgradeableWeapon"],
 
   "inventoryIcon" : "images/sgheavyenergyshield.png:nearidle",
 
@@ -58,5 +58,8 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandshield.lua"
+  "builder" : "/items/buildscripts/buildunrandshield.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Energy Barrier ^yellow;^reset;"
+  }
 }

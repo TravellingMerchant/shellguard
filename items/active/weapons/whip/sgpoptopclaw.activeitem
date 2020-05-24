@@ -9,7 +9,7 @@
   "tooltipKind" : "sgweapon",
   "category" : "Lockjaw",
   "twoHanded" : true,
-  "itemTags" : ["weapon"],
+  "itemTags" : ["weapon","ranged","shotgun","upgradeableWeapon"],
   "handGrip" : "wrap",
 
   "inventoryIcon" : "sgpoptopclaw.png:idle",
@@ -235,5 +235,8 @@
     }
   },
 
-  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Poptop Shotjaw ^yellow;^reset;"
+  }
 }
