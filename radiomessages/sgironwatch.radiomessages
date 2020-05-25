@@ -55,7 +55,7 @@
     "type" : "mission",
     "senderName" : "Ketos",
     "portraitImage" : "/interface/chatbubbles/sgketos.png",
-    "text" : "Ok, you're inside the Miniknog base. I know you managed to defeat one of our number: Survivor, but you should still be careful."
+    "text" : "Ok, you're inside the Miniknog base. I know you managed to defeat one of our number and to do that you must have been strong, but you should still be careful."
   },
   
   "sgironintro6" : {
@@ -135,6 +135,21 @@
     "portraitImage" : "/interface/chatbubbles/sgcrystaleye.png",
     "text" : "^red;Y O U.  W I L L.  D I E.  F O R.  B I G.  A P E."
   },
+
+  "sgketossurvivor1" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "You know, I was the one who gave Survivor his callsign. He was a stubborn man, but a fine mercenary with a drive like no other. He knew how to get things done."
+  },
+
+  "sgketossurvivor2" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "It's a shame he went crazy. I hope you'll be a suitable replacement."
+  },
+
 
 //----------- Railshooter --------
   
