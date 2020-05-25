@@ -1,5 +1,5 @@
 {
-//-----------templates--------
+//----------- Templates --------
   
   "sgtemplateketos" : {
     "type" : "mission",
@@ -21,8 +21,122 @@
     "portraitImage" : "/interface/chatbubbles/sg25.png",
     "text" : "Hello world."
   },
+//--------- Introduction ----------
 
-//-----------Railshooter--------
+  "sgironintro1" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Ok, this mission will be a test to see if you're good enough to enter Ironwatch. I am Ketos. I'll be your handler, should you survive the test."
+  },
+
+  "sgironintro2" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "Oh! Hello, hello, hello! I'm Capricorn 25! You must be the new guy who took down Mr. Grumpy. You HAVE to tell me about that fight! Like, every little detail! Yeah!"
+  },
+  
+  "sgironintro3" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "C25, settle down! You don't want to overwhelm them. Sorry Newbie, C25 is a little... eager sometimes. I'm Capricorn 24."
+  },
+
+  "sgironintro4" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "The three of us will guiding you from here on out."
+  },
+
+  "sgironintro5" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Ok, you're inside the Miniknog base. I know you managed to defeat one of our number: Survivor, but you should still be careful."
+  },
+  
+  "sgironintro6" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Overconfidence will get you killed. The scientist you're here to stop is a completely different breed of crazy."
+  },
+
+  "sgironintro7" : {
+    "type" : "mission",
+    "senderName" : "Experiment",
+    "portraitImage" : "/interface/chatbubbles/sgcrystaleye.png",
+    "text" : "^red;L E A V E.  T H I S.  P L A C E."
+  },
+  
+  "sgironintro8" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Case in point. Don't die Newbie, or Ketos will stick me with the paperwork."
+  },
+  
+  "sgironresearch1" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "You're entering the research wing. The Miniknog here have been experimenting with Erchius, trying to create some powerful new military assets. The latest intel shows that the head researcher here has managed to fuse themselves with a crystal."
+  },
+  
+  "sgironresearch2" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "That must have been the scary voice we heard earlier! You can't let these Miniknog continue. You should go break that beasts face!"
+  },
+
+  "sgironresearch3" : {
+    "type" : "mission",
+    "senderName" : "Experiment",
+    "portraitImage" : "/interface/chatbubbles/sgcrystaleye.png",
+    "text" : "^red;N O.  W E.  B R E A K.  Y O U."
+  },
+  
+  "sgironorigin1" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "This trial mission may seem hard, but at least you didn't have to sit through 56 painful hours of robotic enhancement surgery like I did!"
+  },
+
+  "sgironorigin2" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Wait, what? My surgery only took three hours. How in the world did yours take 56?"
+  },
+
+  "sgironorigin3" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "Turns out smuggling in my pet poptop as an emotional support animal wasn't the brightest idea. All I'm going to say is that the surgeon had nightmares for weeks afterwards."
+  },
+
+  "sgcrystalminers" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "These people have been experimented on, twisted into something terrible. It's no wonder we were hired to stop this."
+  },
+
+
+  "sgcrystalbossstart" : {
+    "type" : "mission",
+    "senderName" : "Experiment",
+    "portraitImage" : "/interface/chatbubbles/sgcrystaleye.png",
+    "text" : "^red;Y O U.  W I L L.  D I E.  F O R.  B I G.  A P E."
+  },
+
+//----------- Railshooter --------
   
   "sgrail1" : {
     "type" : "mission",
@@ -186,7 +300,7 @@
   },
   
 
-//-----------Railshooter--------
+//----------- Ocean 1 --------
 
   "sgoceanintro1" : {
     "type" : "mission",

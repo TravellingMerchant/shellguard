@@ -1,0 +1,10 @@
+{
+  "projectileName" : "sgcrystalbeamdamage",
+  "piercing" : true,
+  "timeToLive" : 0.01,
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "power" : 5,
+  "damagePoly" : [ [0, -5], [0, 5], [140, 5], [140, -5] ],
+  "damageKind" : "plasma"
+}

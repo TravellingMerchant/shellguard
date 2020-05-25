@@ -26,24 +26,24 @@
       "/monsters/boss/sgcrystalboss/crystalbossreset.lua"
     ],
 
-    "skillCount" : 7,
-    "skills" : [ "sgcrystalIdleAttack" , "sgcrystalShatterAttack", "sgcrystalSingleBeamAttack", "sgcrystalbouncers", "sgcrystalspawnerbug", "sgcrystalhoming", "sgcrystalhomingburst" ],
+    "skillCount" : 8,
+    "skills" : [ "sgcrystalIdleAttack" , "sgcrystalShatterAttack", "sgcrystalSingleBeamAttack", "sgcrystalbouncers", "sgcrystalspawnerbug", "sgcrystalhoming", "sgcrystalhomingburst", "sgcrystalrustickattack" ],
 
     "phases" : [
       {
-        "skills" : ["sgcrystalIdleAttack", "sgcrystalSingleBeamAttack", "sgcrystalhoming", "sgcrystalbouncers", "sgcrystalspawnerbug" ]
+        "skills" : ["sgcrystalIdleAttack", "sgcrystalSingleBeamAttack", "sgcrystalhoming", "sgcrystalbouncers", "sgcrystalSingleBeamAttack", "sgcrystalspawnerbug" ]
       },
       {
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.8,
         "enterPhase" : "sgcrystalShatterAttack",
-        "skills" : [ "sgcrystalIdleAttack", "sgcrystalhoming", "sgcrystalhoming", "sgcrystalhoming", "sgcrystalSingleBeamAttack", "sgcrystalspawnerbug", "sgcrystalspawnerbug", "sgcrystalbouncers", "sgcrystalIdleAttack", "sgcrystalIdleAttack"  ]
+        "skills" : [ "sgcrystalIdleAttack", "sgcrystalrustickattack", "sgcrystalhoming", "sgcrystalhoming", "sgcrystalhoming", "sgcrystalSingleBeamAttack", "sgcrystalspawnerbug", "sgcrystalspawnerbug", "sgcrystalbouncers", "sgcrystalbouncers",  "sgcrystalIdleAttack", "sgcrystalrustickattack", "sgcrystalIdleAttack"  ]
       },
       {
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.4,
         "enterPhase" : "sgcrystalShatterAttack",
-        "skills" : [ "sgcrystalIdleAttack", "sgcrystalhomingburst" ]
+        "skills" : [ "sgcrystalIdleAttack", "sgcrystalhomingburst", "sgcrystalrustickattack", "sgcrystalrustickattack", "sgcrystalbouncers", "sgcrystalbouncers", "sgcrystalspawnerbug", "sgcrystalSingleBeamAttack" ]
       }
     ],
 
@@ -117,10 +117,10 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 2500
+          "baseValue" : 3300
         },
         "protection" : {
-          "baseValue" : 50
+          "baseValue" : 10
         },
         "healthRegen" : {
           "baseValue" : 0.0

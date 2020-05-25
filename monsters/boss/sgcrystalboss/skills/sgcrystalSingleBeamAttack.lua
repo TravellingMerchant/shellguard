@@ -96,7 +96,7 @@ function sgcrystalSingleBeamAttack.spawnProjectiles(angle, power)
   for x = 0, 1 do
     local newAngle = angle + math.pi * x
     local aimVector = {math.cos(newAngle), math.sin(newAngle)}
-    world.spawnProjectile("crystalbeamdamage", mcontroller.position(), entity.id(), aimVector, true, {power = power, damageRepeatGroup = "crystalbossbeam"})
+    world.spawnProjectile("sgcrystalbeamdamage", mcontroller.position(), entity.id(), aimVector, true, {power = power, damageRepeatGroup = "crystalbossbeam"})
   end
 end
 

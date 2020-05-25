@@ -1,0 +1,18 @@
+{
+  "projectileName" : "sgcrystalrustickspawner",
+  "image" : "moontantspawn.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 3,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [150, 0, 150],
+  "actionOnReap" : [
+    {
+      "action" : "spawnmonster",
+      "type" : "sgcrystalrustick",
+      "offset" : [0, 2]
+    }
+  ],
+  "power" : 0,
+  "speed" : 50,
+  "damageKind" : "default"
+}

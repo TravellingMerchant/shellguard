@@ -1,0 +1,10 @@
+{
+  "name" : "rustick",
+  "category" : "sgcrystalrustick",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "rustick.png",
+    "bodyfullbright" : "rustickfullbright.png"
+  }
+}

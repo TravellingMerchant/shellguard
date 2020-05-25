@@ -6,7 +6,7 @@
   "image" : "erchiusbomb.png",
   "lightColor" : [175, 89, 210],
   "animationCycle" : 0.5,
-  "speed" : 25,
+  "speed" : 15,
   "frameNumber" : 1,
   "actionOnReap" : [
     {
