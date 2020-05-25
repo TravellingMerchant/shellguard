@@ -1,0 +1,12 @@
+{
+  "frameGrid" : {
+    "size" : [221, 221],
+    "dimensions" : [3, 3],
+
+    "names" : [
+      [ null, "stage1"],
+      [ null, "stage2"],
+      [ null, "stage3"]
+    ]
+  }
+}

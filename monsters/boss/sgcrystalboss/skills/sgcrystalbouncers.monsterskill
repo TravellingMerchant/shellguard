@@ -1,0 +1,14 @@
+{
+  "name" : "sgcrystalbouncers",
+  "label" : "",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgcrystalboss/skills/sgcrystalbouncers.lua" ],
+    "sgcrystalbouncers" : {
+    	"spawnAngle" : 0.75,
+    	"rotateInterval" : 0.1,
+    	"rotateAngle" : 0.05
+    }
+  }
+}

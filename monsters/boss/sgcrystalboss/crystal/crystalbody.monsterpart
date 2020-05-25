@@ -1,0 +1,9 @@
+{
+  "name" : "crystalbody",
+  "category" : "sgcrystalboss",
+  "type" : "shell",
+
+  "frames" : {
+    "shell" : "crystalbody.png"
+  }
+}

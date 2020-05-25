@@ -1,0 +1,9 @@
+{
+  "name" : "triplod-head",
+  "category" : "sgcrystalbug",
+  "type" : "head",
+
+  "frames" : {
+    "head" : "triplod-head.png"
+  }
+}

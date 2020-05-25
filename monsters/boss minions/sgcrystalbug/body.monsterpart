@@ -1,0 +1,9 @@
+{
+  "name" : "triplod-body",
+  "category" : "sgcrystalbug",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "triplod-body.png"
+  }
+}

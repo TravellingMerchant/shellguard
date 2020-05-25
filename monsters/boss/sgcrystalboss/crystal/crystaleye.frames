@@ -1,0 +1,14 @@
+{
+  "frameGrid" : {
+    "size" : [55, 55],
+    "dimensions" : [14, 5],
+
+    "names" : [
+      [ null, "idle"],
+      [ null, "windup.1", "windup.2", "windup.3", "windup.4", "windup.5", "windup.6"],
+      [ null, "fire"],
+      [ null, "winddown.1", "winddown.2", "winddown.3", "winddown.4"],
+      [ null, "hurt.1", "hurt.2", "hurt.3", "hurt.4", "hurt.5", "hurt.6", "hurt.7", "hurt.8", "hurt.9", "hurt.10", "hurt.11", "hurt.12", "hurt.13" ]
+    ]
+  }
+}

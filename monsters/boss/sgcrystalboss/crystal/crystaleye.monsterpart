@@ -1,0 +1,9 @@
+{
+  "name" : "crystaleye",
+  "category" : "sgcrystalboss",
+  "type" : "eye",
+
+  "frames" : {
+    "eye" : "crystaleye.png"
+  }
+}

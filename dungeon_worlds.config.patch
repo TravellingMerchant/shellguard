@@ -224,6 +224,24 @@
   
   {
     "op" : "add",
+    "path" : "/sgironwatchspace",
+    "value" : {
+    "primaryDungeon" : "sgironwatchspace",
+    "threatLevel" : 10,
+    "gravity" : 80,
+    "worldSize" : [2500, 2000],
+    "dungeonBaseHeight" : 1000,
+    "dungeonSurfaceHeight" : 810,
+    "ambientLightLevel" : [32, 32, 32],
+    "musicTrack" : "/music/housecleaning.ogg",
+    "environmentStatusEffects" : ["dontstarve"],
+    "worldEdgeForceRegions" : "TopAndBottom",
+    "biome" : "space"
+    }
+  },
+  
+  {
+    "op" : "add",
     "path" : "/sgfortress",
     "value" : {
     "primaryDungeon" : "sgfortress",

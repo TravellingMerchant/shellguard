@@ -1,0 +1,68 @@
+{
+  "projectileName" : "sgcrystalhomingburst",
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/gun/shellbulletimpact.ogg"
+      ]
+    }
+  ],
+  "image" : "sgufoshockbomb.png",
+  "movementSettings" : {
+    "gravityMultiplier" : 0
+  },
+  "animationCycle" : 0.15,
+  "frameNumber" : 4,
+  "bounces" : 5,
+  "pointLight" : true,
+  "fullbright" : true,
+  "lightColor" : [200, 50, 50],
+  "actionOnReap" : [
+	{
+      "action" : "spark"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/fire_out.ogg" ]
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion/regularexplosion.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgerchiusbouncer",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 1,
+      "angleAdjust" : 180
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgerchiusbouncer",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 1,
+      "angleAdjust" : -160
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgerchiusbouncer",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 1,
+      "angleAdjust" : 160
+    }
+  ],
+
+  "emitters" : [ "rocketsmoke" ],
+  "damageKindImage" : "icon.png",
+  "timeToLive" : 7,
+  "power" : 20,
+  "speed" : 10,
+  "damageKind" : "bow",
+  "scripts" : [ "sgufoshockbomb.lua" ],
+  "baseHomingControlForce" : 2
+}

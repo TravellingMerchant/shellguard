@@ -1,0 +1,9 @@
+{
+  "name" : "beam2",
+  "category" : "sgcrystalboss",
+  "type" : "beam2",
+
+  "frames" : {
+    "beam2" : "crystalbeam.png"
+  }
+}

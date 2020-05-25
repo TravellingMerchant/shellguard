@@ -1,0 +1,602 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "crystalhum" : {
+        "priority" : 1,
+        "default" : "on",
+        "states" : {
+          "off" : {
+          },
+          "on" : {
+            "properties" : {
+              "persistentSound" : "/sfx/npc/boss/crystalboss_hum.ogg",
+              "persistentSoundRangeMultiplier" : 1.5
+            }
+          }
+        }
+      },
+
+      "shell" : {
+        "priority" : 1,
+        "default" : "stage1",
+        "states" : {
+          "stage1" : {
+            "frames" : 1
+          },
+          "stage2" : {
+            "frames" : 1
+          },
+          "stage3" : {
+            "frames" : 1
+          }
+        }
+      },
+
+      "organs" : {
+        "priority" : 1,
+        "default" : "six",
+        "states" : {
+          "six" : {
+            "frames" : 6,
+            "cycle" : 2,
+            "mode" : "loop"
+          },
+          "five" : {
+            "frames" : 6,
+            "cycle" : 2,
+            "mode" : "loop"
+          },
+          "four" : {
+            "frames" : 6,
+            "cycle" : 2,
+            "mode" : "loop"
+          },
+          "three" : {
+            "frames" : 6,
+            "cycle" : 2,
+            "mode" : "loop"
+          },
+          "two" : {
+            "frames" : 6,
+            "cycle" : 2,
+            "mode" : "loop"
+          },
+          "one" : {
+            "frames" : 6,
+            "cycle" : 2,
+            "mode" : "loop"
+          },
+          "hurt" : {
+            "frames" : 2,
+            "cycle" : 0.5,
+            "mode" : "loop"
+          }
+        }
+      },
+
+      "eye" : {
+        "priority" : 1,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "windup" : {
+            "frames" : 6,
+            "cycle" : 0.6,
+            "mode" : "transition",
+            "transition" : "attack"
+          },
+          "attack" : {
+            "frames" : 1,
+            "cycle" : 1,
+            "mode" : "loop"
+          },
+          "winddown" : {
+            "frames" : 4,
+            "cycle" : 0.6,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "hurt" : {
+            "frames" : 1,
+            "cycle" : 1,
+            "mode" : "loop"
+          }
+        }
+      },
+
+      "beamglow" : {
+        "priority" : 0,
+        "default" : "off",
+        "states" : {
+          "off" : {
+            "frames" : 1
+          },
+          "on" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+            "mode" : "loop"
+          }
+        }
+      },
+      "firstBeams" : {
+        "priority" : 0,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "windup" : {
+            "frames" : 4,
+            "cycle" : 0.6,
+            "mode" : "transition",
+            "transition" : "active",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/crystalboss_beamin.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
+          },
+          "active" : {
+            "frames" : 8,
+            "cycle" : 0.66,
+            "mode" : "loop",
+            "properties" : {
+              "persistentSound" : "/sfx/npc/boss/crystalboss_beam.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
+          },
+          "winddown" : {
+            "frames" : 4,
+            "cycle" : 0.6,
+            "mode" : "transition",
+            "transition" : "idle",
+            "properties" : {
+              "immediateSound" : "/sfx/npc/boss/crystalboss_beamout.ogg",
+              "immediateSoundRangeMultiplier" : 1.5
+            }
+          }
+        }
+      },
+      "secondBeams" : {
+        "priority" : 0,
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 1
+          },
+          "windup" : {
+            "frames" : 4,
+            "cycle" : 0.6,
+            "mode" : "transition",
+            "transition" : "active"
+          },
+          "active" : {
+            "frames" : 8,
+            "cycle" : 0.66,
+            "mode" : "loop"
+          },
+          "winddown" : {
+            "frames" : 4,
+            "cycle" : 0.6,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "organs" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 4,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "organs" : {
+            "six" : {
+              "properties" : {
+                "image" : "<partImage>:six.<frame>"
+              }
+            },
+            "five" : {
+              "properties" : {
+                "image" : "<partImage>:five.<frame>"
+              }
+            },
+            "four" : {
+              "properties" : {
+                "image" : "<partImage>:four.<frame>"
+              }
+            },
+            "three" : {
+              "properties" : {
+                "image" : "<partImage>:three.<frame>"
+              }
+            },
+            "two" : {
+              "properties" : {
+                "image" : "<partImage>:two.<frame>"
+              }
+            },
+            "one" : {
+              "properties" : {
+                "image" : "<partImage>:one.<frame>"
+              }
+            },
+            "hurt" : {
+              "properties" : {
+                "image" : "<partImage>:hurt.<frame>"
+              }
+            }
+          }
+        }
+      },
+
+      "shell" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 3,
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "shell" : {
+            "stage1" : {
+              "properties" : {
+                "image" : "<partImage>:stage1"
+              }
+            },
+            "stage2" : {
+              "properties" : {
+                "image" : "<partImage>:stage2"
+              }
+            },
+            "stage3" : {
+              "properties" : {
+                "image" : "<partImage>:stage3"
+              }
+            }
+          }
+        }
+      },
+
+      "bodyglow" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 4,
+          "rotationGroup" : "all",
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "beamglow" : {
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>:<frame>"
+              }
+            }
+          }
+        }
+      },
+
+      "eye" : {
+        "properties" : {
+          "centered" : true,
+          "zLevel" : 2,
+          "offset" : [-0.5, 0.125],
+          "rotationGroup" : "all"
+        },
+
+        "partStates" : {
+          "eye" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle"
+              }
+            },
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "attack" : {
+              "properties" : {
+                "image" : "<partImage>:fire"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            },
+            "hurt" : {
+              "properties" : {
+                "image" : "<partImage>:hurt.<frame>"
+              }
+            }
+          }
+        }
+      },
+
+      "beam1" : {
+        "properties" : {
+          "centered" : false,
+          "offset" : [-2, -40],
+          "rotationGroup" : "beam1",
+          "zLevel" : 1,
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "firstBeams" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:invisible"
+              }
+            },
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "<partImage>:active.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "beam2" : {
+        "properties" : {
+          "centered" : false,
+          "offset" : [-2, -40],
+          "rotationGroup" : "beam2",
+          "zLevel" : 1,
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "firstBeams" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:invisible"
+              }
+            },
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "<partImage>:active.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "beam3" : {
+        "properties" : {
+          "centered" : false,
+          "offset" : [-2, -40],
+          "rotationGroup" : "beam3",
+          "zLevel" : 1,
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "secondBeams" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:invisible"
+              }
+            },
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "<partImage>:active.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            }
+          }
+        }
+      },
+      "beam4" : {
+        "properties" : {
+          "centered" : false,
+          "offset" : [-2, -40],
+          "rotationGroup" : "beam4",
+          "zLevel" : 1,
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "secondBeams" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:invisible"
+              }
+            },
+            "windup" : {
+              "properties" : {
+                "image" : "<partImage>:windup.<frame>"
+              }
+            },
+            "active" : {
+              "properties" : {
+                "image" : "<partImage>:active.<frame>"
+              }
+            },
+            "winddown" : {
+              "properties" : {
+                "image" : "<partImage>:winddown.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "rotationGroups" : {
+    "all" : {
+      "angularVelocity" : 55
+    },
+    "beam1" : {
+      "angularVelocity" : 45.75
+    },
+    "beam2" : {
+      "angularVelocity" : 45.75
+    },
+    "beam3" : {
+      "angularVelocity" : 45.75
+    },
+    "beam4" : {
+      "angularVelocity" : 45.75
+    }
+  },
+
+  "particleEmitters" : {
+    "damage" : {
+      "emissionRate" : 0.7,
+      "particles" : [
+      ]
+    },
+
+    "deathPoof" : {
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/puff2c/puff2c.animation",
+            "size" : 1,
+            "angularVelocity" : 35,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0, 0],
+            "approach" : [1, 1],
+            "timeToLive" : 0.4,
+            "layer" : "middle"
+          }
+        }
+      ]
+    }
+  },
+
+  "sounds" : {
+    "turnHostile" : [  ],
+    "deathPuff" : {
+      "pool" : [ "/sfx/npc/enemydeathpuff.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "shatter" : {
+      "pool" : [ "/sfx/objects/vase_break_large1.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "hurt" : {
+      "pool" : [ "/sfx/npc/boss/crystalboss_pain1.ogg", "/sfx/npc/boss/crystalboss_pain2.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "death" : {
+      "pool" : [ "/sfx/npc/boss/crystalboss_death.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "spawnCharge" : {
+      "pool" : [ "/sfx/npc/boss/crystalboss_spawncharge.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "spawnAdd" : {
+      "pool" : [ "/sfx/npc/boss/crystalboss_spawnmonster.ogg" ],
+      "rangeMultiplier" : 1.5
+    }
+  },
+
+  "lights" : {
+    "glow" : {
+      "active" : true,
+      "position" : [0, 0],
+      "color" : [200, 0, 200],
+      "pointLight" : false
+    },
+    "beam1" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [255, 0, 255],
+      "pointLight" : false
+    },
+    "beam1-2" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [255, 0, 255],
+      "pointLight" : false
+    },
+    "beam2" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [255, 0, 255],
+      "pointLight" : false
+    },
+    "beam2-2" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [255, 0, 255],
+      "pointLight" : false
+    },
+    "beam3" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [255, 0, 255],
+      "pointLight" : false
+    },
+    "beam3-2" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [255, 0, 255],
+      "pointLight" : false
+    },
+    "beam4" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [255, 0, 255],
+      "pointLight" : false
+    },
+    "beam4-2" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [255, 0, 255],
+      "pointLight" : false
+    }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  }
+}
