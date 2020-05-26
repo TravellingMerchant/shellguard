@@ -149,7 +149,27 @@
     "portraitImage" : "/interface/chatbubbles/sgketos.png",
     "text" : "It's a shame he went crazy. I hope you'll be a suitable replacement."
   },
+  
+  "sgcrystaldefeat1" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Great job! Welcome to Ironwatch, Newbie. Use the teleporter and come on back."
+  },
+  
+  "sgcrystaldefeat2" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "Yay! Welcome to the team! That was an awesome fight!"
+  },
 
+  "sgcrystaldefeat3" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Congratulations. It'll be useful to have you around."
+  },
 
 //----------- Railshooter --------
   

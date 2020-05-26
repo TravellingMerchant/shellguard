@@ -55,6 +55,28 @@
 				"animationStates" : {
 					"blade" : "closed"
 				}
+      },  
+      "windup1" : {
+        "duration" : 0.15,
+        "armRotation" : 100,
+        "weaponRotation" : 20,
+        "weaponOffset" : [0, 0],
+        "twoHanded" : false,
+        "allowFlip" : true,
+        "allowRotate" : false,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "open"
+				}
+      },
+      "preslash1" : {
+        "duration" : 0.025,
+        "armRotation" : 50,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false
       },
       "fire1" : {
         "duration" : 0.3,
