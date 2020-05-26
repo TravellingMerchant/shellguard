@@ -186,6 +186,8 @@
       }
     },
 
+	"uniqueId" : "sgcrystalboss",
+
     "mouthOffset" : [1.0, -1.5],
     "feetOffset" : [0, -21]
   }

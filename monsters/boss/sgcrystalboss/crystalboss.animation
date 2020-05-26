@@ -530,7 +530,7 @@
       "rangeMultiplier" : 1.5
     },
     "spawnAdd" : {
-      "pool" : [ "/sfx/npc/boss/crystalboss_spawnmonster.ogg" ],
+      "pool" : [ "/sfx/monsters/boss/sgcrystalbossattack1.ogg", "/sfx/monsters/boss/sgcrystalbossattack2.ogg", "/sfx/monsters/boss/sgcrystalbossattack3.ogg", "/sfx/monsters/boss/sgcrystalbossattack4.ogg", "/sfx/monsters/boss/sgcrystalbossattack5.ogg" ],
       "rangeMultiplier" : 1.5
     }
   },
