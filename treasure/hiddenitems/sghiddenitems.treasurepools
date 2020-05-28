@@ -501,6 +501,15 @@
       ]
     }]
   ],
+  
+
+ "sgironwatchmineshotgun" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgironwatchmineshotgun", 1]}
+      ]
+    }]
+  ],
 
 //--------- alien --------------------
 

@@ -21,22 +21,29 @@
     "buyFactor" : 1.0,
     "sellFactor" : 0.2,
     "items" : [
-	  { "item" : "sgquadturretcontroller" },
-	  { "item" : "sgscatterturretcontroller" },
-	  { "item" : "sgironwatchrifle" },
-	  { "item" : "sgironwatchpistol" },
-	  { "item" : "sgbluejack" },
-	  { "item" : "sgscoutjack" },
-	  { "item" : "sgrapidjack" },
-	  { "item" : "sgsnaggletooth" },
-	  { "item" : "sgironwatchbuzzer" },
-	  { "item" : "sgbluerifle" },
-	  { "item" : "sgironwatchswarmer" },
-	  { "item" : "sgironwatchgoblinsmg" },
-	  { "item" : "sgironwatchcannon" },
-	  { "item" : "sgironwatchsmg" },
-	  { "item" : "sgironwatchmg" },
-	  { "item" : "sgironwatchstrike" }
+	 { "item" : { "name" : "sgquadturretcontroller" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgscatterturretcontroller" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgironwatchrifle" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgironwatchpistol" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgbigironwatch" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgbluejack" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgscoutjack" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgrapidjack" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgsnaggletooth" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sggreatpolearm" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgironwatchbuzzer" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgbluerifle" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgironwatchswarmer" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgironwatchgoblinsmg" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgironwatchcannon" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgironwatchsmg" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgironwatchmg" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgironwatchshotgun" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgironwatchsupershotgun" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgironwatchboomer" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgironwatchmoto" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgironwatchdmr" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgironwatchstrike" }, "prerequisiteQuest" : "sgironwatchspacemission" }
     ]
   },
 
@@ -73,10 +80,10 @@
   ],
   
   "offeredQuests" : [
-    "lockjawcourse", "sgvehicletutorial"
+    "sgironwatchspacemission"
   ],
   "turnInQuests" : [
-    "lockjawcourse", "sgvehicletutorial"
+    "sgironwatchspacemission"
   ],
 
   "uniqueId" : "sgironwatchmembers",

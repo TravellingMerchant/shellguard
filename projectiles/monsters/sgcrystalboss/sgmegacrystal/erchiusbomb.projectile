@@ -1,0 +1,34 @@
+{
+  "projectileName" : "sgmegacrystalspawner",
+  "physics" : "laser",
+  "bounces" : -1,
+  "timeToLive" : 0.01,
+  "image" : "erchiusbomb.png",
+  "lightColor" : [175, 89, 210],
+  "animationCycle" : 0.5,
+  "speed" : 25,
+  "frameNumber" : 1,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion/regularexplosion.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgmegacrystal",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 1,
+      "angleAdjust" : 35
+    },
+    {
+      "action" : "projectile",
+      "type" : "sgmegacrystal",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 1,
+      "angleAdjust" : -35
+    }
+  ],
+  "power" : 50,
+  "damageType" : "NoDamage",
+  "damageKind" : "default"
+}

@@ -198,7 +198,7 @@
               "properties" : {
                 "image" : "/items/active/weapons/melee/broadsword/swoosh/electricswoosh.png:<frame>",
                 "offset" : [2.25, 1],
-                "damageArea" : [[-4.75, 1.5], [4.5, 1], [4.5, -2], [-4.75, -2.5]]
+                "damageArea" : [[-5.75, 1.5], [4.5, 1], [4.5, -2], [-5.75, -2.5]]
               }
             },
             "fire3" : {

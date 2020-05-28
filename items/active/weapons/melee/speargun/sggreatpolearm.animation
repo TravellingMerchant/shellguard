@@ -1,0 +1,320 @@
+{
+  "globalTagDefaults" : {
+    "paletteSwaps" : ""
+  },
+
+  "animatedParts" : {
+    "stateTypes" : {
+      "swoosh" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+          },
+          "fire" : {
+            "frames" : 3,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "fire2" : {
+            "frames" : 3,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "fire3" : {
+            "frames" : 3,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "fire4" : {
+            "frames" : 3,
+            "cycle" : 0.1,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      },
+			"blade" : {
+				"default" : "closed",
+				"states" : {
+					"closed" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "loop"
+					},
+					"open" : {
+            "frames" : 3,
+            "cycle" : 0.35,
+            "mode" : "transition",
+            "transition" : "opened"
+					},
+					"opened" : {
+            "frames" : 1,
+            "cycle" : 0.1,
+            "mode" : "loop"
+					},
+					"close" : {
+            "frames" : 3,
+            "cycle" : 0.35,
+            "mode" : "transition",
+            "transition" : "closed"
+					}
+				}
+			},
+      "firing" : {
+        "default" : "off",
+        "states" : {
+          "off" : {},
+          "fire" : {
+            "frames" : 2,
+            "cycle" : 0.07,
+            "mode" : "transition",
+            "transition" : "off"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "blade" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "image" : "<partImage><paletteSwaps>?<directives>?<bladeDirectives>",
+          "offset" : [0, 1.875],
+          "transformationGroups" : ["weapon"],
+          "rotationCenter" : [0, 0],
+          "damageArea" : [ [-0.7, -1.0], [-0.7, 2.5], [0.5, 2.5], [0.5, -1.0] ],
+          "projectileFirePoint" : [0.0, 3.0]
+        },
+
+        "partStates" : {
+          "blade" : {
+            "closed" : {
+              "properties" : {
+                "image" : "<partImage>:closed.<frame><paletteSwaps>?<directives>?<bladeDirectives>"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:open.<frame><paletteSwaps>?<directives>?<bladeDirectives>"
+              }
+            },
+            "opened" : {
+              "properties" : {
+                "image" : "<partImage>:opened.<frame><paletteSwaps>?<directives>?<bladeDirectives>"
+              }
+            },
+            "close" : {
+              "properties" : {
+                "image" : "<partImage>:close.<frame><paletteSwaps>?<directives>?<bladeDirectives>"
+              }
+            }
+          }
+        }
+      },
+      "bladefullbright" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+          "image" : "<partImage><paletteSwaps>?<directives>?<bladeDirectives>",
+          "offset" : [0, 1.875],
+          "transformationGroups" : ["weapon"],
+          "rotationCenter" : [0, 0],
+          "damageArea" : [ [-0.7, -1.0], [-0.7, 2.5], [0.5, 2.5], [0.5, -1.0] ],
+          "projectileFirePoint" : [0.0, 3.0]
+        },
+
+        "partStates" : {
+          "blade" : {
+            "closed" : {
+              "properties" : {
+                "image" : "<partImage>:closed.<frame><paletteSwaps>?<directives>?<bladeDirectives>"
+              }
+            },
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:open.<frame><paletteSwaps>?<directives>?<bladeDirectives>"
+              }
+            },
+            "opened" : {
+              "properties" : {
+                "image" : "<partImage>:opened.<frame><paletteSwaps>?<directives>?<bladeDirectives>"
+              }
+            },
+            "close" : {
+              "properties" : {
+                "image" : "<partImage>:close.<frame><paletteSwaps>?<directives>?<bladeDirectives>"
+              }
+            }
+          }
+        }
+      },
+      "handle" : {
+        "properties" : {
+          "zLevel" : 2,
+          "centered" : true,
+          "image" : "<partImage><paletteSwaps>?<directives>",
+          "offset" : [0, 1.875],
+          "transformationGroups" : ["weapon"],
+          "rotationCenter" : [0, 0]
+        }
+      },
+      "handlefullbright" : {
+        "properties" : {
+          "zLevel" : 3,
+          "centered" : true,
+          "image" : "<partImage><paletteSwaps>?<directives>",
+          "offset" : [0, 1.875],
+          "transformationGroups" : ["weapon"],
+          "rotationCenter" : [0, 0]
+        }
+      },
+      "swoosh" : {
+        "properties" : {
+          "zLevel" : -2,
+          "centered" : true,
+          "transformationGroups" : ["swoosh"],
+          "rotationCenter" : [0, 0]
+        },
+
+        "partStates" : {
+          "swoosh" : {
+            "idle" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "/items/active/weapons/melee/broadsword/swoosh/sgswoosh.png:<frame>",
+                "offset" : [2.25, 1.25],
+                "damageArea" : [[-4.75, 1.5], [6.5, 1], [6.5, -2], [-4.75, -2.5]]
+              }
+            },
+            "fire2" : {
+              "properties" : {
+                "image" : "/items/active/weapons/melee/broadsword/swoosh/sgswoosh.png:<frame>",
+                "offset" : [2.25, 1],
+                "damageArea" : [[-5.75, 1.5], [6.5, 1], [6.5, -2], [-5.75, -2.5]]
+              }
+            },
+            "fire3" : {
+              "properties" : {
+                "image" : "/items/active/weapons/melee/broadsword/swoosh2/sgswoosh.png:<frame>",
+                "offset" : [7.0, 0],
+                "damageArea" : [[-4.75, 1.5], [6.5, 1], [6.5, -2], [-4.75, -2.5]]
+              }
+            },
+            "fire4" : {
+              "properties" : {
+                "image" : "/items/active/weapons/melee/broadsword/swoosh3/sgswoosh.png:<frame>",
+                "offset" : [4.25, 0],
+                "damageArea" : [[-4.75, 1.5], [6.5, 1], [6.5, -2], [-4.75, -2.5]]
+              }
+            }
+          }
+        }
+      },
+      "muzzleFlash" : {
+        "properties" : {
+          "zLevel" : -1,
+          "centered" : true,
+          "offset" : [0, 5.625],
+          "fullbright" : true,
+          "transformationGroups" : ["weapon"]
+        },
+
+        "partStates" : {
+          "firing" : {
+            "fire" : {
+              "properties" : {
+                "image" : "<partImage>:<variant>.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "weapon" : {},
+    "swoosh" : {}
+  },
+
+  "particleEmitters" : {
+    "physicalswoosh" : {
+      "active" : false,
+      "transformationGroups" : ["swoosh"],
+      "emissionRate" : 1,
+      "burstCount" : 1,
+      "particles" : []
+    },
+    "muzzleFlash" : {
+      "transformationGroups" : ["weapon"],
+      "offsetRegion" : [0, 0, 0, 0],
+      "particles" : [ ]
+    },
+    "fireswoosh" : {
+      "active" : false,
+      "transformationGroups" : ["swoosh"],
+      "emissionRate" : 50,
+      "burstCount" : 4,
+      "particles" : [
+        { "particle" : "fireswoosh1"},
+        { "particle" : "fireswoosh2"},
+        { "particle" : "fireswoosh3"}
+      ]
+    },
+    "electricswoosh" : {
+      "active" : false,
+      "transformationGroups" : ["swoosh"],
+      "emissionRate" : 50,
+      "burstCount" : 3,
+      "particles" : [
+        { "particle" : "electricswoosh1"},
+        { "particle" : "electricswoosh2"},
+        { "particle" : "electricswoosh2"}
+      ]
+    },
+    "poisonswoosh" : {
+      "active" : false,
+      "transformationGroups" : ["swoosh"],
+      "emissionRate" : 50,
+      "burstCount" : 3,
+      "particles" : [
+        { "particle" : "poisonswoosh1"},
+        { "particle" : "poisonswoosh2"},
+        { "particle" : "fireswoosh2"}
+      ]
+    },
+    "iceswoosh" : {
+      "active" : false,
+      "transformationGroups" : ["swoosh"],
+      "emissionRate" : 50,
+      "burstCount" : 3,
+      "particles" : [
+        { "particle" : "iceswoosh1"},
+        { "particle" : "iceswoosh2"},
+        { "particle" : "iceswoosh3"}
+      ]
+    }
+  },
+	
+  "lights" : {
+    "muzzleFlash" : {
+      "active" : false,
+      "position" : [0, 0],
+      "color" : [90, 90, 0]
+    }
+  },
+
+  "sounds" : {
+    "fire" : [ ],
+    "fire2" : [ ],
+    "fire3" : [ ]
+  }
+}

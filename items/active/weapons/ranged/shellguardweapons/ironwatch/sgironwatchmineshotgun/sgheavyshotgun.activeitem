@@ -1,0 +1,130 @@
+{
+  "itemName" : "sgironwatchmineshotgun",
+  "price" : 7000,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "Fires a spread of proximity mines. Charge for range and damage.",
+  "shortdescription" : "Ironwatch Mine Shotgun",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","upgradeableWeapon","shotgun"],
+  "level" : 10,
+
+  "inventoryIcon" : "sgheavyshotgunicon.png",
+
+  "animation" : "sgheavyshotgun.animation",
+  "animationParts" : {
+    "gun" : "sgheavyshotgun.png",
+    "gunfullbright" : "sgheavyshotgunfullbright.png"
+  },
+  "animationCustom" : {},
+  "muzzleOffset" : [3, 0.375],
+  "aimOffset" : -0.5,
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "ice",
+  //COMPATABILITY FOR WFCORE NPCS
+  "wfNpcWeaponData" : {"minRange" : 15, "maxRange" : 25, "forceMoveRange" : 30, "primaryCharge" : 0.2},
+
+  "primaryAbilityType" : "neb-enhancedchargefire",
+  "primaryAbility" : {
+    "name" : "Charged Shot",
+    "scripts" : ["/items/active/weapons/ranged/abilities/neb-enhancedchargefire/neb-enhancedchargefire.lua"],
+    "class" : "NebsEnhancedChargeFire",
+	
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 30,
+        "cooldown" : 1,
+        "projectileType" : "shellgrenadeproximity",
+        "projectileParameters" : {},
+        "projectileCount" : 4,
+        "inaccuracy" : 0.4,
+        "baseDamage" : 8,
+        "spreadAngle" : 2,
+        "fireType" : "single",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
+        //"burstTime" : 0.15,		//delay between shots in the burst
+        //"burstCount" : 1,		//amount of bullets to fire in the burst, must be a integer
+        "fireSound" : "fire"
+	  
+	    //Recoil Stuffs
+	    //"recoilKnockbackVelocity" : 45,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    //"crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
+	    //"crouchRecoilKnockbackVelocity" : 0	//When crouching it uses this instead of recoilKnockbackVelocity
+      },
+      {
+        "time" : 2,
+        "energyCost" : 30,
+        "cooldown" : 0.3,
+        "projectileType" : "shellgrenadeproximity",
+        "projectileParameters" : {
+		  "speed" : 100
+		},
+        "projectileCount" : 4,
+        "inaccuracy" : 0.02,
+        "baseDamage" : 11,
+        "spreadAngle" : 2,
+        "fireType" : "burst",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
+        "burstTime" : 0.15,		//delay between shots in the burst
+        "burstCount" : 1,		//amount of bullets to fire in the burst, must be a integer
+        "fireSound" : "fire",
+	  
+	    //Recoil Stuffs
+	    "recoilKnockbackVelocity" : 20,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    "crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
+	    "crouchRecoilKnockbackVelocity" : 3	//When crouching it uses this instead of recoilKnockbackVelocity
+      }
+    ],
+	//Movement Whilst Charging
+	"walkWhileCharging" : false,		//if false, the player can run normally else if true it just makes the player walk while charging
+	"allowJumping" : true,			//if true allows for jumping while charging if false the player is unable to jump
+	
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : -6,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : -30,
+        "weaponRotation" : 40,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    }
+  },
+  
+
+  "altAbilityType" : "",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Ironwatch Mine Shotgun ^yellow;^reset;"
+  }
+}
