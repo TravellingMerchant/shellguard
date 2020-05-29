@@ -119,7 +119,7 @@
   },
   
 
-  "altAbilityType" : "",
+  "altAbilityType" : "sgpushshot",
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
