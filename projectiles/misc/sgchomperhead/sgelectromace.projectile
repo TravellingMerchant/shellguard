@@ -1,0 +1,71 @@
+{
+  "projectileName" : "sgchomperhead",
+  "image" : "sgelectromace.png",
+  "animationCycle" : 0.3,
+  "animationLoops" : true,
+  "orientationLocked" : true,
+  "frameNumber" : 2,
+  "flippable" : true,
+  "renderLayer" : "Player+1",
+  "damageKindImage" : "icon.png",
+  "emitters" : [ ],
+  "damageKind" : "lash",
+  "damageRepeatTimeout" : 0.3,
+  "damagePoly" : [ [-1.0, -7.0], [-1.0, 7.0], [35.0, 7.0], [35.0, -7.0] ],
+
+  "physics" : "laser",
+  "bounces" : -1,
+  "piercing" : true,
+  "timeToLive" : 5,
+
+  "speed" : 100,
+  "power" : 0,
+  "knockback" : 10,
+  "ignoreTerrain" : false,
+  "controlForce" : 40,
+  "targetTrackingForce" : 200,
+  "pickupDistance" : 0.5,
+  "snapDistance" : 4.0,
+  "minVelocity" : 1,
+
+  "scripts" : [
+    "/scripts/projectiles/boomerangprojectile.lua",
+    "sgelectromace.lua"
+  ],
+
+  "periodicActions" : [
+    {
+      "time" : 0.3,
+      "repeat" : true,
+
+      "action" : "loop",
+      "count" : 1,
+      "body" : [
+	   {
+        "action" : "sound",
+        "options" : [ "/sfx/monsters/smallchomp2.ogg", "/sfx/monsters/smallchomp.ogg", "/sfx/monsters/smallchomp3.ogg" ]
+       }
+      ]
+    }
+  ],
+
+  "actionOnCollide" : [
+    {
+      "action" : "sound",
+      "options" : [
+        "/sfx/melee/fist_hit_metal1.ogg",
+        "/sfx/melee/fist_hit_metal2.ogg",
+        "/sfx/melee/fist_hit_metal3.ogg",
+        "/sfx/melee/fist_hit_metal4.ogg",
+        "/sfx/melee/fist_hit_metal5.ogg",
+        "/sfx/melee/fist_hit_metal6.ogg"
+      ]
+    },
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
+    }
+  ],
+
+  "persistentAudio" : "/sfx/melee/elemental_aura_electric.ogg"
+}
