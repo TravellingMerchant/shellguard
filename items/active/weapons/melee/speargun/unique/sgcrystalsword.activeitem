@@ -9,7 +9,7 @@
   "level" : 10,
   "tooltipKind" : "base",
   "category" : "sggunstaff",
-  "itemTags" : ["weapon","ranged","spear","speargun","gunspear", "upgradeableWeapon"],
+  "itemTags" : ["weapon","melee","broadsword", "upgradeableWeapon"],
   "twoHanded" : true,
 
   "animation" : "/items/active/weapons/melee/speargun/sgcrystalsword.animation",
@@ -204,7 +204,7 @@
 					},
 					"projectileInaccuracy" : 0.1,
 					"projectileAimAngleOffset" : 0,
-          "projectileFirePoint" : [0.0, 0.0]
+					"projectileFirePoint" : [0.0, 0.0]
 				}
       }
     }

@@ -8,7 +8,7 @@
   "tooltipKind" : "base",
   "category" : "uniqueWeapon",
   "twoHanded" : true,
-  "itemTags" : ["weapon","ranged","upgradeableWeapon"],
+  "itemTags" : ["weapon","ranged","upgradeableWeapon","assaultrifle"],
   "level" : 10,
 
   "inventoryIcon" : "sgassaultsmgicon.png",
