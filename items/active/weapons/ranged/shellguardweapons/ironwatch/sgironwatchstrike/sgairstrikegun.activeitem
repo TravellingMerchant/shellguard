@@ -8,7 +8,7 @@
   "tooltipKind" : "base",
   "category" : "uniqueWeapon",
   "twoHanded" : false,
-  "itemTags" : ["weapon","ranged","upgradeableWeapon"],
+  "itemTags" : ["weapon","ranged","upgradeableWeapon","rocketlauncher"],
   "level" : 6,
 
   "inventoryIcon" : "sgairstrikegunicon.png",
