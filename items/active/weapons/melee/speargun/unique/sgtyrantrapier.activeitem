@@ -94,8 +94,8 @@
       },
       "preslash2" : {
         "duration" : 0.025,
-        "armRotation" : 55,
-        "weaponRotation" : -45,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
         "twoHanded" : false,
 
         "allowRotate" : true,
