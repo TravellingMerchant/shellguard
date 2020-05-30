@@ -1,0 +1,45 @@
+{
+  "id" : "sgironwatchspacemission",
+  "prerequisites" : ["sgwreckagemission"],
+  "title" : "^green;Defeat the Miniknog.",
+  "text" : "Hello, we are members of Ironwatch. You defeated one of us, this means that there's a new opening. If you wish to join, we have a trial mission for you, to see if you're good enough.",
+  "completionText" : "Welcome to Ironwatch, Newbie! We'll give you new missions as they pop up. Welcome to the team.",
+  "moneyRange" : [10000, 10000],
+  "rewards" : [
+    [ [ "rewardbag", 2 ], ["sgironwatchrifle", 1 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/ironwatchmembers/ironwatchquesticon.png"} ],
+        "title" : "Ketos"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/ironwatchmembers/ironwatchquesticon.png"} ],
+        "title" : "Ketos"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Ketos.^reset;",
+      "findGoal" : "Defeat the Miniknog.",
+      "turnIn" : "Return to ^orange;Ketos.^reset;"
+    },
+
+    "warpEntityUid" : "sgironwatchmembers",
+    "warpAction" : "instanceworld:sgironwatchspace",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgironwatchmission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgironspacetele",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgironwatchmembers"
+  }
+}

@@ -14,7 +14,6 @@
       "file" : "/projectiles/explosions/regularexplosion/regularexplosion.config"
     }
   ],
-  "power" : 50,
-  "damageType" : "NoDamage",
+  "power" : 80,
   "damageKind" : "default"
 }

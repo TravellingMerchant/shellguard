@@ -309,7 +309,7 @@
     "dungeonSurfaceHeight" : 600,
     "ambientLightLevel" : [32, 32, 32],
       "ambientNoises" : "/sfx/environmental/ocean_surface_stormy.ogg",
-    "musicTrack" : "/music/sgrailidea.ogg",
+    "musicTrack" : "/music/sgrailidea2.ogg",
     "environmentStatusEffects" : ["dontstarve"],
     "worldEdgeForceRegions" : "TopAndBottom",
     "biome" : "sgcentensskycitydark"

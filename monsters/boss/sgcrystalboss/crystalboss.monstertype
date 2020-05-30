@@ -26,8 +26,8 @@
       "/monsters/boss/sgcrystalboss/crystalbossreset.lua"
     ],
 
-    "skillCount" : 8,
-    "skills" : [ "sgcrystalIdleAttack" , "sgcrystalShatterAttack", "sgcrystalSingleBeamAttack", "sgcrystalbouncers", "sgcrystalspawnerbug", "sgcrystalhoming", "sgcrystalhomingburst", "sgcrystalrustickattack" ],
+    "skillCount" : 9,
+    "skills" : [ "sgcrystalIdleAttack" , "sgmegacrystalattack", "sgcrystalShatterAttack", "sgcrystalSingleBeamAttack", "sgcrystalbouncers", "sgcrystalspawnerbug", "sgcrystalhoming", "sgcrystalhomingburst", "sgcrystalrustickattack" ],
 
     "phases" : [
       {
@@ -37,13 +37,13 @@
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.8,
         "enterPhase" : "sgcrystalShatterAttack",
-        "skills" : [ "sgcrystalIdleAttack", "sgcrystalrustickattack", "sgcrystalhoming", "sgcrystalhoming", "sgcrystalhoming", "sgcrystalSingleBeamAttack", "sgcrystalspawnerbug", "sgcrystalspawnerbug", "sgcrystalbouncers", "sgcrystalbouncers",  "sgcrystalIdleAttack", "sgcrystalrustickattack", "sgcrystalIdleAttack"  ]
+        "skills" : [ "sgcrystalIdleAttack", "sgcrystalrustickattack", "sgmegacrystalattack", "sgcrystalhoming", "sgcrystalhoming", "sgcrystalhoming", "sgcrystalSingleBeamAttack", "sgcrystalspawnerbug", "sgcrystalspawnerbug", "sgcrystalbouncers", "sgcrystalbouncers",  "sgcrystalIdleAttack", "sgcrystalrustickattack", "sgcrystalIdleAttack"  ]
       },
       {
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.4,
         "enterPhase" : "sgcrystalShatterAttack",
-        "skills" : [ "sgcrystalIdleAttack", "sgcrystalhomingburst", "sgcrystalrustickattack", "sgcrystalrustickattack", "sgcrystalbouncers", "sgcrystalbouncers", "sgcrystalspawnerbug", "sgcrystalSingleBeamAttack" ]
+        "skills" : [ "sgcrystalIdleAttack", "sgcrystalhomingburst", "sgcrystalrustickattack", "sgcrystalrustickattack", "sgcrystalbouncers", "sgmegacrystalattack", "sgmegacrystalattack", "sgcrystalbouncers", "sgcrystalspawnerbug", "sgcrystalSingleBeamAttack" ]
       }
     ],
 
