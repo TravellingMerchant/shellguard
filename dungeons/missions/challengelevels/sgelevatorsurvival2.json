@@ -4007,44 +4007,6 @@
                 }, 
                 {
                  "height":8,
-                 "id":4551,
-                 "name":"mine",
-                 "properties":
-                    {
-                     "monster":"spinemine"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":6808,
-                 "y":2912
-                }, 
-                {
-                 "height":8,
-                 "id":4552,
-                 "name":"mine",
-                 "properties":
-                    {
-                     "monster":"spinemine"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":6720,
-                 "y":2912
-                }, 
-                {
-                 "height":8,
                  "id":4556,
                  "name":"chiropterror",
                  "properties":
@@ -4463,79 +4425,24 @@
                 }, 
                 {
                  "height":8,
-                 "id":4834,
-                 "name":"mine",
-                 "properties":
-                    {
-                     "monster":"spinemine"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":3072,
-                 "y":3072
-                }, 
-                {
-                 "height":8,
                  "id":4835,
                  "name":"mine",
                  "properties":
                     {
-                     "monster":"spinemine"
+                     "monster":"spinemine",
+                     "parameters":"{\"statusSettings\":{\"stats\":{\"maxHealth\":{\"baseValue\" : 75 }}}}"
                     },
                  "propertytypes":
                     {
-                     "monster":"string"
+                     "monster":"string",
+                     "parameters":"string"
                     },
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":2984,
+                 "x":2912,
                  "y":3072
-                }, 
-                {
-                 "height":8,
-                 "id":4836,
-                 "name":"mine",
-                 "properties":
-                    {
-                     "monster":"spinemine"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":9440,
-                 "y":1800
-                }, 
-                {
-                 "height":8,
-                 "id":4837,
-                 "name":"mine",
-                 "properties":
-                    {
-                     "monster":"spinemine"
-                    },
-                 "propertytypes":
-                    {
-                     "monster":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":9352,
-                 "y":1800
                 }, 
                 {
                  "height":8,
@@ -4688,6 +4595,111 @@
                  "width":8,
                  "x":4064,
                  "y":3840
+                }, 
+                {
+                 "height":8,
+                 "id":4902,
+                 "name":"mine",
+                 "properties":
+                    {
+                     "monster":"spinemine",
+                     "parameters":"{\"statusSettings\":{\"stats\":{\"maxHealth\":{\"baseValue\" : 75 }}}}"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":2984,
+                 "y":3072
+                }, 
+                {
+                 "height":8,
+                 "id":4903,
+                 "name":"mine",
+                 "properties":
+                    {
+                     "monster":"spinemine",
+                     "parameters":"{\"statusSettings\":{\"stats\":{\"maxHealth\":{\"baseValue\" : 75 }}}}"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":6808,
+                 "y":2912
+                }, 
+                {
+                 "height":8,
+                 "id":4904,
+                 "name":"mine",
+                 "properties":
+                    {
+                     "monster":"spinemine",
+                     "parameters":"{\"statusSettings\":{\"stats\":{\"maxHealth\":{\"baseValue\" : 75 }}}}"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":6720,
+                 "y":2912
+                }, 
+                {
+                 "height":8,
+                 "id":4905,
+                 "name":"mine",
+                 "properties":
+                    {
+                     "monster":"spinemine",
+                     "parameters":"{\"statusSettings\":{\"stats\":{\"maxHealth\":{\"baseValue\" : 75 }}}}"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":9520,
+                 "y":1800
+                }, 
+                {
+                 "height":8,
+                 "id":4906,
+                 "name":"mine",
+                 "properties":
+                    {
+                     "monster":"spinemine",
+                     "parameters":"{\"statusSettings\":{\"stats\":{\"maxHealth\":{\"baseValue\" : 75 }}}}"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":9464,
+                 "y":1800
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4741,7 +4753,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":4902,
+ "nextobjectid":4907,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.1",
