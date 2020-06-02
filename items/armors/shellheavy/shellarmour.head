@@ -3,7 +3,7 @@
   "inventoryIcon" : "icons.png:head",
   "maxStack" : 1,
   "price" : 15000,
-  "rarity" : "Common",
+  "rarity" : "legendary",
   "category" : "headarmour",
   "description" : "An extremely old helmet design.",
   "shortdescription" : "Old Guard Helmet",

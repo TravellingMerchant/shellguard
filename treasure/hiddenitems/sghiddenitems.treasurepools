@@ -510,6 +510,22 @@
       ]
     }]
   ],
+  
+ "sgironwatchicecarbine" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgironwatchicecarbine", 1]}
+      ]
+    }]
+  ],
+  
+ "sgheatwavecarbine" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgheatwavecarbine", 1]}
+      ]
+    }]
+  ],
 
 //--------- alien --------------------
 

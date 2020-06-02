@@ -45,7 +45,7 @@ function sgmegacrystalattack.update(dt, stateData)
       local downAngle = -0.5 * math.pi
       local spawnAngle = downAngle + stateData.direction * stateData.spawnAngle
       local aimVector = {math.cos(spawnAngle), math.sin(spawnAngle)}
-      world.spawnProjectile("sgmegacrystalspawner", mcontroller.position(), entity.id(), aimVector, false, {power = 200, level = monster.level()} )
+      world.spawnProjectile("sgmegacrystalspawner", mcontroller.position(), entity.id(), aimVector, false, {power = 250, level = monster.level()} )
 
       self.moontants = self.moontants - 0
       animator.setAnimationState("organs", sgmegacrystalattack.stateNames[self.moontants])

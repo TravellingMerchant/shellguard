@@ -45,7 +45,7 @@ function sgcrystalhoming.update(dt, stateData)
       local downAngle = -0.5 * math.pi
       local spawnAngle = downAngle + stateData.direction * stateData.spawnAngle
       local aimVector = {math.cos(spawnAngle), math.sin(spawnAngle)}
-      world.spawnProjectile("sgcrystalhoming", mcontroller.position(), entity.id(), aimVector, false, {power = 100, level = monster.level()} )
+      world.spawnProjectile("sgcrystalhoming", mcontroller.position(), entity.id(), aimVector, false, {power = 150, level = monster.level()} )
 
       self.moontants = self.moontants - 0
       animator.setAnimationState("organs", sgcrystalhoming.stateNames[self.moontants])

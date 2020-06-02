@@ -1,0 +1,255 @@
+{
+  "globalTagDefaults" : {
+    "hand" : "front",
+    "paletteSwaps" : ""
+  },
+
+  "animatedParts" : {
+    "stateTypes" : {
+      "weapon" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+			"properties" : {}
+		  },
+          "activate" : {
+            "frames" : 4,
+            "cycle" : 0.15,
+            "mode" : "transition",
+            "transition" : "active",
+            "properties" : {}
+          },
+          "stop" : {
+            "frames" : 4,
+            "cycle" : 0.15,
+            "mode" : "transition",
+            "transition" : "idle",
+            "properties" : {}
+          },
+		  "active" : {
+            "frames" : 1,
+            "cycle" : 0.5,
+            "mode" : "loop",
+            "properties" : {}
+          },
+          "defend" : {
+            "frames" : 5,
+            "cycle" : 0.15,
+            "mode" : "transition",
+            "transition" : "defendActive",
+            "properties" : {}
+          },
+          "defendActive" : {
+            "frames" : 1,
+            "cycle" : 0.5,
+            "mode" : "loop",
+            "properties" : {}
+          }
+        }
+      },
+	  "swoosh" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+          },
+          "fire" : {
+            "frames" : 2,
+            "cycle" : 0.07,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "fire2" : {
+            "frames" : 2,
+            "cycle" : 0.07,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "fire3" : {
+            "frames" : 4,
+            "cycle" : 0.125,
+            "mode" : "transition",
+            "transition" : "idle"
+          },
+          "fire4" : {
+            "frames" : 2,
+            "cycle" : 0.07,
+            "mode" : "transition",
+            "transition" : "idle"
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "blade" : {
+        "properties" : {
+          "zLevel" : 0,
+          "centered" : true,
+          "offset" : [0.125, 0.0],
+          "transformationGroups" : ["weapon"],
+          "rotationCenter" : [0, 0],
+          "damageArea" : [ [-0.7, -1.0], [-0.7, 2.5], [0.5, 2.5], [0.5, -1.0] ],
+          "shieldPoly" : [ [-0.5, -2.25], [-0.5, 2.25], [0.75, 1.5], [0.75, -1.5] ],
+          "projectileFirePoint" : [0.0, 1.0],
+          "blastPoint" : [0, 0]
+        },
+        "partStates" : {
+          "weapon" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:<hand>idle<directives>?<bladeDirectives>"
+              }
+            },
+			"activate" : {
+              "properties" : {
+                "image" : "<partImage>:<hand>start.<frame>?<directives>?<bladeDirectives>"
+              }
+            },
+			"stop" : {
+              "properties" : {
+                "image" : "<partImage>:<hand>stop.<frame>?<directives>?<bladeDirectives>"
+              }
+            },
+			"active" : {
+              "properties" : {
+                "image" : "<partImage>:<hand>active.<frame>?<directives>?<bladeDirectives>"
+              }
+            },
+            "defend" : {
+              "properties" : {
+                "image" : "<partImage>:<hand>defend.<frame>?<directives>?<bladeDirectives>"
+              }
+            },
+            "defendActive" : {
+              "properties" : {
+                "image" : "<partImage>:<hand>defendactive.<frame>?<directives>?<bladeDirectives>"
+              }
+            }
+          }
+        }
+      },
+	  "bladeFullbright" : {
+        "properties" : {
+          "zLevel" : 1,
+          "centered" : true,
+		  "fullbright" : true,
+          "offset" : [0.125, 0.0],
+          "transformationGroups" : ["weapon"],
+          "rotationCenter" : [0, 0]
+        },
+        "partStates" : {
+          "weapon" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:<hand>idle<directives>?<bladeDirectives>"
+              }
+            },
+			"activate" : {
+              "properties" : {
+                "image" : "<partImage>:<hand>start.<frame>?<directives>?<bladeDirectives>"
+              }
+            },
+			"stop" : {
+              "properties" : {
+                "image" : "<partImage>:<hand>stop.<frame>?<directives>?<bladeDirectives>"
+              }
+            },
+			"active" : {
+              "properties" : {
+                "image" : "<partImage>:<hand>active.<frame>?<directives>?<bladeDirectives>"
+              }
+            },
+            "defend" : {
+              "properties" : {
+                "image" : "<partImage>:<hand>defend.<frame>?<directives>?<bladeDirectives>"
+              }
+            },
+            "defendActive" : {
+              "properties" : {
+                "image" : "<partImage>:<hand>defendactive.<frame>?<directives>?<bladeDirectives>"
+              }
+            }
+          }
+        }
+      },
+      "swoosh" : {
+        "properties" : {
+          "zLevel" : 3,
+          "centered" : true,
+          "transformationGroups" : ["swoosh"],
+          "rotationCenter" : [0, 0]
+        },
+        "partStates" : {
+          "swoosh" : {
+            "idle" : {
+              "properties" : {
+                "image" : ""
+              }
+            },
+            "fire" : {
+              "properties" : {
+                "image" : "swooshes/muzzleflash.png:<variant>.<frame>",
+                "offset" : [3.125, 0.125],
+				"fullbright" : true,
+                "damageArea" : [[-4.75, 1.5], [3, 1], [3, -1], [-4.75, -1.5]]
+              }
+            },
+            "fire2" : {
+              "properties" : {
+                "image" : "swooshes/muzzleflash.png:<variant>.<frame>",
+                "offset" : [3.125, -0.5],
+				"fullbright" : true,
+                "damageArea" : [[-4.75, 1.5], [3, 1], [3, -1], [-4.75, -1.5]]
+              }
+            },
+            "fire3" : {
+              "properties" : {
+                "image" : "swooshes/shieldbash.png:<frame>",
+                "offset" : [0, -1],
+                "damageArea" : [[-4.75, 1.5], [3, 1], [3, -1], [-4.75, -1.5]]
+              }
+            },
+            "fire4" : {
+              "properties" : {
+                "image" : "swooshes/muzzleflash.png:<variant>.<frame>",
+                "offset" : [2.75, -0.25],
+				"fullbright" : true,
+                "damageArea" : [[-4.75, 1.5], [3, 1], [3, -1], [-4.75, -1.5]]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "transformationGroups" : {
+    "weapon" : {},
+    "swoosh" : {}
+  },
+
+  "particleEmitters" : {
+    "physicalswoosh" : {
+      "active" : false,
+      "transformationGroups" : ["swoosh"],
+	  "offsetRegion" : [3.5, -1.0, 7.5, 1.0],
+      "burstCount" : 4,
+      "particles" : []
+    },
+	"burst" : {
+	  "active" : false,
+	  "transformationGroups" : ["weapon"],
+	  "offsetRegion" : [0.0, -0.25, 0.0, 0.25],
+	  "burstCount" : 30,
+	  "particles" : [ ]
+	}
+  },
+  
+  "lights" : {},
+
+  "sounds" : {
+    "fire" : [ ],
+    "fire2" : [ ],
+    "fire3" : [ ]
+  }
+}

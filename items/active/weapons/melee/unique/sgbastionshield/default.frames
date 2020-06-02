@@ -1,0 +1,22 @@
+{
+  "frameGrid" : {
+    "size" : [20, 31],
+    "dimensions" : [6, 4],
+    "names" : [
+      [ "frontidle", "frontstart.1", "frontstart.2", "frontstart.3", "frontstart.4", "frontactive.1" ],
+	  [ "backidle", "backstart.1", "backstart.2", "backstart.3", "backstart.4", "backactive.1" ],
+	  [ "frontdefend.1", "frontdefend.2", "frontdefend.3", "frontdefend.4", "frontdefend.5", "frontdefendactive.1" ],
+	  [ "backdefend.1", "backdefend.2", "backdefend.3", "backdefend.4", "backdefend.5", "backdefendactive.1" ]
+    ]
+  },
+  "aliases" : {
+    "frontstop.1" : "frontstart.4",
+    "frontstop.2" : "frontstart.3",
+    "frontstop.3" : "frontstart.2",
+    "frontstop.4" : "frontstart.1",
+    "backstop.1" : "backstart.4",
+    "backstop.2" : "backstart.3",
+    "backstop.3" : "backstart.2",
+    "backstop.4" : "backstart.1"
+  }
+}

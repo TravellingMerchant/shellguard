@@ -3,9 +3,9 @@
   "price" : 10000,
   "inventoryIcon" : "sgbayonetpistol.png:closed.1",
   "maxStack" : 1,
-  "rarity" : "Legendary",
+  "rarity" : "Essential",
   "description" : "Pull the trigger five times for a devastating combo, or hold for continued fire.",
-  "shortdescription" : "Survivor's Guilt",
+  "shortdescription" : "^orange;Survivor's Guilt",
   "level" : 6,
   "tooltipKind" : "base",
   "category" : "sgcombopistol",
@@ -222,7 +222,7 @@
 
   "builder" : "/items/buildscripts/buildweapon.lua",
   "upgradeParameters" : {
-    "shortdescription" : "Survivor's Guilt ^yellow;^reset;",
+    "shortdescription" : "^orange;Survivor's Guilt ^yellow;^reset;",
     "inventoryIcon" : "sgbayonetpistolelite.png:closed.1",
     "animationParts" : {
     "blade" : "sgbayonetpistolelite.png"

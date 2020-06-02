@@ -25,6 +25,7 @@
 	 { "item" : { "name" : "sgscatterturretcontroller" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgironwatchrifle" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgironwatchpistol" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgbastion" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgbigironwatch" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgbluejack" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgscoutjack" }, "prerequisiteQuest" : "sgironwatchspacemission" },
