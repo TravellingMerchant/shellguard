@@ -576,7 +576,7 @@
                                                   "offset": {"key": "projectileOffset"},
                                                   "position": {"key": "self"},
                                                   "projectileConfig": {"value": {}},
-                                                  "projectileType": {"value": "dragonblockbuster"},
+                                                  "projectileType": {"value": "sgruincleavershotshort"},
                                                   "scalePower": {"value": true},
                                                   "sourceEntity": {"key": "self"},
                                                   "trackSource": {"value": false}
@@ -892,7 +892,7 @@
                                                     "offset": {"key": "projectileOffset"},
                                                     "position": {"key": "self"},
                                                     "projectileConfig": {"value": {}},
-                                                    "projectileType": {"value": "dragonblockbuster"},
+                                                    "projectileType": {"value": "sgruincleavershotshort"},
                                                     "scalePower": {"value": true},
                                                     "sourceEntity": {"key": "self"},
                                                     "trackSource": {"value": false}
