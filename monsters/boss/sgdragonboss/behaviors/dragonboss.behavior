@@ -1,5 +1,5 @@
 {
-  "name": "dragonboss-reverse",
+  "name": "sgdragonboss",
   "description": "",
   "scripts": [
     "/scripts/actions/entity.lua",
@@ -249,7 +249,7 @@
                           "entity": {"key": "target"}
                         },
                         "output": {
-                          "y": "targetY"
+                          "x": "targetX"
                         }
                       },
                       {
@@ -260,7 +260,7 @@
                           "entity": {"key": "hoverStagehand"}
                         },
                         "output": {
-                          "x": "hoverX"
+                          "y": "hoverY"
                         }
                       },
                       {
@@ -268,7 +268,7 @@
                         "type": "action",
                         "name": "offsetPosition",
                         "parameters": {
-                          "offset": {"value": [ "hoverX", "targetY"]},
+                          "offset": {"value": ["targetX", "hoverY"]},
                           "position": {"value": [0, 0]}
                         },
                         "output": {
@@ -951,9 +951,9 @@
                                       "onSuccess": {"value": true}
                                     },
                                     "child": {
-                                      "title": "dragonboss-breath",
+                                      "title": "sgdragonboss-breath",
                                       "type": "module",
-                                      "name": "dragonboss-breath",
+                                      "name": "sgdragonboss-breath",
                                       "parameters": {
                                         "headRotationCenter": {"key": "<headRotationCenter>"},
                                         "projectileSpawnOffset": {"key": "<projectileSpawnOffset>"}

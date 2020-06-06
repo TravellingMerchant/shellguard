@@ -20,7 +20,7 @@
     "initialScriptDelta" : 1,
     "behaviorUpdateDelta" : 1,
 
-    "behavior" : "dragonboss-reverse",
+    "behavior" : "sgdragonboss",
 
     "damageBar" : "None",
 

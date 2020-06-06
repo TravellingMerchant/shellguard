@@ -3,7 +3,7 @@
   "image" : "mechhomingmissile.png",
   "animationCycle" : 0.2,
   "frameNumber" : 4,
-  "lightColor" : [100, 90, 50],
+  "lightColor" : [255, 114, 14],
   "pointLight" : false,
   "actionOnReap" : [
     {
@@ -12,7 +12,8 @@
     },
     {
       "action" : "sound",
-      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+      "SoundRangeMultiplier" : 40.0,
+      "options" : [ "/sfx/gun/titanboom2.ogg" ]
     },
 	{
       "action" : "projectile",
@@ -31,6 +32,13 @@
       "action" : "projectile",
       "inheritDamageFactor" : 0.5,
       "type" : "spacemineexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "sgartilleryboom",
       "fuzzAngle" : 0,
       "angleAdjust" : 0
     },
@@ -71,7 +79,32 @@
   
   "periodicActions" : [
     {
-      "time" : 0.04,
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "front",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 4,
+		"color" : [255, 114, 14, 255],
+		"collidesForeground" : false,
+		"length" : 21,
+        "position" : [-1.5, 0],
+        "timeToLive" : 0.009,
+        "destructionTime" : 0.3,
+		"initialVelocity" : [0.5, 0],
+		"variance" : {
+		  "size" : 0,
+		  "initialVelocity" : [0.5, -0],
+		  "length" : 0
+		}
+      }
+    },
+    {
+      "time" : 0.02,
       "repeat" : true,
       "action" : "particle",
       "rotate" : true,
@@ -82,7 +115,11 @@
         "timeToLive" : 0.6,
         "size" : 1,
         "layer" : "middle",
-        "position" : [0.0, 0.0]
+        "position" : [0.0, 0.0],
+		"variance" : {
+		  "rotation" : 180,
+		  "initialVelocity" : [0.5, -0]
+		}
       }
     }
   ],
@@ -98,12 +135,18 @@
   "damageKind" : "default",
   
   "movementSettings" : {
-    "gravityMultiplier" : 0.1
+    "gravityMultiplier" : 0.5
   },
 
-  "scripts" : [ "/scripts/projectiles/homingprojectile.lua" ],
-  "scriptDelta" : 3,
-
-  "rotationRate" : 2.5,
-  "trackingLimit" : 2.0
+  "scripts" : [ "/projectiles/scripts/sgswarm.lua.lua" ],
+  "scriptDelta" : 1,
+  "speedEqualsPower" : false,
+  "minHomingControlForce" : 3,
+  "maxHomingControlForce" : 5,
+  "minWavePeriod" : 0.4,
+  "maxWavePeriod" : 0.5,
+  "minWaveAmplitude" : -0.3,
+  "maxWaveAmplitude" : 0.3,
+  
+  "persistentAudio" : "/sfx/tech/tech_rocketboots.ogg"
 }
