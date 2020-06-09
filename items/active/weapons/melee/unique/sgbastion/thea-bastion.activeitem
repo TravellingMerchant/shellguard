@@ -9,7 +9,7 @@
   "tooltipKind" : "base",
   "category" : "Gunshield",
   "twoHanded" : false,
-  "itemTags" : ["weapon","melee","shieldblade", "gunshield","shotgun" ],
+  "itemTags" : ["weapon","melee","ranged","shieldblade", "gunshield","shotgun" ],
 
   //-------- Credit to Nebulox and Aegonian ----------
 
