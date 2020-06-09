@@ -1,0 +1,9 @@
+{
+  "name" : "shelldroidheavy-spotlight",
+  "category" : "sgchombyboss",
+  "type" : "spotlight",
+
+  "frames" : {
+    "spotlight" : "shelldroidheavy-spotlight.png"
+  }
+}
