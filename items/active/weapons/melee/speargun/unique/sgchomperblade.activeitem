@@ -147,8 +147,8 @@
       },
       "preslash2" : {
         "duration" : 0.025,
-        "armRotation" : 55,
-        "weaponRotation" : -45,
+        "armRotation" : 50,
+        "weaponRotation" : 0,
         "twoHanded" : true,
 
         "allowRotate" : true,
@@ -156,16 +156,16 @@
       },
       "wait2" : {
         "duration" : 0.2,
-        "armRotation" : -45,
-        "weaponRotation" : -55,
+        "armRotation" : 50,
+        "weaponRotation" : 0,
         "allowRotate" : false,
         "allowFlip" : true,
         "twoHanded" : true
       },
       "fire2" : {
         "duration" : 0.5,
-        "armRotation" : 0,
-        "weaponRotation" : 90,
+        "armRotation" : -20,
+        "weaponRotation" : -70,
         "twoHanded" : true,
         "weaponOffset" : [0, 0],
 
