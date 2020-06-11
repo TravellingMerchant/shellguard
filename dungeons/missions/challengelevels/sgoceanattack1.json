@@ -5939,26 +5939,6 @@
                  "y":2792
                 }, 
                 {
-                 "gid":9333,
-                 "height":67,
-                 "id":5553,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"uniqueId\" : \"sgweaponstele\" }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":10824,
-                 "y":1768
-                }, 
-                {
                  "gid":2147491088,
                  "height":20,
                  "id":5554,
@@ -6843,6 +6823,26 @@
                  "width":16,
                  "x":1632,
                  "y":2056
+                }, 
+                {
+                 "gid":10075,
+                 "height":67,
+                 "id":5643,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"uniqueId\" : \"sgoceantele1\" }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":10824,
+                 "y":1768
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -8316,7 +8316,7 @@
          "y":0
         }],
  "nextlayerid":14,
- "nextobjectid":5642,
+ "nextobjectid":5644,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.1",

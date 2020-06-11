@@ -3,10 +3,10 @@
   "price" : 3000,
   "inventoryIcon" : "sgtyphoonminigun.png:idle",
   "maxStack" : 1,
-  "rarity" : "legendary",
+  "rarity" : "Essential",
   "description" : "Shoots timed homing rocket grenades. Can double as fireworks.",
-  "shortdescription" : "Meteor Grenade Launcher",
-  "level" : 6,
+  "shortdescription" : "^orange;Meteor Grenade Launcher",
+  "level" : 10,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
   "weaponType" : "Grenade Launcher",
@@ -162,6 +162,6 @@
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
   "upgradeParameters" : {
-    "shortdescription" : "Meteor Grenade Launcher ^yellow;^reset;"
+    "shortdescription" : "^orange;Meteor Grenade Launcher ^yellow;^reset;"
   }
 }

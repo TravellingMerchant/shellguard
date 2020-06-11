@@ -3193,18 +3193,6 @@
                  "y":3936
                 }, 
                 {
-                 "gid":10075,
-                 "height":67,
-                 "id":4892,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":40,
-                 "x":12576,
-                 "y":3952
-                }, 
-                {
                  "gid":2147491037,
                  "height":16,
                  "id":4893,
@@ -3315,6 +3303,26 @@
                  "width":48,
                  "x":1512,
                  "y":688
+                }, 
+                {
+                 "gid":10075,
+                 "height":67,
+                 "id":4907,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"uniqueId\" : \"sgrailtele1\" }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":12576,
+                 "y":3952
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4753,7 +4761,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":4907,
+ "nextobjectid":4908,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.1",

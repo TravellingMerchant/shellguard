@@ -95,37 +95,11 @@
       "idle" : {
         "aimAngle" : 0,
         "armRotation" : -30,
-        "weaponRotation" : 60,
+        "weaponRotation" : 70,
         "twoHanded" : false,
         "allowRotate" : true,
         "weaponOffset" : [0, 1],
         "allowFlip" : true,
-				//Not required, but makes the animationState open to reveal the blade
-				"animationStates" : {
-					"blade" : "closed"
-				}
-      },  
-      "windup1" : {
-        "duration" : 0.15,
-        "armRotation" : 100,
-        "weaponRotation" : 20,
-        "weaponOffset" : [0, 1],
-        "twoHanded" : false,
-        "allowFlip" : true,
-        "allowRotate" : false,
-				//Not required, but makes the animationState open to reveal the blade
-				"animationStates" : {
-					"blade" : "closed"
-				}
-      },
-      "preslash1" : {
-        "duration" : 0.025,
-        "armRotation" : 50,
-        "weaponRotation" : 0,
-        "twoHanded" : false,
-
-        "allowRotate" : false,
-        "allowFlip" : false,
 				//Not required, but makes the animationState open to reveal the blade
 				"animationStates" : {
 					"blade" : "closed"
@@ -136,7 +110,7 @@
         "armRotation" : -20,
         "weaponRotation" : -70,
         "twoHanded" : true,
-        "weaponOffset" : [0, 1],
+        "weaponOffset" : [0, 0.5],
 
         "allowRotate" : false,
         "allowFlip" : false,
@@ -147,74 +121,104 @@
       },
       "preslash2" : {
         "duration" : 0.025,
-        "armRotation" : 50,
-        "weaponRotation" : 0,
+        "armRotation" : 55,
+        "weaponRotation" : -45,
         "twoHanded" : true,
 
         "allowRotate" : true,
-        "allowFlip" : false
+        "allowFlip" : false,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "closed"
+				}
       },
       "wait2" : {
         "duration" : 0.2,
-        "armRotation" : 50,
-        "weaponRotation" : 0,
+        "armRotation" : -45,
+        "weaponRotation" : -55,
         "allowRotate" : false,
         "allowFlip" : true,
-        "twoHanded" : true
+        "twoHanded" : true,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "closed"
+				}
       },
       "fire2" : {
         "duration" : 0.5,
-        "armRotation" : -20,
+        "armRotation" : 50,
         "weaponRotation" : -70,
+        "weaponAngularVelocity" : -1200,
         "twoHanded" : true,
-        "weaponOffset" : [0, 0],
-
 
         "allowRotate" : false,
-        "allowFlip" : false
-      },
-      "windup4" : {
-        "duration" : 0.25,
-        "armRotation" : -110,
-        "weaponRotation" : 20,
-        "twoHanded" : false,
-        "weaponOffset" : [0, 1],
-
-        "allowRotate" : true,
-        "allowFlip" : true
-
+        "allowFlip" : false,
+		
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "closed"
+				},
+				
+				//If this exists it will try to shoot based on the variables within
+				"gunShotConfig" : {
+					//General
+					"aimAtCursor" : false,	//If true, will fire toward the cursor instead of the rotation of the weapon
+					"fireTime" : 0.15, 			//If this exists it loops during the stance duration firing in intervals of this number
+					"energyUsage" : 15,
+					"fireSound" : "gunfire",
+					
+					//Recoil
+					"recoilKnockbackVelocity" : false,
+					
+					//Projectile
+					"projectile" : "sgstickyflame",
+					"projectileCount" : 5,
+					"projectileDamage" : 1,
+					"projectileParameters" : {
+						"knockback" : 0,
+						"speed" : 30
+					},
+					"projectileInaccuracy" : 10,
+					"projectileAimAngleOffset" : 0,
+					"projectileFirePoint" : [0, 0]
+				}
       },
       "fire4" : {
         "duration" : 0.5,
         "armRotation" : -20,
         "weaponRotation" : -70,
         "twoHanded" : true,
-        "weaponOffset" : [0, 1],
+        "weaponOffset" : [0, 0.5],
 
         "allowRotate" : false,
         "allowFlip" : false,
+
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "closed"
+				},
 
 				//If this exists it will try to shoot based on the variables within
 				"gunShotConfig" : {
 					//General
 					"aimAtCursor" : false,	//If true, will fire toward the cursor instead of the rotation of the weapon
-					"fireTime" : 0.6, 			//If this exists it loops during the stance duration firing in intervals of this number
-					"energyUsage" : 50,
+					"fireTime" : 0.1, 			//If this exists it loops during the stance duration firing in intervals of this number
+					"energyUsage" : 10,
 					"fireSound" : "gunfire2",
 					
 					//Recoil
 					"recoilKnockbackVelocity" : false,
 					
 					//Projectile
-					"projectile" : "sgenergycrystal",
-					"projectileCount" : 10,
-					"projectileDamage" : 5,
+					"projectile" : "sgnovashockwave",
+					"projectileCount" : 1,
+					"projectileDamage" : 2,
 					"projectileParameters" : {
 						"knockback" : 22
 					},
-					"projectileInaccuracy" : 0.09,
+					"projectileInaccuracy" : 1,
 					"projectileAimAngleOffset" : 0,
-					"projectileFirePoint" : [3.375, 1.5]
+					"projectileFirePoint" : [3.375, 2.25]
 				}
 			}
 		}

@@ -40,8 +40,8 @@
 				"default" : "closed",
 				"states" : {
 					"closed" : {
-            "frames" : 1,
-            "cycle" : 0.1,
+            "frames" : 3,
+            "cycle" : 0.35,
             "mode" : "loop"
 					},
 					"open" : {
@@ -119,6 +119,7 @@
         "properties" : {
           "zLevel" : 1,
           "centered" : true,
+		  "fullbright": true,
           "image" : "<partImage><paletteSwaps>?<directives>?<bladeDirectives>",
           "offset" : [0, 1.875],
           "transformationGroups" : ["weapon"],
