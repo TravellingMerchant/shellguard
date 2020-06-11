@@ -92,7 +92,8 @@ function NebSGProjectileCombo:wait()
       return
     end
   end)
-
+  
+  self.weapon:setStance(self.stances.idle)
   self.cooldownTimer = math.max(0, self.cooldowns[self.comboStep - 1] - stance.duration)
   self.comboStep = 1
 end
@@ -218,6 +219,7 @@ function NebSGProjectileCombo:fire()
     self.comboStep = self.comboStep + 1
     self:setState(self.wait)
   else
+    self.weapon:setStance(self.stances.idle)
     self.cooldownTimer = self.cooldowns[self.comboStep]
     self.comboStep = 1
   end
