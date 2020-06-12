@@ -18,7 +18,7 @@
 
     "behavior" : "monster",
     "level" : 6,
-	"damageTeamType" : "enemy",
+	"damageTeamType" : "friendly",
     "damageTeam" : 0,
 
     "facingMode" : "transformation",
