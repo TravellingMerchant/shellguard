@@ -1,0 +1,42 @@
+{
+  "objectName" : "sgbarricade1",
+  "colonyTags" : ["explorer","human"],
+  "rarity" : "Uncommon",
+  "description" : "A scrappy fortification made with various robust materials.",
+  "shortdescription" : "Shellguard Barricade",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 250,
+  "health" : 10,
+
+  "apexDescription" : "A barricade fashioned from sandbags and various obstacles.",
+  "avianDescription" : "How unelegant an obstacle.",
+  "floranDescription" : "Looks ssssharp.",
+  "glitchDescription" : "Uninterested. Broken obstacle.",
+  "humanDescription" : "Some sandbags, barbed wire and tank traps, they sure don't want anyone coming this way.",
+  "hylotlDescription" : "A barricade, long beaten down.",
+  "novakidDescription":  "It's like a wood fence, without wood. Or a fence.",
+
+  "inventoryIcon" : "sgbarricadeicon.png",
+  "orientations" : [
+    {
+      "image" : "sgbarricade.png",
+      "imagePosition" : [-40, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    },
+    {
+      "image" : "sgbarricade.png",
+      "imagePosition" : [-40, 0],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+    }
+  ]
+}

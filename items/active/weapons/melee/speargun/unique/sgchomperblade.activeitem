@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgchomperblade.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Essential",
-  "description" : "An overwhelmingly large polearm that fires energy crystals. Has great reach.",
+  "description" : "A huge Chomper head combined with an energy sword. Alt fire releases the Chompers wild frenzy.",
   "shortdescription" : "^orange;Chomper Blade",
   "level" : 10,
   "tooltipKind" : "base",
@@ -328,6 +328,6 @@
  
   "builder" : "/items/buildscripts/buildweapon.lua",
   "upgradeParameters" : {
-    "shortdescription" : "Ballista Blade ^yellow;^reset;"
+    "shortdescription" : "^orange;Chomper Blade ^yellow;^reset;"
   }
 }

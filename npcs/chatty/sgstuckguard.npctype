@@ -1,0 +1,120 @@
+{
+  "type" : "sgstuckguard",
+  "baseType" : "outpostcivilian",
+  
+  "npcname" : "A Troubled Mercenary",
+  "identity" : {
+    "name" : "A Troubled Mercenary",
+    "personalityIdle" : "idle.2",
+    "personalityArmIdle" : "idle.2",
+    "personalityHeadOffset" : [-1, 0],
+    "personalityArmOffset" : [0, 0]
+  },
+
+  "damageTeamType" : "assistant",
+  "damageTeam" : 1,
+
+  "persistent" : true,
+
+
+  "scriptConfig" : {
+
+
+    "reactions" : {
+      "spontaneous" : [
+      ]
+    },
+    "personalities" : [
+        [1.0, { "personality" : "normal", "reactions" : {} }]
+    ],
+    "behaviorConfig" : {
+      "greetingChance" : 0,
+      "play" : false,
+      "chat" : false
+    },
+
+    "chatPortrait" : "/interface/chatbubbles/captain.png:<frame>",
+
+    "chatSounds" : {
+      "avian" : {
+        "male" : [
+          "/sfx/humanoid/novakid_chatter_male6.ogg"
+        ],
+        "female" : [
+          "/sfx/humanoid/novakid_chatter_male6.ogg"
+        ]
+      },
+      "apex" : {
+        "male" : [
+          "/sfx/humanoid/novakid_chatter_male6.ogg"
+        ],
+        "female" : [
+          "/sfx/humanoid/novakid_chatter_male6.ogg"
+        ]
+      },
+      "floran" : {
+        "male" : [
+          "/sfx/humanoid/novakid_chatter_male6.ogg"
+        ],
+        "female" : [
+          "/sfx/humanoid/novakid_chatter_male6.ogg"
+        ]
+      },
+      "glitch" : {
+        "male" : [
+          "/sfx/humanoid/novakid_chatter_male6.ogg"
+        ],
+        "female" : [
+          "/sfx/humanoid/novakid_chatter_male6.ogg"
+        ]
+      },
+      "human" : {
+        "male" : [
+          "/sfx/humanoid/novakid_chatter_male6.ogg"
+        ],
+        "female" : [
+          "/sfx/humanoid/novakid_chatter_male6.ogg"
+        ]
+      },
+      "hylotl" : {
+        "male" : [
+          "/sfx/humanoid/novakid_chatter_male6.ogg"
+        ],
+        "female" : [
+          "/sfx/humanoid/novakid_chatter_male6.ogg"
+        ]
+      },
+      "default" : {
+        "male" : [
+          "/sfx/humanoid/novakid_chatter_male6.ogg"
+        ],
+        "female" : [
+          "/sfx/humanoid/novakid_chatter_male6.ogg"
+        ]
+      }
+    },
+
+    "dialog" : {
+      "converse" : {
+        "default" : {
+          "default" : [
+            "Oh! You're <entityname>! After the Miniknog attacked, I hid- I mean, kind of got stuck here... It's a long way down, huh?"
+          ]
+        }
+      }
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "shellarmourheadnpc" }, { "name" : "sgflatcap" }, { "name" : "sgquartermaster" }, { "name" : "sgmedichelmet" }, { "name" : "sgbasicspacehelmet" }, { "name" : "sgspacehelmet" } ],
+            "chest" : [ { "name" : "shellarmourchestnpc" } ],
+            "legs" : [ { "name" : "shellarmourlegsnpc" } ],
+			"back" : [ { "name" : "sgbackpack" }, { "name" : "sgshieldback" } ]
+          }
+        ] ]
+    ]
+  }
+}

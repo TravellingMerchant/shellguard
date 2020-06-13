@@ -1,0 +1,33 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 5000 }
+  ],
+  "output" : {
+    "item" : "filledcapturepod",
+    "count" : 1,
+    "parameters" : {
+      "shortdescription" : "Shellguard Droid",
+      "description" : "A tall and slow droid, but with high defenses. Has small claw blasters.",
+      "tooltipFields" : {
+        "subtitle" : "Shellguard Robot",
+        "objectImage" : "/monsters/crawlers/sgdroid/sgdroidpodicon.png"
+      },
+      "pets" : [
+        {
+          "name" : "Drone",
+          "portrait" : [
+            {"image" : "/monsters/crawlers/sgdroid/sgdroidpodicon.png"}
+          ],
+          "config" : {
+            "type" : "sgdroid",
+            "parameters" : {
+              "level" : 6,
+              "aggressive" : true
+            }
+          }
+        }
+      ]
+    }
+  },
+  "groups" : [ "sgrobotcrafting" ]
+}
