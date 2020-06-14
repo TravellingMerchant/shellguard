@@ -3678,27 +3678,6 @@
                  "y":4528
                 }, 
                 {
-                 "height":8,
-                 "id":5343,
-                 "name":"",
-                 "properties":
-                    {
-                     "\/\/desc":"god damn spider mechs man",
-                     "vehicle":"sgspidermechassault"
-                    },
-                 "propertytypes":
-                    {
-                     "\/\/desc":"string",
-                     "vehicle":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":3208,
-                 "y":3888
-                }, 
-                {
                  "gid":10072,
                  "height":24,
                  "id":5345,

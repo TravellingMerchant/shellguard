@@ -243,7 +243,7 @@
 					//Projectile
 					"projectile" : "sgthorns",
 					"projectileCount" : 5,
-					"projectileDamage" : 5,
+					"projectileDamage" : 3,
 					"projectileParameters" : {
 						"knockback" : 3
 					},
@@ -273,7 +273,7 @@
     "guideProjectiles" : true,
     "maxLength" : 30,
 
-    "baseDps" : 8.0,
+    "baseDps" : 11.0,
 
     "fireTime" : 2.0,
     "maxProjectiles" : 1,
