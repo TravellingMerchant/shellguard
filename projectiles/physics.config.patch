@@ -34,6 +34,24 @@
       "collisionEnabled" : false
     }
   },
+
+  {
+    "op": "add",
+    "path": "/sggyrohover",
+    "value": {
+     "mass" : 1.0,
+     "gravityMultiplier" : -0.25,
+     "maxMovementPerStep" : 0.4,
+
+     "collisionPoly" : [ [-0.5, -0.5], [0.5, -0.5], [0.5, 0.5], [-0.5, 0.5] ],
+     "ignorePlatformCollision" : true,
+
+     "airFriction" : 2.5,
+     "liquidFriction" : 1.0,
+     "groundFriction" : 1.0,
+     "maximumCorrection" : 0.75
+    }
+  },
   
   {
     "op": "add",

@@ -1,0 +1,34 @@
+{
+  "projectileName" : "sggyrodisc",
+  "image" : "sgbulletdiscsprite.png",
+  "animationCycle" : 0.2,
+  "windupFrames" : 0,
+  "frameNumber" : 5,
+  "orientationLocked" : true,
+  "lightColor" : [100, 90, 50],
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
+    }
+  ],
+  "statusEffects" : [ ],
+  "flippable" : true,
+  "power" : 0.3,
+  "speed" : 30.0,
+  "acceleration" : -10,
+  "timeToLive" : 10,
+  "bounces" : -1,
+  "physics" : "sggyrohover",
+  "renderLayer" : "Projectile+1",
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  
+  "persistentAudio" : "/sfx/gun/sggyroambience.ogg",
+
+  "scripts" : [ "sgbulletdisc.lua" ],
+  "scriptDelta" : 15,
+  "hitProjectile" : "sgthorns",
+  "homingDistance" : 60
+}

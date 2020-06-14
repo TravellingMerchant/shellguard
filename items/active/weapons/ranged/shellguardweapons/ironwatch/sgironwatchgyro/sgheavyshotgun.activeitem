@@ -1,0 +1,131 @@
+{
+  "itemName" : "sgironwatchgyro",
+  "price" : 8500,
+  "maxStack" : 1,
+  "rarity" : "Essential",
+  "description" : "A chargable disc rifle. Discs fire at enemies and become stronger with more targets.",
+  "shortdescription" : "^orange;Ironwatch Gyro Launcher",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","upgradeableWeapon","shotgun"],
+  "level" : 10,
+
+  "inventoryIcon" : "sgheavyshotgunicon.png",
+
+  "animation" : "sgheavyshotgun.animation",
+  "animationParts" : {
+    "gun" : "sgheavyshotgun.png",
+    "gunfullbright" : "sgheavyshotgunfullbright.png"
+  },
+  "animationCustom" : {},
+  "muzzleOffset" : [3.5, 0.375],
+  "aimOffset" : -0.5,
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "ice",
+  //COMPATABILITY FOR WFCORE NPCS
+  "wfNpcWeaponData" : {"minRange" : 15, "maxRange" : 25, "forceMoveRange" : 30, "primaryCharge" : 0.2},
+
+  "primaryAbilityType" : "neb-enhancedchargefire",
+  "primaryAbility" : {
+    "name" : "Charged Shot",
+    "scripts" : ["/items/active/weapons/ranged/abilities/neb-enhancedchargefire/neb-enhancedchargefire.lua"],
+    "class" : "NebsEnhancedChargeFire",
+	
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 70,
+        "cooldown" : 1.5,
+        "projectileType" : "sggyrodisc",
+        "projectileParameters" : {},
+        "projectileCount" : 1,
+        "inaccuracy" : 0.02,
+        "baseDamage" : 8,
+        "spreadAngle" : 2,
+        "fireType" : "single",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
+        //"burstTime" : 0.15,		//delay between shots in the burst
+        //"burstCount" : 1,		//amount of bullets to fire in the burst, must be a integer
+        "fireSound" : "fire"
+	  
+	    //Recoil Stuffs
+	    //"recoilKnockbackVelocity" : 45,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    //"crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
+	    //"crouchRecoilKnockbackVelocity" : 0	//When crouching it uses this instead of recoilKnockbackVelocity
+      },
+      {
+        "time" : 1,
+        "energyCost" : 100,
+        "cooldown" : 1.5,
+        "projectileType" : "sggyrodisc",
+        "projectileParameters" : {
+		 "Speed" : 10,
+         "acceleration" : 70
+		},
+        "projectileCount" : 1,
+        "inaccuracy" : 0.02,
+        "baseDamage" : 8,
+        "spreadAngle" : 2,
+        "fireType" : "single",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
+        //"burstTime" : 0.15,		//delay between shots in the burst
+        //"burstCount" : 2,		//amount of bullets to fire in the burst, must be a integer
+        "fireSound" : "fire"
+	  
+	    //Recoil Stuffs
+	   // "recoilKnockbackVelocity" : 20,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	   // "crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
+	    //"crouchRecoilKnockbackVelocity" : 3	//When crouching it uses this instead of recoilKnockbackVelocity
+      }
+    ],
+	//Movement Whilst Charging
+	"walkWhileCharging" : false,		//if false, the player can run normally else if true it just makes the player walk while charging
+	"allowJumping" : true,			//if true allows for jumping while charging if false the player is unable to jump
+	
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : -6,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : -30,
+        "weaponRotation" : 40,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    }
+  },
+  
+
+  "altAbilityType" : "sgpushshot",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Ironwatch HBL-F Shotgun ^yellow;^reset;"
+  }
+}
