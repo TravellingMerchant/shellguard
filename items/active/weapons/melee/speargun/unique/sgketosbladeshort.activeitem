@@ -1,21 +1,21 @@
 {
-  "itemName" : "sgchomperblade",
+  "itemName" : "sgketosbladeshort",
   "price" : 9000,
-  "inventoryIcon" : "sgchomperblade.png:closed.1",
+  "inventoryIcon" : "sgketosbladeshort.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Essential",
-  "description" : "A huge Chomper head combined with an energy sword. Alt fire releases the Chompers wild frenzy.",
-  "shortdescription" : "^orange;Chomper Blade",
+  "description" : "The smaller of Ketos's twin greatswords, this heavy blade fires huge rockets.",
+  "shortdescription" : "^orange;Leviathan Blade",
   "level" : 10,
   "tooltipKind" : "base",
   "category" : "sggunstaff",
   "itemTags" : ["weapon","melee","ranged","spear", "upgradeableWeapon"],
-  "twoHanded" : true,
+  "twoHanded" : false,
 
   "animation" : "/items/active/weapons/melee/speargun/sgchomperblade.animation",
   "animationParts" : {
-    "blade" : "sgchomperblade.png",
-    "bladefullbright" : "sgchomperbladefullbright.png",
+    "blade" : "sgketosbladeshort.png",
+    "bladefullbright" : "sgketosbladeshortfullbright.png",
     "handle" : "",
     "handlefullbright" : "",
     "muzzleFlash" : ""
@@ -64,7 +64,7 @@
     "edgeTriggerGrace" : 0.25,
 
     "fireTime" : 0.8,
-    "baseDps" : 11.5,
+    "baseDps" : 8.5,
 
     "damageConfig" : {
       "damageSourceKind" : "spear",
@@ -94,10 +94,10 @@
     "stances" : {
       "idle" : {
         "aimAngle" : 0,
-        "armRotation" : -10,
-        "weaponRotation" : 45,
+        "armRotation" : -70,
+        "weaponRotation" : -15,
         "twoHanded" : false,
-        "allowRotate" : true,
+        "allowRotate" : false,
         "weaponOffset" : [0, 0.5],
         "allowFlip" : true,
 				//Not required, but makes the animationState open to reveal the blade
@@ -214,120 +214,52 @@
         "weaponOffset" : [0, 0.5],
 
         "allowRotate" : true,
-        "allowFlip" : true
+        "allowFlip" : true,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "open"
+				}
       },
       "fire4" : {
         "duration" : 1,
         "armRotation" : -20,
         "weaponRotation" : -70,
         "twoHanded" : false,
-		"aimAngle": -80.02,
-        "weaponAngularVelocity" : 2000,
-        "weaponOffset" : [0, 1],
+        "weaponOffset" : [0, 0.5],
 
         "allowRotate" : false,
-        "allowFlip" : true,
+        "allowFlip" : false,
+
 				//If this exists it will try to shoot based on the variables within
 				"gunShotConfig" : {
 					//General
-					"aimAtCursor" : false,
-					"energyUsage" : 10,
-					"fireTime" : 0.1, 			//If this exists it loops during the stance duration firing in intervals of this number
-					"fireSound" : "gunfire",
-				
+					"aimAtCursor" : false,	//If true, will fire toward the cursor instead of the rotation of the weapon
+					"fireTime" : 1.1, 			//If this exists it loops during the stance duration firing in intervals of this number
+					"energyUsage" : 50,
+					"fireSound" : "gunfire2",
+					
 					//Recoil
-					"recoilKnockbackVelocity" : 8,
-					"crouchStopsRecoil" : true,
-					"crouchRecoilKnockbackVelocity" : 2,
+					"recoilKnockbackVelocity" : false,
 					
 					//Projectile
-					"projectile" : "sgthorns",
-					"projectileCount" : 5,
-					"projectileDamage" : 3,
+					"projectile" : "sgspidermechrocketheavy",
+					"projectileCount" : 1,
+					"projectileDamage" : 5,
 					"projectileParameters" : {
-						"knockback" : 3
+						"knockback" : 0,
+						"power" : 0
 					},
-					"projectileInaccuracy" : 10,
+					"projectileInaccuracy" : 0.01,
 					"projectileAimAngleOffset" : 0,
-					"projectileFirePoint" : [0.0, 0.0]
+					"projectileFirePoint" : [6.375, 2.25]
 				}
-        }
+			}
       }
 	},
-	
-  "altAbility" : {
-    "name" : "Wild Chomper",
-    "scripts" : ["/items/active/weapons/other/tentaclegun/tentaclegun.lua"],
-    "class" : "TentacleGun",
 
-    "chain" : {
-      "startOffset" : [1, 0.125],
-      "taper" : 0,
-      "segmentImage" : "/items/active/weapons/melee/speargun/unique/chainmeleeparts/chompersegment.png",
-      "endSegmentImage" : "/items/active/weapons/melee/speargun/unique/chainmeleeparts/chomperend.png",
-      "segmentSize" : 1.0,
-      "arcRadiusRatio" : [10, 10]
-	  
-    },
-
-    "guideProjectiles" : true,
-    "maxLength" : 30,
-
-    "baseDps" : 11.0,
-
-    "fireTime" : 2.0,
-    "maxProjectiles" : 1,
-    "energyUsage" : 100,
-    "inaccuracy" : 0,
-
-    "fireSound" : "altFire",
-
-    "projectileCount" : 20,
-    "projectileType" : "sgchomperhead",
-    "projectileTracksUser" : true,
-    "projectileParameters" : {
-      "knockback" : 5,
-      "knockbackDirectional" : true,
-      "speed" : 40,
-      "ignoreTerrain" : false,
-      "bounces" : 100,
-      "timeToLive" : 10,
-      "minVelocity" : 10
-    },
-
-    "stances" : {
-      "idle" : {
-        "aimAngle" : 0,
-        "armRotation" : -30,
-        "weaponRotation" : 60,
-        "twoHanded" : false,
-        "allowRotate" : true,
-        "weaponOffset" : [0, 1],
-        "allowFlip" : true,
-				//Not required, but makes the animationState open to reveal the blade
-				"animationStates" : {
-					"blade" : "closed"
-				}
-      },  
-      "fire" : {
-        "duration" : 0,
-        "armRotation" : 10,
-        "weaponRotation" : -90,
-        "twoHanded" : false,
-
-        "allowRotate" : true,
-        "allowFlip" : false,
-				//Not required, but makes the animationState open to reveal the blade
-				"animationStates" : {
-					"blade" : "open"
-				}
-      }
-    }
-
-  },
  
   "builder" : "/items/buildscripts/buildweapon.lua",
   "upgradeParameters" : {
-    "shortdescription" : "^orange;Chomper Blade ^yellow;^reset;"
+    "shortdescription" : "^orange;Leviathan Blade ^yellow;^reset;"
   }
 }

@@ -1,0 +1,94 @@
+{
+  "itemName" : "sgironwatchburstrifle",
+  "price" : 8000,
+  "inventoryIcon" : "ShellGuardRifle.png",
+  "maxStack" : 1,
+  "rarity" : "Essential",
+  "description" : "A reliable, modified burst fire rifle used by C24. Simple but powerful.",
+  "shortdescription" : "^orange;C24 Custom",
+  "level" : 10,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "ShellGuardRifle.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/testing/sgrifle.ogg", "/sfx/gun/testing/sgrifle2.ogg", "/sfx/gun/testing/sgrifle3.ogg" ]
+    }
+  },
+
+  "baseOffset" : [1.5, 0.1],
+  "muzzleOffset" : [1.375, 0.2],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.25,
+    "baseDps" : 10.5,
+    "energyUsage" : 30.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.0,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.2,
+        "armRotation" : -20,
+        "weaponRotation" : 45,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "burst",
+    "burstCount" : 5,
+    "burstTime" : 0.15,
+
+    "projectileType" : "sgnewstandardbullet",
+    "projectileParameters" : { 
+      "knockback" : 6,
+	  "speed" : 170
+    }
+  },
+
+  "altAbilityType" : "bayonetstab",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "eliteguardrifle.png",
+    "animationParts" : {
+      "middle" : "/items/active/weapons/ranged/shellguardweapons/tiered/shellguardrifle/eliteguardrifle.png"
+    },
+    "shortdescription" : "Ironwatch Advanced Rifle ^yellow;^reset;"
+  }
+}

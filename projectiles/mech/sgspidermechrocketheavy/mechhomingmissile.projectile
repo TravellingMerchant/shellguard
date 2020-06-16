@@ -1,0 +1,152 @@
+{
+  "projectileName" : "sgspidermechrocketheavy",
+  "image" : "mechhomingmissile.png",
+  "animationCycle" : 0.2,
+  "frameNumber" : 4,
+  "lightColor" : [255, 114, 14],
+  "pointLight" : false,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config"
+    },
+    {
+      "action" : "sound",
+      "SoundRangeMultiplier" : 40.0,
+      "options" : [ "/sfx/gun/titanboom2.ogg" ]
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "sgheatexplosionknockback"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/fire_out.ogg" ]
+    },
+    {
+      "action" : "light",
+      "color" : "red"
+    },
+    {
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "spacemineexplosion",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "sgartilleryboom",
+      "fuzzAngle" : 0,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "explosion",
+      "foregroundRadius" : 3,
+      "backgroundRadius" : 0,
+      "explosiveDamageAmount" : 300.0,
+      "delaySteps" : 2
+    },
+    {
+      "action" : "loop",
+      "count" : 15,
+      "body" : [
+        {
+          "action" : "particle",
+          "specification" : {
+            "type" : "ember",
+            "size" : 1.0,
+            "color" : [240, 160, 0, 255],
+            "light" : [80, 80, 20],
+            "fullbright" : true,
+            "fade" : 0.9,
+            "initialVelocity" : [0, 5],
+            "finalVelocity" : [0.0, -50.0],
+            "approach" : [0, 30],
+            "timeToLive" : 0.7,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [10, 10],
+              "timeToLive" : 0.3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  
+  "periodicActions" : [
+    {
+      "time" : 0.01,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "streak",
+        "layer" : "front",
+        "fullbright" : true,
+        "destructionAction" : "shrink",
+        "size" : 4,
+		"color" : [255, 114, 14, 255],
+		"collidesForeground" : false,
+		"length" : 21,
+        "position" : [-2.5, 0],
+        "timeToLive" : 0.009,
+        "destructionTime" : 0.3,
+		"initialVelocity" : [0.5, 0],
+		"variance" : {
+		  "size" : 0,
+		  "initialVelocity" : [0.5, -0],
+		  "length" : 0
+		}
+      }
+    },
+    {
+      "time" : 0.02,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/mediumflame/mediumflame.animation",
+        "initialVelocity" : [0.0, 0.0],
+        "timeToLive" : 0.6,
+        "size" : 1,
+        "layer" : "middle",
+        "position" : [-2.0, 0.0],
+		"variance" : {
+		  "rotation" : 180,
+		  "initialVelocity" : [0.5, -0]
+		}
+      }
+    }
+  ],
+  "statusEffects" : [ ],
+  "emitters" : [ "rocketsmoke" ],
+  "flippable" : true,
+  "power" : 10.0,
+  "speed" : 10.0,
+  "acceleration" : 45,
+  "timeToLive" : 3.25,
+  "physics" : "rocket",
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  
+  "movementSettings" : {
+    "gravityMultiplier" : 0
+  },
+
+  "scripts" : [ "/projectiles/scripts/sgswarm.lua.lua" ],
+  "scriptDelta" : 1,
+  "speedEqualsPower" : false,
+  "minHomingControlForce" : 3,
+  "maxHomingControlForce" : 5,
+  "minWavePeriod" : 3.4,
+  "maxWavePeriod" : 4.5,
+  "minWaveAmplitude" : -0.3,
+  "maxWaveAmplitude" : 0.3,
+  
+  "persistentAudio" : "/sfx/tech/tech_rocketboots.ogg"
+}
