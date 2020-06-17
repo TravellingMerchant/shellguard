@@ -242,7 +242,7 @@
 					"recoilKnockbackVelocity" : false,
 					
 					//Projectile
-					"projectile" : "sgspidermechrocketheavy",
+					"projectile" : "sgheavyrocketsword",
 					"projectileCount" : 1,
 					"projectileDamage" : 5,
 					"projectileParameters" : {
