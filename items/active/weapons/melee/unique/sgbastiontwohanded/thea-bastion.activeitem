@@ -1,0 +1,321 @@
+{
+  "itemName" : "sgbastiontwohanded",
+  "price" : 7000,
+  "level" : 10,
+  "maxStack" : 1,
+  "rarity" : "Essential",
+  "description" : "Massive defensive arm cannon. Can be used as a weaponised, explosive shield.",
+  "shortdescription" : "^orange;Rampart MK1^white;",
+  "tooltipKind" : "base",
+  "category" : "Gunshield",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","ranged","shieldblade", "gunshield","shotgun" ],
+
+  //-------- Credit to Nebulox and Aegonian ----------
+
+  "inventoryIcon" : "thea-bastionicon.png",
+
+  "animation" : "thea-bastion.animation",
+  "animationParts" : {
+    "blade" : "thea-bastion.png",
+	"bladeFullbright" : "thea-bastionlights.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : ["/sfx/gun/testing/sgrifle.ogg", "/sfx/gun/testing/sgrifle2.ogg", "/sfx/gun/testing/sgrifle3.ogg"],
+      "fire2" : ["/sfx/gun/testing/sgrifle.ogg", "/sfx/gun/testing/sgrifle2.ogg", "/sfx/gun/testing/sgrifle3.ogg"],
+      "fire3" : [ "/sfx/melee/swing_spear.ogg" ],
+      "fire4" : ["/sfx/gun/testing/sgrifle.ogg", "/sfx/gun/testing/sgrifle2.ogg", "/sfx/gun/testing/sgrifle3.ogg"],
+      "raiseShield" : [ "/sfx/melee/sword_guard.ogg" ],
+	  "shieldHit" : [ "/sfx/melee/shield_block_metal.ogg" ],
+	  "shieldBurst" : [],
+      "shieldBreak" : [ "/sfx/melee/shield_break_metal.ogg" ]
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+  
+  //Makes the weapon draw in front of the arm
+  "handGrip" : "wrap",
+
+  "aimOffset" : -1.0,
+  
+  "primaryAbility" : {
+    "name" : "Combo Slash",
+    "scripts" : ["/items/active/weapons/melee/abilities/gunshield/sgthea-gunshieldcombo.lua"],
+    "class" : "TheaGunShieldCombo",
+
+    "comboSteps" : 4,
+
+    "flashTime" : 0.15,
+    "flashDirectives" : "fade=FFFFFFFF=0.15",
+	
+	"activeTime" : 3.0,
+
+    "swooshOffsetRegions" : [
+      [1.5, -1.0, 5.5, 1.0],
+      [1.5, -1.0, 5.5, 1.0],
+      [3.0, -0.5, 6.5, 2.0],
+      [1.5, -1.0, 5.5, 1.0]
+    ],
+
+    // cooldown time multiplier for steps after the first, compounded per combo step
+    "comboSpeedFactor" : 0.9,
+
+    "edgeTriggerGrace" : 0.25,
+
+    "fireTime" : 0.8,
+    "baseDps" : 2,
+
+    "damageConfig" : {
+      "statusEffects" : [ ],
+      "knockbackMode" : "facing",
+      "timeout" : 0.5
+    },
+    "stepDamageConfig" : [
+      {
+        "baseDamageFactor" : 1.0,
+        "damageSourceKind" : "default",
+        "knockback" : 2.5
+      },
+      {
+        "baseDamageFactor" : 0.5,
+        "damageSourceKind" : "default",
+        "knockback" : 2.5
+      },
+      {
+        "baseDamageFactor" : 1.0,
+        "damageSourceKind" : "hammer",
+        "knockback" : 25
+      },
+      {
+        "baseDamageFactor" : 1.0,
+        "damageSourceKind" : "default",
+        "knockback" : 2.5
+      }
+    ],
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : -20,
+        "weaponRotation" : -70,
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "windup1" : {
+        "duration" : 0.1,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "preslash1" : {
+        "duration" : 0.075,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire1" : {
+        "duration" : 0.3,
+        "armRotation" : 5,
+        "weaponRotation" : -83,
+
+        "endArmRotation" : 0,
+        "endWeaponRotation" : -90,
+        "endWeaponOffset" : [0.0, 0.0],
+
+        "twoHanded" : false,
+        "weaponOffset" : [0.0, -0.25],
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		//Projectile
+		"projectile" : "sgmotoround",
+		"projectileCount" : 1,
+		"projectileDamage" : 3,
+		"projectileParameters" : {
+		  "Speed" : 40
+		},
+		"projectileInaccuracy" : 0.05,
+		"projectileAimAngleOffset" : -0.02
+      },
+      "wait1" : {
+        "duration" : 0.1,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "allowRotate" : true,
+        "allowFlip" : true,
+        "twoHanded" : false
+      },
+      "windup2" : {
+        "duration" : 0.1,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire2" : {
+        "duration" : 0.4,
+        "armRotation" : 5,
+        "weaponRotation" : -83,
+
+        "endArmRotation" : 0,
+        "endWeaponRotation" : -90,
+        "endWeaponOffset" : [0.0, 0.0],
+
+        "twoHanded" : false,
+        "weaponOffset" : [0.0, -0.5],
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		//Projectile
+		"projectile" : "sgmotoround",
+		"projectileCount" : 1,
+		"projectileDamage" : 3,
+		"projectileParameters" : {
+		  "Speed" : 40
+		},
+		"projectileInaccuracy" : 0.05,
+		"projectileAimAngleOffset" : -0.02
+      },
+      "wait2" : {
+        "duration" : 0.1,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "allowRotate" : true,
+        "allowFlip" : true,
+        "twoHanded" : false
+      },
+      "windup3" : {
+		"duration" : 0.15,
+        "armRotation" : -30,
+        "weaponRotation" : -25,
+        "twoHanded" : false,
+		"animationStates" : {
+		  "weapon" : "defend"
+		},
+		
+		"backArmFrame" : "swim.3",
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire3" : {
+        "duration" : 0.3,
+        "armRotation" : -15,
+        "weaponRotation" : 10,
+        "twoHanded" : false,
+		
+		"backArmFrame" : "swim.3",
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "wait3" : {
+        "duration" : 0.2,
+        "armRotation" : -15,
+        "weaponRotation" : 10,
+        "twoHanded" : false,
+		"animationStates" : {
+		  "weapon" : "activate"
+		},
+		
+		"backArmFrame" : "swim.3",
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "windup4" : {
+        "duration" : 0.1,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "twoHanded" : false,
+		"animationStates" : {
+		  "weapon" : "activate"
+		},
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "fire4" : {
+        "duration" : 0.4,
+        "armRotation" : 5,
+        "weaponRotation" : -83,
+
+        "endArmRotation" : 0,
+        "endWeaponRotation" : -90,
+        "endWeaponOffset" : [0.0, 0.0],
+
+        "twoHanded" : false,
+        "weaponOffset" : [0.0, -0.5],
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		//Projectile
+		"projectile" : "sgheavyrocketsword",
+		"projectileCount" : 1,
+		"projectileDamage" : 4,
+		"projectileParameters" : {
+		  "minSpeed" : 100,
+		  "maxSpeed" : 125
+		},
+		"projectileInaccuracy" : 0.075,
+		"projectileAimAngleOffset" : -0.02
+      }
+    }
+  },
+  
+  "altAbility" : {
+    "name" : "Blast Shield",
+    "scripts" : ["/items/active/weapons/melee/abilities/gunshield/sgthea-gunshielddefend.lua"],
+    "class" : "TheaGunShieldDefend",
+
+    "cooldownTime" : 1.0,
+	"energyUsage" : 0.5,
+	"knockback" : 12,
+	
+	//Projectile config
+	"baseDamage" : 4,
+    "blastCooldownTime" : 1,
+	"shieldHealth" : 50,
+	"projectileType" : "shrapnel",
+	"breakProjectileType" : "sgplasmiteblast",
+	"projectileParameters" : {},
+
+    "stances" : {
+      "defendwindup" : {
+		"duration" : 0.1,
+        "armRotation" : -30,
+        "weaponRotation" : -25,
+        "twoHanded" : false,
+		
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "defend" : {
+        "armRotation" : -15,
+        "weaponRotation" : 10,
+        "twoHanded" : false,
+		
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

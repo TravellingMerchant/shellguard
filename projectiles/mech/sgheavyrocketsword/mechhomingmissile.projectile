@@ -1,5 +1,5 @@
 {
-  "projectileName" : "sgspidermechrocket",
+  "projectileName" : "sgheavyrocketsword",
   "image" : "mechhomingmissile.png",
   "animationCycle" : 0.2,
   "frameNumber" : 4,
@@ -92,7 +92,7 @@
 		"color" : [255, 114, 14, 255],
 		"collidesForeground" : false,
 		"length" : 21,
-        "position" : [-1.5, 0],
+        "position" : [-2.5, 0],
         "timeToLive" : 0.009,
         "destructionTime" : 0.3,
 		"initialVelocity" : [0.5, 0],
@@ -115,7 +115,7 @@
         "timeToLive" : 0.6,
         "size" : 1,
         "layer" : "middle",
-        "position" : [0.0, 0.0],
+        "position" : [-2.0, 0.0],
 		"variance" : {
 		  "rotation" : 180,
 		  "initialVelocity" : [0.5, -0]
@@ -127,15 +127,15 @@
   "emitters" : [ "rocketsmoke" ],
   "flippable" : true,
   "power" : 10.0,
-  "speed" : 30.0,
-  "acceleration" : 150,
+  "speed" : 10.0,
+  "acceleration" : 45,
   "timeToLive" : 3.25,
   "physics" : "rocket",
   "damageType" : "NoDamage",
   "damageKind" : "default",
   
   "movementSettings" : {
-    "gravityMultiplier" : 0.5
+    "gravityMultiplier" : 0
   },
 
   "scripts" : [ "/projectiles/scripts/sgswarm.lua.lua" ],
@@ -143,8 +143,8 @@
   "speedEqualsPower" : false,
   "minHomingControlForce" : 3,
   "maxHomingControlForce" : 5,
-  "minWavePeriod" : 0.4,
-  "maxWavePeriod" : 0.5,
+  "minWavePeriod" : 3.4,
+  "maxWavePeriod" : 4.5,
   "minWaveAmplitude" : -0.3,
   "maxWaveAmplitude" : 0.3,
   

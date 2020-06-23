@@ -9,7 +9,7 @@
   "category" : "uniqueWeapon",
   "twoHanded" : false,
   "itemTags" : ["weapon","ranged","upgradeableWeapon","rocketlauncher"],
-  "level" : 6,
+  "level" : 10,
 
   "inventoryIcon" : "sgairstrikegunicon.png",
 

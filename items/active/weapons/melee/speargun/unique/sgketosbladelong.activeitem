@@ -1,21 +1,21 @@
 {
-  "itemName" : "sgchomperblade",
+  "itemName" : "sgketosbladelong",
   "price" : 9000,
-  "inventoryIcon" : "sgchomperblade.png:closed.1",
+  "inventoryIcon" : "sgketosbladelong.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Essential",
-  "description" : "A huge Chomper head combined with an energy sword. Alt fire releases the Chompers wild frenzy.",
-  "shortdescription" : "^orange;Chomper Blade",
+  "description" : "The larger of Ketos's twin greatswords, this huge blade launches waves of fire.",
+  "shortdescription" : "^orange;Tannin Blade",
   "level" : 10,
   "tooltipKind" : "base",
   "category" : "sggunstaff",
   "itemTags" : ["weapon","melee","ranged","spear", "upgradeableWeapon"],
-  "twoHanded" : true,
+  "twoHanded" : false,
 
   "animation" : "/items/active/weapons/melee/speargun/sgchomperblade.animation",
   "animationParts" : {
-    "blade" : "sgchomperblade.png",
-    "bladefullbright" : "sgchomperbladefullbright.png",
+    "blade" : "sgketosbladelong.png",
+    "bladefullbright" : "sgketosbladelongfullbright.png",
     "handle" : "",
     "handlefullbright" : "",
     "muzzleFlash" : ""
@@ -64,7 +64,7 @@
     "edgeTriggerGrace" : 0.25,
 
     "fireTime" : 0.8,
-    "baseDps" : 11.5,
+    "baseDps" : 8.5,
 
     "damageConfig" : {
       "damageSourceKind" : "spear",
@@ -94,11 +94,11 @@
     "stances" : {
       "idle" : {
         "aimAngle" : 0,
-        "armRotation" : -10,
-        "weaponRotation" : 45,
+        "armRotation" : -20,
+        "weaponRotation" : 55,
         "twoHanded" : false,
-        "allowRotate" : true,
-        "weaponOffset" : [0, 0.5],
+        "allowRotate" : false,
+        "weaponOffset" : [0, 2.5],
         "allowFlip" : true,
 				//Not required, but makes the animationState open to reveal the blade
 				"animationStates" : {
@@ -109,7 +109,7 @@
         "duration" : 0.2,
         "armRotation" : 100,
         "weaponRotation" : 20,
-        "weaponOffset" : [0, 0],
+        "weaponOffset" : [0, 2],
         "twoHanded" : false,
         "allowFlip" : true,
         "allowRotate" : false,
@@ -122,6 +122,7 @@
         "duration" : 0.025,
         "armRotation" : 50,
         "weaponRotation" : 0,
+        "weaponOffset" : [0, 2],
         "twoHanded" : false,
 
         "allowRotate" : false,
@@ -131,7 +132,7 @@
         "duration" : 0.3,
         "armRotation" : 0,
         "weaponRotation" : -90,
-        "weaponOffset" : [0, 0],
+        "weaponOffset" : [0, 2],
         "twoHanded" : false,
         "allowFlip" : true,
         "allowRotate" : false
@@ -141,6 +142,7 @@
         "armRotation" : -45,
         "weaponRotation" : -55,
         "allowRotate" : false,
+        "weaponOffset" : [0, 2],
         "allowFlip" : true,
         "twoHanded" : false
       },
@@ -148,7 +150,7 @@
         "duration" : 0.15,
         "armRotation" : 100,
         "weaponRotation" : 20,
-        "weaponOffset" : [0, 0],
+        "weaponOffset" : [0, 2],
         "twoHanded" : false,
         "allowFlip" : true,
         "allowRotate" : false
@@ -157,6 +159,7 @@
         "duration" : 0.025,
         "armRotation" : 50,
         "weaponRotation" : 0,
+        "weaponOffset" : [0, 2],
         "twoHanded" : false,
 
         "allowRotate" : false,
@@ -166,7 +169,7 @@
         "duration" : 0.3,
         "armRotation" : 0,
         "weaponRotation" : -90,
-        "weaponOffset" : [0, 0],
+        "weaponOffset" : [0, 2],
         "twoHanded" : false,
         "allowFlip" : true,
         "allowRotate" : false
@@ -175,6 +178,7 @@
         "duration" : 0.2,
         "armRotation" : -45,
         "weaponRotation" : -55,
+        "weaponOffset" : [0, 2],
         "allowRotate" : false,
         "allowFlip" : true,
         "twoHanded" : false
@@ -183,7 +187,7 @@
         "duration" : 0.15,
         "armRotation" : -15,
         "weaponRotation" : -60,
-        "weaponOffset" : [0, 0],
+        "weaponOffset" : [0, 2],
         "twoHanded" : false,
         "allowFlip" : true,
         "allowRotate" : true
@@ -192,7 +196,7 @@
         "duration" : 0.1,
         "armRotation" : -150,
         "weaponRotation" : 55,
-        "weaponOffset" : [0, 0],
+        "weaponOffset" : [0, 2],
         "twoHanded" : false,
         "allowFlip" : true,
         "allowRotate" : false
@@ -201,7 +205,7 @@
         "duration" : 0.2,
         "armRotation" : -150,
         "weaponRotation" : 55,
-        "weaponOffset" : [0, 0],
+        "weaponOffset" : [0, 2],
         "twoHanded" : false,
         "allowFlip" : true,
         "allowRotate" : false
@@ -211,10 +215,14 @@
         "armRotation" : -110,
         "weaponRotation" : 20,
         "twoHanded" : false,
-        "weaponOffset" : [0, 0.5],
+        "weaponOffset" : [0, 2.5],
 
         "allowRotate" : true,
-        "allowFlip" : true
+        "allowFlip" : true,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "open"
+				}
       },
       "fire4" : {
         "duration" : 1,
@@ -222,11 +230,15 @@
         "weaponRotation" : -70,
         "twoHanded" : false,
 		"aimAngle": -80.02,
-        "weaponAngularVelocity" : 2000,
-        "weaponOffset" : [0, 1],
+        "weaponAngularVelocity" : -1000,
+        "weaponOffset" : [0, 2],
 
         "allowRotate" : false,
         "allowFlip" : true,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "open"
+				},
 				//If this exists it will try to shoot based on the variables within
 				"gunShotConfig" : {
 					//General
@@ -241,9 +253,9 @@
 					"crouchRecoilKnockbackVelocity" : 2,
 					
 					//Projectile
-					"projectile" : "sgthorns",
-					"projectileCount" : 5,
-					"projectileDamage" : 3,
+					"projectile" : "firetravelingswoosh",
+					"projectileCount" : 1,
+					"projectileDamage" : 2,
 					"projectileParameters" : {
 						"knockback" : 3
 					},
@@ -254,80 +266,10 @@
         }
       }
 	},
-	
-  "altAbility" : {
-    "name" : "Wild Chomper",
-    "scripts" : ["/items/active/weapons/other/tentaclegun/tentaclegun.lua"],
-    "class" : "TentacleGun",
 
-    "chain" : {
-      "startOffset" : [1, 0.125],
-      "taper" : 0,
-      "segmentImage" : "/items/active/weapons/melee/speargun/unique/chainmeleeparts/chompersegment.png",
-      "endSegmentImage" : "/items/active/weapons/melee/speargun/unique/chainmeleeparts/chomperend.png",
-      "segmentSize" : 1.0,
-      "arcRadiusRatio" : [10, 10]
-	  
-    },
-
-    "guideProjectiles" : true,
-    "maxLength" : 30,
-
-    "baseDps" : 11.0,
-
-    "fireTime" : 2.0,
-    "maxProjectiles" : 1,
-    "energyUsage" : 100,
-    "inaccuracy" : 0,
-
-    "fireSound" : "altFire",
-
-    "projectileCount" : 20,
-    "projectileType" : "sgchomperhead",
-    "projectileTracksUser" : true,
-    "projectileParameters" : {
-      "knockback" : 5,
-      "knockbackDirectional" : true,
-      "speed" : 40,
-      "ignoreTerrain" : false,
-      "bounces" : 100,
-      "timeToLive" : 10,
-      "minVelocity" : 10
-    },
-
-    "stances" : {
-      "idle" : {
-        "aimAngle" : 0,
-        "armRotation" : -30,
-        "weaponRotation" : 60,
-        "twoHanded" : false,
-        "allowRotate" : true,
-        "weaponOffset" : [0, 1],
-        "allowFlip" : true,
-				//Not required, but makes the animationState open to reveal the blade
-				"animationStates" : {
-					"blade" : "closed"
-				}
-      },  
-      "fire" : {
-        "duration" : 0,
-        "armRotation" : 10,
-        "weaponRotation" : -90,
-        "twoHanded" : false,
-
-        "allowRotate" : true,
-        "allowFlip" : false,
-				//Not required, but makes the animationState open to reveal the blade
-				"animationStates" : {
-					"blade" : "open"
-				}
-      }
-    }
-
-  },
  
   "builder" : "/items/buildscripts/buildweapon.lua",
   "upgradeParameters" : {
-    "shortdescription" : "^orange;Chomper Blade ^yellow;^reset;"
+    "shortdescription" : "^orange;Tannin Blade ^yellow;^reset;"
   }
 }

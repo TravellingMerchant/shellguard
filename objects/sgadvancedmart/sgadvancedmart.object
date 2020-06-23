@@ -3,6 +3,7 @@
   "colonyTags" : ["shellguard","commerce"],
   "rarity" : "Common",
   "category" : "Shop",
+  "price" : 2000,
   "description" : "Create some advanced equipment.",
   "shortdescription" : "Advanced Constructor",
   "race" : "generic",
@@ -20,6 +21,7 @@
     "buyFactor" : 1.0,
     "sellFactor" : 0.2,
     "items" : [
+	  { "item" : "sgadvancedmart" },
 	  { "item" : "sgshieldback" },
 	  { "item" : "sgrocketback" },
     { "item" : { "name" : "sgflathelmet" }, "prerequisiteQuest" : "sgcolonyattack1" },
