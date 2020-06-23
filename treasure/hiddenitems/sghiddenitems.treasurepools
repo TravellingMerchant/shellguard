@@ -535,6 +535,14 @@
     }]
   ],
 
+ "sgbreakershotgun" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgbreakershotgun", 1]}
+      ]
+    }]
+  ],
+
 //--------- alien --------------------
 
   "sgaliencaster" : [
