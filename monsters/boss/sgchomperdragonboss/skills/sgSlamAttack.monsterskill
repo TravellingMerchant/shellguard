@@ -1,0 +1,19 @@
+{
+  "name" : "sgSlamAttack",
+  "label" : "SLAM",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgchomperdragonboss/skills/sgSlamAttack.lua" ],
+
+    "sgSlamAttack" : {
+      "skillTime" : 7,
+
+      "slamHeight" : 10,
+      "riseSpeed" : 50,
+      "slamSpeed" : 1000,
+
+      "stunDuration" : 1
+    }
+  }
+}

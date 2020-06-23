@@ -1,0 +1,9 @@
+{
+  "name" : "chomperdragonbossfrontthruster",
+  "category" : "sgchomperdragonboss",
+  "type" : "frontthruster",
+
+  "frames" : {
+    "frontThruster" : "frontthruster.png"
+  }
+}

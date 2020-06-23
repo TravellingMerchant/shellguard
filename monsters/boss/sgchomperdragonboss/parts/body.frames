@@ -1,0 +1,39 @@
+{
+  "frameGrid" : {
+    "size" : [350, 300],
+    "dimensions" : [7, 3],
+
+    "names" : [
+      [ null, "phase1.fly.1", "phase1.fly.2", "phase1.fly.3", "phase1.fly.4", null, "phase1.slam.1" ],
+      [ null, "phase2.fly.1", "phase2.fly.2", "phase2.fly.3", "phase2.fly.4", null, "phase2.slam.1" ],
+      [ null, "phase3.fly.1", "phase3.fly.2", "phase3.fly.3", "phase3.fly.4", null, "phase3.slam.1" ]
+    ]
+  },
+  "aliases" : {
+    "phase1.fly.5" : "phase1.fly.1",
+    "phase1.fly.6" : "phase1.fly.2",
+    "phase1.fly.7" : "phase1.fly.3",
+    "phase1.fly.8" : "phase1.fly.4",
+
+    "phase2.fly.5" : "phase2.fly.1",
+    "phase2.fly.6" : "phase2.fly.2",
+    "phase2.fly.7" : "phase2.fly.3",
+    "phase2.fly.8" : "phase2.fly.4",
+
+    "phase3.fly.5" : "phase3.fly.1",
+    "phase3.fly.6" : "phase3.fly.2",
+    "phase3.fly.7" : "phase3.fly.3",
+    "phase3.fly.8" : "phase3.fly.4",
+
+    "dead.fly.1" : "phase3.fly.1",
+    "dead.fly.2" : "phase3.fly.2",
+    "dead.fly.3" : "phase3.fly.3",
+    "dead.fly.4" : "phase3.fly.4",
+    "dead.fly.5" : "phase3.fly.1",
+    "dead.fly.6" : "phase3.fly.2",
+    "dead.fly.7" : "phase3.fly.3",
+    "dead.fly.8" : "phase3.fly.4",
+
+    "dead.slam.1" : "phase3.slam.1"
+  }
+}

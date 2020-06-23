@@ -1,0 +1,30 @@
+{
+  "name" : "sgHeadLaser",
+  "label" : "MEGA SWOOP",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgchomperdragonboss/skills/sgHeadLaser.lua" ],
+
+    "sgHeadLaser" : {
+	  "headRotationCenter" : [4.125, 2.5],
+	  "projectileSpawnOffset" : [-5.5, 0],
+	  "headAngleOffset" : 0.6,
+	  
+      "chargeUpTime" : 1,
+	  
+	  "burstCount" : 3,
+	  "burstTime" : 0.125,
+	  
+	  "projectileType" : "nebsgfortresslaser",
+	  "projectileParameters" : {},
+	  "trackSourceEntity" : false
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "fire" : [ "/sfx/turret/sglaserartillery1.ogg" ]
+    }
+  }
+}

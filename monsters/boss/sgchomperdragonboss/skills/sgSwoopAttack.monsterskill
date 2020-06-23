@@ -1,0 +1,26 @@
+{
+  "name" : "sgSwoopAttack",
+  "label" : "MEGA SWOOP",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgchomperdragonboss/skills/sgSwoopAttack.lua" ],
+
+    "sgSwoopAttack" : {
+      "swoopTime" : 1,
+      "dashSpeed" : 50,
+	  
+	  "headRotationCenter": [4.125, 2.5],
+	  "projectileSpawnOffset": [-5.5, 0],
+	  "headAngleOffset": 2,
+	  
+	  "burstTime" : 0.1,
+	  
+	  "projectileType" : "sgdelayedplasmabomb",
+	  "projectileParameters" : {
+	    "speed" : 50
+	  },
+	  "trackSourceEntity" : false
+    }
+  }
+}

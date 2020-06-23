@@ -1,0 +1,14 @@
+{
+  "name" : "sgTeleportAttack",
+  "label" : "TELEPORT",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgchomperdragonboss/skills/sgTeleportAttack.lua" ],
+
+    "sgTeleportAttack" : {
+      "cooldownTime" : 10,
+      "skillTime" : 3
+    }
+  }
+}
