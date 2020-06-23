@@ -22,10 +22,10 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : ["/sfx/gun/testing/sgrifle.ogg", "/sfx/gun/testing/sgrifle2.ogg", "/sfx/gun/testing/sgrifle3.ogg"],
-      "fire2" : ["/sfx/gun/testing/sgrifle.ogg", "/sfx/gun/testing/sgrifle2.ogg", "/sfx/gun/testing/sgrifle3.ogg"],
+      "fire" : ["/sfx/gun/sgmotoshot.ogg"],
+      "fire2" : ["/sfx/gun/sgmotoshot.ogg"],
       "fire3" : [ "/sfx/melee/swing_spear.ogg" ],
-      "fire4" : ["/sfx/gun/testing/sgrifle.ogg", "/sfx/gun/testing/sgrifle2.ogg", "/sfx/gun/testing/sgrifle3.ogg"],
+      "fire4" : ["/sfx/gun/plasmiteheavy3.ogg"],
       "raiseShield" : [ "/sfx/melee/sword_guard.ogg" ],
 	  "shieldHit" : [ "/sfx/melee/shield_block_metal.ogg" ],
 	  "shieldBurst" : [],
@@ -142,7 +142,7 @@
 		"projectileCount" : 1,
 		"projectileDamage" : 3,
 		"projectileParameters" : {
-		  "Speed" : 40
+		  "speed" : 100
 		},
 		"projectileInaccuracy" : 0.05,
 		"projectileAimAngleOffset" : -0.02
@@ -184,7 +184,7 @@
 		"projectileCount" : 1,
 		"projectileDamage" : 3,
 		"projectileParameters" : {
-		  "Speed" : 40
+		  "speed" : 100
 		},
 		"projectileInaccuracy" : 0.05,
 		"projectileAimAngleOffset" : -0.02
