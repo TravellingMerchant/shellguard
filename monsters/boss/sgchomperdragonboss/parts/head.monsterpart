@@ -1,0 +1,9 @@
+{
+  "name" : "chomperdragonbosshead",
+  "category" : "sgchomperdragonboss",
+  "type" : "head",
+
+  "frames" : {
+    "head" : "head.png"
+  }
+}

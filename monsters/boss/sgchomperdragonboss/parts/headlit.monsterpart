@@ -1,0 +1,9 @@
+{
+  "name" : "chomperdragonbossheadlit",
+  "category" : "sgchomperdragonboss",
+  "type" : "headlit",
+
+  "frames" : {
+    "headlit" : "headlit.png"
+  }
+}
