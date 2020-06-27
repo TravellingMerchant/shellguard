@@ -1,10 +1,12 @@
 {
   "frameGrid" : {
-    "size" : [34,75],
-    "dimensions" : [6, 1],
+    "size" : [41, 81],
+    "dimensions" : [6, 3],
 
     "names" : [
-      [ "off.1", null, "on.1", "on.2", "on.3", "on.4" ]
+      [ "stage1.off.1", null, "stage1.on.1", "stage1.on.2", "stage1.on.3", "stage1.on.4" ],
+      [ "stage2.off.1", null, "stage2.on.1", "stage2.on.2", "stage2.on.3", "stage2.on.4" ],
+      [ "stage3.off.1", null, "stage3.on.1", "stage3.on.2", "stage3.on.3", "stage3.on.4" ]
     ]
   }
 }

@@ -179,12 +179,12 @@
 			},
 			"off" : {
 			  "properties" : {
-				"image" : "<partImage>:off.<frame>"
+				"image" : "<partImage>:<phase>.off.<frame>"
 			  }
 			},
 			"on" : {
 			  "properties" : {
-				"image" : "<partImage>:on.<frame>"
+				"image" : "<partImage>:<phase>.on.<frame>"
 			  }
 			}
 		  }
