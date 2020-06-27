@@ -1,9 +1,0 @@
-{
-  "name" : "shelldroidheavy-fullbright",
-  "category" : "sgchombyboss",
-  "type" : "fullbright",
-
-  "frames" : {
-    "fullbright" : "shelldroidheavy-fullbright.png"
-  }
-}

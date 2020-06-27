@@ -16,7 +16,7 @@
 	  "burstCount" : 3,
 	  "burstTime" : 0.125,
 	  
-	  "projectileType" : "nebsgfortresslaser",
+	  "projectileType" : "nebsgfortresslaserblast",
 	  "projectileParameters" : {},
 	  "trackSourceEntity" : false
     }
@@ -24,7 +24,7 @@
 
   "animationParameters" : {
     "sounds" : {
-      "fire" : [ "/sfx/turret/sglaserartillery1.ogg" ]
+      "fire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
     }
   }
 }

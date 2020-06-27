@@ -1,9 +1,0 @@
-{
-  "name" : "shelldroidheavy-bodyfront",
-  "category" : "sgchombyboss",
-  "type" : "bodyfront",
-
-  "frames" : {
-    "bodyfront" : "shelldroidheavy-bodyfront.png"
-  }
-}

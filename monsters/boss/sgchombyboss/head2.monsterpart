@@ -1,9 +1,0 @@
-{
-  "name" : "sgheavybossrailgun",
-  "category" : "sgchombyboss",
-  "type" : "head2",
-
-  "frames" : {
-    "head2" : "sgheavybossrailgun.png"
-  }
-}
