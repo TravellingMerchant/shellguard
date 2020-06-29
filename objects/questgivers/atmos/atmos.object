@@ -1,6 +1,6 @@
 {
   "objectName" : "sgatmos",
-  "colonyTags" : ["shellguard","commerce"],
+  "colonyTags" : ["outpost","commerce"],
   "rarity" : "Common",
   "category" : "Shop",
   "description" : "Engineer and lockjaw enthusiast",
@@ -47,7 +47,7 @@
     {
       "imageLayers" : [ { "image" : "atmos.png:<color>.<frame>", "fullbright" : true }, { "image" : "atmoslit.png:<color>.<frame>" } ],
       "direction" : "left",
-
+      
       "lightPosition" : [-1, 2],
 
       "imagePosition" : [-64, 0],
@@ -55,7 +55,7 @@
       "animationCycle" : 9.2,
 
       "spaceScan" : 0.1,
-      "interactiveSpaces": [
+      "interactiveSpaces": [ 
         [-5, 1], [-4, 1], [-3, 1], [-2, 1], [-1, 1], [0, 1],
         [-5, 2], [-4, 2], [-3, 2], [-2, 2], [-1, 2],
         [-4, 3], [-3, 3], [-2, 3],
@@ -68,7 +68,7 @@
     {
       "imageLayers" : [ { "image" : "atmosflip.png:<color>.<frame>", "fullbright" : true }, { "image" : "atmosfliplit.png:<color>.<frame>" } ],
       "direction" : "right",
-
+      
       "lightPosition" : [0, 2],
 
       "imagePosition" : [-64, 0],
@@ -76,7 +76,7 @@
       "animationCycle" : 9.2,
 
       "spaceScan" : 0.1,
-      "interactiveSpaces": [
+      "interactiveSpaces": [ 
         [6, 1], [5, 1], [4, 1], [3, 1], [2, 1], [1, 1], [0, 1], [-1, 1],
         [4, 2], [3, 2], [2, 2], [1, 2], [0, 2],
         [3, 3], [2, 3], [1, 3],
@@ -94,7 +94,7 @@
   "turnInQuests" : [
     "lockjawcourse", "sgvehicletutorial"
   ],
-
+  
   "uniqueId" : "sgatmos",
   "soundEffect" : "/sfx/objects/mechcrafting_loop.ogg"
 }

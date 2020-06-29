@@ -1,0 +1,104 @@
+{
+  "itemName" : "sgironwatchwidegun2",
+  "price" : 3000,
+  "inventoryIcon" : "sgtyphoonminigun2.png:idle",
+  "maxStack" : 1,
+  "rarity" : "Essential",
+  "description" : "Though once mounted to a ship used to fell giant beasts, it's great at hunting smaller prey.",
+  "shortdescription" : "^orange;Hunters Avarice",
+  "level" : 10,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgtyphoonminigun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgtyphoonminigun2.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/railshots/sgturbojackfire1.ogg", "/sfx/gun/railshots/sgturbojackfire2.ogg", "/sfx/gun/railshots/sgturbojackfire3.ogg" ]
+    }
+  },
+
+  "baseOffset" : [2.5, -1],
+  "muzzleOffset" : [2.75, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.5,
+    "baseDps" : 10,
+    "energyUsage" : 50.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.01,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+		
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation"
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation",
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -20,
+        "weaponRotation" : 35,
+        "twoHanded" : true,
+        "weaponOffset" : [-0.125, 0],
+
+        "frontArmFrame" : "run.3",
+        "backArmFrame" : "rotation",
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+    //"burstCount" : 3,
+    //"burstTime" : 0.1,
+
+    "projectileType" : "sghuntingjavelin",
+    "projectileParameters" : { 
+      "knockback" : 1,
+	  "speed" : 150
+    }
+  },
+
+  "altAbilityType" : "sgcleavehardsuit",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "^orange;Hunters Avarice ^yellow;^reset;"
+  }
+}
