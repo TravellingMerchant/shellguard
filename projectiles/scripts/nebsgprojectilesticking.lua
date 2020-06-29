@@ -9,8 +9,10 @@ function init()
   self.allyActionOnStick = config.getParameter("allyActionOnStick")
   self.enemyActionOnStick = config.getParameter("enemyActionOnStick")
   self.searchDistance = config.getParameter("searchDistance", 0.1)
+  self.targetTime = config.getParameter("stickToTargetTime")
+  self.stickingOffset = {0, 0}
+  
   self.stickingTarget = nil
-  self.stickingOffset = {0,0}
   self.stuckToTarget = false
   self.stuckToGround = false
   self.hasActioned = false
@@ -35,10 +37,11 @@ function update(dt)
 	if world.entityExists(targets[1]) then
 	  self.stickingTarget = targets[1]
 	  self.stickingOffset = world.distance(mcontroller.position(), world.entityPosition(self.stickingTarget))
-	  mcontroller.setVelocity({0,0})
+	  mcontroller.setVelocity({0, 0})
 	  self.stuckToTarget = true
-	  if config.getParameter("stickToTargetTime") then
+	  if self.targetTime then
 		projectile.setTimeToLive(config.getParameter("stickToTargetTime"))
+		self.targetTime = false
 	  end
 	end
   end

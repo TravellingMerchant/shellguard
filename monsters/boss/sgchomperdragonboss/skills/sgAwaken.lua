@@ -45,6 +45,7 @@ function sgAwaken.update(dt, stateData)
 	if animator.animationState("head") == "attack" then
 	  --Roar--
 	  if not self.spawnedProjectile then
+		animator.playSound("roar")
         local toTarget = vec2.norm(world.distance(self.targetPosition, monster.toAbsolutePosition(self.projectileSpawnOffset)))
         rangedAttack.aim(self.projectileSpawnOffset, toTarget)
         rangedAttack.fireOnce(stateData.projectileType, stateData.projectileParameters)

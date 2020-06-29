@@ -36,6 +36,7 @@ function sgHeadLaser.update(dt, stateData)
 	  --Fire Projectile--
 	  local toTarget = vec2.norm(world.distance(self.targetPosition, monster.toAbsolutePosition(self.projectileSpawnOffset)))
 	  rangedAttack.aim(self.projectileSpawnOffset, toTarget)
+      animator.playSound("fire")
 	  rangedAttack.fireOnce(stateData.projectileType, stateData.projectileParameters)
 	  
 	  self.burstCount = self.burstCount - 1

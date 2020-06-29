@@ -56,6 +56,7 @@ function sgSwoopAttack.update(dt, stateData)
 	--Fire Projectile
 	local toTarget = {0, -1}
 	rangedAttack.aim(self.projectileSpawnOffset, toTarget)
+    animator.playSound("fire")
 	rangedAttack.fireOnce(stateData.projectileType, stateData.projectileParameters)
 	  
 	self.burstTimer = self.burstTime
