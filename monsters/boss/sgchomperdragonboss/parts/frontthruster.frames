@@ -4,9 +4,9 @@
     "dimensions" : [6, 3],
 
     "names" : [
-      [ "stage1.off.1", null, "stage1.on.1", "stage1.on.2", "stage1.on.3", "stage1.on.4" ],
-      [ "stage2.off.1", null, "stage2.on.1", "stage2.on.2", "stage2.on.3", "stage2.on.4" ],
-      [ "stage3.off.1", null, "stage3.on.1", "stage3.on.2", "stage3.on.3", "stage3.on.4" ]
+      [ "phase1.off.1", null, "phase1.on.1", "phase1.on.2", "phase1.on.3", "phase1.on.4" ],
+      [ "phase2.off.1", null, "phase2.on.1", "phase2.on.2", "phase2.on.3", "phase2.on.4" ],
+      [ "phase3.off.1", null, "phase3.on.1", "phase3.on.2", "phase3.on.3", "phase3.on.4" ]
     ]
   }
 }

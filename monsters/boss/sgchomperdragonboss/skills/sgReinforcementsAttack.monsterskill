@@ -170,5 +170,11 @@
         }
       }
     }
+  },
+  
+  "animationParameters" : {
+    "sounds" : {
+      "fire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
+    }
   }
 }

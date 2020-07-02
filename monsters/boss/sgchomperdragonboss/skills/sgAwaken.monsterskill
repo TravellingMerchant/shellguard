@@ -8,11 +8,20 @@
 
     "sgAwaken" : {
 	  "headRotationCenter" : [4.125, 2.5],
-	  "projectileSpawnOffset" : [-5.5, 0],
+	  "projectileSpawnOffset" : [-4.5, 2],
 	  
-	  "projectileType" : "nebsgfortresslaser",
+	  "burstCount" : 5,
+	  "burstTime" : 0.125,
+	  
+	  "projectileType" : "sgchomperroar",
 	  "projectileParameters" : {},
 	  "trackSourceEntity" : false
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "roar" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
     }
   }
 }

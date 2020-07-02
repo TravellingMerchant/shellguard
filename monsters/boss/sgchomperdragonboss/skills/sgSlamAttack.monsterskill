@@ -15,5 +15,11 @@
 
       "stunDuration" : 1
     }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "fire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
+    }
   }
 }

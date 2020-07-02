@@ -1,0 +1,43 @@
+{
+  "projectileName" : "sgchomperroar",
+  "physics" : "sgruincleaverphysics",
+  "timeToLive" : 0.51,
+  "image" : "sgplasmaball.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 6,
+  "winddownFrames" : 0,
+  "periodicActions" : [
+    {
+      "time" : 0,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/melee/astraltear2.ogg" ]
+    },
+    {
+      "time" : 5.65,
+      "repeat" : false,
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/astraltear_stop3.ogg" ]
+    }
+  ],
+  "actionOnReap" : [
+  ],
+  
+  "actionOnCollide" : [
+  ],
+
+  "speed" : 0,
+  "power" : 0,
+  "damagePoly" : [],
+
+  "fullbright" : true,
+  "damageKind" : "sawblade",
+  "flippable" : true,
+
+  "renderLayer" : "Projectile-1",
+  "orientationLocked" : false,
+
+  "bounces" : 0,
+  "onlyHitTerrain" : false
+
+}

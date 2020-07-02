@@ -209,7 +209,7 @@
                  "y":2912
                 }, 
                 {
-                 "gid":10157,
+                 "gid":10160,
                  "height":8,
                  "id":2467,
                  "name":"",
@@ -221,7 +221,7 @@
                  "y":2896
                 }, 
                 {
-                 "gid":10193,
+                 "gid":10196,
                  "height":16,
                  "id":2468,
                  "name":"",
@@ -233,7 +233,7 @@
                  "y":2896
                 }, 
                 {
-                 "gid":2147493841,
+                 "gid":2147493844,
                  "height":16,
                  "id":2469,
                  "name":"",
@@ -591,6 +591,26 @@
                  "width":48,
                  "x":7664,
                  "y":2856
+                }, 
+                {
+                 "gid":9305,
+                 "height":40,
+                 "id":2506,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"queryArea\" : [-10, -10, 10, 10] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":5936,
+                 "y":2856
                 }],
          "opacity":0.97,
          "type":"objectgroup",
@@ -689,7 +709,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":2506,
+ "nextobjectid":2507,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.1",
@@ -888,19 +908,19 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }, 
         {
-         "firstgid":9668,
+         "firstgid":9671,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/human.json"
         }, 
         {
-         "firstgid":9915,
+         "firstgid":9918,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/ice.json"
         }, 
         {
-         "firstgid":9957,
+         "firstgid":9960,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/glitch.json"
         }, 
         {
-         "firstgid":10139,
+         "firstgid":10142,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/glitchcastle.json"
         }],
  "tilewidth":8,

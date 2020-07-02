@@ -39,7 +39,7 @@
     "class" : "sgDetonateGunFire",
 	
     "fireTime" : 0.5,
-    "baseDps" : 10,
+    "baseDps" : 9,
     "energyUsage" : 50.0,
     "projectileCount" : 1,
     "inaccuracy" : 0.01,
@@ -54,7 +54,7 @@
         "allowFlip" : true,
 		
         "frontArmFrame" : "run.3",
-        "backArmFrame" : "rotation"
+        "backArmFrame" : "jump.2"
       },
       "fire" : {
         "duration" : 0,
@@ -66,7 +66,7 @@
         "allowFlip" : false,
 
         "frontArmFrame" : "run.3",
-        "backArmFrame" : "rotation",
+        "backArmFrame" : "jump.2",
 		
 		"animationStates": {
 			"weaponFire": "fire"
@@ -80,7 +80,7 @@
         "weaponOffset" : [-0.125, 0],
 
         "frontArmFrame" : "run.3",
-        "backArmFrame" : "rotation",
+        "backArmFrame" : "jump.2",
 
         "allowRotate" : false,
         "allowFlip" : false

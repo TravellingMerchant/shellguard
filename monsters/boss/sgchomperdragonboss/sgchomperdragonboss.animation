@@ -140,7 +140,7 @@
 		"properties" : {
 		  "centered" : true,
 		  "zLevel" : -4,
-		  "offset" : [3.25, -0.25],
+		  "offset" : [3.25, 0.25],
 		  "transformationGroups" : ["backThruster"]
 		},
 		"partStates" : {
@@ -167,7 +167,7 @@
 		"properties" : {
 		  "centered" : true,
 		  "zLevel" : 4,
-		  "offset" : [-3.25, -0.25],
+		  "offset" : [-3.25, 0.25],
 		  "transformationGroups" : ["frontThruster"]
 		},
 		"partStates" : {

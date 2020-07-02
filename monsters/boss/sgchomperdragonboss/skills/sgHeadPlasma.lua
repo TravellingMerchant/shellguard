@@ -1,31 +1,31 @@
-sgHeadLaser = {}
+sgHeadPlasma = {}
 
-function sgHeadLaser.enter()
-  self.headRotationCenter = config.getParameter("sgHeadLaser.headRotationCenter", {0, 0})
-  self.projectileSpawnOffset = config.getParameter("sgHeadLaser.projectileSpawnOffset", {0, 0})
-  self.headAngleOffset = config.getParameter("sgHeadLaser.headAngleOffset", 1)
-  self.chargeUpTime = config.getParameter("sgHeadLaser.chargeUpTime", 0)
+function sgHeadPlasma.enter()
+  self.headRotationCenter = config.getParameter("sgHeadPlasma.headRotationCenter", {0, 0})
+  self.projectileSpawnOffset = config.getParameter("sgHeadPlasma.projectileSpawnOffset", {0, 0})
+  self.headAngleOffset = config.getParameter("sgHeadPlasma.headAngleOffset", 1)
+  self.chargeUpTime = config.getParameter("sgHeadPlasma.chargeUpTime", 0)
   
-  self.angleApproach = config.getParameter("sgHeadLaser.angleApproach", 1)
+  self.angleApproach = config.getParameter("sgHeadPlasma.angleApproach", 1)
   
-  self.burstCount = config.getParameter("sgHeadLaser.burstCount", 1)
-  self.burstTime = config.getParameter("sgHeadLaser.burstTime", 0.1)
+  self.burstCount = config.getParameter("sgHeadPlasma.burstCount", 1)
+  self.burstTime = config.getParameter("sgHeadPlasma.burstTime", 0.1)
   self.burstTimer = self.burstTime
 
   return {
-    projectileType = config.getParameter("sgHeadLaser.projectileType", "dragonblockbuster"),
-    projectileParameters = config.getParameter("sgHeadLaser.projectileParameters", {}),
-    trackSourceEntity = config.getParameter("sgHeadLaser.trackSourceEntity", false)
+    projectileType = config.getParameter("sgHeadPlasma.projectileType", "dragonblockbuster"),
+    projectileParameters = config.getParameter("sgHeadPlasma.projectileParameters", {}),
+    trackSourceEntity = config.getParameter("sgHeadPlasma.trackSourceEntity", false)
   }
 end
 
-function sgHeadLaser.enteringState(stateData)
-  monster.setActiveSkillName("sgHeadLaser")
+function sgHeadPlasma.enteringState(stateData)
+  monster.setActiveSkillName("sgHeadPlasma")
   
   animator.setAnimationState("head", "attackWindup")
 end
 
-function sgHeadLaser.update(dt, stateData)
+function sgHeadPlasma.update(dt, stateData)
   if self.chargeUpTime > 0 then
 	self.chargeUpTime = math.max(0, self.chargeUpTime - dt)
   elseif self.burstCount == 0 and self.headAngle == 0 then
@@ -36,7 +36,7 @@ function sgHeadLaser.update(dt, stateData)
 	  --Fire Projectile--
 	  local toTarget = vec2.norm(world.distance(self.targetPosition, monster.toAbsolutePosition(self.projectileSpawnOffset)))
 	  rangedAttack.aim(self.projectileSpawnOffset, toTarget)
-      animator.playSound("laserFire")
+      animator.playSound("fire")
 	  rangedAttack.fireOnce(stateData.projectileType, stateData.projectileParameters)
 	  
 	  self.burstCount = self.burstCount - 1
@@ -48,10 +48,10 @@ function sgHeadLaser.update(dt, stateData)
 	end
   end
   
-  sgHeadLaser.updateHead(stateData)
+  sgHeadPlasma.updateHead(stateData)
 end
 
-function sgHeadLaser.updateHead(stateData)
+function sgHeadPlasma.updateHead(stateData)
   animator.resetTransformationGroup("head")
   
   local targetAngle = 0
@@ -73,5 +73,5 @@ function sgHeadLaser.updateHead(stateData)
   animator.rotateTransformationGroup("head", self.headAngle, self.headRotationCenter)
 end
 
-function sgHeadLaser.leavingState(stateData)
+function sgHeadPlasma.leavingState(stateData)
 end

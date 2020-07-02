@@ -10,5 +10,11 @@
       "cooldownTime" : 10,
       "skillTime" : 3
     }
+  },
+  
+  "animationParameters" : {
+    "sounds" : {
+      "fire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
+    }
   }
 }

@@ -26,13 +26,13 @@
       "/monsters/boss/sgchomperdragonboss/dieState.lua"
     ],
 
-    "skills" : ["sgSwoopAttack", "sgSlamAttack", "sgReinforcementsAttack", "sgHeadLaser", "sgTeleportAttack", "sgTeleportLeftSide", "sgAwaken"],
-    "skillCount" : 7,
+    "skills" : [ "sgHeadCleaver", "sgHeadRocketBarrage", "sgHeadPlasma", "sgSwoopAttack", "sgSlamAttack", "sgReinforcementsAttack", "sgHeadLaser", "sgTeleportAttack", "sgTeleportLeftSide", "sgAwaken"],
+    "skillCount" : 10,
 
     "phases" : [
       {
         "enterPhase" : "sgAwaken",
-        "skills" : ["sgTeleportLeftSide", "sgSwoopAttack", "sgTeleportAttack", "sgHeadLaser", "sgHeadLaser", "sgTeleportAttack", "sgHeadLaser", "sgHeadLaser"]
+        "skills" : ["sgTeleportLeftSide", "sgHeadRocketBarrage", "sgSwoopAttack", "sgTeleportAttack",  "sgHeadCleaver", "sgHeadLaser", "sgHeadLaser", "sgTeleportAttack", "sgHeadLaser", "sgHeadLaser"]
       },
       {
         "enterPhase" : "sgReinforcementsAttack",
@@ -46,13 +46,13 @@
 	  "frontThruster": {
 	    "thrusterTarget" : -60,
 		"approach" : 0.05,
-		"thrusterCenter" : [-3.25, -0.25],
+		"thrusterCenter" : [-3.0, 0.25],
 		"maxVelocity" : 20
 	  },
 	  "backThruster" : {
 	    "thrusterTarget" : -60,
 		"approach" : 0.05,
-		"thrusterCenter" : [3.25, -0.25],
+		"thrusterCenter" : [3.0, 0.25],
 		"maxVelocity" : 20
 	  }
 	},
