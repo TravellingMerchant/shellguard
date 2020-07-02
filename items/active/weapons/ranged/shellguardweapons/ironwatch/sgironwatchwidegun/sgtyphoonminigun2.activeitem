@@ -22,7 +22,8 @@
   },
   "animationCustom" : {
     "sounds" : {
-      "fire" : [ "/sfx/gun/railshots/sgturbojackfire1.ogg", "/sfx/gun/railshots/sgturbojackfire2.ogg", "/sfx/gun/railshots/sgturbojackfire3.ogg" ]
+      "fire" : [ "/sfx/gun/railshots/sgturbojackfire1.ogg", "/sfx/gun/railshots/sgturbojackfire2.ogg", "/sfx/gun/railshots/sgturbojackfire3.ogg" ],
+      "trigger" : [ "/sfx/interface/rocket_lockon.ogg" ]
     }
   },
 
@@ -34,14 +35,16 @@
   "elementalType" : "physical",
 
   "primaryAbility" : {
-    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
-    "class" : "GunFire",
+    "scripts" : ["/items/active/weapons/ranged/abilities/sgdetonategunfire/sgdetonategunfire.lua"],
+    "class" : "sgDetonateGunFire",
+	
     "fireTime" : 0.5,
     "baseDps" : 10,
     "energyUsage" : 50.0,
     "projectileCount" : 1,
     "inaccuracy" : 0.01,
-      "stances" : {
+	
+    "stances" : {
       "idle" : {
         "armRotation" : 0,
         "weaponRotation" : 0,
@@ -95,9 +98,8 @@
     }
   },
 
-  "altAbilityType" : "sgcleavehardsuit",
-
   "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  
   "upgradeParameters" : {
     "shortdescription" : "^orange;Hunters Avarice ^yellow;^reset;"
   }

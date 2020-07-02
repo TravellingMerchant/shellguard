@@ -12,6 +12,10 @@ function init()
   self.targetTime = config.getParameter("stickToTargetTime")
   self.stickingOffset = {0, 0}
   
+  message.setHandler("trigger", function()
+      projectile.die()
+    end)
+	
   self.stickingTarget = nil
   self.stuckToTarget = false
   self.stuckToGround = false
@@ -38,7 +42,7 @@ function update(dt)
 	  self.stickingTarget = targets[1]
 	  self.stickingOffset = world.distance(mcontroller.position(), world.entityPosition(self.stickingTarget))
 	  mcontroller.setVelocity({0, 0})
-	  self.stuckToTarget = true
+	  self.stuckToTarget = world.entityExists(self.stickingTarget)
 	  if self.targetTime then
 		projectile.setTimeToLive(config.getParameter("stickToTargetTime"))
 		self.targetTime = false
@@ -60,13 +64,11 @@ function update(dt)
 	mcontroller.setPosition(targetStickingPosition)
 	local stickingVelocity = vec2.mul(self.stickingOffset, -1)
 	mcontroller.setVelocity(stickingVelocity)
+  elseif self.stickingTarget and not world.entityExists(self.stickingTarget) then
+	self.stickingTarget = nil
+    projectile.die()
   else
 	self.stickingTarget = nil
-  end
-  
-  --If we were stuck to a target, but got unstuck, kill the projectile
-  if self.stuckToTarget and not self.stickingTarget then
-	projectile.die()
   end
   
   if self.stuckToGround then

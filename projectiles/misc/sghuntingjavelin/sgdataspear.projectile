@@ -75,7 +75,7 @@
   "damageKind" : "bow",
   "timeToLive" : 40,
 
-  "scripts" : [ "/projectiles/scripts/vknebsgprojectilesticking.lua", "remotegrenade.lua" ],
+  "scripts" : [ "/projectiles/scripts/nebsgprojectilesticking.lua" ],
   "searchDistance" : 0.09,
   "stickToTargetTime" : 20,
   "powerMultiplierAfterSticking" : 0.5,
