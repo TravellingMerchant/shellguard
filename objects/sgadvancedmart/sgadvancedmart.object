@@ -77,7 +77,8 @@
 	  { "item" : "sgconqueroraxe" },
 	  { "item" : "sghardsuitcannon" },
 	  { "item" : "sghardsuitshotgun" },
-	  { "item" : "sgenforcerpistol" }
+	  { "item" : "sgenforcerpistol" },
+	  { "item" : "sgcinderjack" }
     ]
   },
 
