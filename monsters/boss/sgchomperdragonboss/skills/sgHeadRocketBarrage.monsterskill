@@ -24,8 +24,8 @@
 
   "animationParameters" : {
     "sounds" : {
-      "rocketWindup" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ],
-      "rocketFire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
+      "rocketBarrageWindup" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ],
+      "rocketBarrageFire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
     }
   }
 }

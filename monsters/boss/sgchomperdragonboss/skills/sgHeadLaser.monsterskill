@@ -24,6 +24,7 @@
 
   "animationParameters" : {
     "sounds" : {
+      "laserWindup" : [ "/sfx/monsters/boss/sgdronelaser1.ogg", "/sfx/monsters/boss/sgdronelaser2.ogg", "/sfx/monsters/boss/sgdronelaser3.ogg" ],
       "laserFire" : [ "/sfx/monsters/boss/sgdronelaser1.ogg", "/sfx/monsters/boss/sgdronelaser2.ogg", "/sfx/monsters/boss/sgdronelaser3.ogg" ]
     }
   }
