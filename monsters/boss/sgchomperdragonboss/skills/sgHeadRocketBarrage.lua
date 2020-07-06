@@ -76,7 +76,6 @@ function sgHeadRocketBarrage.updateHead(stateData)
     end
   end
 
-
   self.headAngle = (self.headAngle or 0) + (self.targetAngle - (self.headAngle or 0)) * self.angleApproach
   animator.rotateTransformationGroup("head", self.headAngle, self.headRotationCenter)
 end

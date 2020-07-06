@@ -74,8 +74,9 @@ function sgHeadPlasma.updateHead(stateData)
 	  
 	  self.targetAimFound = self.holdAim
     end
+  else
+    self.targetAngle = 0
   end
-
 
   self.headAngle = (self.headAngle or 0) + (self.targetAngle - (self.headAngle or 0)) * self.angleApproach
   animator.rotateTransformationGroup("head", self.headAngle, self.headRotationCenter)
