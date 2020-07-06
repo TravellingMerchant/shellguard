@@ -39,7 +39,7 @@ function sgHeadRocketBarrage.update(dt, stateData)
 	self.burstTimer = math.max(0, self.burstTimer - dt)
     if self.burstCount > 0 and self.burstTimer == 0 then
 	  --Fire Projectile--
-	  local toTarget = vec2.norm(world.distance(self.targetPosition, monster.toAbsolutePosition(self.projectileSpawnOffset)))
+	  local toTarget = vec2.norm(vec2.rotate({0,1}, self.targetAngle))
 	  rangedAttack.aim(self.projectileSpawnOffset, toTarget)
       animator.playSound("rocketBarrageFire")
 	  rangedAttack.fireOnce(stateData.projectileType, stateData.projectileParameters)
@@ -67,17 +67,17 @@ function sgHeadRocketBarrage.updateHead(stateData)
 	if not self.targetAimFound then
       local estimatedPosition = world.distance(mcontroller.position(), world.entityPosition(entityId))
       self.targetAngle = vec2.angle(estimatedPosition) * (mcontroller.facingDirection() * -1) + self.headAngleOffset
-	
-	  if estimatedPosition[1] < 0 then
-	    self.targetAngle = self.targetAngle - math.pi
-	  end
 	  
 	  self.targetAimFound = self.holdAim
     end
-  else
+	
+	if estimatedPosition[1] < 0 then
+	  self.targetAngle = self.targetAngle - math.pi
+	end
+  elseif self.burstCount == 0 then
     self.targetAngle = 0
   end
-
+  
   self.headAngle = (self.headAngle or 0) + (self.targetAngle - (self.headAngle or 0)) * self.angleApproach
   animator.rotateTransformationGroup("head", self.headAngle, self.headRotationCenter)
 end
