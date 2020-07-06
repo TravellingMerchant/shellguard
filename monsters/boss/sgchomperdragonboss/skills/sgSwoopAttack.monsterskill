@@ -26,7 +26,8 @@
   
   "animationParameters" : {
     "sounds" : {
-      "fire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
+      "dashFire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ],
+      "dashWindup" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
     }
   }
 }

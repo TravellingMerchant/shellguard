@@ -24,7 +24,8 @@
 
   "animationParameters" : {
     "sounds" : {
-      "fire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
+      "plasmaWindup" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ],
+      "plasmaFire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
     }
   }
 }

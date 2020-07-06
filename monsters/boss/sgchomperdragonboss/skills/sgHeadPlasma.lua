@@ -5,6 +5,10 @@ function sgHeadPlasma.enter()
   self.projectileSpawnOffset = config.getParameter("sgHeadPlasma.projectileSpawnOffset", {0, 0})
   self.headAngleOffset = config.getParameter("sgHeadPlasma.headAngleOffset", 1)
   self.chargeUpTime = config.getParameter("sgHeadPlasma.chargeUpTime", 0)
+  self.holdAim = config.getParameter("sgHeadPlasma.holdAim", false)
+  self.targetAimFound = false
+  
+  self.targetAngle = 0
   
   self.angleApproach = config.getParameter("sgHeadPlasma.angleApproach", 1)
   
@@ -23,6 +27,7 @@ function sgHeadPlasma.enteringState(stateData)
   monster.setActiveSkillName("sgHeadPlasma")
   
   animator.setAnimationState("head", "attackWindup")
+  animator.playSound("plasmaWindup")
 end
 
 function sgHeadPlasma.update(dt, stateData)
@@ -36,7 +41,7 @@ function sgHeadPlasma.update(dt, stateData)
 	  --Fire Projectile--
 	  local toTarget = vec2.norm(world.distance(self.targetPosition, monster.toAbsolutePosition(self.projectileSpawnOffset)))
 	  rangedAttack.aim(self.projectileSpawnOffset, toTarget)
-      animator.playSound("fire")
+      animator.playSound("plasmaFire")
 	  rangedAttack.fireOnce(stateData.projectileType, stateData.projectileParameters)
 	  
 	  self.burstCount = self.burstCount - 1
@@ -54,22 +59,22 @@ end
 function sgHeadPlasma.updateHead(stateData)
   animator.resetTransformationGroup("head")
   
-  local targetAngle = 0
-  
   local entityId = world.playerQuery(mcontroller.position(), 300, {includedTypes = {"player"}, order = "nearest"})[1]
   
-  if entityId and self.burstCount > 0 then
+  if entityId and self.burstCount > 0 and (self.holdAim and not self.targetAimFound) then
     mcontroller.controlFace(world.distance(mcontroller.position(), world.entityPosition(entityId))[1])
 	
     local estimatedPosition = world.distance(mcontroller.position(), world.entityPosition(entityId))
-    targetAngle = vec2.angle(estimatedPosition) * (mcontroller.facingDirection() * -1) + self.headAngleOffset
+    self.targetAngle = vec2.angle(estimatedPosition) * (mcontroller.facingDirection() * -1) + self.headAngleOffset
 	
 	if estimatedPosition[1] < 0 then
-	  targetAngle = targetAngle - math.pi
+	  self.targetAngle = self.targetAngle - math.pi
 	end
+	
+	self.targetAimFound = true
   end
 
-  self.headAngle = (self.headAngle or 0) + (targetAngle - (self.headAngle or 0)) * self.angleApproach
+  self.headAngle = (self.headAngle or 0) + (self.targetAngle - (self.headAngle or 0)) * self.angleApproach
   animator.rotateTransformationGroup("head", self.headAngle, self.headRotationCenter)
 end
 

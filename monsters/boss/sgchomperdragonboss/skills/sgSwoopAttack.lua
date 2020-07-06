@@ -28,6 +28,7 @@ function sgSwoopAttack.enteringState(stateData)
   animator.rotateGroup("all", -30 * math.pi / 180)
   monster.setActiveSkillName("sgSwoopAttack")
   animator.setAnimationState("head", "attackWindup")
+  animator.playSound("dashWindup")
 end
 
 function sgSwoopAttack.update(dt, stateData)
@@ -56,7 +57,7 @@ function sgSwoopAttack.update(dt, stateData)
 	--Fire Projectile
 	local toTarget = {0, -1}
 	rangedAttack.aim(self.projectileSpawnOffset, toTarget)
-    animator.playSound("fire")
+	animator.playSound("dashFire")
 	rangedAttack.fireOnce(stateData.projectileType, stateData.projectileParameters)
 	  
 	self.burstTimer = self.burstTime

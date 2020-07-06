@@ -24,7 +24,8 @@
 
   "animationParameters" : {
     "sounds" : {
-      "rocketFire" : [ "/sfx/vehicles/spidermech/rocketvollylaunchold3.ogg" ]
+      "rocketWindup" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ],
+      "rocketFire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
     }
   }
 }

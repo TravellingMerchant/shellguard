@@ -24,7 +24,8 @@
 
   "animationParameters" : {
     "sounds" : {
-      "fire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
+      "cleaverWindup" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ],
+      "cleaverFire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
     }
   }
 }
