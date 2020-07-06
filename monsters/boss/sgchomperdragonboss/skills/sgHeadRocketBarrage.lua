@@ -71,7 +71,7 @@ function sgHeadRocketBarrage.updateHead(stateData)
 	  self.targetAimFound = self.holdAim
     end
 	
-	if estimatedPosition[1] < 0 then
+	if estimatedPosition and estimatedPosition[1] < 0 then
 	  self.targetAngle = self.targetAngle - math.pi
 	end
   elseif self.burstCount == 0 then
