@@ -61,18 +61,21 @@ function sgHeadPlasma.updateHead(stateData)
   
   local entityId = world.playerQuery(mcontroller.position(), 300, {includedTypes = {"player"}, order = "nearest"})[1]
   
-  if entityId and self.burstCount > 0 and (self.holdAim and not self.targetAimFound) then
+  if entityId and self.burstCount > 0 then
     mcontroller.controlFace(world.distance(mcontroller.position(), world.entityPosition(entityId))[1])
 	
-    local estimatedPosition = world.distance(mcontroller.position(), world.entityPosition(entityId))
-    self.targetAngle = vec2.angle(estimatedPosition) * (mcontroller.facingDirection() * -1) + self.headAngleOffset
+	if not self.targetAimFound then
+      local estimatedPosition = world.distance(mcontroller.position(), world.entityPosition(entityId))
+      self.targetAngle = vec2.angle(estimatedPosition) * (mcontroller.facingDirection() * -1) + self.headAngleOffset
 	
-	if estimatedPosition[1] < 0 then
-	  self.targetAngle = self.targetAngle - math.pi
-	end
-	
-	self.targetAimFound = true
+	  if estimatedPosition[1] < 0 then
+	    self.targetAngle = self.targetAngle - math.pi
+	  end
+	  
+	  self.targetAimFound = self.holdAim
+    end
   end
+
 
   self.headAngle = (self.headAngle or 0) + (self.targetAngle - (self.headAngle or 0)) * self.angleApproach
   animator.rotateTransformationGroup("head", self.headAngle, self.headRotationCenter)
