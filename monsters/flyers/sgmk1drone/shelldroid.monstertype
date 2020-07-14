@@ -113,7 +113,7 @@
         {
           "name" : "wander-fly",
           "parameters" : {
-            "wanderTime" : [300,1000],
+            "wanderTime" : [3,700],
             "groundDistance" : 30,
             "ceilingDistance" : 8,
             "xVelocity" : 45,
@@ -128,13 +128,6 @@
           "parameters" : {
             "tagName" : "aggro",
             "tag" : ""
-          }
-        },
-        {
-          "name" : "approach-fly",
-          "parameters" : {
-            "usePathfinding" : false,
-            "maxRange" : 30
           }
         }
       ],

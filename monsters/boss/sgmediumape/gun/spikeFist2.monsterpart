@@ -1,0 +1,12 @@
+{
+  "name" : "spikeFist2",
+  "category" : "sgmediumape",
+  "type" : "backSpikeFist",
+
+  "parameters" : {},
+
+  "frames" : {
+    "backgun" : "spikeFist1.png",
+	"backgunball" : "spikeFist1.png"
+  }
+}

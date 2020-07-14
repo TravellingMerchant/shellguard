@@ -21,7 +21,7 @@
 
   "animationParameters" : {
     "sounds" : {
-      "roar" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
+      "roar" : [ "/sfx/monsters/boss/chomby/DragonRoar_long.ogg" ]
     }
   }
 }

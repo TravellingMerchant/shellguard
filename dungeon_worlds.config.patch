@@ -148,6 +148,25 @@
   
   {
     "op" : "add",
+    "path" : "/sgapexboss",
+    "value" : {
+      "primaryDungeon" : "sgapexboss",
+      "weatherPool" : [
+        [1.0, "groundmist"]
+      ],
+      "threatLevel" : 6,
+      "gravity" : 80,
+      "worldSize" : [3299, 900],
+      "dungeonBaseHeight" : 450,
+      "dungeonSurfaceHeight" : 100,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/sgtheguardsmarch2.ogg",
+      "biome": "volcanic"
+    }
+  },
+  
+  {
+    "op" : "add",
     "path" : "/sgwreckagedronerematch",
     "value" : {
       "primaryDungeon" : "sgwreckagedronerematch",
