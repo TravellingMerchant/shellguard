@@ -131,7 +131,7 @@
 			"winddownStateType": "rockets",
 			"windupStateType": "rockets",
             "projectileType" : "plasmatorpedo",
-			"projectileCount": 3,
+			"projectileCount": 1,
 			"projectileInterval": 0.05,
             "fireOffsets" : [[2.5, 11]],
 			
