@@ -1,0 +1,45 @@
+{
+  "id" : "sgoceanattack1",
+  "prerequisites" : ["sgelevatorsurvival2"],
+  "title" : "^green;Ocean Base",
+  "text" : "Alright, we're sending you in to clear the Miniknog out of our base. Your entry point is deep underwater, so I hope you're ready.",
+  "completionText" : "Great job clearing out that part of the base. There's still some more left to clear, but now we've got something special to help you do it.",
+  "moneyRange" : [10000, 10000],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], ["wfcrabdeployer", 1 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/ironwatchmembers/ironwatchquesticon.png"} ],
+        "title" : "Ketos"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/ironwatchmembers/ironwatchquesticon.png"} ],
+        "title" : "Ketos"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Ketos.^reset;",
+      "findGoal" : "Defeat the Miniknog.",
+      "turnIn" : "Return to ^orange;Ketos.^reset;"
+    },
+
+    "warpEntityUid" : "sgironwatchmembers",
+    "warpAction" : "instanceworld:sgoceanattack1",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgironwatchmission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgoceantele1",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgironwatchmembers"
+  }
+}

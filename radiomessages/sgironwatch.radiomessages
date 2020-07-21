@@ -512,6 +512,216 @@
     "senderName" : "Capricorn 25",
     "portraitImage" : "/interface/chatbubbles/sg25.png",
     "text" : "I can't make any promises about where it'll be, but it's a date."
-  }
+  },
+
+//----------- Ocean 2 --------
+
+  "sgcrab1a" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Newbie, are you ready to have some fun? Step on up to the machine in front of you and insert one of those uncalibrated vehicle controllers."
+  },
+  
+  "sgcrab1b" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Pick any parts your want and the machine will construct it. These Customisable Robotic Assault Bastions, or C.R.A.B's for short, are capable of extreme firepower and movement. You can edit it again at any time."
+  },
+  
+
+  "sgcrab1c" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "Those apes won't stand a chance with you in this thing!"
+  },
+  
+  "sgcrab1d" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Damn, no kidding."
+  },
+
+  "sgcrab2" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "If you crouch, you can charge up a jump for extra height. Depending on your equiped booster, you may even be able to double jump as well."
+  },
+
+  "sgcrab3" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "You can press your (F) button to use your equipped legs ability. This could be a range of things, from different melee swings, to speed boosts."
+  },
+
+  "sgcrab4a" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Those mechanical legs can travel over hazards without issue."
+  },
+ 
+   "sgcrab4b" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "While it is waterproof, your cockpit could probably sustain some damage from liquid hazards such as lava though, so watch out for that."
+  },
+  
+  "sgcrab5a" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "It's a shame these massive walkers were never fit for combat use. I'd have loved to have used one. Still, C.R.A.B mechs are way cooler! Keeeeeeeetooooss, why didn't you let me do this mission?"
+  },
+  
+  "sgcrab5b" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "I feel like there wouldn't be a base left to save if I let you use one of these mechs."
+  },
+  
+  "sgcrab6" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Look out, doors locked up ahead. You're going to have to go under and deactivate the lockdown."
+  },
+
+
+  "sgcrab7" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "BOOM! Surprise mech attack! Woooooooo! Get em, get em!"
+  },
+
+  "sgcrab8" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Please don't get too caught up in C25's enthusiasm and wreck the place. Some of this research could be highly valuable."
+  },
+
+  "sgcrab9" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Alright, deactivate the lockdown using the middle console and head back to the surface. The door to the cliff side base will be open."
+  },
+  
+  "sgcrab10a" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Darn, the elevators are broke. You're going to have to climb up manually."
+  },
+
+  "sgcrab10b" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "This is the final stretch, your exit teleporter will be at the top."
+  },
+
+  "sgcrab10c" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "When you're done, take the C.R.A.B mech with you, we can then launch a counter attack!"
+  },
+  
+  
+// --------- apex boss --------
+
+  "sgapexboss1a" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "C24 managed to track their leader to this planet."
+  },
+
+   "sgapexboss1b" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Yep, a crazy and loyal Miniknog captain has been calling himself Medium Ape, presumably taking after Big Ape. That's kind of a lame name."
+  },
+  
+    "sgapexboss1c" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Intel shows that Medium Ape has a large mech suit and loves to use it to surpress rebels. It might be hard to take him down."
+  },
+  
+  "sgapexboss1d" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "Wait wait wait! MECH FIGHT? YEEEEEEEEEEEEESSSSSSSSSSSSS! I can't wait to watch this!"
+  },
+
+  "sgapexboss2a" : {
+    "type" : "mission",
+    "senderName" : "Medium Ape",
+    "portraitImage" : "/interface/chatbubbles/sgmediumape.png:<frame>",
+    "text" : "What? Another annoying, small-minded rebel? Come to meet your end quicker than your natrual life span is supposed to run?"
+  },
+  
+  "sgapexboss2b" : {
+    "type" : "mission",
+    "senderName" : "Medium Ape",
+    "portraitImage" : "/interface/chatbubbles/sgmediumape.png:<frame>",
+    "text" : "Oh wait, you're no rebel. You're one of those Shellguard plebeians that ruined one of my research stations. Come for revenge, have you?"
+  },
+  
+   "sgapexboss2c" : {
+    "type" : "mission",
+    "senderName" : "Medium Ape",
+    "portraitImage" : "/interface/chatbubbles/sgmediumape.png:<frame>",
+    "text" : "On a better day, I may have just purchased technology from you, but considering you attacked me first, I felt it was only right to take it as compensation."
+  },
+  
+   "sgapexboss2d" : {
+    "type" : "mission",
+    "senderName" : "Medium Ape",
+    "portraitImage" : "/interface/chatbubbles/sgmediumape.png:<frame>",
+    "text" : "Regardless, what's done is done. If you're still eager to die, then I'll be happy to assist you."
+  },
+  
+   "sgapexboss3" : {
+    "type" : "mission",
+    "senderName" : "Medium Ape",
+    "portraitImage" : "/interface/chatbubbles/sgmediumape.png:<frame>",
+    "text" : "Enter this place and perish, you small minded imbecile! Face the mighty Medium Ape!"
+  },
+  
+   "sgapexboss4a" : {
+    "type" : "mission",
+    "senderName" : "Medium Ape",
+    "portraitImage" : "/interface/chatbubbles/sgmediumape.png:<frame>",
+    "text" : "Well, that was fun to watch... Wait, did you really think I'd fight you in that thing? Hah! You really are of low intelligence, aren't you?"
+  },
+  
+   "sgapexboss4b" : {
+    "type" : "mission",
+    "senderName" : "Medium Ape",
+    "portraitImage" : "/interface/chatbubbles/sgmediumape.png:<frame>",
+    "text" : "No, that small machine is barely fit to be called Small Ape, let alone Medium Ape! You'll never catch me, fool!"
+  },
+
+  "sgapexboss4c" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Gah, he's running! That coward. We'll track his escape shuttle, you get back here and get ready to chase him."
+  },
 
 }

@@ -542,6 +542,48 @@
       ]
     }]
   ],
+  
+
+ "sgbastiontwohanded" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgbastiontwohanded", 1]}
+      ]
+    }]
+  ],
+   
+ 
+ "sgchomperblade" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgchomperblade", 1]}
+      ]
+    }]
+  ],
+  
+ "sgchomperbow" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgchomperbow", 1]}
+      ]
+    }]
+  ],
+
+ "sgautochip" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "autochip", 10]}
+      ]
+    }]
+  ],
+  
+ "wfcrabdeployer" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "wfcrabdeployer", 1]}
+      ]
+    }]
+  ],
 
 //--------- alien --------------------
 

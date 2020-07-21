@@ -1,0 +1,45 @@
+{
+  "id" : "sgoceanattack2",
+  "prerequisites" : ["sgoceanattack1"],
+  "title" : "^green;Crab Calamity",
+  "text" : "Turns out they were working on a new experimental C.R.A.B mech platform. You're going to get to use it to clear out the last of the Miniknog.",
+  "completionText" : "Alright, time to fight back. We have tracked their leader down to a volcanic planet. You're going to want to use that C.R.A.B mech again.",
+  "moneyRange" : [10000, 10000],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], ["wfcrabdeployer", 1 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/ironwatchmembers/ironwatchquesticon.png"} ],
+        "title" : "Ketos"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/ironwatchmembers/ironwatchquesticon.png"} ],
+        "title" : "Ketos"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Ketos.^reset;",
+      "findGoal" : "Defeat the Miniknog.",
+      "turnIn" : "Return to ^orange;Ketos.^reset;"
+    },
+
+    "warpEntityUid" : "sgironwatchmembers",
+    "warpAction" : "instanceworld:sgoceanattack2",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgironwatchmission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgoceantele2",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgironwatchmembers"
+  }
+}

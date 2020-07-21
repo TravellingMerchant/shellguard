@@ -141,7 +141,7 @@
       "dungeonBaseHeight" : 450,
       "dungeonSurfaceHeight" : 100,
       "ambientLightLevel" : [200, 200, 200],
-      "musicTrack" : "/music/sgtheguardsmarch2.ogg",
+      "musicTrack" : "/music/chee-zee-caves-v2-by-kevin-macleod.ogg",
       "biome": "volcanic"
     }
   },
@@ -160,8 +160,24 @@
       "dungeonBaseHeight" : 450,
       "dungeonSurfaceHeight" : 100,
       "ambientLightLevel" : [200, 200, 200],
-      "musicTrack" : "/music/sgtheguardsmarch2.ogg",
+      "musicTrack" : "/music/the-descent-by-kevin-macleod.ogg",
       "biome": "volcanic"
+    }
+  },
+  
+  {
+    "op" : "add",
+    "path" : "/sgapexboss2",
+    "value" : {
+      "primaryDungeon" : "sgapexboss2",
+      "threatLevel" : 10,
+      "gravity" : 80,
+      "worldSize" : [2600, 900],
+      "dungeonBaseHeight" : 450,
+      "dungeonSurfaceHeight" : 100,
+      "ambientLightLevel" : [200, 200, 200],
+      "musicTrack" : "/music/the-descent-by-kevin-macleod.ogg",
+      "biome": "forest"
     }
   },
   

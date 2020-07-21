@@ -273,7 +273,7 @@
     "guideProjectiles" : true,
     "maxLength" : 30,
 
-    "baseDps" : 11.0,
+    "baseDps" : 12.0,
 
     "fireTime" : 2.0,
     "maxProjectiles" : 1,
