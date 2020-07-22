@@ -1,0 +1,12 @@
+{
+  "frameGrid" : {
+    "size" : [41, 81],
+    "dimensions" : [6, 3],
+
+    "names" : [
+      [ "phase1.off.1", null, "phase1.on.1", "phase1.on.2", "phase1.on.3", "phase1.on.4" ],
+      [ "phase2.off.1", null, "phase2.on.1", "phase2.on.2", "phase2.on.3", "phase2.on.4" ],
+      [ "phase3.off.1", null, "phase3.on.1", "phase3.on.2", "phase3.on.3", "phase3.on.4" ]
+    ]
+  }
+}

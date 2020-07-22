@@ -1,0 +1,9 @@
+{
+  "name" : "chomperdragonbossheadlit",
+  "category" : "sgapexshipboss",
+  "type" : "headlit",
+
+  "frames" : {
+    "headlit" : "headlit.png"
+  }
+}

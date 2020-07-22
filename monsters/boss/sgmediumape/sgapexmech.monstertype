@@ -35,8 +35,7 @@
 	
 	"damageBar" : "Special",
 
-  	"damageTeamType" : "enemy",
-    "damageTeam" : 5,
+
     "behavior" : "monster",
 	"deathBehavior" : "monster-death",
 	"renderLayer" : "Projectile-1",
@@ -381,7 +380,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 800
+          "baseValue" : 400
         },
         "protection" : {
           "baseValue" : 25.0

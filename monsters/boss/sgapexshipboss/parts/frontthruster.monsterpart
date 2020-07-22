@@ -1,0 +1,9 @@
+{
+  "name" : "chomperdragonbossfrontthruster",
+  "category" : "sgapexshipboss",
+  "type" : "frontthruster",
+
+  "frames" : {
+    "frontThruster" : "frontthruster.png"
+  }
+}
