@@ -4,7 +4,7 @@
   "rarity" : "Legendary",
   "printable" : false,
   "description" : "Use this station to modify custom shellguard guns.",
-  "shortdescription" : "^orange;Gun Modifcation Station^white;",
+  "shortdescription" : "^orange;Gun Modification Station^reset;",
   "race" : "generic",
   "category" : "storage",
   "price" : 10000,

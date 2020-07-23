@@ -4,7 +4,7 @@
   "inventoryIcon" : "shellguardheavypistolreflek.png",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "description" : "A heavy pistol with Reflek modifcations. Fires bouncing shots.",
+  "description" : "A heavy pistol with Reflek modifications. Fires bouncing shots.",
   "shortdescription" : "Shellguard Reflek Pistol",
   "level" : 6,
   "tooltipKind" : "sgweapon",
