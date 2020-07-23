@@ -30,7 +30,7 @@
     },
 
     "warpEntityUid" : "sgfortressbase",
-    "warpAction" : "instanceworld:sgbossmine",
+    "warpAction" : "instanceworld:sgchomperboss",
     "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgfortressmissionteleport",
 
     "goalTrigger" : "proximity",
@@ -40,7 +40,6 @@
     "indicateGoal" : false,
     "trackGoalEntity" : false,
 
-    "turnInEntityUid" : "sgfortressbase",
-    "setUniverseFlags" : ["sgoutpost_survivorbeat"]
+    "turnInEntityUid" : "sgfortressbase"
   }
 }
