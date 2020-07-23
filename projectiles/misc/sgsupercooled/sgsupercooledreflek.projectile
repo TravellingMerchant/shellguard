@@ -1,0 +1,55 @@
+{
+  "projectileName" : "sgsupercooledreflek",
+  "image" : "sgsupercooled.png",
+  "physics" : "laser",
+  "animationCycle" : 0.4,
+  "animationLoops" : false,
+  "windupFrames" : 2,
+  "timeToLive" : 10,
+  "frameNumber" : 3,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "bounces":4,
+  "lightColor" : [225, 100, 60],
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "largeicecloud"
+    },
+	{
+      "action" : "projectile",
+      "inheritDamageFactor" : 0.5,
+      "type" : "sgicecube"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.001,
+      "repeat" : true,
+      "action" : "particle",
+      "size" : 0.1,
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/sgtrailblue/sgtrailblue.animation",
+        "initialVelocity" : [0.0, 0.0],
+        "timeToLive" : 0.05,
+        "fullbright" : true,
+        "destructionTime" : 0.01,
+        "destructionAction" : "shrink",
+        "fade" : 0.01,
+        "layer" : "middle",
+        "position" : [0.0, 0.0]
+      }
+    }
+  ],
+  "power" : 5.0,
+  "speed" : 150,
+  "damageKind" : "default"
+}
