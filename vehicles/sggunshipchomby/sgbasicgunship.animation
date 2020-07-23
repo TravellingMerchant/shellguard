@@ -354,7 +354,7 @@
 				"properties" : {
 					"centered" : true,
 					"zLevel" : 4,
-					"offset" : [-3.75, 5.625],
+					"offset" : [-4.25, 6.625],
 					"transformationGroups" : ["sideThrusterFront"],
 			"anchorPart" : "foreground"
 				},
@@ -377,7 +377,7 @@
 				"properties" : {
 					"centered" : true,
 					"zLevel" : -4,
-					"offset" : [3, 5.625],
+					"offset" : [3.5, 6.625],
 					"transformationGroups" : ["sideThrusterBack"],
 			"anchorPart" : "foreground"
 				},

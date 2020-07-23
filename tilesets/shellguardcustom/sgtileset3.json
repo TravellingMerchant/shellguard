@@ -16,7 +16,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":50,
+ "tilecount":51,
  "tiledversion":"1.3.1",
  "tileheight":400,
  "tileproperties":
@@ -479,6 +479,16 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"sgfortressbase",
+         "tilesetDirection":"right"
+        },
+     "50":
+        {
+         "\/\/description":"sgcrabmechcraftingtablemission",
+         "\/\/name":"sgcrabmechcraftingtablemission",
+         "\/\/shortdescription":"crafting table",
+         "imagePositionX":"-32",
+         "imagePositionY":"0",
+         "object":"sgcrabmechcraftingtablemission",
          "tilesetDirection":"right"
         },
      "6":
@@ -984,6 +994,16 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "50":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "6":
         {
          "\/\/description":"string",
@@ -1302,6 +1322,12 @@
          "image":"..\/..\/objects\/bossplatforms\/sgfortressbase\/sgfortressbaseicon.png",
          "imageheight":94,
          "imagewidth":172
+        },
+     "50":
+        {
+         "image":"..\/..\/objects\/scripted\/sgspidermechstationmission\/tiledicon.png",
+         "imageheight":48,
+         "imagewidth":64
         },
      "6":
         {

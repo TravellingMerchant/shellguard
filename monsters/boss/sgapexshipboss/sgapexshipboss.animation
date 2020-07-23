@@ -1,0 +1,602 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "movesound" : {
+        "priority" : 1,
+        "default" : "on",
+        "states" : {
+          "off" : {
+          },
+          "on" : {
+            "properties" : {
+              "persistentSound" : "/sfx/npc/boss/ufo_hover_loop.ogg"
+            }
+          }
+        }
+      },
+	  
+	  "thrusters" : {
+		"default" : "off",
+		"states" : {
+		  "off" : {
+		    "frames" : 1,
+		    "cycle" : 0.2,
+			"mode" : "loop"
+		  },
+		  "on" : {
+			"frames" : 4,
+			"cycle" : 0.2,
+			"mode" : "loop"
+		  },
+          "invisible" : {
+            "frames" : 1
+          }
+		}
+	  },
+
+      "movement" : {
+        "priority" : 0,
+        "default" : "grounded",
+
+        "states" : {
+          "visible" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop"
+          },
+          "grounded" : {
+            "frames" : 1
+          },
+          "invisible" : {
+            "frames" : 1
+          }
+        }
+      },
+      "head" : {
+        "priority" : 0,
+        "default" : "asleep",
+
+        "states" : {
+          "asleep" : {
+            "frames" : 1,
+            "properties" : {
+              "particleEmittersOn" : ["sleep"]
+            }
+          },
+          "visible" : {
+            "frames" : 4,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "particleEmittersOff" : ["sleep"]
+            }
+          },
+          "attackWindup" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "attack",
+            "properties" : {
+              "particleEmittersOff" : ["sleep"]
+            }
+          },
+          "attack" : {
+            "frames" : 1,
+            "cycle" : 0.25,
+            "mode" : "loop",
+            "properties" : {
+              "particleEmittersOff" : ["sleep"]
+            }
+          },
+          "attackWinddown" : {
+            "frames" : 3,
+            "cycle" : 0.3,
+            "mode" : "transition",
+            "transition" : "visible",
+            "properties" : {
+              "particleEmittersOff" : ["sleep"]
+            }
+          },
+          "invisible" : {
+            "frames" : 1,
+            "properties" : {
+              "particleEmittersOff" : ["sleep"]
+            }
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "rotationGroup" : "all",
+          "transformationGroups" : ["body"],
+          "zLevel" : 1
+        },
+
+        "partStates" : {
+          "movement" : {
+            "visible" : {
+              "properties" : {
+                "image" : "<partImage>:<phase>.fly.<frame>"
+              }
+            },
+            "grounded" : {
+              "properties" : {
+                "image" : "<partImage>:<phase>.slam.<frame>"
+              }
+            },
+            "invisible" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      },
+	  
+	  "backThruster" : {
+		"properties" : {
+		  "centered" : true,
+		  "zLevel" : -4,
+		  "offset" : [-8.25, -6.25],
+		  "transformationGroups" : ["backThruster"]
+		},
+		"partStates" : {
+	 	  "thrusters" : {
+			"invisible" : {
+			  "properties" : {
+				"image" : ""
+			  }
+			},
+			"off" : {
+			  "properties" : {
+				"image" : "<partImage>:<phase>.off.<frame>"
+			  }
+			},
+			"on" : {
+			  "properties" : {
+				"image" : "<partImage>:<phase>.on.<frame>"
+			  }
+			}
+		  }
+		}
+	  },
+	  "frontThruster" : {
+		"properties" : {
+		  "centered" : true,
+		  "zLevel" : 4,
+		  "offset" : [-11.25, -6.25],
+		  "transformationGroups" : ["frontThruster"]
+		},
+		"partStates" : {
+	 	  "thrusters" : {
+			"invisible" : {
+			  "properties" : {
+				"image" : ""
+			  }
+			},
+			"off" : {
+			  "properties" : {
+				"image" : "<partImage>:<phase>.off.<frame>"
+			  }
+			},
+			"on" : {
+			  "properties" : {
+				"image" : "<partImage>:<phase>.on.<frame>"
+			  }
+			}
+		  }
+		}
+	  },
+	  
+	  "frontThruster2" : {
+		"properties" : {
+		  "centered" : true,
+		  "zLevel" : 4,
+		  "offset" : [-4.25, -6.25],
+		  "transformationGroups" : ["frontThruster2"]
+		},
+		"partStates" : {
+	 	  "thrusters" : {
+			"invisible" : {
+			  "properties" : {
+				"image" : ""
+			  }
+			},
+			"off" : {
+			  "properties" : {
+				"image" : "<partImage>:<phase>.off.<frame>"
+			  }
+			},
+			"on" : {
+			  "properties" : {
+				"image" : "<partImage>:<phase>.on.<frame>"
+			  }
+			}
+		  }
+		}
+	  },
+
+      "head" : {
+        "properties" : {
+          "rotationGroup" : "all",
+          "transformationGroups" : ["head"],
+          "offset" : [4.6, -7],
+          "zLevel" : 6
+        },
+
+        "partStates" : {
+          "head" : {
+            "visible" : {
+              "properties" : {
+                "image" : "<partImage>:<phase>.idle"
+              }
+            },
+            "asleep" : {
+              "properties" : {
+                "image" : "<partImage>:<phase>.asleep.<frame>"
+              }
+            },
+            "attackWindup" : {
+              "properties" : {
+                "image" : "<partImage>:<phase>.attack.<frame>"
+              }
+            },
+            "attack" : {
+              "properties" : {
+                "image" : "<partImage>:<phase>.attack.3"
+              }
+            },
+            "attackWinddown" : {
+              "properties" : {
+                "image" : "<partImage>:<phase>.winddown.1"
+              }
+            },
+            "invisible" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      },
+
+      "headlit" : {
+        "properties" : {
+          "rotationGroup" : "all",
+          "zLevel" : 3,
+          "transformationGroups" : ["head"],
+          "offset" : [5.625, 3.5],
+          "fullbright" : true
+        },
+
+        "partStates" : {
+          "head" : {
+            "visible" : {
+              "properties" : {
+                "image" : "<partImage>:<phase>.idle"
+              }
+            },
+            "attackWindup" : {
+              "properties" : {
+                "image" : "<partImage>:<phase>.attack.<frame>"
+              }
+            },
+            "attack" : {
+              "properties" : {
+                "image" : "<partImage>:<phase>.attack.3"
+              }
+            },
+            "attackWinddown" : {
+              "properties" : {
+                "image" : "<partImage>:<phase>.winddown.1"
+              }
+            },
+            "invisible" : {
+              "properties" : {
+                "image" : ""
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "globalTagDefaults" : {
+    "phase" : "phase1"
+  },
+
+  "rotationGroups" : {
+    "all" : {
+      "angularVelocity" : 0.5
+    }
+  },
+  
+  "transformationGroups" : {
+    "head" : {},
+    "body" : {},
+    "frontThruster" : {},
+    "frontThruster2" : {},
+    "backThruster" : {}
+  },
+
+  "particleEmitters" : {
+    "sleep" : {
+      "emissionRate" : 1,
+      "offsetRegion" : [5.0, 4.5, 5.0, 4.5],
+      "particles" : [
+        { "particle" : "sleep" }
+      ]
+    },
+    "teleport" : {
+      "emissionRate" : 10,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/penguinufoteleport/penguinufoteleport.animation",
+            "timeToLive" : 1.0,
+            "layer" : "front"
+          }
+        }
+      ]
+    },
+    "stunned" : {
+      "emissionRate" : 100,
+      "offsetRegion" : [-10, -2, 10, 2],
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/electroshock/electroshock.animation",
+            "timeToLive" : 0.2,
+            "rotation" : 0,
+            "initialVelocity" : [0, 0],
+            "layer" : "front",
+            "variance" : {
+              "rotation" : 180
+            }
+          }
+        }
+      ]
+    },
+    "falling" : {
+      "emissionRate" : 100.0,
+      "offsetRegion" : [-10, 4, 10, 4],
+      "particles" : [
+        { "particle" : "fallingair" },
+        { "particle" : "fallingair" },
+        { "particle" : "fallingair" },
+        { "particle" : "fallingair" },
+        { "particle" : "fallingair" },
+        { "particle" : "fallingair" },
+        { "particle" : "fallingair" }
+      ]
+    },
+    "landing" : {
+      "emissionRate" : 1.0,
+      "offsetRegion" : [-8, -4, 8, -2],
+      "particles" : [
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" },
+        { "particle" : "dust4" }
+      ]
+    },
+    "deathPoof" : {
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/puff2c/puff2c.animation",
+            "size" : 1,
+            "angularVelocity" : 35,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "finalVelocity" : [0, 0],
+            "approach" : [1, 1],
+            "timeToLive" : 0.4,
+            "layer" : "middle"
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz1/fizz1.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [-8, 8],
+            "finalVelocity" : [-3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [-4, 2],
+              "finalVelocity" : [-3, -4]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz1/fizz1.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [8, 8],
+            "finalVelocity" : [3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [4, 2],
+              "finalVelocity" : [3, -4]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz2/fizz2.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [-8, 8],
+            "finalVelocity" : [-3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [-4, 2],
+              "finalVelocity" : [-3, -4]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz2/fizz2.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [8, 8],
+            "finalVelocity" : [3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [4, 2],
+              "finalVelocity" : [3, -4]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz3/fizz3.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [-8, 8],
+            "finalVelocity" : [-3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [-4, 2],
+              "finalVelocity" : [-3, -4]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz3/fizz3.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [8, 8],
+            "finalVelocity" : [3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [4, 2],
+              "finalVelocity" : [3, -4]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz4/fizz4.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [-8, 8],
+            "finalVelocity" : [-3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [-4, 2],
+              "finalVelocity" : [-3, -4]
+            }
+          }
+        },
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/fizz4/fizz4.animation",
+            "size" : 1,
+            "angularVelocity" : 20,
+            "fade" : 1,
+            "destructionTime" : 1,
+            "position" : [0, 0],
+            "initialVelocity" : [8, 8],
+            "finalVelocity" : [3, -4],
+            "approach" : [15, 15],
+            "timeToLive" : 3.45,
+            "layer" : "middle",
+            "variance" : {
+              "initialVelocity" : [4, 2],
+              "finalVelocity" : [3, -4]
+            }
+          }
+        }
+      ]
+    }
+  },
+
+  "effects" : {
+    "blink" : {
+      "type" : "flash",
+      "time" : 0.25,
+      "directives" : "fade=ffffff;0.5"
+    }
+  },
+
+  "sounds" : {
+    "landing" : [ "/sfx/gun/grenadeblast2.ogg" ],
+    "stunned" : [ "/sfx/npc/boss/ufo_stunned.ogg" ],
+    "teleportIn" : {
+      "pool" : [ "/sfx/npc/boss/ufo_teleport_appear.ogg" ],
+      "rangeMultiplier" : 1.5
+    },
+    "teleportOut" : {
+      "pool" : [ "/sfx/npc/boss/ufo_teleport_disappear.ogg" ],
+      "rangeMultiplier" : 1.5
+    }
+  }
+}

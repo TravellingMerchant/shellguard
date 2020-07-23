@@ -1,0 +1,27 @@
+{
+  "name" : "sgApexbossAwaken",
+  "label" : "AWAKEN",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossAwaken.lua" ],
+
+    "sgApexbossAwaken" : {
+	  "headRotationCenter" : [4.125, 2.5],
+	  "projectileSpawnOffset" : [-4.5, 2],
+	  
+	  "burstCount" : 5,
+	  "burstTime" : 0.125,
+	  
+	  "projectileType" : "sgchomperroar",
+	  "projectileParameters" : {},
+	  "trackSourceEntity" : false
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "roar" : [ "/sfx/monsters/boss/chomby/DragonRoar_long.ogg" ]
+    }
+  }
+}

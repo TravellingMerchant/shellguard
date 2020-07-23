@@ -21,6 +21,7 @@
     "buyFactor" : 1.0,
     "sellFactor" : 0.2,
     "items" : [
+	 { "item" : { "name" : "wfcrabdeployer" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgquadturretcontroller" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgscatterturretcontroller" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgironwatchrifle" }, "prerequisiteQuest" : "sgironwatchspacemission" },
@@ -82,11 +83,13 @@
   ],
   
   "offeredQuests" : [
-    "sgironwatchspacemission"
+    "sgironwatchspacemission", "sgelevatorsurvival2", "sgoceanattack1", "sgoceanattack2"
   ],
   "turnInQuests" : [
-    "sgironwatchspacemission"
+    "sgironwatchspacemission", "sgelevatorsurvival2", "sgoceanattack1", "sgoceanattack2"
   ],
+
+  "questIndicatorPosition" : [0, -4.5],
 
   "uniqueId" : "sgironwatchmembers",
   

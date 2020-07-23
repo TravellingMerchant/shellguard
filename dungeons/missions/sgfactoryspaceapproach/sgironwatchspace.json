@@ -15342,7 +15342,7 @@
                  "y":1336
                 }, 
                 {
-                 "gid":2147493255,
+                 "gid":2147493258,
                  "height":16,
                  "id":3188,
                  "name":"",
@@ -15362,7 +15362,7 @@
                  "y":1320
                 }, 
                 {
-                 "gid":2147493255,
+                 "gid":2147493258,
                  "height":16,
                  "id":3189,
                  "name":"",
@@ -15402,7 +15402,7 @@
                  "y":872
                 }, 
                 {
-                 "gid":2147493255,
+                 "gid":2147493258,
                  "height":16,
                  "id":3191,
                  "name":"",
@@ -15422,7 +15422,7 @@
                  "y":872
                 }, 
                 {
-                 "gid":2147493255,
+                 "gid":2147493258,
                  "height":16,
                  "id":3192,
                  "name":"",
@@ -15442,7 +15442,7 @@
                  "y":872
                 }, 
                 {
-                 "gid":2147493255,
+                 "gid":2147493258,
                  "height":16,
                  "id":3193,
                  "name":"",
@@ -15462,7 +15462,7 @@
                  "y":1000
                 }, 
                 {
-                 "gid":2147493255,
+                 "gid":2147493258,
                  "height":16,
                  "id":3194,
                  "name":"",
@@ -15482,7 +15482,7 @@
                  "y":1000
                 }, 
                 {
-                 "gid":9607,
+                 "gid":9610,
                  "height":16,
                  "id":3195,
                  "name":"",
@@ -15500,6 +15500,30 @@
                  "width":40,
                  "x":10968,
                  "y":984
+                }, 
+                {
+                 "gid":2784,
+                 "height":144,
+                 "id":3196,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":9464,
+                 "y":1336
+                }, 
+                {
+                 "gid":2784,
+                 "height":144,
+                 "id":3197,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":10272,
+                 "y":1336
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -16459,7 +16483,7 @@
          "y":0
         }],
  "nextlayerid":11,
- "nextobjectid":3196,
+ "nextobjectid":3198,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.1",
@@ -16654,7 +16678,7 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }, 
         {
-         "firstgid":9604,
+         "firstgid":9607,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/outpost.json"
         }],
  "tilewidth":8,

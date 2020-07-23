@@ -18,7 +18,9 @@
 	  
 	  "projectileType" : "sgruincleavershotshortdragon",
 	  "projectileParameters" : {},
-	  "trackSourceEntity" : false
+	  "trackSourceEntity" : false,
+	  
+	  "holdAim" : true
     }
   },
 

@@ -1,7 +1,7 @@
 require "/scripts/util.lua"
 require "/scripts/rect.lua"
 
-function init()
+function init()  
   self.thrusters = config.getParameter("thrusters", {})
   
   self.tookDamage = false
@@ -115,13 +115,7 @@ function update(dt)
 
     self.hadTarget = hasTarget()
   end
-  
-  --[[local entityId = world.playerQuery(mcontroller.position(), 300, {includedTypes = {"player"}, order = "nearest"})[1]
-  
-  if entityId then
-    mcontroller.controlFace(world.distance(mcontroller.position(), world.entityPosition(entityId))[1])
-  end]]
-  
+
   updateThrusters()
 end
 

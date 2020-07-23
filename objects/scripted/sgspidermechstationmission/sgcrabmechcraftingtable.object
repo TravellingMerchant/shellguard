@@ -1,0 +1,66 @@
+{
+	"objectName" : "sgcrabmechcraftingtablemission",
+	"colonyTags" : [],
+	"printable" : false,
+	"rarity" : "Common",
+
+	"tooltipKind" : "object",
+
+	"category" : "storage",
+	"price" : 500,
+	"description" : "The basis of all weapon and armor modification.",
+	"shortdescription" : "Mod Slag Furnace",
+	"race" : "generic",
+
+	"health" : 5,
+
+	"inventoryIcon" : "sgcrabmechcraftingtableicon.png",
+	
+	"orientations" : [
+    {
+      "image" : "sgcrabmechcraftingtable.png:<frame>",
+      "flipImages" : true,
+      "imagePosition" : [-32, 0],
+      "animationPosition" : [-32, 0],
+      "frames" : 41,
+      "animationCycle" : 4.1,
+
+      "lightPosition" : [1, 2],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "direction" : "left"
+    },
+    {
+      "image" : "sgcrabmechcraftingtable.png:<frame>",
+      "imagePosition" : [-32, 0],
+      "animationPosition" : [-32, 0],
+      "frames" : 41,
+      "animationCycle" : 4.1,
+
+      "lightPosition" : [-1, 2],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "direction" : "right"
+    }
+   ],
+   
+	"lightColor" : [38, 167, 234],
+	
+    "flickerPeriod" : 0.3,
+    "flickerMinIntensity" : 0.95,
+    "flickerMaxIntensity" : 1,
+    "flickerPeriodVariance" : 0.075,
+    "flickerIntensityVariance" : 0.025,
+
+	"interactAction" : "ScriptPane",
+	"interactData" : "/interface/scripted/sgspidermechstation/sgspidermechstation.config",
+
+  "animation" : "sgcrabmechcraftingtable.animation",
+  "animationParts" : {
+    "bg" : "sgcrabmechcraftingtable.png",
+    "fg" : "sgcrabmechcraftingtablefullbright.png"
+  }
+
+}

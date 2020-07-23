@@ -9,7 +9,7 @@
 
   "animation" : "sgmediumape.animation",
 
-  "dropPools" : [ "siegebreakerdrop" ],
+  "dropPools" : [],
 
   "baseParameters" : {
     "scripts" : [
@@ -60,7 +60,7 @@
 	"damageTilesAmount": 200,
 	
     "behaviorConfig" : {
-      "damageOnTouch" : true,	  
+      "damageOnTouch" : false,	  
 	  
       "targetQueryRange" : 50,
       "targetOnDamage" : true,
@@ -189,7 +189,7 @@
             "maximumRange" : 70,
             "minimumRange" : 0,
             "windupTime" : 1.5,
-            "windupStopForce" : 500,
+            "windupStopForce" : 5,
 			"rotationCenter"  : [1.5, 7.5],
             "windupState" : "idle",
 			"windupStateType" : "backgun",
@@ -221,7 +221,7 @@
             "maximumRange" : 70,
             "minimumRange" : 0,
             "windupTime" : 1.0,
-            "windupStopForce" : 500,
+            "windupStopForce" : 5,
 			"rotationCenter"  : [-5, 7.5],
             "windupState" : "idle",
 			"windupStateType" : "frontgun",
@@ -381,7 +381,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 4000
+          "baseValue" : 1300
         },
         "protection" : {
           "baseValue" : 25.0
@@ -446,8 +446,6 @@
         }
       }
     },
-
-	"uniqueId" : "sgsiegebreaker",
 
     "mouthOffset" : [0, 70],
     "feetOffset" : [0, -8],
