@@ -2,7 +2,7 @@ require "/scripts/util.lua"
 
 function init()
   self.updateLock = true
-  script.setUpdateDelta(5)--update every 1/12 second
+  script.setUpdateDelta(15)--update every 1/4 second
   widget.setText("errorLabel","")
 end
 
@@ -24,10 +24,8 @@ function update(dt)
 	  end
 	  self.errorPromise=nil
 	end
-  elseif self.errorCheckTimer and self.errorCheckTimer <=0.0 then
-    self.errorPromise=world.sendEntityMessage(pane.containerEntityId(),"sendErrorStatus")
   else
-    self.errorCheckTimer=(self.errorCheckTimer or 5)-dt
+	self.errorPromise=world.sendEntityMessage(pane.containerEntityId(),"sendErrorStatus")
   end
 end
 
