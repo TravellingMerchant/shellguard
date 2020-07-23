@@ -32,7 +32,7 @@
     "phases" : [
       {
         "enterPhase" : "sgAwaken",
-        "skills" : ["sgTeleportLeftSide", "sgHeadRocketBarrage", "sgSwoopAttack", "sgTeleportAttack",  "sgHeadCleaver", "sgHeadLaser", "sgHeadLaser", "sgTeleportAttack", "sgHeadLaser", "sgHeadLaser"]
+        "skills" : ["sgTeleportLeftSide", "sgHeadLaser"]
       },
       {
         "enterPhase" : "sgReinforcementsAttack",

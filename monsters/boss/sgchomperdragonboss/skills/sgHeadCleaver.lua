@@ -67,8 +67,14 @@ function sgHeadCleaver.updateHead(stateData)
       self.targetAngle = vec2.angle(estimatedPosition) * (mcontroller.facingDirection() * -1) + self.headAngleOffset * (estimatedPosition[1] < 0 and 1.8 or 1)
 	  self.toTarget = vec2.norm(world.distance(self.targetPosition, monster.toAbsolutePosition(self.projectileSpawnOffset)))
 	  
-	  local angleAdjust = (estimatedPosition[1] < 0) and math.pi/2 or 0
-	  self.targetAngle = (self.targetAngle * (estimatedPosition[1] < 0 and -1 or 1)) - angleAdjust
+	  if estimatedPosition[1] < 0 and not self.holdAim then
+	    self.targetAngle = self.targetAngle - math.pi + (self.headAngleOffset)
+	  elseif estimatedPosition[1] > 0 and not self.holdAim then
+	    self.targetAngle = self.targetAngle + (self.headAngleOffset * 1.0)
+	  elseif self.holdAim then
+	    local angleAdjust = (estimatedPosition[1] < 0) and math.pi/2 or 0 + self.headAngleOffset * (estimatedPosition[1] < 0 and 1.8 or 1)
+	    self.targetAngle = (self.targetAngle * (estimatedPosition[1] < 0 and -1 or 1)) - angleAdjust
+	  end
 	  
 	  self.targetAimFound = self.holdAim
     end
