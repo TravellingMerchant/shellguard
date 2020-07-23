@@ -2,7 +2,7 @@ require "/scripts/util.lua"
 
 function init()
   self.updateLock = true
-  script.setUpdateDelta(15)--update every 1/4 second
+  script.setUpdateDelta(5)--update every 1/4 second
   widget.setText("errorLabel","")
 end
 
