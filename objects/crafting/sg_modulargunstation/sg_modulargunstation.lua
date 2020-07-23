@@ -208,13 +208,22 @@ function craftGun(items)
 	  self.errorMessage="Missing parts."
 	  --sb.logInfo("FAILURE: No build item:%s, in %s",i,build)
 	  return
-	elseif build[4] and (i==4 and build[3]==nil) then
-	  self.errorMessage="Underbarrel with no barrel."
-	  --sb.logInfo("FAILURE: Underbarrel with no barrel.",i,build)
-	  return
 	end
   end
-  
+  local barrelCheck=false
+  local underBarrelCheck
+  for _,item in pairs(build) do
+    if item.type=="underBarrel" then
+		underBarrelCheck=true
+	elseif item.type=="barrel" then
+		barrelCheck=true
+	end
+  end
+  if underBarrelCheck and not barrelCheck then
+	self.errorMessage="Underbarrel with no barrel."
+	--sb.logInfo("FAILURE: Underbarrel with no barrel.",i,build)
+	return
+  end
   if not buildValid(build) then
     if self.suppressInvalidBuildMessage then
 	   self.suppressInvalidBuildMessage=false
