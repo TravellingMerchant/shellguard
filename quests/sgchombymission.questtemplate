@@ -1,0 +1,46 @@
+{
+  "id" : "sgchombymission",
+  "prerequisites" : ["sgsiegebreakermission"],
+  "title" : "^green;Fight Chomby.",
+  "text" : "Another robot has failed to be recalled. This massive chomper unit is surrounded by obsessed fanatics. Please destroy it.",
+  "completionText" : "That fight looked like it took a lot of biological efficacy to overcome. Congratulations.",
+  "moneyRange" : [5000, 5000],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], ["money", 5000 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/sgfortressbase/sgfortressbasequesticon.png"} ],
+        "title" : "Fortress"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/sgfortressbase/sgfortressbasequesticon.png"} ],
+        "title" : "Fortress"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Fortress.^reset;",
+      "findGoal" : "Destroy Chomby.",
+      "turnIn" : "Return to ^orange;Fortress.^reset;"
+    },
+
+    "warpEntityUid" : "sgfortressbase",
+    "warpAction" : "instanceworld:sgbossmine",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgfortressmissionteleport",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgbossminetele",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgfortressbase",
+    "setUniverseFlags" : ["sgoutpost_survivorbeat"]
+  }
+}
