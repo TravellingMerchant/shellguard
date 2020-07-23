@@ -211,9 +211,10 @@ function craftGun(items)
 	end
   end
   local barrelCheck=false
-  local underBarrelCheck
+  local underBarrelCheck=false
+  --sb.logInfo("%s",build)
   for _,item in pairs(build) do
-    if item.type=="underBarrel" then
+    if item.type=="underbarrelAddon" then
 		underBarrelCheck=true
 	elseif item.type=="barrel" then
 		barrelCheck=true
