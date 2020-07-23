@@ -15,6 +15,7 @@ function idleState.enter()
 end
 
 function idleState.update(dt, stateData)
+  mcontroller.controlFace(1)
   mcontroller.controlParameters(stateData.parameters)
   
   self.timer = self.timer + dt

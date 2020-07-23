@@ -39,7 +39,7 @@ function sgHeadLaser.update(dt, stateData)
 	self.burstTimer = math.max(0, self.burstTimer - dt)
     if self.burstCount > 0 and self.burstTimer == 0 then
 	  --Fire Projectile--
-	  local toTarget = vec2.norm(vec2.rotate({0,1}, self.targetAngle))
+	  local toTarget = vec2.norm(world.distance(self.targetPosition, monster.toAbsolutePosition(self.projectileSpawnOffset)))
 	  rangedAttack.aim(self.projectileSpawnOffset, toTarget)
       animator.playSound("laserFire")
 	  rangedAttack.fireOnce(stateData.projectileType, stateData.projectileParameters)
@@ -62,18 +62,17 @@ function sgHeadLaser.updateHead(stateData)
   local entityId = world.playerQuery(mcontroller.position(), 300, {includedTypes = {"player"}, order = "nearest"})[1]
   
   if entityId and self.burstCount > 0 then
-    mcontroller.controlFace(world.distance(mcontroller.position(), world.entityPosition(entityId))[1])
-	
 	if not self.targetAimFound then
       local estimatedPosition = world.distance(mcontroller.position(), world.entityPosition(entityId))
-      self.targetAngle = vec2.angle(estimatedPosition) * (mcontroller.facingDirection() * -1) + self.headAngleOffset
+      mcontroller.controlFace(world.distance(mcontroller.position(), world.entityPosition(entityId))[1])
+      self.targetAngle = vec2.angle(estimatedPosition) * (mcontroller.facingDirection() * -1) + self.headAngleOffset * (estimatedPosition[1] < 0 and 1.8 or 1)
+	  self.toTarget = vec2.norm(world.distance(self.targetPosition, monster.toAbsolutePosition(self.projectileSpawnOffset)))
+	  
+	  local angleAdjust = (estimatedPosition[1] < 0) and math.pi/2 or 0
+	  self.targetAngle = (self.targetAngle * (estimatedPosition[1] < 0 and -1 or 1)) - angleAdjust
 	  
 	  self.targetAimFound = self.holdAim
     end
-	
-	if estimatedPosition and estimatedPosition[1] < 0 then
-	  self.targetAngle = self.targetAngle - math.pi
-	end
   elseif self.burstCount == 0 then
     self.targetAngle = 0
   end
