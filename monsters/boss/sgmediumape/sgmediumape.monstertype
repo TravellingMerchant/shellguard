@@ -1,6 +1,6 @@
 {
   "type" : "sgmediumape",
-  "shortdescription" : "Miniknog Mech",
+  "shortdescription" : "Medium Ape",
   "description" : "Stop him!",
 
   "categories" : [ "sgmediumape" ],
@@ -60,7 +60,7 @@
 	"damageTilesAmount": 200,
 	
     "behaviorConfig" : {
-      "damageOnTouch" : true,	  
+      "damageOnTouch" : false,	  
 	  
       "targetQueryRange" : 50,
       "targetOnDamage" : true,
@@ -381,7 +381,7 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 2000
+          "baseValue" : 1300
         },
         "protection" : {
           "baseValue" : 25.0

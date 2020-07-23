@@ -39,9 +39,9 @@
     }
   ],
 
-  "offeredQuests" : [ "sgsiegebreakermission"
+  "offeredQuests" : [ "sgsiegebreakermission", "sgchombymission"
   ],
-  "turnInQuests" : [ "sgsiegebreakermission"
+  "turnInQuests" : [ "sgsiegebreakermission", "sgchombymission"
   ],
 
   "scripts" : ["/scripts/sgAdvancedChattyObject.lua"],
