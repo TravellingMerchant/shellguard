@@ -4,6 +4,7 @@ require "/scripts/util.lua"
 -- thankfully the base mod is free for the taking soo
 
 function init()
+  --config.getParameter(<string key>,default) returns default if parameter <string key> not found. so for all these calls, it's just returning the default.
   local partConfig = config.getParameter("partConfig", {"/items/active/weapons/ranged/sg_built/partConfig.config","/items/active/weapons/ranged/sg_built/partConfigMerchant.config","/items/active/weapons/ranged/sg_built/partConfigSkaianDLC.config"})
   self.partConfig = {}
   
@@ -15,6 +16,8 @@ function init()
     self.partConfig["baseAddon"..v] = self.partConfig.baseAddon
   end
   
+  --sb.logInfo("%s",self.partConfig)
+  
   self.name = nil
   
   self.first = true
@@ -25,7 +28,8 @@ function init()
   if storage.lastInventory == nil then storage.lastInventory = {} end
   
   message.setHandler("nameItem", nameItem)
-  message.setHandler("closed", closed)
+  message.setHandler("sendErrorStatus", sendErrorStatus)
+  --message.setHandler("closed", closed)
 end
 
 function update(dt)
@@ -46,6 +50,10 @@ function nameItem(callback, isLocal, name)
   containerSlotsChanged({1})
 end
 
+function sendErrorStatus()
+	return self.errorMessage
+end
+
 --[[
 function closed(callback, isLocal)
   for i = 0, 5 do
@@ -57,8 +65,9 @@ end
 
 function containerSlotsChanged(slots)
   --sb.logInfo("%s", slots)
-  
+  self.errorMessage=""
   if slots[1] == 6 then
+    self.suppressInvalidBuildMessage=true
     if world.containerItemAt(entity.id(), 6) and not storage.lastInventory[7] then
       for i = 0, 5 do
         local item = containerTakeItem(i)
@@ -195,19 +204,45 @@ function craftGun(items)
   local build = {}
   for i, item in pairs(itemStorage) do
     build[i] = value(item, "build")
-    if build[i] == nil then return --[[sb.logInfo("FAILURE")]] end
+    if build[i] == nil then
+	  self.errorMessage="Missing parts."
+	  --sb.logInfo("FAILURE: No build item:%s, in %s",i,build)
+	  return
+	elseif build[4] and (i==4 and build[3]==nil) then
+	  self.errorMessage="Underbarrel with no barrel."
+	  --sb.logInfo("FAILURE: Underbarrel with no barrel.",i,build)
+	  return
+	end
   end
   
-  if not buildValid(build) then return --[[sb.logInfo("FAILURE")]] end
+  if not buildValid(build) then
+    if self.suppressInvalidBuildMessage then
+	   self.suppressInvalidBuildMessage=false
+	else
+      self.errorMessage="Invalid build."
+      --self.errorMessage=nil
+      --sb.logInfo("FAILURE: Build Invalid")
+	end
+    return
+  end
   
   local incompat = {}
   local partConfig = {}
+  --sb.logInfo("%s",build)
   for i, item in pairs(build) do
+    --sb.logInfo("%s, %s",i,item)
     local typeConfig = self.partConfig[item.type]
+	--sb.logInfo("%s",typeConfig)
     partConfig[i] = typeConfig[item.id]
+	--sb.logInfo("%s %s",item.id,typeConfig[item.id])
     if partConfig[i].incompatibleWith then
       for j, incompatType in pairs(partConfig[i].incompatibleWith) do
-        if incompat[incompatType] then return --[[sb.logInfo("FAILURE")]] end
+		--sb.logInfo("%s %s %s %s",i,item,j,incompatType)
+        if incompat[incompatType] then
+		  self.errorMessage="Incompatible parts."
+		  sb.logInfo("FAILURE: Incompatible: %s",incompatType)
+		  return
+        end
       end
     end
     if partConfig[i].type then
@@ -215,7 +250,11 @@ function craftGun(items)
     end
   end
   
-  if partConfig[2].addons == 1 and items[5] then return --[[sb.logInfo("FAILURE")]] end
+  if partConfig[2].addons == 1 and items[5] then
+    self.errorMessage="Too many Addons"
+	--sb.logInfo("FAILURE: Too many addons for this barrel.")
+	return
+  end
   
   local returnBuild = {
     stock = build[1].id,
@@ -231,7 +270,7 @@ function craftGun(items)
       count = 1,
       parameters = {build = returnBuild, name = self.name}
     }
-
+  self.errorMessage=nil
   return gun
 end
 
