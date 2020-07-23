@@ -250,7 +250,7 @@ function craftGun(items)
 		--sb.logInfo("%s %s %s %s",i,item,j,incompatType)
         if incompat[incompatType] then
 		  self.errorMessage="Incompatible parts."
-		  sb.logInfo("FAILURE: Incompatible: %s",incompatType)
+		  --sb.logInfo("FAILURE: Incompatible: %s",incompatType)
 		  return
         end
       end
