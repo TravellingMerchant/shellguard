@@ -1,4 +1,5 @@
 [
+   [
     { "op" : "add", "path": "/planetTypes/forest/layers/surface/dungeons/-", "value" : [1,"surfaceshellguarddungeons"] },
     { "op" : "add", "path": "/planetTypes/desert/layers/surface/dungeons/-", "value" : [1,"surfaceshellguarddungeons"] },
     { "op" : "add", "path": "/planetTypes/savannah/layers/surface/dungeons/-", "value" : [1,"surfaceshellguarddungeons"] },
@@ -7,4 +8,55 @@
     { "op" : "add", "path": "/planetTypes/tundra/layers/surface/dungeons/-", "value" : [2.0,"surfaceshellguarddungeons"] },
     { "op" : "add", "path": "/planetTypes/volcanic/layers/surface/dungeons/-", "value" : [2.0,"surfaceshellguarddungeons"] },
     { "op" : "add", "path": "/planetTypes/scorchedcity/layers/surface/dungeons/-", "value" : [2.0,"surfaceshellguarddungeons"] }
+    ],
+    // Frackin
+    [ 
+    { "op" : "test", "path": "/planetTypes/arboreal" },
+    { "op" : "add", "path": "/planetTypes/arboreal/layers/surface/dungeons/-", "value" : [1.0,"surfaceshellguarddungeons"] }
+    ],
+    [ 
+    { "op" : "test", "path": "/planetTypes/arboreal2" },
+    { "op" : "add", "path": "/planetTypes/arboreal2/layers/surface/dungeons/-", "value" : [1.0,"surfaceshellguarddungeons"] }
+    ],
+    [ 
+    { "op" : "test", "path": "/planetTypes/eden" },
+    { "op" : "add", "path": "/planetTypes/eden/layers/surface/dungeons/-", "value" : [1.0,"surfaceshellguarddungeons"] }
+    ],
+    [ 
+    { "op" : "test", "path": "/planetTypes/crystalmoon" },
+    { "op" : "add", "path": "/planetTypes/crystalmoon/layers/surface/dungeons/-", "value" : [1.0,"surfaceshellguarddungeons"] }
+    ],
+    [ 
+    { "op" : "test", "path": "/planetTypes/frozenvolcanic" },
+    { "op" : "add", "path": "/planetTypes/crystalmoon/layers/surface/dungeons/-", "value" : [2.0,"surfaceshellguarddungeons"] }
+    ],
+    [ 
+    { "op" : "test", "path": "/planetTypes/fungus" },
+    { "op" : "add", "path": "/planetTypes/fungus/layers/surface/dungeons/-", "value" : [1.0,"surfaceshellguarddungeons"] }
+    ],
+    [ 
+    { "op" : "test", "path": "/planetTypes/icewaste" },
+    { "op" : "add", "path": "/planetTypes/icewaste/layers/surface/dungeons/-", "value" : [3.0,"surfaceshellguarddungeons"] }
+    ],
+    [ 
+    { "op" : "test", "path": "/planetTypes/infernus" },
+    { "op" : "add", "path": "/planetTypes/infernus/layers/surface/dungeons/-", "value" : [2.0,"surfaceshellguarddungeons"] }
+    ],
+    [ 
+    { "op" : "test", "path": "/planetTypes/metallicmoon" },
+    { "op" : "add", "path": "/planetTypes/metallicmoon/layers/surface/dungeons/-", "value" : [3.0,"surfaceshellguarddungeons"] }
+    ],
+    [ 
+    { "op" : "test", "path": "/planetTypes/mountainous" },
+    { "op" : "add", "path": "/planetTypes/mountainous/layers/surface/dungeons/-", "value" : [1.0,"surfaceshellguarddungeons"] }
+    ],
+    [ 
+    { "op" : "test", "path": "/planetTypes/urbanwasteland" },
+    { "op" : "add", "path": "/planetTypes/urbanwasteland/layers/surface/dungeons/-", "value" : [1.0,"surfaceshellguarddungeons"] }
+    ],    
+    // Extended Story    
+    [ 
+    { "op" : "test", "path": "/planetTypes/halloween" },
+    { "op" : "add", "path": "/planetTypes/halloween/layers/surface/dungeons/-", "value" : [1.0,"surfaceshellguarddungeons"] }
+    ]
 ]
