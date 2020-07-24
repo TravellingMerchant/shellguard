@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Essential",
   "description" : "Though once mounted to a ship used to fell giant beasts, it's great at hunting smaller prey.",
-  "shortdescription" : "^orange;Hunters Avarice",
+  "shortdescription" : "^orange;Hunter's Avarice^reset;",
   "level" : 10,
   "tooltipKind" : "sgweapon",
   "category" : "uniqueWeapon",
