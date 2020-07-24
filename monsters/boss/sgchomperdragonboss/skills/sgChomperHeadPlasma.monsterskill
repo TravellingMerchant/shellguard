@@ -1,12 +1,12 @@
 {
-  "name" : "sgHeadPlasma",
+  "name" : "sgChomperHeadPlasma",
   "label" : "MEGA SWOOP",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
-    "scripts" : [ "/monsters/boss/sgchomperdragonboss/skills/sgHeadPlasma.lua" ],
+    "scripts" : [ "/monsters/boss/sgchomperdragonboss/skills/sgChomperHeadPlasma.lua" ],
 
-    "sgHeadPlasma" : {
+    "sgChomperHeadPlasma" : {
 	  "headRotationCenter" : [4.125, 2.5],
 	  "projectileSpawnOffset" : [-5.5, 0],
 	  "headAngleOffset" : 0.6,

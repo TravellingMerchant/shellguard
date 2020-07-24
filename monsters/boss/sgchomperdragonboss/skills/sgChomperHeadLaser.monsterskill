@@ -1,12 +1,12 @@
 {
-  "name" : "sgHeadLaser",
+  "name" : "sgChomperHeadLaser",
   "label" : "MEGA SWOOP",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
-    "scripts" : [ "/monsters/boss/sgchomperdragonboss/skills/sgHeadLaser.lua" ],
+    "scripts" : [ "/monsters/boss/sgchomperdragonboss/skills/sgChomperHeadLaser.lua" ],
 
-    "sgHeadLaser" : {
+    "sgChomperHeadLaser" : {
 	  "headRotationCenter" : [4.125, 2.5],
 	  "projectileSpawnOffset" : [-5.5, 0],
 	  "headAngleOffset" : 0.6,
@@ -24,7 +24,7 @@
 
   "animationParameters" : {
     "sounds" : {
-      "laserWindup" : [ "/sfx/monsters/boss/sgdronelaser1.ogg", "/sfx/monsters/boss/sgdronelaser2.ogg", "/sfx/monsters/boss/sgdronelaser3.ogg" ],
+      "laserWindup" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ],
       "laserFire" : [ "/sfx/monsters/boss/sgdronelaser1.ogg", "/sfx/monsters/boss/sgdronelaser2.ogg", "/sfx/monsters/boss/sgdronelaser3.ogg" ]
     }
   }

@@ -1,36 +1,36 @@
-sgHeadPlasma = {}
+sgChomperHeadLaser = {}
 
-function sgHeadPlasma.enter()
-  self.headRotationCenter = config.getParameter("sgHeadPlasma.headRotationCenter", {0, 0})
-  self.projectileSpawnOffset = config.getParameter("sgHeadPlasma.projectileSpawnOffset", {0, 0})
-  self.headAngleOffset = config.getParameter("sgHeadPlasma.headAngleOffset", 1)
-  self.chargeUpTime = config.getParameter("sgHeadPlasma.chargeUpTime", 0)
-  self.holdAim = config.getParameter("sgHeadPlasma.holdAim", false)
+function sgChomperHeadLaser.enter()
+  self.headRotationCenter = config.getParameter("sgChomperHeadLaser.headRotationCenter", {0, 0})
+  self.projectileSpawnOffset = config.getParameter("sgChomperHeadLaser.projectileSpawnOffset", {0, 0})
+  self.headAngleOffset = config.getParameter("sgChomperHeadLaser.headAngleOffset", 1)
+  self.chargeUpTime = config.getParameter("sgChomperHeadLaser.chargeUpTime", 0)
+  self.holdAim = config.getParameter("sgChomperHeadLaser.holdAim", false)
   self.targetAimFound = false
   
   self.targetAngle = 0
   
-  self.angleApproach = config.getParameter("sgHeadPlasma.angleApproach", 1)
+  self.angleApproach = config.getParameter("sgChomperHeadLaser.angleApproach", 1)
   
-  self.burstCount = config.getParameter("sgHeadPlasma.burstCount", 1)
-  self.burstTime = config.getParameter("sgHeadPlasma.burstTime", 0.1)
+  self.burstCount = config.getParameter("sgChomperHeadLaser.burstCount", 1)
+  self.burstTime = config.getParameter("sgChomperHeadLaser.burstTime", 0.1)
   self.burstTimer = self.burstTime
 
   return {
-    projectileType = config.getParameter("sgHeadPlasma.projectileType", "dragonblockbuster"),
-    projectileParameters = config.getParameter("sgHeadPlasma.projectileParameters", {}),
-    trackSourceEntity = config.getParameter("sgHeadPlasma.trackSourceEntity", false)
+    projectileType = config.getParameter("sgChomperHeadLaser.projectileType", "dragonblockbuster"),
+    projectileParameters = config.getParameter("sgChomperHeadLaser.projectileParameters", {}),
+    trackSourceEntity = config.getParameter("sgChomperHeadLaser.trackSourceEntity", false)
   }
 end
 
-function sgHeadPlasma.enteringState(stateData)
-  monster.setActiveSkillName("sgHeadPlasma")
+function sgChomperHeadLaser.enteringState(stateData)
+  monster.setActiveSkillName("sgChomperHeadLaser")
   
   animator.setAnimationState("head", "attackWindup")
-  animator.playSound("plasmaWindup")
+  animator.playSound("laserWindup")
 end
 
-function sgHeadPlasma.update(dt, stateData)
+function sgChomperHeadLaser.update(dt, stateData)
   if self.chargeUpTime > 0 then
 	self.chargeUpTime = math.max(0, self.chargeUpTime - dt)
   elseif self.burstCount == 0 and self.headAngle == 0 then
@@ -40,7 +40,7 @@ function sgHeadPlasma.update(dt, stateData)
     if self.burstCount > 0 and self.burstTimer == 0 then
 	  --Fire Projectile--
 	  rangedAttack.aim(self.projectileSpawnOffset, self.toTarget)
-      animator.playSound("plasmaFire")
+      animator.playSound("laserFire")
 	  rangedAttack.fireOnce(stateData.projectileType, stateData.projectileParameters)
 	  
 	  self.burstCount = self.burstCount - 1
@@ -52,10 +52,10 @@ function sgHeadPlasma.update(dt, stateData)
 	end
   end
   
-  sgHeadPlasma.updateHead(stateData)
+  sgChomperHeadLaser.updateHead(stateData)
 end
 
-function sgHeadPlasma.updateHead(stateData)
+function sgChomperHeadLaser.updateHead(stateData)
   animator.resetTransformationGroup("head")
   
   local entityId = world.playerQuery(mcontroller.position(), 300, {includedTypes = {"player"}, order = "nearest"})[1]
@@ -64,7 +64,7 @@ function sgHeadPlasma.updateHead(stateData)
 	if not self.targetAimFound then
       local estimatedPosition = world.distance(mcontroller.position(), world.entityPosition(entityId))
       mcontroller.controlFace(world.distance(mcontroller.position(), world.entityPosition(entityId))[1])
-      self.targetAngle = vec2.angle(estimatedPosition) * (mcontroller.facingDirection() * -1) + self.headAngleOffset * (estimatedPosition[1] < 0 and 1.8 or 1)
+      self.targetAngle = vec2.angle(estimatedPosition) * (mcontroller.facingDirection() * -1)
 	  self.toTarget = vec2.norm(world.distance(self.targetPosition, monster.toAbsolutePosition(self.projectileSpawnOffset)))
 	  
 	  if estimatedPosition[1] < 0 and not self.holdAim then
@@ -86,5 +86,5 @@ function sgHeadPlasma.updateHead(stateData)
   animator.rotateTransformationGroup("head", self.headAngle, self.headRotationCenter)
 end
 
-function sgHeadPlasma.leavingState(stateData)
+function sgChomperHeadLaser.leavingState(stateData)
 end

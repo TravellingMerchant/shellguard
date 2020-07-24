@@ -1,12 +1,12 @@
 {
-  "name" : "sgSwoopAttack",
+  "name" : "sgChomperSwoopAttack",
   "label" : "MEGA SWOOP",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
-    "scripts" : [ "/monsters/boss/sgchomperdragonboss/skills/sgSwoopAttack.lua" ],
+    "scripts" : [ "/monsters/boss/sgchomperdragonboss/skills/sgChomperSwoopAttack.lua" ],
 
-    "sgSwoopAttack" : {
+    "sgChomperSwoopAttack" : {
       "swoopTime" : 1,
       "dashSpeed" : 50,
 	  
@@ -26,7 +26,7 @@
   
   "animationParameters" : {
     "sounds" : {
-      "dashFire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ],
+      "dashFire" : [ "/sfx/gun/Needle Lazer.ogg" ],
       "dashWindup" : [ "/sfx/monsters/boss/chomby/DragonRoar_long.ogg" ]
     }
   }

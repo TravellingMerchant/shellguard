@@ -1,37 +1,37 @@
-sgSwoopAttack = {}
+sgChomperSwoopAttack = {}
 
-function sgSwoopAttack.enter()
+function sgChomperSwoopAttack.enter()
   if not hasTarget() then return nil end
   if self.targetPosition == nil then return nil end
   
-  self.headRotationCenter = config.getParameter("sgSwoopAttack.headRotationCenter", {0, 0})
-  self.projectileSpawnOffset = config.getParameter("sgSwoopAttack.projectileSpawnOffset", {0, 0})
-  self.headAngleOffset = config.getParameter("sgSwoopAttack.headAngleOffset", 1)
+  self.headRotationCenter = config.getParameter("sgChomperSwoopAttack.headRotationCenter", {0, 0})
+  self.projectileSpawnOffset = config.getParameter("sgChomperSwoopAttack.projectileSpawnOffset", {0, 0})
+  self.headAngleOffset = config.getParameter("sgChomperSwoopAttack.headAngleOffset", 1)
   self.angleApproach = config.getParameter("sgHeadLaser.angleApproach", 1)
-  self.dashSpeed = config.getParameter("sgSwoopAttack.dashSpeed", 5)
-  self.burstTime = config.getParameter("sgSwoopAttack.burstTime", 0.1)
+  self.dashSpeed = config.getParameter("sgChomperSwoopAttack.dashSpeed", 5)
+  self.burstTime = config.getParameter("sgChomperSwoopAttack.burstTime", 0.1)
   self.burstTimer = self.burstTime
   self.collided = false
   
   return {
-    projectileType = config.getParameter("sgSwoopAttack.projectileType", "dragonblockbuster"),
-    projectileParameters = config.getParameter("sgSwoopAttack.projectileParameters", {}),
-    trackSourceEntity = config.getParameter("sgSwoopAttack.trackSourceEntity", false),
+    projectileType = config.getParameter("sgChomperSwoopAttack.projectileType", "dragonblockbuster"),
+    projectileParameters = config.getParameter("sgChomperSwoopAttack.projectileParameters", {}),
+    trackSourceEntity = config.getParameter("sgChomperSwoopAttack.trackSourceEntity", false),
 	
     timer = 0.0,
-    swoopTime = config.getParameter("sgSwoopAttack.swoopTime"),
+    swoopTime = config.getParameter("sgChomperSwoopAttack.swoopTime"),
     tookDamage = false
   }
 end
 
-function sgSwoopAttack.enteringState(stateData)
+function sgChomperSwoopAttack.enteringState(stateData)
   animator.rotateGroup("all", -30 * math.pi / 180)
-  monster.setActiveSkillName("sgSwoopAttack")
+  monster.setActiveSkillName("sgChomperSwoopAttack")
   animator.setAnimationState("head", "attackWindup")
   animator.playSound("dashWindup")
 end
 
-function sgSwoopAttack.update(dt, stateData)
+function sgChomperSwoopAttack.update(dt, stateData)
   mcontroller.controlFace(1)
   if not hasTarget() then return true end
 
@@ -67,14 +67,14 @@ function sgSwoopAttack.update(dt, stateData)
   self.collided = world.lineTileCollisionPoint(position, vec2.add(position, {15, 0}))
   
   mcontroller.controlFace(-1)
-  sgSwoopAttack.updateHead(stateData)
+  sgChomperSwoopAttack.updateHead(stateData)
   
   if self.collided then
     return true
   end
 end
 
-function sgSwoopAttack.updateHead(stateData)
+function sgChomperSwoopAttack.updateHead(stateData)
   animator.resetTransformationGroup("head")
   
   local targetAngle = -math.pi/2
@@ -83,7 +83,7 @@ function sgSwoopAttack.updateHead(stateData)
   animator.rotateTransformationGroup("head", self.headAngle + self.headAngleOffset, self.headRotationCenter)
 end
 
-function sgSwoopAttack.leavingState(stateData)
+function sgChomperSwoopAttack.leavingState(stateData)
   animator.rotateGroup("all", 0)
   animator.setAnimationState("head", "attackWinddown")
   monster.setDamageOnTouch(false)

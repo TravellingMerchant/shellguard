@@ -1,25 +1,25 @@
-sgTeleportAttack = {}
+sgChomperTeleportAttack = {}
 
-function sgTeleportAttack.enter()
+function sgChomperTeleportAttack.enter()
   if self.targetPosition == nil then return nil end
 
-  sgTeleportAttack.reappeared = false
+  sgChomperTeleportAttack.reappeared = false
   animator.burstParticleEmitter("teleport")
   animator.playSound("teleportOut")
   return { 
-    timer = config.getParameter("sgTeleportAttack.skillTime")
+    timer = config.getParameter("sgChomperTeleportAttack.skillTime")
   }
 end
 
-function sgTeleportAttack.enteringState(stateData)
-  monster.setActiveSkillName("sgTeleportAttack")
+function sgChomperTeleportAttack.enteringState(stateData)
+  monster.setActiveSkillName("sgChomperTeleportAttack")
 end
 
-function sgTeleportAttack.update(dt, stateData)
+function sgChomperTeleportAttack.update(dt, stateData)
   mcontroller.controlFace(1)
   status.addEphemeralEffect("invulnerable")
 
-  if stateData.timer > config.getParameter("sgTeleportAttack.skillTime") - 0.55 then
+  if stateData.timer > config.getParameter("sgChomperTeleportAttack.skillTime") - 0.55 then
     mcontroller.controlFly({ 0, 0 })
   elseif stateData.timer > 0 then
     if animator.animationState("movement") ~= "invisible" then
@@ -37,8 +37,8 @@ function sgTeleportAttack.update(dt, stateData)
       mcontroller.controlFly({ 0, 1 })
     end
 
-    if stateData.timer < 0.3 and not sgTeleportAttack.reappeared then
-      sgTeleportAttack.reappeared = true
+    if stateData.timer < 0.3 and not sgChomperTeleportAttack.reappeared then
+      sgChomperTeleportAttack.reappeared = true
       animator.burstParticleEmitter("teleport")
       animator.playSound("teleportIn")
     end
@@ -50,7 +50,7 @@ function sgTeleportAttack.update(dt, stateData)
   return false
 end
 
-function sgTeleportAttack.leavingState(stateData)
+function sgChomperTeleportAttack.leavingState(stateData)
   status.removeEphemeralEffect("invulnerable")
   mcontroller.setVelocity({ 0, 0 })
   mcontroller.controlFly({ 0, 0 })
