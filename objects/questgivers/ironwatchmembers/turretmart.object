@@ -32,6 +32,7 @@
 	 { "item" : { "name" : "sgscoutjack" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgrapidjack" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgsnaggletooth" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgkhopesh" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgironwatchburstrifle" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sggreatpolearm" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgironwatchbuzzer" }, "prerequisiteQuest" : "sgironwatchspacemission" },

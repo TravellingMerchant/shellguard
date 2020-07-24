@@ -1,0 +1,140 @@
+{
+  "itemName" : "sgkhopesh",
+  "price" : 9500,
+  "inventoryIcon" : "sgkhopesh.png:closed.1",
+  "maxStack" : 1,
+  "rarity" : "Essential",
+  "description" : "A lightweight sword made for destructive slashing attacks. Radiates energy.",
+  "shortdescription" : "^orange;Ironwatch Khopesh",
+  "level" : 10,
+  "tooltipKind" : "base",
+  "category" : "sggunstaff",
+  "itemTags" : ["weapon","ranged","mace","melee", "upgradeableWeapon"],
+  "twoHanded" : false,
+
+  "animation" : "/items/active/weapons/melee/speargun/sgaxegun.animation",
+  "animationParts" : {
+    "blade" : "sgkhopesh.png",
+    "bladefullbright" : "sgkhopeshfullbright.png",
+    "handle" : "",
+    "handlefullbright" : "",
+    "muzzleFlash" : ""
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire2" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire3" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "fire4" : [ "/sfx/melee/laser_weapon_swing1.ogg", "/sfx/melee/laser_weapon_swing2.ogg", "/sfx/melee/laser_weapon_swing3.ogg" ],
+      "gunfire" : [ "/sfx/monsters/boss/sghologramstart.ogg" ],
+      "gunfire2" : [ "/sfx/gun/Needle Lazer.ogg" ]
+    }
+  },
+
+  "baseOffset" : [0.0, 0.0],
+	
+	//Not required but gives it a nice aiming feel
+  "aimOffset" : 0,
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "sgaxeguncombo",
+  "primaryAbility" : {
+		"stances" : {
+      "idle" : {
+        "aimAngle" : 0,
+        "armRotation" : -90,
+        "weaponRotation" : -20,
+        "twoHanded" : false,
+        "allowRotate" : true,
+        "weaponOffset" : [0, -0.5],
+        "allowFlip" : true,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "closed"
+				}
+      },
+      "fire1" : {
+        "duration" : 0.15,
+        "armRotation" : -45,
+        "weaponRotation" : -55,
+        "twoHanded" : false,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+				//Not required, but makes the animationState open to reveal the blade
+				"animationStates" : {
+					"blade" : "open"
+				}
+      },
+      "preslash2" : {
+        "duration" : 0.025,
+        "armRotation" : 55,
+        "weaponRotation" : -45,
+        "twoHanded" : false,
+
+        "allowRotate" : true,
+        "allowFlip" : false
+      },
+      "wait2" : {
+        "duration" : 0.2,
+        "armRotation" : -45,
+        "weaponRotation" : -55,
+        "allowRotate" : false,
+        "allowFlip" : true,
+        "twoHanded" : false
+      },
+      "fire2" : {
+        "duration" : 0.2,
+        "armRotation" : -150,
+        "weaponRotation" : 55,
+        "weaponOffset" : [0, 0],
+        "twoHanded" : false,
+        "allowFlip" : true,
+        "allowRotate" : false
+      },
+      "fire4" : {
+        "duration" : 0.5,
+        "armRotation" : 55,
+        "weaponRotation" : -45,
+        "twoHanded" : false,
+		"aimAngle": -0,
+        "weaponOffset" : [0, 0.5],
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+
+				//If this exists it will try to shoot based on the variables within
+				"gunShotConfig" : {
+					//General
+					"aimAtCursor" : false,	//If true, will fire toward the cursor instead of the rotation of the weapon
+					"fireTime" : 0.1, 			//If this exists it loops during the stance duration firing in intervals of this number
+					"energyUsage" : 15,
+					"fireSound" : "gunfire2",
+					
+					//Recoil
+					"recoilKnockbackVelocity" : false,
+					
+					//Projectile
+					"projectile" : "sgplasmacircle",
+					"projectileCount" : 1,
+					"projectileDamage" : 2,
+					"projectileParameters" : {
+						"knockback" : 0,
+						"power" : 0
+					},
+					"projectileInaccuracy" : 2,
+					"projectileAimAngleOffset" : 0,
+					"projectileFirePoint" : [2, 3]
+				}
+			}
+		}
+	},
+
+  "builder" : "/items/buildscripts/buildweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "^orange;Ironwatch Khopesh ^yellow;^reset;"
+  }
+}
