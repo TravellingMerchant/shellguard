@@ -72,7 +72,7 @@ function sgHeadRocketBarrage.updateHead(stateData)
 	  elseif estimatedPosition[1] > 0 and not self.holdAim then
 	    self.targetAngle = self.targetAngle + (self.headAngleOffset * 1.0)
 	  elseif self.holdAim then
-	    local angleAdjust = (estimatedPosition[1] < 0) and math.pi/2 or 0 + self.headAngleOffset * (estimatedPosition[1] < 0 and 1.8 or 1)
+	    local angleAdjust = (estimatedPosition[1] < 0) and math.pi/2 or 0 + self.headAngleOffset * (estimatedPosition[1] < 0 and 1 or 1)
 	    self.targetAngle = (self.targetAngle * (estimatedPosition[1] < 0 and -1 or 1)) - angleAdjust
 	  end
 	  

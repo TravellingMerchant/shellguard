@@ -7,7 +7,7 @@ function sgChomperSwoopAttack.enter()
   self.headRotationCenter = config.getParameter("sgChomperSwoopAttack.headRotationCenter", {0, 0})
   self.projectileSpawnOffset = config.getParameter("sgChomperSwoopAttack.projectileSpawnOffset", {0, 0})
   self.headAngleOffset = config.getParameter("sgChomperSwoopAttack.headAngleOffset", 1)
-  self.angleApproach = config.getParameter("sgHeadLaser.angleApproach", 1)
+  self.angleApproach = config.getParameter("sgChomperSwoopAttack.angleApproach", 1)
   self.dashSpeed = config.getParameter("sgChomperSwoopAttack.dashSpeed", 5)
   self.burstTime = config.getParameter("sgChomperSwoopAttack.burstTime", 0.1)
   self.burstTimer = self.burstTime

@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 sgReinforcementsAttack = {}
 
-function sgReinforcementsAttack.enter()
+function sgReinforcementsAttack.enterWith()
   if not hasTarget() then return nil end
 
   local reinforcements = sgReinforcementsAttack.findReinforcements()
