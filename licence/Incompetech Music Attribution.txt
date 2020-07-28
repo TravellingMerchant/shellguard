@@ -5,3 +5,7 @@ License: http://creativecommons.org/licenses/by/4.0/
 Chee Zee Caves V2 by Kevin MacLeod
 Link: https://incompetech.filmmusic.io/song/3492-chee-zee-caves-v2
 License: http://creativecommons.org/licenses/by/4.0/
+
+Decisions by Kevin MacLeod
+Link: https://incompetech.filmmusic.io/song/3629-decisions
+License: http://creativecommons.org/licenses/by/4.0/
