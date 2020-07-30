@@ -10,8 +10,10 @@ function controlFace(direction)
   else
     if config.getParameter("facingMode", "control") == "transformation" then
       mcontroller.controlFace(1)
-      animator.resetTransformationGroup("facing")
-      animator.scaleTransformationGroup("facing", {util.toDirection(direction), 1})
+	  if animator.hasTransformationGroup("facing") then
+        animator.resetTransformationGroup("facing")
+        animator.scaleTransformationGroup("facing", {util.toDirection(direction), 1})
+	  end
       self.facingDirection = direction
     else
       mcontroller.controlFace(direction)
