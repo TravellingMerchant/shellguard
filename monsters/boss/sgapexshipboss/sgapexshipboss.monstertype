@@ -26,19 +26,25 @@
       "/monsters/boss/sgapexshipboss/dieState.lua"
     ],
 
-    "skills" : [  "sgApexbossrockets", "sgSwoopAttack", "sgTeleportAttack", "sgTeleportLeftSide", "sgApexbossAwaken"],
-    "skillCount" : 5,
+    "skills" : [ "sgHeadCleaver", "sgChomperTeleportrightSide", "sgHeadRocketBarrage", "sgChomperHeadPlasma", "sgChomperSwoopAttack", "sgSlamAttack", "sgReinforcementsAttack", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgTeleportLeftSide", "sgAwaken"],
+    "skillCount" : 11,
 
     "phases" : [
       {
-        "enterPhase" : "sgApexbossAwaken",
-        "skills" : ["sgTeleportLeftSide", "sgApexbossrockets", "sgSwoopAttack", "sgApexbossrockets", "sgApexbossrockets", "sgApexbossrockets"]
+        "enterPhase" : "sgAwaken",
+        "skills" : [ "sgTeleportLeftSide", "sgChomperHeadLaser", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgHeadRocketBarrage", "sgChomperTeleportAttack", "sgChomperHeadLaser" ]
       },
       {
-        "enterPhase" : "sgApexbossrockets",
+        "enterPhase" : "sgReinforcementsAttack",
         "trigger" : "healthPercentage",
-        "healthPercentage" : 0.2,
-        "skills" : ["sgTeleportAttack", "sgApexbossrockets"]
+        "healthPercentage" : 0.7,
+        "skills" : [ "sgTeleportLeftSide", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgTeleportLeftSide", "sgChomperSwoopAttack", "sgChomperTeleportAttack", "sgChomperHeadLaser", "sgChomperTeleportrightSide", "sgHeadCleaver", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgChomperHeadPlasma" ]
+      },
+      {
+        "enterPhase" : "sgReinforcementsAttack",
+        "trigger" : "healthPercentage",
+        "healthPercentage" : 0.3,
+        "skills" : [ "sgChomperTeleportAttack", "sgHeadRocketBarrage", "sgChomperTeleportAttack", "sgHeadRocketBarrage", "sgChomperTeleportAttack", "sgChomperHeadLaser", "sgChomperHeadLaser", "sgChomperHeadLaser", "sgChomperHeadLaser", "sgTeleportLeftSide", "sgChomperSwoopAttack", "sgChomperTeleportAttack", "sgHeadCleaver", "sgHeadCleaver", "sgHeadCleaver" ]
       }
     ],
 	
