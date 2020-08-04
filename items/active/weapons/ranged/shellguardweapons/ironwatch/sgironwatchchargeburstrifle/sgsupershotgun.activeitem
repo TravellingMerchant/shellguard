@@ -1,0 +1,129 @@
+{
+  "itemName" : "sgironwatchchargeburstrifle",
+  "price" : 9000,
+  "maxStack" : 1,
+  "rarity" : "Essential",
+  "description" : "Fires toxic plasma in wide bursts, or accurate lines.",
+  "shortdescription" : "^orange;Tidal Toxin",
+  "tooltipKind" : "base",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","upgradeableWeapon","shotgun"],
+  "level" : 10,
+
+  "inventoryIcon" : "sgsupershotgunicon.png",
+
+  "animation" : "sgsupershotgun.animation",
+  "animationParts" : {
+    "gun" : "sgsupershotgun.png",
+    "gunfullbright" : "sgsupershotgunfullbright.png",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {},
+  "muzzleOffset" : [1.25, 0.625],
+  "aimOffset" : 0.0,
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "ice",
+  //COMPATABILITY FOR WFCORE NPCS
+  "wfNpcWeaponData" : {"minRange" : 20, "maxRange" : 35, "forceMoveRange" : 40, "primaryCharge" : 0.2},
+
+  "primaryAbilityType" : "neb-enhancedchargefire",
+  "primaryAbility" : {
+    "name" : "Charged Shot",
+    "scripts" : ["/items/active/weapons/ranged/abilities/neb-enhancedchargefire/neb-enhancedchargefire.lua"],
+    "class" : "NebsEnhancedChargeFire",
+	
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 10,
+        "cooldown" : 0.85,
+        "projectileType" : "poisonplasma",
+        "projectileParameters" : {},
+        "projectileCount" : 6,
+        "inaccuracy" : 0.09,
+        "baseDamage" : 11,
+        "spreadAngle" : 0,
+        "fireType" : "single",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
+        //"burstTime" : 0.15,		//delay between shots in the burst
+        //"burstCount" : 1,		//amount of bullets to fire in the burst, must be a integer
+        "fireSound" : "fire"
+	  
+	    //Recoil Stuffs
+	    //"recoilKnockbackVelocity" : 45,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    //"crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
+	    //"crouchRecoilKnockbackVelocity" : 0	//When crouching it uses this instead of recoilKnockbackVelocity
+      },
+      {
+        "time" : 1.25,
+        "energyCost" : 10,
+        "cooldown" : 0.3,
+        "projectileType" : "poisonplasma",
+        "projectileParameters" : { "speed" : 200 },
+        "projectileCount" : 1,
+        "inaccuracy" : 0,
+        "baseDamage" : 6,
+        "spreadAngle" : 2,
+        "fireType" : "burst",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
+        "burstTime" : 0.05,		//delay between shots in the burst
+        "burstCount" : 6,		//amount of bullets to fire in the burst, must be a integer
+        "fireSound" : "fire",
+	  
+	    //Recoil Stuffs
+	    "recoilKnockbackVelocity" : 2,			//If this exists, it adds knockback, the number is the force at which you get pushed horizontally, for balancing
+	    "crouchStopsRecoil" : true,				//If true, the crouchRecoilKnockbackVelocity variable does something
+	    "crouchRecoilKnockbackVelocity" : 3	//When crouching it uses this instead of recoilKnockbackVelocity
+      }
+    ],
+	//Movement Whilst Charging
+	"walkWhileCharging" : false,		//if false, the player can run normally else if true it just makes the player walk while charging
+	"allowJumping" : true,			//if true allows for jumping while charging if false the player is unable to jump
+	
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "charge" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : -6,
+        "weaponRotation" : 5,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "cooldown" : {
+        "duration" : 0.25,
+        "armRotation" : -30,
+        "weaponRotation" : 40,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    }
+  },
+  
+
+  "altAbilityType" : "sgpushshot",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "^orange;Tidal Toxin ^yellow;^reset;"
+  }
+}

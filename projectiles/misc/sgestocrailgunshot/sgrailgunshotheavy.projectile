@@ -1,0 +1,62 @@
+{
+  "projectileName" : "sgestocrailgunshotheavy",
+  "image" : "sgrailgunshot.png",
+  "physics" : "laser",
+  "animationCycle" : 0.4,
+  "animationLoops" : false,
+  "windupFrames" : 2,
+  "timeToLive" : 0.5,
+  "frameNumber" : 3,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "pointLight" : true,
+  "lightColor" : [50, 50, 255],
+  "flippable" : true,
+  "orientationLocked" : false,
+  "bounces" : -1,
+  "piercing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
+    },
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/fireworkgun_blast1.ogg" ]
+    }
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.015,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "animated",
+        "animation" : "/animations/energybeamtrail/energybeamtrail.animation",
+        "initialVelocity" : [0.0, 0.0],
+        "timeToLive" : 0.5,
+        "layer" : "middle",
+        "position" : [0.0, 0.0]
+      }
+    },
+	{
+     "time" : 0.05,
+     "repeat" : true,
+     "action" : "explosion",
+     "foregroundRadius" : 4,
+     "backgroundRadius" : 3,
+     "explosiveDamageAmount" : 500.0,
+     "delaySteps" : 2
+    },
+	{
+     "time" : 0.05,
+     "repeat" : true,
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/electricexplosionknockback.config"
+    }
+  ],
+  "power" : 6.0,
+  "speed" : 250,
+  "damageKind" : "default"
+}
