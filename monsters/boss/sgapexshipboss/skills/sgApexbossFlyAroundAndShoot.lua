@@ -1,34 +1,34 @@
-sgChomperFlyAroundAllGayLike = {}
+sgApexbossFlyAroundAndShoot = {}
 
-function sgChomperFlyAroundAllGayLike.enter()
-  self.headRotationCenter = config.getParameter("sgChomperFlyAroundAllGayLike.headRotationCenter", {0, 0})
-  self.projectileSpawnOffset = config.getParameter("sgChomperFlyAroundAllGayLike.projectileSpawnOffset", {0, 0})
-  self.headAngleOffset = config.getParameter("sgChomperFlyAroundAllGayLike.headAngleOffset", 1)
-  self.chargeUpTime = config.getParameter("sgChomperFlyAroundAllGayLike.chargeUpTime", 0)
-  self.holdAim = config.getParameter("sgChomperFlyAroundAllGayLike.holdAim", false)
+function sgApexbossFlyAroundAndShoot.enter()
+  self.headRotationCenter = config.getParameter("sgApexbossFlyAroundAndShoot.headRotationCenter", {0, 0})
+  self.projectileSpawnOffset = config.getParameter("sgApexbossFlyAroundAndShoot.projectileSpawnOffset", {0, 0})
+  self.headAngleOffset = config.getParameter("sgApexbossFlyAroundAndShoot.headAngleOffset", 1)
+  self.chargeUpTime = config.getParameter("sgApexbossFlyAroundAndShoot.chargeUpTime", 0)
+  self.holdAim = config.getParameter("sgApexbossFlyAroundAndShoot.holdAim", false)
   self.targetAimFound = false
   
   self.targetAngle = 0
   
-  self.angleApproach = config.getParameter("sgChomperFlyAroundAllGayLike.angleApproach", 1)
+  self.angleApproach = config.getParameter("sgApexbossFlyAroundAndShoot.angleApproach", 1)
   
-  self.burstCount = config.getParameter("sgChomperFlyAroundAllGayLike.burstCount", 1)
-  self.burstTime = config.getParameter("sgChomperFlyAroundAllGayLike.burstTime", 0.1)
+  self.burstCount = config.getParameter("sgApexbossFlyAroundAndShoot.burstCount", 1)
+  self.burstTime = config.getParameter("sgApexbossFlyAroundAndShoot.burstTime", 0.1)
   self.burstTimer = self.burstTime
 
   return {
-    projectileType = config.getParameter("sgChomperFlyAroundAllGayLike.projectileType", "dragonblockbuster"),
-    projectileParameters = config.getParameter("sgChomperFlyAroundAllGayLike.projectileParameters", {}),
-    trackSourceEntity = config.getParameter("sgChomperFlyAroundAllGayLike.trackSourceEntity", false)
+    projectileType = config.getParameter("sgApexbossFlyAroundAndShoot.projectileType", "dragonblockbuster"),
+    projectileParameters = config.getParameter("sgApexbossFlyAroundAndShoot.projectileParameters", {}),
+    trackSourceEntity = config.getParameter("sgApexbossFlyAroundAndShoot.trackSourceEntity", false)
   }
 end
 
-function sgChomperFlyAroundAllGayLike.enteringState(stateData)  
+function sgApexbossFlyAroundAndShoot.enteringState(stateData)  
   animator.setAnimationState("head", "attackWindup")
   animator.playSound("laserWindup")
 end
 
-function sgChomperFlyAroundAllGayLike.update(dt, stateData)
+function sgApexbossFlyAroundAndShoot.update(dt, stateData)
   if self.chargeUpTime > 0 then
 	self.chargeUpTime = math.max(0, self.chargeUpTime - dt)
   elseif self.burstCount == 0 and self.headAngle == 0 then
@@ -59,10 +59,10 @@ function sgChomperFlyAroundAllGayLike.update(dt, stateData)
     mcontroller.controlFly({ 0, 1 })
   end
   
-  sgChomperFlyAroundAllGayLike.updateHead(stateData)
+  sgApexbossFlyAroundAndShoot.updateHead(stateData)
 end
 
-function sgChomperFlyAroundAllGayLike.updateHead(stateData)
+function sgApexbossFlyAroundAndShoot.updateHead(stateData)
   animator.resetTransformationGroup("head")
   
   local entityId = world.playerQuery(mcontroller.position(), 300, {includedTypes = {"player"}, order = "nearest"})[1]
@@ -93,5 +93,5 @@ function sgChomperFlyAroundAllGayLike.updateHead(stateData)
   animator.rotateTransformationGroup("head", self.headAngle, self.headRotationCenter)
 end
 
-function sgChomperFlyAroundAllGayLike.leavingState(stateData)
+function sgApexbossFlyAroundAndShoot.leavingState(stateData)
 end

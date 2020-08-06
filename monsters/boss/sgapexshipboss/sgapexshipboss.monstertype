@@ -1,9 +1,9 @@
 {
   "type" : "sgapexshipboss",
-  "shortdescription" : "Lord of Chompers, Archchomper Chomby",
+  "shortdescription" : "Medium Apes Gunship",
 
   "categories" : [ "sgapexshipboss" ],
-  "parts" : [ "body", "head", "headlit", "backthruster", "frontthruster", "frontthruster2" ],
+  "parts" : [ "body", "head", "headlit", "backthruster", "backthruster2", "frontthruster", "frontthruster2" ],
 
   "animation" : "sgapexshipboss.animation",
   "reversed" : true,
@@ -26,13 +26,13 @@
       "/monsters/boss/sgapexshipboss/dieState.lua"
     ],
 
-    "skills" : [ "sgHeadCleaver", "sgChomperTeleportrightSide", "sgHeadRocketBarrage", "sgChomperHeadPlasma", "sgChomperSwoopAttack", "sgSlamAttack", "sgReinforcementsAttack", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgTeleportLeftSide", "sgAwaken"],
-    "skillCount" : 11,
+    "skills" : [ "sgApexbossFlyAroundAndShoot", "sgHeadCleaver", "sgChomperTeleportrightSide", "sgHeadRocketBarrage", "sgChomperHeadPlasma", "sgChomperSwoopAttack", "sgSlamAttack", "sgReinforcementsAttack", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgTeleportLeftSide", "sgAwaken"],
+    "skillCount" : 12,
 
     "phases" : [
       {
         "enterPhase" : "sgAwaken",
-        "skills" : [ "sgTeleportLeftSide", "sgChomperHeadLaser", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgHeadRocketBarrage", "sgChomperTeleportAttack", "sgChomperHeadLaser" ]
+        "skills" : [ "sgApexbossFlyAroundAndShoot", "sgApexbossFlyAroundAndShoot", "sgTeleportLeftSide"  ]
       },
       {
         "enterPhase" : "sgReinforcementsAttack",
@@ -52,7 +52,7 @@
 	  "frontThruster": {
 	    "thrusterTarget" : -60,
 		"approach" : 0.05,
-		"thrusterCenter" : [-11.0, -6.25],
+		"thrusterCenter" : [-10.0, -4.25],
 		"maxVelocity" : 20
 	  },
 	  
@@ -66,7 +66,14 @@
 	  "backThruster" : {
 	    "thrusterTarget" : -60,
 		"approach" : 0.05,
-		"thrusterCenter" : [3.0, -4.25],
+		"thrusterCenter" : [-7.0, -4.25],
+		"maxVelocity" : 20
+	  },
+	  
+	  "backThruster2" : {
+	    "thrusterTarget" : -60,
+		"approach" : 0.05,
+		"thrusterCenter" : [1.5, -4.25],
 		"maxVelocity" : 20
 	  }
 	},
@@ -85,8 +92,8 @@
       "collisionPoly" : [ [-1, -13.5], [-10, 7], [-2, 7], [7, -1], [10, -13.5] ],
 
       "mass" : 4.0,
-      "flySpeed" : 200,
-      "airForce" : 200.0,
+      "flySpeed" : 60,
+      "airForce" : 60.0,
       "airFriction" : 1.0,
       "physicsEffectCategories" : ["boss"]
     },

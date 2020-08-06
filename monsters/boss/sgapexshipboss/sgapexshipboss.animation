@@ -41,7 +41,7 @@
         "states" : {
           "visible" : {
             "frames" : 4,
-            "cycle" : 0.25,
+            "cycle" : 0.5,
             "mode" : "loop"
           },
           "grounded" : {
@@ -163,6 +163,35 @@
 		  }
 		}
 	  },
+
+	  "backThruster2" : {
+		"properties" : {
+		  "centered" : true,
+		  "zLevel" : -4,
+		  "offset" : [0.25, -6.25],
+		  "transformationGroups" : ["backThruster2"]
+		},
+		"partStates" : {
+	 	  "thrusters" : {
+			"invisible" : {
+			  "properties" : {
+				"image" : ""
+			  }
+			},
+			"off" : {
+			  "properties" : {
+				"image" : "<partImage>:<phase>.off.<frame>"
+			  }
+			},
+			"on" : {
+			  "properties" : {
+				"image" : "<partImage>:<phase>.on.<frame>"
+			  }
+			}
+		  }
+		}
+	  },	  
+
 	  "frontThruster" : {
 		"properties" : {
 		  "centered" : true,
@@ -319,7 +348,8 @@
     "body" : {},
     "frontThruster" : {},
     "frontThruster2" : {},
-    "backThruster" : {}
+    "backThruster" : {},
+    "backThruster2" : {}
   },
 
   "particleEmitters" : {

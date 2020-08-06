@@ -722,6 +722,99 @@
     "senderName" : "Ketos",
     "portraitImage" : "/interface/chatbubbles/sgketos.png",
     "text" : "Gah, he's running! That coward. We'll track his escape shuttle, you get back here and get ready to chase him."
+  },
+
+// --------- apex boss 2 --------
+
+    "sgapexbossship1a" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "Medium Ape appears to have stopped here for some reason. It's a heavilly guarded facility, so be ready."
+  },
+
+  "sgapexbossship1b" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "What c24 means is GO IN GUNS BLAZING AND RAZE THIS PLACE TO THE GROUND."
+  },
+  
+    "sgapexbossship1c" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "That is NOT what I said!"
+  },
+  
+  "sgapexbossship1d" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Actually, C25 might be right. If you're fast, you can take Medium Ape by surprise and capture them."
+  },
+
+  "sgapexbossship2a" : {
+    "type" : "mission",
+    "senderName" : "Medium Ape",
+    "portraitImage" : "/interface/chatbubbles/sgmediumape.png:<frame>",
+    "text" : "Whaaaaaaaaaaaaaaat? You again! My word, you are an annoying one. How dare you invade this sacred place!"
+  },
+
+  "sgapexbossship2b" : {
+    "type" : "mission",
+    "senderName" : "Medium Ape",
+    "portraitImage" : "/interface/chatbubbles/sgmediumape.png:<frame>",
+    "text" : "This place was made by Big Ape to be his private reserve of genetically enhanced banana trees! Comrades, protect this place at all costs!"
+  },
+
+  "sgapexbossship2c" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 25",
+    "portraitImage" : "/interface/chatbubbles/sg25.png",
+    "text" : "Enhanced Bananas? Hah! Is that seriously what he's here for?"
+  },
+
+  "sgapexbossship3a" : {
+    "type" : "mission",
+    "senderName" : "Apex Engineer",
+    "portraitImage" : "/interface/chatbubbles/sgapexengineer.png:<frame>",
+    "text" : "Sir! The Banana's are on board, but they were completely out of your favourite Chocco-Icecream-Supreme-Sugar Bananas!"
+  },
+
+  "sgapexbossship3b" : {
+    "type" : "mission",
+    "senderName" : "Medium Ape",
+    "portraitImage" : "/interface/chatbubbles/sgmediumape.png:<frame>",
+    "text" : "No.. NO! NOT THE CHOCCO-ICECREAM-SUPREME-SUGAR BANANAS! That can't be! Ugh, this is a terrible day."
+  },
+
+    "sgapexbossship3c" : {
+    "type" : "mission",
+    "senderName" : "Capricorn 24",
+    "portraitImage" : "/interface/chatbubbles/sg24.png",
+    "text" : "THAT is what ruins his day? Not you charging in chasing after him?"
+  },
+
+  "sgapexbossship4a" : {
+    "type" : "mission",
+    "senderName" : "Medium Ape",
+    "portraitImage" : "/interface/chatbubbles/sgmediumape.png:<frame>",
+    "text" : "Get the deep space engine fueled, we are leaving. I won't have these idiotic pests destroying the last of the good bananas."
+  },
+
+  "sgapexbossship4b" : {
+    "type" : "mission",
+    "senderName" : "Apex Engineer",
+    "portraitImage" : "/interface/chatbubbles/sgapexengineer.png:<frame>",
+    "text" : "Uh oh, I'm sorry Sir, but refueling will take too long!"
+  },
+
+  "sgapexbossship4c" : {
+    "type" : "mission",
+    "senderName" : "Medium Ape",
+    "portraitImage" : "/interface/chatbubbles/sgmediumape.png:<frame>",
+    "text" : "You have to be kidding me... FINE, arm the cannon. I should never send monkeys to do an apes job. I'll eradicate them myself."
   }
 
 }

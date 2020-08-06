@@ -1,0 +1,31 @@
+{
+  "name" : "sgChomperFlyAroundAndShoot",
+  "label" : "MEGA SWOOP",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgchomperdragonboss/skills/sgChomperFlyAroundAndShoot.lua" ],
+
+    "sgChomperFlyAroundAndShoot" : {
+	  "headRotationCenter" : [4.125, 2.5],
+	  "projectileSpawnOffset" : [-5.5, 0],
+	  "headAngleOffset" : 0.6,
+	  
+      "chargeUpTime" : 1,
+	  
+	  "burstCount" : 3,
+	  "burstTime" : 0.125,
+	  
+	  "projectileType" : "dragonfirelarge",
+	  "projectileParameters" : { "Speed" : 50 },
+	  "trackSourceEntity" : false
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "laserWindup" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ],
+      "laserFire" : [ "/sfx/monsters/boss/sgdronelaser1.ogg", "/sfx/monsters/boss/sgdronelaser2.ogg", "/sfx/monsters/boss/sgdronelaser3.ogg" ]
+    }
+  }
+}

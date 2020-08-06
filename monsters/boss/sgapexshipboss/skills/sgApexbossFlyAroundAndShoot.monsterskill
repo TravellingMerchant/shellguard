@@ -1,23 +1,23 @@
 {
-  "name" : "sgChomperFlyAroundAllGayLike",
+  "name" : "sgApexbossFlyAroundAndShoot",
   "label" : "MEGA SWOOP",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
-    "scripts" : [ "/monsters/boss/sgchomperdragonboss/skills/sgChomperFlyAroundAllGayLike.lua" ],
+    "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossFlyAroundAndShoot.lua" ],
 
-    "sgChomperFlyAroundAllGayLike" : {
-	  "headRotationCenter" : [4.125, 2.5],
-	  "projectileSpawnOffset" : [-5.5, 0],
-	  "headAngleOffset" : 0.6,
+    "sgApexbossFlyAroundAndShoot" : {
+	  "headRotationCenter" : [3.5, -8],
+	  "projectileSpawnOffset" : [1, -7],
+	  "headAngleOffset" : 0,
 	  
       "chargeUpTime" : 1,
 	  
-	  "burstCount" : 3,
-	  "burstTime" : 0.125,
+	  "burstCount" : 6,
+	  "burstTime" : 0.05,
 	  
-	  "projectileType" : "nebsgfortresslaserblast",
-	  "projectileParameters" : {},
+	  "projectileType" : "electricplasmarocket",
+	  "projectileParameters" : { "Speed" : 10 },
 	  "trackSourceEntity" : false
     }
   },

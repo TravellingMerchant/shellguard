@@ -102,7 +102,91 @@
          "draworder":"topdown",
          "id":3,
          "name":"mods",
-         "objects":[],
+         "objects":[
+                {
+                 "height":424,
+                 "id":2899,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"radioMessages\" : [\"sgapexbossship1a\", \"sgapexbossship1b\", \"sgapexbossship1c\", \"sgapexbossship1d\"] }",
+                     "stagehand":"radiomessage"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":480,
+                 "x":1728,
+                 "y":2296
+                }, 
+                {
+                 "height":424,
+                 "id":2900,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"radioMessages\" : [\"sgapexbossship2a\", \"sgapexbossship2b\", \"sgapexbossship2c\"] }",
+                     "stagehand":"radiomessage"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":480,
+                 "x":4488,
+                 "y":2480
+                }, 
+                {
+                 "height":424,
+                 "id":2901,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"radioMessages\" : [\"sgapexbossship3a\", \"sgapexbossship3b\", \"sgapexbossship3c\"] }",
+                     "stagehand":"radiomessage"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":480,
+                 "x":8600,
+                 "y":2504
+                }, 
+                {
+                 "height":424,
+                 "id":2902,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"radioMessages\" : [\"sgapexbossship4a\", \"sgapexbossship4b\", \"sgapexbossship4c\"] }",
+                     "stagehand":"radiomessage"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":480,
+                 "x":11896,
+                 "y":2344
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -4111,7 +4195,7 @@
          "y":0
         }],
  "nextlayerid":14,
- "nextobjectid":2899,
+ "nextobjectid":2903,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.1",
