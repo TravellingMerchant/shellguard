@@ -32,7 +32,7 @@
     "phases" : [
       {
         "enterPhase" : "sgAwaken",
-        "skills" : [ "sgChomperFlyAroundAndShoot", "sgChomperFlyAroundAndShoot", "sgChomperFlyAroundAndShoot", "sgTeleportLeftSide", "sgChomperHeadLaser", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgHeadRocketBarrage", "sgChomperTeleportAttack", "sgChomperHeadLaser" ]
+        "skills" : [ "sgChomperTeleportAttack", "sgHeadRocketBarrage", "sgHeadRocketBarrage" ]
       },
       {
         "enterPhase" : "sgReinforcementsAttack",

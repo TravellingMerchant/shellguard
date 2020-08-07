@@ -4,7 +4,8 @@ function sgChomperHeadPlasma.enter()
   self.headRotationCenter = config.getParameter("sgChomperHeadPlasma.headRotationCenter", {0, 0})
   self.projectileSpawnOffset = config.getParameter("sgChomperHeadPlasma.projectileSpawnOffset", {0, 0})
   self.headAngleOffset = config.getParameter("sgChomperHeadPlasma.headAngleOffset", 1)
-  self.chargeUpTime = config.getParameter("sgChomperHeadPlasma.chargeUpTime", 0)
+  self.chargeUpTime = config.getParameter("sgChomperHeadLaser.chargeUpTime", 0)
+  self.targetTimer = config.getParameter("sgChomperHeadLaser.targetingTime", 0)
   self.holdAim = config.getParameter("sgChomperHeadPlasma.holdAim", false)
   self.targetAimFound = false
   
@@ -31,7 +32,9 @@ function sgChomperHeadPlasma.enteringState(stateData)
 end
 
 function sgChomperHeadPlasma.update(dt, stateData)
-  if self.chargeUpTime > 0 then
+  if self.targetTimer > 0 then
+	self.targetTimer = math.max(0, self.targetTimer - dt)
+  elseif self.chargeUpTime > 0 then
 	self.chargeUpTime = math.max(0, self.chargeUpTime - dt)
   elseif self.burstCount == 0 and self.headAngle == 0 then
 	return true
@@ -76,7 +79,7 @@ function sgChomperHeadPlasma.updateHead(stateData)
 	    self.targetAngle = (self.targetAngle * (estimatedPosition[1] < 0 and -1 or 1)) - angleAdjust
 	  end
 	  
-	  self.targetAimFound = self.holdAim
+	  self.targetAimFound = self.holdAim and (self.targetTimer == 0)
     end
   elseif self.burstCount == 0 then
     self.targetAngle = 0
