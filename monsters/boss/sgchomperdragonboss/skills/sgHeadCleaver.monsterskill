@@ -13,6 +13,8 @@
 	  
       "chargeUpTime" : 2,
 	  
+      "targetingTime" : 1,
+	  
 	  "burstCount" : 1,
 	  "burstTime" : 0.125,
 	  

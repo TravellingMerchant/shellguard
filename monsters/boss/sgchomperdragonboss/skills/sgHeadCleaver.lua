@@ -4,6 +4,7 @@ function sgHeadCleaver.enter()
   self.headRotationCenter = config.getParameter("sgHeadCleaver.headRotationCenter", {0, 0})
   self.projectileSpawnOffset = config.getParameter("sgHeadCleaver.projectileSpawnOffset", {0, 0})
   self.headAngleOffset = config.getParameter("sgHeadCleaver.headAngleOffset", 1)
+  self.targetTimer = config.getParameter("sgHeadCleaver.targetingTime", 0)
   self.chargeUpTime = config.getParameter("sgHeadCleaver.chargeUpTime", 0)
   self.holdAim = config.getParameter("sgHeadCleaver.holdAim", false)
   self.targetAimFound = false
@@ -31,7 +32,9 @@ function sgHeadCleaver.enteringState(stateData)
 end
 
 function sgHeadCleaver.update(dt, stateData)
-  if self.chargeUpTime > 0 then
+  if self.targetTimer > 0 then
+	self.targetTimer = math.max(0, self.targetTimer - dt)
+  elseif self.chargeUpTime > 0 then
 	self.chargeUpTime = math.max(0, self.chargeUpTime - dt)
   elseif self.burstCount == 0 and self.headAngle == 0 then
 	return true
@@ -76,7 +79,7 @@ function sgHeadCleaver.updateHead(stateData)
 	    self.targetAngle = (self.targetAngle * (estimatedPosition[1] < 0 and -1 or 1)) - angleAdjust
 	  end
 	  
-	  self.targetAimFound = self.holdAim
+	  self.targetAimFound = self.holdAim and (self.targetTimer == 0)
     end
   elseif self.burstCount == 0 then
     self.targetAngle = 0

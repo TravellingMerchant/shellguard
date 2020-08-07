@@ -67,6 +67,7 @@ function sgAwaken.update(dt, stateData)
 	mcontroller.controlParameters(parameters)
 	if self.flyTime > 0 then
       animator.setAnimationState("thrusters", "on")
+	  animator.setAnimationState("movement", "visible")
       animator.setAnimationState("head", "visible")
       flyTo(self.spawnPosition)
 	  self.flyTime = self.flyTime - dt

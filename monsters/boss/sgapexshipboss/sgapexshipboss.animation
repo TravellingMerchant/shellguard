@@ -138,6 +138,7 @@
 	  
 	  "backThruster" : {
 		"properties" : {
+          "rotationGroup" : "all",
 		  "centered" : true,
 		  "zLevel" : -4,
 		  "offset" : [-8.25, -6.25],
@@ -166,6 +167,7 @@
 
 	  "backThruster2" : {
 		"properties" : {
+          "rotationGroup" : "all",
 		  "centered" : true,
 		  "zLevel" : -4,
 		  "offset" : [0.25, -6.25],
@@ -194,6 +196,7 @@
 
 	  "frontThruster" : {
 		"properties" : {
+          "rotationGroup" : "all",
 		  "centered" : true,
 		  "zLevel" : 4,
 		  "offset" : [-11.25, -6.25],
@@ -222,6 +225,7 @@
 	  
 	  "frontThruster2" : {
 		"properties" : {
+          "rotationGroup" : "all",
 		  "centered" : true,
 		  "zLevel" : 4,
 		  "offset" : [-4.25, -6.25],

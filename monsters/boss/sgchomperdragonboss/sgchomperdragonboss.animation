@@ -138,6 +138,7 @@
 	  
 	  "backThruster" : {
 		"properties" : {
+          "rotationGroup" : "all",
 		  "centered" : true,
 		  "zLevel" : -4,
 		  "offset" : [3.25, 0.25],
@@ -165,6 +166,7 @@
 	  },
 	  "frontThruster" : {
 		"properties" : {
+          "rotationGroup" : "all",
 		  "centered" : true,
 		  "zLevel" : 4,
 		  "offset" : [-3.25, 0.25],
