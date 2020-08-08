@@ -7,7 +7,7 @@
   "description" : "This coloured dye can be applied to a piece of armour or clothing with a right-click.",
   "shortdescription" : "Toy Blue Dye",
 
-  "dyeDirectives" : {"ffca8a":"6e80dd","e0975c":"1c63df","a85636":"1f51d6","6f2919":"1117a3"},
+  "dyeDirectives" : {"ffca8a":"54ABE7","e0975c":"357CBF","a85636":"27599F","6f2919":"16186E"},
   
   "radioMessagesOnPickup" : [ "pickupdye" ],
 
