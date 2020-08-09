@@ -8,7 +8,7 @@
   "description" : "Melt people with the beat of the fortress.",
   "shortdescription" : "Wub Gun",
   "category" : "uniqueWeapon",
-  "itemTags" : ["weapon","ranged","upgradeableWeapon"],
+  "itemTags" : ["weapon","ranged","upgradeableWeapon","assaultrifle"],
   "twoHanded" : true,
 
   "animation" : "sgwubgun.animation",

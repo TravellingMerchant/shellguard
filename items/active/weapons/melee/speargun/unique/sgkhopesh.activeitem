@@ -9,7 +9,7 @@
   "level" : 10,
   "tooltipKind" : "base",
   "category" : "sggunstaff",
-  "itemTags" : ["weapon","ranged","mace","melee", "upgradeableWeapon"],
+  "itemTags" : ["weapon","ranged","shortsword","melee", "upgradeableWeapon"],
   "twoHanded" : false,
 
   "animation" : "/items/active/weapons/melee/speargun/sgaxegun.animation",
