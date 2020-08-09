@@ -815,6 +815,48 @@
     "senderName" : "Medium Ape",
     "portraitImage" : "/interface/chatbubbles/sgmediumape.png:<frame>",
     "text" : "You have to be kidding me... FINE, arm the cannon. I should never send monkeys to do an apes job. I'll eradicate them myself."
+  },
+
+  "sgapexbossship5" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Scans show that his ship is up ahead. Good luck, I'm sure you can take it down."
+  },
+
+  "sgapexbossship6a" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "Great job! You captured Medium Ape, he won't be able to experiment on people anymore and our bounty is complete. Come on back."
+  },
+
+  "sgapexbossship6b" : {
+    "type" : "mission",
+    "senderName" : "Apex Engineer",
+    "portraitImage" : "/interface/chatbubbles/sgapexengineerquestion.png:<frame>",
+    "text" : "Hey, so... I'm still alive back here, am I free to go?"
+  },
+
+  "sgapexbossship6c" : {
+    "type" : "mission",
+    "senderName" : "Ketos",
+    "portraitImage" : "/interface/chatbubbles/sgketos.png",
+    "text" : "We weren't paid to deal with you, so I suppose so."
+  },
+
+  "sgapexbossship6d" : {
+    "type" : "mission",
+    "senderName" : "Apex Engineer",
+    "portraitImage" : "/interface/chatbubbles/sgapexengineerquestion.png:<frame>",
+    "text" : "Thank you Comrade!"
+  },
+  
+  "sgapexbossmonke" : {
+    "type" : "mission",
+    "senderName" : "Medium Ape",
+    "portraitImage" : "/interface/chatbubbles/sgmediummonke.png:<frame>",
+    "text" : "Mmmmmhm. Monke."
   }
 
 }
