@@ -1,0 +1,33 @@
+{
+  "name" : "sgApexbossBombingRun",
+  "label" : "MEGA SWOOP",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossBombingRun.lua" ],
+
+    "sgApexbossBombingRun" : {
+      "swoopTime" : 1,
+      "dashSpeed" : 30,
+	  
+	  "headRotationCenter" : [3.5, -8],
+	  "projectileSpawnOffset": [-5.5, 0],
+	  "headAngleOffset": 0,
+	  
+	  "burstTime" : 0.7,
+	  
+	  "projectileType" : "stungrenade",
+	  "projectileParameters" : {
+	    "speed" : 50
+	  },
+	  "trackSourceEntity" : false
+    }
+  },
+  
+  "animationParameters" : {
+    "sounds" : {
+      "dashFire" : [ "/sfx/gun/Needle Lazer.ogg" ],
+      "dashWindup" : [ "/sfx/monsters/boss/chomby/DragonRoar_long.ogg" ]
+    }
+  }
+}

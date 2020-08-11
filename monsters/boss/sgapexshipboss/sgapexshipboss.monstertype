@@ -26,25 +26,25 @@
       "/monsters/boss/sgapexshipboss/dieState.lua"
     ],
 
-    "skills" : [ "sgApexbossFlyAroundAndShootPlasma", "sgHeadCleaver", "sgChomperTeleportrightSide", "sgHeadRocketBarrage", "sgChomperHeadPlasma", "sgChomperSwoopAttack", "sgSlamAttack", "sgReinforcementsAttack", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgTeleportLeftSide", "sgAwaken"],
-    "skillCount" : 12,
+    "skills" : [ "sgApexbossLaser", "sgApexbossTorpedo", "sgApexbossBombingRun", "sgApexbossFlyAroundAndShootPlasma", "sgReinforcementsAttack", "sgApexbossTeleportLeftSide", "sgAwaken"],
+    "skillCount" : 13,
 
     "phases" : [
       {
         "enterPhase" : "sgAwaken",
-        "skills" : [ "sgApexbossFlyAroundAndShootPlasma", "sgApexbossFlyAroundAndShootPlasma", "sgTeleportLeftSide"  ]
+        "skills" : [ "sgApexbossFlyAroundAndShootPlasma", "sgApexbossFlyAroundAndShootPlasma", "sgApexbossLaser", "sgApexbossTeleportLeftSide", "sgApexbossBombingRun", "sgApexbossTorpedo" ]
       },
       {
         "enterPhase" : "sgReinforcementsAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.7,
-        "skills" : [ "sgTeleportLeftSide", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgTeleportLeftSide", "sgChomperSwoopAttack", "sgChomperTeleportAttack", "sgChomperHeadLaser", "sgChomperTeleportrightSide", "sgHeadCleaver", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgChomperHeadPlasma" ]
+        "skills" : ["sgApexbossFlyAroundAndShootPlasma" ]
       },
       {
         "enterPhase" : "sgReinforcementsAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.3,
-        "skills" : [ "sgChomperTeleportAttack", "sgHeadRocketBarrage", "sgChomperTeleportAttack", "sgHeadRocketBarrage", "sgChomperTeleportAttack", "sgChomperHeadLaser", "sgChomperHeadLaser", "sgChomperHeadLaser", "sgChomperHeadLaser", "sgTeleportLeftSide", "sgChomperSwoopAttack", "sgChomperTeleportAttack", "sgHeadCleaver", "sgHeadCleaver", "sgHeadCleaver" ]
+        "skills" : [ "sgApexbossFlyAroundAndShootPlasma" ]
       }
     ],
 	

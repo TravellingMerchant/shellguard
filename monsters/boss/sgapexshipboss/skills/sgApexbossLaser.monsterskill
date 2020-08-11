@@ -1,0 +1,38 @@
+{
+  "name" : "sgApexbossLaser",
+  "label" : "MEGA SWOOP",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossLaser.lua" ],
+
+    "sgApexbossLaser" : {
+	  "headRotationCenter" : [3.5, -8],
+	  "headAngleOffset" : 0,
+	  
+      "chargeUpTime" : 1,
+	  
+      "targetingTime" : 1,
+	  
+	  "burstCount" : 10,
+	  "burstTime" : 0.1,
+	  
+	  "projectileType" : "lightpellet",
+	  "projectileParameters" : 
+	  {
+	  "power" : 10,
+	  "speed" : 50
+	  },
+	  "trackSourceEntity" : false,
+	  
+	  "holdAim" : false
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "cleaverWindup" : [ "/sfx/monsters/boss/chomby/DragonRoar_long.ogg" ],
+      "cleaverFire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
+    }
+  }
+}

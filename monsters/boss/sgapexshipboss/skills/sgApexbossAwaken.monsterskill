@@ -7,7 +7,7 @@
     "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossAwaken.lua" ],
 
     "sgApexbossAwaken" : {
-	  "headRotationCenter" : [4.125, 2.5],
+	  "headRotationCenter" : [3.5, -8],
 	  "projectileSpawnOffset" : [-4.5, 2],
 	  
 	  "burstCount" : 5,

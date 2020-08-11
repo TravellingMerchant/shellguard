@@ -1,0 +1,34 @@
+{
+  "name" : "sgApexbossTorpedo",
+  "label" : "MEGA SWOOP",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossTorpedo.lua" ],
+
+    "sgApexbossTorpedo" : {
+	  "headRotationCenter" : [3.5, -8],
+	  "headAngleOffset" : 0,
+	  
+      "chargeUpTime" : 0.5,
+	  
+      "targetingTime" : 0.5,
+	  
+	  "burstCount" : 3,
+	  "burstTime" : 0.3,
+	  
+	  "projectileType" : "energyfist",
+	  "projectileParameters" : {"power" : 100},
+	  "trackSourceEntity" : false,
+	  
+	  "holdAim" : false
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "cleaverWindup" : [ "/sfx/monsters/boss/chomby/DragonRoar_long.ogg" ],
+      "cleaverFire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
+    }
+  }
+}
