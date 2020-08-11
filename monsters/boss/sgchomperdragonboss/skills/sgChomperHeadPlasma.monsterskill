@@ -8,7 +8,6 @@
 
     "sgChomperHeadPlasma" : {
 	  "headRotationCenter" : [4.125, 2.5],
-	  "projectileSpawnOffset" : [-5.5, 0],
 	  "headAngleOffset" : 0.6,
 	  
       "chargeUpTime" : 1,

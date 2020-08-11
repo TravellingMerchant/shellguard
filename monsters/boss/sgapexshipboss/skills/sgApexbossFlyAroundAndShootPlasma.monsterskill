@@ -1,14 +1,13 @@
 {
-  "name" : "sgApexbossFlyAroundAndShoot",
+  "name" : "sgApexbossFlyAroundAndShootPlasma",
   "label" : "MEGA SWOOP",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
-    "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossFlyAroundAndShoot.lua" ],
+    "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossFlyAroundAndShootPlasma.lua" ],
 
-    "sgApexbossFlyAroundAndShoot" : {
+    "sgApexbossFlyAroundAndShootPlasma" : {
 	  "headRotationCenter" : [3.5, -8],
-	  "projectileSpawnOffset" : [1, -7],
 	  "headAngleOffset" : 0,
 	  
       "chargeUpTime" : 1,

@@ -196,6 +196,7 @@
       "head" : {
         "properties" : {
           "rotationGroup" : "all",
+		  "projectileSpawnOffset" : [2.5, -4.5],
           "transformationGroups" : ["head"],
           "offset" : [5.625, 3.5],
           "zLevel" : 6

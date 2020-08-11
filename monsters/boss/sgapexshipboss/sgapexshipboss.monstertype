@@ -26,13 +26,13 @@
       "/monsters/boss/sgapexshipboss/dieState.lua"
     ],
 
-    "skills" : [ "sgApexbossFlyAroundAndShoot", "sgHeadCleaver", "sgChomperTeleportrightSide", "sgHeadRocketBarrage", "sgChomperHeadPlasma", "sgChomperSwoopAttack", "sgSlamAttack", "sgReinforcementsAttack", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgTeleportLeftSide", "sgAwaken"],
+    "skills" : [ "sgApexbossFlyAroundAndShootPlasma", "sgHeadCleaver", "sgChomperTeleportrightSide", "sgHeadRocketBarrage", "sgChomperHeadPlasma", "sgChomperSwoopAttack", "sgSlamAttack", "sgReinforcementsAttack", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgTeleportLeftSide", "sgAwaken"],
     "skillCount" : 12,
 
     "phases" : [
       {
         "enterPhase" : "sgAwaken",
-        "skills" : [ "sgApexbossFlyAroundAndShoot", "sgApexbossFlyAroundAndShoot", "sgTeleportLeftSide"  ]
+        "skills" : [ "sgApexbossFlyAroundAndShootPlasma", "sgApexbossFlyAroundAndShootPlasma", "sgTeleportLeftSide"  ]
       },
       {
         "enterPhase" : "sgReinforcementsAttack",

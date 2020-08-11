@@ -39,10 +39,11 @@ function sgHeadRocketBarrage.update(dt, stateData)
   elseif self.burstCount == 0 and self.headAngle == 0 then
 	return true
   elseif self.burstCount > 0 then
+    local projSpawnOffset = {animator.partPoint("head", "projectileSpawnOffset")[1] * mcontroller.facingDirection(), animator.partPoint("head", "projectileSpawnOffset")[2]}
 	self.burstTimer = math.max(0, self.burstTimer - dt)
     if self.burstCount > 0 and self.burstTimer == 0 then
 	  --Fire Projectile--
-	  rangedAttack.aim(self.projectileSpawnOffset, self.toTarget)
+	  rangedAttack.aim(projSpawnOffset, self.toTarget)
       animator.playSound("rocketBarrageFire")
 	  rangedAttack.fireOnce(stateData.projectileType, stateData.projectileParameters)
 	  
@@ -67,13 +68,13 @@ function sgHeadRocketBarrage.updateHead(stateData)
 	if not self.targetAimFound then
       local estimatedPosition = world.distance(mcontroller.position(), world.entityPosition(entityId))
       mcontroller.controlFace(world.distance(mcontroller.position(), world.entityPosition(entityId))[1])
-      self.targetAngle = vec2.angle(estimatedPosition) * (mcontroller.facingDirection() * -1) + self.headAngleOffset * (estimatedPosition[1] < 0 and 1.8 or 1)
+      self.targetAngle = vec2.angle(estimatedPosition) * (mcontroller.facingDirection() * -1) + self.headAngleOffset
 	  self.toTarget = vec2.norm(world.distance(self.targetPosition, monster.toAbsolutePosition(self.projectileSpawnOffset)))
 	  
 	  if estimatedPosition[1] < 0 then -- and not self.holdAim then
-	    self.targetAngle = self.targetAngle - math.pi + (self.headAngleOffset)
+	    self.targetAngle = self.targetAngle - math.pi + util.toRadians(self.headAngleOffset)
 	  elseif estimatedPosition[1] > 0 then-- and not self.holdAim then
-	    self.targetAngle = self.targetAngle + (self.headAngleOffset * 1.0)
+	    self.targetAngle = self.targetAngle + util.toRadians(self.headAngleOffset * 1.0) 
 	  --elseif self.holdAim then
 	    --local angleAdjust = (estimatedPosition[1] < 0) and math.pi or 0 + self.headAngleOffset * (estimatedPosition[1] < 0 and -55.55 or 0.25)
 	    --self.targetAngle = self.targetAngle - angleAdjust
@@ -91,3 +92,5 @@ end
 
 function sgHeadRocketBarrage.leavingState(stateData)
 end
+
+
