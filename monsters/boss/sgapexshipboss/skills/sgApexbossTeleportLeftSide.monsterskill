@@ -7,7 +7,7 @@
     "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossTeleportLeftSide.lua" ],
 
     "sgApexbossTeleportLeftSide" : {
-      "cooldownTime" : 10,
+      "cooldownTime" : 5,
 	  "testPoly" : [ [0.8125, 1.25], [1.3125, 0.75],  [1.3125, -1.05], [0.8125, -1.55],  [-0.8125, -1.55], [-1.3125, -1.05],  [-1.3125, 0.75], [-0.8125, 1.25] ],
       "skillTime" : 5
     }
