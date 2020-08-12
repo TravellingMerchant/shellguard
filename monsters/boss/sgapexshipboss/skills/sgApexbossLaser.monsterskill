@@ -10,12 +10,12 @@
 	  "headRotationCenter" : [3.5, -8],
 	  "headAngleOffset" : 0,
 	  
-      "chargeUpTime" : 1,
+      "chargeUpTime" : 2,
 	  
       "targetingTime" : 1,
 	  
 	  "burstCount" : 10,
-	  "burstTime" : 0.1,
+	  "burstTime" : 0.07,
 	  
 	  "projectileType" : "lightpellet",
 	  "projectileParameters" : 

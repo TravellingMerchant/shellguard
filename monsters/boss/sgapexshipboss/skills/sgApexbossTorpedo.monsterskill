@@ -18,7 +18,9 @@
 	  "burstTime" : 0.3,
 	  
 	  "projectileType" : "energyfist",
-	  "projectileParameters" : {"power" : 100},
+	  "projectileParameters" : {
+	  "speed" : 70,
+	  "power" : 100},
 	  "trackSourceEntity" : false,
 	  
 	  "holdAim" : false

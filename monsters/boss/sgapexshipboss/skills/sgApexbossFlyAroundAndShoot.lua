@@ -1,38 +1,37 @@
-sgApexbossFlyAroundAndShootPlasma = {}
+sgApexbossFlyAroundAndShoot = {}
 
-function sgApexbossFlyAroundAndShootPlasma.enter()
-  self.headRotationCenter = config.getParameter("sgApexbossFlyAroundAndShootPlasma.headRotationCenter", {0, 0})
-  self.projectileSpawnOffset = config.getParameter("sgApexbossFlyAroundAndShootPlasma.projectileSpawnOffset", {0, 0})
-  self.headAngleOffset = config.getParameter("sgApexbossFlyAroundAndShootPlasma.headAngleOffset", 1)
-  self.chargeUpTime = config.getParameter("sgChomperHeadLaser.chargeUpTime", 0)
-  self.targetTimer = config.getParameter("sgChomperHeadLaser.targetingTime", 0)
-  self.holdAim = config.getParameter("sgApexbossFlyAroundAndShootPlasma.holdAim", false)
+function sgApexbossFlyAroundAndShoot.enter()
+  self.headRotationCenter = config.getParameter("sgApexbossFlyAroundAndShoot.headRotationCenter", {0, 0})
+  self.projectileSpawnOffset = config.getParameter("sgApexbossFlyAroundAndShoot.projectileSpawnOffset", {0, 0})
+  self.headAngleOffset = config.getParameter("sgApexbossFlyAroundAndShoot.headAngleOffset", 1)
+  self.chargeUpTime = config.getParameter("sgApexbossFlyAroundAndShoot.chargeUpTime", 0)
+  self.holdAim = config.getParameter("sgApexbossFlyAroundAndShoot.holdAim", false)
   self.targetAimFound = false
+  self.worldFirePoint = {0, 0}
   
   self.targetAngle = 0
   
-  self.angleApproach = config.getParameter("sgApexbossFlyAroundAndShootPlasma.angleApproach", 1)
+  self.angleApproach = config.getParameter("sgApexbossFlyAroundAndShoot.angleApproach", 1)
   
-  self.burstCount = config.getParameter("sgApexbossFlyAroundAndShootPlasma.burstCount", 1)
-  self.burstTime = config.getParameter("sgApexbossFlyAroundAndShootPlasma.burstTime", 0.1)
+  self.burstCount = config.getParameter("sgApexbossFlyAroundAndShoot.burstCount", 1)
+  self.burstTime = config.getParameter("sgApexbossFlyAroundAndShoot.burstTime", 0.1)
   self.burstTimer = self.burstTime
 
   return {
-    projectileType = config.getParameter("sgApexbossFlyAroundAndShootPlasma.projectileType", "dragonblockbuster"),
-    projectileParameters = config.getParameter("sgApexbossFlyAroundAndShootPlasma.projectileParameters", {}),
-    trackSourceEntity = config.getParameter("sgApexbossFlyAroundAndShootPlasma.trackSourceEntity", false)
+    projectileType = config.getParameter("sgApexbossFlyAroundAndShoot.projectileType", "dragonblockbuster"),
+    projectileParameters = config.getParameter("sgApexbossFlyAroundAndShoot.projectileParameters", {}),
+    trackSourceEntity = config.getParameter("sgApexbossFlyAroundAndShoot.trackSourceEntity", false)
   }
 end
 
-function sgApexbossFlyAroundAndShootPlasma.enteringState(stateData)  
+function sgApexbossFlyAroundAndShoot.enteringState(stateData)  
   animator.setAnimationState("head", "attackWindup")
   animator.playSound("laserWindup")
 end
 
-function sgApexbossFlyAroundAndShootPlasma.update(dt, stateData)
-  if self.targetTimer > 0 then
-	self.targetTimer = math.max(0, self.targetTimer - dt)
-  elseif self.chargeUpTime > 0 then
+function sgApexbossFlyAroundAndShoot.update(dt, stateData)
+  self.worldFirePoint = vec2.add({animator.partPoint("head", "projectileSpawnOffset")[1], animator.partPoint("head", "projectileSpawnOffset")[2]}, mcontroller.position())
+  if self.chargeUpTime > 0 then
 	self.chargeUpTime = math.max(0, self.chargeUpTime - dt)
   elseif self.burstCount == 0 and self.headAngle == 0 then
 	return true
@@ -63,10 +62,10 @@ function sgApexbossFlyAroundAndShootPlasma.update(dt, stateData)
     mcontroller.controlFly({ 0, 1 })
   end
   
-  sgApexbossFlyAroundAndShootPlasma.updateHead(stateData)
+  sgApexbossFlyAroundAndShoot.updateHead(stateData)
 end
 
-function sgApexbossFlyAroundAndShootPlasma.updateHead(stateData)
+function sgApexbossFlyAroundAndShoot.updateHead(stateData)
   animator.resetTransformationGroup("head")
   
   local entityId = world.playerQuery(mcontroller.position(), 300, {includedTypes = {"player"}, order = "nearest"})[1]
@@ -76,26 +75,27 @@ function sgApexbossFlyAroundAndShootPlasma.updateHead(stateData)
       local estimatedPosition = world.distance(mcontroller.position(), world.entityPosition(entityId))
       mcontroller.controlFace(world.distance(mcontroller.position(), world.entityPosition(entityId))[1])
       self.targetAngle = vec2.angle(estimatedPosition) * (mcontroller.facingDirection() * -1)
-	  self.toTarget = vec2.norm(world.distance(self.targetPosition, monster.toAbsolutePosition(self.projectileSpawnOffset)))
+	  self.toTarget = vec2.norm(world.distance(self.targetPosition, self.worldFirePoint))
 	  
 	  if estimatedPosition[1] < 0 and not self.holdAim then
-	    self.targetAngle = self.targetAngle - math.pi + util.toRadians(self.headAngleOffset)
+	    self.targetAngle = self.targetAngle - math.pi + (self.headAngleOffset)
 	  elseif estimatedPosition[1] > 0 and not self.holdAim then
-	    self.targetAngle = self.targetAngle + util.toRadians(self.headAngleOffset * 1.0) 
+	    self.targetAngle = self.targetAngle + (self.headAngleOffset * 1.0)
 	  elseif self.holdAim then
 	    local angleAdjust = (estimatedPosition[1] < 0) and math.pi/2 or 0 + self.headAngleOffset * (estimatedPosition[1] < 0 and 1.8 or 1)
 	    self.targetAngle = (self.targetAngle * (estimatedPosition[1] < 0 and -1 or 1)) - angleAdjust
 	  end
 	  
-	  self.targetAimFound = self.holdAim and (self.targetTimer == 0)
+	  self.targetAimFound = self.holdAim
     end
   elseif self.burstCount == 0 then
     self.targetAngle = 0
   end
 
   self.headAngle = (self.headAngle or 0) + (self.targetAngle - (self.headAngle or 0)) * self.angleApproach
+  world.debugLine(self.worldFirePoint, world.entityPosition(entityId), "orange")
   animator.rotateTransformationGroup("head", self.headAngle, self.headRotationCenter)
 end
 
-function sgApexbossFlyAroundAndShootPlasma.leavingState(stateData)
+function sgApexbossFlyAroundAndShoot.leavingState(stateData)
 end

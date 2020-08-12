@@ -1,41 +1,41 @@
-sgApexbossBombingRun = {}
+sgApexbossBombingStun = {}
 
-function sgApexbossBombingRun.enter()
+function sgApexbossBombingStun.enter()
   if not hasTarget() then return nil end
   if self.targetPosition == nil then return nil end
   
-  self.headRotationCenter = config.getParameter("sgApexbossBombingRun.headRotationCenter", {0, 0})
-  self.projectileSpawnOffset = config.getParameter("sgApexbossBombingRun.projectileSpawnOffset", {0, 0})
-  self.headAngleOffset = config.getParameter("sgApexbossBombingRun.headAngleOffset", 1)
-  self.angleApproach = config.getParameter("sgApexbossBombingRun.angleApproach", 1)
-  self.dashSpeed = config.getParameter("sgApexbossBombingRun.dashSpeed", 5)
-  self.burstTime = config.getParameter("sgApexbossBombingRun.burstTime", 0.1)
+  self.headRotationCenter = config.getParameter("sgApexbossBombingStun.headRotationCenter", {0, 0})
+  self.projectileSpawnOffset = config.getParameter("sgApexbossBombingStun.projectileSpawnOffset", {0, 0})
+  self.headAngleOffset = config.getParameter("sgApexbossBombingStun.headAngleOffset", 1)
+  self.angleApproach = config.getParameter("sgApexbossBombingStun.angleApproach", 1)
+  self.dashSpeed = config.getParameter("sgApexbossBombingStun.dashSpeed", 5)
+  self.burstTime = config.getParameter("sgApexbossBombingStun.burstTime", 0.1)
   self.burstTimer = self.burstTime
   self.collided = false
   
   return {
-    projectileType = config.getParameter("sgApexbossBombingRun.projectileType", "dragonblockbuster"),
-    projectileParameters = config.getParameter("sgApexbossBombingRun.projectileParameters", {}),
-    trackSourceEntity = config.getParameter("sgApexbossBombingRun.trackSourceEntity", false),
+    projectileType = config.getParameter("sgApexbossBombingStun.projectileType", "dragonblockbuster"),
+    projectileParameters = config.getParameter("sgApexbossBombingStun.projectileParameters", {}),
+    trackSourceEntity = config.getParameter("sgApexbossBombingStun.trackSourceEntity", false),
 	
     timer = 0.0,
-    swoopTime = config.getParameter("sgApexbossBombingRun.swoopTime"),
+    swoopTime = config.getParameter("sgApexbossBombingStun.swoopTime"),
     tookDamage = false
   }
 end
 
-function sgApexbossBombingRun.enteringState(stateData)
+function sgApexbossBombingStun.enteringState(stateData)
   animator.rotateGroup("all", -30 * math.pi / 180)
-  monster.setActiveSkillName("sgApexbossBombingRun")
+  monster.setActiveSkillName("sgApexbossBombingStun")
   animator.setAnimationState("head", "attackWindup")
   animator.playSound("dashWindup")
 end
 
-function sgApexbossBombingRun.update(dt, stateData)
-  mcontroller.controlFace(-1)
+function sgApexbossBombingStun.update(dt, stateData)
+  mcontroller.controlFace(1)
   if not hasTarget() then return true end
 
-  local testPosition = vec2.add(self.spawnPosition, {500, 0})
+  local testPosition = vec2.add(self.spawnPosition, {-500, 0})
 	
   local wallCollision = world.lineTileCollisionPoint(self.spawnPosition, testPosition)
   if wallCollision then
@@ -67,15 +67,15 @@ function sgApexbossBombingRun.update(dt, stateData)
   local position = mcontroller.position()
   self.collided = world.lineTileCollisionPoint(position, vec2.add(position, {15, 0}))
   
-  mcontroller.controlFace(1)
-  sgApexbossBombingRun.updateHead(stateData)
+  mcontroller.controlFace(-1)
+  sgApexbossBombingStun.updateHead(stateData)
   
   if self.collided then
     return true
   end
 end
 
-function sgApexbossBombingRun.updateHead(stateData)
+function sgApexbossBombingStun.updateHead(stateData)
   animator.resetTransformationGroup("head")
   
   local targetAngle = -math.pi/2
@@ -84,7 +84,7 @@ function sgApexbossBombingRun.updateHead(stateData)
   animator.rotateTransformationGroup("head", self.headAngle + self.headAngleOffset, self.headRotationCenter)
 end
 
-function sgApexbossBombingRun.leavingState(stateData)
+function sgApexbossBombingStun.leavingState(stateData)
   animator.rotateGroup("all", 0)
   animator.setAnimationState("head", "attackWinddown")
   monster.setDamageOnTouch(false)

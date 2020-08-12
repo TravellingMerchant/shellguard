@@ -8,6 +8,7 @@ function sgChomperFlyAroundAndShoot.enter()
   self.targetTimer = config.getParameter("sgChomperHeadLaser.targetingTime", 0)
   self.holdAim = config.getParameter("sgChomperFlyAroundAndShoot.holdAim", false)
   self.targetAimFound = false
+  self.worldFirePoint = {0, 0}
   
   self.targetAngle = 0
   
@@ -30,6 +31,7 @@ function sgChomperFlyAroundAndShoot.enteringState(stateData)
 end
 
 function sgChomperFlyAroundAndShoot.update(dt, stateData)
+  self.worldFirePoint = vec2.add({animator.partPoint("head", "projectileSpawnOffset")[1], animator.partPoint("head", "projectileSpawnOffset")[2]}, mcontroller.position())
   if self.targetTimer > 0 then
 	self.targetTimer = math.max(0, self.targetTimer - dt)
   elseif self.chargeUpTime > 0 then
@@ -76,7 +78,7 @@ function sgChomperFlyAroundAndShoot.updateHead(stateData)
       local estimatedPosition = world.distance(mcontroller.position(), world.entityPosition(entityId))
       mcontroller.controlFace(world.distance(mcontroller.position(), world.entityPosition(entityId))[1])
       self.targetAngle = vec2.angle(estimatedPosition) * (mcontroller.facingDirection() * -1)
-	  self.toTarget = vec2.norm(world.distance(self.targetPosition, monster.toAbsolutePosition(self.projectileSpawnOffset)))
+	  self.toTarget = vec2.norm(world.distance(self.targetPosition, self.worldFirePoint))
 	  
 	  if estimatedPosition[1] < 0 and not self.holdAim then
 	    self.targetAngle = self.targetAngle - math.pi + util.toRadians(self.headAngleOffset)

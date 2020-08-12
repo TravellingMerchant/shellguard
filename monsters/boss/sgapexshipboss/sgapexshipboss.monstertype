@@ -26,19 +26,19 @@
       "/monsters/boss/sgapexshipboss/dieState.lua"
     ],
 
-    "skills" : [ "sgApexbossLaser", "sgApexbossTorpedo", "sgApexbossBombingRun", "sgApexbossFlyAroundAndShootPlasma", "sgReinforcementsAttack", "sgApexbossTeleportLeftSide", "sgAwaken"],
+    "skills" : [ "sgApexbossLaser", "sgApexbossTorpedo", "sgApexbossTeleportRightSide", "sgApexbossBombingRun", "sgApexbossBombingStun", "sgApexbossFlyAroundAndShoot", "sgReinforcementsAttack", "sgApexbossTeleportLeftSide", "sgAwaken"],
     "skillCount" : 13,
 
     "phases" : [
       {
         "enterPhase" : "sgAwaken",
-        "skills" : [ "sgApexbossFlyAroundAndShootPlasma", "sgApexbossFlyAroundAndShootPlasma", "sgApexbossLaser", "sgApexbossTeleportLeftSide", "sgApexbossBombingRun", "sgApexbossTorpedo" ]
+        "skills" : [ "sgApexbossFlyAroundAndShoot", "sgApexbossFlyAroundAndShoot", "sgApexbossTeleportRightSide", "sgApexbossLaser", "sgApexbossLaser", "sgApexbossTeleportLeftSide", "sgApexbossBombingStun", "sgApexbossTorpedo" ]
       },
       {
         "enterPhase" : "sgReinforcementsAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.7,
-        "skills" : ["sgApexbossFlyAroundAndShootPlasma" ]
+        "skills" : [ "sgApexbossTeleportLeftSide", "sgApexbossBombingStun", "sgApexbossBombingRun" ]
       },
       {
         "enterPhase" : "sgReinforcementsAttack",
@@ -89,7 +89,7 @@
 
     "movementSettings" : {
       "gravityEnabled" : false,
-      "collisionPoly" : [ [-1, -13.5], [-10, 7], [-2, 7], [7, -1], [10, -13.5] ],
+      "collisionPoly" : [ [-7, -10], [-8, 5], [8, 5], [7, -10] ],
 
       "mass" : 4.0,
       "flySpeed" : 60,

@@ -8,6 +8,7 @@ function sgHeadCleaver.enter()
   self.chargeUpTime = config.getParameter("sgHeadCleaver.chargeUpTime", 0)
   self.holdAim = config.getParameter("sgHeadCleaver.holdAim", false)
   self.targetAimFound = false
+  self.worldFirePoint = {0, 0}
   
   self.targetAngle = 0
   
@@ -32,6 +33,7 @@ function sgHeadCleaver.enteringState(stateData)
 end
 
 function sgHeadCleaver.update(dt, stateData)
+  self.worldFirePoint = vec2.add({animator.partPoint("head", "projectileSpawnOffset")[1], animator.partPoint("head", "projectileSpawnOffset")[2]}, mcontroller.position())
   if self.targetTimer > 0 then
 	self.targetTimer = math.max(0, self.targetTimer - dt)
   elseif self.chargeUpTime > 0 then
@@ -69,7 +71,7 @@ function sgHeadCleaver.updateHead(stateData)
       local estimatedPosition = world.distance(mcontroller.position(), world.entityPosition(entityId))
       mcontroller.controlFace(world.distance(mcontroller.position(), world.entityPosition(entityId))[1])
       self.targetAngle = vec2.angle(estimatedPosition) * (mcontroller.facingDirection() * -1) + self.headAngleOffset * (estimatedPosition[1] < 0 and 1.8 or 1)
-	  self.toTarget = vec2.norm(world.distance(self.targetPosition, monster.toAbsolutePosition(self.projectileSpawnOffset)))
+	  self.toTarget = vec2.norm(world.distance(self.targetPosition, self.worldFirePoint))
 	  
 	  if estimatedPosition[1] < 0 and not self.holdAim then
 	    self.targetAngle = self.targetAngle - math.pi + util.toRadians(self.headAngleOffset)
@@ -87,6 +89,7 @@ function sgHeadCleaver.updateHead(stateData)
   end
   
   self.headAngle = (self.headAngle or 0) + (self.targetAngle - (self.headAngle or 0)) * self.angleApproach
+  world.debugLine(self.worldFirePoint, world.entityPosition(entityId), "orange")
   animator.rotateTransformationGroup("head", self.headAngle, self.headRotationCenter)
 end
 

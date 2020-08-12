@@ -1,14 +1,14 @@
 {
-  "name" : "sgApexbossBombingRun",
+  "name" : "sgApexbossBombingStun",
   "label" : "MEGA SWOOP",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
-    "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossBombingRun.lua" ],
+    "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossBombingStun.lua" ],
 
-    "sgApexbossBombingRun" : {
+    "sgApexbossBombingStun" : {
       "swoopTime" : 1,
-      "dashSpeed" : -30,
+      "dashSpeed" : 30,
 	  
 	  "headRotationCenter" : [3.5, -8],
 	  "projectileSpawnOffset": [-5.5, 0],
@@ -16,9 +16,9 @@
 	  
 	  "burstTime" : 0.7,
 	  
-	  "projectileType" : "penguintankround",
+	  "projectileType" : "stungrenade",
 	  "projectileParameters" : {
-	    "speed" : 10
+	    "speed" : 50
 	  },
 	  "trackSourceEntity" : false
     }
