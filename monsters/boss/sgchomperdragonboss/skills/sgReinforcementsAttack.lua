@@ -71,7 +71,7 @@ function sgReinforcementsAttack.update(dt, stateData)
       --In phase 3 spawn mini UFOs
       for i,minionId in ipairs(self.minionState.slots) do
         if minionId == 0 then
-          self.minionState.slots[i] = world.spawnMonster("penguinMiniUfo", mcontroller.position(), {
+          self.minionState.slots[i] = world.spawnMonster("sgChomperEscort", mcontroller.position(), {
             level = monster.level(),
             masterId = entity.id(),
             minionIndex = i

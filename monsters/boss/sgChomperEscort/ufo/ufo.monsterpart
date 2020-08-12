@@ -1,0 +1,9 @@
+{
+  "name" : "ufo",
+  "category" : "sgChomperEscort",
+  "type" : "ufo",
+
+  "frames" : {
+    "ufo" : "ufo.png"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "frameGrid" : {
+    "size" : [27, 40],
+    "dimensions" : [12, 1],
+
+    "names" : [
+      [ "flying.1", "flying.2", "flying.3", "flying.4", "flying.5", "flying.6", "flying.7", "flying.8", "flying.9", "flying.10", "flying.11", "flying.12" ]
+    ]
+  }
+}

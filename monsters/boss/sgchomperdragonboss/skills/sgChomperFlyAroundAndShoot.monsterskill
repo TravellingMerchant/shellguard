@@ -15,8 +15,8 @@
 	  "burstCount" : 3,
 	  "burstTime" : 0.125,
 	  
-	  "projectileType" : "dragonfirelarge",
-	  "projectileParameters" : { "Speed" : 50 },
+	  "projectileType" : "nebsgfortresslaserblast",
+	  "projectileParameters" : { "Speed" : 30 },
 	  "trackSourceEntity" : false
     }
   },
