@@ -362,7 +362,6 @@
       "emissionRate" : 1,
       "offsetRegion" : [5.0, 4.5, 5.0, 4.5],
       "particles" : [
-        { "particle" : "sleep" }
       ]
     },
     "teleport" : {
