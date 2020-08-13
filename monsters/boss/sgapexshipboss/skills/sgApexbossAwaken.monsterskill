@@ -6,16 +6,8 @@
   "parameters" : {
     "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossAwaken.lua" ],
 
-    "sgApexbossAwaken" : {
-	  "headRotationCenter" : [3.5, -8],
-	  "projectileSpawnOffset" : [-4.5, 2],
-	  
-	  "burstCount" : 5,
-	  "burstTime" : 0.125,
-	  
-	  "projectileType" : "sgchomperroar",
-	  "projectileParameters" : {},
-	  "trackSourceEntity" : false
+    "sgApexbossAwaken" : {	 
+	  "awakenTime" : 5
     }
   },
 
