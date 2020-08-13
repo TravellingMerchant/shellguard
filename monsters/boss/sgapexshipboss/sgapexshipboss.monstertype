@@ -1,6 +1,6 @@
 {
   "type" : "sgapexshipboss",
-  "shortdescription" : "Medium Apes Gunship",
+  "shortdescription" : "Medium Ape's Gunship",
 
   "categories" : [ "sgapexshipboss" ],
   "parts" : [ "body", "head", "headlit", "backthruster", "backthruster2", "frontthruster", "frontthruster2" ],
@@ -44,7 +44,7 @@
         "enterPhase" : "sgReinforcementsAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.3,
-        "skills" : [ "sgApexbossFlyAroundAndShootPlasma" ]
+        "skills" : [ "sgApexbossTeleportRightSide", "sgApexbossTorpedo", "sgApexbossTorpedo", "sgApexbossTeleportLeftSide", "sgApexbossTorpedo", "sgApexbossTorpedo", "sgApexbossBombingStun", "sgApexbossRocketsFast", "sgApexbossTeleportLeftSide", "sgApexbossLaser", "sgApexbossTeleportRightSide", "sgApexbossLaser", "sgApexbossBombingStun", "sgApexbossFlyAroundAndShoot", "sgApexbossFlyAroundAndShoot", "sgApexbossFlyAroundAndShoot", "sgApexbossFlyAroundAndShoot"  ]
       }
     ],
 	
