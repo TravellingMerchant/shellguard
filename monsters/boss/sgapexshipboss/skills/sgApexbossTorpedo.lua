@@ -28,7 +28,7 @@ function sgApexbossTorpedo.enteringState(stateData)
   monster.setActiveSkillName("sgApexbossTorpedo")
   
   animator.setAnimationState("head", "attackWindup")
-  animator.playSound("cleaverWindup")
+  animator.playSound("TorpedoWindup")
 end
 
 function sgApexbossTorpedo.update(dt, stateData)
@@ -45,7 +45,7 @@ function sgApexbossTorpedo.update(dt, stateData)
     if self.burstCount > 0 and self.burstTimer == 0 then
 	  --Fire Projectile--
 	  rangedAttack.aim(projSpawnOffset, self.toTarget)
-      animator.playSound("cleaverFire")
+      animator.playSound("TorpedoFire")
 	  rangedAttack.fireOnce(stateData.projectileType, stateData.projectileParameters)
 	  
 	  self.burstCount = self.burstCount - 1

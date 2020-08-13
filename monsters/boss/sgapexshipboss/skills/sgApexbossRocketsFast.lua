@@ -1,35 +1,35 @@
-sgApexbossRockets = {}
+sgApexbossRocketsFast = {}
 
-function sgApexbossRockets.enter()
-  self.headRotationCenter = config.getParameter("sgApexbossRockets.headRotationCenter", {0, 0})
-  self.projectileSpawnOffset = config.getParameter("sgApexbossRockets.projectileSpawnOffset", {0, 0})
-  self.headAngleOffset = config.getParameter("sgApexbossRockets.headAngleOffset", 1)
-  self.chargeUpTime = config.getParameter("sgApexbossRockets.chargeUpTime", 0)
-  self.holdAim = config.getParameter("sgApexbossRockets.holdAim", false)
+function sgApexbossRocketsFast.enter()
+  self.headRotationCenter = config.getParameter("sgApexbossRocketsFast.headRotationCenter", {0, 0})
+  self.projectileSpawnOffset = config.getParameter("sgApexbossRocketsFast.projectileSpawnOffset", {0, 0})
+  self.headAngleOffset = config.getParameter("sgApexbossRocketsFast.headAngleOffset", 1)
+  self.chargeUpTime = config.getParameter("sgApexbossRocketsFast.chargeUpTime", 0)
+  self.holdAim = config.getParameter("sgApexbossRocketsFast.holdAim", false)
   self.targetAimFound = false
   self.worldFirePoint = {0, 0}
   
   self.targetAngle = 0
   
-  self.angleApproach = config.getParameter("sgApexbossRockets.angleApproach", 1)
+  self.angleApproach = config.getParameter("sgApexbossRocketsFast.angleApproach", 1)
   
-  self.burstCount = config.getParameter("sgApexbossRockets.burstCount", 1)
-  self.burstTime = config.getParameter("sgApexbossRockets.burstTime", 0.1)
+  self.burstCount = config.getParameter("sgApexbossRocketsFast.burstCount", 1)
+  self.burstTime = config.getParameter("sgApexbossRocketsFast.burstTime", 0.1)
   self.burstTimer = self.burstTime
 
   return {
-    projectileType = config.getParameter("sgApexbossRockets.projectileType", "dragonblockbuster"),
-    projectileParameters = config.getParameter("sgApexbossRockets.projectileParameters", {}),
-    trackSourceEntity = config.getParameter("sgApexbossRockets.trackSourceEntity", false)
+    projectileType = config.getParameter("sgApexbossRocketsFast.projectileType", "dragonblockbuster"),
+    projectileParameters = config.getParameter("sgApexbossRocketsFast.projectileParameters", {}),
+    trackSourceEntity = config.getParameter("sgApexbossRocketsFast.trackSourceEntity", false)
   }
 end
 
-function sgApexbossRockets.enteringState(stateData)  
+function sgApexbossRocketsFast.enteringState(stateData)  
   animator.setAnimationState("head", "attackWindup")
   animator.playSound("laserWindup")
 end
 
-function sgApexbossRockets.update(dt, stateData)
+function sgApexbossRocketsFast.update(dt, stateData)
   self.worldFirePoint = vec2.add({animator.partPoint("head", "projectileSpawnOffset")[1], animator.partPoint("head", "projectileSpawnOffset")[2]}, mcontroller.position())
   if self.chargeUpTime > 0 then
 	self.chargeUpTime = math.max(0, self.chargeUpTime - dt)
@@ -62,10 +62,10 @@ function sgApexbossRockets.update(dt, stateData)
     mcontroller.controlFly({ 0, 1 })
   end
   
-  sgApexbossRockets.updateHead(stateData)
+  sgApexbossRocketsFast.updateHead(stateData)
 end
 
-function sgApexbossRockets.updateHead(stateData)
+function sgApexbossRocketsFast.updateHead(stateData)
   animator.resetTransformationGroup("head")
   
   local entityId = world.playerQuery(mcontroller.position(), 300, {includedTypes = {"player"}, order = "nearest"})[1]
@@ -97,5 +97,5 @@ function sgApexbossRockets.updateHead(stateData)
   animator.rotateTransformationGroup("head", self.headAngle, self.headRotationCenter)
 end
 
-function sgApexbossRockets.leavingState(stateData)
+function sgApexbossRocketsFast.leavingState(stateData)
 end

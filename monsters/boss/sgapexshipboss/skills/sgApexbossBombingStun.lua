@@ -28,7 +28,7 @@ function sgApexbossBombingStun.enteringState(stateData)
   animator.rotateGroup("all", -30 * math.pi / 180)
   monster.setActiveSkillName("sgApexbossBombingStun")
   animator.setAnimationState("head", "attackWindup")
-  animator.playSound("dashWindup")
+  animator.playSound("dashStunWindup")
 end
 
 function sgApexbossBombingStun.update(dt, stateData)
@@ -58,7 +58,7 @@ function sgApexbossBombingStun.update(dt, stateData)
 	--Fire Projectile
 	local toTarget = {0, -1}
 	rangedAttack.aim(projSpawnOffset, toTarget)
-	animator.playSound("dashFire")
+	animator.playSound("dashStunFire")
 	rangedAttack.fireOnce(stateData.projectileType, stateData.projectileParameters)
 	  
 	self.burstTimer = self.burstTime

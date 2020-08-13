@@ -26,19 +26,19 @@
       "/monsters/boss/sgapexshipboss/dieState.lua"
     ],
 
-    "skills" : [ "sgApexbossLaser", "sgApexbossTorpedo", "sgApexbossTeleportRightSide", "sgApexbossBombingRun", "sgApexbossBombingStun", "sgApexbossFlyAroundAndShoot", "sgReinforcementsAttack", "sgApexbossTeleportLeftSide", "sgAwaken"],
+    "skills" : [ "sgApexbossLaser", "sgApexbossRockets", "sgApexbossRocketsFast", "sgApexbossTorpedo", "sgApexbossTeleportRightSide", "sgApexbossBombingRun", "sgApexbossBombingStun", "sgApexbossFlyAroundAndShoot", "sgReinforcementsAttack", "sgApexbossTeleportLeftSide", "sgApexbossAwaken"],
     "skillCount" : 13,
 
     "phases" : [
       {
-        "enterPhase" : "sgAwaken",
-        "skills" : [ "sgApexbossFlyAroundAndShoot", "sgApexbossFlyAroundAndShoot", "sgApexbossTeleportRightSide", "sgApexbossLaser", "sgApexbossLaser", "sgApexbossTeleportLeftSide", "sgApexbossBombingStun", "sgApexbossTorpedo" ]
+        "enterPhase" : "sgApexbossAwaken",
+        "skills" : [ "sgApexbossFlyAroundAndShoot", "sgApexbossFlyAroundAndShoot", "sgApexbossTeleportRightSide", "sgApexbossLaser", "sgApexbossLaser", "sgApexbossTeleportLeftSide", "sgApexbossBombingStun", "sgApexbossTorpedo",  "sgApexbossRockets" ]
       },
       {
         "enterPhase" : "sgReinforcementsAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.7,
-        "skills" : [ "sgApexbossTeleportLeftSide", "sgApexbossBombingStun", "sgApexbossBombingRun" ]
+        "skills" : [ "sgApexbossRocketsFast", "sgApexbossTeleportLeftSide", "sgApexbossBombingStun", "sgApexbossTorpedo", "sgApexbossTorpedo", "sgApexbossTeleportLeftSide", "sgApexbossLaser", "sgApexbossLaser", "sgApexbossFlyAroundAndShoot", "sgApexbossFlyAroundAndShoot" ]
       },
       {
         "enterPhase" : "sgReinforcementsAttack",

@@ -29,7 +29,7 @@ function sgApexbossLaser.enteringState(stateData)
   monster.setActiveSkillName("sgApexbossLaser")
   
   animator.setAnimationState("head", "attackWindup")
-  animator.playSound("cleaverWindup")
+  animator.playSound("LaserBurstWindup")
 end
 
 function sgApexbossLaser.update(dt, stateData)
@@ -46,7 +46,7 @@ function sgApexbossLaser.update(dt, stateData)
     if self.burstCount > 0 and self.burstTimer == 0 then
 	  --Fire Projectile--
 	  rangedAttack.aim(projSpawnOffset, self.toTarget)
-      animator.playSound("cleaverFire")
+      animator.playSound("LaserBurstFire")
 	  rangedAttack.fireOnce(stateData.projectileType, stateData.projectileParameters)
 	  
 	  self.burstCount = self.burstCount - 1

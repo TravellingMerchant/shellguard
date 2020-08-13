@@ -38,13 +38,13 @@
     "chargeLevels" : [
       {
         "time" : 0,
-        "energyCost" : 20,
-        "cooldown" : 0.5,
+        "energyCost" : 30,
+        "cooldown" : 0.8,
         "projectileType" : "sgamshotexplosive",
         "projectileParameters" : {},
         "projectileCount" : 1,
         "inaccuracy" : 0.05,
-        "baseDamage" : 4,
+        "baseDamage" : 3,
         "spreadAngle" : 0,
         "fireType" : "burst",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
         "burstTime" : 0.1,		//delay between shots in the burst
@@ -58,13 +58,13 @@
       },
       {
         "time" : 1.25,
-        "energyCost" : 25,
-        "cooldown" : 0.3,
+        "energyCost" : 35,
+        "cooldown" : 0.5,
         "projectileType" : "sgamshotexplosive",
         "projectileParameters" : {},
         "projectileCount" : 1,
         "inaccuracy" : 0.1,
-        "baseDamage" : 6,
+        "baseDamage" : 4,
         "spreadAngle" : 2,
         "fireType" : "burst",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
         "burstTime" : 0.1,		//delay between shots in the burst

@@ -29,8 +29,8 @@
 
   "animationParameters" : {
     "sounds" : {
-      "cleaverWindup" : [ "/sfx/monsters/boss/chomby/DragonRoar_long.ogg" ],
-      "cleaverFire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
+      "TorpedoWindup" : [ "/sfx/tech/mech_activate4.ogg" ],
+      "TorpedoFire" : [ "/sfx/gun/plasma_sniper2.ogg" ]
     }
   }
 }

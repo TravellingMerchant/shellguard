@@ -26,8 +26,8 @@
   
   "animationParameters" : {
     "sounds" : {
-      "dashFire" : [ "/sfx/gun/Needle Lazer.ogg" ],
-      "dashWindup" : [ "/sfx/monsters/boss/chomby/DragonRoar_long.ogg" ]
+      "dashStunFire" : [ "/sfx/gun/Needle Lazer.ogg" ],
+      "dashStunWindup" : [ "/sfx/tech/mech_horn_charge.ogg" ]
     }
   }
 }

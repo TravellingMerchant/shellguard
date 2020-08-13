@@ -31,8 +31,8 @@
 
   "animationParameters" : {
     "sounds" : {
-      "cleaverWindup" : [ "/sfx/monsters/boss/chomby/DragonRoar_long.ogg" ],
-      "cleaverFire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
+      "LaserBurstWindup" : [ "/sfx/tech/mech_jump3.ogg" ],
+      "LaserBurstFire" : [ "/sfx/gun/mech_energyrifle_fire2.ogg" ]
     }
   }
 }

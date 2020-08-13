@@ -1,31 +1,31 @@
 {
-  "name" : "sgApexbossrockets",
+  "name" : "sgApexbossRockets",
   "label" : "MEGA SWOOP",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
-    "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossrockets.lua" ],
+    "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossRockets.lua" ],
 
-    "sgApexbossrockets" : {
-	  "headRotationCenter" : [4.5, -6.5],
-	  "projectileOffset": [-5.5, 0],
+    "sgApexbossRockets" : {
+	  "headRotationCenter" : [3.5, -8],
+	  "projectileSpawnOffset" : [1, -7],
 	  "headAngleOffset" : 0,
 	  
-      "chargeUpTime" : 1,
+      "chargeUpTime" : 1.5,
 	  
-	  "burstCount" : 3,
-	  "burstTime" : 0.125,
+	  "burstCount" : 10,
+	  "burstTime" : 1,
 	  
-	  "projectileType" : "nebsgfortresslaserblast",
-	  "projectileParameters" : {},
+	  "projectileType" : "shockhoppermissile",
+	  "projectileParameters" : { "Speed" : 5 },
 	  "trackSourceEntity" : false
     }
   },
 
   "animationParameters" : {
     "sounds" : {
-      "laserWindup" : [ "/sfx/monsters/boss/sgdronelaser1.ogg", "/sfx/monsters/boss/sgdronelaser2.ogg", "/sfx/monsters/boss/sgdronelaser3.ogg" ],
-      "laserFire" : [ "/sfx/monsters/boss/sgdronelaser1.ogg", "/sfx/monsters/boss/sgdronelaser2.ogg", "/sfx/monsters/boss/sgdronelaser3.ogg" ]
+      "laserWindup" : [ "/sfx/gun/mech_shielddrone_recover1.ogg" ],
+      "laserFire" : [ "/sfx/gun/mech_heatrifle_fire1.ogg" ]
     }
   }
 }
