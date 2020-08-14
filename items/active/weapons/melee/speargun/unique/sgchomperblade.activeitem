@@ -4,7 +4,7 @@
   "inventoryIcon" : "sgchomperblade.png:closed.1",
   "maxStack" : 1,
   "rarity" : "Essential",
-  "description" : "A huge Chomper head combined with an energy sword. Alt fire releases the Chompers wild frenzy.",
+  "description" : "A Chomper head combined with an energy sword. Alt fire releases a wild frenzy.",
   "shortdescription" : "^orange;Chomper Blade",
   "level" : 10,
   "tooltipKind" : "base",

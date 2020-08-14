@@ -569,6 +569,14 @@
     }]
   ],
 
+ "sgturretsmithhead" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgturretsmithhead", 1]}
+      ]
+    }]
+  ],
+
  "sgautochip" : [
     [1, {
       "fill" : [
