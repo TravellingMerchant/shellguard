@@ -1,0 +1,45 @@
+{
+  "id" : "sgapexboss2",
+  "prerequisites" : ["sgapexboss1"],
+  "title" : "^green;Medium Mayhem 2",
+  "text" : "We know where Medium Ape has gone. Hopefully you can catch up to him and defeat him once and for all.",
+  "completionText" : "You did great! A true boon to the Ironwatch team. I'm glad to have you with us.",
+  "moneyRange" : [10000, 10000],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], ["wfcrabdeployer", 1 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/ironwatchmembers/ironwatchquesticon.png"} ],
+        "title" : "Ketos"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/ironwatchmembers/ironwatchquesticon.png"} ],
+        "title" : "Ketos"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Ketos.^reset;",
+      "findGoal" : "Defeat Medium Ape.",
+      "turnIn" : "Return to ^orange;Ketos.^reset;"
+    },
+
+    "warpEntityUid" : "sgironwatchmembers",
+    "warpAction" : "instanceworld:sgapexboss2",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgironwatchmission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgapexbosstele2",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgironwatchmembers"
+  }
+}

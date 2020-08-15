@@ -84,10 +84,10 @@
   ],
   
   "offeredQuests" : [
-    "sgironwatchspacemission", "sgelevatorsurvival2", "sgoceanattack1", "sgoceanattack2"
+    "sgironwatchspacemission", "sgelevatorsurvival2", "sgoceanattack1", "sgoceanattack2", "sgapexboss1", "sgapexboss2"
   ],
   "turnInQuests" : [
-    "sgironwatchspacemission", "sgelevatorsurvival2", "sgoceanattack1", "sgoceanattack2"
+    "sgironwatchspacemission", "sgelevatorsurvival2", "sgoceanattack1", "sgoceanattack2", "sgapexboss1", "sgapexboss2"
   ],
 
   "questIndicatorPosition" : [0, -4.5],

@@ -1,0 +1,45 @@
+{
+  "id" : "sgapexboss1",
+  "prerequisites" : ["sgoceanattack2"],
+  "title" : "^green;Medium Mayhem",
+  "text" : "Are you ready to chase after the leader of the Miniknog that did this? We've actually been paid to remove them by another Miniknog general who wants their position. We can kill two birds with one stone.",
+  "completionText" : "I can't believe that trickster got away! Don't worry, we are tracking his ship, you'll get another shot at him soon.",
+  "moneyRange" : [10000, 10000],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], ["wfcrabdeployer", 1 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/questgivers/ironwatchmembers/ironwatchquesticon.png"} ],
+        "title" : "Ketos"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/questgivers/ironwatchmembers/ironwatchquesticon.png"} ],
+        "title" : "Ketos"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;Ketos.^reset;",
+      "findGoal" : "Defeat Medium Ape.",
+      "turnIn" : "Return to ^orange;Ketos.^reset;"
+    },
+
+    "warpEntityUid" : "sgironwatchmembers",
+    "warpAction" : "instanceworld:sgapexboss",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgironwatchmission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 10,
+
+    "goalEntityUid" : "sgapexbosstele1",
+    "indicateGoal" : false,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgironwatchmembers"
+  }
+}
