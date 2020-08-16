@@ -122,17 +122,17 @@ end
 function updateThrusters()
   --Calculate X velocity, and use it to animate the thrusterStats
   for thruster, thrusterStats in pairs(self.thrusters) do
-    local sign = thrusterStats.thrusterTarget >= 0 and 1 or -1
-  
 	local velocityPercentage = math.min(thrusterStats.maxVelocity, mcontroller.xVelocity()) / thrusterStats.maxVelocity
-	local targetAngle = (thrusterStats.thrusterTarget * math.pi / 180) / 360 * (math.pi * 2)
+	local targetAngle = util.toRadians(thrusterStats.thrusterTarget)
+	local sign = math.abs(targetAngle) / targetAngle
 	
-	thrusterStats.thrusterTargetAngle = sign * math.min(math.abs(thrusterStats.thrusterTarget / 360 * (math.pi * 2)), math.abs(targetAngle)) * (velocityPercentage * mcontroller.facingDirection() * -1)
+	thrusterStats.thrusterTargetAngle = sign * math.min(math.abs(util.toRadians(thrusterStats.thrusterTarget)), math.abs(targetAngle)) * (velocityPercentage * mcontroller.facingDirection() * -1)
 	thrusterStats.angle = (thrusterStats.angle or 0) + (thrusterStats.thrusterTargetAngle - (thrusterStats.angle or 0)) * thrusterStats.approach
+
 	animator.resetTransformationGroup(thruster)
 	animator.rotateTransformationGroup(thruster, thrusterStats.angle, thrusterStats.thrusterCenter)
   end
-end
+end 
 
 function damage(args)
   self.tookDamage = true

@@ -35,6 +35,7 @@ function sgSlamAttack.update(dt, stateData)
       self.spawnPosition[2]
     }
     local toApproach = world.distance(approachPosition, position)
+	animator.setAnimationState("movement", "grounded")
 
     if math.abs(toApproach[1]) < 3 or checkWalls(util.toDirection(toApproach[1])) then
       stateData.prepareSlam = true
@@ -100,6 +101,7 @@ end
 function sgSlamAttack.leavingState(stateData)
   monster.setDamageOnTouch(false)
   animator.setParticleEmitterActive("stunned", false)
+  animator.setAnimationState("movement", "visible")
   animator.stopAllSounds("stunned")
 end
 

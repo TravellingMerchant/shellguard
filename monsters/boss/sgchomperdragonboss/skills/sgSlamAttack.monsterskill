@@ -13,7 +13,7 @@
       "riseSpeed" : 50,
       "slamSpeed" : 1000,
 
-      "stunDuration" : 1
+      "stunDuration" : 2
     }
   },
 

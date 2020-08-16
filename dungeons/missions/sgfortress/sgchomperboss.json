@@ -50,7 +50,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"bossIds\" : [ \"sgchomperdragonboss\" ], \"open\" : true }",
+                     "parameters":"{ \"bossIds\" : [ \"sgchomperboss\" ], \"open\" : true }",
                      "stagehand":"bossdooropener"
                     },
                  "propertytypes":
