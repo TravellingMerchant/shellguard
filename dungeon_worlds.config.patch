@@ -574,7 +574,7 @@
       "dungeonBaseHeight" : 1000,
       "dungeonSurfaceHeight" : 450,
       "ambientLightLevel" : [80, 200, 80],
-      "musicTrack" : "/music/Gears_of_the_Machine_Final_Loop.ogg",
+      "musicTrack" : "/music/LoibCourage_Loop.ogg",
       "biome": "sgcentensskycity"
     }
   },  

@@ -593,6 +593,38 @@
     }]
   ],
 
+ "sggunshipthemeradionew" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sggunshipthemeradionew", 1]}
+      ]
+    }]
+  ],
+  
+ "sgfirehead" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgfirehead", 1]}
+      ]
+    }]
+  ],
+  
+ "sgfirechest" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgfirechest", 1]}
+      ]
+    }]
+  ],
+  
+ "sgfirelegs" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgfirelegs", 1]}
+      ]
+    }]
+  ],
+
 //--------- alien --------------------
 
   "sgaliencaster" : [

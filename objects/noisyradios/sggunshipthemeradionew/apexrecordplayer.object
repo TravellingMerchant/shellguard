@@ -1,13 +1,13 @@
 {
-  "objectName" : "sggunshipthemeradio",
+  "objectName" : "sggunshipthemeradionew",
   "colonyTags" : ["apex","apexvillage","musical"],
   "rarity" : "Common",
   "category" : "decorative",
   "price" : 105,
   "lightColor" : [0, 0, 0],
 
-  "description" : "This record player plays the old gunship theme, by Loib.",
-  "shortdescription" : "Old Gunship Theme Player",
+  "description" : "This record player plays the gunship theme, by Loib.",
+  "shortdescription" : "Gunship Theme Player",
   "race" : "apex",
 
   "apexDescription" : "This track is fantastic!",
@@ -69,6 +69,6 @@
 
   "defaultLightState" : false,
 
-  "soundEffect" : "/music/Gears_of_the_Machine_Final_Loop.ogg",
+  "soundEffect" : "/music/LoibCourage_Final.ogg",
   "soundEffectRangeMultiplier" : 1.0
 }
