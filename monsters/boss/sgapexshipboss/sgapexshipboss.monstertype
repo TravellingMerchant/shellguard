@@ -26,7 +26,7 @@
       "/monsters/boss/sgapexshipboss/dieState.lua"
     ],
 
-    "skills" : [ "sgApexbossLaser", "sgApexbossRockets", "sgApexbossRocketsFast", "sgApexbossTorpedo", "sgApexbossTeleportRightSide", "sgApexbossBombingRun", "sgApexbossBombingStun", "sgApexbossFlyAroundAndShoot", "sgReinforcementsAttack", "sgApexbossTeleportLeftSide", "sgApexbossAwaken"],
+    "skills" : [ "sgApexbossLaser", "sgApexbossRockets", "sgApexbossRocketsFast", "sgApexbossTorpedo", "sgApexbossTeleportRightSide", "sgApexbossBombingRun", "sgApexbossBombingStun", "sgApexbossFlyAroundAndShoot", "sgApexbossReinforcementsAttack", "sgApexbossTeleportLeftSide", "sgApexbossAwaken"],
     "skillCount" : 13,
 
     "phases" : [
@@ -35,13 +35,13 @@
         "skills" : [ "sgApexbossFlyAroundAndShoot", "sgApexbossFlyAroundAndShoot", "sgApexbossTeleportRightSide", "sgApexbossLaser", "sgApexbossLaser", "sgApexbossTeleportLeftSide", "sgApexbossBombingStun", "sgApexbossTorpedo",  "sgApexbossRockets" ]
       },
       {
-        "enterPhase" : "sgReinforcementsAttack",
+        "enterPhase" : "sgApexbossReinforcementsAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.7,
         "skills" : [ "sgApexbossRocketsFast", "sgApexbossTeleportLeftSide", "sgApexbossBombingStun", "sgApexbossTorpedo", "sgApexbossTorpedo", "sgApexbossTeleportLeftSide", "sgApexbossLaser", "sgApexbossLaser", "sgApexbossFlyAroundAndShoot", "sgApexbossFlyAroundAndShoot" ]
       },
       {
-        "enterPhase" : "sgReinforcementsAttack",
+        "enterPhase" : "sgApexbossReinforcementsAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.3,
         "skills" : [ "sgApexbossTeleportRightSide", "sgApexbossTorpedo", "sgApexbossTorpedo", "sgApexbossTeleportLeftSide", "sgApexbossTorpedo", "sgApexbossTorpedo", "sgApexbossBombingStun", "sgApexbossRocketsFast", "sgApexbossTeleportLeftSide", "sgApexbossLaser", "sgApexbossTeleportRightSide", "sgApexbossLaser", "sgApexbossBombingStun", "sgApexbossFlyAroundAndShoot", "sgApexbossFlyAroundAndShoot", "sgApexbossFlyAroundAndShoot", "sgApexbossFlyAroundAndShoot"  ]

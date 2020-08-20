@@ -1,0 +1,180 @@
+{
+  "name" : "sgApexbossReinforcementsAttack",
+  "label" : "REINFORCEMENTS",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossReinforcementsAttack.lua" ],
+
+    "sgApexbossReinforcementsAttack" : {
+      "cooldownTime" : 10,
+
+      "spawnDistance" : 15,
+
+      "maxReinforcements" : 6,
+
+      // TODO: Make .projectile files for these
+      // Also make this make any sense
+      "projectiles" : {
+        "trooperspawn" : {
+          "type" : "penguinufocharge",
+          "config" : {
+            "speed" : 0.1,
+            "power" : 20,
+            "periodicActions" : [
+              {
+                "time" : 0.1,
+                "repeat" : false,
+                "action" : "sound",
+                "options" : [ "/sfx/gun/plasma_shotgun2.ogg" ]
+              }
+            ],
+            "actionOnReap" : [
+              {
+                "action" : "projectile",
+                "type" : "penguinufobeam",
+                "direction" : [0.0, -1.0],
+                "config" : {
+                  "movementSettings" : {
+                    "gravityMultiplier" : 0.0,
+                    "bounceFactor" : 0.0,
+                    "maxMovementPerStep" : 0.4,
+
+                    "ignorePlatformCollision" : true,
+
+                    "airFriction" : 0.0,
+                    "liquidFriction" : 0.0
+                  },
+                  "actionOnReap" : [
+                    {
+                      "action" : "spawnmonster",
+                      "type" : "bobot",
+                      "level" : 10,
+                      "offset" : [0.0, 1.0],
+                      "particle" : {
+                        "type" : "animated",
+                        "animation" : "/animations/penguintrooperspawn/penguintrooperspawn.animation",
+                        "destructionTime" : 15,
+                        "position" : [0, 2.375],
+                        "timeToLive" : 0.2667,
+                        "layer" : "front"
+                      }
+                    },
+                    {
+                      "action" : "sound",
+                      "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+
+        "rockettrooperspawn" : {
+          "type" : "penguinufocharge",
+          "config" : {
+            "speed" : 0.1,
+            "power" : 20,
+            "periodicActions" : [
+              {
+                "time" : 0.1,
+                "repeat" : false,
+                "action" : "sound",
+                "options" : [ "/sfx/gun/plasma_shotgun2.ogg" ]
+              }
+            ],
+            "actionOnReap" : [
+              {
+                "action" : "projectile",
+                "type" : "penguinufobeam",
+                "direction" : [0.0, -1.0],
+                "config" : {
+                  "movementSettings" : {
+                    "gravityMultiplier" : 0.0,
+                    "bounceFactor" : 0.0,
+                    "maxMovementPerStep" : 0.4,
+
+                    "ignorePlatformCollision" : true,
+
+                    "airFriction" : 0.0,
+                    "liquidFriction" : 0.0
+                  },
+                  "actionOnReap" : [
+                    {
+                      "action" : "spawnmonster",
+                      "type" : "bobot",
+                      "level" : 10,
+                      "offset" : [0.0, 1.6],
+                      "particle" : {
+                        "type" : "animated",
+                        "animation" : "/animations/penguintrooperspawn/penguintrooperspawn.animation",
+                        "destructionTime" : 15,
+                        "position" : [0, 2.375],
+                        "timeToLive" : 0.2667,
+                        "layer" : "front"
+                      }
+                    },
+                    {
+                      "action" : "sound",
+                      "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+
+        "generalspawn" : {
+          "type" : "penguinufocharge",
+          "config" : {
+            "speed" : 0.1,
+            "power" : 20,
+            "actionOnReap" : [
+              {
+                "action" : "projectile",
+                "type" : "penguinufobeam",
+                "direction" : [0.0, -1.0],
+                "config" : {
+                  "movementSettings" : {
+                    "gravityMultiplier" : 0.0,
+                    "bounceFactor" : 0.0,
+                    "maxMovementPerStep" : 0.4,
+
+                    "ignorePlatformCollision" : true,
+
+                    "airFriction" : 0.0,
+                    "liquidFriction" : 0.0
+                  },
+                  "actionOnReap" : [
+                    {
+                      "action" : "spawnmonster",
+                      "type" : "bobot",
+                      "level" : 10,
+                      "offset" : [0.0, 1.5],
+                      "particle" : {
+                        "type" : "animated",
+                        "animation" : "/animations/penguingeneralspawn/penguingeneralspawn.animation",
+                        "destructionTime" : 15,
+                        "position" : [0, 2.375],
+                        "timeToLive" : 0.2667,
+                        "layer" : "front"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  
+  "animationParameters" : {
+    "sounds" : {
+      "fire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
+    }
+  }
+}
