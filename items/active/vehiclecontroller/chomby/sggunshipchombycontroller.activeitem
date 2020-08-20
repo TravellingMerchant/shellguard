@@ -1,0 +1,34 @@
+{
+  "itemName" : "sggunshipchombycontroller",
+  "level" : 1,
+  "price" : 25000,
+  "rarity" : "Legendary",
+  "category" : "vehicleController",
+  "description" : "Creates a tamed Chomby from stored nanites. Watch out, it can harm itself.",
+  "shortdescription" : "Chomby Controller",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["vehiclecontroller.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "vehicle",
+  "largeImage" : "sggunshipchomby.png",
+
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "sggunshipchomby",
+  "vehicleBoundingBox" : [-11, -4, 11, 4],
+  "vehicleImage" : "/items/active/vehiclecontroller/chomby/sggunshipchombywarp.png",
+
+  "animationParts" : {
+    "casing" : "sggunshipchombycontroller.png"
+  },
+
+  "inventoryIcon" : "/items/active/vehiclecontroller/sgassaultgunshipcontroller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/sgassaultgunshipcontroller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/sgassaultgunshipcontroller.png:full"
+
+}

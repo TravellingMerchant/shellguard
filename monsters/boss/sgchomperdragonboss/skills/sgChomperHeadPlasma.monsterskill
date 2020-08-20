@@ -16,7 +16,7 @@
 	  "burstTime" : 0.125,
 	  
 	  "projectileType" : "sgplasmabouncer",
-	  "projectileParameters" : { "bounces" : 0 },
+	  "projectileParameters" : { "bounces" : 0, "power" : 150 },
 	  "trackSourceEntity" : false
     }
   },

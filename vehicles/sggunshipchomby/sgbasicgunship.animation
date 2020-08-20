@@ -539,14 +539,13 @@
 
 	"sounds" : {
 	"ventralAutocannon" : [
-		"/sfx/gun/cannonfire1.ogg"
+		"/sfx/gun/plasmiteheavy3.ogg"
 	],
 	"bombbay" : [
-		"/sfx/gun/grenadeblast_small_fire2.ogg"
+		"/sfx/monsters/boss/chomby/DragonRoar_long.ogg"
 	],
 	"forwardDoubleCannons" : [
-			"/sfx/gun/fireworkgun_large1.ogg",
-			"/sfx/gun/fireworkgun_large2.ogg"
+			"/sfx/monsters/boss/chomby/sgglitchombyroar.ogg"
 		],
 		"collisionNotification" : [
 			"/sfx/tech/hoverbike_bump1.ogg",

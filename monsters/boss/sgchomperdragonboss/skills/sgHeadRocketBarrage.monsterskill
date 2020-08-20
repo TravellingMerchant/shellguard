@@ -20,7 +20,7 @@
       "holdAim" : true,
 
 	  "projectileType" : "sgheavyrocketsword",
-	  "projectileParameters" : {},
+	  "projectileParameters" : {"power" : 50},
 	  "trackSourceEntity" : false
     }
   },

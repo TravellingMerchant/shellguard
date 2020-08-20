@@ -10,7 +10,7 @@
 
   "dropPools" : [
     {
-      "default" : "bonedragonTreasure"
+      "default" : "sggunshipchombycontroller"
     }
   ],
 
@@ -28,8 +28,8 @@
       "/monsters/boss/sgchomperdragonboss/dieState.lua"
     ],
 
-    "skills" : [ "sgChomperFlyAroundAndShoot", "sgHeadCleaver", "sgChomperTeleportrightSide", "sgHeadRocketBarrage", "sgChomperHeadPlasma", "sgChomperSwoopAttack", "sgSlamAttack", "sgReinforcementsAttack", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgTeleportLeftSide", "sgAwaken"],
-    "skillCount" : 12,
+    "skills" : [ "sgChomperFlyAroundAndShoot", "sgChomperFollowWait", "sgHeadCleaver", "sgChomperTeleportrightSide", "sgHeadRocketBarrage", "sgChomperHeadPlasma", "sgChomperSwoopAttack", "sgSlamAttackBlast", "sgSlamAttack", "sgReinforcementsAttack", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgTeleportLeftSide", "sgAwaken"],
+    "skillCount" : 14,
 
     "phases" : [
       {
@@ -40,7 +40,7 @@
         "enterPhase" : "sgReinforcementsAttack",
         "trigger" : "healthPercentage",
         "healthPercentage" : 0.7,
-        "skills" : [ "sgTeleportLeftSide", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgTeleportLeftSide", "sgChomperSwoopAttack", "sgChomperTeleportAttack", "sgChomperHeadLaser", "sgChomperTeleportrightSide", "sgHeadCleaver", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgChomperHeadPlasma" ]
+        "skills" : [ "sgTeleportLeftSide", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgTeleportLeftSide", "sgChomperSwoopAttack", "sgChomperTeleportAttack", "sgChomperHeadLaser", "sgChomperTeleportrightSide", "sgHeadCleaver", "sgChomperHeadLaser", "sgChomperTeleportAttack", "sgChomperHeadPlasma", "sgSlamAttackBlast", "sgSlamAttackBlast", "sgSlamAttackBlast" ]
       },
       {
         "enterPhase" : "sgReinforcementsAttack",

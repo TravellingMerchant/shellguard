@@ -66,27 +66,6 @@
                  "y":2808
                 }, 
                 {
-                 "height":400,
-                 "id":2563,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"music\": [\"\/music\/sgfortresscoremusic.ogg\"], \"uniqueId\": \"bossmusic\"}",
-                     "stagehand":"bossmusic"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string",
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":1304,
-                 "x":6384,
-                 "y":2576
-                }, 
-                {
                  "gid":9669,
                  "height":40,
                  "id":2565,
@@ -313,6 +292,27 @@
                  "width":32,
                  "x":5264,
                  "y":2840
+                }, 
+                {
+                 "height":400,
+                 "id":2602,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"music\": [\"\/music\/sgfortresscoremusic.ogg\"], \"uniqueId\": \"bossmusic\"}",
+                     "stagehand":"bossmusic"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":1288,
+                 "x":6392,
+                 "y":2536
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1991,6 +1991,27 @@
                  "width":8,
                  "x":3552,
                  "y":2880
+                }, 
+                {
+                 "height":8,
+                 "id":2601,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"sgchomperdragonboss",
+                     "parameters":"{\"musicStagehands\" : [ \"bossmusic\" ], \"uniqueId\" : \"sgchomperboss\"}"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":7024,
+                 "y":2720
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2025,28 +2046,7 @@
          "draworder":"topdown",
          "id":9,
          "name":"anchors etc",
-         "objects":[
-                {
-                 "height":34.5,
-                 "id":2451,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{\"uniqueId\":\"bosshoverposition\"}",
-                     "stagehand":"glitchmissionspawnpoint"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string",
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":36.5,
-                 "x":7016,
-                 "y":2688
-                }],
+         "objects":[],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -2065,7 +2065,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":2600,
+ "nextobjectid":2603,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.1",

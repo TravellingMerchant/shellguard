@@ -1,24 +1,23 @@
 {
-  "name" : "sgChomperHeadLaser",
+  "name" : "sgChomperFollowWait",
   "label" : "MEGA SWOOP",
   "image" : "/monsters/generated/ground/skills/icon.png",
 
   "parameters" : {
-    "scripts" : [ "/monsters/boss/sgchomperdragonboss/skills/sgChomperHeadLaser.lua" ],
+    "scripts" : [ "/monsters/boss/sgchomperdragonboss/skills/sgChomperFollowWait.lua" ],
 
-    "sgChomperHeadLaser" : {
+    "sgChomperFollowWait" : {
 	  "headRotationCenter" : [4.125, 2.5],
 	  "headAngleOffset" : 0.6,
 	  
-      "chargeUpTime" : 1,
+      "chargeUpTime" : 0.05,
+	  "targetingTime" : 0.5,
 	  
-      "targetingTime" : 1,
+	  "burstCount" : 1,
+	  "burstTime" : 0.05,
 	  
-	  "burstCount" : 3,
-	  "burstTime" : 0.125,
-	  
-	  "projectileType" : "nebsgfortresslaserblast",
-	  "projectileParameters" : {"power" : 30},
+	  "projectileType" : "",
+	  "projectileParameters" : {},
 	  "trackSourceEntity" : false
     }
   },

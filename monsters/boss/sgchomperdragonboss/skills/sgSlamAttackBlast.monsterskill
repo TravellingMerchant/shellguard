@@ -1,0 +1,25 @@
+{
+  "name" : "sgSlamAttackBlast",
+  "label" : "SLAM",
+  "image" : "/monsters/generated/ground/skills/icon.png",
+
+  "parameters" : {
+    "scripts" : [ "/monsters/boss/sgchomperdragonboss/skills/sgSlamAttackBlast.lua" ],
+
+    "sgSlamAttackBlast" : {
+      "skillTime" : 5,
+
+      "slamHeight" : 8,
+      "riseSpeed" : 150,
+      "slamSpeed" : 1500,
+
+      "stunDuration" : 1
+    }
+  },
+
+  "animationParameters" : {
+    "sounds" : {
+      "fire" : [ "/sfx/monsters/boss/chomby/sgglitchombyroar.ogg" ]
+    }
+  }
+}

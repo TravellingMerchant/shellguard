@@ -625,6 +625,14 @@
     }]
   ],
 
+ "sggunshipchombycontroller" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sggunshipchombycontroller", 1]}
+      ]
+    }]
+  ],
+
 //--------- alien --------------------
 
   "sgaliencaster" : [
