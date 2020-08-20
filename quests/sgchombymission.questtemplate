@@ -36,7 +36,7 @@
     "goalTrigger" : "proximity",
     "proximityRange" : 10,
 
-    "goalEntityUid" : "sgbossminetele",
+    "goalEntityUid" : "sgchomperbosstele",
     "indicateGoal" : false,
     "trackGoalEntity" : false,
 

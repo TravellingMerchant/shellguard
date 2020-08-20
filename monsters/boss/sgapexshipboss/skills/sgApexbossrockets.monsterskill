@@ -17,7 +17,7 @@
 	  "burstTime" : 1,
 	  
 	  "projectileType" : "shockhoppermissile",
-	  "projectileParameters" : { "Speed" : 5 },
+	  "projectileParameters" : { "Speed" : 5,  "power" : 60 },
 	  "trackSourceEntity" : false
     }
   },

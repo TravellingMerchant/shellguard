@@ -188,27 +188,6 @@
                  "y":2344
                 }, 
                 {
-                 "height":384,
-                 "id":2903,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"messageType\" : \"playAltMusic\", \"messageArgs\" : [[\"\/music\/darkling.ogg\"], 2.0] }",
-                     "stagehand":"messenger"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string",
-                     "stagehand":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":1096,
-                 "x":16256,
-                 "y":2344
-                }, 
-                {
                  "height":56,
                  "id":2908,
                  "name":"",
@@ -291,6 +270,48 @@
                  "width":1112,
                  "x":16248,
                  "y":1384
+                }, 
+                {
+                 "height":400,
+                 "id":2915,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"music\": [\"\/music\/darkling.ogg\"], \"uniqueId\": \"bossmusic\"}",
+                     "stagehand":"bossmusic"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":1096,
+                 "x":16256,
+                 "y":2328
+                }, 
+                {
+                 "height":56,
+                 "id":2916,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"bossIds\" : [ \"sgapexshipboss\" ], \"open\" : true }",
+                     "stagehand":"bossdooropener"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string",
+                     "stagehand":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":17352,
+                 "y":2656
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1207,26 +1228,6 @@
                  "width":8,
                  "x":18392,
                  "y":2584
-                }, 
-                {
-                 "gid":2147491088,
-                 "height":20,
-                 "id":2642,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"treasurePools\" : [ \"sgbastiontwohanded\" ] }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":24,
-                 "x":18936,
-                 "y":2688
                 }, 
                 {
                  "gid":9667,
@@ -3953,6 +3954,66 @@
                  "width":16,
                  "x":16240,
                  "y":2704
+                }, 
+                {
+                 "gid":5639,
+                 "height":40,
+                 "id":2914,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"locked\" : true }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":48,
+                 "x":17336,
+                 "y":2704
+                }, 
+                {
+                 "gid":2147491088,
+                 "height":20,
+                 "id":2918,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"sgironwatchlongswordrifle\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":18936,
+                 "y":2688
+                }, 
+                {
+                 "gid":2147491088,
+                 "height":20,
+                 "id":2919,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"sgironwatchchargeburstrifle\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":10184,
+                 "y":2792
                 }],
          "opacity":0.97,
          "type":"objectgroup",
@@ -4259,6 +4320,27 @@
                  "width":8,
                  "x":14856,
                  "y":2608
+                }, 
+                {
+                 "height":8,
+                 "id":2917,
+                 "name":"",
+                 "properties":
+                    {
+                     "monster":"sgapexshipboss",
+                     "parameters":"{\"musicStagehands\" : [ \"bossmusic\" ], \"uniqueId\" : \"sgapexshipboss\"}"
+                    },
+                 "propertytypes":
+                    {
+                     "monster":"string",
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":16832,
+                 "y":2528
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4312,7 +4394,7 @@
          "y":0
         }],
  "nextlayerid":14,
- "nextobjectid":2912,
+ "nextobjectid":2920,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.1",

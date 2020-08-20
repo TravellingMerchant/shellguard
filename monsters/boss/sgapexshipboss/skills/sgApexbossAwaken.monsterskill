@@ -7,7 +7,7 @@
     "scripts" : [ "/monsters/boss/sgapexshipboss/skills/sgApexbossAwaken.lua" ],
 
     "sgApexbossAwaken" : {	 
-	  "awakenTime" : 5
+	  "awakenTime" : 1
     }
   },
 

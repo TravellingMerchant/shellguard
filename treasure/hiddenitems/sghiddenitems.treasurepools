@@ -633,6 +633,55 @@
     }]
   ],
 
+ "sgironwatchhammerrifle" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgironwatchhammerrifle", 1]}
+      ]
+    }]
+  ],
+  
+ "sgironwatchhammersniper" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgironwatchhammersniper", 1]}
+      ]
+    }]
+  ],
+  
+ "sgironwatchchargeburstrifle" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgironwatchchargeburstrifle", 1]}
+      ]
+    }]
+  ],
+
+ "sgironwatchlongswordrifle" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgironwatchlongswordrifle", 1]}
+      ]
+    }]
+  ],
+  
+
+ "sghammercarbine" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sghammercarbine", 1]}
+      ]
+    }]
+  ],
+
+ "sgironwatchwidegun2" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgironwatchwidegun2", 1]}
+      ]
+    }]
+  ],
+
 //--------- alien --------------------
 
   "sgaliencaster" : [

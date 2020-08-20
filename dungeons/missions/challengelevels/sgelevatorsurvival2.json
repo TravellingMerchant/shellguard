@@ -3343,6 +3343,26 @@
                  "width":24,
                  "x":12168,
                  "y":3936
+                }, 
+                {
+                 "gid":2147491088,
+                 "height":20,
+                 "id":4909,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"sghammercarbine\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":12144,
+                 "y":3952
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4781,7 +4801,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":4909,
+ "nextobjectid":4910,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.1",

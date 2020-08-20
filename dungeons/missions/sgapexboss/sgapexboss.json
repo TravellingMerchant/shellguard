@@ -4073,6 +4073,26 @@
                  "width":16,
                  "x":5160,
                  "y":1408
+                }, 
+                {
+                 "gid":2147491088,
+                 "height":20,
+                 "id":3569,
+                 "name":"",
+                 "properties":
+                    {
+                     "parameters":"{ \"treasurePools\" : [ \"sgironwatchhammerrifle\" ] }"
+                    },
+                 "propertytypes":
+                    {
+                     "parameters":"string"
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":14384,
+                 "y":1432
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4459,7 +4479,7 @@
          "y":0
         }],
  "nextlayerid":11,
- "nextobjectid":3569,
+ "nextobjectid":3570,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.1",

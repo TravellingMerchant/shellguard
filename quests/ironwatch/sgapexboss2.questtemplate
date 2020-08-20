@@ -3,7 +3,7 @@
   "prerequisites" : ["sgapexboss1"],
   "title" : "^green;Medium Mayhem 2",
   "text" : "We know where Medium Ape has gone. Hopefully you can catch up to him and defeat him once and for all.",
-  "completionText" : "You did great! A true boon to the Ironwatch team. I'm glad to have you with us.",
+  "completionText" : "You did great! A true boon to the Ironwatch team. I'm glad to have you with us. ^orange;Don't forget, you can come to us to buy things.",
   "moneyRange" : [10000, 10000],
   "rewards" : [
     [ [ "rewardbag", 1 ], ["wfcrabdeployer", 1 ] ]

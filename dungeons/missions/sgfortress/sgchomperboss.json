@@ -299,7 +299,7 @@
                  "name":"",
                  "properties":
                     {
-                     "parameters":"{ \"music\": [\"\/music\/sgfortresscoremusic.ogg\"], \"uniqueId\": \"bossmusic\"}",
+                     "parameters":"{ \"music\": [\"\/music\/blue-scorpion-by-kevin-macleod-sped-up.ogg\"], \"uniqueId\": \"bossmusic\"}",
                      "stagehand":"bossmusic"
                     },
                  "propertytypes":
@@ -326,26 +326,6 @@
          "id":4,
          "name":"objects",
          "objects":[
-                {
-                 "gid":9305,
-                 "height":40,
-                 "id":2010,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"queryArea\" : [-10, -10, 10, 10] }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":1688,
-                 "y":2552
-                }, 
                 {
                  "gid":2920,
                  "height":8,
@@ -884,26 +864,6 @@
                  "visible":true,
                  "width":48,
                  "x":7664,
-                 "y":2856
-                }, 
-                {
-                 "gid":9305,
-                 "height":40,
-                 "id":2506,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"queryArea\" : [-10, -10, 10, 10] }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":6104,
                  "y":2856
                 }, 
                 {
