@@ -689,6 +689,22 @@
       ]
     }]
   ],
+  
+ "sgphbl" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgphbl", 1]}
+      ]
+    }]
+  ],
+  
+ "sghammerpistol" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sghammerpistol", 1]}
+      ]
+    }]
+  ],
 
 //--------- alien --------------------
 

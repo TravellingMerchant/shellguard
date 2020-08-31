@@ -1,0 +1,24 @@
+{
+  "projectileName" : "neb-railminikenetic",
+  "image" : "neb-railminikenetic.png",
+  "physics" : "laser",
+  "animationCycle" : 0.1,
+  "animationLoops" : false,
+  "windupFrames" : 2,
+  "timeToLive" : 10,
+  "frameNumber" : 3,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "piercing" : true,
+  "pointLight" : true,
+  "lightColor" : [125, 100, 60],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/shellsmoke/shellsmoke.config"
+    }
+  ],
+  "power" : 5.0,
+  "speed" : 150,
+  "damageKind" : "default"
+}

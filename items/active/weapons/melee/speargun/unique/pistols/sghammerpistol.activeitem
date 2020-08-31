@@ -1,0 +1,233 @@
+{
+  "itemName" : "sghammerpistol",
+  "price" : 9500,
+  "inventoryIcon" : "sghammerpistol.png:closed.1",
+  "maxStack" : 1,
+  "rarity" : "Essential",
+  "description" : "Fires high impact two shot bursts, before unleashing its coolant in an icy blast.",
+  "shortdescription" : "orange;Hammer Hand Cannon",
+  "level" : 10,
+  "tooltipKind" : "base",
+  "category" : "sgcombopistol",
+  "itemTags" : ["weapon","ranged","pistol","melee", "upgradeableWeapon"],
+  "twoHanded" : false,
+
+  "animation" : "/items/active/weapons/melee/speargun/sgbayonetpistol.animation",
+  "animationParts" : {
+    "blade" : "sghammerpistol.png",
+    "bladefullbright" : "sghammerpistolfullbright.png",
+    "handle" : "",
+    "handlefullbright" : "",
+    "muzzleFlash" : "/animations/muzzleflash/sgicemuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "animatedParts" : {
+      "parts" : { 
+        "muzzleFlash" : {
+          "properties" : {
+            "offset" : [1.625, 2.125]
+          }
+        }
+      }
+    },
+    "sounds" : {
+      "fire" : [ "/sfx/monsters/boss/survivorpainblank.ogg" ],
+      "fire2" : [ "/sfx/monsters/boss/survivorpainblank.ogg" ],
+      "fire3" : [ "/sfx/monsters/boss/survivorpainblank.ogg" ],
+      "fire4" : [ "/sfx/gun/sgpistolreload.ogg" ],
+      "gunfire" : [ "/sfx/gun/railshots/sgheavyrevolvershot3.ogg" ],
+      "gunfire2" : [ "/sfx/gun/sgenergyanvilfire4charged.ogg" ]
+    }
+  },
+
+  "baseOffset" : [2.0, -2],
+	
+	//Not required but gives it a nice aiming feel
+  "aimOffset" : 0,
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "sgbayonetpistolcombo",
+  "primaryAbility" : {
+	"stances" : {
+      "idle" : {
+        "aimAngle" : 0,
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : false,
+        "allowRotate" : true,
+        "weaponOffset" : [2.0, -2],
+        "allowFlip" : true
+      },
+      "fire1" : {
+        "duration" : 0.2,
+        "armRotation" : 5,
+        "weaponRotation" : 15,
+
+        "endWeaponRotation" : 0,
+        "endArmRotation" : 0,
+        "endWeaponOffset" : [2.0, -2],
+        "twoHanded" : false,
+        "weaponOffset" : [2.0, -2],
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+
+				//If this exists it will try to shoot based on the variables within
+				"gunShotConfig" : {
+					//General
+					"aimAtCursor" : false,
+					"energyUsage" : 10,
+					"fireTime" : 0.15, 	
+					"fireSound" : "gunfire",
+				
+					//Recoil
+					//"recoilKnockbackVelocity" : 3,
+					//"crouchStopsRecoil" : true,
+					//"crouchRecoilKnockbackVelocity" : 1,
+					
+					//Projectile
+					"projectile" : "sgminishot",
+					"projectileCount" : 1,
+					"projectileDamage" : 4,
+					"projectileParameters" : {
+						"knockback" : 10,
+						"speed" : 250
+					},
+					"projectileInaccuracy" : 0,
+					"projectileAimAngleOffset" : 0,
+          "projectileFirePoint" : [2.375, 0.375]
+				}
+      },
+
+      "fire2" : {
+        "duration" : 0.2,
+        "armRotation" : 5,
+        "weaponRotation" : 15,
+
+        "endWeaponRotation" : 0,
+        "endArmRotation" : 0,
+        "endWeaponOffset" : [2.0, -2],
+        "twoHanded" : false,
+        "weaponOffset" : [2.0, -2],
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+
+				//If this exists it will try to shoot based on the variables within
+				"gunShotConfig" : {
+					//General
+					"aimAtCursor" : false,
+					"energyUsage" : 10,
+					"fireTime" : 0.15, 			//If this exists it loops during the stance duration firing in intervals of this number
+					"fireSound" : "gunfire",
+				
+					//Recoil
+					//"recoilKnockbackVelocity" : 3,
+					//"crouchStopsRecoil" : true,
+					//"crouchRecoilKnockbackVelocity" : 1,
+					
+					//Projectile
+					"projectile" : "sgminishot",
+					"projectileCount" : 1,
+					"projectileDamage" : 4,
+					"projectileParameters" : {
+						"knockback" : 10,
+						"speed" : 250
+					},
+					"projectileInaccuracy" : 0.01,
+					"projectileAimAngleOffset" : 0,
+          "projectileFirePoint" : [2.375, 0.375]
+				}
+      },
+
+      "fire3" : {
+        "duration" : 0.2,
+        "armRotation" : 5,
+        "weaponRotation" : 15,
+
+        "endWeaponRotation" : 0,
+        "endArmRotation" : 0,
+        "endWeaponOffset" : [2.0, -2],
+        "twoHanded" : false,
+        "weaponOffset" : [2.0, -2],
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+
+				//If this exists it will try to shoot based on the variables within
+				"gunShotConfig" : {
+					//General
+					"aimAtCursor" : false,
+					"energyUsage" : 10,
+					"fireTime" : 0.15, 	
+					"fireSound" : "gunfire",
+				
+					//Recoil
+					//"recoilKnockbackVelocity" : 3,
+					//"crouchStopsRecoil" : true,
+					//"crouchRecoilKnockbackVelocity" : 1,
+					
+					//Projectile
+					"projectile" : "sgminishot",
+					"projectileCount" : 1,
+					"projectileDamage" : 4,
+					"projectileParameters" : {
+						"knockback" : 10,
+						"speed" : 250
+					},
+					"projectileInaccuracy" : 0.01,
+					"projectileAimAngleOffset" : 0,
+          "projectileFirePoint" : [2.375, 0.375]
+				}
+      },
+
+      "fire5" : {
+        "duration" : 1,
+        "armRotation" : 5,
+        "weaponRotation" : 15,
+
+        "endWeaponRotation" : 0,
+        "endArmRotation" : 0,
+        "endWeaponOffset" : [2.0, -2],
+        "twoHanded" : false,
+        "weaponOffset" : [2.0, -2],
+
+        "allowRotate" : true,
+        "allowFlip" : true,
+
+				//If this exists it will try to shoot based on the variables within
+				"gunShotConfig" : {
+					//General
+					"aimAtCursor" : false,
+					"energyUsage" : 3,
+					"fireSound" : "gunfire2",
+				
+					//Recoil
+					"recoilKnockbackVelocity" : 15,
+					"crouchStopsRecoil" : true,
+					"crouchRecoilKnockbackVelocity" : 1,
+					
+					//Projectile
+					"projectile" : "sgsupercooled",
+					"projectileCount" : 4,
+					"projectileDamage" : 5,
+					"projectileParameters" : {
+						"knockback" : 10
+					},
+					"projectileInaccuracy" : 0.1,
+					"projectileAimAngleOffset" : 0,
+          "projectileFirePoint" : [2.375, 0.375]
+				}
+      }
+
+	 }
+	},
+
+  "builder" : "/items/buildscripts/buildweapon.lua",
+  "upgradeParameters" : {
+    "shortdescription" : "Hammer Hand Cannon ^yellow;^reset;"
+  }
+}
