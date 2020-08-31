@@ -5,7 +5,7 @@
   "maxStack" : 1,
   "rarity" : "Essential",
   "description" : "Fires high impact two shot bursts, before unleashing its coolant in an icy blast.",
-  "shortdescription" : "orange;Hammer Hand Cannon",
+  "shortdescription" : "^orange;Hammer Hand Cannon",
   "level" : 10,
   "tooltipKind" : "base",
   "category" : "sgcombopistol",

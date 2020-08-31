@@ -43,7 +43,7 @@
         "projectileParameters" : {},
         "projectileCount" : 1,
         "inaccuracy" : 0.02,
-        "baseDamage" : 1.2,
+        "baseDamage" : 1,
         "fireType" : "burst",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
         "burstTime" : 0.05,		//delay between shots in the burst
         "burstCount" : 10,		//amount of bullets to fire in the burst, must be a integer
@@ -62,7 +62,7 @@
         "projectileParameters" : {},
         "projectileCount" : 1,
         "inaccuracy" : 0.04,
-        "baseDamage" : 1.2,
+        "baseDamage" : 1,
         "fireType" : "burst",	//options are burst and single - burst fires depending on burstCount and burstTime, while single lacks those
         "burstTime" : 0.025,		//delay between shots in the burst
         "burstCount" : 25,		//amount of bullets to fire in the burst, must be a integer
