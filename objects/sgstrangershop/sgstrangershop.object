@@ -1,0 +1,69 @@
+{
+  "objectName" : "sgstrangershop",
+  "colonyTags" : ["shellguard","commerce"],
+  "rarity" : "Common",
+  "category" : "Shop",
+  "description" : "What a strange fellow.",
+  "shortdescription" : "Stranger",
+  "race" : "generic",
+  "price" : 500,
+  "printable" : false,
+  "lightColor" : [46, 66, 77],
+  "interactAction" : "OpenMerchantInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/merchant.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "Stranger",
+        "subtitle" : "^#b9b5b2;What a strange fellow."
+      }
+    },
+    "buyFactor" : 1.0,
+    "sellFactor" : 0.2,
+    "items" : [
+	  { "item" : "sgstrangerhelmet1" },
+	  { "item" : "sgstrangerhelmet2" },
+	  { "item" : "sgstrangerhelmet3" },
+	  
+	  { "item" : "sgwayfarerhelmet1" },
+	  { "item" : "sgwayfarerhelmet2" },
+	  { "item" : "sgwayfarerhelmet3" },
+	  
+	  { "item" : "sgguardianhelmet1" },
+	  { "item" : "sgguardianhelmet2" },
+	  { "item" : "sgguardianhelmet3" },
+	  
+	  { "item" : "sgsentryhelmet1" },
+	  { "item" : "sgsentryhelmet2" },
+	  { "item" : "sgsentryhelmet3" },
+	  
+	  { "item" : "sgspirehelmet1" }
+    ]
+  },
+
+  "apexDescription" : "What a strange fellow.",
+  "avianDescription" : "What a strange fellow.",
+  "floranDescription" : "What a sssssstrange fellow.",
+  "glitchDescription" : "Bemused. What a strange fellow.",
+  "humanDescription" : "What a strange fellow.",
+  "hylotlDescription" : "What a strange fellow.",
+  "novakidDescription" : "What a strange fellow.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "sgdonatorshop.png:<color>.<frame>", "fullbright" : true }, { "image" : "sgdonatorshoplit.png:<color>.<frame>" } ],
+      "direction" : "left",
+
+      "lightPosition" : [-1, 2],
+
+      "imagePosition" : [-16, 0],
+      "frames" : 12,
+      "animationCycle" : 2.2,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  "soundEffect" : "/sfx/objects/mechcrafting_loop.ogg"
+}

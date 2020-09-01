@@ -16,7 +16,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":51,
+ "tilecount":52,
  "tiledversion":"1.3.1",
  "tileheight":400,
  "tileproperties":
@@ -489,6 +489,16 @@
          "imagePositionX":"-32",
          "imagePositionY":"0",
          "object":"sgcrabmechcraftingtablemission",
+         "tilesetDirection":"right"
+        },
+     "51":
+        {
+         "\/\/description":"sgstrangershop",
+         "\/\/name":"sgstrangershop",
+         "\/\/shortdescription":"crafting table",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"sgstrangershop",
          "tilesetDirection":"right"
         },
      "6":
@@ -1004,6 +1014,16 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "51":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "6":
         {
          "\/\/description":"string",
@@ -1328,6 +1348,12 @@
          "image":"..\/..\/objects\/scripted\/sgspidermechstationmission\/tiledicon.png",
          "imageheight":48,
          "imagewidth":64
+        },
+     "51":
+        {
+         "image":"..\/..\/objects\/sgstrangershop\/icon.png",
+         "imageheight":43,
+         "imagewidth":25
         },
      "6":
         {
