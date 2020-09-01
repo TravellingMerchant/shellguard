@@ -1,0 +1,202 @@
+{
+	"animatedParts" : {
+		"stateTypes" : {
+			"movement" : {
+				"default" : "open",
+				"states" : {
+					"warpInPart1" : {
+						"frames" : 1,	
+						"cycle" : 0.33,
+						"mode" : "transition",
+						"transition" : "opening"
+					},
+					"closing" : {
+						"frames" : 3,
+						"cycle" : 0.33,
+						"mode" : "transition",
+						"transition" : "idle"
+					},
+					"idle" : {},
+					"opening" : {
+						"frames" : 3,
+						"cycle" : 0.33,
+						"mode" : "transition",
+						"transition" : "open"
+					},
+					"open" : {},
+					"warpOutPart1" : {
+						"frames" : 1,
+						"cycle" : 0.33,
+						"mode" : "transition",
+						"transition" : "invisible"
+					},
+					"invisible" : {}
+				}
+			},
+			"onfire" : {
+				"default" : "off",
+				"states" : {
+					"off" : {},
+					"on" : {
+						"frames" : 6,
+						"cycle" : 0.5,
+						"mode" : "loop"
+					}
+				}
+			}
+		},
+
+		"parts" : {
+			"background" : {
+				"properties" : {
+					"centered" : true
+				}
+			},
+			"warp" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 10,
+					"fullbright" : true,
+					"offset" : [-0.125,0.5625],
+					"transformationGroups" : ["flip", "rotation"]
+				},
+				"partStates" : {
+					"movement" : {
+						"warpInPart1" : {
+							"properties" : {
+								"image" : "wfcrabassetmissing.png"
+							}
+						},
+						"idle" : {
+							"properties" : {}
+						},
+						"warpOutPart1" : {
+							"properties" : {
+								"image" : "wfcrabassetmissing.png"
+							}
+						},
+						"invisible" : {
+							"properties" : {}
+						}
+					}
+				}
+			},
+			"fire" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 2,
+					"fullbright" : true,
+					"transformationGroups" : ["flip", "rotation"]
+				}
+			}
+		}
+	},
+		
+		"globalTagDefaults" : {
+			"paletteSwaps" : "",
+			"globalDirectives" : ""
+		},
+
+	"transformationGroups" : {
+		"rotation" : {
+			"interpolated" : true
+		},
+		"flip" : {}
+	},
+
+	"particleEmitters" : {
+		"smoke" : {
+			"transformationGroups" : ["flip", "rotation"],
+			"emissionRate" : 0.0,
+			"offsetRegion" : [0, -1, 8, 2],
+			"particles" : [ { "particle" : "burningvehiclesmokefront"} ]
+		},
+		"fire" : {
+			"transformationGroups" : ["flip", "rotation"],
+			"emissionRate" : 0.0,
+			"offsetRegion" : [0, -2, 8, 2],
+			"particles" : [
+				{ "particle" : "burningdust"},
+				{ "particle" : "campfireflames"},
+				{ "particle" : "fireshard"},
+				{ "particle" : "burningvehiclesmokeback"}
+			]
+		},
+		"damageIntermittent" : {
+			"transformationGroups" : ["flip", "rotation"],
+			"emissionRate" : 0.0,
+			"burstCount"	: 5,
+			"offsetRegion" : [0, -1.5, 7, 1.5],
+			"particles" : [
+				{ "particle" : "burningvehiclesmokefront"},
+				{ "particle" : "fireshard"}
+			]
+		},
+		"damageShards" : {
+        "transformationGroups" : ["flip", "rotation"],
+        "emissionRate" : 0.0,
+        "burstCount"  : 50,
+        "offsetRegion" : [0, -1.5, 7, 1.5],
+        "particles" : [{ "particle" : "fireshard"}]
+      },
+
+      "wreckage" : {
+        "transformationGroups" : ["flip", "rotation"],
+        "active" : false,
+        "emissionRate" : 0.0,
+        "particles" : [
+                       { "particle" : "sggunshipwreckage1"},
+                       { "particle" : "sggunshipwreckage2"},
+                       { "particle" : "sggunshipwreckage3"},
+                       { "particle" : "sggunshipwreckage4"},
+                       { "particle" : "sggunshipwreckage5"}]
+      }
+	},
+
+  "lights" : {},
+
+	"sounds" : {
+	"jump" : [
+		"/sfx/crabmech/jumps/sgspiderjump.ogg"
+	],
+	"jumpCharge" : [
+		"/sfx/crabmech/jumps/sgspiderjumpcharge.ogg"
+	],
+	"jumpCharged" : [
+		"/sfx/crabmech/jumps/sgspiderjumpcharged.ogg"
+	],
+	"bombbay" : [
+		"/sfx/gun/flamethrower_start.ogg"
+	],
+		"collisionNotification" : [
+			"/sfx/tech/hoverbike_bump1.ogg",
+			"/sfx/tech/hoverbike_bump2.ogg",
+			"/sfx/tech/hoverbike_bump3.ogg"
+		],
+		"collisionDamage" : [ "/sfx/melee/bite_robotic1.ogg" ],
+		"changeDamageState" : [
+			"/sfx/gun/grenadeblast_small_fire1.ogg",
+			"/sfx/gun/grenadeblast_small_fire2.ogg",
+			"/sfx/gun/grenadeblast_small_fire3.ogg"
+		],
+
+		"explode" : [
+			"/sfx/gun/grenadeblast_small_fire1.ogg",
+			"/sfx/gun/grenadeblast_small_fire2.ogg",
+			"/sfx/gun/grenadeblast_small_fire3.ogg"
+		],
+
+		"engineStart" : [ "/sfx/tools/teleport_up.ogg" ],
+		"engineLoop" : [ "/sfx/vehicles/gunship engine.ogg" ],
+		"engineStartDamaged" : [ "/sfx/tools/teleport_up.ogg" ],
+		"engineLoopDamaged" : [ "/sfx/vehicles/gunship enginealarm.ogg" ],
+		"damageIntermittent" : [
+			"/sfx/gun/grenadeblast_small_fire1.ogg",
+			"/sfx/gun/grenadeblast_small_fire2.ogg",
+			"/sfx/gun/grenadeblast_small_fire3.ogg"
+		],
+
+		"returnvehicle" : [ "/sfx/tech/vehicle_disappear1.ogg" ]
+
+	}
+}

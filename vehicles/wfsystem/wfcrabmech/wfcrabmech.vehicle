@@ -1,0 +1,142 @@
+{
+  "name" : "wfcrabmech",
+  "script" : "/vehicles/wfsystem/wfcrabmech/wfcrabmech.lua",
+  "boundBox" : [-10, -3, 10, 3],
+  "slaveControlTimeout" : 2.0,
+  "slaveControlHeartbeat" : 1.0,
+  "canBeHit" : true,
+  "animation" : "wfcrabmech.animation",
+
+  "loungePositions" : {
+    "drivingSeat" : {
+      "part" : "foreground",
+      "partAnchor" : "drivingSeatPosition",
+      "orientation" : "sit",
+      "statusEffects" : ["maxprotection"],
+      "emote" : "neutral",
+      "dance" : "typing",
+      "cameraFocus" : true,
+      "directives" : "?addmask=/vehicles/gunship/sgbasicgunshipplayermask.png"
+    }
+  },
+
+  "warpInDelay" : 1.0,
+
+  "levelApproachFactor" : 0,
+  "angleApproachFactor" : 0,
+  "constantAngleCheck" : true,
+  "maxGroundSearchDistance" : 5,
+  "maxAngle" : 30,
+  "velocityRotation" : true,
+  "velocityRotationApproach" : 0.005,
+  "hoverTargetDistance" : 4,
+  "hoverVelocityFactor" : 0,
+  "hoverControlForce" : 100,
+  "targetHorizontalVelocity" : 40,
+  "horizontalControlForce" : 120,
+  "targetUpwardVelocity" : 40,
+  "upwardControlForce" : 70,
+  "targetDownwardVelocity" : -40,
+  "downwardControlForce" : 120,
+  "hoverToggle" : true,
+  "hoverToggleControlForce" : 60,
+  "spinFriction" : 0.1,
+	"mainStates" : {"opening":true,"closing":true},
+  "canJump" : true,
+
+  "nearGroundDistance" : 6,
+  "jumpVelocity" : 40,
+  "jumpTimeout" : 0.25,
+
+  //Health and damage
+  "protection" : 25,
+  "maxHealth" : 6500,
+
+  "damageStateNames" : ["undamaged"],
+
+  "lightsInDamageState" : [[]],
+
+  "damageStatePassengerDances" : ["","","",""],
+
+  "damageStateDriverEmotes" : ["neutral"],
+  "damageStatePassengerEmotes" : ["neutral"],
+
+
+
+  "damageTakenEmote" : "oooh",
+  "damageEmoteTime" : 2.0,
+
+  "minNotificationCollisionAccel" : 20,
+  "minDamageCollisionAccel" : 60,
+  "terrainCollisionDamage" : 100,
+
+
+  //Damage visual effects
+  "smokeParticleHealthThreshold" : 0.5,
+  "smokeRateAtZeroHealth" : 500,
+
+  "fireParticleHealthThreshold" : 0.25,
+  "fireRateAtZeroHealth" : 120,
+
+  "onFireHealthThreshold" : 0.125,
+  "damagePerSecondWhenOnFire" : 1.0,
+  "explosionConfig" : "/projectiles/explosions/regularexplosion2/regularexplosionknockback.config",
+  "explosionDamage" : 300,
+
+
+
+  //Sound effects
+  "engineDamageSoundThreshold" : 0.40,
+
+  "intermittentDamageSoundThreshold" : 0.33,
+  "maxDamageSoundInterval" : 10,
+  "minDamageSoundInterval" : 1,
+
+  "engineIdlePitch" : 0.75,
+  "engineRevPitch" : 1.5,
+  "engineIdleVolume" : 1.0,
+  "engineRevVolume" : 1.5,
+
+  "materialKind" : "robotic",
+  "terrainCollisionDamageSourceKind" : "falling",
+  "accelerationTrackingCount" : 2,
+
+  "backSpringPositions" : [
+      [-3.0, -2.0],
+      [-4.0, -2.0],
+      [-5.0, -2.0],
+      [-6.0, -2.0]
+  ],
+
+  "frontSpringPositions" : [
+      [3.0, -2.0],
+      [4.0, -2.0],
+      [5.0, -2.0],
+      [6.0, -2.0]
+  ],
+
+  "bodySpringPositions" : [
+      [-4.0, -3.0],
+      [-2.0, -3.0],
+      [0.0, -3.0],
+      [2.0, -3.0],
+      [4.0, -3.0]
+  ],
+
+  "physicsCollisions" : {
+    "platform1" : {
+      "collision" : [ [-4.5, -3.5], [4.5, -3.5], [4.5, -4.0], [-4.5, -4.0] ],
+	  "collisionKind" : "platform",
+      "attachToPart" : "foreground"
+    }
+  },
+
+  "movementSettings" : {
+	"collisionPoly" : [[-2,2],[2,2],[3,-1],[4,-4],[2.75,-5.5],[-2.75,-5.5],[-4,-4],[-3,-1]],
+    "mass" : 1,
+    "airFriction" : 0,
+	"liquidFriction" : 2.0,
+    "ignorePlatformCollision" : true,
+    "gravityEnabled" : false
+  }
+}

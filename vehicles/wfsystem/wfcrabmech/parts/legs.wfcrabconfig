@@ -1,0 +1,1495 @@
+{
+
+//------- construction/destruction --------------
+
+	"sgconstructionlegs" : {
+		"description" : {
+			"name" : "Destruction Legs",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Slow and steady crushes the opposition."
+		},
+		"damageSources" : {
+			"sgconstructionlegright" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontRight",
+
+				"poly" : [[8, 2], [8, 0], [-4, 0], [-4, 2] ],
+				"damage" : 150,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.2,
+				"damageRepeatGroup" : "sgconstructionlegright",
+				"knockback" : 120,
+
+				"rayCheck" : true
+			},
+			"sgconstructionlegleft" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontLeft",
+
+				"poly" : [[8, -2], [8, 0], [-4, 0], [-4, -2] ],
+				"damage" : 150,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.2,
+				"damageRepeatGroup" : "sgconstructionlegleft",
+				"knockback" : 120,
+
+				"rayCheck" : true
+			}
+		},
+		"meleeScript" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionlegsmelee.lua",
+		"meleeTimer" : 0,
+		"maxMeleeTimer" : 5,
+		"meleeValidLegs" : ["rF","lF"],
+		"meleeHorizontalForceMultiplier" : 0.2,
+		"protection" : 40,
+		"baseHorizForce" : 13,
+		
+        "powerJumpForce" : [0,6.5],
+        "standardJumpForce" : [0,3.5],
+		
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"lowerLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionleglowerfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFL"]
+						}
+					},
+					"upperLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionlegupperfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFU"]
+						}
+					},
+					"upperLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -5,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionlegupperback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBU"]
+						}
+					},
+					"lowerLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -6,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionleglowerback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBL"]
+						}
+					},
+					"lowerLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 8,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionleglowerfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFL"]
+						}
+					},
+					"upperLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 7,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionlegupperfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFU"]
+						}
+					},
+					"upperLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionlegupperback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBU"]
+						}
+					},
+					"lowerLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionleglowerback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBL"]
+						}
+					}
+				}
+			},
+			"transformationGroups" : {						
+				"rFU" : {},
+				"rFL" : {},
+				"rBU" : {},
+				"rBL" : {},
+				"lFU" : {},
+				"lFL" : {},
+				"lBU" : {},
+				"lBL" : {}
+			}
+		}
+	},
+
+//------- Leaper --------------
+
+	"sgleaperlegs" : {
+		"description" : {
+			"name" : "Leaper Legs",
+			"mod" : "Shellguard",
+			"longDescriptor" : "High jump legs."
+		},
+		
+		"damageSources" : {
+			"sgconstructionlegright" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontRight",
+
+				"poly" : [[8, 2], [8, 0], [-4, 0], [-4, 2] ],
+				"damage" : 110,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.2,
+				"damageRepeatGroup" : "sgconstructionlegright",
+				"knockback" : 50,
+
+				"rayCheck" : true
+			},
+			"sgconstructionlegleft" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontLeft",
+
+				"poly" : [[8, -2], [8, 0], [-4, 0], [-4, -2] ],
+				"damage" : 110,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.2,
+				"damageRepeatGroup" : "sgconstructionlegleft",
+				"knockback" : 50,
+
+				"rayCheck" : true
+			}
+		},
+		"meleeScript" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionlegsmelee.lua",
+		"meleeTimer" : 0,
+		"maxMeleeTimer" : 5,
+		"meleeValidLegs" : ["rF","lF"],
+		"meleeHorizontalForceMultiplier" : 0.3,
+		
+		"protection" : 50,
+		"baseHorizForce" : 12,
+		
+        "powerJumpForce" : [0,8.5],
+        "standardJumpForce" : [0,4.5],
+
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"lowerLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgleaperleglowerfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFL"]
+						}
+					},
+					"upperLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgleaperlegupperfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFU"]
+						}
+					},
+					"upperLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -5,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgleaperlegupperback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBU"]
+						}
+					},
+					"lowerLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -6,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgleaperleglowerback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBL"]
+						}
+					},
+					"lowerLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 8,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgleaperleglowerfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFL"]
+						}
+					},
+					"upperLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 7,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgleaperlegupperfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFU"]
+						}
+					},
+					"upperLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgleaperlegupperback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBU"]
+						}
+					},
+					"lowerLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgleaperleglowerback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBL"]
+						}
+					}
+				}
+			},
+			"transformationGroups" : {						
+				"rFU" : {},
+				"rFL" : {},
+				"rBU" : {},
+				"rBL" : {},
+				"lFU" : {},
+				"lFL" : {},
+				"lBU" : {},
+				"lBL" : {}
+			}
+		}
+	},
+
+//------- Compressed --------------
+
+	"sgcompressedleg" : {
+		"description" : {
+			"name" : "Compressed Legs",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Massive armoured legs designed for war."
+		},
+
+		"damageSources" : {
+			"sgconstructionlegright" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontRight",
+
+				"poly" : [[8, 2], [8, 0], [-4, 0], [-4, 2] ],
+				"damage" : 200,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.1,
+				"damageRepeatGroup" : "sgconstructionlegright",
+				"knockback" : 70,
+
+				"rayCheck" : true
+			},
+			"sgconstructionlegleft" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontLeft",
+
+				"poly" : [[8, -2], [8, 0], [-4, 0], [-4, -2] ],
+				"damage" : 200,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.1,
+				"damageRepeatGroup" : "sgconstructionlegleft",
+				"knockback" : 70,
+
+				"rayCheck" : true
+			}
+		},
+		"meleeScript" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionlegsmelee.lua",
+		"meleeTimer" : 0,
+		"maxMeleeTimer" : 5,
+		"meleeValidLegs" : ["rF","lF"],
+		"meleeHorizontalForceMultiplier" : 0.3,
+		
+		"protection" : 35,
+		"baseHorizForce" : 8,
+
+		"lowerLegLength" : 9.75,
+
+        "powerJumpForce" : [0,5.5],
+        "standardJumpForce" : [0,4],	
+
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"lowerLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgcompressedlowerlegfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFL"]
+						}
+					},
+					"upperLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFU"]
+						}
+					},
+					"upperLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -5,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBU"]
+						}
+					},
+					"lowerLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -6,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgcompressedlowerlegback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBL"]
+						}
+					},
+					"lowerLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 8,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgcompressedlowerlegfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFL"]
+						}
+					},
+					"upperLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 7,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFU"]
+						}
+					},
+					"upperLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBU"]
+						}
+					},
+					"lowerLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgcompressedlowerlegback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBL"]
+						}
+					}
+				}
+			},
+			"transformationGroups" : {						
+				"rFU" : {},
+				"rFL" : {},
+				"rBU" : {},
+				"rBL" : {},
+				"lFU" : {},
+				"lFL" : {},
+				"lBU" : {},
+				"lBL" : {}
+			}
+		}
+	},
+
+//------- Beaked --------------
+
+	"sgbeakedleg" : {
+		"description" : {
+			"name" : "Beaked Legs",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Massive armoured legs designed construction."
+		},
+
+		"damageSources" : {
+			"sgconstructionlegright" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontRight",
+
+				"poly" : [[8, 2], [8, 0], [-4, 0], [-4, 2] ],
+				"damage" : 200,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.1,
+				"damageRepeatGroup" : "sgconstructionlegright",
+				"knockback" : 70,
+
+				"rayCheck" : true
+			},
+			"sgconstructionlegleft" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontLeft",
+
+				"poly" : [[8, -2], [8, 0], [-4, 0], [-4, -2] ],
+				"damage" : 200,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.1,
+				"damageRepeatGroup" : "sgconstructionlegleft",
+				"knockback" : 70,
+
+				"rayCheck" : true
+			}
+		},
+		"meleeScript" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionlegsmelee.lua",
+		"meleeTimer" : 0,
+		"maxMeleeTimer" : 5,
+		"meleeValidLegs" : ["rF","lF"],
+		"meleeHorizontalForceMultiplier" : 0.3,
+		
+		"protection" : 40,
+		"baseHorizForce" : 10,
+
+		"lowerLegLength" : 9.75,
+
+        "powerJumpForce" : [0,5],
+        "standardJumpForce" : [0,3.5],	
+
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"lowerLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgbeakedlowerlegfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFL"]
+						}
+					},
+					"upperLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFU"]
+						}
+					},
+					"upperLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -5,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBU"]
+						}
+					},
+					"lowerLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -6,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgbeakedlowerlegback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBL"]
+						}
+					},
+					"lowerLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 8,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgbeakedlowerlegfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFL"]
+						}
+					},
+					"upperLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 7,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFU"]
+						}
+					},
+					"upperLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBU"]
+						}
+					},
+					"lowerLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgbeakedlowerlegback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBL"]
+						}
+					}
+				}
+			},
+			"transformationGroups" : {						
+				"rFU" : {},
+				"rFL" : {},
+				"rBU" : {},
+				"rBL" : {},
+				"lFU" : {},
+				"lFL" : {},
+				"lBU" : {},
+				"lBL" : {}
+			}
+		}
+	},
+
+//------- Heavy Pincer --------------
+
+	"sgheavypincer" : {
+		"description" : {
+			"name" : "Heavy Pincer Legs",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Massive armoured legs designed for war."
+		},
+
+		"damageSources" : {
+			"sgconstructionlegright" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontRight",
+
+				"poly" : [[8, 2], [8, 0], [-4, 0], [-4, 2] ],
+				"damage" : 200,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.1,
+				"damageRepeatGroup" : "sgconstructionlegright",
+				"knockback" : 70,
+
+				"rayCheck" : true
+			},
+			"sgconstructionlegleft" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontLeft",
+
+				"poly" : [[8, -2], [8, 0], [-4, 0], [-4, -2] ],
+				"damage" : 200,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.1,
+				"damageRepeatGroup" : "sgconstructionlegleft",
+				"knockback" : 70,
+
+				"rayCheck" : true
+			}
+		},
+		"meleeScript" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionlegsmelee.lua",
+		"meleeTimer" : 0,
+		"maxMeleeTimer" : 5,
+		"meleeValidLegs" : ["rF","lF"],
+		"meleeHorizontalForceMultiplier" : 0.3,
+		
+		"protection" : 50,
+		"baseHorizForce" : 9,
+
+		"lowerLegLength" : 9.75,
+
+        "powerJumpForce" : [0,5],
+        "standardJumpForce" : [0,3.5],	
+
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"lowerLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgheavypincerlowerlegfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFL"]
+						}
+					},
+					"upperLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFU"]
+						}
+					},
+					"upperLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -5,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBU"]
+						}
+					},
+					"lowerLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -6,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgheavypincerlowerlegback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBL"]
+						}
+					},
+					"lowerLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 8,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgheavypincerlowerlegfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFL"]
+						}
+					},
+					"upperLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 7,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFU"]
+						}
+					},
+					"upperLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBU"]
+						}
+					},
+					"lowerLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgheavypincerlowerlegback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBL"]
+						}
+					}
+				}
+			},
+			"transformationGroups" : {						
+				"rFU" : {},
+				"rFL" : {},
+				"rBU" : {},
+				"rBL" : {},
+				"lFU" : {},
+				"lFL" : {},
+				"lBU" : {},
+				"lBL" : {}
+			}
+		}
+	},
+
+//------- Goliath --------------
+
+	"sggoliathlegs" : {
+		"description" : {
+			"name" : "Goliath Legs",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Massive armoured legs designed for war."
+		},
+
+		"damageSources" : {
+			"sgconstructionlegright" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontRight",
+
+				"poly" : [[8, 2], [8, 0], [-4, 0], [-4, 2] ],
+				"damage" : 200,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.1,
+				"damageRepeatGroup" : "sgconstructionlegright",
+				"knockback" : 70,
+
+				"rayCheck" : true
+			},
+			"sgconstructionlegleft" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontLeft",
+
+				"poly" : [[8, -2], [8, 0], [-4, 0], [-4, -2] ],
+				"damage" : 200,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.1,
+				"damageRepeatGroup" : "sgconstructionlegleft",
+				"knockback" : 70,
+
+				"rayCheck" : true
+			}
+		},
+		"meleeScript" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionlegsmelee.lua",
+		"meleeTimer" : 0,
+		"maxMeleeTimer" : 5,
+		"meleeValidLegs" : ["rF","lF"],
+		"meleeHorizontalForceMultiplier" : 0.3,
+		
+		"protection" : 50,
+		"baseHorizForce" : 9,
+
+		"lowerLegLength" : 9.75,
+
+        "powerJumpForce" : [0,5],
+        "standardJumpForce" : [0,3.5],	
+
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"lowerLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathleglowerfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFL"]
+						}
+					},
+					"upperLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFU"]
+						}
+					},
+					"upperLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -5,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBU"]
+						}
+					},
+					"lowerLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -6,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathleglowerback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBL"]
+						}
+					},
+					"lowerLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 8,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathleglowerfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFL"]
+						}
+					},
+					"upperLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 7,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFU"]
+						}
+					},
+					"upperLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathlegupperback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBU"]
+						}
+					},
+					"lowerLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggoliathleglowerback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBL"]
+						}
+					}
+				}
+			},
+			"transformationGroups" : {						
+				"rFU" : {},
+				"rFL" : {},
+				"rBU" : {},
+				"rBL" : {},
+				"lFU" : {},
+				"lFL" : {},
+				"lBU" : {},
+				"lBL" : {}
+			}
+		}
+	},
+
+
+//------- grappler --------------
+
+	"sggrapplerlegs" : {
+		"description" : {
+			"name" : "Pincer Legs",
+			"mod" : "Shellguard",
+			"longDescriptor" : "These claw-like legs excel at staying grounded."
+		},
+		"baseHorizForce" : 14,
+
+
+		"damageSources" : {
+			"sgconstructionlegright" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontRight",
+
+				"poly" : [[8, 2], [8, 0], [-4, 0], [-4, 2] ],
+				"damage" : 110,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.2,
+				"damageRepeatGroup" : "sgconstructionlegright",
+				"knockback" : 50,
+
+				"rayCheck" : true
+			},
+			"sgconstructionlegleft" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontLeft",
+
+				"poly" : [[8, -2], [8, 0], [-4, 0], [-4, -2] ],
+				"damage" : 110,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.2,
+				"damageRepeatGroup" : "sgconstructionlegleft",
+				"knockback" : 50,
+
+				"rayCheck" : true
+			}
+		},
+		"meleeScript" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionlegsmelee.lua",
+		"meleeTimer" : 0,
+		"maxMeleeTimer" : 5,
+		"meleeValidLegs" : ["rF","lF"],
+		"meleeHorizontalForceMultiplier" : 0.3,
+
+        "powerJumpForce" : [0,6.5],
+        "standardJumpForce" : [0,3.5],
+
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"lowerLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggrapplerleglowerfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFL"]
+						}
+					},
+					"upperLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggrapplerlegupperfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFU"]
+						}
+					},
+					"upperLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -5,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggrapplerlegupperback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBU"]
+						}
+					},
+					"lowerLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -6,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggrapplerleglowerback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBL"]
+						}
+					},
+					"lowerLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 8,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggrapplerleglowerfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFL"]
+						}
+					},
+					"upperLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 7,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggrapplerlegupperfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFU"]
+						}
+					},
+					"upperLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggrapplerlegupperback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBU"]
+						}
+					},
+					"lowerLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggrapplerleglowerback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBL"]
+						}
+					}
+				}
+			},
+			"transformationGroups" : {						
+				"rFU" : {},
+				"rFL" : {},
+				"rBU" : {},
+				"rBL" : {},
+				"lFU" : {},
+				"lFL" : {},
+				"lBU" : {},
+				"lBL" : {}
+			}
+		}
+	},
+	
+//------- Rivet --------------
+
+	"sgrivetlegs" : {
+		"description" : {
+			"name" : "Rivet Legs",
+			"mod" : "Shellguard",
+			"longDescriptor" : "These claw-like legs excel at staying grounded."
+		},
+		"baseHorizForce" : 14,
+
+
+		"damageSources" : {
+			"sgconstructionlegright" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontRight",
+
+				"poly" : [[8, 2], [8, 0], [-4, 0], [-4, 2] ],
+				"damage" : 110,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.2,
+				"damageRepeatGroup" : "sgconstructionlegright",
+				"knockback" : 50,
+
+				"rayCheck" : true
+			},
+			"sgconstructionlegleft" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontLeft",
+
+				"poly" : [[8, -2], [8, 0], [-4, 0], [-4, -2] ],
+				"damage" : 110,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.2,
+				"damageRepeatGroup" : "sgconstructionlegleft",
+				"knockback" : 50,
+
+				"rayCheck" : true
+			}
+		},
+		"meleeScript" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionlegsmelee.lua",
+		"meleeTimer" : 0,
+		"maxMeleeTimer" : 5,
+		"meleeValidLegs" : ["rF","lF"],
+		"meleeHorizontalForceMultiplier" : 0.3,
+
+        "powerJumpForce" : [0,6.5],
+        "standardJumpForce" : [0,3.5],
+
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"lowerLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgrivetleglowerfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFL"]
+						}
+					},
+					"upperLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggrapplerlegupperfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFU"]
+						}
+					},
+					"upperLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -5,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggrapplerlegupperback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBU"]
+						}
+					},
+					"lowerLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -6,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgrivetleglowerback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBL"]
+						}
+					},
+					"lowerLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 8,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgrivetleglowerfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFL"]
+						}
+					},
+					"upperLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 7,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggrapplerlegupperfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFU"]
+						}
+					},
+					"upperLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggrapplerlegupperback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBU"]
+						}
+					},
+					"lowerLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgrivetleglowerback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBL"]
+						}
+					}
+				}
+			},
+			"transformationGroups" : {						
+				"rFU" : {},
+				"rFL" : {},
+				"rBU" : {},
+				"rBL" : {},
+				"lFU" : {},
+				"lFL" : {},
+				"lBU" : {},
+				"lBL" : {}
+			}
+		}
+	},
+
+//------- raider --------------
+
+	"sgraiderlegs" : {
+		"description" : {
+			"name" : "Raider Legs",
+			"mod" : "Shellguard",
+			"longDescriptor" : "The rapid quad impalers you never knew you needed."
+		},
+		"damageSources" : {
+			"sgraiderlegright" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontRight",
+
+				"poly" : [[6, 2], [6, 0], [-4, 0], [-4, 2]],
+				"damage" : 80,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.2,
+				"damageRepeatGroup" : "sgraiderlegright",
+				"knockback" : 80,
+
+				"rayCheck" : true
+			},
+			"sgraiderlegleft" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontLeft",
+
+				"poly" : [[6, -2], [6, 0], [-4, 0], [-4, -2]],
+				"damage" : 80,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.2,
+				"damageRepeatGroup" : "sgraiderlegleft",
+				"knockback" : 80,
+
+				"rayCheck" : true
+			}
+		},
+		"meleeScript" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgraiderlegsmelee.lua",
+		"meleeTimer" : 0,
+		"maxMeleeTimer" : 5,
+		"meleeDashTime" : 0.75,
+		"meleeHorizontalForceMultiplier" : 3.5,
+		"baseHorizForce" : 20,
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"lowerLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgraiderleglowerfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFL"]
+						}
+					},
+					"upperLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgraiderlegupperfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFU"]
+						}
+					},
+					"upperLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -5,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgraiderlegupperback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBU"]
+						}
+					},
+					"lowerLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -6,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggrapplerleglowerback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBL"]
+						}
+					},
+					"lowerLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 8,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgraiderleglowerfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFL"]
+						}
+					},
+					"upperLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 7,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgraiderlegupperfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFU"]
+						}
+					},
+					"upperLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgraiderlegupperback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBU"]
+						}
+					},
+					"lowerLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sggrapplerleglowerback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBL"]
+						}
+					}
+				}
+			},
+			"transformationGroups" : {						
+				"rFU" : {},
+				"rFL" : {},
+				"rBU" : {},
+				"rBL" : {},
+				"lFU" : {},
+				"lFL" : {},
+				"lBU" : {},
+				"lBL" : {}
+			}
+		}
+	},
+
+//------- Wheeled Legs --------------
+
+	"sgwheellegs" : {
+		"description" : {
+			"name" : "Wheeled Legs",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Fast and light wheeled legs allow for absurdly swift movement but struggle to stably jump."
+		},
+		"meleeScript" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgwheellegsmelee.lua",
+		"meleeTimer" : 0,
+		"maxMeleeTimer" : 4,
+		"meleeDashTime" : 0.25,
+		"meleeHorizontalForceMultiplier" : 10,
+		"baseHorizForce" : 25,
+
+        "powerJumpForce" : [0,4.5],
+        "standardJumpForce" : [0,2.5],		
+
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"lowerLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgwheelleglowerfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFL"]
+						}
+					},
+					"upperLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgwheellegupperfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFU"]
+						}
+					},
+					"upperLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -5,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgwheellegupperback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBU"]
+						}
+					},
+					"lowerLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -6,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgwheelleglowerback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBL"]
+						}
+					},
+					"lowerLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 8,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgwheelleglowerfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFL"]
+						}
+					},
+					"upperLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 7,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgwheellegupperfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFU"]
+						}
+					},
+					"upperLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgwheellegupperback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBU"]
+						}
+					},
+					"lowerLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgwheelleglowerback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBL"]
+						}
+					}
+				}
+			},
+			"transformationGroups" : {						
+				"rFU" : {},
+				"rFL" : {},
+				"rBU" : {},
+				"rBL" : {},
+				"lFU" : {},
+				"lFL" : {},
+				"lBU" : {},
+				"lBL" : {}
+			}
+		}
+	},
+
+//------- piledriver --------------
+
+	"wfpiledriverlegs" : {
+		"description" : {
+			"name" : "Piledriver Legs",
+			"mod" : "WFCORE",
+			"longDescriptor" : "Pound the ground."
+		},
+		
+		"damageSources" : {
+			"sgconstructionlegright" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontRight",
+
+				"poly" : [[8, 2], [8, 0], [-4, 0], [-4, 2] ],
+				"damage" : 140,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.2,
+				"damageRepeatGroup" : "sgconstructionlegright",
+				"knockback" : 60,
+
+				"rayCheck" : true
+			},
+			"sgconstructionlegleft" : {
+				"enabled" : false,
+				"attachToPart" : "lowerLegFrontLeft",
+
+				"poly" : [[8, -2], [8, 0], [-4, 0], [-4, -2] ],
+				"damage" : 140,
+				"damageSourceKind" : "hammer",
+				"damageRepeatTimeout" : 0.2,
+				"damageRepeatGroup" : "sgconstructionlegleft",
+				"knockback" : 60,
+
+				"rayCheck" : true
+			}
+		},
+		"meleeScript" : "/vehicles/wfsystem/wfcrabmech/parts/legs/sgconstructionlegsmelee.lua",
+		"meleeTimer" : 0,
+		"maxMeleeTimer" : 5,
+		"meleeValidLegs" : ["rF","lF"],
+		"meleeHorizontalForceMultiplier" : 0.2,
+
+		"baseHorizForce" : 12,
+		"lowerLegLength" : 10,
+		"upperLegLength" : 8.25,
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"lowerLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/wfpiledriverleglowerfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFL"]
+						}
+					},
+					"upperLegFrontRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/wfpiledriverlegupperfront.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rFU"]
+						}
+					},
+					"upperLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -5,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/wfpiledriverlegupperback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBU"]
+						}
+					},
+					"lowerLegBackRight" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -6,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/wfpiledriverleglowerback.png<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["rBL"]
+						}
+					},
+					"lowerLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 8,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/wfpiledriverleglowerfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFL"]
+						}
+					},
+					"upperLegFrontLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 7,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/wfpiledriverlegupperfront.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lFU"]
+						}
+					},
+					"upperLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -9,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/wfpiledriverlegupperback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBU"]
+						}
+					},
+					"lowerLegBackLeft" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -10,
+							"offset" : [0,0],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/legs/wfpiledriverleglowerback.png?flipy<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["lBL"]
+						}
+					}
+				}
+			},
+			"transformationGroups" : {						
+				"rFU" : {},
+				"rFL" : {},
+				"rBU" : {},
+				"rBL" : {},
+				"lFU" : {},
+				"lFL" : {},
+				"lBU" : {},
+				"lBL" : {}
+			}
+		}
+	}
+}

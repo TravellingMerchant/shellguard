@@ -1,0 +1,130 @@
+{
+	"projectileName" : "sgspidersolidfuelbooster",
+	"image" : "/assetmissing.png",
+	"animationCycle" : 1,
+	"frameNumber" : 1,
+	"speed" : 10,
+	"damagePoly" : [ [-36, 0], [-24, -24], [0, -36], [24, -24], [36, 0], [24, 24], [0, 36], [-24, 24] ],
+	"animationLoops" : false,
+	"piercing" : true,
+	"flippable" : true,
+	"damageKind" : "fire",
+	"statusEffects" : [
+		"burning"
+	],
+	"timeToLive" : 0,
+	"lightColor" : [220, 95, 0],
+	"actionOnReap" : [
+		{
+			"action" : "loop",
+			"count" : 9,
+			"body" : [
+				{
+					"action" : "projectile",
+					"type" : "sgcrabshrapnelblastsmall",
+					"fuzzAngle" : 80,
+					"inheritDamageFactor" : 0
+				}
+			]
+		},
+		{
+			"action" : "loop",
+			"count" : 13,
+			"body" : [
+				{
+					"action" : "option",
+					"options" : [
+						{
+							"action" : "particle",
+							"specification" : {
+								"type" : "animated",
+								"animation" : "/animations/smoke/smoke.animation",
+								"approach" : [0.5, 0.5],
+								"initialVelocity" : [0, -15],
+								"timeToLive" : 0.6,
+								"variance" : {
+									"position" : [2.5, 1.5],
+									"initialVelocity" : [10, 1],
+									"timeToLive" : 0.3,
+									"rotation" : 180
+								}
+							}
+						}
+					]
+				},
+				{
+					"action" : "spark"
+				}
+			]
+		},
+		{
+			"action" : "loop",
+			"count" : 13,
+			"body" : [
+				{
+					"action" : "option",
+					"options" : [
+						{
+							"action" : "particle",
+							"specification" : {
+								"type" : "animated",
+								"animation" : "/animations/mediumflame/mediumflame.animation",
+								"approach" : [0.5, 0.5],
+								"initialVelocity" : [0, -15],
+								"timeToLive" : 0.6,
+								"variance" : {
+									"position" : [2.5, 1.5],
+									"initialVelocity" : [10, 1],
+									"timeToLive" : 0.3,
+									"rotation" : 180
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"action" : "loop",
+			"count" : 13,
+			"body" : [
+				{
+					"action" : "option",
+					"options" : [
+						{
+							"action" : "particle",
+							"specification" : {
+								"type" : "animated",
+								"animation" : "/animations/smallflame/smallflame.animation",
+								"approach" : [0.5, 0.5],
+								"initialVelocity" : [0, -15],
+								"timeToLive" : 0.6,
+								"variance" : {
+									"position" : [2.5, 1.5],
+									"initialVelocity" : [10, 1],
+									"timeToLive" : 0.3,
+									"rotation" : 180
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"action" : "sound",
+			"options" : [ "/sfx/gun/grenadeblast1.ogg", "/sfx/gun/grenadeblast2.ogg", "/sfx/gun/grenadeblast3.ogg" ]
+		},
+		{
+			"action" : "light",
+			"color" : "orange"
+		},
+		{
+			"action" : "explosion",
+			"foregroundRadius" : 4,
+			"backgroundRadius" : 0,
+			"explosiveDamageAmount" : 0.5,
+			"delaySteps" : 2
+		}
+	]
+}

@@ -1,0 +1,37 @@
+{
+	"itemName" : "wfcrabdeployer",
+	"level" : 1,
+	"price" : 30000,
+	"rarity" : "Legendary",
+	"category" : "vehicleController",
+	"description" : "An uncalibrated vehicle deployer. Can be calibrated inside certain machines.",
+	"shortdescription" : "Uncalibrated Deployer",
+	"twoHanded" : true,
+	"maxStack" : 1,
+	"itemTags" : ["vehiclecontroller"],
+
+	"animation" : "wfcrabdeployer.animation",
+	"scripts" : [ "wfcrabdeployer.lua" ],
+	"animationScripts" : ["wfcrabcursor.lua"],
+	"filled" : true,
+	"tooltipKind" : "wfcrabdeployertooltip",
+	"largeImage" : "/interface/icons/sgcrabwarpicon.png",
+
+	"respawnTime" : 1.0,
+
+	"vehicleType" : "wfcrabmech",
+	"vehicleBoundingBox" : [-11, -4, 11, 4],
+	"vehicleImage" : "/interface/icons/sgcrabwarpicon.png",
+
+	"animationParts" : {
+		"casing" : "wfcrabdeployer.png"
+	},
+
+	"inventoryIcon" : "/vehicles/wfsystem/wfcrabmech/wfcrabdeployer.png:unconfigured",
+	"unconfiguredInventoryIcon" : "/vehicles/wfsystem/wfcrabmech/wfcrabdeployer.png:unconfigured",
+	"emptyInventoryIcon" : "/vehicles/wfsystem/wfcrabmech/wfcrabdeployer.png:empty",
+	"filledInventoryIcon" : "/vehicles/wfsystem/wfcrabmech/wfcrabdeployer.png:full"
+	
+	//"description" : "Stores a Customizable Robotic Assault Bastion.",
+	//"shortdescription" : "C.R.A.B. Deployer",
+}

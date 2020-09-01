@@ -1,0 +1,93 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "controller" : {
+        "default" : "full",
+        "states" : {
+          "empty" : {},
+          "full" : {},
+		  "unconfigured" : {}
+        }
+      }
+    },
+
+    "parts" : {
+      "casing" : {
+        "properties" : {
+          "centered" : true,
+          "offset" : [0.0, 0.0]
+        },
+
+        "partStates" : {
+          "controller" : {
+            "empty" : {
+              "properties" : {
+                "image" : "<partImage>:empty"
+              }
+            },
+            "full" : {
+              "properties" : {
+                "image" : "<partImage>:full"
+              }
+            },
+			"unconfigured" : {
+              "properties" : {
+                "image" : "<partImage>:unconfigured"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+
+	"transformationGroups" : {
+		"rotation" : {
+			"interpolated" : true
+		},
+		"flip" : {}
+	},
+
+	"particleEmitters" : {
+		"smoke" : {
+			"transformationGroups" : ["flip", "rotation"],
+			"emissionRate" : 0.0,
+			"offsetRegion" : [0, -1, 8, 2],
+			"particles" : [ { "particle" : "burningvehiclesmokefront"} ]
+		},
+		"fire" : {
+			"transformationGroups" : ["flip", "rotation"],
+			"emissionRate" : 0.0,
+			"offsetRegion" : [0, -2, 8, 2],
+			"particles" : [
+				{ "particle" : "burningdust"},
+				{ "particle" : "campfireflames"},
+				{ "particle" : "fireshard"},
+				{ "particle" : "burningvehiclesmokeback"}
+			]
+		},
+		"damageIntermittent" : {
+			"transformationGroups" : ["flip", "rotation"],
+			"emissionRate" : 0.0,
+			"burstCount"	: 5,
+			"offsetRegion" : [0, -1.5, 7, 1.5],
+			"particles" : [
+				{ "particle" : "burningvehiclesmokefront"},
+				{ "particle" : "fireshard"}
+			]
+		},
+		"damageShards" : {
+        "transformationGroups" : ["flip", "rotation"],
+        "emissionRate" : 0.0,
+        "burstCount"  : 50,
+        "offsetRegion" : [0, -1.5, 7, 1.5],
+        "particles" : [{ "particle" : "fireshard"}]
+      }
+	},
+
+  "sounds" : {
+    "placeOk" : ["/sfx/tech/vehicle_appear1.ogg"],
+    "placeBad" : ["/sfx/interface/clickon_error.ogg"]
+  }
+}

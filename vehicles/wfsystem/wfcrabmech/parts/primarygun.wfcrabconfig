@@ -1,0 +1,1611 @@
+{
+
+//------- Jet Engine --------------
+
+	"sgjetengine" : {
+		"description" : {
+			"name" : "Jet Engines",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Twin barreled autocannons for area denial."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"forwardDoubleCannonFront" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.05,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					},
+					"forwardDoubleCannonBack" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.05,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"forwardDoubleCannonBack" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -2,
+							"offset" : [7.125, -1.125],
+							"transformationGroups" : ["forwardDoubleCannonBack"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"forwardDoubleCannonBack" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgjetengine.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgjetengine.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"forwardDoubleCannonFront" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 11,
+							"offset" : [2.125, -1.125],
+							"transformationGroups" : ["forwardDoubleCannonFront"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"forwardDoubleCannonFront" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgjetengine.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgjetengine.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"transformationGroups" : {
+				"forwardDoubleCannonFront" : {},
+				"forwardDoubleCannonBack" : {}
+			},
+			"sounds" : {
+				"forwardDoubleCannons" : [
+					"/sfx/objects/flametrap_on.ogg"
+				]
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"PrimaryFire" : {
+					"forwardDoubleCannonFront" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"projectileType" : "flamethrower",
+						"slaves" : ["forwardDoubleCannonBack"],
+						"punishSlaves" : {"forwardDoubleCannonBack":0.025},
+						"projectileParams" : {
+						"power" : 0,
+						"speed" : -50
+						},
+						"inaccuracy" : 0.015,
+						"projectileCount" : 1,
+						"gunCenter" : [-2.375, -1],
+						"gunLength" : -2.75,
+						"fireTime" : 0.05,
+						"barrels" : [[0,-0.625],[0,0.375]],
+						"kickback" : [-2.5,1],
+						"playSounds" : ["forwardDoubleCannons"],
+						"setAnimationStates" : {"forwardDoubleCannonFront":["fire",true]}
+					},
+					"forwardDoubleCannonBack" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"slavedTo" : "forwardDoubleCannonFront",
+						"projectileType" : "",
+						"projectileParams" : {
+						"power" : 0,
+						"speed" : -50,
+						"renderLayer" : "BackgroundOverlay"
+						},
+						"inaccuracy" : 0.015,
+						"projectileCount" : 1,
+						"gunCenter" : [2.5, -1],
+						"gunLength" : -2.75,
+						"fireTime" : 0.05,
+						"barrels" : [[0,-0.625],[0,0.375]],
+						"kickback" : [-2.5,1],
+						"playSounds" : ["forwardDoubleCannons"],
+						"setAnimationStates" : {"forwardDoubleCannonBack":["fire",true]}
+					}
+				}
+			}
+		}
+	},
+
+//------- auto gun --------------
+
+	"sgdualautocannon" : {
+		"description" : {
+			"name" : "Dual Autocannons",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Twin barreled autocannons for area denial."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"forwardDoubleCannonFront" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.1,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					},
+					"forwardDoubleCannonBack" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.1,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"forwardDoubleCannonBack" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -2,
+							"offset" : [7.125, -1.125],
+							"transformationGroups" : ["forwardDoubleCannonBack"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"forwardDoubleCannonBack" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgdualautocannon.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgdualautocannon.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"forwardDoubleCannonFront" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 11,
+							"offset" : [2.125, -1.125],
+							"transformationGroups" : ["forwardDoubleCannonFront"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"forwardDoubleCannonFront" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgdualautocannon.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgdualautocannon.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"transformationGroups" : {
+				"forwardDoubleCannonFront" : {},
+				"forwardDoubleCannonBack" : {}
+			},
+			"sounds" : {
+				"forwardDoubleCannons" : [
+					"/sfx/crabmech/weapons/sgdualatuocannon1.ogg",
+					"/sfx/crabmech/weapons/sgdualatuocannon2.ogg"
+				]
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"PrimaryFire" : {
+					"forwardDoubleCannonFront" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"projectileType" : "sgautocannonshot",
+						"slaves" : ["forwardDoubleCannonBack"],
+						"punishSlaves" : {"forwardDoubleCannonBack":0.15},
+						"projectileParams" : {
+							"power" : 25,
+							"speed" : 120
+						},
+						"inaccuracy" : 0.015,
+						"projectileCount" : 1,
+						"gunCenter" : [-2.375, -1.125],
+						"gunLength" : 6,
+						"fireTime" : 0.3,
+						"barrels" : [[0,-0.625],[0,0.375]],
+						"kickback" : [-3.5,0],
+						"playSounds" : ["forwardDoubleCannons"],
+						"setAnimationStates" : {"forwardDoubleCannonFront":["fire",true]}
+					},
+					"forwardDoubleCannonBack" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"slavedTo" : "forwardDoubleCannonFront",
+						"projectileType" : "sgautocannonshot",
+						"projectileParams" : {
+							"power" : 25,
+							"speed" : 120
+						},
+						"inaccuracy" : 0.015,
+						"projectileCount" : 1,
+						"gunCenter" : [2.5, -1.125],
+						"gunLength" : 6,
+						"fireTime" : 0.3,
+						"barrels" : [[0,-0.625],[0,0.375]],
+						"kickback" : [-3.5,0],
+						"playSounds" : ["forwardDoubleCannons"],
+						"setAnimationStates" : {"forwardDoubleCannonBack":["fire",true]}
+					}
+				}
+			}
+		}
+	},
+	
+//------- magnum cannon --------------
+
+	"sgmagnumcannon" : {
+		"description" : {
+			"name" : "Magnum Autocannons",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Twin barreled autocannons for area denial."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"forwardDoubleCannonFront" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.1,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					},
+					"forwardDoubleCannonBack" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.1,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"forwardDoubleCannonBack" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -2,
+							"offset" : [7.125, -1.125],
+							"transformationGroups" : ["forwardDoubleCannonBack"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"forwardDoubleCannonBack" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgmagnumcannon.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgmagnumcannon.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"forwardDoubleCannonFront" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 11,
+							"offset" : [2.125, -1.125],
+							"transformationGroups" : ["forwardDoubleCannonFront"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"forwardDoubleCannonFront" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgmagnumcannon.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgmagnumcannon.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"transformationGroups" : {
+				"forwardDoubleCannonFront" : {},
+				"forwardDoubleCannonBack" : {}
+			},
+			"sounds" : {
+				"forwardDoubleCannons" : [
+					"/sfx/crabmech/weapons/sgdualatuocannon1.ogg",
+					"/sfx/crabmech/weapons/sgdualatuocannon2.ogg"
+				]
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"PrimaryFire" : {
+					"forwardDoubleCannonFront" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"projectileType" : "sgmagnumround",
+						"slaves" : ["forwardDoubleCannonBack"],
+						"punishSlaves" : {"forwardDoubleCannonBack":0.15},
+						"projectileParams" : {
+							"power" : 45,
+							"speed" : 140
+						},
+						"inaccuracy" : 0,
+						"projectileCount" : 1,
+						"gunCenter" : [-2.375, -1.125],
+						"gunLength" : 6,
+						"fireTime" : 0.8,
+						"barrels" : [[0,-0.625],[0,0.375]],
+						"kickback" : [-5.5,0],
+						"playSounds" : ["forwardDoubleCannons"],
+						"setAnimationStates" : {"forwardDoubleCannonFront":["fire",true]}
+					},
+					"forwardDoubleCannonBack" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"slavedTo" : "forwardDoubleCannonFront",
+						"projectileType" : "sgmagnumround",
+						"projectileParams" : {
+							"power" : 45,
+							"speed" : 140
+						},
+						"inaccuracy" : 0,
+						"projectileCount" : 1,
+						"gunCenter" : [2.5, -1.125],
+						"gunLength" : 6,
+						"fireTime" : 0.8,
+						"barrels" : [[0,-0.625],[0,0.375]],
+						"kickback" : [-5.5,0],
+						"playSounds" : ["forwardDoubleCannons"],
+						"setAnimationStates" : {"forwardDoubleCannonBack":["fire",true]}
+					}
+				}
+			}
+		}
+	},
+		
+//------- railgun --------------
+
+	"sgheavyrailgun" : {
+		"description" : {
+			"name" : "Heavy Railguns",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A highly destructive pair of railguns."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"sgHeavyRailgunFront" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.5,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					},
+					"sgHeavyRailgunBack" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.5,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"sgHeavyRailgunBack" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -2,
+							"offset" : [7.125, -1.125],
+							"transformationGroups" : ["sgHeavyRailgunBack"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgHeavyRailgunBack" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgheavyrailgun.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgheavyrailgun.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"sgHeavyRailgunFront" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 11,
+							"offset" : [2.125, -1.125],
+							"transformationGroups" : ["sgHeavyRailgunFront"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgHeavyRailgunFront" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgheavyrailgun.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgheavyrailgun.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"transformationGroups" : {
+				"sgHeavyRailgunFront" : {},
+				"sgHeavyRailgunBack" : {}
+			},
+			"sounds" : {
+				"sgHeavyRailguns" : [
+					"/sfx/crabmech/weapons/sgcrabrailgun.ogg"
+				]
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"PrimaryFire" : {
+					"sgHeavyRailgunFront" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"projectileType" : "sgcrabrailgun",
+						"slaves" : ["sgHeavyRailgunBack"],
+						"punishSlaves" : {"sgHeavyRailgunBack":1},
+						"projectileParams" : {
+							"power" : 170,
+							"speed" : 170
+						},
+						"inaccuracy" : 0,
+						"projectileCount" : 1,
+						"gunCenter" : [-2.375, -1.125],
+						"gunLength" : 2.5,
+						"fireTime" : 2.5,
+						"barrels" : [[0,0]],
+						"kickback" : [-4.5,0],
+						"playSounds" : ["sgHeavyRailguns"],
+						"setAnimationStates" : {"sgHeavyRailgunFront":["fire",true]}
+					},
+					"sgHeavyRailgunBack" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"slavedTo" : "sgHeavyRailgunFront",
+						"projectileType" : "sgcrabrailgun",
+						"projectileParams" : {
+							"power" : 170,
+							"speed" : 170
+						},
+						"inaccuracy" : 0,
+						"projectileCount" : 1,
+						"gunCenter" : [2.5, -1.125],
+						"gunLength" : 2.5,
+						"fireTime" : 2.5,
+						"barrels" : [[0,0]],
+						"kickback" : [-4.5,0],
+						"playSounds" : ["sgHeavyRailguns"],
+						"setAnimationStates" : {"sgHeavyRailgunBack":["fire",true]}
+					}
+				}
+			}
+		}
+	},
+
+//------- heavy gatling gun --------------
+
+	"sgheavygatlinggun" : {
+		"description" : {
+			"name" : "Tri-Barrel Gatlings",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Rotating to reload, these beefy cannons never need to stop firing."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"sgHeavyGatlingGunFront" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 4,
+								"cycle" : 0.33,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					},
+					"sgHeavyGatlingGunBack" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 4,
+								"cycle" : 0.33,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"sgHeavyGatlingGunBack" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -2,
+							"offset" : [7.125, -1.125],
+							"transformationGroups" : ["sgHeavyGatlingGunBack"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgHeavyGatlingGunBack" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgheavygatlinggun.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgheavygatlinggun.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"sgHeavyGatlingGunFront" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 11,
+							"offset" : [2.125, -1.125],
+							"transformationGroups" : ["sgHeavyGatlingGunFront"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgHeavyGatlingGunFront" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgheavygatlinggun.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgheavygatlinggun.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"transformationGroups" : {
+				"sgHeavyGatlingGunFront" : {},
+				"sgHeavyGatlingGunBack" : {}
+			},
+			"sounds" : {
+				"sgHeavyGatlingGuns" : [
+					"/sfx/crabmech/weapons/sgdualatuocannon1.ogg",
+					"/sfx/crabmech/weapons/sgdualatuocannon2.ogg"
+				]
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"PrimaryFire" : {
+					"sgHeavyGatlingGunFront" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"projectileType" : "sgcrabsuperheated",
+						"slaves" : ["sgHeavyGatlingGunBack"],
+						"punishSlaves" : {"sgHeavyGatlingGunBack":0.167},
+						"projectileParams" : {
+							"power" : 40,
+							"speed" : 120
+						},
+						"inaccuracy" : 0.015,
+						"projectileCount" : 1,
+						"gunCenter" : [-2.375, -1.125],
+						"gunLength" : 6,
+						"fireTime" : 0.33,
+						"barrels" : [[0,0.375]],
+						"kickback" : [-3.5,0],
+						"playSounds" : ["sgHeavyGatlingGuns"],
+						"setAnimationStates" : {"sgHeavyGatlingGunFront":["fire",true]}
+					},
+					"sgHeavyGatlingGunBack" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"slavedTo" : "sgHeavyGatlingGunFront",
+						"projectileType" : "sgcrabsuperheated",
+						"projectileParams" : {
+							"power" : 40,
+							"speed" : 120
+						},
+						"inaccuracy" : 0.015,
+						"projectileCount" : 1,
+						"gunCenter" : [2.5, -1.125],
+						"gunLength" : 6,
+						"fireTime" : 0.33,
+						"barrels" : [[0,0.375]],
+						"kickback" : [-3.5,0],
+						"playSounds" : ["sgHeavyGatlingGuns"],
+						"setAnimationStates" : {"sgHeavyGatlingGunBack":["fire",true]}
+					}
+				}
+			}
+		}
+	},
+	
+// -------- heavy nailgun ----------
+	
+	"sgheavynailgun" : {
+		"description" : {
+			"name" : "Impaler Nailguns",
+			"mod" : "Shellguard",
+			"longDescriptor" : "AP Shells are so last year- try these AP Nails instead."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"sgHeavyNailgunFront" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.3,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					},
+					"sgHeavyNailgunBack" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.3,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"sgHeavyNailgunBack" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -2,
+							"offset" : [7.125, -1.125],
+							"transformationGroups" : ["sgHeavyNailgunBack"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgHeavyNailgunBack" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgheavynailgun.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgheavynailgun.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"sgHeavyNailgunFront" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 11,
+							"offset" : [2.125, -1.125],
+							"transformationGroups" : ["sgHeavyNailgunFront"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgHeavyNailgunFront" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgheavynailgun.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgheavynailgun.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"transformationGroups" : {
+				"sgHeavyNailgunFront" : {},
+				"sgHeavyNailgunBack" : {}
+			},
+			"sounds" : {
+				"sgHeavyNailguns" : [
+					"/sfx/crabmech/weapons/sgheavynailgun.ogg"
+				]
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"PrimaryFire" : {
+					"sgHeavyNailgunFront" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"projectileType" : "sgcrabnailgunbolt",
+						"slaves" : ["sgHeavyNailgunBack"],
+						"punishSlaves" : {"sgHeavyNailgunBack":0.15},
+						"projectileParams" : {
+							"power" : 120,
+							"speed" : 200
+						},
+						"inaccuracy" : 0.015,
+						"projectileCount" : 1,
+						"gunCenter" : [-2.375, -1.125],
+						"gunLength" : 6,
+						"fireTime" : 1,
+						"barrels" : [[0,-0.25]],
+						"kickback" : [-6.5,0],
+						"playSounds" : ["sgHeavyNailguns"],
+						"setAnimationStates" : {"sgHeavyNailgunFront":["fire",true]}
+					},
+					"sgHeavyNailgunBack" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"slavedTo" : "sgHeavyNailgunFront",
+						"projectileType" : "sgcrabnailgunbolt",
+						"projectileParams" : {
+							"power" : 120,
+							"speed" : 200
+						},
+						"inaccuracy" : 0.015,
+						"projectileCount" : 1,
+						"gunCenter" : [2.5, -1.125],
+						"gunLength" : 6,
+						"fireTime" : 1,
+						"barrels" : [[0,-0.25]],
+						"kickback" : [-6.5,0],
+						"playSounds" : ["sgHeavyNailguns"],
+						"setAnimationStates" : {"sgHeavyNailgunBack":["fire",true]}
+					}
+				}
+			}
+		}
+	},
+	
+//------------ turbojacks--------
+
+	"sgturbojackcannon" : {
+		"description" : {
+			"name" : "Turbojack Cannons",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A coward ducks behind steel, a hero stands before an army. The Turbojack kills both equally efficiently."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"sgTurbojackCannonFront" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.4,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					},
+					"sgTurbojackCannonBack" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.4,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"sgTurbojackCannonBack" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -2,
+							"offset" : [7.125, -1.125],
+							"transformationGroups" : ["sgTurbojackCannonBack"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgTurbojackCannonBack" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgturbojackcannon.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgturbojackcannon.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"sgTurbojackCannonFront" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 11,
+							"offset" : [2.125, -1.125],
+							"transformationGroups" : ["sgTurbojackCannonFront"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgTurbojackCannonFront" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgturbojackcannon.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgturbojackcannon.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"transformationGroups" : {
+				"sgTurbojackCannonFront" : {},
+				"sgTurbojackCannonBack" : {}
+			},
+			"sounds" : {
+				"sgTurbojackCannons" : [
+					"/sfx/crabmech/weapons/sgturbojackfire1.ogg",
+					"/sfx/crabmech/weapons/sgturbojackfire2.ogg",
+					"/sfx/crabmech/weapons/sgturbojackfire3.ogg"
+				]
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"PrimaryFire" : {
+					"sgTurbojackCannonFront" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"projectileType" : "sgturbojackshot",
+						"slaves" : ["sgTurbojackCannonBack"],
+						"punishSlaves" : {"sgTurbojackCannonBack":0.9},
+						"projectileParams" : {
+							"power" : 90,
+							"speed" : 200
+						},
+						"inaccuracy" : 0,
+						"projectileCount" : 1,
+						"gunCenter" : [-2.375, -1.125],
+						"gunLength" : 7.25,
+						"fireTime" : 1.8,
+						"barrels" : [[0,0.25],[0,-0.5]],
+						"kickback" : [-6.5,0],
+						"playSounds" : ["sgTurbojackCannons"],
+						"setAnimationStates" : {"sgTurbojackCannonFront":["fire",true]}
+					},
+					"sgTurbojackCannonBack" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"slavedTo" : "sgTurbojackCannonFront",
+						"projectileType" : "sgturbojackshot",
+						"projectileParams" : {
+							"power" : 90,
+							"speed" : 200
+						},
+						"inaccuracy" : 0,
+						"projectileCount" : 1,
+						"gunCenter" : [2.5, -1.125],
+						"gunLength" : 7.25,
+						"fireTime" : 1.8,
+						"barrels" : [[0,0.25],[0,-0.5]],
+						"kickback" : [-6.5,0],
+						"playSounds" : ["sgTurbojackCannons"],
+						"setAnimationStates" : {"sgTurbojackCannonBack":["fire",true]}
+					}
+				}
+			}
+		}
+	},
+	
+//------------ turbojacks mini --------
+
+	"sgminiturbojackcannon" : {
+		"description" : {
+			"name" : "Burst Turbojacks",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Smaller turbojacks that fire in bursts. Has less accuracy and penetration."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"sgMiniTurbojackCannonFront" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.4,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					},
+					"sgMiniTurbojackCannonBack" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.4,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"sgMiniTurbojackCannonBack" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -2,
+							"offset" : [7.125, -1.125],
+							"transformationGroups" : ["sgMiniTurbojackCannonBack"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgMiniTurbojackCannonBack" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgminiturbojackcannon.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgminiturbojackcannon.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"sgMiniTurbojackCannonFront" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 11,
+							"offset" : [2.125, -1.125],
+							"transformationGroups" : ["sgMiniTurbojackCannonFront"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgMiniTurbojackCannonFront" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgminiturbojackcannon.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgminiturbojackcannon.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"transformationGroups" : {
+				"sgMiniTurbojackCannonFront" : {},
+				"sgMiniTurbojackCannonBack" : {}
+			},
+			"sounds" : {
+				"sgMiniTurbojackCannons" : [
+					"/sfx/crabmech/weapons/sgturbojackfire1.ogg",
+					"/sfx/crabmech/weapons/sgturbojackfire2.ogg",
+					"/sfx/crabmech/weapons/sgturbojackfire3.ogg"
+				]
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"PrimaryFire" : {
+					"sgMiniTurbojackCannonFront" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"projectileType" : "sgturbojackshotsmall",
+						"slaves" : ["sgMiniTurbojackCannonBack"],
+						"punishSlaves" : {"sgMiniTurbojackCannonBack":0.9},
+						"projectileParams" : {
+							"power" : 45,
+							"speed" : 200
+						},
+						"inaccuracy" : 0.05,
+						"projectileCount" : 1,
+						"gunCenter" : [-2.375, -1.125],
+						"gunLength" : 7.25,
+						"fireTime" : 3,
+						"burstCount" : 3,
+						"burstTime" : 0.15,
+						"barrels" : [[0,0.25],[0,-0.5]],
+						"kickback" : [-10.5,0],
+						"playSounds" : ["sgMiniTurbojackCannons"],
+						"setAnimationStates" : {"sgMiniTurbojackCannonFront":["fire",true]}
+					},
+					"sgMiniTurbojackCannonBack" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"slavedTo" : "sgMiniTurbojackCannonFront",
+						"projectileType" : "sgturbojackshotsmall",
+						"projectileParams" : {
+							"power" : 45,
+							"speed" : 200
+						},
+						"inaccuracy" : 0.05,
+						"projectileCount" : 1,
+						"gunCenter" : [2.5, -1.125],
+						"gunLength" : 7.25,
+						"fireTime" : 3,
+						"burstCount" : 3,
+						"burstTime" : 0.15,
+						"barrels" : [[0,0.25],[0,-0.5]],
+						"kickback" : [-10.5,0],
+						"playSounds" : ["sgMiniTurbojackCannons"],
+						"setAnimationStates" : {"sgMiniTurbojackCannonBack":["fire",true]}
+					}
+				}
+			}
+		}
+	},
+
+//------------ Scattercannon --------
+
+	"sgscattercannon" : {
+		"description" : {
+			"name" : "Scatter Cannons",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Six barreled scattercannons that pack quite a punch."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"sgScatterCannonFront" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.4,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					},
+					"sgScatterCannonBack" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.4,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"sgScatterCannonBack" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -2,
+							"offset" : [7.125, -1.125],
+							"transformationGroups" : ["sgScatterCannonBack"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgScatterCannonBack" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgscattercannon.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgscattercannon.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"sgScatterCannonFront" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 11,
+							"offset" : [2.125, -1.125],
+							"transformationGroups" : ["sgScatterCannonFront"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgScatterCannonFront" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgscattercannon.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgscattercannon.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"transformationGroups" : {
+				"sgScatterCannonFront" : {},
+				"sgScatterCannonBack" : {}
+			},
+			"sounds" : {
+				"sgScatterCannons" : [
+					"/sfx/crabmech/weapons/sgscattercannon1.ogg",
+					"/sfx/crabmech/weapons/sgscattercannon2.ogg"
+				]
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"PrimaryFire" : {
+					"sgScatterCannonFront" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"projectileType" : "sgcrabenergycrystal",
+						"slaves" : ["sgScatterCannonBack"],
+						"punishSlaves" : {"sgScatterCannonBack":0.9},
+						"projectileParams" : {
+							"power" : 30,
+							"speed" : 150
+						},
+						"inaccuracy" : 0.15,
+						"projectileCount" : 6,
+						"gunCenter" : [-2.375, -1.125],
+						"gunLength" : 1.25,
+						"fireTime" : 2.5,
+						"burstCount" : 3,
+						"burstTime" : 0.15,
+						"barrels" : [[0,0.375]],
+						"kickback" : [-10.5,0],
+						"playSounds" : ["sgScatterCannons"],
+						"setAnimationStates" : {"sgScatterCannonFront":["fire",true]}
+					},
+					"sgScatterCannonBack" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"slavedTo" : "sgScatterCannonFront",
+						"projectileType" : "sgcrabenergycrystal",
+						"projectileParams" : {
+							"power" : 30,
+							"speed" : 150
+						},
+						"inaccuracy" : 0.15,
+						"projectileCount" : 6,
+						"gunCenter" : [2.5, -1.125],
+						"gunLength" : 1.25,
+						"fireTime" : 2.5,
+						"burstCount" : 3,
+						"burstTime" : 0.15,
+						"barrels" : [[0,0.375]],
+						"kickback" : [-10.5,0],
+						"playSounds" : ["sgScatterCannons"],
+						"setAnimationStates" : {"sgScatterCannonBack":["fire",true]}
+					}
+				}
+			}
+		}
+	},
+	
+// --------- Steel Grinder -------
+	
+	"wfsteelgrindrepeater" : {
+		"description" : {
+			"name" : "Steelgrind Repeater",
+			"mod" : "WFCore",
+			"longDescriptor" : "This gun is held together with rivets and duct tape- but the internal shredding only makes it more lethal."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"wfSteelgrindRepeaterFront" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.2,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					},
+					"wfSteelgrindRepeaterBack" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.2,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"wfSteelgrindRepeaterBack" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -2,
+							"offset" : [6.125, -3.125],
+							"transformationGroups" : ["wfSteelgrindRepeaterBack"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"wfSteelgrindRepeaterBack" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/wfsteelgrindrepeater.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/wfsteelgrindrepeater.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"wfSteelgrindRepeaterBackFullbright" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -1,
+							"offset" : [0, 0],
+							"anchorPart" : "wfSteelgrindRepeaterBack",
+							"fullbright" : true
+						},
+						"partStates" : {
+							"wfSteelgrindRepeaterBack" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/wfsteelgrindrepeaterfullbright.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/wfsteelgrindrepeaterfullbright.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"wfSteelgrindRepeaterFront" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 11,
+							"offset" : [1.125, -3.125],
+							"transformationGroups" : ["wfSteelgrindRepeaterFront"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"wfSteelgrindRepeaterFront" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/wfsteelgrindrepeater.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/wfsteelgrindrepeater.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"wfSteelgrindRepeaterFrontFullbright" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 12,
+							"offset" : [0, 0],
+							"anchorPart" : "wfSteelgrindRepeaterFront",
+							"fullbright" : true
+						},
+						"partStates" : {
+							"wfSteelgrindRepeaterFront" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/wfsteelgrindrepeaterfullbright.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/wfsteelgrindrepeaterfullbright.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"transformationGroups" : {
+				"wfSteelgrindRepeaterFront" : {},
+				"wfSteelgrindRepeaterBack" : {}
+			},
+			"sounds" : {
+				"wfSteelgrindRepeaters" : [
+					"/sfx/crabmech/weapons/sgheavynailgun.ogg"
+				]
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"PrimaryFire" : {
+					"wfSteelgrindRepeaterFront" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"projectileType" : "sgcrabsuperheated",
+						"slaves" : ["wfSteelgrindRepeaterBack","wfSteelgrindRepeaterShrapnelBack"],
+						"punishSlaves" : {"wfSteelgrindRepeaterBack":0.1,"wfSteelgrindRepeaterShrapnelBack":0.1},
+						"projectileParams" : {
+							"power" : 60,
+							"speed" : 80,
+							"timeToLive" : 0.3,
+							"speedInaccuracy" : 25,
+							"timeInaccuracy" : 0.2
+						},
+						"inaccuracy" : 0.05,
+						"projectileCount" : 1,
+						"gunCenter" : [-2.375, -1.125],
+						"gunLength" : 13.25,
+						"fireTime" : 0.2,
+						"barrels" : [[0,-2.25]],
+						"kickback" : [-1.5,0],
+						"playSounds" : ["wfSteelgrindRepeaters"],
+						"setAnimationStates" : {"wfSteelgrindRepeaterFront":["fire",true]}
+					},
+					"wfSteelgrindRepeaterShrapnelFront" : {
+						"noGroup" : true,
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"projectileType" : "shrapnel",
+						"projectileParams" : {
+							"power" : 6,
+							"speed" : 55,
+							"timeToLive" : 0.8,
+							"speedInaccuracy" : 10
+						},
+						"inaccuracy" : 0.3,
+						"projectileCount" : 4,
+						"gunCenter" : [-2.375, -1.125],
+						"gunLength" : 12.75,
+						"fireTime" : 0.2,
+						"barrels" : [[0,-2.25]]
+					},
+					"wfSteelgrindRepeaterBack" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"slavedTo" : "wfSteelgrindRepeaterFront",
+						"projectileType" : "sgcrabsuperheated",
+						"projectileParams" : {
+							"power" : 60,
+							"speed" : 80,
+							"timeToLive" : 0.3,
+							"speedInaccuracy" : 25,
+							"timeInaccuracy" : 0.2
+						},
+						"inaccuracy" : 0.05,
+						"projectileCount" : 1,
+						"gunCenter" : [2.5, -1.125],
+						"gunLength" : 13.25,
+						"fireTime" : 0.2,
+						"barrels" : [[0,-2.25]],
+						"kickback" : [-1.5,0],
+						"playSounds" : ["wfSteelgrindRepeaters"],
+						"setAnimationStates" : {"wfSteelgrindRepeaterBack":["fire",true]}
+					},
+					"wfSteelgrindRepeaterShrapnelBack" : {
+						"noGroup" : true,
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"slavedTo" : "wfSteelgrindRepeaterFront",
+						"projectileType" : "shrapnel",
+						"projectileParams" : {
+							"power" : 6,
+							"speed" : 55,
+							"timeToLive" : 0.8,
+							"speedInaccuracy" : 10
+						},
+						"inaccuracy" : 0.3,
+						"projectileCount" : 4,
+						"gunCenter" : [-2.375, -1.125],
+						"gunLength" : 12.75,
+						"fireTime" : 0.2,
+						"barrels" : [[0,-2.25]]
+					}
+				}
+			}
+		}
+	},
+	
+	"wfbusterrailgun" : {
+		"description" : {
+			"name" : "Buster Railgun",
+			"mod" : "WFCore",
+			"longDescriptor" : "Excessive is my middle name."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"wfBusterRailgunFront" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.3,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"wfBusterRailgunFront" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 11,
+							"offset" : [5.125, -4],
+							"transformationGroups" : ["wfBusterRailgunFront"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"wfBusterRailgunFront" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/wfbusterrailgun.png<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/wfbusterrailgun.png<paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"transformationGroups" : {
+				"wfBusterRailgunFront" : {}
+			},
+			"sounds" : {
+				"wfBusterRailgun" : ["/sfx/crabmech/weapons/sgcrabrailgun.ogg"]
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"PrimaryFire" : {
+					"wfBusterRailgunFront" : {
+						"aimMinMax" : [-15,30],
+						"emptyAim" : -5,
+						"projectileType" : "sgcrabrailgun",
+						"projectileParams" : {
+							"power" : 80,
+							"speed" : 200
+						},
+						"inaccuracy" : 0,
+						"projectileCount" : 1,
+						"gunCenter" : [-3, -0.5],
+						"gunLength" : 13.25,
+						"fireTime" : 3.5,
+						"burstCount" : 6,
+						"burstTime" : 0.1,
+						"kickback" : [-5.5,0],
+						"barrels" : [[0,-3.25]],
+						"playSounds" : ["wfBusterRailgun"],
+						"setAnimationStates" : {"wfBusterRailgunFront":["fire",true]}
+					}
+				}
+			}
+		}
+	}
+}	

@@ -1,0 +1,827 @@
+{
+
+// ------ Missile Rack ---------
+
+	"sgmissilerack" : {
+		"description" : {
+			"name" : "Missile Rack",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A six shot burst of sidewinder missiles."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"missileRack" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 2,
+							"offset" : [-1.75, 2.125],
+							"transformationGroups" : ["missileRack"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgspidermechsidewindermissilerack.png:default<paletteSwaps><globalDirectives>",
+							"anchorPart" : "foreground"
+						}
+					}
+				}
+			},
+			"sounds" : {
+				"missileRack" : [
+					"/sfx/crabmech/weapons/sgrocketvolleylaunch.ogg"
+				]
+			},
+			"transformationGroups" : {
+				"missileRack" : {}
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"AltFire" : {
+					"missileRack" : {
+						"aimMinMax" : [-14,30],
+						"emptyAim" : 0,
+						"projectileType" : "sgspidermechrocket",
+						"projectileParams" : {
+							"power" : 60
+						},
+						"inaccuracy" : 0.01,
+						"projectileCount" : 1,
+						"gunCenter" : [-3.25, 2.125],
+						"gunLength" : 2.5,
+						"fireTime" : 5,
+						"burstCount" : 6,
+						"burstTime" : 0.1,
+						"burstOffsets" : [[-0.75,0.375],[0,0.375],[0.75,0.375],[-0.75,-0.375],[0,-0.375],[0.75,-0.375]],
+						"playSounds" : ["missileRack"]
+					}
+				}
+			}
+		}
+	},
+	
+// ------ Heavy Missle ---------
+
+	"sgspidermechheavyrocket" : {
+		"description" : {
+			"name" : "Heavy Missile",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Fires a heavy missile that packs a huge punch."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"sgspidermechheavyrocket" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 2,
+							"offset" : [-1.75, 2.125],
+							"transformationGroups" : ["sgspidermechheavyrocket"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgspidermechheavyrocket.png:default<paletteSwaps><globalDirectives>",
+							"anchorPart" : "foreground"
+						}
+					}
+				}
+			},
+			"sounds" : {
+				"sgspidermechheavyrocket" : [
+					"/sfx/crabmech/weapons/sgrocketvolleylaunch.ogg"
+				]
+			},
+			"transformationGroups" : {
+				"sgspidermechheavyrocket" : {}
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"AltFire" : {
+					"sgspidermechheavyrocket" : {
+						"aimMinMax" : [-14,30],
+						"emptyAim" : 0,
+						"projectileType" : "sgspidermechrocketheavy",
+						"projectileParams" : {
+							"power" : 150
+						},
+						"inaccuracy" : 0.01,
+						"projectileCount" : 1,
+						"gunCenter" : [-3.25, 2.125],
+						"gunLength" : 3,
+						"fireTime" : 2,
+						"playSounds" : ["sgspidermechheavyrocket"]
+					}
+				}
+			}
+		}
+	},
+
+// --------- SANGURE --------------
+
+	"sgsangureassisttrophy" : {
+		"description" : {
+			"name" : "The Designer",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Guess who!"
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"sgsangureassisttrophy" : {
+						"default" : "idle",
+						"states" : {
+							"idle" : {
+							},
+							"fire" : {
+								"frames" : 6,
+								"cycle" : 0.24,
+								"mode" : "transition",
+								"transition" : "sword"
+							},
+							"sword" : {
+								"frames" : 1,
+								"cycle" : 5,
+								"mode" : "transition",
+								"transition" : "idle"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"sgsangureassisttrophy" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 2,
+							"offset" : [-1.75, 2.125],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgsangureassisttrophy.png:idle.1<paletteSwaps><globalDirectives>",
+							"transformationGroups" : ["sgsangureassisttrophy"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgsangureassisttrophy" : {
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgsangureassisttrophy.png:idle.<frame><paletteSwaps><globalDirectives>"
+									}
+								},
+								"sword" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgsangureassisttrophy.png:idle.6<paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"sounds" : {
+				"sgsangureassisttrophy" : []
+			},
+			"transformationGroups" : {
+				"sgsangureassisttrophy" : {}
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"AltFire" : {
+					"sgsangureassisttrophy" : {
+						"aimMinMax" : [0,0],
+						"emptyAim" : 0,
+						"projectileType" : "sgspidermechrocketheavy",
+						"projectileParams" : {
+							"power" : 90
+						},
+						"inaccuracy" : 0.01,
+						"projectileCount" : 0,
+						"gunCenter" : [-3.25, 2.125],
+						"gunLength" : 3,
+						"fireTime" : 2,
+						"setAnimationStates" : {"sgsangureassisttrophy":["fire",false]}
+					}
+				}
+			}
+		}
+	},
+
+// --------- anti air quad --------
+	
+	"sgantiairquadmount" : {
+		"description" : {
+			"name" : "AA Quadmount",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A quadruple flak cannon to turn gunships into swiss cheese."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"antiAirQuadmount" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 7,
+								"cycle" : 0.24,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"antiAirQuadmount" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 2,
+							"offset" : [-0.25, 2.125],
+							"transformationGroups" : ["antiAirQuadmount"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"antiAirQuadmount" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgantiairquadmount.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgantiairquadmount.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"antiAirQuadmountFullbright" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 3,
+							"offset" : [-0.25, 2.125],
+							"transformationGroups" : ["antiAirQuadmount"],
+							"anchorPart" : "foreground",
+							"fullbright" : true
+						},
+						"partStates" : {
+							"antiAirQuadmount" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgantiairquadmountfullbright.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgantiairquadmountfullbright.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"sounds" : {
+				"antiAirQuadmount" : [
+					"/sfx/crabmech/weapons/sgrailminigunshot.ogg"
+				]
+			},
+			"transformationGroups" : {
+				"antiAirQuadmount" : {}
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"AltFire" : {
+					"antiAirQuadmount" : {
+						"aimMinMax" : [-20,60],
+						"emptyAim" : 30,
+						"projectileType" : "sgmicroflak",
+						"projectileParams" : {
+							"power" : 30,
+							"timeInaccuracy" : 0.01
+						},
+						"firingType" : "flak",
+						"inaccuracy" : 0.05,
+						"projectileCount" : 1,
+						"gunCenter" : [-3.5, 2.125],
+						"gunLength" : 4.625,
+						"fireTime" : 0.28,
+						"burstCount" : 4,
+						"burstTime" : 0.04,
+						"burstOffsets" : [[-0.25,0.25],[0.25,0.25],[-0.25,-0.25],[0.25,-0.25]],
+						"playSounds" : ["antiAirQuadmount"],
+						"setAnimationStates" : {"antiAirQuadmount":["fire",false]}
+					}
+				}
+			}
+		}
+	},
+
+// --------- Flak Cannon --------
+	
+	"sgflakcannon" : {
+		"description" : {
+			"name" : "Flak Cannon",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A quadruple flak cannon to turn gunships into swiss cheese."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"sgflakcannon" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 7,
+								"cycle" : 0.24,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"sgflakcannon" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 2,
+							"offset" : [-0.25, 2.125],
+							"transformationGroups" : ["sgflakcannon"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgflakcannon" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgflakcannon.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgflakcannon.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"sgflakcannonFullbright" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 3,
+							"offset" : [-0.25, 2.125],
+							"transformationGroups" : ["sgflakcannon"],
+							"anchorPart" : "foreground",
+							"fullbright" : true
+						},
+						"partStates" : {
+							"sgflakcannon" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgflakcannonfullbright.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgflakcannonfullbright.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"sounds" : {
+				"sgflakcannon" : [
+					"/sfx/gun/mech_flakcannon1.ogg", "/sfx/gun/mech_flakcannon2.ogg", "/sfx/gun/mech_flakcannon3.ogg"
+				]
+			},
+			"transformationGroups" : {
+				"sgflakcannon" : {}
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"AltFire" : {
+					"sgflakcannon" : {
+						"aimMinMax" : [-40,60],
+						"emptyAim" : 1,
+						"projectileType" : "flakbullet",
+						"projectileParams" : {
+							"power" : 45
+						},
+						"inaccuracy" : 0.05,
+						"projectileCount" : 1,
+						"gunCenter" : [-3.5, 2.125],
+						"gunLength" : 2,
+						"fireTime" : 0.28,
+						"playSounds" : ["sgflakcannon"],
+						"setAnimationStates" : {"sgflakcannon":["fire",false]}
+					}
+				}
+			}
+		}
+	},
+
+// --------- Heat Rifle --------
+	
+	"sgheatrifle" : {
+		"description" : {
+			"name" : "Heat Rifle",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Heavy Grenade Launcher"
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"sgheatrifle" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 7,
+								"cycle" : 0.24,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"sgheatrifle" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 2,
+							"offset" : [-0.25, 2.125],
+							"transformationGroups" : ["sgheatrifle"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgheatrifle" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgheatrifle.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgheatrifle.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"sgheatrifleFullbright" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 3,
+							"offset" : [-0.25, 2.125],
+							"transformationGroups" : ["sgheatrifle"],
+							"anchorPart" : "foreground",
+							"fullbright" : true
+						},
+						"partStates" : {
+							"sgheatrifle" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgheatriflefullbright.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgheatriflefullbright.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"sounds" : {
+				"sgheatrifle" : [
+					"/sfx/gun/sgpushshot.ogg"
+				]
+			},
+			"transformationGroups" : {
+				"sgheatrifle" : {}
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"AltFire" : {
+					"sgheatrifle" : {
+						"aimMinMax" : [-40,60],
+						"emptyAim" : 1,
+						"projectileType" : "sgheatbeamblast",
+						"projectileParams" : {
+							"power" : 60,
+							"speed" : 60
+						},
+						"inaccuracy" : 0.1,
+						"projectileCount" : 2,
+						"gunCenter" : [-3.25, 1.75],
+						"gunLength" : 2.375,
+						"fireTime" : 1.5,
+						"burstCount" : 5,
+						"burstTime" : 0.25,
+						"playSounds" : ["sgheatrifle"],
+						"setAnimationStates" : {"sgheatrifle":["fire",false]}
+					}
+				}
+			}
+		}
+	},	
+
+	
+// --------- Cluster Launcher --------
+	
+	"sgclusterlauncher" : {
+		"description" : {
+			"name" : "Cluster Launcher",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Heavy Grenade Launcher"
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"sgclusterlauncher" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 7,
+								"cycle" : 0.24,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"sgclusterlauncher" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 2,
+							"offset" : [-0.25, 2.125],
+							"transformationGroups" : ["sgclusterlauncher"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgclusterlauncher" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgclusterlauncher.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgclusterlauncher.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"sgclusterlauncherFullbright" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 3,
+							"offset" : [-0.25, 2.125],
+							"transformationGroups" : ["sgclusterlauncher"],
+							"anchorPart" : "foreground",
+							"fullbright" : true
+						},
+						"partStates" : {
+							"sgclusterlauncher" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgclusterlauncherfullbright.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgclusterlauncherfullbright.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"sounds" : {
+				"sgclusterlauncher" : [
+					"/sfx/gun/mech_flakcannon1.ogg", "/sfx/gun/mech_flakcannon2.ogg", "/sfx/gun/mech_flakcannon3.ogg"
+				]
+			},
+			"transformationGroups" : {
+				"sgclusterlauncher" : {}
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"AltFire" : {
+					"sgclusterlauncher" : {
+						"aimMinMax" : [-20,60],
+						"emptyAim" : 30,
+						"projectileType" : "bouncyclustergrenade",
+						"projectileParams" : {
+							"power" : 80,
+							"speed" : 60
+						},
+						"firingType" : "flak",
+						"inaccuracy" : 0.05,
+						"projectileCount" : 1,
+						"gunCenter" : [-3.5, 2.125],
+						"gunLength" : 2,
+						"fireTime" : 1.5,
+						"burstCount" : 4,
+						"burstTime" : 0.25,
+						"playSounds" : ["sgclusterlauncher"],
+						"setAnimationStates" : {"sgclusterlauncher":["fire",false]}
+					}
+				}
+			}
+		}
+	},	
+	
+// --------- Plasmite Cannon --------
+	
+	"sgplasmitelauncher" : {
+		"description" : {
+			"name" : "Plasmite Cannon",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Heavy Grenade Launcher"
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"sgplasmitelauncher" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 7,
+								"cycle" : 0.24,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"sgplasmitelauncher" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 2,
+							"offset" : [-0.25, 2.125],
+							"transformationGroups" : ["sgplasmitelauncher"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"sgplasmitelauncher" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgplasmitelauncher.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgplasmitelauncher.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"sgplasmitelauncherFullbright" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 3,
+							"offset" : [-0.25, 2.125],
+							"transformationGroups" : ["sgplasmitelauncher"],
+							"anchorPart" : "foreground",
+							"fullbright" : true
+						},
+						"partStates" : {
+							"sgplasmitelauncher" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgplasmitelauncherfullbright.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgplasmitelauncherfullbright.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"sounds" : {
+				"sgplasmitelauncher" : [
+					"/sfx/gun/mech_flakcannon1.ogg", "/sfx/gun/mech_flakcannon2.ogg", "/sfx/gun/mech_flakcannon3.ogg"
+				]
+			},
+			"transformationGroups" : {
+				"sgplasmitelauncher" : {}
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"AltFire" : {
+					"sgplasmitelauncher" : {
+						"aimMinMax" : [-20,60],
+						"emptyAim" : 30,
+						"projectileType" : "sgplasmitegrenadebasic",
+						"projectileParams" : {
+							"power" : 100
+						},
+						"firingType" : "flak",
+						"inaccuracy" : 0.05,
+						"projectileCount" : 1,
+						"gunCenter" : [-3.5, 2.125],
+						"gunLength" : 2,
+						"fireTime" : 1.5,
+						"burstCount" : 3,
+						"burstTime" : 0.25,
+						"playSounds" : ["sgplasmitelauncher"],
+						"setAnimationStates" : {"sgplasmitelauncher":["fire",false]}
+					}
+				}
+			}
+		}
+	},
+	
+// --- BOOMBOXES ---
+	
+	"sgfortresscoreboombox" : {
+		"description" : {
+			"name" : "Fortress Boombox",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Fortress Core"
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"fortressCoreBoombox" : {
+						"default" : "idle",
+						"states" : {
+							"idle" : {
+								"frames" : 4,
+								"cycle" : 0.24,
+								"mode" : "loop"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"fortressCoreBoombox" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 2,
+							"offset" : [-1.75, 2.125],
+							"transformationGroups" : ["fortressCoreBoombox"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"fortressCoreBoombox" : {
+								"idle" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/secondarygun/sgfortresscoreboombox.png:idle.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"sounds" : {
+				"fortressCoreBoombox" : [
+					"/sfx/crabmech/boombox/sgfortresscoreboombox.ogg"
+				]
+			},
+			"transformationGroups" : {
+				"fortressCoreBoombox" : {}
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"AltFire" : {
+					"fortressCoreBoombox" : {
+						"aimMinMax" : [-10,5],
+						"emptyAim" : 30,
+						"projectileType" : "firetravelingswoosh",
+						"projectileParams" : {
+							"power" : 80,
+							"speed" : 25,
+							"speedInaccuracy" : 4,
+							"timeToLive" : 0.4,
+							"timeInaccuracy" : 0.1
+						},
+						"inaccuracy" : 0.2,
+						"projectileCount" : 2,
+						"gunCenter" : [-3.5, 2.125],
+						"gunLength" : 2.25,
+						"fireTime" : 1,
+						"burstTime" : 0.5,
+						"burstCount" : 184,
+						"singleSoundBurst" : true,
+						"playSounds" : ["fortressCoreBoombox"]
+					}
+				}
+			}
+		}
+	}
+}

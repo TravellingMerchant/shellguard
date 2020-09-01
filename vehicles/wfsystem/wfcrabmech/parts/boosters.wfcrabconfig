@@ -1,0 +1,39 @@
+{
+	"sgsolidfuelboosters" : {
+		"description" : {
+			"name" : "Solid Fuel Booster",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A powerful double-jump using explosive canisters."
+		},
+		"boosterScript" : "/vehicles/wfsystem/wfcrabmech/parts/boosters/sgsolidfuelboosters.lua",
+		"boosterCooldown" : 0,
+		"maxBoosterCooldown" : 4,
+		"boosterStrength" : [0,50]
+	},
+
+	"sgsolidfuelboostersburst" : {
+		"description" : {
+			"name" : "Liquid Fuel Booster",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A rapid-burn boost from a liquid fuel canister."
+		},
+		"boosterScript" : "/vehicles/wfsystem/wfcrabmech/parts/boosters/sgsolidfuelboosterssmall.lua",
+		"boosterCooldown" : 0,
+		"maxBoosterCooldown" : 5,
+		"maxBoosterActiveTime" : 2,
+		"boosterStrength" : [0,1.5]
+	},
+	
+	"sghoverboosters" : {
+		"description" : {
+			"name" : "Long Booster",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A rapid-burn boost from a liquid fuel canister."
+		},
+		"boosterScript" : "/vehicles/wfsystem/wfcrabmech/parts/boosters/sgsolidfuelboosterssmall.lua",
+		"boosterCooldown" : 0,
+		"maxBoosterCooldown" : 7,
+		"maxBoosterActiveTime" : 4,
+		"boosterStrength" : [0,1]
+	}
+}

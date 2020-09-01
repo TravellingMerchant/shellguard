@@ -1,0 +1,30 @@
+{
+  "kind" : "wfcrabrainbowemitter",
+  "definition" : {
+    "duration" : 0.03,
+    "durationVariance" : 0,
+    "loops" : true,
+    "start" : {
+      "particles" : [
+        [ "wfcrabredsparkdrift", "wfcraborangesparkdrift", "wfcrabyellowsparkdrift", "wfcrabgreensparkdrift", "wfcrabbluesparkdrift", "wfcrabvioletsparkdrift" ]
+      ],
+      "sounds" : [
+        [ ]
+      ]
+    },
+    "particles" : [
+        [ "wfcrabredsparkdrift", "wfcraborangesparkdrift", "wfcrabyellowsparkdrift", "wfcrabgreensparkdrift", "wfcrabbluesparkdrift", "wfcrabvioletsparkdrift" ]
+    ],
+    "sounds" : [
+      [ ]
+    ],
+    "stop" : {
+      "particles" : [
+        [ "wfcrabredsparkdrift", "wfcraborangesparkdrift", "wfcrabyellowsparkdrift", "wfcrabgreensparkdrift", "wfcrabbluesparkdrift", "wfcrabvioletsparkdrift" ]
+      ],
+      "sounds" : [
+        [ ]
+      ]
+    }
+  }
+}

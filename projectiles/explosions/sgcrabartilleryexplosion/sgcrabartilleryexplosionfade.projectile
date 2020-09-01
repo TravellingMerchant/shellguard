@@ -1,0 +1,15 @@
+{
+  "projectileName" : "sgcrabartilleryexplosionfade",
+  "image" : "sgcrabartilleryexplosionfade.png",
+  "animationCycle" : 0.3,
+  "frameNumber" : 7,
+  "speed" : 0,
+  "pointLight" : true,
+  "lightColor" : [150, 100, 0],
+  "damagePoly" : [ [-68, 0], [-43, -43], [0, -68], [43, -43], [68, 0], [43, 43], [0, 68], [-43, 43] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "damageKind" : "default"
+}

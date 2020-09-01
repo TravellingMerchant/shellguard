@@ -1,0 +1,714 @@
+{
+
+//-------- retrofit ---------
+
+	"sgretrofitchassis" : {
+		"description" : {
+			"name" : "Retrofit Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A retrofitted turret, reworked to mount atop a C.R.A.B."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgretrofitchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- Brawler ---------
+
+	"sgbrawlerchassis" : {
+		"description" : {
+			"name" : "Brawler Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A retrofitted turret, reworked to mount atop a C.R.A.B."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgbrawlerchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- CRAB ---------
+
+	"sgcrabchassis" : {
+		"description" : {
+			"name" : "C.R.A.B Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A retrofitted turret, reworked to mount atop a C.R.A.B."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgcrabchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+
+//-------- Grinder ---------
+
+	"sggrinderchassis" : {
+		"description" : {
+			"name" : "Grinder Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A retrofitted turret, reworked to mount atop a C.R.A.B."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sggrinderchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+
+//-------- Crusher ---------
+
+	"sgcrusherchassis" : {
+		"description" : {
+			"name" : "Crusher Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A retrofitted turret, reworked to mount atop a C.R.A.B."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgcrusherchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- Gatekeeper ---------
+
+	"sggatekeeperchassis" : {
+		"description" : {
+			"name" : "Gatekeeper Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A retrofitted turret, reworked to mount atop a C.R.A.B."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sggatekeeperchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+
+//-------- Machine God by Omega ---------
+
+	"sgmachinegodchassis" : {
+		"description" : {
+			"name" : "Machine God Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A large mechanical chassis."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgmachinegodchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					},
+					"foregroundTop" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 10,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgmachinegodchassistop.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- Furnace ---------
+
+	"sgfurnacechassis" : {
+		"description" : {
+			"name" : "Furnace Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A heavy chassis that looks like a furnace filled with energy."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgfurnacechassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- Chomby ---------
+
+	"sgchombychassis" : {
+		"description" : {
+			"name" : "Chomby Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A huge decorative chassis based off the Archchomper Chomby."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgchombychassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- Tanker ---------
+
+	"sgfueltankerchassis" : {
+		"description" : {
+			"name" : "Tanker Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Bulky chassis designed for moving large tanks of plasma."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgfueltankerchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- Logistics ---------
+
+	"sglogisticschassis" : {
+		"description" : {
+			"name" : "Logistics Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Towering chassis designed for carring radio and information equipment."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sglogisticschassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- Ranger ---------
+
+	"sgrangerchassis" : {
+		"description" : {
+			"name" : "Ranger Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A more armoured leaper chassis for long distance travel."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgrangerchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- guardian ---------
+	
+	"sgguardianchassis" : {
+		"description" : {
+			"name" : "Shellguardian Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Bulky and powerful, this armor-plated chassis shrugs off attacks."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgguardianchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- hermit ---------
+	
+	"sghermitchassis" : {
+		"description" : {
+			"name" : "Hermit Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "This chassis was designed for autonomous drones, and is lighter than most even with a pilot."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sghermitchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- leaper ---------
+
+	"sgleaperchassis" : {
+		"description" : {
+			"name" : "Leaper Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "The extra motors packed below the pilot's feet give extra jumping power."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgleaperchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- cultist ---------
+
+	"sgcultistchassis" : {
+		"description" : {
+			"name" : "Cultist Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Placeholder."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgcultistchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- beta ---------
+
+	"sgbetachassis" : {
+		"description" : {
+			"name" : "Beta-Type Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Placeholder."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgbetachassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- classic ---------
+
+	"sgclassicchassis" : {
+		"description" : {
+			"name" : "Classic Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Placeholder."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgclassicchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- knight ---------
+	
+	"sgknightchassis" : {
+		"description" : {
+			"name" : "Knight Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Placeholder."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgknightchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- penguin ---------
+	
+	"sgpenguinchassis" : {
+		"description" : {
+			"name" : "Penguin Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Placeholder."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgpenguinchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- shark ---------
+	
+	"sgsharkchassis" : {
+		"description" : {
+			"name" : "Shark Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Placeholder."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgsharkchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- reactor ---------
+	
+	"sgreactorchassis" : {
+		"description" : {
+			"name" : "Reactor Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Placeholder."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgreactorchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- Protector ---------
+	
+	"sgprotectorchassis" : {
+		"description" : {
+			"name" : "Protector Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Placeholder."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgprotectorchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- Superhero ---------
+	
+	"sgsuperherochassis" : {
+		"description" : {
+			"name" : "Super Hero Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Placeholder."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgsuperherochassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+
+//-------- Skull ---------
+	
+	"sgskullchassis" : {
+		"description" : {
+			"name" : "Skull Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Enter the Bone Zone."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgskullchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- Pirate ---------
+	
+	"sgpiratechassis" : {
+		"description" : {
+			"name" : "Pirate Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Enter the Bone Zone."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgpiratechassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
+//-------- calibri ---------
+	
+	"sgcalibrichassis" : {
+		"description" : {
+			"name" : "Calibri Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Enter the Bone Zone."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sgcalibrichassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}
