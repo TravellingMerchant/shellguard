@@ -120,7 +120,7 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 1500
+          "baseValue" : 2000
         },
         "protection" : {
           "baseValue" : 50.0

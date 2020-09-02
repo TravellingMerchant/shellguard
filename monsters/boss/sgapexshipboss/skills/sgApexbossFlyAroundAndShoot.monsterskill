@@ -17,7 +17,7 @@
 	  "burstTime" : 0.05,
 	  
 	  "projectileType" : "electricplasmarocket",
-	  "projectileParameters" : { "Speed" : 5,  "power" : 40 },
+	  "projectileParameters" : { "Speed" : 5,  "power" : 45 },
 	  "trackSourceEntity" : false
     }
   },

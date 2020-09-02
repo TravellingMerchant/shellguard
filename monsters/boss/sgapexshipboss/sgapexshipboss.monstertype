@@ -8,11 +8,7 @@
   "animation" : "sgapexshipboss.animation",
   "reversed" : true,
 
-  "dropPools" : [
-    {
-      "default" : "bonedragonTreasure"
-    }
-  ],
+  "dropPools" : [],
 
   "baseParameters" : {
     "scripts" : [
@@ -133,7 +129,7 @@
           "baseValue" : 1.0
         },
         "maxHealth" : {
-          "baseValue" : 1400
+          "baseValue" : 2000
         },
         "protection" : {
           "baseValue" : 50.0

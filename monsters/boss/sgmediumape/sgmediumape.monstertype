@@ -62,7 +62,7 @@
     "behaviorConfig" : {
       "damageOnTouch" : false,	  
 	  
-      "targetQueryRange" : 50,
+      "targetQueryRange" : 300,
       "targetOnDamage" : true,
 	  "targetEntityTypes": ["player", "monster", "npc"],
 	  

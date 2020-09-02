@@ -20,7 +20,7 @@
 	  "projectileType" : "lightpellet",
 	  "projectileParameters" : 
 	  {
-	  "power" : 20,
+	  "power" : 30,
 	  "speed" : 50
 	  },
 	  "trackSourceEntity" : false,

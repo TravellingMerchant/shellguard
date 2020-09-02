@@ -18,7 +18,7 @@
 	  "burstTime" : 0.125,
 	  
 	  "projectileType" : "nebsgfortresslaserblast",
-	  "projectileParameters" : {"power" : 30},
+	  "projectileParameters" : {"power" : 120},
 	  "trackSourceEntity" : false
     }
   },

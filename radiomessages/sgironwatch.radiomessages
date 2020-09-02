@@ -620,7 +620,7 @@
     "type" : "mission",
     "senderName" : "Ketos",
     "portraitImage" : "/interface/chatbubbles/sgketos.png",
-    "text" : "Darn, the elevators are broke. You're going to have to climb up manually."
+    "text" : "Darn, the elevators are broken. You're going to have to climb up manually."
   },
 
   "sgcrab10b" : {

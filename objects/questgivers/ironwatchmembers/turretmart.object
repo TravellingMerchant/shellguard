@@ -21,6 +21,7 @@
     "buyFactor" : 1.0,
     "sellFactor" : 0.2,
     "items" : [
+	 { "item" : { "name" : "sgcrabmechcraftingtable" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "wfcrabdeployer" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgquadturretcontroller" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgscatterturretcontroller" }, "prerequisiteQuest" : "sgironwatchspacemission" },

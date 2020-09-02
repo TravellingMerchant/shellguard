@@ -19,7 +19,7 @@
 	  "projectileType" : "sgdelayedplasmabomb",
 	  "projectileParameters" : {
 	    "speed" : 50,
-		"power" : 200
+		"power" : 250
 	  },
 	  "trackSourceEntity" : false
     }

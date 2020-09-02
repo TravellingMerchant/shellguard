@@ -143,7 +143,7 @@
 
   //Health and damage
   "protection" : 50,
-  "maxHealth" : 16000,
+  "maxHealth" : 20000,
 
   "damageStateNames" : ["undamaged"],
 

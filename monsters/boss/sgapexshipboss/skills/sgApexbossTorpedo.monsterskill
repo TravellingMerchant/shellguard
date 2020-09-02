@@ -20,7 +20,7 @@
 	  "projectileType" : "energyfist",
 	  "projectileParameters" : {
 	  "speed" : 70,
-	  "power" : 250},
+	  "power" : 300},
 	  "trackSourceEntity" : false,
 	  
 	  "holdAim" : false

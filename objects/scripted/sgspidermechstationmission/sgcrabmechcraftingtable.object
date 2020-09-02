@@ -8,8 +8,8 @@
 
 	"category" : "storage",
 	"price" : 500,
-	"description" : "The basis of all weapon and armor modification.",
-	"shortdescription" : "Mod Slag Furnace",
+	"description" : "Create your very own C.R.A.B using an uncalibrated deployer!",
+	"shortdescription" : "C.R.A.B Constructor.",
 	"race" : "generic",
 
 	"health" : 5,
