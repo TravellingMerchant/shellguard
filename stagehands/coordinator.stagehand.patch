@@ -1,0 +1,1340 @@
+[
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgaliencannon",
+    "value": {
+      "minRange": 15,
+      "maxRange": 45,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgalienlmg",
+    "value": {
+      "minRange": 15,
+      "maxRange": 50,
+      "forceMoveRange": 55
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgalienrifle",
+    "value": {
+      "minRange": 10,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgalienshotgun",
+    "value": {
+      "minRange": 5,
+      "maxRange": 20,
+      "forceMoveRange": 25
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgredjack",
+    "value": {
+      "minRange": 40,
+      "maxRange": 70,
+      "forceMoveRange": 75
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgbarragelauncher",
+    "value": {
+      "minRange": 10,
+      "maxRange": 55,
+      "forceMoveRange": 60
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgbasilisk",
+    "value": {
+      "minRange": 12,
+      "maxRange": 45,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgbasiliskheavy",
+    "value": {
+      "minRange": 12,
+      "maxRange": 45,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgbreakerauto",
+    "value": {
+      "minRange": 20,
+      "maxRange": 35,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/nebsbreakerrifle",
+    "value": {
+      "minRange": 20,
+      "maxRange": 35,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgbreakerrifle",
+    "value": {
+      "minRange": 20,
+      "maxRange": 35,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgbreakersniper",
+    "value": {
+      "minRange": 40,
+      "maxRange": 70,
+      "forceMoveRange": 75
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgbreakersniperheavy",
+    "value": {
+      "minRange": 40,
+      "maxRange": 70,
+      "forceMoveRange": 75
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgbulldogshotgun",
+    "value": {
+      "minRange": 10,
+      "maxRange": 20,
+      "forceMoveRange": 25
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgcannon",
+    "value": {
+      "minRange": 10,
+      "maxRange": 55,
+      "forceMoveRange": 60
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgcannonshotgun",
+    "value": {
+      "minRange": 10,
+      "maxRange": 30,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgdrumgun",
+    "value": {
+      "minRange": 15,
+      "maxRange": 60,
+      "forceMoveRange": 65
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgelectromace",
+    "value": {
+      "minRange": 11,
+      "maxRange": 25,
+      "forceMoveRange": 30
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgelectromaceonehanded",
+    "value": {
+      "minRange": 11,
+      "maxRange": 25,
+      "forceMoveRange": 60
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgfireblastgun",
+    "value": {
+      "minRange": 10,
+      "maxRange": 55,
+      "forceMoveRange": 60
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgflameclaw",
+    "value": {
+      "minRange": 11,
+      "maxRange": 18,
+      "forceMoveRange": 20
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sggoblinsmg",
+    "value": {
+      "minRange": 25,
+      "maxRange": 60,
+      "forceMoveRange": 65
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sggrenademachinegun",
+    "value": {
+      "minRange": 25,
+      "maxRange": 45,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sghandheldrailgun",
+    "value": {
+      "minRange": 10,
+      "maxRange": 20,
+      "forceMoveRange": 25
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sghardsuitcannon",
+    "value": {
+      "minRange": 25,
+      "maxRange": 45,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sghardsuitshotgun",
+    "value": {
+      "minRange": 10,
+      "maxRange": 25,
+      "forceMoveRange": 30
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sghardsuitsnubnose",
+    "value": {
+      "minRange": 10,
+      "maxRange": 25,
+      "forceMoveRange": 30
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgheavylasercannon",
+    "value": {
+      "minRange": 20,
+      "maxRange": 35,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgplasmapistol",
+    "value": {
+      "minRange": 10,
+      "maxRange": 20,
+      "forceMoveRange": 25
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgpraxisdustrifle",
+    "value": {
+      "minRange": 15,
+      "maxRange": 25,
+      "forceMoveRange": 30
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgpraxissniper",
+    "value": {
+      "minRange": 40,
+      "maxRange": 65,
+      "forceMoveRange": 70
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgpraxissniperheavy",
+    "value": {
+      "minRange": 40,
+      "maxRange": 75,
+      "forceMoveRange": 80
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgsawgun",
+    "value": {
+      "minRange": 20,
+      "maxRange": 50,
+      "forceMoveRange": 55
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgscrapblaster",
+    "value": {
+      "minRange": 15,
+      "maxRange": 45,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgslashcannon",
+    "value": {
+      "minRange": 25,
+      "maxRange": 35,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgsteamsnubnose",
+    "value": {
+      "minRange": 10,
+      "maxRange": 25,
+      "forceMoveRange": 30
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgstuncannon",
+    "value": {
+      "minRange": 15,
+      "maxRange": 35,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgsupernovalauncher",
+    "value": {
+      "minRange": 25,
+      "maxRange": 90,
+      "forceMoveRange": 95
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgtyphoonminigun",
+    "value": {
+      "minRange": 10,
+      "maxRange": 30,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgvehiclecannon",
+    "value": {
+      "minRange": 10,
+      "maxRange": 30,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgvolcanolauncher",
+    "value": {
+      "minRange": 15,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgbossspear",
+    "value": {
+      "minRange": 15,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgbotspear",
+    "value": {
+      "minRange": 15,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgburstpear",
+    "value": {
+      "minRange": 15,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sggunspear",
+    "value": {
+      "minRange": 15,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgplasmitestaff",
+    "value": {
+      "minRange": 15,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgbigironwatch",
+    "value": {
+      "minRange": 20,
+      "maxRange": 50,
+      "forceMoveRange": 55
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgbluejack",
+    "value": {
+      "minRange": 40,
+      "maxRange": 70,
+      "forceMoveRange": 75
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgbluerifle",
+    "value": {
+      "minRange": 15,
+      "maxRange": 50,
+      "forceMoveRange": 55
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgbreakershotgun",
+    "value": {
+      "minRange": 20,
+      "maxRange": 35,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sghammercarbine",
+    "value": {
+      "minRange": 20,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgheatwavecarbine",
+    "value": {
+      "minRange": 25,
+      "maxRange": 60,
+      "forceMoveRange": 65
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchboomer",
+    "value": {
+      "minRange": 30,
+      "maxRange": 60,
+      "forceMoveRange": 65
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchburstrifle",
+    "value": {
+      "minRange": 20,
+      "maxRange": 50,
+      "forceMoveRange": 55
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchbuzzer",
+    "value": {
+      "minRange": 5,
+      "maxRange": 10,
+      "forceMoveRange": 15
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchcannon",
+    "value": {
+      "minRange": 10,
+      "maxRange": 30,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchchargeburstrifle",
+    "value": {
+      "minRange": 20,
+      "maxRange": 35,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchdmr",
+    "value": {
+      "minRange": 25,
+      "maxRange": 60,
+      "forceMoveRange": 65
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchgyro",
+    "value": {
+      "minRange": 15,
+      "maxRange": 25,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchhammerrifle",
+    "value": {
+      "minRange": 20,
+      "maxRange": 35,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchhammersniper",
+    "value": {
+      "minRange": 20,
+      "maxRange": 35,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchicecarbine",
+    "value": {
+      "minRange": 25,
+      "maxRange": 60,
+      "forceMoveRange": 65
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchlongswordrifle",
+    "value": {
+      "minRange": 20,
+      "maxRange": 35,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchmg",
+    "value": {
+      "minRange": 15,
+      "maxRange": 45,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchmineshotgun",
+    "value": {
+      "minRange": 15,
+      "maxRange": 25,
+      "forceMoveRange": 30
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchmoto",
+    "value": {
+      "minRange": 25,
+      "maxRange": 60,
+      "forceMoveRange": 65
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchpistol",
+    "value": {
+      "minRange": 5,
+      "maxRange": 25,
+      "forceMoveRange": 30
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchrifle",
+    "value": {
+      "minRange": 25,
+      "maxRange": 50,
+      "forceMoveRange": 55
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchshotgun",
+    "value": {
+      "minRange": 15,
+      "maxRange": 24,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchsmg",
+    "value": {
+      "minRange": 20,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchstrike",
+    "value": {
+      "minRange": 15,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchsupershotgun",
+    "value": {
+      "minRange": 20,
+      "maxRange": 35,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchswarmer",
+    "value": {
+      "minRange": 15,
+      "maxRange": 35,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchwidegun",
+    "value": {
+      "minRange": 15,
+      "maxRange": 45,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgironwatchwidegun2",
+    "value": {
+      "minRange": 15,
+      "maxRange": 45,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgkfraptor",
+    "value": {
+      "minRange": 15,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgrapidjack",
+    "value": {
+      "minRange": 15,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgscoutjack",
+    "value": {
+      "minRange": 20,
+      "maxRange": 50,
+      "forceMoveRange": 55
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgcinderjack",
+    "value": {
+      "minRange": 25,
+      "maxRange": 60,
+      "forceMoveRange": 65
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgspikeblaster",
+    "value": {
+      "minRange": 15,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgstandardrifle",
+    "value": {
+      "minRange": 10,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgstandardriflelong",
+    "value": {
+      "minRange": 15,
+      "maxRange": 45,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardAMincen",
+    "value": {
+      "minRange": 30,
+      "maxRange": 60,
+      "forceMoveRange": 65
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardAMrifle",
+    "value": {
+      "minRange": 25,
+      "maxRange": 60,
+      "forceMoveRange": 65
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardAMrifleexplosive",
+    "value": {
+      "minRange": 30,
+      "maxRange": 60,
+      "forceMoveRange": 65
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardbombard",
+    "value": {
+      "minRange": 25,
+      "maxRange": 55,
+      "forceMoveRange": 60
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardbuzzer",
+    "value": {
+      "minRange": 5,
+      "maxRange": 10,
+      "forceMoveRange": 15
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardclawbase",
+    "value": {
+      "minRange": 7,
+      "maxRange": 20,
+      "forceMoveRange": 25
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardclawboss",
+    "value": {
+      "minRange": 10,
+      "maxRange": 30,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguarddroner",
+    "value": {
+      "minRange": 15,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/ShellGuardGrenadeLauncher",
+    "value": {
+      "minRange": 15,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardheavypistol",
+    "value": {
+      "minRange": 5,
+      "maxRange": 30,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardheavypistolreflek",
+    "value": {
+      "minRange": 5,
+      "maxRange": 30,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardheavyreflek",
+    "value": {
+      "minRange": 15,
+      "maxRange": 45,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardheavyrifle",
+    "value": {
+      "minRange": 10,
+      "maxRange": 35,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardmg",
+    "value": {
+      "minRange": 15,
+      "maxRange": 45,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardmicrogun",
+    "value": {
+      "minRange": 10,
+      "maxRange": 35,
+      "forceMoveRange": 40
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgminigun",
+    "value": {
+      "minRange": 10,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgminigunnpc",
+    "value": {
+      "minRange": 10,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgneedle",
+    "value": {
+      "minRange": 10,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardpistol",
+    "value": {
+      "minRange": 5,
+      "maxRange": 15,
+      "forceMoveRange": 20
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardreflek",
+    "value": {
+      "minRange": 15,
+      "maxRange": 45,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardrifle",
+    "value": {
+      "minRange": 15,
+      "maxRange": 50,
+      "forceMoveRange": 55
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardriflecompact",
+    "value": {
+      "minRange": 10,
+      "maxRange": 30,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardriflescoped",
+    "value": {
+      "minRange": 15,
+      "maxRange": 55,
+      "forceMoveRange": 60
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/ShellGuardRocketLauncher",
+    "value": {
+      "minRange": 30,
+      "maxRange": 60,
+      "forceMoveRange": 65
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardshardgun",
+    "value": {
+      "minRange": 15,
+      "maxRange": 45,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgshotgun",
+    "value": {
+      "minRange": 15,
+      "maxRange": 24,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardsmg",
+    "value": {
+      "minRange": 20,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardspiderrocket",
+    "value": {
+      "minRange": 30,
+      "maxRange": 45,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardspreadpistol",
+    "value": {
+      "minRange": 5,
+      "maxRange": 24,
+      "forceMoveRange": 35
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardswarmer",
+    "value": {
+      "minRange": 15,
+      "maxRange": 45,
+      "forceMoveRange": 50
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sgssssgunspear",
+    "value": {
+      "minRange": 10,
+      "maxRange": 40,
+      "forceMoveRange": 45
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/shellguardtrainingrifle",
+    "value": {
+      "minRange": 15,
+      "maxRange": 50,
+      "forceMoveRange": 55
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/heavyhatchet",
+    "value": {
+      "minRange": 1.5,
+      "maxRange": 3
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/lighthatchet",
+    "value": {
+      "minRange": 1.5,
+      "maxRange": 3
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgsqueakyhammer",
+    "value": {
+      "minRange": 1.5,
+      "maxRange": 3
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgsurvivoraxe",
+    "value": {
+      "minRange": 1.5,
+      "maxRange": 3
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/panaurum",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgcarve",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgofficersword",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgtitansword",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgrobotcleaver",
+    "value": {
+      "minRange": 2,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgrobotsword",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgsanguresmacker",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgtestsword",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/oldguardcleaver",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/Shellcleaver",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgcombatknife",
+    "value": {
+      "minRange": 1.5,
+      "maxRange": 3
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgknife",
+    "value": {
+      "minRange": 1.5,
+      "maxRange": 3
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgrobotknife",
+    "value": {
+      "minRange": 1.5,
+      "maxRange": 3
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgrobotknife2",
+    "value": {
+      "minRange": 1.5,
+      "maxRange": 3
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sghammer",
+    "value": {
+      "minRange": 2,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/oldguardspear",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/shelllance",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/shellspear",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sggreatpolearm",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgironwatchimperium",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgketosbladelong",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgketosbladeshort",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgkhopesh",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgtyrantrapier",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/nebsgliterallyafuckingstick",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgaliencaster",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgchomperblade",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgmechastaff",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgpraxisimperium",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgsnaggletooth",
+    "value": {
+      "minRange": 3,
+      "maxRange": 5
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgmajestyrapier",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgcrystalsword",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgemperorhammer",
+    "value": {
+      "minRange": 2,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sgconqueroraxe",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4
+    }
+  },
+  {
+    "op": "add",
+    "path": "/npcCombat/meleeWeaponRanges/sggoldspear",
+    "value": {
+      "minRange": 2.5,
+      "maxRange": 4.5
+    }
+  }
+]
