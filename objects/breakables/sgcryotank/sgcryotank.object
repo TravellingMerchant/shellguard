@@ -4,8 +4,8 @@
   "rarity" : "Common",
   "category" : "breakable",
   "price" : 55,
-  "description" : "An explosive cryo tank connected to a machine.",
-  "shortdescription" : "Unstable Cryo Vent",
+  "description" : "An explosive cryo tank.",
+  "shortdescription" : "Unstable Cryo Tank",
   "race" : "generic",
   "breakDropOptions" : [],
 

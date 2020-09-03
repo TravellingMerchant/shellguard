@@ -36,6 +36,8 @@
 	 { "item" : { "name" : "sgkhopesh" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgironwatchburstrifle" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sggreatpolearm" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgketosbladelong" }, "prerequisiteQuest" : "sgironwatchspacemission" },
+	 { "item" : { "name" : "sgketosbladeshort" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgironwatchbuzzer" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgbluerifle" }, "prerequisiteQuest" : "sgironwatchspacemission" },
 	 { "item" : { "name" : "sgironwatchswarmer" }, "prerequisiteQuest" : "sgironwatchspacemission" },
