@@ -1,7 +1,7 @@
 {
   "type" : "sgpoptop",
   "shortdescription" : "sgpoptop",
-  "description" : "The sgpoptop hums beautifully to confuse its prey.",
+  "description" : "The poptop hums beautifully to confuse its prey.",
 
   "categories" : [ "sgpoptop" ],
   "parts" : [ "body" ],
