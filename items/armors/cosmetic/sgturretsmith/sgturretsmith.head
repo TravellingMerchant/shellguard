@@ -4,7 +4,7 @@
   "maxStack" : 1,
   "price" : 15000,
   "rarity" : "legendary",
-  "category" : "headarmour",
+  "category" : "headwear",
   "description" : "[Cosmetic] A large Shellguard helmet worn by turret and artillery operators.",
   "shortdescription" : "Turret Smith Helmet",
   "tooltipKind" : "armor",

@@ -4,7 +4,7 @@
   "inventoryIcon" : "icons.png:pants",
   "maxStack" : 1,
   "rarity" : "legendary",
-  "category" : "legarmour",
+  "category" : "legwear",
   "description" : "[Cosmetic] Shellguard pants with highly reflective waist stripes for easy visiblity in low light areas.",
   "shortdescription" : "Fireman Legs",
   "tooltipKind" : "armor",

@@ -4,7 +4,7 @@
   "maxStack" : 1,
   "price" : 15000,
   "rarity" : "legendary",
-  "category" : "headarmour",
+  "category" : "headwear",
   "description" : "An extremely old helmet design.",
   "shortdescription" : "Old Guard Helmet",
   "tooltipKind" : "armor",

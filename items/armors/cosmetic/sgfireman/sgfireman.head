@@ -4,7 +4,7 @@
   "maxStack" : 1,
   "price" : 15000,
   "rarity" : "legendary",
-  "category" : "headarmour",
+  "category" : "headwear",
   "description" : "[Cosmetic] A heavy Shellguard helm marked with the Fireman emblem on the brim, designed to protect against falling debre.",
   "shortdescription" : "Fireman Helmet",
   "tooltipKind" : "armor",
