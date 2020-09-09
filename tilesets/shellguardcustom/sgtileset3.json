@@ -16,7 +16,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":52,
+ "tilecount":53,
  "tiledversion":"1.3.1",
  "tileheight":400,
  "tileproperties":
@@ -499,6 +499,16 @@
          "imagePositionX":"-16",
          "imagePositionY":"0",
          "object":"sgstrangershop",
+         "tilesetDirection":"right"
+        },
+     "52":
+        {
+         "\/\/description":"sgtlihuistatue",
+         "\/\/name":"sgtlihuistatue",
+         "\/\/shortdescription":"statue",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sgtlihuistatue",
          "tilesetDirection":"right"
         },
      "6":
@@ -1024,6 +1034,16 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "52":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "6":
         {
          "\/\/description":"string",
@@ -1354,6 +1374,12 @@
          "image":"..\/..\/objects\/sgstrangershop\/icon.png",
          "imageheight":43,
          "imagewidth":25
+        },
+     "52":
+        {
+         "image":"..\/..\/objects\/decorations\/sgtlihuistatue\/sgflowerstatueicon.png",
+         "imageheight":42,
+         "imagewidth":26
         },
      "6":
         {

@@ -34,13 +34,13 @@
   "levelApproachFactor" : 0,
   "angleApproachFactor" : 0,
   "constantAngleCheck" : true,
-  "maxGroundSearchDistance" : 5,
+  "maxGroundSearchDistance" : 0,
   "maxAngle" : 0,
   "velocityRotation" : true,
   "velocityRotationApproach" : 0.005,
-  "hoverTargetDistance" : 4,
+  "hoverTargetDistance" : 0,
   "hoverVelocityFactor" : 0,
-  "hoverControlForce" : 100,
+  "hoverControlForce" : 0,
   "targetHorizontalVelocity" : 0,
   "horizontalControlForce" : 0,
   "targetUpwardVelocity" : 0,
@@ -49,7 +49,7 @@
   "downwardControlForce" : 0,
   "spinFriction" : 0.1,
     "hoverToggle" : true,
-  "hoverToggleControlForce" : 60,
+  "hoverToggleControlForce" : 0,
   "visualRotationCenter" : [0,0],
 	"mainStates" : {"opening":true,"closing":true},
 	"gunnery" : {
@@ -62,7 +62,7 @@
 					"slaves" : ["forwardDoubleCannonBack"],
 					"punishSlaves" : {"forwardDoubleCannonBack":0.15},
 					"projectileParams" : {
-						"power" : 55,
+						"power" : 65,
 					    "speed" : 120
 					},
 					"inaccuracy" : 0.02,
@@ -80,7 +80,7 @@
 					"slavedTo" : "forwardDoubleCannonFront",
 					"projectileType" : "tempbulletshatter",
 					"projectileParams" : {
-						"power" : 55,
+						"power" : 65,
 					    "speed" : 120
 					},
 					"inaccuracy" : 0.02,
@@ -119,7 +119,7 @@
 					"emptyAim" : 0,
 					"projectileType" : "sgboomerroundflak",
 					"projectileParams" : {
-						"power" : 120
+						"power" : 270
 					},
 					"inaccuracy" : 0,
 					"projectileCount" : 1,

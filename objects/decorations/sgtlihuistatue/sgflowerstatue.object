@@ -1,0 +1,34 @@
+{
+  "objectName" : "sgtlihuistatue",
+  "colonyTags" : ["shellguard","valuable","pretty"],
+  "rarity" : "legendary",
+  "category" : "decorative",
+  "price" : 1000,
+
+  "apexDescription" : "The inscription reads: Tlihui, the best test dummy.",
+  "avianDescription" : "The inscription reads: Tlihui, the best test dummy.",
+  "floranDescription" : "The inscription reads: Tlihui, the best test dummy.",
+  "glitchDescription" : "Impressed. The inscription reads: Tlihui, the best test dummy.",
+  "humanDescription" : "The inscription reads: Tlihui, the best test dummy.",
+  "hylotlDescription" : "The inscription reads: Tlihui, the best test dummy.",
+  "novakidDescription" : "The inscription reads: Tlihui, the best test dummy.",
+
+  "description" : "The inscription reads: Tlihui, the best test dummy.",
+  "shortdescription" : "Tlihui Statue",
+  "race" : "human",
+
+  "inventoryIcon" : "sgflowerstatue.png",
+  "orientations" : [
+    {
+      "dualImage" : "sgflowerstatue.png:<color>",
+      "imagePosition" : [-8, -0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ ],
+      "collision" : "platform"
+
+    }
+  ]
+}

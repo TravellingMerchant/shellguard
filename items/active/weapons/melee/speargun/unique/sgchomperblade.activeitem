@@ -257,7 +257,7 @@
 	
   "altAbility" : {
     "name" : "Wild Chomper",
-    "scripts" : ["/items/active/weapons/other/tentaclegun/tentaclegun.lua"],
+    "scripts" : ["/items/active/weapons/melee/speargun/unique/chainmeleeparts/sgtentaclegun.lua"],
     "class" : "TentacleGun",
 
     "chain" : {
