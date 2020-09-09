@@ -4,7 +4,7 @@
   "maxStack" : 1,
   "price" : 15000,
   "rarity" : "legendary",
-  "category" : "headarmour",
+  "category" : "headwear",
   "description" : "[Cosmetic] A helmet with a wide, flat hard hat used to protect against enviromental hazards.",
   "shortdescription" : "Helmet of a Stranger: 2",
   "tooltipKind" : "armor",

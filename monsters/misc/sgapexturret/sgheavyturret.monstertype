@@ -250,6 +250,6 @@
 
     "mouthOffset" : [0, 0],
     "feetOffset" : [0, -8],
-    "capturable" : true
+    "capturable" : false
   }
 }

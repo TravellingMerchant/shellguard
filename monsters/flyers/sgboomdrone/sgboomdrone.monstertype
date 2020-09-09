@@ -1,7 +1,7 @@
 {
   "type" : "sgboomdrone",
   "shortdescription" : "Blast Drone",
-  "description" : "Eplosive Drone that flies into targets and explodes.",
+  "description" : "Explosive Drone that flies into targets and explodes.",
 
   "categories" : [ "sgboomdrone" ],
   "parts" : [ "body" ],
