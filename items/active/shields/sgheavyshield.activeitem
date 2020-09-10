@@ -9,7 +9,7 @@
   "shortdescription" : "Shellguard Heavy Shield",
   "tooltipKind" : "Shield",
   "twoHanded" : false,
-  "itemTags" : ["shield","upgradeableWeapon"],
+  "itemTags" : ["shield"],
 
   "inventoryIcon" : "images/sgheavyshield.png:nearidle",
 

@@ -9,7 +9,7 @@
   "shortdescription" : "Shellguard Shield",
   "tooltipKind" : "Shield",
   "twoHanded" : false,
-  "itemTags" : ["shield","upgradeableWeapon"],
+  "itemTags" : ["shield"],
 
   "inventoryIcon" : "images/shellshield.png:nearidle",
 
