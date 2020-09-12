@@ -1,0 +1,97 @@
+{
+  "itemName" : "sgironwatchmarlin",
+  "price" : 9000,
+  "inventoryIcon" : "sgdrumgun.png:idle",
+  "maxStack" : 1,
+  "rarity" : "Essential",
+  "description" : "Fires large incendiary shells at a steady rate.",
+  "shortdescription" : "^orange;Marlin Launcher",
+  "level" : 10,
+  "tooltipKind" : "sgweapon",
+  "category" : "uniqueWeapon",
+  "weaponType" : "Assault Rifle",
+  "itemTags" : ["weapon","ranged","assaultrifle","upgradeableWeapon"],
+  "twoHanded" : true,
+  
+  "animation" : "sgdrumgun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "sgdrumgun.png",
+    "barrel" : "",
+    "muzzleFlash" : "/animations/muzzleflash/tempmuzzle/tempmuzzle.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [ "/sfx/gun/railshots/sgrailminigunshot.ogg" ]
+    }
+  },
+
+  "baseOffset" : [2.25, 0.1],
+  "muzzleOffset" : [1.75, 0.1],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "fire",
+  //COMPATABILITY FOR WFCORE NPCS
+  "wfNpcWeaponData" : {"minRange" : 15, "maxRange" : 60, "forceMoveRange" : 65, "primaryCharge" : 3, "altChance" : 0.3, "minAltRange" : 0, "maxAltRange" : 20, "altCharge" : 1.5},
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+    "fireTime" : 0.3,
+    "baseDps" : 10.5,
+    "energyUsage" : 40.0,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.02,
+      "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false,
+		
+		"animationStates": {
+			"weaponFire": "fire"
+		}
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : -15,
+        "weaponRotation" : 30,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    },
+
+    "fireType" : "auto",
+
+    "projectileType" : "sgclustershell",
+    "projectileParameters" : { 
+      "knockback" : 10
+    }
+  },
+
+  "altAbilityType" : "lance",
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua",
+  "upgradeParameters" : {
+    "inventoryIcon" : "sgdrumgunelite.png:idle",
+    "animationParts" : {
+      "middle" : "sgdrumgunelite.png"
+    },
+    "shortdescription" : "Marlin Launcher ^yellow;^reset;"
+  }
+}

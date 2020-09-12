@@ -414,6 +414,30 @@
   
 //-------- spider mech---------
 
+  "sgironwatchmarlin" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgironwatchmarlin", 1]}
+      ]
+    }]
+  ],
+  
+  "sgironwatchswordfish" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgironwatchswordfish", 1]}
+      ]
+    }]
+  ],
+
+  "sgspire1" : [
+    [1, {
+      "fill" : [
+        {"item" : [ "sgspire1-codex", 1]}
+      ]
+    }]
+  ],
+
   "shellarmourheavyhead" : [
     [1, {
       "fill" : [

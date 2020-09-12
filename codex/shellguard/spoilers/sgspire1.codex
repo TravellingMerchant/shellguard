@@ -1,0 +1,21 @@
+{
+  "id" : "sgspire1",
+  "species" : "human",
+  "title" : "Strangers Notes",
+  "description" : "Some messy personal notes.",
+  "icon" : "sgspire1.png",
+  "contentPages" : [
+    "^cyan;Page 1:^white; 
+I found myself here after my shuttle crashed. My shuttles scanners sensed some ancient tech and decided to see what relics I could dig up, but while descending down my engine failed. I survived, a little beaten up but still alive.",
+
+    "^cyan;Page 2:^white;
+After repairing my ship, I decided to continue with what I came here for. What I didn't expect to find is a ruin in such a state. Normally these ruins and vaults are in better condition, with tech still functioning. This place must be really old.",
+	
+    "^cyan;Page 3:^white;
+To make matters even weirder, there's some sort of strange language here, mostly on a few murals and terminals. It's not the Ancients langauge, that's for sure. Someone's already made a handy translation, but I'm not sure who. Was it the Ancients? If it was, why wasn't it in their own langauge?"
+  ],
+    "itemConfig" : {
+    "rarity" : "common",
+    "price" : 25
+  }
+}

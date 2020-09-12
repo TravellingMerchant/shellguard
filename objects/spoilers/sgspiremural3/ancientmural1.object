@@ -1,0 +1,33 @@
+{
+  "objectName" : "sgspiremural3",
+  "colonyTags" : ["ancient"],
+  "rarity" : "Legendary",
+  "description" : "Translations? What language is this?",
+  "shortdescription" : "Ancient Mural",
+  "race" : "ancient",
+
+  "apexDescription" : "Translations? What language is this?",
+  "avianDescription" : "Translations? What language is this?",
+  "floranDescription" : "Transssslationsss? What language issss thissssss?",
+  "glitchDescription" : "Curious. Translations? What language is this?",
+  "humanDescription" : "Translations? What language is this?",
+  "hylotlDescription" : "Translations? What language is this?",
+  "novakidDescription" : "Translations? What language is this?",
+
+  "category" : "decorative",
+  "price" : 0,
+  "printable" : false,
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "ancientmural1.png", "fullbright" : true }, { "image" : "ancientmural1lit.png" } ],
+      "imagePosition" : [-168, -56],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ]
+}

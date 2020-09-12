@@ -394,6 +394,28 @@
 
   {
     "op" : "add",
+    "path" : "/sgstrangermission",
+    "value" : {
+    "primaryDungeon" : "sgstrangermission",
+      "weatherPool" : [
+        [1.0, "lightash"]
+      ],
+    "threatLevel" : 10,
+    "gravity" : 80,
+    "worldSize" : [2500, 2000],
+    "dungeonBaseHeight" : 1000,
+    "dungeonSurfaceHeight" : 200,
+    "ambientLightLevel" : [32, 32, 32],
+      "ambientNoises" : "/sfx/environmental/ocean_surface_stormy.ogg",
+    "musicTrack" : "/music/Hanging_Mysts.ogg",
+    "environmentStatusEffects" : ["dontstarve"],
+    "worldEdgeForceRegions" : "TopAndBottom",
+    "biome" : "sgcentensskycitydark"
+    }
+  },
+
+  {
+    "op" : "add",
     "path" : "/sgoceanattack1",
     "value" : {
     "primaryDungeon" : "sgoceanattack1",
@@ -455,7 +477,7 @@
       "dungeonBaseHeight" : 400,
       "dungeonSurfaceHeight" : 100,
       "ambientLightLevel" : [0, 0, 0],
-      "musicTrack" : "/music/lava-exploration2.ogg",
+      "musicTrack" : "/music/Hanging_Mysts.ogg",
       "biome": "barren"
     }
   },

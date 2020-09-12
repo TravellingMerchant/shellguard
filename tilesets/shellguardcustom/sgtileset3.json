@@ -16,7 +16,7 @@
  "margin":0,
  "name":"sgtileset3",
  "spacing":0,
- "tilecount":53,
+ "tilecount":60,
  "tiledversion":"1.3.1",
  "tileheight":400,
  "tileproperties":
@@ -509,6 +509,76 @@
          "imagePositionX":"-8",
          "imagePositionY":"0",
          "object":"sgtlihuistatue",
+         "tilesetDirection":"right"
+        },
+     "53":
+        {
+         "\/\/description":"translationmural",
+         "\/\/name":"translationmural",
+         "\/\/shortdescription":"translationmural",
+         "imagePositionX":"-168",
+         "imagePositionY":"-56",
+         "object":"translationmural1",
+         "tilesetDirection":"right"
+        },
+     "54":
+        {
+         "\/\/description":"translationmural",
+         "\/\/name":"translationmural",
+         "\/\/shortdescription":"translationmural",
+         "imagePositionX":"-168",
+         "imagePositionY":"-56",
+         "object":"translationmural2",
+         "tilesetDirection":"right"
+        },
+     "55":
+        {
+         "\/\/description":"translationmural",
+         "\/\/name":"translationmural",
+         "\/\/shortdescription":"translationmural",
+         "imagePositionX":"-168",
+         "imagePositionY":"-56",
+         "object":"translationmural3",
+         "tilesetDirection":"right"
+        },
+     "56":
+        {
+         "\/\/description":"translationmural",
+         "\/\/name":"translationmural",
+         "\/\/shortdescription":"translationmural",
+         "imagePositionX":"-168",
+         "imagePositionY":"-56",
+         "object":"translationmural4",
+         "tilesetDirection":"right"
+        },
+     "57":
+        {
+         "\/\/description":"translationmural",
+         "\/\/name":"translationmural",
+         "\/\/shortdescription":"translationmural",
+         "imagePositionX":"-168",
+         "imagePositionY":"-56",
+         "object":"sgspiremural1",
+         "tilesetDirection":"right"
+        },
+     "58":
+        {
+         "\/\/description":"translationmural",
+         "\/\/name":"translationmural",
+         "\/\/shortdescription":"translationmural",
+         "imagePositionX":"-168",
+         "imagePositionY":"-56",
+         "object":"sgspiremural2",
+         "tilesetDirection":"right"
+        },
+     "59":
+        {
+         "\/\/description":"translationmural",
+         "\/\/name":"translationmural",
+         "\/\/shortdescription":"translationmural",
+         "imagePositionX":"-168",
+         "imagePositionY":"-56",
+         "object":"sgspiremural3",
          "tilesetDirection":"right"
         },
      "6":
@@ -1044,6 +1114,76 @@
          "object":"string",
          "tilesetDirection":"string"
         },
+     "53":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "54":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "55":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "56":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "57":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "58":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
+     "59":
+        {
+         "\/\/description":"string",
+         "\/\/name":"string",
+         "\/\/shortdescription":"string",
+         "imagePositionX":"string",
+         "imagePositionY":"string",
+         "object":"string",
+         "tilesetDirection":"string"
+        },
      "6":
         {
          "\/\/description":"string",
@@ -1380,6 +1520,48 @@
          "image":"..\/..\/objects\/decorations\/sgtlihuistatue\/sgflowerstatueicon.png",
          "imageheight":42,
          "imagewidth":26
+        },
+     "53":
+        {
+         "image":"..\/..\/objects\/spoilers\/translationmural1\/ancientmural1.png",
+         "imageheight":189,
+         "imagewidth":323
+        },
+     "54":
+        {
+         "image":"..\/..\/objects\/spoilers\/translationmural2\/ancientmural1.png",
+         "imageheight":189,
+         "imagewidth":323
+        },
+     "55":
+        {
+         "image":"..\/..\/objects\/spoilers\/translationmural3\/ancientmural1.png",
+         "imageheight":189,
+         "imagewidth":323
+        },
+     "56":
+        {
+         "image":"..\/..\/objects\/spoilers\/translationmural4\/ancientmural1.png",
+         "imageheight":189,
+         "imagewidth":323
+        },
+     "57":
+        {
+         "image":"..\/..\/objects\/spoilers\/sgspiremural1\/ancientmural1.png",
+         "imageheight":189,
+         "imagewidth":323
+        },
+     "58":
+        {
+         "image":"..\/..\/objects\/spoilers\/sgspiremural2\/ancientmural1.png",
+         "imageheight":189,
+         "imagewidth":323
+        },
+     "59":
+        {
+         "image":"..\/..\/objects\/spoilers\/sgspiremural3\/ancientmural1.png",
+         "imageheight":189,
+         "imagewidth":323
         },
      "6":
         {
