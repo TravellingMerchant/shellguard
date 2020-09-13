@@ -49,6 +49,15 @@
   "hylotlDescription" : "What a strange fellow.",
   "novakidDescription" : "What a strange fellow.",
 
+  "offeredQuests" : [
+    "sgstrangermission"
+  ],
+  "turnInQuests" : [
+    "sgstrangermission"
+  ],
+
+  "uniqueId" : "sgstranger",
+
   "inventoryIcon" : "icon.png",
   "orientations" : [
     {

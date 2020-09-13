@@ -339,7 +339,7 @@
          "name":"objects",
          "objects":[
                 {
-                 "gid":2147493953,
+                 "gid":2147493962,
                  "height":640,
                  "id":4879,
                  "name":"",
@@ -2190,7 +2190,7 @@
                  "y":4120
                 }, 
                 {
-                 "gid":2147494078,
+                 "gid":2147494087,
                  "height":48,
                  "id":5152,
                  "name":"",
@@ -2202,7 +2202,7 @@
                  "y":3736
                 }, 
                 {
-                 "gid":10430,
+                 "gid":10439,
                  "height":48,
                  "id":5153,
                  "name":"",
@@ -2214,7 +2214,7 @@
                  "y":3736
                 }, 
                 {
-                 "gid":10430,
+                 "gid":10439,
                  "height":48,
                  "id":5154,
                  "name":"",
@@ -2234,7 +2234,7 @@
                  "y":3736
                 }, 
                 {
-                 "gid":10430,
+                 "gid":10439,
                  "height":48,
                  "id":5155,
                  "name":"",
@@ -3576,7 +3576,7 @@
                  "y":4752
                 }, 
                 {
-                 "gid":2147493901,
+                 "gid":2147493910,
                  "height":22,
                  "id":5316,
                  "name":"",
@@ -3607,7 +3607,7 @@
                  "y":3928
                 }, 
                 {
-                 "gid":10253,
+                 "gid":10262,
                  "height":22,
                  "id":5318,
                  "name":"",
@@ -3638,7 +3638,7 @@
                  "y":4752
                 }, 
                 {
-                 "gid":10253,
+                 "gid":10262,
                  "height":22,
                  "id":5320,
                  "name":"",
@@ -3669,7 +3669,7 @@
                  "y":4520
                 }, 
                 {
-                 "gid":2147493901,
+                 "gid":2147493910,
                  "height":22,
                  "id":5324,
                  "name":"",
@@ -3984,7 +3984,7 @@
                  "y":4592
                 }, 
                 {
-                 "gid":10305,
+                 "gid":10314,
                  "height":640,
                  "id":5364,
                  "name":"",
@@ -6398,26 +6398,6 @@
                  "y":1096
                 }, 
                 {
-                 "gid":7440,
-                 "height":20,
-                 "id":5593,
-                 "name":"",
-                 "properties":
-                    {
-                     "parameters":"{ \"treasurePools\" : [ \"sgironwatchlongswordrifle\" ] }"
-                    },
-                 "propertytypes":
-                    {
-                     "parameters":"string"
-                    },
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":24,
-                 "x":7520,
-                 "y":2976
-                }, 
-                {
                  "gid":2147491088,
                  "height":20,
                  "id":5594,
@@ -8260,19 +8240,19 @@
          "source":"..\/..\/..\/tilesets\/shellguardcustom\/sgtileset3.json"
         }, 
         {
-         "firstgid":10080,
+         "firstgid":10089,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/apex.json"
         }, 
         {
-         "firstgid":10266,
+         "firstgid":10275,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/foundry.json"
         }, 
         {
-         "firstgid":10305,
+         "firstgid":10314,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/huge-objects.json"
         }, 
         {
-         "firstgid":10406,
+         "firstgid":10415,
          "source":"..\/..\/..\/..\/..\/assets\/packed\/tilesets\/packed\/objects-by-colonytag\/scorched.json"
         }],
  "tilewidth":8,

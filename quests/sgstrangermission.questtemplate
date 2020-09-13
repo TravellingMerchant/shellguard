@@ -1,0 +1,45 @@
+{
+  "id" : "sgstrangermission",
+  "prerequisites" : [],
+  "title" : "^green;Strange Request",
+  "text" : "Hm, it's about time I share what I've found with someone else. Go to these coordinates. Bring some rope, it can be hard to traverse there.",
+  "completionText" : "You've seen that which once was. There's no way to climb for now, at least not yet.",
+  "moneyRange" : [1000, 1000],
+  "rewards" : [
+    [ [ "rewardbag", 1 ], [ "sgshotgunaxe", 1 ] ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/sgstrangershop/icon.png"} ],
+        "title" : "Stranger"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/sgstrangershop/icon.png"} ],
+        "title" : "Stranger"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Talk to ^orange;the Stranger.^reset;",
+      "findGoal" : "Investigate the ruins.",
+      "turnIn" : "Return to ^orange;the Stranger.^reset;"
+    },
+
+    "warpEntityUid" : "sgstranger",
+    "warpAction" : "instanceworld:sgstrangermission",
+    "warpDialog" : "/interface/confirmation/sgteleportconfirmation.config:sgstrangermission",
+
+    "goalTrigger" : "proximity",
+    "proximityRange" : 20,
+
+    "goalEntityUid" : "sgstrangertele",
+    "indicateGoal" : true,
+    "trackGoalEntity" : false,
+
+    "turnInEntityUid" : "sgstranger"
+  }
+}
