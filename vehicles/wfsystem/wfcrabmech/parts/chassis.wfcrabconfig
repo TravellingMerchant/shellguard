@@ -26,6 +26,32 @@
 		}
 	},
 	
+//-------- Locust ---------
+
+	"sglocustchassis" : {
+		"description" : {
+			"name" : "Locust Chassis",
+			"mod" : "Shellguard",
+			"longDescriptor" : "A retrofitted turret, reworked to mount atop a C.R.A.B."
+		},	
+		"animationCustom" : {
+			"animatedParts" : {
+				"parts" : {
+					"foreground" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 1,
+							"transformationGroups" : ["flip", "rotation"],
+							"image" : "/vehicles/wfsystem/wfcrabmech/parts/chassis/sglocustchassis.png<paletteSwaps><globalDirectives>",
+							"drivingSeatPosition" : [0, 0],
+							"passengerSeatPosition" : [0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	
 //-------- Brawler ---------
 
 	"sgbrawlerchassis" : {

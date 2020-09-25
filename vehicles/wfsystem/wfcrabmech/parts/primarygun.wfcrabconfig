@@ -1,5 +1,127 @@
 {
 
+//------- Siegebreaker --------------
+
+	"sgsiegebreaker" : {
+		"description" : {
+			"name" : "Siegebreaker",
+			"mod" : "Shellguard",
+			"longDescriptor" : "Not the most damage, but high destruction."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"forwardDoubleCannonFront" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.5,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					},
+					"forwardDoubleCannonBack" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.5,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"forwardDoubleCannonBack" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -2,
+							"offset" : [7.125, -1.125],
+							"transformationGroups" : ["forwardDoubleCannonBack"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"forwardDoubleCannonBack" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgsiegebreaker.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgsiegebreaker.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"forwardDoubleCannonFront" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 11,
+							"offset" : [2.125, -1.125],
+							"transformationGroups" : ["forwardDoubleCannonFront"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"forwardDoubleCannonFront" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgsidecap.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sgsidecap.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"transformationGroups" : {
+				"forwardDoubleCannonFront" : {},
+				"forwardDoubleCannonBack" : {}
+			},
+			"sounds" : {
+				"forwardDoubleCannons" : [
+					"/sfx/gun/sgheavygattlingfire1.ogg"
+				]
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"PrimaryFire" : {
+					"forwardDoubleCannonBack" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"projectileType" : "sgwreckingballbounce2",
+						"projectileParams" : {
+						"power" : 100,
+						"speed" : 100,
+						"renderLayer" : "BackgroundOverlay"
+						},
+						"inaccuracy" : 0.015,
+						"projectileCount" : 1,
+						"gunCenter" : [2.5, -1],
+						"gunLength" : 2.75,
+						"fireTime" : 3,
+						"barrels" : [[0,0]],
+						"kickback" : [-28.5,1],
+						"playSounds" : ["forwardDoubleCannons"],
+						"setAnimationStates" : {"forwardDoubleCannonBack":["fire",true]}
+					}
+				}
+			}
+		}
+	},
+
 //------- Jet Engine --------------
 
 	"sgjetengine" : {
@@ -421,6 +543,149 @@
 						"fireTime" : 0.8,
 						"barrels" : [[0,-0.625],[0,0.375]],
 						"kickback" : [-5.5,0],
+						"playSounds" : ["forwardDoubleCannons"],
+						"setAnimationStates" : {"forwardDoubleCannonBack":["fire",true]}
+					}
+				}
+			}
+		}
+	},
+	
+//------- Interceptor Minigun --------------
+
+	"sginterceptorminigun" : {
+		"description" : {
+			"name" : "Interceptor Miniguns",
+			"mod" : "Shellguard",
+			"longDescriptor" : "High cycle miniguns."
+		},
+		"animationCustom" : {
+			"animatedParts" : {
+				"stateTypes" : {
+					"forwardDoubleCannonFront" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.1,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					},
+					"forwardDoubleCannonBack" : {
+						"default" : "off",
+						"states" : {
+							"off" : {},
+							"fire" : {
+								"frames" : 3,
+								"cycle" : 0.1,
+								"mode" : "transition",
+								"transition" : "off"
+							}
+						}
+					}
+				},
+				"parts" : {
+					"forwardDoubleCannonBack" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : -2,
+							"offset" : [7.125, -1.125],
+							"transformationGroups" : ["forwardDoubleCannonBack"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"forwardDoubleCannonBack" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sginterceptorminigun.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sginterceptorminigun.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					},
+					"forwardDoubleCannonFront" : {
+						"properties" : {
+							"centered" : true,
+							"zLevel" : 11,
+							"offset" : [2.125, -1.125],
+							"transformationGroups" : ["forwardDoubleCannonFront"],
+							"anchorPart" : "foreground"
+						},
+						"partStates" : {
+							"forwardDoubleCannonFront" : {
+								"off" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sginterceptorminigun.png:idle.1<paletteSwaps><globalDirectives>"
+									}
+								},
+								"fire" : {
+									"properties" : {
+										"image" : "/vehicles/wfsystem/wfcrabmech/parts/primarygun/sginterceptorminigun.png:fire.<frame><paletteSwaps><globalDirectives>"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"transformationGroups" : {
+				"forwardDoubleCannonFront" : {},
+				"forwardDoubleCannonBack" : {}
+			},
+			"sounds" : {
+				"forwardDoubleCannons" : [
+					"/sfx/vehicles/sgminigun.ogg",
+					"/sfx/vehicles/sgminigun2.ogg"
+				]
+			}
+		},
+		"gunnery" : {
+			"drivingSeat" : {
+				"PrimaryFire" : {
+					"forwardDoubleCannonFront" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"projectileType" : "flakbullet",
+						"slaves" : ["forwardDoubleCannonBack"],
+						"punishSlaves" : {"forwardDoubleCannonBack":0.05},
+						"projectileParams" : {
+						  "power" : 20,
+					      "speed" : 120
+						},
+						"inaccuracy" : 0.015,
+						"projectileCount" : 1,
+						"gunCenter" : [-2.375, -1.125],
+						"gunLength" : 8,
+						"fireTime" : 0.1,
+						"barrels" : [[0,0]],
+						"kickback" : [-1.5,0],
+						"playSounds" : ["forwardDoubleCannons"],
+						"setAnimationStates" : {"forwardDoubleCannonFront":["fire",true]}
+					},
+					"forwardDoubleCannonBack" : {
+						"aimMinMax" : [-90,90],
+						"emptyAim" : -10,
+						"slavedTo" : "forwardDoubleCannonFront",
+						"projectileType" : "flakbullet",
+						"projectileParams" : {
+						  "power" : 20,
+					      "speed" : 120
+						},
+						"inaccuracy" : 0.015,
+						"projectileCount" : 1,
+						"gunCenter" : [2.5, -1.125],
+						"gunLength" : 8,
+						"fireTime" : 0.1,
+						"barrels" : [[0,0]],
+						"kickback" : [-1.5,0],
 						"playSounds" : ["forwardDoubleCannons"],
 						"setAnimationStates" : {"forwardDoubleCannonBack":["fire",true]}
 					}

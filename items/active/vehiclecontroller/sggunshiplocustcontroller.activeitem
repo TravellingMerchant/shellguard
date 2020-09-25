@@ -1,0 +1,34 @@
+{
+  "itemName" : "sggunshiplocustcontroller",
+  "level" : 1,
+  "price" : 50000,
+  "rarity" : "Legendary",
+  "category" : "vehicleController",
+  "description" : "A heavy gunship with tri-rocket launchers and dual heavy cannons.",
+  "shortdescription" : "Locust-A1 Controller",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller"],
+
+  "animation" : "vehiclecontroller.animation",
+  "scripts" : ["vehiclecontroller.lua"],
+  "animationScripts" : ["vehiclecursor.lua"],
+  "filled" : true,
+  "tooltipKind" : "vehicle",
+  "largeImage" : "sggunshiplocust.png",
+
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "sggunshiplocust",
+  "vehicleBoundingBox" : [-11, -4, 11, 4],
+  "vehicleImage" : "/vehicles/gunship/sgbasicgunshipwarp.png:warpInPart1.1",
+
+  "animationParts" : {
+    "casing" : "sggunshiplocustcontroller.png"
+  },
+
+  "inventoryIcon" : "/items/active/vehiclecontroller/sggunshiplocustcontroller.png:full",
+  "emptyInventoryIcon" : "/items/active/vehiclecontroller/sggunshiplocustcontroller.png:empty",
+  "filledInventoryIcon" : "/items/active/vehiclecontroller/sggunshiplocustcontroller.png:full"
+
+}

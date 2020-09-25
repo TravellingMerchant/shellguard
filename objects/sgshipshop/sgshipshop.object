@@ -23,6 +23,8 @@
     "items" : [
       { "item" : "autochip" },
 
+  	  { "item" : "sggunshiplocustcontroller" },
+
   	  { "item" : "sgfightercontroller" },
   	  { "item" : "sgfightermgcontroller" },
 
