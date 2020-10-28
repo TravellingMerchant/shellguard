@@ -37,8 +37,6 @@ function populateItemList(forceRepop)
 	end
 	upgradeableWeaponItems=buffer
 
-
-
 	local playerEssence = player.currency("essence")
 
 	if forceRepop or not compare(upgradeableWeaponItems, self.upgradeableWeaponItems) then
