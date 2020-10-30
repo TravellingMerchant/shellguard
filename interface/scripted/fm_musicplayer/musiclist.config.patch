@@ -1,0 +1,129 @@
+[
+  {
+    "op": "add",
+    "path": "/Shellguard",
+    "value": [
+      {
+        "name": "Blue Scorpion by Kevin Macleod (sped up)",
+        "directory": "/music/blue-scorpion-by-kevin-macleod-sped-up.ogg"
+      },
+      {
+        "name": "Burnished Steel",
+        "directory": "/music/Burnished_Steel.ogg"
+      },
+      {
+        "name": "Chee zee caves by Kevin Macleod",
+        "directory": "/music/chee-zee-caves-v2-by-kevin-macleod.ogg"
+      },
+      {
+        "name": "Darkling",
+        "directory": "/music/darkling.ogg"
+      },
+      {
+        "name": "Decisions by Kevin Macleod",
+        "directory": "/music/decisions-by-kevin-macleod.ogg"
+      },
+      {
+        "name": "Elder Theme 2 (Novakid theme sped up)",
+        "directory": "/music/elder theme2.ogg"
+      },
+      {
+        "name": "Entry Of The Gladiators - Julius Fucik",
+        "directory": "/music/Entry Of The Gladiators - Julius Fucik.ogg"
+      },
+      {
+        "name": "Gears of the Machine",
+        "directory": "/music/Gears_of_the_Machine_4.ogg"
+      },
+      {
+        "name": "Loib Courage",
+        "directory": "/music/LoibCourage_Loop.ogg"
+      },
+      {
+        "name": "Ocean Battle 1 (slowed)",
+        "directory": "/music/ocean-battle1-loopslow.ogg"
+      },
+      {
+        "name": "Ocean Exploration 2 (sped up)",
+        "directory": "/music/ocean-exploration2fast.ogg"
+      },
+      {
+        "name": "Ocean Exploration (slowed)",
+        "directory": "/music/ocean-explorationslow.ogg"
+      },
+      {
+        "name": "Rail Grind (WIP) 1",
+        "directory": "/music/Rail_Grind_WIP_1.ogg"
+      },
+      {
+        "name": "SG Alien Drone",
+        "directory": "/music/sgaliendrone.ogg"
+      },
+      {
+        "name": "SG Alien Drone 2",
+        "directory": "/music/sgaliendrone2.ogg"
+      },
+      {
+        "name": "SG Elevator Music",
+        "directory": "/music/sgelevatormusic.ogg"
+      },
+      {
+        "name": "SG Elevator Music Creepypasta Edition",
+        "directory": "/music/sgelevatormusicbackwards.ogg"
+      },
+      {
+        "name": "SG Elevator Music With Moar Booms.",
+        "directory": "/music/sgelevatormusicexplosions.ogg"
+      },
+      {
+        "name": "SG Elevator Music (Slowed)",
+        "directory": "/music/sgelevatormusicslow.ogg"
+      },
+      {
+        "name": "SG Elevator Music (Sped up)",
+        "directory": "/music/sgelevatormusicspeed.ogg"
+      },
+      {
+        "name": "SG Fortress Core Battle Theme",
+        "directory": "/music/sgfortresscoremusic.ogg"
+      },
+      {
+        "name": "SG Rail",
+        "directory": "/music/sgrailidea2.ogg"
+      },
+      {
+        "name": "SG Seige Breaker",
+        "directory": "/music/sgsiegebreakertheme.ogg"
+      },
+      {
+        "name": "SG The Guard's March",
+        "directory": "/music/sgtheguardsmarch2.ogg"
+      },
+      {
+        "name": "Survivor Fight Intro",
+        "directory": "/music/survivorfightintro.ogg"
+      },
+      {
+        "name": "Survivor Fight Wreckage",
+        "directory": "/music/survivorfightwreckage.ogg"
+      },
+      {
+        "name": "Survivor Fight Wreckage (Bass Boosted)",
+        "directory": "/music/survivorfightwreckagebassboosted.ogg"
+      },
+      {
+        "name": "Survivor Mission Theme",
+        "directory": "/music/survivormission.ogg"
+      },
+      {
+        "name": "The Descent by kevin Macleod",
+        "directory": "/music/the-descent-by-kevin-macleod.ogg"
+      }
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/##album_icons##/Shellguard",
+    "value": "/interface/scripted/fm_musicplayer/icon_sg.png"
+  }
+]
