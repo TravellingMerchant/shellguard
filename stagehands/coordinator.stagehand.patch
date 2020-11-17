@@ -262,6 +262,15 @@
   },
   {
     "op": "add",
+    "path": "/npcCombat/rangedWeaponRanges/sggoldrevolver",
+    "value": {
+      "minRange": 10,
+      "maxRange": 20,
+      "forceMoveRange": 25
+    }
+  },
+  {
+    "op": "add",
     "path": "/npcCombat/rangedWeaponRanges/sgpraxisdustrifle",
     "value": {
       "minRange": 15,
